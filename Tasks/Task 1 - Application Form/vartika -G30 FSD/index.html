@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <section class="wrap reveal-up">
+      <!-- Hero (inside panel) -->
+      <header class="hero hero--in reveal-up" aria-labelledby="heroTitle">
+        <h1 id="heroTitle">Let's Talk</h1>
+        <p>Confident in your skills? Showcase them.</p>
+
+        <div class="option-wrap reveal-seq">
+          <label class="option" style="--i: 0">
+            <input type="radio" name="role" value="fulltime" checked />
+            <div class="card">
+              <h3>Full time</h3>
+              <p>You're a seasoned pro. Or a driven up-and-comer.</p>
+            </div>
+          </label>
+
+          <span class="or-text reveal-up" style="--i: 1">or</span>
+
+          <label class="option internship" style="--i: 2">
+            <input type="radio" name="role" value="internship" />
+            <div class="card">
+              <h3>Internship</h3>
+              <p>You're still learning and want to explore opportunities.</p>
+            </div>
+          </label>
+        </div>
+      </header>
+
+      <!-- Form (CSS-only modal via action="#thankyou") -->
+      <form id="appForm" class="wrap" method="get" action="#thankyou">
+        <h2 class="section-title reveal-up">1. Personal Information</h2>
+        <div class="section-rule reveal-up"></div>
+
+        <div class="grid cols-2 reveal-grid">
+          <!-- Full name: letters only -->
+          <div class="field reveal-up" style="--i: 0">
+            <label class="label req" for="fullname">Full name</label>
+            <input
+              id="fullname"
+              name="fullname"
+              class="input"
+              type="text"
+              placeholder="Your full name"
+              autocomplete="name"
+              required
+              pattern="^[A-Za-zÀ-ÖØ-öø-ÿ' \-]+$"
+              title="Use letters, spaces, hyphen or apostrophe only (no numbers)."
+            />
+          </div>
+
+          <!-- Email: must be Gmail -->
+          <div class="field reveal-up" style="--i: 1">
+            <label class="label req" for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              class="input"
+              type="email"
+              placeholder="you@gmail.com"
+              autocomplete="email"
+              required
+              pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$"
+              title="Enter a valid Gmail address (example: yourname@gmail.com)."
+            />
+          </div>
+
+          <!-- Phone: 10 digits -->
+          <div class="field reveal-up" style="--i: 2">
+            <label class="label req" for="phone">Phone</label>
+            <input
+              id="phone"
+              name="phone"
+              class="input"
+              type="tel"
+              placeholder="10 digits e.g. 9876543210"
+              autocomplete="tel"
+              inputmode="numeric"
+              required
+              pattern="^\d{10}$"
+              title="Enter a 10-digit phone number (digits only)."
+            />
+          </div>
+
+          <div class="field reveal-up" style="--i: 3">
+            <label class="label req" for="address">Address</label>
+            <input
+              id="address"
+              name="address"
+              class="input"
+              type="text"
+              placeholder="Your Address"
+              autocomplete="street-address"
+              required
+            />
+          </div>
+
+          <div class="field reveal-up" style="--i: 4">
+            <label class="label" for="city">City</label>
+            <input
+              id="city"
+              name="city"
+              class="input"
+              type="text"
+              placeholder="City"
+              autocomplete="address-level2"
+            />
+          </div>
+
+          <div class="field reveal-up" style="--i: 5">
+            <label class="label" for="state">State</label>
+            <input
+              id="state"
+              name="state"
+              class="input"
+              type="text"
+              placeholder="State"
+              autocomplete="address-level1"
+            />
+          </div>
+
+          <div class="field reveal-up" style="--i: 6">
+            <label class="label" for="zip">Zip</label>
+            <input
+              id="zip"
+              name="zip"
+              class="input"
+              type="text"
+              placeholder="Zip Code"
+              autocomplete="postal-code"
+            />
+          </div>
+
+          <div class="field reveal-up" style="--i: 7">
+            <label class="label" for="country">Country</label>
+            <input
+              id="country"
+              name="country"
+              class="input"
+              type="text"
+              placeholder="Country"
+              autocomplete="country-name"
+            />
+          </div>
+        </div>
+
+        <h2 class="section-title reveal-up">2. Skills & Location</h2>
+        <div class="section-rule reveal-up"></div>
+
+        <p class="subq req reveal-up">
+          Which is your primary design discipline?
+        </p>
+
+        <div class="btn-row reveal-seq">
+          <label class="choice" style="--i: 0"
+            ><input
+              type="radio"
+              name="primary_discipline"
+              value="Design Research"
+              checked
+            /><span>Design Research</span></label
+          >
+          <label class="choice" style="--i: 1"
+            ><input
+              type="radio"
+              name="primary_discipline"
+              value="Visual Design"
+            /><span>Visual Design</span></label
+          >
+          <label class="choice" style="--i: 2"
+            ><input
+              type="radio"
+              name="primary_discipline"
+              value="UX Design"
+            /><span>UX Design</span></label
+          >
+          <label class="choice" style="--i: 3"
+            ><input
+              type="radio"
+              name="primary_discipline"
+              value="Front-end Development"
+            /><span>Front-end Dev</span></label
+          >
+        </div>
+
+        <div class="grid reveal-grid">
+          <div style="--i: 0">
+            <p class="subq req reveal-up">
+              Do you have experience with other disciplines?
+            </p>
+
+            <label class="check reveal-up" style="--i: 1">
+              <input
+                type="checkbox"
+                name="other_disciplines[]"
+                value="Visual Design"
+              />
+              <span class="box"></span><span class="txt">Visual Design</span>
+            </label>
+            <label class="check reveal-up" style="--i: 2">
+              <input
+                type="checkbox"
+                name="other_disciplines[]"
+                value="UX Design"
+              />
+              <span class="box"></span><span class="txt">UX Design</span>
+            </label>
+            <label class="check reveal-up" style="--i: 3">
+              <input
+                type="checkbox"
+                name="other_disciplines[]"
+                value="Front-end Development"
+              />
+              <span class="box"></span
+              ><span class="txt">Front-end Development</span>
+            </label>
+          </div>
+
+          <div style="--i: 1">
+            <p class="subq req reveal-up">
+              Where are you interested in working?
+            </p>
+
+            <label class="check reveal-up">
+              <input type="checkbox" name="locations[]" value="Delhi, India" />
+              <span class="box"></span><span class="txt">Delhi, India</span>
+            </label>
+            <label class="check reveal-up">
+              <input type="checkbox" name="locations[]" value="New York, USA" />
+              <span class="box"></span><span class="txt">New York</span>
+            </label>
+            <label class="check reveal-up">
+              <input
+                type="checkbox"
+                name="locations[]"
+                value="Toronto, Canada"
+              />
+              <span class="box"></span><span class="txt">Toronto</span>
+            </label>
+          </div>
+        </div>
+
+        <h2 class="section-title reveal-up">3. Portfolio & Resume</h2>
+        <div class="section-rule reveal-up"></div>
+
+        <div class="field reveal-up">
+          <label class="label req" for="portfolio">Portfolio link</label>
+          <input
+            id="portfolio"
+            name="portfolio"
+            class="input"
+            type="url"
+            placeholder="https://yourportfolio.com"
+            required
+          />
+        </div>
+
+        <div class="field reveal-up">
+          <label class="label req" for="resume">Upload Resume</label>
+          <input
+            id="resume"
+            name="resume"
+            type="file"
+            accept=".pdf,.doc,.docx"
+          />
+        </div>
+
+        <div class="field reveal-up">
+          <label class="label" for="other">Anything else?</label>
+          <textarea
+            id="other"
+            name="other"
+            class="textarea"
+            placeholder="Write here..."
+          ></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn reveal-up">Submit</button>
+      </form>
+    </section>
+
+    <!-- CSS-only popup -->
+    <div
+      id="thankyou"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="tyTitle"
+    >
+      <div class="modal__box">
+        <h3 id="tyTitle">Thank you! 🎉</h3>
+        <p>Your application has been submitted successfully.</p>
+        <a href="#" class="modal__btn" aria-label="Close">OK</a>
+      </div>
+    </div>
+  </body>
+</html>

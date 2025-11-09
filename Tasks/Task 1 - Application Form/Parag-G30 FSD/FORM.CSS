@@ -1,0 +1,144 @@
+/* ===== Base Layout ===== */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #f3f5f8;
+  color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 90%;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+}
+
+/* ===== Intro Section ===== */
+.intro {
+  text-align: center;
+}
+.intro h1 {
+  font-size: 1.8rem;
+  color: #004aad;
+}
+.intro p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ===== Form Styling ===== */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form h2 {
+  color: #004aad;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* grid for form fields */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.form-group.full {
+  grid-column: 1 / -1;
+}
+
+label {
+  font-weight: 500;
+  color: #333;
+}
+input, select, textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #004aad;
+  box-shadow: 0 0 0 2px rgba(0, 74, 173, 0.1);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* ===== Checkbox group uses flex ===== */
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+/* ===== Buttons ===== */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background: #004aad;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #0060d6;
+}
+
+.btn-secondary {
+  background: #e9ecef;
+  color: #333;
+}
+.btn-secondary:hover {
+  background: #d0d6db;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem;
+  }
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
