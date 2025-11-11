@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Application Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="whole_page">
+    <header>
+      <h1>Application Form</h1>
+    </header>
+
+    <h2>General Information</h2>
+    <hr style="width: 220px;" />
+
+    <div class="form-grid">
+      <div class="form-row">
+        <label for="name">Proposed Insured's Name:</label>
+        <div style="flex: 1;">
+          <input type="text" id="name" placeholder="Enter your name" />
+          <small>(Please use capital letters)</small>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="birthdate">Birth Date:</label>
+        <input type="date" id="birthdate" />
+      </div>
+
+      <div class="form-row">
+        <label>Gender:</label>
+        <div class="radio-group">
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="email">Email Id:</label>
+        <input type="email" id="email" placeholder="Enter your Email Id" />
+      </div>
+
+      <div class="form-row">
+        <label for="address">Address:</label>
+        <input type="text" id="address" placeholder="Enter your Address" />
+      </div>
+
+      <div class="form-row">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" placeholder="Enter your Phone no" />
+      </div>
+
+      <div class="form-row">
+        <label>Status:</label>
+        <div class="radio-group">
+          <input type="radio" id="single" name="status" value="single" />
+          <label for="single">Single</label>
+          <input type="radio" id="married" name="status" value="married" />
+          <label for="married">Married</label>
+          <input type="radio" id="divorced" name="status" value="divorced" />
+          <label for="divorced">Divorced</label>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="occupation">Occupation:</label>
+        <input type="text" id="occupation" placeholder="Current Occupation" />
+      </div>
+
+      <div class="form-row">
+        <label>Are you retiree?</label>
+        <div class="radio-group">
+          <input type="radio" id="retiree_yes" name="retiree" value="yes" />
+          <label for="retiree_yes">Yes</label>
+          <input type="radio" id="retiree_no" name="retiree" value="no" />
+          <label for="retiree_no">No</label>
+        </div>
+      </div>
+    </div>
+
+    <h2>Personal Details</h2>
+    <hr style="width: 180px;" />
+
+    <div class="form-grid">
+      <div class="form-row">
+        <label for="beneficiary_name">Name of Beneficiary:</label>
+        <input type="text" id="beneficiary_name" placeholder="Name" />
+      </div>
+
+      <div class="form-row">
+        <label for="bank_account">Bank Account (or ID for confirmation):</label>
+        <input type="text" id="bank_account" placeholder="Bank Account" />
+      </div>
+
+      <div class="form-row">
+        <label for="bank_name">Beneficiary Bank Name:</label>
+        <input type="text" id="bank_name" placeholder="Bank Name" />
+      </div>
+
+      <div class="form-row">
+        <label for="bank_address">Beneficiary Bank Address:</label>
+        <input type="text" id="bank_address" placeholder="Bank Address" />
+      </div>
+    </div>
+
+    <h2>Plan Options</h2>
+    <hr style="width: 150px;" />
+
+    <div class="plans-container">
+      <div class="plan_a">
+        <input type="radio" name="plan" id="plan_a" />
+        <label for="plan_a">PLAN A</label>
+        <h4>Starting from ₹ 2216 per week (excl. VAT). Activation fees apply.</h4>
+      </div>
+
+      <div class="plan_b">
+        <input type="radio" name="plan" id="plan_b" />
+        <label for="plan_b">PLAN B</label>
+        <span>Join Now</span>
+        <h4>Starting from ₹ 1862 per week (excl. VAT).</h4>
+      </div>
+    </div>
+
+    <h2>Policy Information</h2>
+    <hr style="width: 200px;" />
+
+    <div class="policy">
+      <label for="unit">Units:</label>
+      <input type="number" id="unit" />
+
+      <label>Annual Premium:</label>
+      <div class="radio-group">
+        <input type="radio" name="premium" id="annual" value="annual" />
+        <label for="annual">Annual</label>
+        <input type="radio" name="premium" id="semi" value="semi" />
+        <label for="semi">Semi-Annual</label>
+        <input type="radio" name="premium" id="monthly" value="monthly" />
+        <label for="monthly">Monthly PAT</label>
+      </div>
+
+      <label for="cash">Cash with Application:</label>
+      <span class="currency">$</span><input type="text" id="cash" />
+
+      <label for="planned">Planned Model Premium:</label>
+      <span class="currency">$</span><input type="text" id="planned" />
+    </div>
+
+    <div class="signature-row">
+      <div class="date-left">
+        <label for="date">Date:</label>
+        <input type="date" id="date" />
+      </div>
+
+      <div class="signature-right">
+        <label for="signature">Signature:</label>
+        <input type="text" id="signature" placeholder="Signature" />
+      </div>
+    </div>
+  </div>
+</body>
+</html>
