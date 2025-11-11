@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application Form - Table Layout</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Main Form Container -->
+    <table class="form-container">
+      <tr>
+        <td>
+          <!-- Form Header -->
+          <div class="form-header">
+            <h1>Application Form</h1>
+            <p>Please fill out the details accurately and completely.</p>
+          </div>
+
+          <form action="#" method="POST">
+            <!-- Section 1: General Questions -->
+            <div class="section-header">
+              <h2>General Questions</h2>
+            </div>
+            <table class="form-section">
+              <!-- Row 1: Name -->
+              <tr>
+                <td colspan="6">
+                  <label for="name"
+                    >Proposed Insured's Name
+                    <span>(Please use capital letters)</span></label
+                  >
+                  <input type="text" id="name" name="name" />
+                </td>
+              </tr>
+              <!-- Row 2: DOB, Gender, Passport -->
+              <tr>
+                <td style="width: 33.33%">
+                  <label for="dob">Birth Date:</label>
+                  <input type="date" id="dob" name="dob" />
+                </td>
+                <td style="width: 33.33%; padding-left: 20px">
+                  <label class="label">Gender:</label>
+                  <div class="radio-group">
+                    <label>
+                      <input type="radio" name="gender" value="male" />
+                      Male
+                    </label>
+                    <label>
+                      <input type="radio" name="gender" value="female" />
+                      Female
+                    </label>
+                  </div>
+                </td>
+                <td style="width: 33.33%">
+                  <label for="passport">Passport No:</label>
+                  <input type="text" id="passport" name="passport" />
+                </td>
+              </tr>
+              <!-- Row 3: Address -->
+              <tr>
+                <td colspan="6">
+                  <label for="address">Address:</label>
+                  <input type="text" id="address" name="address" />
+                </td>
+              </tr>
+              <!-- Row 4: Phone, Email -->
+              <tr>
+                <td colspan="3" style="width: 50%">
+                  <label for="phone">Phone Number:</label>
+                  <input type="tel" id="phone" name="phone" />
+                </td>
+                <td colspan="3" style="width: 50%">
+                  <label for="email">Email Address:</label>
+                  <input type="email" id="email" name="email" />
+                </td>
+              </tr>
+              <!-- Row 5: ID, SSN -->
+              <tr>
+                <td colspan="3" style="width: 50%">
+                  <label for="id_number">ID Number:</label>
+                  <input type="text" id="id_number" name="id_number" />
+                </td>
+                <td colspan="3" style="width: 50%">
+                  <label for="ssn">Social Security Number:</label>
+                  <input type="text" id="ssn" name="ssn" />
+                </td>
+              </tr>
+              <!-- Row 6: Status -->
+              <tr>
+                <td colspan="6">
+                  <label class="label">Status:</label>
+                  <div class="radio-group">
+                    <label>
+                      <input type="radio" name="status" value="single" />
+                      Single
+                    </label>
+                    <label>
+                      <input type="radio" name="status" value="married" />
+                      Married
+                    </label>
+                    <label>
+                      <input type="radio" name="status" value="divorced" />
+                      Divorced
+                    </label>
+                    <label>
+                      <input type="radio" name="status" value="others" />
+                      Others
+                    </label>
+                  </div>
+                </td>
+              </tr>
+              <!-- Row 7: Occupation, Retiree -->
+              <tr>
+                <td colspan="4" style="width: 66.66%">
+                  <label for="occupation">Occupation:</label>
+                  <input type="text" id="occupation" name="occupation" />
+                </td>
+                <td colspan="2" style="width: 33.33%; padding-left: 20px">
+                  <label class="label">Are you a retiree?</label>
+                  <div class="radio-group">
+                    <label>
+                      <input type="radio" name="retiree" value="yes" />
+                      Yes
+                    </label>
+                    <label>
+                      <input type="radio" name="retiree" value="no" />
+                      No
+                    </label>
+                  </div>
+                </td>
+              </tr>
+            </table>
+
+            <!-- Section 2: Personal Details -->
+            <div class="section-header">
+              <h2>Personal Details</h2>
+            </div>
+            <table class="form-section">
+              <!-- Row 1: Beneficiary Name -->
+              <tr>
+                <td colspan="2">
+                  <label for="beneficiary_name">Name of Beneficiary:</label>
+                  <input
+                    type="text"
+                    id="beneficiary_name"
+                    name="beneficiary_name"
+                  />
+                </td>
+              </tr>
+              <!-- Row 2: Bank Account -->
+              <tr>
+                <td colspan="2">
+                  <label for="bank_account"
+                    >Bank Account
+                    <span>(or ID number for confirmation only)</span></label
+                  >
+                  <input
+                    type="text"
+                    id="bank_account"
+                    name="bank_account"
+                  />
+                </td>
+              </tr>
+              <!-- Row 3: Bank Address -->
+              <tr>
+                <td colspan="2">
+                  <label for="bank_address"
+                    >Name and Address of Beneficiary's Bank:</label
+                  >
+                  <textarea
+                    id="bank_address"
+                    name="bank_address"
+                    rows="3"
+                  ></textarea>
+                </td>
+              </tr>
+              <!-- Row 4: Plan Coverage -->
+              <tr>
+                <td colspan="2">
+                  <label class="label">Plan Coverage:</label>
+                  <table class="coverage-table">
+                    <tr>
+                      <td style="width: 33.33%">
+                        <p class="label">Employee:</p>
+                        <div class="radio-group">
+                          <label>
+                            <input
+                              type="radio"
+                              name="coverage_employee"
+                              value="yes"
+                            />
+                            Yes
+                          </label>
+                          <label>
+                            <input
+                              type="radio"
+                              name="coverage_employee"
+                              value="no"
+                            />
+                            No
+                          </label>
+                        </div>
+                      </td>
+                      <td style="width: 33.33%">
+                        <p class="label">Spouse:</p>
+                        <div class="radio-group">
+                          <label>
+                            <input
+                              type="radio"
+                              name="coverage_spouse"
+                              value="yes"
+                            />
+                            Yes
+                          </label>
+                          <label>
+                            <input
+                              type="radio"
+                              name="coverage_spouse"
+                              value="no"
+                            />
+                            No
+                          </label>
+                        </div>
+                      </td>
+                      <td style="width: 33.33%">
+                        <p class="label">Children:</p>
+                        <div class="radio-group">
+                          <label>
+                            <input
+                              type="radio"
+                              name="coverage_children"
+                              value="yes"
+                            />
+                            Yes
+                          </label>
+                          <label>
+                            <input
+                              type="radio"
+                              name="coverage_children"
+                              value="no"
+                            />
+                            No
+                          </label>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!-- Row 5: Plan Choice -->
+              <tr>
+                <td colspan="2">
+                  <label class="label">Plan Choice:</label>
+                </td>
+              </tr>
+              <tr>
+                <td style="width: 50%">
+                  <label class="plan-card">
+                    <input type="radio" name="plan_choice" value="A" />
+                    <div class="plan-card-content">
+                      <p class="plan-card-title">PLAN A</p>
+                      <p class="plan-card-details">
+                        Starting from $25 per week ** <br />
+                        (prices excl. VAT, activation fees apply) <br />
+                        See more details on page 17
+                      </p>
+                    </div>
+                  </label>
+                </td>
+                <td style="width: 50%">
+                  <label class="plan-card">
+                    <span class="plan-card-join">JOIN NOW!</span>
+                    <input type="radio" name="plan_choice" value="B" />
+                    <div class="plan-card-content">
+                      <p class="plan-card-title">PLAN B</p>
+                      <p class="plan-card-details">
+                        Starting from THB $21 per week ** <br />
+                        (prices excl. VAT.) <br />
+                        See more details on page 17
+                      </p>
+                    </div>
+                  </label>
+                </td>
+              </tr>
+            </table>
+
+            <!-- Section 3: The Policy -->
+            <div class="section-header">
+              <h2>The Policy</h2>
+            </div>
+            <table class="form-section">
+              <!-- Row 1: Units, Annual Premium -->
+              <tr>
+                <td style="width: 50%">
+                  <label for="units">Units:</label>
+                  <input type="text" id="units" name="units" />
+                </td>
+                <td style="width: 50%">
+                  <label for="annual_premium">Annual Premium:</label>
+                  <div class="currency-input">
+                    <span class="currency-symbol">$</span>
+                    <input
+                      type="text"
+                      id="annual_premium"
+                      name="annual_premium"
+                    />
+                  </div>
+                </td>
+              </tr>
+              <!-- Row 2: Payment Mode -->
+              <tr>
+                <td colspan="2">
+                  <label class="label">Payment Mode:</label>
+                  <div class="radio-group">
+                    <label>
+                      <input type="radio" name="payment_mode" value="annual" />
+                      Annual
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        name="payment_mode"
+                        value="semi-annual"
+                      />
+                      Semi-Annual
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        name="payment_mode"
+                        value="monthly-pat"
+                      />
+                      Monthly PAT (complete PAT card)
+                    </label>
+                  </div>
+                </td>
+              </tr>
+              <!-- Row 3: Cash, Modal Premium -->
+              <tr>
+                <td style="width: 50%">
+                  <label for="cash_application">Cash with Application:</label>
+                  <div class="currency-input">
+                    <span class="currency-symbol">$</span>
+                    <input
+                      type="text"
+                      id="cash_application"
+                      name="cash_application"
+                    />
+                  </div>
+                </td>
+                <td style="width: 50%">
+                  <label for="modal_premium">Planned Modal Premium:</label>
+                  <div class="currency-input">
+                    <span class="currency-symbol">$</span>
+                    <input
+                      type="text"
+                      id="modal_premium"
+                      name="modal_premium"
+                    />
+                  </div>
+                </td>
+              </tr>
+            </table>
+
+            <!-- Section 4: Terms and Signature -->
+            <table class="form-section">
+              <!-- Row 1: Terms -->
+              <tr>
+                <td colspan="2">
+                  <div class="terms-box">
+                    <h3>Terms and Conditions</h3>
+                    <p>
+                      Improvement should be measured regularly and assessed in
+                      order for you to know what's beneficial and what is not.
+                      This will help you set new targets.
+                    </p>
+                    <div class="terms-agree">
+                      <label>
+                        <input
+                          type="checkbox"
+                          id="terms"
+                          name="terms"
+                        />
+                        I agree to the terms and conditions
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <!-- Row 2: Signature, Date -->
+              <tr>
+                <td style="width: 50%">
+                  <label for="signature">Signature:</label>
+                  <input
+                    type="text"
+                    id="signature"
+                    name="signature"
+                    placeholder="X"
+                    class="signature"
+                  />
+                </td>
+                <td style="width: 50%">
+                  <label for="sig_date">Date:</label>
+                  <input type="date" id="sig_date" name="sig_date" />
+                </td>
+              </tr>
+              <!-- Row 3: Submit -->
+              <tr>
+                <td colspan="2" class="submit-cell">
+                  <button type="submit" class="submit-button">
+                    Submit Application
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
