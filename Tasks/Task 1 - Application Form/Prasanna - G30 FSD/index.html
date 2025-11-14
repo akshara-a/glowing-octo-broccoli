@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Application Form</title>
+  <style>
+    :root {
+      --primary: #1d4ed8;
+      --light: #f8fafc;
+      --border: #cbd5e1;
+      --text: #1e293b;
+      --muted: #64748b;
+      --radius: 10px;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      --input-bg: #f9fafc;
+      --input-border: #cbd5e1;
+      --focus-glow: 0 0 8px rgba(29, 78, 216, 0.4);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary: #60a5fa;
+        --light: #0f172a;
+        --border: #334155;
+        --text: #f1f5f9;
+        --muted: #94a3b8;
+        --input-bg: #1e293b;
+        --input-border: #475569;
+        --focus-glow: 0 0 10px rgba(96, 165, 250, 0.6);
+      }
+    }
+
+    body {
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(135deg, var(--light), #e2e8f0);
+      color: var(--text);
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      background: white;
+      padding: 2rem 2.5rem;
+      border: 3px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      max-width: 800px;
+      width: 100%;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .container {
+        background: #1e293b;
+        box-shadow: none;
+      }
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 0.2rem;
+      color: var(--primary);
+    }
+
+    .subtitle {
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+      border: 2px dashed var(--border);
+      padding: 1.2rem;
+      border-radius: var(--radius);
+      background: var(--input-bg);
+    }
+
+    .section h2 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 0.4rem;
+      color: var(--primary);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem 1.5rem;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    label {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    input,
+    select,
+    textarea {
+      padding: 0.7rem 0.8rem;
+      border: 2px solid var(--input-border);
+      border-radius: var(--radius);
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background-color: var(--input-bg);
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="url"],
+    input[type="file"],
+    select,
+    textarea {
+      border-color: #93c5fd;
+      background-color: #eff6ff;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      background-color: #e0e7ff;
+      box-shadow: var(--focus-glow);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      input,
+      select,
+      textarea {
+        background-color: #1e293b;
+        border-color: #475569;
+        color: #f8fafc;
+      }
+      input:focus,
+      select:focus,
+      textarea:focus {
+        background-color: #334155;
+        border-color: #60a5fa;
+        box-shadow: var(--focus-glow);
+      }
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .flex-row {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 0.3rem;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: var(--radius);
+      padding: 0.8rem 1.6rem;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+
+    .btn:hover {
+      background: #2563eb;
+      box-shadow: 0 0 8px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      border-radius: var(--radius);
+      padding: 0.8rem 1.6rem;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 0 8px rgba(29, 78, 216, 0.4);
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 1.5rem;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Application Form</h1>
+    <p class="subtitle">Please fill out all required fields carefully before submitting.</p>
+
+    <form id="jobForm">
+      <!-- Personal Details -->
+      <section class="section">
+        <h2>Personal Details</h2>
+        <div class="grid-2">
+          <div class="form-group">
+            <label for="fname">First Name *</label>
+            <input type="text" id="fname" name="fname" required />
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name *</label>
+            <input type="text" id="lname" name="lname" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="xyz@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="+91 " />
+          </div>
+          <div class="form-group full">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="Street, City, State, ZIP" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Position & Experience -->
+      <section class="section">
+        <h2>Position & Experience</h2>
+        <div class="grid-2">
+          <div class="form-group">
+            <label for="position">Position Applying For *</label>
+            <input type="text" id="position" name="position" placeholder="Frontend Developer" required />
+          </div>
+          <div class="form-group">
+            <label for="experience">Years of Experience</label>
+            <input type="number" id="experience" name="experience" placeholder="e.g. 3" />
+          </div>
+          <div class="form-group full">
+            <label for="portfolio">Portfolio or LinkedIn</label>
+            <input type="url" id="portfolio" name="portfolio" placeholder="https://yourportfolio.com" />
+          </div>
+          <div class="form-group full">
+            <label for="resume">Upload Resume (PDF)</label>
+            <input type="file" id="resume" name="resume" accept=".pdf" />
+          </div>
+          <div class="form-group full">
+            <label for="cover">Cover Letter</label>
+            <textarea id="cover" name="cover" rows="4" placeholder="Write a brief cover letter..."></textarea>
+          </div>
+        </div>
+      </section>
+
+      <!-- Eligibility & Availability -->
+      <section class="section">
+        <h2>Availability</h2>
+        <div class="grid-2">
+          <div class="form-group">
+            <label for="workauth">Work Authorization *</label>
+            <select id="workauth" name="workauth" required>
+              <option value="">Select one</option>
+              <option>Citizen</option>
+              <option>Work Visa</option>
+              <option>Permanent Resident</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="start">Available Start Date</label>
+            <input type="date" id="start" name="start" />
+          </div>
+          <div class="form-group full">
+            <label>Willing to Relocate?</label>
+            <div class="flex-row">
+              <label><input type="radio" name="relocate" value="Yes" /> Yes</label>
+              <label><input type="radio" name="relocate" value="No" /> No</label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Submit -->
+      <div class="actions">
+        <button type="submit" class="btn">Submit Application</button>
+        <button type="reset" class="btn-outline">Clear</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("jobForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("✅ Your job application has been submitted successfully!");
+      this.reset();
+    });
+  </script>
+</body>
+</html>
