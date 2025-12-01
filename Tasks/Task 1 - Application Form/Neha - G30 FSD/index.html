@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form - Animated</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href = "style.css" rel = "stylesheet">
+</head>
+<body>
+        <video autoplay muted loop playsinline class="video-bg">
+        <source src="video.mp4" type="video/mp4">
+        <source src="your-video.webm" type="video/webm">
+    </video>
+    <div class="container">
+        <div class="form-header">
+            <h1 class="video-text" data-text="APPLICATION FORM">APPLICATION FORM</h1>
+
+            <p>Please fill out all required information carefully</p>
+        </div>
+
+        <div class="form-body">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+            <form id="applicationForm">
+                <h2 class="section-title">General Questions</h2>
+                
+                <div class="form-group">
+                    <label for="fullname">Name of Proposed Insured (IN CAPITAL LETTERS) *</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="ENTER YOUR FULL NAME" style="text-transform: uppercase;" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Birth Date *</label>
+                    <div class="form-row">
+                        <input type="number" name="day" min="1" max="31" placeholder="Day" required>
+                        <input type="number" name="month" min="1" max="12" placeholder="Month" required>
+                        <input type="number" name="year" min="1900" max="2025" placeholder="Year" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender *</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="gender" value="male" required>
+                            <span>Male</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="gender" value="female">
+                            <span>Female</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="passport">Passport Number</label>
+                        <input type="text" id="passport" name="passport" placeholder="Enter passport number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="idnumber">ID Number *</label>
+                        <input type="text" id="idnumber" name="idnumber" placeholder="Enter ID number" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address *</label>
+                    <textarea id="address" name="address" placeholder="Enter your complete address" required></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <div class="input-wrapper">
+                            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" required>
+                            <span class="input-icon">📱</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <div class="input-wrapper">
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            <span class="input-icon">📧</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ssn">Social Security Number</label>
+                        <input type="text" id="ssn" name="ssn" placeholder="XXX-XX-XXXX">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="occupation">Occupation *</label>
+                        <input type="text" id="occupation" name="occupation" placeholder="Enter your occupation" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Marital Status *</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="marital" value="single" required>
+                            <span>Single</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="marital" value="married">
+                            <span>Married</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="marital" value="divorced">
+                            <span>Divorced</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="marital" value="others">
+                            <span>Others</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Are you a Retiree? *</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="retiree" value="yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="retiree" value="no">
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+
+                <h2 class="section-title">Personal Details</h2>
+
+                <div class="form-group">
+                    <label for="beneficiary">Name of Beneficiary *</label>
+                    <input type="text" id="beneficiary" name="beneficiary" placeholder="Enter beneficiary name" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bankaccount">Bank Account/ID Number</label>
+                        <input type="text" id="bankaccount" name="bankaccount" placeholder="Enter account number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bankname">Bank Name</label>
+                        <input type="text" id="bankname" name="bankname" placeholder="Enter bank name">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="bankaddress">Bank Address</label>
+                    <textarea id="bankaddress" name="bankaddress" placeholder="Enter bank address"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Are you an Employee? *</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="employee" value="yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="employee" value="no">
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+
+                <h2 class="section-title">Plan Choices</h2>
+
+                <div class="form-group">
+                    <label>Spouse Coverage *</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="spouse" value="yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="spouse" value="no">
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Children Coverage *</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="children" value="yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="children" value="no">
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Select Plan *</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="plan" value="planA" required>
+                            <span>Plan A - Starting from $25/week</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="plan" value="planB">
+                            <span>Plan B - Starting from THB $21/week</span>
+                        </label>
+                    </div>
+                </div>
+
+                <h2 class="section-title">Policy Details</h2>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="units">Number of Units *</label>
+                        <input type="number" id="units" name="units" min="1" placeholder="Enter number of units" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="premium">Annual Premium ($) *</label>
+                        <input type="number" id="premium" name="premium" min="0" step="0.01" placeholder="0.00" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Payment Mode *</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="payment" value="annual" required>
+                            <span>Annual</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="payment" value="semiannual">
+                            <span>Semi-Annual</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="payment" value="monthly">
+                            <span>Monthly</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cash">Cash with Application ($)</label>
+                        <input type="number" id="cash" name="cash" min="0" step="0.01" placeholder="0.00">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="modal">Planned Modal Premium ($)</label>
+                        <input type="number" id="modal" name="modal" min="0" step="0.01" placeholder="0.00">
+                    </div>
+                </div>
+
+                <h2 class="section-title">Declaration</h2>
+
+                <div class="form-group">
+                    <label for="declaration">Terms and Conditions *</label>
+                    <textarea id="declaration" name="declaration" readonly style="min-height: 80px;">I hereby declare that all the information provided in this application form is true and accurate to the best of my knowledge. I understand that any false information may result in the rejection of this application or cancellation of the policy.</textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="signature">Signature (Type your full name) *</label>
+                        <input type="text" id="signature" name="signature" placeholder="Type your full name as signature" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signdate">Date *</label>
+                        <input type="date" id="signdate" name="signdate" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <span>Submit Application</span>
+                </button>
+
+                <div class="success-message" id="successMessage">
+                    <h3>✓ Application Submitted Successfully!</h3>
+                    <p>Thank you for submitting your application. We will review it and get back to you soon.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+</html>

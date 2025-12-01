@@ -1,0 +1,508 @@
+:root {
+  /* spacing (8px-ish rhythm) */
+  --s-1: 6px;
+  --s0: 8px;
+  --s1: 12px;
+  --s2: 16px;
+  --s3: 20px;
+  --s4: 24px;
+  --s5: 32px;
+  --s6: 40px;
+  --s7: 48px;
+
+  /* palette */
+  --page-bg: #2e2929;
+  --panel-bg: #000000;
+  --text: #e9eef2;
+  --muted: #cbd3d8;
+  --accent: #00b6f0;
+  --line: rgba(255, 255, 255, 0.14);
+}
+
+/* ---- Base ---- */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--page-bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Wrapper ---- */
+.wrap {
+  max-width: 980px;
+  margin: var(--s6) auto;
+  padding: var(--s6) var(--s5);
+  background: var(--panel-bg);
+  border-radius: 14px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  overflow: visible;
+}
+@media (max-width: 600px) {
+  .wrap {
+    margin: var(--s3) auto;
+    padding: var(--s4) var(--s3);
+  }
+}
+@media (max-width: 480px) {
+  .wrap {
+    margin: var(--s2) auto;
+    padding: var(--s3) var(--s2);
+  }
+}
+
+/* nested form: transparent */
+.wrap form.wrap {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* ---- Hero ---- */
+.hero.hero--in {
+  text-align: center;
+  margin: -4px 0 var(--s4);
+}
+.hero.hero--in h1 {
+  margin: 0 0 var(--s1);
+  font-size: 34px;
+  font-weight: 800;
+}
+@media (max-width: 600px) {
+  .hero.hero--in h1 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 480px) {
+  .hero.hero--in h1 {
+    font-size: 24px;
+  }
+}
+.hero.hero--in p {
+  margin: 0 0 var(--s2);
+  font-size: 15px;
+  color: #dbe4ea;
+}
+@media (max-width: 480px) {
+  .hero.hero--in p {
+    font-size: 14px;
+  }
+}
+
+.option-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: nowrap;
+  margin-bottom: var(--s4);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 768px) {
+  .option-wrap {
+    max-width: 600px;
+  }
+}
+
+.option {
+  position: relative;
+  flex: 1;
+}
+.option input {
+  opacity: 0;
+  position: absolute;
+}
+
+.card {
+  width: 100%;
+  height: 145px;
+  padding: var(--s4);
+  border-radius: 10px;
+  border: 2px solid var(--line);
+  background: transparent;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+  transition: 0.25s;
+}
+@media (max-width: 600px) {
+  .card {
+    max-width: 250px;
+    min-height: 120px;
+    padding: var(--s3);
+  }
+}
+@media (max-width: 480px) {
+  .card {
+    max-width: 200px;
+    min-height: 100px;
+    padding: var(--s2);
+  }
+}
+.card h3 {
+  margin: 0 0 var(--s1);
+  font-size: 18px;
+  font-weight: 700;
+}
+.card p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* active choice */
+.option input:checked + .card {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
+}
+
+/* Internship card dark with white text */
+.option.internship .card {
+  background: #333;
+  color: #fff;
+}
+
+.or-text {
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ---- Sections ---- */
+.section-title {
+  font-size: 18px;
+  font-weight: 800;
+  margin: var(--s4) 0 var(--s1);
+}
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 16px;
+  }
+}
+.section-rule {
+  height: 2px;
+  background: var(--accent);
+  margin-bottom: var(--s4);
+  opacity: 0.9;
+}
+
+/* ---- Grid ---- */
+.grid {
+  display: grid;
+  gap: var(--s3);
+}
+.grid.cols-2 {
+  grid-template-columns: 1fr 1fr;
+}
+.grid.cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 768px) {
+  .grid.cols-2,
+  .grid.cols-4 {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .grid {
+    gap: var(--s2);
+  }
+}
+
+/* ---- Fields ---- */
+.field {
+  margin-bottom: var(--s3);
+}
+.label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: var(--s1);
+  color: #8d8787;
+}
+.req::after {
+  content: " *";
+  color: var(--accent);
+}
+
+.input {
+  width: 100%;
+  background: transparent;
+  color: var(--text);
+  border: 0;
+  outline: 0;
+  border-bottom: 1.6px solid var(--line);
+  padding: 10px 2px 12px;
+  transition: 0.25s;
+}
+.input:focus {
+  border-bottom-color: var(--accent);
+  box-shadow: 0 1px 0 var(--accent);
+}
+
+/* textarea: polish + fixed color (#fff) */
+.textarea {
+  min-height: 220px;
+  width: 100%;
+  padding: 18px 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border: 1.6px solid rgba(255, 255, 255, 0.95);
+  box-shadow: inset 0 0 12px rgb(167 165 165 / 100%),
+    0 0 8px rgb(129 126 126 / 100%);
+  transition: 0.25s ease;
+}
+.textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0, 182, 240, 0.18),
+    inset 0 0 14px rgba(0, 182, 240, 0.12);
+}
+
+/* ---- File input ---- */
+input[type="file"] {
+  width: 100%;
+  padding: 14px 12px;
+  margin-top: var(--s1);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--muted);
+}
+input[type="file"]::file-selector-button {
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  padding: 8px 12px;
+  margin-right: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ---- Radio chips ---- */
+.btn-row {
+  display: flex;
+  gap: var(--s2);
+  flex-wrap: wrap;
+  margin-bottom: var(--s3);
+}
+.choice input {
+  position: absolute;
+  opacity: 0;
+}
+.choice span {
+  padding: 10px 16px;
+  min-width: 170px;
+  text-align: center;
+  border: 2px solid var(--line);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+@media (max-width: 600px) {
+  .choice span {
+    min-width: 140px;
+    padding: 8px 12px;
+  }
+}
+@media (max-width: 480px) {
+  .choice span {
+    min-width: 120px;
+    padding: 6px 10px;
+  }
+}
+.choice input:checked + span {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* ---- Checkboxes ---- */
+.check {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin: 8px 0;
+}
+.check input {
+  position: absolute;
+  opacity: 0;
+}
+.check .box {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.22);
+  border-radius: 3px;
+}
+.check input:checked + .box {
+  border-color: var(--accent);
+  background: var(--panel-bg);
+  box-shadow: inset 0 0 0 4px var(--accent);
+}
+.check .txt {
+  font-size: 14px;
+}
+
+/* ---- Submit ---- */
+.submit-btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 22px;
+  font-size: 16px;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: var(--s4);
+  transition: 0.25s;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+  min-height: 44px;
+}
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
+}
+.submit-btn:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 70%, transparent);
+  outline-offset: 2px;
+}
+
+/* ---- Scroll Animations ---- */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* view-timeline */
+@supports (animation-timeline: view()) {
+  .reveal-seq > * {
+    opacity: 0;
+    animation: fade-up linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
+    animation-delay: calc(var(--i, 0) * 90ms);
+  }
+  .reveal-grid > * {
+    opacity: 0;
+    animation: fade-up linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
+    animation-delay: calc(var(--i, 0) * 70ms);
+  }
+}
+
+/* fallback: show content if no scroll-timeline */
+@supports not (animation-timeline: view()) {
+  .reveal-seq > *,
+  .reveal-grid > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-seq > *,
+  .reveal-grid > * {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* ---- Modal ---- */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.25s;
+  z-index: 9999;
+}
+#thankyou:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal__box {
+  width: min(520px, 90%);
+  background: #2f373c;
+  padding: 26px 24px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+.modal__box h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: 800;
+}
+.modal__btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 18px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* Smooth transition for both card and choice elements */
+.option .card,
+.choice span {
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.option .card:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 182, 240, 0.25);
+}
+
+/* Internship-specific hover tweak */
+.option.internship .card:hover {
+  background: #444;
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+}
+
+.choice span:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 182, 240, 0.25);
+}
+
+.choice input:checked + span {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  box-shadow: 0 0 0 2px rgba(0, 182, 240, 0.4);
+}

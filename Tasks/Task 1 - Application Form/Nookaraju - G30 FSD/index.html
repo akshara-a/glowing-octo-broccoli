@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Job Application Form</h2>
+
+        <form>
+
+            <!-- Personal Details -->
+            <div class="section">
+                <h3>Personal Details</h3>
+
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your full name" required>
+
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email" required>
+
+                <label>Phone Number</label>
+                <input type="tel" placeholder="Enter your phone number" required>
+            </div>
+
+            <!-- Role Type -->
+            <div class="section">
+                <h3>Role Type</h3>
+
+                <label>Select Role</label>
+                <select required>
+                    <option>Frontend Developer</option>
+                    <option>Backend Developer</option>
+                    <option>Full Stack Developer</option>
+                    <option>UI/UX Designer</option>
+                    <option>Tester</option>
+                </select>
+            </div>
+
+            <!-- Company Details -->
+            <div class="section">
+                <h3>Company Details</h3>
+
+                <label>Company Name</label>
+                <input type="text" placeholder="Company you are applying to" required>
+
+                <label>Position Applying For</label>
+                <input type="text" placeholder="Enter job position" required>
+            </div>
+
+            <!-- Availability -->
+            <div class="section">
+                <h3>Availability</h3>
+
+                <label>Available From</label>
+                <input type="date" required>
+
+                <label>Upload Resume</label>
+                <input type="file" required>
+            </div>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+
+</body>
+</html>

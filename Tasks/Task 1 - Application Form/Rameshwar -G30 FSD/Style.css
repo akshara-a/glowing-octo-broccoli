@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px 0;
+  background: linear-gradient(135deg, #0f0f0f, #3b3b3b);
+}
+
+.main {
+  width: 900px;
+  background: #ffffff;
+  margin: auto;
+  padding: 40px 50px 70px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.top {
+  height: 60px;
+  border-radius: 12px;
+  background: radial-gradient(circle, #000 20%, #fff 90%);
+}
+
+h1 {
+  text-align: center;
+  font-size: 45px;
+  margin: 20px 0 40px;
+  color: #222;
+  font-weight: 600;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 40px 0 10px;
+  color: #333;
+}
+
+.content .row,
+.content .row-2,
+.content .row-3,
+.column {
+  margin-bottom: 22px;
+}
+
+.row,
+.row-2,
+.row-3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row label {
+  width: 30%;
+  font-weight: 500;
+}
+
+.row input,
+.row-2 input,
+.row-3 input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #555;
+  background: #f8f8f8;
+  transition: 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-bottom-color: #007bff;
+}
+
+.radio-box label {
+  margin-right: 15px;
+}
+
+input[type="radio"] {
+  transform: scale(1.3);
+  margin-right: 3px;
+}
+
+.row-2 > div,
+.row-3 > div {
+  width: 48%;
+}
+
+.row-3 > div {
+  width: 32%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column input {
+  margin-top: 10px;
+}
+
+.plan-box {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  padding: 15px;
+  border: 1px solid #555;
+  border-radius: 10px;
+}
+
+.plan {
+  width: 30%;
+}
+
+.plan-choice {
+  padding: 15px;
+  background: #eee;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.terms {
+  background: #eee;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+.sign {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.sign div {
+  width: 48%;
+}
+
+.submit-btn {
+  display: block;
+  margin: 40px auto 0;
+  padding: 12px 35px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #0056d2;
+  transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}

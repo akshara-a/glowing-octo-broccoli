@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Application Form</title>
+    <link rel="stylesheet" href="./style.css">
+
+  <body id="bg">
+    <div class="main">
+        <div class="first-semicircle">
+        <span></span>
+        </div>
+        <div class="second-semicircle">
+        <span></span>
+        </div>
+      <div class="top">.</div>
+      <h1>Application Form</h1>
+      <!-- General Questions -->
+      <p class="header">General Questions</p>
+      <div class="content">
+        <!-- Proposed Name -->
+        <div class="line1">
+          <p class="part1">
+            Proposed Insured's Name<span style="color:red; font-weight:bold; font-size:1.2em;">*</span>: <br />
+            <span> (Please use capital letters) </span>
+          </p>
+          <input type="text" class="input1" />
+        </div>
+        <div class="line2">
+          <!--Date of Birth-->
+          <div class="part3">
+            <p class="subpart1">Birth Date<span style="color:red; font-weight:bold; font-size:1.2em;">*</span>:</p>
+            <input type="date" class="subpart2 input1" />
+          </div>
+          <!--Gender-->
+          <div class="part4">
+            <p class="subpart1">Gender<span style="color:red; font-weight:bold; font-size:1.2em;">*</span>:</p>
+            <div class="subpart2">
+              <input type="radio" /> Male <input type="radio" /> Female
+            </div>
+          </div>
+          <!-- Passport Number -->
+          <div class="part5">
+            <p class="subpart1">Passport no:</p>
+            <input type="text" class="subpart2 input1" />
+          </div>
+        </div>
+        <!-- Address -->
+        <div class="line1">
+          <p class="part1">
+            Address<span style="color:red; font-weight:bold; font-size:1.2em;">*</span>:
+          </p>
+          <input type="text" class="part2 input1" />
+        </div>
+        <div class="line3">
+          <!-- Phone Number -->
+          <div class="part6">
+            <p class="subpart1">Phone Number<span style="color:red; font-weight:bold; font-size:1.2em;">*</span>:</p>
+            <input type="text" class="subpart2 input1" />
+          </div>
+          <!-- Email Address -->
+          <div class="part7">
+            <p class="subpart1">Email Address<span style="color:red; font-weight:bold; font-size:1.2em;">*</span>:</p>
+            <input type="email" class="subpart2 input1" />
+          </div>
+        </div>
+        <div class="line3">
+          <!-- ID Number -->
+          <div class="part6">
+            <p class="subpart1">ID Number<span style="color:red; font-weight:bold; font-size:1.2em;">*</span>:</p>
+            <input type="text" class="subpart2 input1" />
+          </div>
+          <!-- Socail Security Number -->
+          <div class="part7">
+            <p class="subpart1">Social Security Number<span style="color:red; font-weight:bold; font-size:1.2em;">*</span>:</p>
+            <input type="email" class="subpart2 input1" />
+          </div>
+        </div>
+        <!-- Status -->
+        <div class="line4">
+          <p class="part8">
+            Status<span style="color:red; font-weight:bold; font-size:1.2em;">*</span>:
+          </p>
+          <div>
+            <input type="radio" /> Single <input type="radio" /> Married
+            <input type="radio" /> Divorced <input type="radio" /> Others
+          </div>
+        </div>
+        <div class="line3">
+          <!-- Occupation -->
+          <div class="part6">
+            <p class="subpart1">Occupation<span style="color:red; font-weight:bold; font-size:1.2em;">*</span>:</p>
+            <input type="text" class="subpart2 input1" />
+          </div>
+          <!-- Retiree? -->
+          <div class="part7">
+            <p class="subpart1">Are you a retiree?<span style="color:red; font-weight:bold; font-size:1.2em;">*</span></p>
+            <div class="subpart2">
+              <input type="radio" /> Yes <input type="radio" /> No
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Personal Details -->
+      <p class="header">Personal Details</p>
+      <div class="content">
+        <!-- Name of Beneficiary -->
+        <div class="line5">
+          <p class="part1">
+            Name of Beneficiary<span style="color:red; font-weight:bold; font-size:1.2em;">*</span>:
+          </p>
+          <input type="text" class="part2 input2" />
+        </div>
+        <!-- Bank account -->
+        <div class="line5">
+          <p class="part1">
+            Bank account:<span style="color:red; font-weight:bold; font-size:1.2em;">*</span> <br />
+            <span>(or ID number for confirmation only)</span>
+          </p>
+          <input type="text" class="part2 input2" />
+        </div>
+        <!-- Name and Address of Beneficiary's Bank -->
+        <div class="line6">
+          <p>Name and Address of Beneficiary's Bank<span style="color:red; font-weight:bold; font-size:1.2em;">*</span>:</p>
+          <input type="text" class="input2 part9" />
+          <input type="text" class="input2 part10" />
+        </div>
+        <!-- Plans - 1 -->
+        <div class="line7">
+          <div class="part11 part12">
+            <div class="subpart3">
+              <p>Employee:</p>
+              <input type="radio" /> Yes <input type="radio" /> No
+            </div>
+            <p class="subpart4">Plan Choice:</p>
+          </div>
+          <div class="part11 part12">
+            <div class="subpart3">
+              <p>Spouse:</p>
+              <input type="radio" /> Yes <input type="radio" /> No
+            </div>
+            <p class="subpart4">Plan Choice:</p>
+          </div>
+          <div class="part11">
+            <div class="subpart3">
+              <p>Children:</p>
+              <input type="radio" /> Yes <input type="radio" /> No
+            </div>
+            <p class="subpart4">Plan Choice:</p>
+          </div>
+        </div>
+        <!-- Plans - 2 -->
+        <div class="line8">
+          <div class="part13 part14">
+            <input type="radio" />
+            <div>
+              <p class="subpart5">PLAN A</p>
+              <p>
+                Starting from $25 per week ** <br />
+                (prices excl. VAT, activation fees apply) <br />
+                See more details on page 17
+              </p>
+            </div>
+          </div>
+          <div class="part13">
+            <input type="radio" />
+            <div>
+              <p class="subpart5">PLAN B <b> JOIN NOW ! </b></p>
+              <p>
+                Starting from THB $21 per week ** <br />
+                (prices excl. VAT.) <br />
+                See more details on page 17
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Policy -->
+      <p class="header">The Policy</p>
+      <div class="content">
+        <div class="line3">
+          <!-- Units -->
+          <div class="part6">
+            <p class="subpart1">Units<span style="color:red; font-weight:bold; font-size:1.2em;">*</span>:</p>
+            <input type="text" class="subpart2 input1" />
+          </div>
+          <!-- Annual Premium -->
+          <div class="part7">
+            <p class="subpart1">Annual Premium<span style="color:red; font-weight:bold; font-size:1.2em;">*</span>:</p>
+            <input type="text" class="subpart2 input1" />
+          </div>
+        </div>
+        <!-- Payment Mode -->
+        <div class="line4">
+          <p class="part8">
+            Payment Mode:
+          </p>
+          <div>
+            <input type="radio" /> Annual <input type="radio" /> Semi-Annual
+            <input type="radio" /> Monthly PAT (complete PAT card)
+          </div>
+        </div>
+        <!-- Cash with Application -->
+        <div class="line1">
+          <p class="part1">
+            Cash with Application<span style="color:red; font-weight:bold; font-size:1.2em;">*</span>:
+          </p>
+          $ <input type="text" class="part2 input1" />
+        </div>
+        <!-- Planned Modal Premium -->
+        <div class="line1">
+          <p class="part1">
+            Planned Modal Premium<span style="color:red; font-weight:bold; font-size:1.2em;">*</span>:
+          </p>
+          $ <input type="text" class="part2 input1" />
+        </div>
+      </div>
+      <div class="content">
+        <div class="line9">
+          <p class="part15">
+            <strong> Terms and Conditions </strong> <br />
+            Improvement should be measured regularly and assessed in order for
+            you to know what's beneficial and what is not. This will help you
+            set new targets.
+          </p>
+          <div class="part16">
+            <p>Signature<span style="color:red; font-weight:bold; font-size:1.2em;">*</span>:</p>
+            <input placeholder="X" type="text" class="input3" />
+            <div>
+              <p>Date<span style="color:red; font-weight:bold; font-size:1.2em;">*</span>:</p>
+              <input type="text" class="input3" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="third-semicircle">
+        <span></span>
+        </div>
+        <div class="forth-semicircle">
+        <span></span>
+        </div>
+    </div>
+  </body>
+</html>

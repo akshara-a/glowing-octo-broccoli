@@ -1,0 +1,309 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #a8c0ff, #fbc2eb);
+    margin: 0;
+    padding: 40px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    color: #222;
+    margin-bottom: 25px;
+    animation: fadeDown 1.2s ease;
+}
+
+h2 {
+    text-align: center;
+    color: #555;
+    margin-bottom: 40px;
+    animation: bounceIn 1.5s ease;
+}
+
+.application-form {
+    background: #fff;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    display: grid;
+    gap: 25px;
+    animation: fadeUp 1.2s ease;
+}
+
+label {
+    font-weight: 600;
+    color: #444;
+    display: block;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 8px rgba(106, 17, 203, 0.3);
+    transform: scale(1.02);
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    height: 90px;
+}
+
+.grid-two {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.grid-vertical {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    margin-top: 6px;
+}
+
+button {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    animation: pulse 2.5s infinite ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(37, 117, 252, 0.3);
+}
+
+.plan {
+    justify-content: space-between;
+    background: #f7f7f7;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.agree {
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.agree a {
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.floating-icons span {
+    position: absolute;
+    font-size: 30px;
+    opacity: 0.4;
+    animation: floatIcons 8s linear infinite;
+}
+
+.floating-icons span:nth-child(1) {
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.floating-icons span:nth-child(2) {
+    top: 40%;
+    left: 90%;
+    animation-delay: 1.5s;
+}
+
+.floating-icons span:nth-child(3) {
+    top: 80%;
+    left: 10%;
+    animation-delay: 3s;
+}
+
+.floating-icons span:nth-child(4) {
+    top: 60%;
+    left: 80%;
+    animation-delay: 4.5s;
+}
+
+.floating-icons span:nth-child(5) {
+    top: 30%;
+    left: 50%;
+    animation-delay: 2s;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+    background: #ffffff;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 600px;
+    margin: 10% auto;
+    padding: 30px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.4s ease;
+    position: relative;
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.modal-content ul {
+    padding-left: 20px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+}
+
+.close:hover {
+    color: #000;
+}
+
+.agree-btn {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.agree-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(37, 117, 252, 0.3);
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes floatIcons {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateY(-20px) rotate(10deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.3;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(60px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

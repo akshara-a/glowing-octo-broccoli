@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Assignment-1</title>
+</head>
+<body>
+    <h1>Application Form</h1>
+    <hr>
+    <form>
+
+        <div class="section-header">
+             <h2>General Questions:</h2><br>
+        <label>Proposed insured's name:</label>
+        <input type="text" name="proposed_name" id="input1" required><br><br>
+        <label>Birth date:</label>
+        <input type="date" name="birth_date" id="input2" required>
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male" required> Male
+        <input type="radio" name="gender" value="female" required> Female
+        <label>Passport no:</label>
+        <input type="text" name="passport_no" id="input3" required><br><br>
+        <label>Address:</label>
+        <input type="text" name="address" id="input4" required><br><br>
+        <label>Contact no:</label>
+        <input type="tel" name="contact_no" id="input5" required>
+        <label>Email:</label>
+        <input type="email" name="email" id="input6" required><br><br>
+        <label>Id Number:</label>
+        <input type="text" name="id_number" id="input7" required>
+        <label>social security no:</label>
+        <input type="text" name="ssn" id="input8" required><br><br>
+        <label>Status:</label>
+        <input type="radio" name="status" value="single" required> Single
+        <input type="radio" name="status" value="married" required> Married
+        <input type="radio" name="status" value="divorced" required> Divorced
+        <input type="radio" name="status" value="widowed" required> others<br><br>
+        <label>Occupation:</label>
+        <input type="text" name="occupation" id="input9" required>
+        <label>Are you retired?</label>
+        <input type="radio" name="retired" value="yes" required> Yes
+        <input type="radio" name="retired" value="no" required> No<br><br><br>
+        </div><hr>
+        <div class="section-header">
+            <h2>Personal Questions:</h2><br>
+            <label>Name of benificary:</label>
+            <input type="text" name="benificary_name" id="input10" required><br><br>
+            <label>Bank Account:</label>
+            <input type="text" name="bank_account" id="input11" required><br><br>
+            <label>Name and Address of benificary bank:</label><br>
+            <input type="text" name="benificary_bank" id="input12" required><br><br>
+            <input type="text" name="relation_benificary" id="input13" required><br><br>
+        <div class="box">
+            <div class="container"><label>Employee:</label><br><br>
+        <input type="radio" name="employee" value="yes" required>Yes
+        <input type="radio" name="employee" value="no" required>No <br><br>
+        <label>Plan choice:</label>
+        </div>
+        <div class="container"><label>Spouse:</label><br><br>
+            <input type="radio" name="spouse" value="yes" required>Yes
+        <input type="radio" name="spouse" value="no" required>No <br><br>
+        <label>Plan choice:</label>
+           </div>
+        <div class="container"><label>Children:</label><br><br>
+        <input type="radio" name="children" value="yes" required>Yes
+        <input type="radio" name="children" value="no" required>No <br><br>
+        <label>Plan choice:</label></div>
+        </div><br><br>
+        <div class="box2">
+            <div class="container2">
+                <input type="radio" name="plan" value="A">PLAN A<br>
+                Starting from $25 per week **<br>
+                (prices excl. VAT, activation fees apply)<br>
+                See more details on page 17
+            </div>
+            <div class="container2">
+                <input type="radio" name="plan" value="B">PLAN B <span>JOIN NOW!</span><br>
+                Starting from THB $21 per week **<br>
+                (prices excl. VAT.)<br>
+                See more details on page 17
+            </div>
+        </div>
+        <hr>
+        <div class="policy">
+            <h2>The policy:</h2>
+            <label>Units:</label>
+            <input type="number" name="units" id="input14" required>
+            <label>Annual Premium:</label>
+            <input type="text" name="annual_premium" id="input15" required><br><br>
+            <label>Payment Mode:</label>
+            <select name="payment_mode" id="input16" required>
+                <option value="monthly">Monthly</option>
+                <option value="quarterly">Quarterly</option>
+                <option value="semi-annual">Semi-Annual</option>
+                <option value="annual">Annual</option>
+            </select><br><br>
+            <label>Cash with Application:</label>
+            $<input type="text" name="cash_application" id="input17" required><br><br>
+            <label>Planned model premium:</label>
+            $<input type="text" name="planned_premium" id="input18" required><br><br>
+        </div>
+        <div class="terms">
+            <div class="terms1">Terms and condition:<br>
+            Improvement should be measured regularly and assessed in order for you to know what's
+             beneficial and what is not. This will help you set new targets.
+            </div>
+            <div class="terms1">
+                <div><label>signature:</label> <input placeholder="X"></div>
+                <div><label>Date:</label><input></div>
+            </div><br><br>
+        </div>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
