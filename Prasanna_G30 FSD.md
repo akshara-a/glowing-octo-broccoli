@@ -68,8 +68,8 @@ Language Consistency and Future
 
 11.Library and Community Support:
    Python 2: 
-   -Reached End-of-Life (EOL) in   January 2020.
-  - It receives no new updates,   security patches, or new major libraries.
+   -Reached End-of-Life (EOL) in  January 2020.
+  - It receives no new updates,  security patches, or new major libraries.
 
   Python 3:
   - Active, supported, and growing. -It is the standard for all new development.
@@ -86,3 +86,4 @@ Language Consistency and Future
   Python 3:
   - Simplifies this by having only one method: dict.keys(), which returns a view object. 
   -This is more memory-efficient and removes the confusion of three separate methods.
+
