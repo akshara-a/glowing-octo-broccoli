@@ -1,4 +1,4 @@
-Differences Between Python 2 and Python 3
+# Differences Between Python 2 and Python 3
 
 
 1. Print Statement Difference
@@ -11,7 +11,6 @@ print "Hello World"
 
 # Python 3
 print("Hello World")
-
 In Python 3, print() is a function.
 
 2. Division Behavior
