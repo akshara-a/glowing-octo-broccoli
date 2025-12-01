@@ -83,7 +83,8 @@ View objects use less memory and reflect real-time dictionary updates.
 
 8. Standard Library Reorganization
 
-Many libraries were restructured for clarity in Python 3. Examples:
+Many libraries were restructured for clarity in Python 3. 
+Examples:
 
 Python 2	Python 3 Equivalent
 urllib2	urllib.request, urllib.error
@@ -105,6 +106,8 @@ Iteration	range & xrange	Single improved range
 Input	raw_input & input	Only input()
 Dictionary methods	Return lists	Return views
 Support	Discontinued	Actively supported
+
+
 # Why Python 3 is Better
 
 Faster and more memory-efficient
