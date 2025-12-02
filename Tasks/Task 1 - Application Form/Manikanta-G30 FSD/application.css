@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  margin: 40px 0;
+}
+
+.sheet {
+  width: 900px;
+  background: #fff;
+  margin: auto;
+  padding: 0 25px 50px;
+}
+
+.banner {
+  height: 50px;
+  background: radial-gradient(circle, #000 10%, #fff 80%);
+}
+
+.form-title {
+  text-align: center;
+  font-size: 62px;
+  margin: 20px 0 30px;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.section-body {
+  padding: 0 20px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.two-cols,
+.three-cols {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col {
+  flex: 1;
+  margin-right: 15px;
+}
+.col:last-child {
+  margin-right: 0;
+}
+
+.label-lg {
+  width: 30%;
+}
+
+input.input-wide {
+  width: 70%;
+  border: none;
+  border-bottom: 1px solid #000;
+  background: #eee;
+  padding: 6px;
+}
+
+.input-line {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #000;
+  background: #eee;
+  padding: 5px;
+}
+
+.box-input {
+  width: 100%;
+  border: 1px solid #000;
+  padding: 6px;
+  margin-top: 5px;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+.radio-group label {
+  margin-right: 20px;
+}
+
+input[type="radio"] {
+  transform: scale(1.3);
+  margin-right: 4px;
+}
+
+.column-block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+/* PLAN GRID */
+.plan-group {
+  display: flex;
+  border: 1px solid #000;
+  margin-top: 20px;
+}
+
+.plan-col {
+  width: 33.33%;
+  padding: 10px 15px;
+}
+
+.border-r {
+  border-right: 1px solid #000;
+}
+
+.plan-text {
+  margin: 0;
+}
+
+/* PLAN BOXES */
+.plans-choice {
+  display: flex;
+  margin-top: 25px;
+}
+
+.plan-box {
+  display: flex;
+  background: #ddd;
+  padding: 15px;
+  margin-right: 20px;
+  width: 50%;
+}
+
+.plan-name {
+  margin: 0 0 5px;
+  font-weight: bold;
+}
+
+.plan-name.highlight strong {
+  color: red;
+}
+
+/* TERMS */
+.terms-block {
+  background: #dcdcdc;
+  margin-top: 25px;
+  padding: 15px;
+  display: flex;
+}
+
+.terms-block p {
+  width: 60%;
+}
+
+.sig-area {
+  width: 40%;
+  padding-left: 20px;
+}
+
+.sig-input {
+  border: none;
+  border-bottom: 1px solid #000;
+  width: 100%;
+  padding: 7px;
+}
+
+.date-input {
+  border: none;
+  border-bottom: 1px solid #000;
+  padding: 4px;
+  margin-top: 5px;
+  width: 100%;
+}
