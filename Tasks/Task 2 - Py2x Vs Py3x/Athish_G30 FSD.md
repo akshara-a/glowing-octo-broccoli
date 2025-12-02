@@ -2,7 +2,7 @@
 
 ### **1. Interpreter & Performance**
 - Python 3 has an improved CPython interpreter with optimized opcodes, faster execution, and better memory management.  
-- Dictionaries use **shared-key (split-table)** structure → 30–60% less memory.  
+- Dictionaries use **shared-key (split-table)** structure => 30-60% less memory.  
 - Python 3.11+ introduces huge performance boosts over Python 2.
 
 ### **2. Unicode & String Model**
