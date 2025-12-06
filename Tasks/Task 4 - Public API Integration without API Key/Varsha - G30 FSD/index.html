@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card fade-in">
+
+            <h2 id="cityTitle" class="title">Weather Information</h2>
+
+            <h1 id="temperature" class="temp">--°C</h1>
+
+            <p id="condition" class="condition">Click the button to load weather</p>
+
+            <div class="divider"></div>
+
+            <div class="details">
+                <div class="row"><span>Wind Speed</span><span id="wind">--</span></div>
+                <div class="row"><span>Humidity</span><span id="humidity">--</span></div>
+                <div class="row"><span>Updated Time</span><span id="time">--</span></div>
+            </div>
+
+            <button id="getWeatherBtn" class="btn">Get Weather</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
