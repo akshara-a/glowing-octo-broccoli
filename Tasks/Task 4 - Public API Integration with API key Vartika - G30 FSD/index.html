@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App - Open Meteo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Weather App</h1>
+    <p class="sub-heading">
+        Enter a city name or coordinates to see current weather (using Open-Meteo API).
+    </p>
+
+    <div class="form">
+        <div class="field full">
+            <label for="city">City</label>
+            <input type="text" id="city" placeholder="e.g. New Delhi, London, Tokyo">
+            <small class="note">If you type a city name, latitude and longitude will be filled automatically.</small>
+        </div>
+
+        <div class="field">
+            <label for="latitude">Latitude</label>
+            <input type="number" id="latitude" step="0.0001" placeholder="e.g. 28.6139">
+        </div>
+
+        <div class="field">
+            <label for="longitude">Longitude</label>
+            <input type="number" id="longitude" step="0.0001" placeholder="e.g. 77.2090">
+        </div>
+
+        <button id="getWeatherBtn">Get Weather</button>
+    </div>
+
+    <p id="error" class="error"></p>
+
+    <div id="weatherCard" class="weather-card hide">
+        <div class="weather-header">
+            <span id="locationName" class="location"></span>
+            <span id="coords" class="coords"></span>
+        </div>
+
+        <div class="row">
+            <span class="label">Temperature:</span>
+            <span id="temperature" class="value"></span>
+        </div>
+
+        <div class="row">
+            <span class="label">Wind speed:</span>
+            <span id="windSpeed" class="value"></span>
+        </div>
+
+        <div class="row">
+            <span class="label">Condition:</span>
+            <span id="weatherCode" class="value"></span>
+        </div>
+
+        <p id="updatedAt" class="time"></p>
+    </div>
+
+    <div class="footer">
+        <small>Data from <a href="https://open-meteo.com/" target="_blank">Open-Meteo</a></small>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
