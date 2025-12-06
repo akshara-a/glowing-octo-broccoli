@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Application Form</h1>
+    <form action="#" method="post" class="application-form">
+      
+      <div class="form-section">
+        <h2>Personal Information</h2>
+        <div class="grid-container">
+          <label>Full Name</label>
+          <input type="text" name="fullname" placeholder="Enter your full name" required>
+
+          <label>Email</label>
+          <input type="email" name="email" placeholder="Enter your email" required>
+
+          <label>Phone Number</label>
+          <input type="tel" name="phone" placeholder="Enter your number" required>
+
+          <label>Date of Birth</label>
+          <input type="date" name="dob" required>
+
+          <label>Gender</label>
+          <div class="gender">
+            <label><input type="radio" name="gender" value="Male" required> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+            <label><input type="radio" name="gender" value="Other"> Other</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>Address</h2>
+        <div class="grid-container">
+          <label>Street</label>
+          <input type="text" name="street" placeholder="Street name" required>
+
+          <label>City</label>
+          <input type="text" name="city" placeholder="City" required>
+
+          <label>State</label>
+          <input type="text" name="state" placeholder="State" required>
+
+          <label>Pin Code</label>
+          <input type="text" name="pincode" placeholder="XXXXXX" pattern="[0-9]{6}" required>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>Educational Details</h2>
+        <div class="grid-container">
+          <label>Qualification</label>
+          <input type="text" name="qualification" placeholder="e.g., B.Tech, B.Sc" required>
+
+          <label>Course Applying For</label>
+          <select name="course" required>
+            <option value="">Select Course</option>
+            <option>B.Tech (AI & ML)</option>
+            <option>B.Tech (CSE)</option>
+            <option>B.Tech (ECE)</option>
+            <option>B.Sc (Computer Science)</option>
+          </select>
+
+          <label>College Name</label>
+          <input type="text" name="college" placeholder="Your college name" required>
+
+          <label>Year of Study</label>
+          <input type="number" name="year" min="1" max="4" placeholder="1 to 4" required>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>Upload Documents</h2>
+        <input type="file" name="resume" accept=".pdf,.doc,.docx" required>
+      </div>
+
+      <div class="btn-container">
+        <button type="submit">Submit</button>
+        <button type="reset" class="reset-btn">Reset</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+

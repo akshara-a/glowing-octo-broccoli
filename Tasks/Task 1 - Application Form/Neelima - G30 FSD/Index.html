@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Student Internship Registration Form</h1>
+    <form class="internship-form">
+
+      <!-- Personal Info -->
+      <div class="form-section">
+        <h2>Personal Information</h2>
+        <div class="grid-container">
+          <label for="fullname">Full Name</label>
+          <input id="fullname" type="text" name="fullname" placeholder="Enter your full name" required>
+
+          <label for="email">Email Address</label>
+          <input id="email" type="email" name="email" placeholder="Enter your email" required>
+
+          <label for="phone">Phone Number</label>
+          <input id="phone" type="tel" name="phone" placeholder="Enter your phone number" required>
+
+          <label for="dob">Date of Birth</label>
+          <input id="dob" type="date" name="dob" required>
+        </div>
+      </div>
+
+      <!-- Education Details -->
+      <div class="form-section">
+        <h2>Education Details</h2>
+        <div class="grid-container">
+          <label for="college">College Name</label>
+          <input id="college" type="text" name="college" placeholder="Enter your college name" required>
+
+          <label for="degree">Degree / Program</label>
+          <input id="degree" type="text" name="degree" placeholder="e.g., B.Tech, B.Sc, MBA" required>
+
+          <label for="branch">Branch / Specialization</label>
+          <input id="branch" type="text" name="branch" placeholder="e.g., CSE, ECE, MECH" required>
+
+          <label for="year">Current Year of Study</label>
+          <input id="year" type="number" name="year" min="1" max="4" placeholder="1 - 4" required>
+        </div>
+      </div>
+
+      <!-- Internship Details -->
+      <div class="form-section">
+        <h2>Internship Details</h2>
+        <div class="grid-container">
+          <label for="domain">Preferred Internship Domain</label>
+          <select id="domain" name="domain" required>
+            <option value="">Select Domain</option>
+            <option>Web Development</option>
+            <option>Data Science</option>
+            <option>AI & Machine Learning</option>
+            <option>Cybersecurity</option>
+            <option>Graphic Design</option>
+            <option>Marketing / HR</option>
+          </select>
+
+          <label for="duration">Internship Duration</label>
+          <select id="duration" name="duration" required>
+            <option value="">Select Duration</option>
+            <option>1 Month</option>
+            <option>2 Months</option>
+            <option>3 Months</option>
+            <option>6 Months</option>
+          </select>
+
+          <label for="availability">Availability</label>
+          <input id="availability" type="date" name="availability" required>
+
+          <label for="mode">Preferred Mode</label>
+          <select id="mode" name="mode" required>
+            <option value="">Select Mode</option>
+            <option>Online</option>
+            <option>Offline</option>
+            <option>Hybrid</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Technical Skills -->
+      <div class="form-section">
+        <h2>Technical Skills</h2>
+        <div class="grid-container">
+          <label for="skills">List of Skills</label>
+          <textarea id="skills" name="skills" rows="4" placeholder="e.g., Python, HTML, JavaScript, Excel" required></textarea>
+
+          <label for="projects">Mention Your Projects (if any)</label>
+          <textarea id="projects" name="projects" rows="4" placeholder="Project titles or brief description"></textarea>
+        </div>
+      </div>
+
+      <!-- Upload Section -->
+      <div class="form-section">
+        <h2>Upload Resume</h2>
+        <input type="file" name="resume" accept=".pdf,.doc,.docx" required>
+      </div>
+
+      <!-- Buttons -->
+      <div class="btn-container">
+        <button type="submit">Submit</button>
+        <button type="reset" class="reset-btn">Reset</button>
+      </div>
+
+    </form>
+  </div>
+
+  <script>
+    document.querySelector('.internship-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('✅ Internship registration submitted successfully!');
+      this.reset();
+    });
+  </script>
+</body>
+</html>

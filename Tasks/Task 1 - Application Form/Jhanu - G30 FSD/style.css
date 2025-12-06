@@ -1,0 +1,108 @@
+body {
+  background-color: #ffd6e0; /* light pink background */
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.container {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px 40px;
+  width: 800px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #c2185b;
+  margin-bottom: 20px;
+}
+
+.form-section {
+  margin-bottom: 30px;
+}
+
+.form-section h2 {
+  border-bottom: 2px solid #c2185b;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  color: #c2185b;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 20px;
+}
+
+label {
+  color: #444;
+  font-weight: 500;
+}
+
+input, select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  background: #fff;
+  color: #333;
+}
+
+input::placeholder {
+  color: #999;
+}
+
+.gender {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.gender label {
+  color: #333;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  background: #c2185b;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #a3154e;
+}
+
+.reset-btn {
+  background: #b0b0b0;
+}
+
+.reset-btn:hover {
+  background: #8d8d8d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}

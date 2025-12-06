@@ -1,0 +1,99 @@
+/* Basic Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+/* Page Setup */
+body {
+  font-family: Arial, sans-serif;
+  background:#f5f5f5;
+  padding:20px;
+}
+
+/* Main Container */
+.container {
+  max-width:900px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+/* Headings */
+h1 { 
+  text-align:center; 
+  font-size:32px; 
+  color:#333; margin-bottom:20px; }
+.section-title {
+  font-size:24px; color:#333;
+  border-bottom:2px solid #555;
+  padding-bottom:10px; margin:30px 0 20px;
+}
+
+/* Post Section */
+.post-section {
+  background:#e8e8e8; 
+  padding:30px; 
+  margin:30px 0; 
+  text-align:center;
+  border-left:4px solid #555;
+}
+.post-section h2 { 
+  color:#555; font-size:20px; }
+.post-section h3 { 
+  color:#666; font-size:16px; font-weight:normal; }
+
+/* Form Fields */
+label { 
+  display:block; 
+  color:#444; font-weight:600; 
+  font-size:14px; margin-bottom:8px; }
+input, select {
+  width:100%; 
+  padding:12px; 
+  font-size:14px;
+  border:1px solid #ccc; border-radius:4px;
+}
+input:focus, select:focus { 
+  outline:none; 
+  border-color:#555; }
+
+/* Layout */
+.form-row, .signature-section {
+  display:grid; gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
+.form-group, .qualification-block, .declaration { margin-bottom:20px; }
+
+/* Qualification + Declaration */
+.qualification-block {
+  background:#fff; 
+  padding:20px; 
+  border:1px solid #ddd; 
+  border-radius:4px;
+}
+.qual-heading { 
+  color:#555; 
+  font-size:18px; 
+  margin-bottom:15px; }
+.declaration {
+  background:#f9f9f9; 
+  padding:20px; 
+  border-radius:6px;
+  border-left:4px solid #999;
+  margin:25px 0;
+}
+.declaration p { 
+  color:#444; 
+  font-size:15px; 
+  line-height:1.7; }
+
+/* Signature & Submit Button */
+.signature-box { padding:10px; }
+.submit-btn {
+  width:100%; 
+  padding:14px; background:#444; color:#fff; border:none;
+  border-radius:6px; 
+  font-size:17px; font-weight:600; cursor:pointer;
+  margin-top:30px; transition:background .2s;
+}
+.submit-btn:hover { background:#222; }
+
+/* Mobile View */
+@media(max-width:768px){.form-row,.signature-section{grid-template-columns:1fr;}}

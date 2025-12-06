@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application Form</title>
+  <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+  <div class="container">
+    <div class="form-card">
+      <div class="form-header">
+        <!-- Logo -->
+        <div class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+        </div>
+        <h1>Join Our Team</h1>
+        <p>We're excited to learn more about you. Please fill out this application form.</p>
+      </div>
+
+      <form class="application-form">
+        <!-- Personal Information -->
+        <div class="form-section">
+          <h2><i class="fas fa-user-circle"></i> Personal Information</h2>
+
+          <div class="form-row">
+            <div class="input-group">
+              <label for="firstName">First Name</label>
+              <div class="input-with-icon">
+                <input type="text" id="firstName" placeholder="Enter your first name" required>
+                <i class="fas fa-user"></i>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="lastName">Last Name</label>
+              <div class="input-with-icon">
+                <input type="text" id="lastName" placeholder="Enter your last name" required>
+                <i class="fas fa-user"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="input-group">
+              <label for="email">Email Address</label>
+              <div class="input-with-icon">
+                <input type="email" id="email" placeholder="your.email@example.com" required>
+                <i class="fas fa-envelope"></i>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="phone">Phone Number</label>
+              <div class="input-with-icon">
+                <input type="tel" id="phone" placeholder="(123) 456-7890" required>
+                <i class="fas fa-phone"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="address">Address</label>
+            <div class="input-with-icon">
+              <input type="text" id="address" placeholder="Enter your full address">
+              <i class="fas fa-home"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Professional Info -->
+        <div class="form-section">
+          <h2><i class="fas fa-briefcase"></i> Professional Information</h2>
+
+          <div class="form-row">
+            <div class="input-group">
+              <label for="position">Desired Position</label>
+              <div class="input-with-icon">
+                <select id="position" required>
+                  <option value="" disabled selected>Select a position</option>
+                  <option>Software Developer</option>
+                  <option>UI/UX Designer</option>
+                  <option>Project Manager</option>
+                  <option>Data Analyst</option>
+                  <option>Marketing Specialist</option>
+                </select>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="experience">Years of Experience</label>
+              <div class="input-with-icon">
+                <select id="experience" required>
+                  <option value="" disabled selected>Select experience</option>
+                  <option>0-1 years</option>
+                  <option>1-3 years</option>
+                  <option>3-5 years</option>
+                  <option>5+ years</option>
+                </select>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Employment Type</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="employment" value="full-time">
+                <span class="radio-checkmark"></span>Full Time
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="employment" value="part-time">
+                <span class="radio-checkmark"></span>Part Time
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="employment" value="contract">
+                <span class="radio-checkmark"></span>Contract
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="employment" value="remote">
+                <span class="radio-checkmark"></span>Remote
+              </label>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="salary">Expected Salary (USD)</label>
+            <div class="input-with-icon">
+              <input type="number" id="salary" placeholder="Enter expected salary">
+              <i class="fas fa-dollar-sign"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education & Skills -->
+        <div class="form-section">
+          <h2><i class="fas fa-graduation-cap"></i> Education & Skills</h2>
+
+          <div class="input-group">
+            <label for="education">Highest Education</label>
+            <div class="input-with-icon">
+              <select id="education" required>
+                <option value="" disabled selected>Select education level</option>
+                <option>High School</option>
+                <option>Associate Degree</option>
+                <option>Bachelor's Degree</option>
+                <option>Master's Degree</option>
+                <option>PhD</option>
+              </select>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="skills">Skills & Qualifications</label>
+            <textarea id="skills" placeholder="List your relevant skills and qualifications"></textarea>
+          </div>
+
+          <div class="input-group">
+            <label for="resume">Upload Resume</label>
+            <div class="file-upload-area">
+              <input type="file" id="resume" accept=".pdf,.doc,.docx">
+              <div class="file-upload-content">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p>Drag & drop your resume here or <span>browse</span></p>
+                <small>Supported formats: PDF, DOC, DOCX (Max 5MB)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Info -->
+        <div class="form-section">
+          <h2><i class="fas fa-info-circle"></i> Additional Information</h2>
+          <div class="input-group">
+            <label for="coverletter">Cover Letter</label>
+            <textarea id="coverletter" placeholder="Tell us why you're a good fit..."></textarea>
+          </div>
+          <div class="input-group">
+            <label for="portfolio">Portfolio Link</label>
+            <div class="input-with-icon">
+              <input type="url" id="portfolio" placeholder="https://yourportfolio.com">
+              <i class="fas fa-link"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Agreement -->
+        <div class="form-section agreement-section">
+          <label class="checkbox-option">
+            <input type="checkbox" id="agree" required>
+            <span class="checkbox-checkmark"></span>
+            I agree to the <a href="#">terms and conditions</a> and confirm all information is accurate.
+          </label>
+        </div>
+
+        <!-- Submit -->
+        <div class="form-actions">
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-paper-plane"></i> Submit Application
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="form-footer">
+      <p>Have questions? <a href="#">Contact our HR team</a></p>
+    </div>
+  </div>
+</body>
+</html>

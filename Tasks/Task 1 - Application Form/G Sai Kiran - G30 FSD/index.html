@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SURE Trust — FSD Application</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="brand">
+      <h1>SURE TRUST</h1>
+      <h3>SKILL UPGRADATION FOR RURAL - YOUTH EMPOWERMENT</h3>
+    </header>
+
+    <main class="card">
+      <section class="left">
+        <h3 class="title">Apply for the next batch</h3>
+        <p class="quote">We welcome learners who want to build real-time projects and grow their skills. Fill your details below.</p>
+
+        <br>
+
+        <h2 class="section-title">Basic Information</h2>
+
+        <form action="#" method="POST" novalidate enctype="multipart/form-data">
+          
+          <div class="row two">
+            <div>
+              <label for="firstname">First Name</label>
+              <input id="firstname" name="firstname" type="text" placeholder="Sai" required />
+            </div>
+            <div>
+              <label for="lastname">Last Name</label>
+              <input id="lastname" name="lastname" type="text" placeholder="Kiran" required />
+            </div>
+          </div>
+
+          <div class="row two">
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="9121XXXXXX" />
+            </div>
+          </div>
+
+          <div class="row two">
+            <div>
+              <label for="dob">Date of Birth</label>
+              <input id="dob" name="dob" type="date" />
+            </div>
+            <div>
+              <label for="gender">Gender</label>
+              <select id="gender" name="gender" class="dark-select">
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+                <option value="prefer_not">Prefer not to say</option>
+              </select>
+            </div>
+          </div>
+
+          
+          <div class="row two">
+            <div>
+              <label for="age">Age</label>
+              <input id="age" name="age" type="number" min="18" max="25" placeholder="Your age" />
+            </div>
+            <div>
+              <label for="address">Address</label>
+              <input id="address" name="address" type="text" placeholder="Street, house no., area" />
+            </div>
+          </div>
+
+          
+          <div class="row two">
+            <div>
+              <label for="city">City</label>
+              <input id="city" name="city" type="text"  />
+            </div>
+            <div>
+              <label for="state">State</label>
+              <input id="state" name="state" type="text"  />
+            </div>
+          </div>
+
+         
+          <div class="row">
+            <label for="pincode">Postal Code</label>
+            <input id="pincode" name="pincode" type="text"  />
+          </div>
+
+          <div class="row">
+            <label for="nationality">Nationality</label>
+            <select id="nationality" name="nationality" class="dark-select">
+              <option value="">Select</option>
+              <option value="Indian" selected>Indian</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+<br>
+         
+          <h2 class="sub-title">Education</h2>
+
+          <div class="row">
+            <label for="college">College / Institute</label>
+            <input id="college" name="college" type="text" placeholder="Your college name" />
+          </div>
+
+          <div class="row two">
+            <div>
+              <label for="degree">Degree</label>
+              <select id="degree" name="degree" class="dark-select">
+                <option value="">Select degree</option>
+                <option value="btech_cse">B.Tech — Computer Science</option>
+                <option value="bca">BCA</option>
+                <option value="bsc_cs">B.Sc — Computer Science</option>
+                <option value="bba">BBA</option>
+                <option value="diploma">Diploma</option>
+                <option value="mca">MCA</option>
+              </select>
+            </div>
+            <div>
+              <label for="year">Year completed</label>
+              <select id="year" name="year" class="dark-select">
+                <option value="">Select year</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026" selected>2026</option>
+                <option value="2027">2027</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row small-note">
+            <small>Only <strong>2026</strong> batches are applicable for this internship.</small>
+          </div>
+
+         <br>
+      
+          <h2 class="sub-title">Links & Skills</h2>
+
+          <div class="row two">
+            <div>
+              <label for="linkedin">LinkedIn Profile</label>
+              <input id="linkedin" name="linkedin" type="url" placeholder="https://www.linkedin.com/in/yourname" />
+
+              <label for="github" style="margin-top:12px;">GitHub / Code Repo</label>
+              <input id="github" name="github" type="url" placeholder="https://github.com/yourusername" />
+            </div>
+
+            <div>
+              
+            </div>
+          </div>
+
+         
+          <div class="row"><br>
+            
+            <label>Primary Skills</label>
+            <div class="skills-grid">
+              <label class="skill"><input type="checkbox" name="skills" value="HTML" /><span>HTML</span></label>
+              <label class="skill"><input type="checkbox" name="skills" value="CSS" /><span>CSS</span></label>
+              <label class="skill"><input type="checkbox" name="skills" value="JavaScript" /><span>JavaScript</span></label>
+              <label class="skill"><input type="checkbox" name="skills" value="React" /><span>React</span></label>
+              <label class="skill"><input type="checkbox" name="skills" value="Node.js" /><span>Node.js</span></label>
+              <label class="skill"><input type="checkbox" name="skills" value="SQL" /><span>SQL</span></label>
+            </div>
+          </div>
+
+          <br>
+
+          <div class="row">
+            <label for="referral">How did you hear about us?</label>
+            <select id="referral" name="referral" class="dark-select">
+              <option value="">Select</option>
+              <option value="facebook">Facebook</option>
+              <option value="instagram">Instagram</option>
+              <option value="linkedin">LinkedIn</option>
+              <option value="friends">Friends</option>
+            </select>
+          </div>
+
+        <br>
+        
+          <div class="row">
+            <label for="resume">Upload Resume</label>
+            <input id="resume" name="resume" type="file" accept=".pdf,.doc,.docx" />
+            <div class="file-note">Allowed: .pdf, .doc, .docx — Max file size 5 MB</div>
+          </div>
+
+          <br>
+<br>
+          <div class="row consent-row">
+            <input type="checkbox" id="consent" name="consent" class="consent-input" required />
+            <label for="consent" class="consent-label">I confirm that the information provided is correct and I agree to SURE Trust policies.</label>
+          </div>
+<br>
+
+          <div class="actions">
+            <button type="reset" class="btn ghost">Reset</button>
+            <button type="submit" class="btn">Submit Application</button>
+          </div>
+        </form>
+      </section>
+
+      
+      <aside class="right">
+        <div class="right-offer">
+          <b class="offer-title">WHAT SURE TRUST PROVIDES:</b>
+          <ul>
+            <li><strong>Duration:</strong> 3-6 months (Project Based)</li>
+            <br>
+            <li><strong>Projects:</strong> Build 2 real projects & deploy</li>
+            <br>
+            <li><strong>Tech Stack:</strong> HTML, CSS, JavaScript, React, Node.js, Git</li>
+            <br>
+            <li><strong>Certificate:</strong> Completion Certificate</li>
+
+          </ul>
+        </div>
+
+        <br>
+
+        <div class="mentors-box">
+          <b class="mentors-title">Our Mentors :</b>
+          <p class="mentors-intro">Guided by experienced professionals who help learners grow and gain real-world project experience.</p>
+          <ul class="mentors-list">
+            <li><strong>Prof. Radhakumari Challa</strong><br><span>Executive Director & Founder — SURE Trust</span></li>
+            <br>
+            
+            <li><strong>Ms. Akshara</strong></li>
+            <li><strong>Ms. Harshee Pitroda</strong></li>
+            <li><strong>Mr. Tarun Joseph</strong></li>
+            <li><strong>Mr. Shanmuk Sai Prakash</strong></li>
+            <li><em>and 50+ dedicated mentors across various domains.</em></li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+  </div>
+</body>
+</html>

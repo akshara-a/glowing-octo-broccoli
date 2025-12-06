@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Application Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Application Form</h1>
+
+  <!-- General Information -->
+  <h2>General Information</h2>
+  <table class="form-table">
+    <tr>
+      <td>Full Name:</td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>Birth Date:</td>
+      <td><input type="date"></td>
+    </tr>
+    <tr>
+      <td>Gender:</td>
+      <td>
+        <label><input type="radio" name="gender"> Male</label>
+        <label><input type="radio" name="gender"> Female</label>
+      </td>
+    </tr>
+    <tr>
+      <td>Address:</td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>Phone:</td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>Email:</td>
+      <td><input type="email"></td>
+    </tr>
+  </table>
+
+  <!-- Beneficiary Details -->
+  <h2>Beneficiary Details</h2>
+  <table class="form-table">
+    <tr>
+      <td>Beneficiary Name:</td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>Bank Account / ID:</td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>Bank Name & Address:</td>
+      <td><input type="text"></td>
+    </tr>
+  </table>
+
+  <!-- Plan Selection -->
+  <h2>Plan Options</h2>
+
+  <div class="plan-container">
+    <div class="plan">
+      <input type="radio" name="plan">
+      <p><strong>PLAN A</strong> - ₹ 2216/week</p>
+    </div>
+    <div class="plan">
+      <input type="radio" name="plan">
+      <p><strong>PLAN B</strong> - ₹ 1862/week</p>
+    </div>
+  </div>
+
+  <!-- Policy Info -->
+  <h2>Policy Information</h2>
+  <table class="form-table">
+    <tr>
+      <td>Units:</td>
+
+      <td><input  type="text"></td>
+
+      <td><input type="text"></td>
+
+    </tr>
+    <tr>
+      <td>Annual Premium:</td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>Payment Mode:</td>
+      <td>
+        <label><input type="radio" name="mode"> Yearly</label>
+        <label><input type="radio" name="mode"> Monthly</label>
+      </td>
+    </tr>
+  </table>
+
+  <!-- Signature -->
+  <h2>Declaration</h2>
+  <p>I declare that the above information is true to the best of my knowledge.</p>
+
+  <div class="sign-area">
+    <label>Signature:</label>
+
+    <input type="text">
+    <label>Date:</label>
+    <input type="date">
+  </div>
+
+</body>
+</html>

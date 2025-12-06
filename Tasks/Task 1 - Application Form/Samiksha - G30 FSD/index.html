@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Insurance Application Form</h2>
+
+      <!-- General Questions -->
+      <h3>General Questions</h3>
+
+      <div class="row">
+        <label>Proposed Insured's Name:</label>
+        <input type="text" placeholder="Enter name (in capitals)" />
+      </div>
+
+      <div class="row gap">
+        <div class="half-width">
+          <label>Birth Date:</label>
+          <input type="date" />
+        </div>
+        <div class="half-width gender">
+          <label>Gender:</label>
+          <div class="radio-group">
+            <label><input type="radio" name="gender" /> Male</label>
+            <label><input type="radio" name="gender" /> Female</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <label>Passport No:</label>
+        <input type="text" placeholder="Enter passport number" />
+      </div>
+
+      <div class="row">
+        <label>Address:</label>
+        <input type="text" placeholder="Enter address" />
+      </div>
+
+      <div class="row gap">
+        <div class="half-width">
+          <label>Phone Number:</label>
+          <input type="tel" placeholder="Enter phone number" />
+        </div>
+        <div class="half-width">
+          <label>Email:</label>
+          <input type="email" placeholder="Enter email" />
+        </div>
+      </div>
+
+      <div class="row gap">
+        <div class="half-width">
+          <label>ID Number:</label>
+          <input type="text" placeholder="Enter ID number" />
+        </div>
+        <div class="half-width">
+          <label>Social Security Number:</label>
+          <input type="text" placeholder="Enter SSN" />
+        </div>
+      </div>
+
+      <div class="row">
+        <label>Status:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="status" /> Single</label>
+          <label><input type="radio" name="status" /> Married</label>
+          <label><input type="radio" name="status" /> Divorced</label>
+          <label><input type="radio" name="status" /> Others</label>
+        </div>
+      </div>
+
+      <!-- Personal Details -->
+      <h3>Personal Details</h3>
+
+      <div class="row">
+        <label>Name of Beneficiary:</label>
+        <input type="text" />
+      </div>
+
+      <div class="row">
+        <label>Bank Account:</label>
+        <input type="text" />
+      </div>
+
+      <div class="row">
+        <label>Beneficiary's Bank Address:</label>
+        <input type="text" />
+      </div>
+
+      <!-- Plan Selection -->
+      <h3>Plan Selection</h3>
+
+      <div class="plan-section">
+        <div class="plan">
+          <label><input type="radio" name="plan" /> PLAN A</label>
+          <p>
+            Starting from $25 per week <br />
+            (excl. VAT & activation fees)
+          </p>
+        </div>
+        <div class="plan">
+          <label
+            ><input type="radio" name="plan" /> PLAN B <b>JOIN NOW!</b></label
+          >
+          <p>
+            Starting from $21 per week <br />
+            (excl. VAT)
+          </p>
+        </div>
+      </div>
+
+      <!-- Policy Section -->
+      <h3>The Policy</h3>
+
+      <div class="row gap">
+        <div class="half-width">
+          <label>Units:</label>
+          <input type="text" />
+        </div>
+        <div class="half-width">
+          <label>Annual Premium:</label>
+          <input type="text" />
+        </div>
+      </div>
+
+      <div class="row">
+        <label>Payment Mode:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="payment" /> Annual</label>
+          <label><input type="radio" name="payment" /> Semi-Annual</label>
+          <label><input type="radio" name="payment" /> Monthly</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <label>Cash with Application:</label>
+        $ <input type="text" style="width: 80%" />
+      </div>
+
+      <div class="row">
+        <label>Planned Modal Premium:</label>
+        $ <input type="text" style="width: 80%" />
+      </div>
+
+      <!-- Terms and Signature -->
+      <div class="terms">
+        <div>
+          <strong style="color: rgb(161, 10, 10)">Terms and Conditions:</strong>
+
+          <p>
+            Improvement should be measured regularly to assess what's beneficial
+            and what is not. This helps you set new targets.
+          </p>
+        </div>
+
+        <div class="signature">
+          <label>Signature:</label>
+          <input type="text" />
+          <label>Date:</label>
+          <input type="text" />
+        </div>
+      </div>
+
+      <button type="submit">Submit</button>
+    </div>
+  </body>
+</html>
