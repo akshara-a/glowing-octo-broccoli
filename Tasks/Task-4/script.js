@@ -1,4 +1,3 @@
-
 const btn = document.getElementById("getWeatherBtn");
 const result = document.getElementById("weatherResult");
 
