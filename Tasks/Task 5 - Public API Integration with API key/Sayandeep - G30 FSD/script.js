@@ -45,12 +45,12 @@ async function fetchWeather(city) {
         } else {
             // Error handling for invalid city or API key
             const errorMessage = data.message || 'Unknown error occurred.';
-            weatherResultDiv.innerHTML = `<p class="error">Error: ${errorMessage}. Please check the city name or **replace the placeholder API Key in script.js**.</p>`;
+            weatherResultDiv.innerHTML = `<p class="error">Error: ${errorMessage}. Please check the city name</p>`;
         }
 
     } catch (error) {
         console.error('Weather Fetch Failed:', error);
-        weatherResultDiv.innerHTML = `<p class="error">Network error. Check console for details.</p>`;
+        weatherResultDiv.innerHTML = `<p class="error">Network error. Please try again.</p>`;
     } finally {
         getWeatherBtn.disabled = false;
     }
