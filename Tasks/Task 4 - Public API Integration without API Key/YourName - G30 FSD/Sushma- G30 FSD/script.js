@@ -8,7 +8,7 @@ document.getElementById("getWeatherBtn").addEventListener("click", function () {
         return;
     }
 
-    // Open-Meteo Current Weather API
+
     let url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`;
 
     fetch(url)
