@@ -4,7 +4,7 @@ async function getWeather() {
   const city = document.getElementById("cityInput").value.trim();
   const resultDiv = document.getElementById("weatherResult");
 
-  resultDiv.innerHTML = ""; // Clear old result
+  resultDiv.innerHTML = "";
 
   if (!city) {
     resultDiv.innerHTML = "<p class='error'>Please enter a city name.</p>";
