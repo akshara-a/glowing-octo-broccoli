@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Weather App</title>
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <main class="app">
+        <section class="weather-card fade-in">
+
+            <h2 class="city" id="city">Hyderabad</h2>
+
+            <div class="temperature">
+                <span id="temp">--</span>°C
+            </div>
+
+            <p class="condition" id="condition">Click below to load weather</p>
+
+            <div class="divider"></div>
+
+            <div class="stats">
+                <div class="stat">
+                    <span>Feels Like</span>
+                    <strong id="feels">--°C</strong>
+                </div>
+                <div class="stat">
+                    <span>Humidity</span>
+                    <strong id="humidity">--%</strong>
+                </div>
+                <div class="stat">
+                    <span>Wind</span>
+                    <strong id="wind">-- km/h</strong>
+                </div>
+                <div class="stat">
+                    <span>Updated</span>
+                    <strong id="time">--</strong>
+                </div>
+            </div>
+
+            <button id="btn" class="btn">Get Weather</button>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
