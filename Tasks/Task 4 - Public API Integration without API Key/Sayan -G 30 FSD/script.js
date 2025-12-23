@@ -11,6 +11,7 @@ const cityInput = document.getElementById('city-input');
 const weatherDisplay = document.getElementById('weather-display');
 const getWeatherButton = document.getElementById('get-weather-btn');
 
+
 // --- Utility Functions ---
 
 // Weather condition mapping

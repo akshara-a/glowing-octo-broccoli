@@ -6,6 +6,7 @@ const errorMessage = document.getElementById('errorMessage');
 const errorText = document.getElementById('errorText');
 const loader = document.getElementById('loader');
 
+
 // Data Elements
 const cityNameEl = document.getElementById('cityName');
 const tempEl = document.getElementById('temp');
