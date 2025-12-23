@@ -52,24 +52,20 @@ This ensures branch histories remain independent.
 
 View commit history and copy the required hash:
 
-```bash
+
 git log --oneline
-Step 2: Switch to the Target Branch
-bash
-Copy code
+### Step 2: Switch to the Target Branch
+
 git checkout main
 or (modern syntax):
 
-bash
-Copy code
+
 git switch main
-Step 3: Apply the Commit
-bash
-Copy code
+### Step 3: Apply the Commit
+
 git cherry-pick <commit-id>
 Example
-bash
-Copy code
+
 git checkout main
 git cherry-pick a3f42e9
 Result:
@@ -82,14 +78,12 @@ The original commit remains unchanged on its source branch
 
 Cherry-Picking Multiple Commits
 Pick Multiple Individual Commits
-bash
-Copy code
+
 git cherry-pick <commit1> <commit2> <commit3>
 Commits are applied in the order specified.
 
-Pick a Continuous Range of Commits
-bash
-Copy code
+### Pick a Continuous Range of Commits
+
 git cherry-pick <start-commit>^..<end-commit>
 Explanation:
 
@@ -107,27 +101,23 @@ Open files and resolve conflicts manually
 
 Stage the resolved files:
 
-bash
-Copy code
+
 git add .
 Continue the cherry-pick process:
 
-bash
-Copy code
+
 git cherry-pick --continue
 Abort the Cherry-Pick
 If you decide not to proceed:
 
-bash
-Copy code
+
 git cherry-pick --abort
 This restores the branch to its original state before cherry-picking began.
 
 Skipping a Commit During Cherry-Pick
 If cherry-picking multiple commits and one commit fails:
 
-bash
-Copy code
+
 git cherry-pick --skip
 Git will move on to the next commit in the sequence.
 
@@ -150,8 +140,7 @@ This maintains proper attribution.
 Changing the Author (If Required)
 Changing the author should be done cautiously and only when necessary.
 
-bash
-Copy code
+
 git commit --amend --author="Name <email@address.com>"
 Use cases include:
 
@@ -159,7 +148,7 @@ Correcting incorrect author information
 
 Applying organizational policies
 
-Best Practices
+### Best Practices
 Cherry-pick small, focused commits
 
 Avoid cherry-picking merge commits
@@ -170,7 +159,7 @@ Prefer cherry-pick for hotfixes and backports
 
 Be mindful of duplicate commits across branches
 
-Common Pitfalls
+### Common Pitfalls
 Cherry-picking large commits increases conflict risk
 
 Repeated cherry-picks can complicate history
