@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMDb Movie Search</title>
+
+    <style>
+        body {
+            background: #f0f0f0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 400px;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .movie-img {
+            width: 180px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .movie-info {
+            text-align: left;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>TMDb Movie Search</h2>
+
+        <input type="text" id="movieInput" placeholder="Enter movie name">
+        <button onclick="searchMovie()">Search</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        const API_KEY = "ce6d7b92bb8d16e2f0a594bb09a58ee1";  // <-- Replace with your TMDb v3 API key
+
+        async function searchMovie() {
+            const movieName = document.getElementById("movieInput").value.trim();
+            const resultDiv = document.getElementById("result");
+
+            if (!movieName) {
+                alert("Please enter a movie name!");
+                return;
+            }
+
+            const url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(movieName)}`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+
+                if (!data.results || data.results.length === 0) {
+                    resultDiv.innerHTML = "<p>Movie not found!</p>";
+                    return;
+                }
+
+                const movie = data.results[0];
+
+                resultDiv.innerHTML = `
+                    <img class="movie-img" src="https://image.tmdb.org/t/p/w300${movie.poster_path}" alt="Movie Poster">
+                    <div class="movie-info">
+                        <p><strong>Title:</strong> ${movie.title}</p>
+                        <p><strong>Release Date:</strong> ${movie.release_date}</p>
+                        <p><strong>Rating:</strong> ${movie.vote_average}</p>
+                        <p><strong>Overview:</strong> ${movie.overview}</p>
+                    </div>
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = "<p>Error fetching movie data</p>";
+            }
+        }
+    </script>
+
+</body>
+</html>
