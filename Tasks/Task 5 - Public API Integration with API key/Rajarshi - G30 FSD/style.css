@@ -1,0 +1,102 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:1s;
+}
+
+/* LIVE BACKGROUND THEMES */
+.defaultBG{background:#0d1b2a;}
+
+.sunny{
+    background:radial-gradient(circle,#ffdb59,#ff8c00);
+}
+
+.cloudy{
+    background:linear-gradient(135deg,#7d8ca3,#4b5c7a,#2e3a4d);
+}
+
+.rainy{
+    background:linear-gradient(135deg,#5a7ca3,#2d415a,#0e243a);
+}
+
+.snow{
+    background:linear-gradient(135deg,#e3f2ff,#b6d8ff,#8abfff);
+}
+
+.fog{
+    background:linear-gradient(135deg,#cccccc,#9a9a9a,#7b7b7b);
+}
+
+/* UI CONTAINER */
+.container{
+    width:100%;padding:30px;
+    display:flex;justify-content:center;
+}
+
+/* GLASS WEATHER CARD */
+.weather-card{
+    width:380px;padding:35px;
+    background:rgba(255,255,255,0.07);
+    backdrop-filter:blur(25px);
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,0.25);
+    color:rgba(0,255,255,.45);text-align:center;
+
+    box-shadow:0 0 25px rgba(0,255,255,.45),
+               inset 0 0 40px rgba(0,255,255,.25);
+
+    animation:fade .8s ease;
+}
+
+/* TITLE */
+.title{font-size:27px;margin-bottom:20px;letter-spacing:1px;}
+
+/* SEARCH UI */
+.search-box{
+    display:flex;gap:10px;margin-bottom:20px;
+}
+
+.search-box input{
+    flex:1;padding:13px;border-radius:10px;border:none;
+    background:#00f6ff;color:rgb(237, 235, 235);
+}
+
+.search-box button{
+    padding:13px 20px;border:none;border-radius:10px;
+    font-weight:600;cursor:pointer;background:#00f6ff;color:#001117;
+    transition:.3s;
+}
+.search-box button:hover{transform:scale(1.08);background:#00fff2;}
+
+/* WEATHER DISPLAY */
+.result{animation:pop .7s;}
+.icon{width:90px;margin-top:5px;}
+.temp{font-size:3.6rem;font-weight:700;margin-top:10px;}
+.city{font-size:1.4rem;margin-top:6px;}
+.type{text-transform:capitalize;opacity:.85;margin-top:4px;}
+
+/* INFO BOX */
+.info-box{
+    margin-top:20px;display:flex;justify-content:space-between;padding:14px 18px;
+    background:rgba(255,255,255,.18);backdrop-filter:blur(10px);
+    border-radius:12px;box-shadow:inset 0 0 15px rgba(0,255,255,.25);
+}
+.info-box p{font-size:1.1rem;margin-top:5px;font-weight:700;}
+
+/* ERROR + LOADER */
+.error{background:#ff67678c;padding:8px;border-left:4px solid #ff9d9d;border-radius:5px;}
+.hide{display:none;}
+
+.loader{
+    width:30px;height:30px;margin:15px auto;border:4px solid #fff3;border-top-color:#fff;
+    border-radius:50%;animation:spin 1s linear infinite;
+}
+
+/* ANIMATIONS */
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes fade{from{opacity:0;}to{opacity:1;}}
+@keyframes pop{from{opacity:0;transform:scale(.95);}to{opacity:1;transform:scale(1);}}
