@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App - Open Meteo</title>
+
+    <style>
+        :root{
+          --bg-1:#0f1724;
+          --bg-2:#1f2a44;
+          --accent-1:#4f46e5;
+          --accent-2:#06b6d4;
+          --glass:#ffffff10;
+          --muted:rgba(255,255,255,0.7);
+          --border:#ffffff20;
+        }
+
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{
+          height:100vh;
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          background:linear-gradient(135deg,var(--bg-1),var(--bg-2));
+          font-family:system-ui,Arial;
+          color:#fff;
+          padding:20px;
+        }
+
+        .container{
+          width:min(400px,90%);
+          background:var(--glass);
+          border-radius:14px;
+          border:1px solid var(--border);
+          padding:22px;
+          backdrop-filter:blur(6px);
+        }
+
+        h1{
+          font-size:22px;
+          display:flex;
+          align-items:center;
+          gap:10px;
+          margin-bottom:10px;
+        }
+
+        .info{color:var(--muted);font-size:14px;margin-bottom:20px;}
+
+        button{
+          width:100%;
+          padding:12px;
+          border:0;
+          border-radius:10px;
+          background:linear-gradient(90deg,var(--accent-1),var(--accent-2));
+          color:#fff;
+          font-weight:bold;
+          cursor:pointer;
+          transition:.2s;
+          margin-bottom:20px;
+        }
+        button:hover{transform:scale(1.04);}
+
+        .card{
+          padding:16px;
+          border-radius:10px;
+          border:1px solid var(--border);
+          background:rgba(255,255,255,0.05);
+        }
+
+        .row{
+          display:flex;
+          justify-content:space-between;
+          margin-bottom:10px;
+        }
+
+        .label{color:var(--muted);font-size:14px;}
+        .value{font-size:20px;font-weight:bold;}
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>🌤 Weather App</h1>
+    <p class="info">Click the button to fetch current weather for location using Open-Meteo API.</p>
+
+    <button id="getWeatherBtn">Get Weather</button>
+
+    <div class="card">
+        <div class="row">
+            <span class="label">Temperature</span>
+            <span class="value" id="temp">-- °C</span>
+        </div>
+
+        <div class="row">
+            <span class="label">Wind Speed</span>
+            <span class="value" id="wind">-- km/h</span>
+        </div>
+
+        <div class="row">
+            <span class="label">Weather Code</span>
+            <span class="value" id="code">--</span>
+        </div>
+    </div>
+</div>
+
+
+<script>
+const btn = document.getElementById("getWeatherBtn");
+const tempDisplay = document.getElementById("temp");
+const windDisplay = document.getElementById("wind");
+const codeDisplay = document.getElementById("code");
+const latitude = 17.385;
+const longitude = 78.4867;
+async function getWeather() {
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`;
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("API Error: " + response.status);
+    const data = await response.json();
+    const weather = data.current_weather;
+    tempDisplay.textContent = `${weather.temperature} °C`;
+    windDisplay.textContent = `${weather.windspeed} km/h`;
+    codeDisplay.textContent = weather.weathercode;
+
+  } catch (error) {
+    console.error(error);
+    alert("❌ Failed to fetch weather data. Check console.");
+  }
+}
+btn.addEventListener("click", getWeather);
+</script>
+</body>
+</html>
+
