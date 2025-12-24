@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rectangle Box</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        #myBox {
+            width: 150px;
+            height: 150px;
+            background-color: skyblue;
+            border: 3px solid black;
+            border-radius:1px;
+            transition: 0.3s;
+            cursor: pointer;
+            display: flex;
+           
+        }
+    </style>
+</head>
+<body>
+
+<div id="myBox"></div>
+
+<script>
+    const box = document.getElementById("myBox");
+    box.addEventListener("mouseenter", function() {
+        box.style.backgroundColor = "tomato";
+        box.style.borderRadius = "50% 50%";
+    });
+    box.addEventListener("mouseleave", function() {
+        box.style.backgroundColor = "skyblue";
+        box.style.transform = "scale(1)";
+    });
+</script>
+
+</body>
+</html>

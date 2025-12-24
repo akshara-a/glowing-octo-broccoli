@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Open Meteo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2> Current Weather</h2>
+
+        <div class="input-box">
+            <label>Enter Latitude:</label>
+            <input type="number" id="latitude" placeholder="e.g., 17.3850">
+        </div>
+
+        <div class="input-box">
+            <label>Enter Longitude:</label>
+            <input type="number" id="longitude" placeholder="e.g., 78.4867">
+        </div>
+
+        <button id="getWeatherBtn">Get Weather</button>
+
+        <div class="result">
+            <p><strong>Temperature:</strong> <span id="temp">--</span> °C</p>
+            <p><strong>Wind Speed:</strong> <span id="wind">--</span> km/h</p>
+            <p><strong>Weather Code:</strong> <span id="code">--</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

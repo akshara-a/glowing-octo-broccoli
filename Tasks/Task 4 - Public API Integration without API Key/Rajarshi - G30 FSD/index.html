@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Explorer</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <div class="container">
+        <h1> Weather Explorer</h1>
+        <p class="subtitle">Get real-time weather for any location</p>
+
+        <div class="search-section">
+            <label class="search-label" for="city-input">Enter Location</label>
+            <div class="search-wrapper">
+                <input 
+                    type="text" 
+                    id="city-input" 
+                    placeholder="e.g., London, Tokyo, New York"
+                    value="Kolkata"
+                >
+                <button id="get-weather-btn">Search</button>
+            </div>
+        </div>
+
+        <div id="weather-display" class="weather-card">
+            <p class="initial-message">Enter a location and click Search to get weather data</p>
+        </div>
+
+        <p class="api-note">
+            Powered by Open-Meteo API
+        </p>
+    </div>
+
+   
+</body>
+ <script src="script.js"></script>
+</html>
