@@ -1,0 +1,207 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+     min-height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 20px;
+ }
+
+ .container {
+     background: rgba(255, 255, 255, 0.95);
+     backdrop-filter: blur(10px);
+     padding: 40px;
+     border-radius: 24px;
+     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+     width: 100%;
+     max-width: 480px;
+     animation: fadeIn 0.5s ease;
+ }
+
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+         transform: translateY(-20px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ h1 {
+     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     background-clip: text;
+     font-size: 2em;
+     margin-bottom: 10px;
+     text-align: center;
+ }
+
+ .subtitle {
+     text-align: center;
+     color: #6b7280;
+     font-size: 0.9em;
+     margin-bottom: 30px;
+ }
+
+ .search-section {
+     margin-bottom: 25px;
+ }
+
+ .search-label {
+     display: block;
+     color: #374151;
+     font-weight: 600;
+     margin-bottom: 10px;
+     font-size: 0.95em;
+ }
+
+ .search-wrapper {
+     display: flex;
+     gap: 10px;
+ }
+
+ #city-input {
+     flex: 1;
+     padding: 14px 18px;
+     border: 2px solid #e5e7eb;
+     border-radius: 12px;
+     font-size: 1em;
+     transition: all 0.3s ease;
+     outline: none;
+ }
+
+ #city-input:focus {
+     border-color: #667eea;
+     box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+ }
+
+ #get-weather-btn {
+     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+     color: white;
+     border: none;
+     padding: 14px 24px;
+     border-radius: 12px;
+     font-size: 1em;
+     font-weight: 600;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     white-space: nowrap;
+ }
+
+ #get-weather-btn:hover {
+     transform: translateY(-2px);
+     box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+ }
+
+ #get-weather-btn:active {
+     transform: translateY(0);
+ }
+
+ .weather-card {
+     background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+     border-radius: 16px;
+     padding: 30px;
+     margin-bottom: 20px;
+     min-height: 200px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     transition: all 0.4s ease;
+ }
+
+ .weather-card.loading {
+     opacity: 0.6;
+ }
+
+ .initial-message {
+     color: #6b7280;
+     text-align: center;
+     font-size: 1.1em;
+ }
+
+ .city-name {
+     font-size: 1.8em;
+     font-weight: 700;
+     color: #1f2937;
+     margin-bottom: 10px;
+     text-align: center;
+ }
+
+ .temperature {
+     font-size: 3.5em;
+     font-weight: 700;
+     background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     background-clip: text;
+     margin: 15px 0;
+ }
+
+ .weather-details {
+     width: 100%;
+     margin-top: 20px;
+ }
+
+ .detail-row {
+     display: flex;
+     justify-content: space-between;
+     padding: 12px 0;
+     border-bottom: 1px solid #d1d5db;
+ }
+
+ .detail-row:last-child {
+     border-bottom: none;
+ }
+
+ .detail-label {
+     color: #6b7280;
+     font-weight: 500;
+ }
+
+ .detail-value {
+     color: #1f2937;
+     font-weight: 600;
+ }
+
+ .error {
+     color: #ef4444;
+     font-weight: 600;
+     text-align: center;
+ }
+
+ .api-note {
+     text-align: center;
+     color: #9ca3af;
+     font-size: 0.85em;
+     margin-top: 20px;
+ }
+
+ @media (max-width: 480px) {
+     .container {
+         padding: 30px 20px;
+     }
+
+     .search-wrapper {
+         flex-direction: column;
+     }
+
+     #get-weather-btn {
+         width: 100%;
+     }
+
+     .temperature {
+         font-size: 2.8em;
+     }
+ }
