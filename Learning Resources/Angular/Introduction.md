@@ -20,7 +20,7 @@ Angular uses TypeScript (a superset of JavaScript) and follows a component-based
 | Feature | JavaScript (JS) | TypeScript (TS) |
 |---------|----------------|-----------------|
 | Type | Programming language | Superset of JavaScript |
-| Typing | Dynamically typed | Statically typed (optional) |
+| Typing | Dynamically typed | Statically typed  |
 | Type checking | At runtime | At compile time |
 | Error detection | Errors found during execution | Errors caught before execution |
 | Code safety | Less safe for large projects | More reliable and safer |
