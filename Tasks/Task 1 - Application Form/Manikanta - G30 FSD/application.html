@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application Form</title>
+    <link rel="stylesheet" href="application.css" />
+  </head>
+
+  <body>
+    <section class="sheet">
+      <header class="banner"></header>
+      <h1 class="form-title">Application Form</h1>
+
+      <h2 class="section-title">General Questions</h2>
+      <div class="section-body">
+        <div class="row">
+          <label class="label-lg"
+            >Proposed Insured's Name<br /><span
+              >(Use capital letters)</span
+            ></label
+          >
+          <input type="text" class="input-wide" />
+        </div>
+
+        <div class="row three-cols">
+          <div class="col">
+            <label>Date of Birth:</label>
+            <input type="date" class="input-line" />
+          </div>
+
+          <div class="col">
+            <label>Gender:</label>
+            <div class="radio-group">
+              <label><input type="radio" name="gen" /> Male</label>
+              <label><input type="radio" name="gen" /> Female</label>
+            </div>
+          </div>
+
+          <div class="col">
+            <label>Passport No:</label>
+            <input type="text" class="input-line" />
+          </div>
+        </div>
+
+        <div class="row">
+          <label class="label-lg">Address:</label>
+          <input type="text" class="input-wide" />
+        </div>
+
+        <div class="row two-cols">
+          <div class="col">
+            <label>Phone Number:</label>
+            <input type="text" class="input-line" />
+          </div>
+          <div class="col">
+            <label>Email Address:</label>
+            <input type="email" class="input-line" />
+          </div>
+        </div>
+
+        <div class="row two-cols">
+          <div class="col">
+            <label>ID Number:</label>
+            <input type="text" class="input-line" />
+          </div>
+          <div class="col">
+            <label>Social Security Number:</label>
+            <input type="text" class="input-line" />
+          </div>
+        </div>
+
+        <div class="row">
+          <label class="label-lg">Status:</label>
+          <div class="radio-group">
+            <label><input type="radio" name="status" /> Single</label>
+            <label><input type="radio" name="status" /> Married</label>
+            <label><input type="radio" name="status" /> Divorced</label>
+            <label><input type="radio" name="status" /> Others</label>
+          </div>
+        </div>
+
+        <div class="row two-cols">
+          <div class="col">
+            <label>Occupation:</label>
+            <input type="text" class="input-line" />
+          </div>
+          <div class="col">
+            <label>Are you a retiree?</label>
+            <div class="radio-group">
+              <label><input type="radio" name="retire" /> Yes</label>
+              <label><input type="radio" name="retire" /> No</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title">Personal Details</h2>
+      <div class="section-body">
+        <div class="row">
+          <label class="label-lg">Name of Beneficiary:</label>
+          <input type="text" class="input-wide box-input" />
+        </div>
+
+        <div class="row">
+          <label class="label-lg"
+            >Bank Account <br /><span
+              >(or ID number for confirmation)</span
+            ></label
+          >
+          <input type="text" class="input-wide box-input" />
+        </div>
+
+        <div class="column-block">
+          <label>Name & Address of Beneficiary's Bank:</label>
+          <input type="text" class="box-input" />
+          <input type="text" class="box-input" />
+        </div>
+
+        <div class="plan-group">
+          <div class="plan-col border-r">
+            <div class="radio-title">
+              Employee:
+              <label><input type="radio" name="emp" /> Yes</label>
+              <label><input type="radio" name="emp" /> No</label>
+            </div>
+            <p class="plan-text">Plan Choice:</p>
+          </div>
+
+          <div class="plan-col border-r">
+            <div class="radio-title">
+              Spouse:
+              <label><input type="radio" name="sp" /> Yes</label>
+              <label><input type="radio" name="sp" /> No</label>
+            </div>
+            <p class="plan-text">Plan Choice:</p>
+          </div>
+
+          <div class="plan-col">
+            <div class="radio-title">
+              Children:
+              <label><input type="radio" name="child" /> Yes</label>
+              <label><input type="radio" name="child" /> No</label>
+            </div>
+            <p class="plan-text">Plan Choice:</p>
+          </div>
+        </div>
+
+        <div class="plans-choice">
+          <label class="plan-box">
+            <input type="radio" name="plan" />
+            <div>
+              <h4 class="plan-name">PLAN A</h4>
+              <p>
+                Starts at $25/week (excl. VAT)<br />Activation fees apply<br />See
+                page 17
+              </p>
+            </div>
+          </label>
+
+          <label class="plan-box">
+            <input type="radio" name="plan" />
+            <div>
+              <h4 class="plan-name highlight">
+                PLAN B <strong>JOIN NOW!</strong>
+              </h4>
+              <p>Starts at $21/week (THB)<br />VAT excluded<br />See page 17</p>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <h2 class="section-title">The Policy</h2>
+      <div class="section-body">
+        <div class="row two-cols">
+          <div class="col">
+            <label>Units:</label>
+            <input type="text" class="input-line" />
+          </div>
+          <div class="col">
+            <label>Annual Premium:</label>
+            <input type="text" class="input-line" />
+          </div>
+        </div>
+
+        <div class="row">
+          <label class="label-lg">Payment Mode:</label>
+          <div class="radio-group">
+            <label><input type="radio" name="pay" /> Annual</label>
+            <label><input type="radio" name="pay" /> Semi-Annual</label>
+            <label><input type="radio" name="pay" /> Monthly PAT</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <label class="label-lg">Cash with Application:</label>
+          <span>$</span><input type="text" class="input-line" />
+        </div>
+
+        <div class="row">
+          <label class="label-lg">Planned Modal Premium:</label>
+          <span>$</span><input type="text" class="input-line" />
+        </div>
+      </div>
+
+      <div class="terms-block">
+        <p>
+          <strong>Terms and Conditions</strong><br />
+          Progress should be assessed routinely to identify beneficial actions
+          and remove ineffective ones. This helps set realistic new goals.
+        </p>
+
+        <div class="sig-area">
+          <label>Signature:</label>
+          <input type="text" class="sig-input" placeholder="X" />
+          <div>
+            <label>Date:</label>
+            <input type="text" class="date-input" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

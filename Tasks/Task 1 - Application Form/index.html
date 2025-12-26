@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Application Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <form class="application-form">
+    <h1>Application Form</h1>
+
+    <!-- ---- General Questions ---- -->
+    <section class="general-questions">
+      <h2>General Questions</h2>
+      <label id="line1">
+        <p>Proposed Insured's Name: <span>(Please use capital letters)</span></p>
+        <input type="text" name="insured_name" required>
+      </label>
+
+      <div class="box" id="line2">
+        <label class="details">
+          <p id="para1">Birth Date:</p>
+          <input type="date" name="birth_date">
+        </label>
+        <label class="details">
+          <p>Gender:</p>
+          <div class="subpart">
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+          </div>
+        </label>
+        <label class="details">
+          <p id="para2">Passport No:</p>
+          <input type="text" name="passport_no">
+        </label>
+      </div>
+
+      <label class="details ip" id="line3">
+        <p id="para3">Address:</p>
+        <input type="text" name="address">
+      </label>
+
+      <div class="box" id="line4">
+        <label class="details ip subbox">
+          <p class="part1">Phone Number:</p>
+          <input type="text" name="phone">
+        </label>
+        <label class="details ip subbox">
+          <p class="part1">Email Address:</p>
+          <input type="email" name="email">
+        </label>
+      </div>
+
+      <div class="box" id="line5">
+        <label class="details ip subbox">
+          <p class="part1">ID Number:</p>
+          <input type="text" name="id_number">
+        </label>
+        <label class="details ip subbox">
+          <p class="part1">Social Security Number:</p>
+          <input type="text" name="ssn">
+        </label>
+      </div>
+
+      <label class="details" id="line8">
+        <p id="part1">Status:</p>
+        <input type="radio" name="status" value="Single"> Single
+        <input type="radio" name="status" value="Married"> Married
+        <input type="radio" name="status" value="Divorced"> Divorced
+        <input type="radio" name="status" value="Others"> Others
+      </label>
+
+      <div class="box" id="line9">
+        <label class="details ip subbox">
+          <p class="part1">Occupation:</p>
+          <input type="text" name="occupation">
+        </label>
+        <label class="details subbox">
+          <p class="part1">Are you a retiree?</p>
+          <div class="subpart">
+            <input type="radio" name="retiree" value="Yes"> Yes
+            <input type="radio" name="retiree" value="No"> No
+          </div>
+        </label>
+      </div>
+    </section>
+
+    <!-- ---- Personal Details ---- -->
+    <section class="personal-details">
+      <h2>Personal Details</h2>
+      <label class="details ip">
+        <p class="para4">Name of Beneficiary:</p>
+        <input type="text" name="beneficiary_name">
+      </label>
+
+      <label class="details ip">
+        <p class="para4">Bank Account:
+          <span>(or ID number for confirmation only)</span>
+        </p>
+        <input type="text" name="bank_account">
+      </label>
+
+      <label>
+        <p>Name and Address of Beneficiary’s Bank:</p>
+        <textarea name="bank_address" id="area"></textarea>
+      </label>
+
+      <div class="plan-grid">
+        <div id="grid1">
+          <div class="subpart">
+            <p>Employee:</p>
+            <input type="radio" name="employee" value="Yes"> Yes
+            <input type="radio" name="employee" value="No"> No
+          </div>
+          <p>Plan Choice:</p>
+        </div>
+        <div id="grid2">
+          <div class="subpart">
+            <p>Spouse:</p>
+            <input type="radio" name="spouse" value="Yes"> Yes
+            <input type="radio" name="spouse" value="No"> No
+          </div>
+          <p>Plan Choice:</p>
+        </div>
+        <div class="grids">
+          <div class="subpart">
+            <p>Children:</p>
+            <input type="radio" name="children" value="Yes"> Yes
+            <input type="radio" name="children" value="No"> No
+          </div>
+          <p>Plan Choice:</p>
+        </div>
+      </div>
+
+      <div class="plan-options">
+        <label>
+          <input type="radio" name="chosen_plan" value="A"> PLAN A
+          <div class="box2">Starting from $25 per week **<br>
+            (prices excl. VAT, activation fees apply)<br>
+            See more details on page 17</div>
+        </label>
+        <label>
+          <input type="radio" name="chosen_plan" value="B"> PLAN B <span class="highlight">JOIN NOW!</span>
+          <div class="box2">Starting from $21 per week **<br>
+            (prices excl. VAT)<br>
+            See more details on page 17</div>
+        </label>
+      </div>
+    </section>
+
+    <!-- ---- Policy Details ---- -->
+    <section class="policy-details">
+      <h2>The Policy</h2>
+      <div class="box">
+        <label class="details ip subbox">
+          <p class="part1">Units:</p>
+          <input type="number" name="units">
+        </label>
+        <label class="details ip subbox">
+          <p class="part1">Annual Premium:</p>
+          <input type="number" name="annual_premium">
+        </label>
+      </div>
+
+      <label id="payment">
+        <p>Payment Mode:</p>
+        <input type="radio" name="payment_mode" value="Annual"> Annual
+        <input type="radio" name="payment_mode" value="Semi-Annual"> Semi-Annual
+        <input type="radio" name="payment_mode" value="Monthly"> Monthly PAT
+      </label>
+
+      <label class="details">
+        <p class="para5">Cash with Application:<span>$</span></p>
+        <input type="number" name="cash_with_app">
+      </label>
+
+      <label class="details">
+        <p class="para5">Planned Modal Premium:<span>$</span></p>
+        <input type="number" name="modal_premium">
+      </label>
+
+      <div class="terms">
+        <div id="part1">
+          <div id="subpart1">
+            <strong>Terms and Conditions</strong>
+            <p>Improvement should be measured regularly and assessed in order for you to know what’s beneficial and what is not. This will help you set new targets.</p>
+          </div>
+          <div id="subpart2">
+            <label class="details">
+              <p class="para5">Signature:</p>
+              <input type="text" name="signature">
+            </label>
+            <label class="details">
+              <p class="para5">Date:</p>
+              <input type="date" name="date">
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

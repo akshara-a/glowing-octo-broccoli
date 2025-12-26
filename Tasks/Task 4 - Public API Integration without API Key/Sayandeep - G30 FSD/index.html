@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open-Meteo Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h1>City Weather Explorer 🌍</h1>
+        <p class="location-info">Default Location: Kolkata, India</p>
+
+        <!-- location put field -->
+        <div id="location-put">
+            <h3>Location</h3>
+            <input type="text" id="city-input" placeholder="Enter Location Name (e.g., London)">
+        </div>
+
+        <!-- Weather infomation display -->
+        <div id="weather-display" class="weather-card">
+            <p>Enter a location and click the button or press Enter.</p>
+        </div>
+
+        <button id="get-weather-btn">Get Weather</button>
+
+        <!-- API endpoint note -->
+        <p class="api-endpoint-note">
+            <small>APIs Used: Open-Meteo Current Weather API (for weather data) and Geocoding API (for coordinates).</small>
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
