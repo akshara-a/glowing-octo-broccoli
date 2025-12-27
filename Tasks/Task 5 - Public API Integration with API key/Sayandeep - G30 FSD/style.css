@@ -1,0 +1,126 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e9ecef;
+    color: #343a40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px 20px;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 565PX;
+}
+
+/* Headers and Titles */
+h1 {
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.location-info {
+    font-size: 0.9em;
+    color: #6c757d;
+    margin-bottom: 25px;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+/* Input Field Styling */
+#location-put{
+    margin-bottom: 20px;
+}
+
+h3{
+    font-size: 20px;
+    color: #0ef;
+}
+
+#city-input{
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #ced4da;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+/* Weather Card Styling */
+.weather-card {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.weather-card p {
+    margin: 5px 0;
+    font-size: 1.1em;
+    width: 100%;
+}
+
+/* OpenWeatherMap Data Styles */
+.city-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+.weather-data .temp-main {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #dc3545;
+    margin: 10px 0;
+}
+.weather-data .description {
+    font-style: italic;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+/* Error message styling */
+.error {
+    color: #dc3545;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Button Styling */
+#get-weather-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+#get-weather-btn:hover {
+    background-color: #0056b3;
+}
+
+#get-weather-btn:disabled {
+    background-color: #adb5bd;
+}
