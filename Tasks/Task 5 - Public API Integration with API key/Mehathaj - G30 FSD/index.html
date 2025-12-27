@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Background Image -->
+    <div class="background" id="bgImage"></div>
+
+    <!-- Search -->
+    <header class="search-area">
+        <input type="text" id="cityInput" placeholder="Search a city...">
+        <button onclick="fetchWeather()">Search</button>
+    </header>
+
+    <!-- MAIN DASHBOARD -->
+    <main class="dashboard">
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-left">
+                <h1 id="cityName">City Name</h1>
+                <p id="localTime">Local Time</p>
+                <h2 id="temperature">--°C</h2>
+                <p id="conditionText">Condition</p>
+            </div>
+            <div class="hero-right">
+                <img id="weatherIcon" src="" alt="">
+            </div>
+        </section>
+
+        <!-- WEATHER CARDS -->
+        <section class="cards">
+            <div class="card" id="windCard"></div>
+            <div class="card" id="humidityCard"></div>
+            <div class="card" id="pressureCard"></div>
+            <div class="card" id="visibilityCard"></div>
+            <div class="card" id="cloudCard"></div>
+            <div class="card" id="feelsCard"></div>
+        </section>
+
+        <!-- AIR QUALITY -->
+        <section class="air-quality">
+            <h2>Air Quality</h2>
+            <div class="aqi-grid">
+                <div class="aqi-card" id="co"></div>
+                <div class="aqi-card" id="no2"></div>
+                <div class="aqi-card" id="o3"></div>
+                <div class="aqi-card" id="so2"></div>
+                <div class="aqi-card" id="pm25"></div>
+                <div class="aqi-card" id="pm10"></div>
+            </div>
+        </section>
+
+    </main>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -2,7 +2,7 @@ After learning about Git cherry-pick, I understood that it is a Git command used
 
 Cherry-pick is mainly useful in situations like:
 
-Applying the same bug fix to multiple branches
+merge conflict test!!!
 
 Moving a single feature commit
 
