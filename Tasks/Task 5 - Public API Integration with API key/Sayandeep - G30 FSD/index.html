@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Integration Assignment 2: OpenWeatherMap</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Current Weather Explorer</h1>
+        <p class="location-info">
+            OpenWeatherMap API Integration. Default Location: Kolkata, India.
+        </p>
+        
+        <section class="api-section weather-section">
+            <!-- City Input Field -->
+            <div id="location-put" class="input-group">
+                <h3>Location</h3>
+                <input type="text" id="city-input" placeholder="Enter City Name (e.g., Delhi)">
+            </div>
+            
+            <!-- Desplay Weather Data -->
+            <div id="weather-result" class="weather-card">
+                <p>Loading weather data...</p>
+            </div>
+            
+            <button id="get-weather-btn">Get Weather</button>
+        </section>
+    </div>
+
+    <script src="apiKey.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
