@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1> Weather App (Open-Meteo API)</h1>
+
+        
+        <form id="weatherForm" class="weather-form">
+            <label>Enter City Name or Latitude, Longitude:</label>
+            <input type="text" id="locationInput" placeholder="Ex: Bengaluru or 12.9716,77.5946">
+
+            <div class="unit-row">
+                <label>Temperature Unit:</label>
+                <select id="tempUnit">
+                    <option value="c">Celsius (°C)</option>
+                    <option value="f">Fahrenheit (°F)</option>
+                </select>
+
+                <label>Wind Unit:</label>
+                <select id="windUnit">
+                    <option value="ms">m/s</option>
+                    <option value="kmh">km/h</option>
+                </select>
+            </div>
+
+            <button type="submit">Get Weather</button>
+            <button type="button" id="geoBtn">Use My Location</button>
+        </form>
+
+    
+        <div id="outputCard" class="card hidden">
+            <h2 id="cityName">--</h2>
+            <img id="weatherIcon" class="icon" src="" alt="Weather Icon">
+
+            <div class="stats">
+                <p><strong>Temperature:</strong> <span id="tempValue">--</span></p>
+                <p><strong>Feels Like:</strong> <span id="feelsLike">--</span></p>
+                <p><strong>Wind Speed:</strong> <span id="windValue">--</span></p>
+                <p><strong>Condition:</strong> <span id="condition">--</span></p>
+            </div>
+
+            <button id="refreshBtn">Refresh</button>
+        </div>
+
+        <p id="message" class="message"></p>
+
+    </main>
+
+<script src="script.js"></script>
+</body>
+</html>
