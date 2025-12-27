@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 50px 0px;
+  background-color:#170d20;
+}
+
+.main {
+  width: 900px;
+  background-color: #ced3d7;
+  padding: 0px 20px;
+  margin: 0px auto;
+  padding-bottom: 50px;
+}
+
+.header {
+  font-weight: bold;
+}
+
+.top {
+  height: 50px;
+  background: rgb(39, 112, 98);
+  background: radial-gradient(
+    circle,
+    rgb(18, 1, 1) 13%,
+    rgb(8, 16, 20) 81%
+  );
+}
+
+h1 {
+  text-align: center;
+  font-size: 70px;
+}
+
+.content {
+  padding: 0px 20px;
+  margin-bottom: 10px;
+}
+
+span {
+  font-size: 12px;
+}
+
+.input1 {
+  border: none;
+  border-bottom: 1px solid #000;
+  background-color: #e6e6e66b;
+  padding: 5px;
+}
+
+input[type="radio"] {
+  transform: scale(1.35);
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+.line1,
+.line2,
+.line3,
+.line4,
+.line5,
+.line7,
+.line8 {
+  display: flex;
+  align-items: center;
+}
+
+.part1 {
+  width: 30%;
+}
+
+.part2 {
+  width: 70%;
+}
+
+.part3,
+.part4,
+.part5 {
+  display: flex;
+  width: 33.34%;
+  align-items: center;
+}
+
+.part3,
+.part4 {
+  padding-right: 20px;
+}
+
+.subpart1 {
+  width: 40%;
+}
+
+.subpart2 {
+  width: 60%;
+}
+
+.part6,
+.part7 {
+  display: flex;
+  width: 50%;
+  align-items: center;
+}
+
+.part6 {
+  padding-right: 15px;
+}
+
+.part8 {
+  padding-right: 10px;
+}
+
+.input2 {
+  border: 1px solid #768305;
+  padding: 5px;
+}
+
+.line6 {
+  display: flex;
+  flex-direction: column;
+}
+
+.part9,
+.part10 {
+  height: 25px;
+}
+
+.part10 {
+  border-top: none;
+}
+
+.subpart3 {
+  display: flex;
+  align-items: center;
+}
+
+.part11 {
+  width: 33.34%;
+  padding: 10px 20px;
+}
+
+.part12 {
+  border-right: 1px solid #267493;
+}
+
+.subpart4 {
+  margin: 0px;
+}
+
+.line7 {
+  border: 1px solid #000;
+  margin-top: 30px;
+}
+
+b {
+  color: rgb(0, 255, 166);
+}
+
+.part13 {
+  display: flex;
+  align-items: flex-start;
+  background-color: #80808069;
+  padding: 20px;
+  width: 50%;
+}
+
+.subpart5 {
+  margin-top: -3px;
+}
+
+.line8 {
+  margin-top: 30px;
+}
+
+.part14 {
+  margin-right: 30px;
+}
+
+.line9 {
+  display: flex;
+  align-items: flex-start;
+  background-color: #80808054;
+  padding: 10px 20px;
+}
+
+.part15 {
+  width: 60%;
+}
+
+.part16 {
+  width: 40%;
+  margin-left: 20px;
+}
+
+.input3 {
+  border: none;
+  border-bottom: 1px solid #000;
+  background-color: #8a8282;
+  padding: 5px;
+}
+
+.subpart6 {
+  width: 100%;
+}
+
+.subpart7 {
+  outline: none;
+  border: none;
+  padding: 10px 5px;
+}
