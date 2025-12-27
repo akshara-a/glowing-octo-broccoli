@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Application Form</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: #222;
+  min-height: 100vh;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Titles */
+h1 {
+  text-align: center;
+  font-size: 2.2em;
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 1.5em;
+  color: #222;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  position: relative;
+  animation: floatText 6s ease-in-out infinite;
+}
+
+
+@keyframes floatText {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Grid form layout */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 25px;
+}
+
+.form-grid label {
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: 0.3s;
+  width: 100%;
+}
+
+input:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 8px rgba(108, 99, 255, 0.6);
+  outline: none;
+  transform: scale(1.02);
+}
+
+/* Plans grid */
+.plan-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.plan-item {
+  flex: 1;
+  min-width: 250px;
+  background: rgba(255,255,255,0.6);
+  padding: 15px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.plan-item:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.9);
+}
+
+/* Plan cards */
+.plans {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.plan {
+  flex: 1;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.6);
+  transition: 0.3s ease;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(108, 99, 255, 0.3);
+}
+
+.highlight {
+  background: linear-gradient(90deg, #6c63ff, #9f8aff);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+/* Signature section */
+.signature {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 2px dashed #aaa;
+}
+
+.sign-box {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.currency {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="fade-in">Application Form</h1>
+
+    <!-- General Information -->
+    <h2 class="section-title" style="text-align: center;" center;>Scroll Down</h2>
+    <h2 class="fade-in">General Information</h2>
+
+    <div class="form-grid fade-in">
+      <label>Proposed Insured's Name <small>(Please use capital letters)</small></label>
+      <input type="text" />
+      <label>Birth Date</label>
+      <input type="date" />
+      <label>Gender</label>
+      <div class="radio-group">
+        <label><input type="radio" name="gender" /> Male</label>
+        <label><input type="radio" name="gender" /> Female</label>
+      </div>
+      <label>Passport No</label>
+      <input type="text" />
+      <label>Address</label>
+      <input type="text" />
+      <label>Phone Number</label>
+      <input type="text" />
+      <label>Email Address</label>
+      <input type="email" />
+      <label>ID Number</label>
+      <input type="text" />
+      <label>Social Security Number</label>
+      <input type="text" />
+      <label>Status</label>
+      <div class="radio-group">
+        <label><input type="radio" name="status" /> Single</label>
+        <label><input type="radio" name="status" /> Married</label>
+        <label><input type="radio" name="status" /> Divorced</label>
+        <label><input type="radio" name="status" /> Other</label>
+      </div>
+      <label>Occupation</label>
+      <input type="text" />
+      <label>Are you a retiree?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="retiree" /> Yes</label>
+        <label><input type="radio" name="retiree" /> No</label>
+      </div>
+    </div>
+
+    <!-- Personal Details -->
+    <h2 class="section-title">Personal Details</h2>
+    <div class="form-grid fade-in">
+      <label>Name of Beneficiary</label>
+      <input type="text" />
+      <label>Bank Account (or ID for confirmation)</label>
+      <input type="text" />
+      <label>Beneficiary Bank Name</label>
+      <input type="text" placeholder="Bank Name" />
+      <label>Bank Address</label>
+      <input type="text" placeholder="Bank Address" />
+    </div>
+
+    <!-- Plan Options -->
+    <h2 class="section-title">Plan Options</h2>
+    <div class="plan-grid fade-in">
+      <div class="plan-item">
+        <span>Employee</span>
+        <div class="radio-group">
+          <label><input type="radio" name="emp" /> Yes</label>
+          <label><input type="radio" name="emp" /> No</label>
+        </div>
+        <input type="text" placeholder="Plan A / Plan B" />
+      </div>
+      <div class="plan-item">
+        <span>Spouse</span>
+        <div class="radio-group">
+          <label><input type="radio" name="spouse" /> Yes</label>
+          <label><input type="radio" name="spouse" /> No</label>
+        </div>
+        <input type="text" placeholder="Plan A / Plan B" />
+      </div>
+      <div class="plan-item">
+        <span>Children</span>
+        <div class="radio-group">
+          <label><input type="radio" name="child" /> Yes</label>
+          <label><input type="radio" name="child" /> No</label>
+        </div>
+        <input type="text" placeholder="Plan A / Plan B" />
+      </div>
+    </div>
+
+    <!-- Plan Cards -->
+    <div class="plans fade-in">
+      <div class="plan card-hover">
+        <input type="radio" name="plan" />
+        <div>
+          <h3>PLAN A</h3>
+          <p>Starting from $25 per week (excl. VAT). Activation fees apply. See page 17 for details.</p>
+        </div>
+      </div>
+      <div class="plan card-hover">
+        <input type="radio" name="plan" />
+        <div>
+          <h3>PLAN B <span class="highlight">JOIN NOW!</span></h3>
+          <p>Starting from $21 per week (excl. VAT). See page 17 for details.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Policy Info -->
+    <h2 class="section-title">Policy Information</h2>
+    <div class="form-grid fade-in">
+      <label>Units</label>
+      <input type="text" />
+      <label>Annual Premium</label>
+      <input type="text" />
+      <label>Payment Mode</label>
+      <div class="radio-group">
+        <label><input type="radio" name="pay" /> Annual</label>
+        <label><input type="radio" name="pay" /> Semi-Annual</label>
+        <label><input type="radio" name="pay" /> Monthly PAT</label>
+      </div>
+      <label>Cash with Application</label>
+      <div class="currency">$ <input type="text" /></div>
+      <label>Planned Modal Premium</label>
+      <div class="currency">$ <input type="text" /></div>
+    </div>
+
+    <!-- Signature -->
+    <div class="signature fade-in">
+      <p><strong>Terms & Conditions:</strong> Improvement should be measured regularly and assessed to identify what's beneficial and what is not. This will help set new targets.</p>
+      <div class="sign-box">
+        <label>Signature:</label>
+        <input type="text" placeholder="Sayan_2713" />
+        <label>Date:</label>
+        <input type="date" />
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Scroll animation
+    const fadeEls = document.querySelectorAll('.fade-in');
+    window.addEventListener('scroll', () => {
+      fadeEls.forEach(el => {
+        const pos = el.getBoundingClientRect().top;
+        if (pos < window.innerHeight - 100) el.classList.add('visible');
+      });
+    });
+  </script>
+</body>
+</html>
