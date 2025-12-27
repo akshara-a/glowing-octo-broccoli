@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  background: #41a39e;
+  color: #e5e7eb;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.container {
+  max-width: 640px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #070a0f;
+}
+
+.card {
+  background: #020617;
+  border-radius: 16px;
+  padding: 20px 18px;
+  border: 1px solid #1e293b;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  margin-bottom: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input[type="text"] {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+input[type="text"]::placeholder {
+  color: #6b7280;
+}
+
+button {
+  margin-top: 4px;
+  align-self: flex-start;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+}
+
+button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.35);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.info {
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+.error {
+  color: #f97373;
+  font-size: 0.9rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.weather {
+  margin-top: 8px;
+}
+
+.weather h2 {
+  margin-bottom: 4px;
+}
+
+.weather-description {
+  margin-bottom: 8px;
+}
+
+.weather-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.weather-item {
+  background: #020617;
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #1f2937;
+}
+
+.label {
+  display: block;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-bottom: 4px;
+}
+
+.value {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.info-card ul {
+  list-style: disc;
+  margin-left: 1.2rem;
+  margin-top: 0.5rem;
+  color: #9ca3af;
+}
+
+.info-card li + li {
+  margin-top: 4px;
+}

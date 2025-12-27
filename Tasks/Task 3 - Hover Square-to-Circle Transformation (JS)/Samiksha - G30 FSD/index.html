@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Square to Circle Hover + Click</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background: #D0F0C0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #circle {
+        width: 150px;
+        height: 150px;
+        background-color: #e8aa0d;
+        border-radius: 0%; /* Start as square */
+        transition: all 0.5s ease; /* Smooth transitions */
+        cursor: pointer;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      #circle:hover {
+        background-color: #04471d;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="circle"></div>
+
+    <script>
+      const circle = document.getElementById("circle");
+
+      circle.addEventListener("click", function () {
+        circle.style.backgroundColor = "blue";
+      });
+    </script>
+  </body>
+</html>
