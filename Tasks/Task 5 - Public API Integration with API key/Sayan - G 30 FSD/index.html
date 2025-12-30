@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Assignment With API Key</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <div class="background-container">
+        <div class="glass-card">
+            
+            <h2 class="auth-h2">Weather Description</h2>
+            
+            <div class="input-group">
+                <input type="text" id="cityInput" class="auth-input" placeholder="Enter City Name" autocomplete="off">
+                
+                <button id="searchBtn" class="icon-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#03364a" width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                    </svg>
+                </button>
+            </div>
+
+            <div id="errorMessage" class="error-msg hidden"></div>
+
+            <div id="loader" class="loader hidden"></div>
+
+            <div id="weatherDisplay" class="weather-content hidden">
+                <div class="main-display">
+                    <img id="weatherIcon" src="" alt="icon">
+                    <h1 id="temp">--°</h1>
+                </div>
+                
+                <h3 id="cityName" class="city-name">--</h3>
+                <p id="desc" class="description">--</p>
+
+                <div class="divider"></div>
+
+                <div class="stats-row">
+                    <div class="stat">
+                        <span class="label">Humidity</span>
+                        <span id="humidity" class="value">--%</span>
+                    </div>
+                    <div class="stat">
+                        <span class="label">Feels Like</span>
+                        <span id="feelsLike" class="value">--°</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
