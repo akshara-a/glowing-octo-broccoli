@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather App - Task 5</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Weather App</h1>
+    <input id="cityInput" type="text" placeholder="Enter city name" />
+    <button id="searchBtn">Get Weather</button>
+
+    <div id="result" class="hidden">
+      <h2 id="location"></h2>
+      <p id="temp"></p>
+      <p id="condition"></p>
+    </div>
+
+    <div id="error" class="hidden"></div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
