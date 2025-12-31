@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Weather App</title>
+
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef3ff;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 480px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .weather-form {
+            background: white;
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .weather-form input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .unit-row {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        button {
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: none;
+            background: #3b82f6;
+            color: white;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #2563eb;
+        }
+
+        #geoBtn {
+            background: #10b981;
+        }
+
+        #geoBtn:hover {
+            background: #059669;
+        }
+
+        .card {
+            margin-top: 20px;
+            background: white;
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .icon {
+            width: 80px;
+            margin: 10px auto;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .message {
+            text-align: center;
+            margin-top: 15px;
+            color: #555;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <main class="container">
+        <h1> Weather App (Open-Meteo API)</h1>
+
+        <!-- ===================== FORM ===================== -->
+        <form id="weatherForm" class="weather-form">
+            <label>Enter City Name or Latitude, Longitude:</label>
+            <input type="text" id="locationInput" placeholder="Ex: Bengaluru or 12.9716,77.5946">
+
+            <div class="unit-row">
+                <label>Temperature Unit:</label>
+                <select id="tempUnit">
+                    <option value="c">Celsius (°C)</option>
+                    <option value="f">Fahrenheit (°F)</option>
+                </select>
+
+                <label>Wind Unit:</label>
+                <select id="windUnit">
+                    <option value="ms">m/s</option>
+                    <option value="kmh">km/h</option>
+                </select>
+            </div>
+
+            <button type="submit">Get Weather</button>
+            <button type="button" id="geoBtn">Use My Location</button>
+        </form>
+
+
+      
+        <div id="outputCard" class="card hidden">
+            <h2 id="cityName">--</h2>
+            <img id="weatherIcon" class="icon" src="" alt="Weather Icon">
+
+            <div class="stats">
+                <p><strong>Temperature:</strong> <span id="tempValue">--</span></p>
+                <p><strong>Feels Like:</strong> <span id="feelsLike">--</span></p>
+                <p><strong>Wind Speed:</strong> <span id="windValue">--</span></p>
+                <p><strong>Condition:</strong> <span id="condition">--</span></p>
+            </div>
+
+            <button id="refreshBtn">Refresh</button>
+        </div>
+
+        <p id="message" class="message"></p>
+
+    </main>
+
+    <script>
+        // --- Weather Code Text ---
+        const weatherCodeMap = {
+            0: "Clear sky",
+            1: "Mainly clear",
+            2: "Partly cloudy",
+            3: "Overcast",
+            45: "Fog",
+            48: "Depositing rime fog",
+            51: "Light drizzle",
+            53: "Moderate drizzle",
+            55: "Dense drizzle",
+            61: "Slight rain",
+            63: "Moderate rain",
+            65: "Heavy rain",
+            71: "Light snow",
+            73: "Moderate snow",
+            75: "Heavy snow",
+            80: "Rain showers",
+            81: "Moderate rain showers",
+            82: "Violent rain showers",
+            95: "Thunderstorm",
+            96: "Thunderstorm w/ slight hail",
+            99: "Thunderstorm w/ heavy hail"
+        };
+
+        function getWeatherIcon(code) {
+            if (code <= 1) return "https://img.icons8.com/ios/100/sun.png";
+            if (code <= 3) return "https://img.icons8.com/ios/100/partly-cloudy-day.png";
+            if (code === 45 || code === 48) return "https://img.icons8.com/ios/100/fog-day.png";
+            if (code >= 51 && code <= 82) return "https://img.icons8.com/ios/100/rain.png";
+            if (code >= 95) return "https://img.icons8.com/ios/100/storm.png";
+            return "";
+        }
+
+  
+        function convertTemp(tempC, unit) {
+            return unit === "f" ? (tempC * 9/5) + 32 : tempC;
+        }
+
+        function convertWind(speed, unit) {
+            return unit === "kmh" ? speed * 3.6 : speed;
+        }
+
+        
+        function calculateFeelsLike(tempC, windMS) {
+            const windKMH = windMS * 3.6;
+            if (tempC > 10 || windKMH < 5) return tempC;
+            return 13.12 + 0.6215 * tempC - 11.37 * Math.pow(windKMH, 0.16)
+                 + 0.3965 * tempC * Math.pow(windKMH, 0.16);
+        }
+
+
+        async function geocodeCity(city) {
+            const url = `https://geocoding-api.open-meteo.com/v1/search?name=${city}&count=1`;
+            const res = await fetch(url);
+            const data = await res.json();
+            if (!data.results || data.results.length === 0) return null;
+            return data.results[0];
+        }
+
+
+        async function fetchWeather(lat, lon, tempUnit, windUnit, cityLabel) {
+            document.getElementById("message").textContent = "Fetching weather…";
+
+            const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`;
+            const res = await fetch(url);
+            const data = await res.json();
+
+            if (!data.current_weather) {
+                document.getElementById("message").textContent = "Weather not available.";
+                return;
+            }
+
+            const w = data.current_weather;
+
+            const tempFinal = convertTemp(w.temperature, tempUnit);
+            const windFinal = convertWind(w.windspeed, windUnit);
+            const feelsLike = convertTemp(
+                calculateFeelsLike(w.temperature, w.windspeed),
+                tempUnit
+            );
+
+            document.getElementById("outputCard").classList.remove("hidden");
+            document.getElementById("cityName").textContent = cityLabel;
+            document.getElementById("tempValue").textContent = tempFinal.toFixed(1) + (tempUnit === "f" ? " °F" : " °C");
+            document.getElementById("windValue").textContent = windFinal.toFixed(1) + (windUnit === "kmh" ? " km/h" : " m/s");
+            document.getElementById("condition").textContent = weatherCodeMap[w.weathercode];
+            document.getElementById("feelsLike").textContent = feelsLike.toFixed(1) + (tempUnit === "f" ? " °F" : " °C");
+            document.getElementById("weatherIcon").src = getWeatherIcon(w.weathercode);
+
+            document.getElementById("message").textContent = "Updated!";
+        }
+
+        document.getElementById("weatherForm").addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const input = document.getElementById("locationInput").value.trim();
+            const tempUnit = document.getElementById("tempUnit").value;
+            const windUnit = document.getElementById("windUnit").value;
+
+            if (input.includes(",")) {
+                const [lat, lon] = input.split(",").map(x => parseFloat(x.trim()));
+                fetchWeather(lat, lon, tempUnit, windUnit, "Custom Location");
+                return;
+            }
+
+            const geo = await geocodeCity(input);
+            if (!geo) {
+                document.getElementById("message").textContent = "City not found.";
+                return;
+            }
+
+            fetchWeather(geo.latitude, geo.longitude, tempUnit, windUnit, geo.name);
+        });
+
+      
+        document.getElementById("geoBtn").addEventListener("click", () => {
+            navigator.geolocation.getCurrentPosition(pos => {
+                const lat = pos.coords.latitude;
+                const lon = pos.coords.longitude;
+                fetchWeather(lat, lon, "c", "ms", "Your Location");
+            });
+        });
+
+    
+        document.getElementById("refreshBtn").addEventListener("click", () => {
+            document.getElementById("weatherForm").dispatchEvent(new Event("submit"));
+        });
+    </script>
+
+</body>
+</html>
