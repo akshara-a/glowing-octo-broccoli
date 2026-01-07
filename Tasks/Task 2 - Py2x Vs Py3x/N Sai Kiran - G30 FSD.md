@@ -43,14 +43,14 @@ Released in the year 2008, Python 3 was not just another version of Python 2 aft
 # Python 2
 def main():
   print "Hi! This is Python 2"
-  
+
 if __name__== "__main__":
   main()
 
 # Python 3
 def main():
   print ("Hi! This is Python 3")
-  
+
 if __name__== "__main__":
   main()
 
