@@ -1,0 +1,166 @@
+JavaScript Event Loop & Async Runtime
+By Parag - G30 FSD
+
+Introduction
+
+JavaScript runs on a single thread, so it can only do one thing at a time.
+But modern apps need to handle things like API calls, user clicks, timers, etc.
+To manage all this without freezing, JavaScript uses:
+
+Call Stack
+
+Web APIs
+
+Task Queue
+
+Microtask Queue
+
+Event Loop
+
+These work together to run async code smoothly.
+
+1. Call Stack
+
+This is where JavaScript runs code line by line.
+
+Example:
+
+console.log(1);
+console.log(2);
+function test() {
+  console.log(3);
+  console.log(4);
+}
+test();
+
+
+Everything runs in order.
+If we run a heavy task, the call stack gets stuck → UI freezes.
+
+2. Web APIs
+
+Browsers provide features like:
+
+setTimeout
+
+fetch
+
+Geolocation
+
+DOM events
+
+These run outside the call stack.
+Their results come back later as callbacks.
+
+Example:
+
+navigator.geolocation.getCurrentPosition(success, error);
+
+
+The actual work happens in the browser, not in JS.
+
+3. Task Queue (Callback Queue)
+
+Callbacks from Web APIs go here:
+
+setTimeout
+
+User events (click, scroll, etc.)
+
+Network callbacks
+
+A callback runs only when the call stack is empty.
+
+4. Microtask Queue
+
+Higher priority queue that runs before the Task Queue.
+
+It contains:
+
+promise.then()
+
+promise.catch()
+
+async/await continuations
+
+queueMicrotask
+
+Because of its priority, microtasks can run immediately after the current script ends.
+
+5. Event Loop
+
+The Event Loop keeps checking:
+
+Is the call stack empty?
+
+If empty → run all microtasks
+
+If microtasks are done → take tasks from the Task Queue
+
+Repeat forever
+
+This is why JavaScript can run async code even with one thread.
+
+6. Callback APIs vs Promise APIs
+
+Callback-based (goes to Task Queue):
+
+setTimeout
+
+Geolocation API
+
+Promise-based (goes to Microtask Queue):
+
+fetch()
+
+Promise.resolve()
+
+Example:
+
+fetch(url).then(data => console.log(data));
+
+
+.then() always runs as a microtask.
+
+7. Microtasks Can Block
+
+If a microtask keeps adding new microtasks, the Event Loop may never reach the task queue.
+
+queueMicrotask(() => queueMicrotask(() => { /* ... */ }));
+
+
+This can freeze the page.
+
+8. Example Output
+
+The given code prints:
+
+5 1 3 4 2
+
+Order explanation:
+
+5 → normal sync code
+
+1 → promise microtask
+
+3, 4 → more microtasks
+
+2 → from setTimeout (task queue → lowest priority)
+
+ Summary
+
+JS runs only one task at a time
+
+Browser Web APIs handle long tasks
+
+Microtasks (Promises) run before normal callbacks
+
+Event Loop controls the whole async cycle
+
+Understanding the Event Loop helps avoid UI freezes and weird timing bugs
+
+ Conclusion
+
+Learning how the Event Loop works helped me understand why some code runs early and some gets delayed.
+It also explains why promises are faster than timeouts and how browsers keep the UI responsive.
+Overall, understanding these concepts is important for writing better and smoother JavaScript apps.
