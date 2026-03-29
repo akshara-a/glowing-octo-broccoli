@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Weather App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+    <h1>🌤 Weather App</h1>
+
+    <form id="weatherForm" class="search-box">
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button type="submit">Search</button>
+    </form>
+
+    <div class="weather-card hidden">
+        <h2 id="cityName">--</h2>
+        <p id="condition">--</p>
+        <p id="temperature">--</p>
+
+        <div class="info-grid">
+            <div>
+                <span>Feels Like</span>
+                <p id="feelsLike">--</p>
+            </div>
+            <div>
+                <span>Humidity</span>
+                <p id="humidity">--</p>
+            </div>
+            <div>
+                <span>Wind</span>
+                <p id="wind">--</p>
+            </div>
+            <div>
+                <span>Pressure</span>
+                <p id="pressure">--</p>
+            </div>
+        </div>
+    </div>
+
+    <p class="footer">Powered by OpenWeather API</p>
+</div>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
