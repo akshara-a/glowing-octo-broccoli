@@ -1,0 +1,2 @@
+// Your actual WeatherAPI key stored safely here
+const WEATHER_KEY = "6b5c5aa02af04795b9a161208250612";
