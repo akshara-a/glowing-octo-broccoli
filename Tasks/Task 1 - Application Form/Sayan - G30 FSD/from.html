@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Application Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="fade-in">Application Form</h1>
+
+    <!-- General Information -->
+    <h2 class="section-title" style="text-align: center;" center;>Scroll Down</h2>
+    <h2 class="fade-in">General Information</h2>
+
+    <div class="form-grid fade-in">
+      <label>Proposed Insured's Name <small>(Please use capital letters)</small></label>
+      <input type="text" />
+      <label>Birth Date</label>
+      <input type="date" />
+      <label>Gender</label>
+      <div class="radio-group">
+        <label><input type="radio" name="gender" /> Male</label>
+        <label><input type="radio" name="gender" /> Female</label>
+      </div>
+      <label>Passport No</label>
+      <input type="text" />
+      <label>Address</label>
+      <input type="text" />
+      <label>Phone Number</label>
+      <input type="text" />
+      <label>Email Address</label>
+      <input type="email" />
+      <label>ID Number</label>
+      <input type="text" />
+      <label>Social Security Number</label>
+      <input type="text" />
+      <label>Status</label>
+      <div class="radio-group">
+        <label><input type="radio" name="status" /> Single</label>
+        <label><input type="radio" name="status" /> Married</label>
+        <label><input type="radio" name="status" /> Divorced</label>
+        <label><input type="radio" name="status" /> Other</label>
+      </div>
+      <label>Occupation</label>
+      <input type="text" />
+      <label>Are you a retiree?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="retiree" /> Yes</label>
+        <label><input type="radio" name="retiree" /> No</label>
+      </div>
+    </div>
+
+    <!-- Personal Details -->
+    <h2 class="section-title">Personal Details</h2>
+    <div class="form-grid fade-in">
+      <label>Name of Beneficiary</label>
+      <input type="text" />
+      <label>Bank Account (or ID for confirmation)</label>
+      <input type="text" />
+      <label>Beneficiary Bank Name</label>
+      <input type="text" placeholder="Bank Name" />
+      <label>Bank Address</label>
+      <input type="text" placeholder="Bank Address" />
+    </div>
+
+    <!-- Plan Options -->
+    <h2 class="section-title">Plan Options</h2>
+    <div class="plan-grid fade-in">
+      <div class="plan-item">
+        <span>Employee</span>
+        <div class="radio-group">
+          <label><input type="radio" name="emp" /> Yes</label>
+          <label><input type="radio" name="emp" /> No</label>
+        </div>
+        <input type="text" placeholder="Plan A / Plan B" />
+      </div>
+      <div class="plan-item">
+        <span>Spouse</span>
+        <div class="radio-group">
+          <label><input type="radio" name="spouse" /> Yes</label>
+          <label><input type="radio" name="spouse" /> No</label>
+        </div>
+        <input type="text" placeholder="Plan A / Plan B" />
+      </div>
+      <div class="plan-item">
+        <span>Children</span>
+        <div class="radio-group">
+          <label><input type="radio" name="child" /> Yes</label>
+          <label><input type="radio" name="child" /> No</label>
+        </div>
+        <input type="text" placeholder="Plan A / Plan B" />
+      </div>
+    </div>
+
+    <!-- Plan Cards -->
+    <div class="plans fade-in">
+      <div class="plan card-hover">
+        <input type="radio" name="plan" />
+        <div>
+          <h3>PLAN A</h3>
+          <p>Starting from $25 per week (excl. VAT). Activation fees apply. See page 17 for details.</p>
+        </div>
+      </div>
+      <div class="plan card-hover">
+        <input type="radio" name="plan" />
+        <div>
+          <h3>PLAN B <span class="highlight">JOIN NOW!</span></h3>
+          <p>Starting from $21 per week (excl. VAT). See page 17 for details.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Policy Info -->
+    <h2 class="section-title">Policy Information</h2>
+    <div class="form-grid fade-in">
+      <label>Units</label>
+      <input type="text" />
+      <label>Annual Premium</label>
+      <input type="text" />
+      <label>Payment Mode</label>
+      <div class="radio-group">
+        <label><input type="radio" name="pay" /> Annual</label>
+        <label><input type="radio" name="pay" /> Semi-Annual</label>
+        <label><input type="radio" name="pay" /> Monthly PAT</label>
+      </div>
+      <label>Cash with Application</label>
+      <div class="currency">$ <input type="text" /></div>
+      <label>Planned Modal Premium</label>
+      <div class="currency">$ <input type="text" /></div>
+    </div>
+
+    <!-- Signature -->
+    <div class="signature fade-in">
+      <p><strong>Terms & Conditions:</strong> Improvement should be measured regularly and assessed to identify what's beneficial and what is not. This will help set new targets.</p>
+      <div class="sign-box">
+        <label>Signature:</label>
+        <input type="text" placeholder="Sayan_2713" />
+        <label>Date:</label>
+        <input type="date" />
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Scroll animation
+    const fadeEls = document.querySelectorAll('.fade-in');
+    window.addEventListener('scroll', () => {
+      fadeEls.forEach(el => {
+        const pos = el.getBoundingClientRect().top;
+        if (pos < window.innerHeight - 100) el.classList.add('visible');
+      });
+    });
+  </script>
+</body>
+</html>
