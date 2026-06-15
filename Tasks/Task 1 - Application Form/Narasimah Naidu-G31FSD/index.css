@@ -1,0 +1,115 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+    
+}
+
+body{
+    background:#f5f5f5;
+    padding:20px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    background:white;
+    padding:20px;
+    border:1px solid #ccc;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:20px;
+}
+
+.header h1{
+    color:#0b2d78;
+    font-size:48px;
+    font-weight:bold;
+}
+
+.header p{
+    margin-top:10px;
+    font-size:16px;
+}
+
+.photo-box{
+    width:150px;
+    height:180px;
+    border:2px solid #999;
+    text-align:center;
+    padding-top:50px;
+    font-size:14px;
+}
+
+.section-title{
+    background:#0b2d78;
+    color:white;
+    padding:10px;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+.grid-2{
+    display:grid;
+    grid-template-columns:1fr 1.5fr;
+    gap:10px;
+    margin-top:10px;
+}
+
+.box{
+    border:1px solid #999;
+    padding:15px;
+}
+
+.box p{
+    margin-bottom:15px;
+}
+
+.checkbox-group{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin-top:10px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+td{
+    border:1px solid #999;
+    height:50px;
+    padding:10px;
+    vertical-align:top;
+    font-size:14px;
+}
+
+.declaration{
+    border:1px solid #999;
+    padding:15px;
+}
+
+.sign-area{
+    display:flex;
+    justify-content:space-between;
+    margin-top:30px;
+}
+
+.note{
+    border:1px solid #999;
+    padding:15px;
+    margin-top:15px;
+    background-color:#cbcae7f4;
+}
+
+.note ul{
+    margin-top:10px;
+    margin-left:20px;
+    columns:2;
+}
