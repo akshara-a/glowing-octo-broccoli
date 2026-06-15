@@ -6,8 +6,19 @@
 </head>
 <body>
 
+<!-- Fixed Header -->
+<header class="fixed-header">
+    Fixed Header
+</header>
+
+<!-- Sticky Navbar -->
+<nav class="sticky-nav">
+    Home | About | Contact
+</nav>
+
 <h1>CSS Position Assignment</h1>
 
+<!-- Static Position -->
 <section>
     <h2>Static Position</h2>
     <div class="box">Box 1</div>
@@ -15,24 +26,70 @@
     <div class="box">Box 3</div>
 </section>
 
+<!-- Relative Position -->
 <section>
     <h2>Relative Position</h2>
     <div class="relative-box">Relative Box</div>
 </section>
 
+<!-- Absolute Position -->
 <section class="parent">
     <h2>Absolute Position</h2>
     <div class="absolute-box">Absolute Box</div>
 </section>
 
+<!-- Product Card with Absolute Badge -->
 <section>
-    <h2>Z Index Example</h2>
-    <div class="red"></div>
-    <div class="blue"></div>
-    <div class="green"></div>
+    <h2>Product Card</h2>
+
+    <div class="product-card">
+        <span class="badge">New</span>
+        <img src="https://via.placeholder.com/200" alt="Product">
+        <p>Sample Product</p>
+    </div>
 </section>
 
+<!-- z-index -->
+<section>
+    <h2>Z Index Example</h2>
+
+    <div class="z-container">
+        <div class="red"></div>
+        <div class="blue"></div>
+        <div class="green"></div>
+    </div>
+</section>
+
+<!-- Combined Application -->
+<section>
+    <h2>Combined Application</h2>
+
+    <div class="banner">
+        Welcome Banner (Relative Position)
+    </div>
+
+    <p>
+        This page demonstrates Static, Relative,
+        Absolute, Fixed, Sticky and z-index positioning.
+    </p>
+</section>
+
+<!-- Fixed Chat Button -->
 <button class="fixed-btn">Chat</button>
+
+<!-- Extra Content for Scrolling -->
+<section>
+    <h2>Scrollable Content</h2>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+</section>
 
 </body>
 </html>
