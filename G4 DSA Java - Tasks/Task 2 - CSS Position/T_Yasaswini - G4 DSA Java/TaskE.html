@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sticky Position</title>
+
+    <style>
+        .navbar{
+            position:sticky;
+            top:0;
+            background:green;
+            color:white;
+            padding:15px;
+        }
+
+        section{
+            height:500px;
+            padding:20px;
+            border-bottom:1px solid gray;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    Sticky Navigation Bar
+</nav>
+
+<section>Section 1</section>
+<section>Section 2</section>
+<section>Section 3</section>
+<section>Section 4</section>
+
+<h3>Difference Between Fixed and Sticky</h3>
+
+<table border="1" cellpadding="10">
+<tr>
+<th>Fixed</th>
+<th>Sticky</th>
+</tr>
+
+<tr>
+<td>Always attached to viewport.</td>
+<td>Becomes fixed after reaching scroll position.</td>
+</tr>
+
+<tr>
+<td>Removed from normal flow.</td>
+<td>Initially stays in normal flow.</td>
+</tr>
+
+<tr>
+<td>Always visible.</td>
+<td>Visible after sticky point is reached.</td>
+</tr>
+
+</table>
+
+</body>
+</html>
