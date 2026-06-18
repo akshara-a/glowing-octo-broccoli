@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nexus — Bootstrap 5 Template</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --clr-bg:        #0b0f19;
+      --clr-surface:   #121827;
+      --clr-card:      #1a2236;
+      --clr-border:    #1f2d45;
+      --clr-accent:    #4f8ef7;
+      --clr-accent2:   #7c5cfc;
+      --clr-text:      #e2e8f0;
+      --clr-muted:     #7a8fa6;
+      --clr-white:     #ffffff;
+      --ff-display:    'Syne', sans-serif;
+      --ff-body:       'Space Grotesk', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--ff-body);
+      background: var(--clr-bg);
+      color: var(--clr-text);
+      line-height: 1.7;
+    }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--clr-bg); }
+    ::-webkit-scrollbar-thumb { background: var(--clr-accent); border-radius: 3px; }
+
+    /* ── NAVBAR ── */
+    .navbar {
+      background: rgba(11,15,25,.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--clr-border);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1050;
+    }
+    .navbar-brand {
+      font-family: var(--ff-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--clr-accent), var(--clr-accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .nav-link {
+      color: var(--clr-muted) !important;
+      font-weight: 500;
+      transition: color .2s;
+    }
+    .nav-link:hover { color: var(--clr-white) !important; }
+    .navbar-toggler { border-color: var(--clr-border); }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%234f8ef7' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(79,142,247,.15) 0%, transparent 70%),
+                  var(--clr-bg);
+      padding: 6rem 0 4rem;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--clr-accent);
+      background: rgba(79,142,247,.1);
+      border: 1px solid rgba(79,142,247,.3);
+      border-radius: 100px;
+      padding: .25rem .9rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-family: var(--ff-display);
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--clr-white);
+    }
+    .hero h1 .gradient-text {
+      background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p { font-size: 1.15rem; color: var(--clr-muted); max-width: 500px; }
+    .hero-img-wrap {
+      position: relative;
+    }
+    .hero-img-wrap::before {
+      content: '';
+      position: absolute;
+      inset: -20px;
+      background: radial-gradient(ellipse, rgba(79,142,247,.2), transparent 70%);
+      border-radius: 50%;
+    }
+    .hero-mockup {
+      background: var(--clr-card);
+      border: 1px solid var(--clr-border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      position: relative;
+    }
+    .mockup-bar {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 1rem;
+    }
+    .mockup-dot {
+      width: 12px; height: 12px; border-radius: 50%;
+    }
+    .mockup-dot:nth-child(1) { background: #ff5f57; }
+    .mockup-dot:nth-child(2) { background: #febc2e; }
+    .mockup-dot:nth-child(3) { background: #28c840; }
+    .mockup-lines div {
+      height: 10px;
+      border-radius: 4px;
+      background: var(--clr-border);
+      margin-bottom: 10px;
+    }
+    .mockup-lines div:nth-child(1) { width: 80%; background: linear-gradient(90deg, var(--clr-accent), var(--clr-accent2)); opacity: .7; }
+    .mockup-lines div:nth-child(2) { width: 60%; }
+    .mockup-lines div:nth-child(3) { width: 90%; }
+    .mockup-lines div:nth-child(4) { width: 45%; }
+
+    /* ── BUTTONS ── */
+    .btn-primary-custom {
+      background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent2));
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: .7rem 1.6rem;
+      font-weight: 600;
+      font-family: var(--ff-body);
+      transition: opacity .2s, transform .15s;
+    }
+    .btn-primary-custom:hover { opacity: .88; transform: translateY(-1px); color: #fff; }
+    .btn-outline-custom {
+      background: transparent;
+      color: var(--clr-text);
+      border: 1px solid var(--clr-border);
+      border-radius: 8px;
+      padding: .7rem 1.6rem;
+      font-weight: 600;
+      font-family: var(--ff-body);
+      transition: border-color .2s, color .2s;
+    }
+    .btn-outline-custom:hover { border-color: var(--clr-accent); color: var(--clr-accent); }
+
+    /* ── SECTION COMMON ── */
+    section { padding: 5rem 0; }
+    .section-label {
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--clr-accent);
+      margin-bottom: .5rem;
+    }
+    .section-title {
+      font-family: var(--ff-display);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: var(--clr-white);
+    }
+    .section-sub { color: var(--clr-muted); max-width: 520px; margin: .75rem auto 0; }
+
+    /* ── STATS ── */
+    .stats-section { background: var(--clr-surface); border-top: 1px solid var(--clr-border); border-bottom: 1px solid var(--clr-border); }
+    .stat-item { text-align: center; padding: 2.5rem 1rem; }
+    .stat-number {
+      font-family: var(--ff-display);
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1;
+    }
+    .stat-label { color: var(--clr-muted); font-size: .9rem; margin-top: .4rem; }
+
+    /* ── FEATURES ── */
+    .feature-card {
+      background: var(--clr-card);
+      border: 1px solid var(--clr-border);
+      border-radius: 14px;
+      padding: 2rem;
+      height: 100%;
+      transition: border-color .25s, transform .25s;
+    }
+    .feature-card:hover { border-color: var(--clr-accent); transform: translateY(-4px); }
+    .feature-icon {
+      width: 52px; height: 52px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 12px;
+      background: rgba(79,142,247,.12);
+      font-size: 1.4rem;
+      color: var(--clr-accent);
+      margin-bottom: 1.2rem;
+    }
+    .feature-card h5 { color: var(--clr-white); font-weight: 700; margin-bottom: .5rem; }
+    .feature-card p { color: var(--clr-muted); font-size: .95rem; margin: 0; }
+
+    /* ── PRICING ── */
+    .pricing-card {
+      background: var(--clr-card);
+      border: 1px solid var(--clr-border);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      height: 100%;
+      transition: border-color .25s;
+    }
+    .pricing-card.popular {
+      border-color: var(--clr-accent);
+      position: relative;
+    }
+    .popular-badge {
+      position: absolute;
+      top: -14px; left: 50%; transform: translateX(-50%);
+      background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent2));
+      color: #fff;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .3rem .9rem;
+      border-radius: 100px;
+    }
+    .plan-name { color: var(--clr-muted); font-size: .85rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; }
+    .plan-price {
+      font-family: var(--ff-display);
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--clr-white);
+      line-height: 1.1;
+      margin: .5rem 0;
+    }
+    .plan-price sup { font-size: 1.4rem; vertical-align: top; margin-top: .5rem; display: inline-block; }
+    .plan-period { color: var(--clr-muted); font-size: .85rem; }
+    .plan-feature {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      color: var(--clr-text);
+      font-size: .95rem;
+      padding: .45rem 0;
+      border-bottom: 1px solid var(--clr-border);
+    }
+    .plan-feature:last-of-type { border-bottom: none; }
+    .plan-feature i { color: var(--clr-accent); flex-shrink: 0; }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials-section { background: var(--clr-surface); }
+    .testimonial-card {
+      background: var(--clr-card);
+      border: 1px solid var(--clr-border);
+      border-radius: 14px;
+      padding: 2rem;
+    }
+    .testimonial-card p { color: var(--clr-text); font-size: 1rem; font-style: italic; margin-bottom: 1.25rem; }
+    .testimonial-avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent2));
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; color: #fff; font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .testimonial-name { color: var(--clr-white); font-weight: 700; font-size: .9rem; }
+    .testimonial-role { color: var(--clr-muted); font-size: .8rem; }
+    .stars { color: #f4b942; font-size: .85rem; margin-bottom: 1rem; }
+
+    /* ── FAQ ── */
+    .accordion-item {
+      background: var(--clr-card) !important;
+      border: 1px solid var(--clr-border) !important;
+      border-radius: 10px !important;
+      margin-bottom: .75rem;
+      overflow: hidden;
+    }
+    .accordion-button {
+      background: var(--clr-card) !important;
+      color: var(--clr-white) !important;
+      font-weight: 600;
+      font-family: var(--ff-body);
+      box-shadow: none !important;
+    }
+    .accordion-button:not(.collapsed) { color: var(--clr-accent) !important; }
+    .accordion-button::after {
+      filter: invert(60%) sepia(80%) saturate(500%) hue-rotate(195deg);
+    }
+    .accordion-body { background: var(--clr-card); color: var(--clr-muted); }
+
+    /* ── CONTACT ── */
+    .contact-section { background: var(--clr-surface); }
+    .form-control, .form-select {
+      background: var(--clr-card) !important;
+      border: 1px solid var(--clr-border) !important;
+      color: var(--clr-text) !important;
+      border-radius: 8px !important;
+      font-family: var(--ff-body);
+      padding: .75rem 1rem;
+    }
+    .form-control:focus, .form-select:focus {
+      border-color: var(--clr-accent) !important;
+      box-shadow: 0 0 0 3px rgba(79,142,247,.15) !important;
+    }
+    .form-control::placeholder { color: var(--clr-muted) !important; }
+    .form-label { color: var(--clr-muted); font-size: .88rem; font-weight: 500; }
+
+    /* ── NEWSLETTER BANNER ── */
+    .newsletter-section {
+      background: linear-gradient(135deg, rgba(79,142,247,.15), rgba(124,92,252,.15));
+      border-top: 1px solid var(--clr-border);
+      border-bottom: 1px solid var(--clr-border);
+      padding: 4rem 0;
+    }
+    .newsletter-section h2 {
+      font-family: var(--ff-display);
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      font-weight: 800;
+      color: var(--clr-white);
+    }
+    .input-group .form-control {
+      border-right: none !important;
+      border-radius: 8px 0 0 8px !important;
+    }
+    .input-group .btn-primary-custom {
+      border-radius: 0 8px 8px 0 !important;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--clr-surface);
+      border-top: 1px solid var(--clr-border);
+      padding: 4rem 0 2rem;
+    }
+    .footer-brand {
+      font-family: var(--ff-display);
+      font-size: 1.4rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--clr-accent), var(--clr-accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .footer-tagline { color: var(--clr-muted); font-size: .9rem; margin-top: .3rem; }
+    .footer-heading { color: var(--clr-white); font-weight: 700; font-size: .9rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 1rem; }
+    .footer-links { list-style: none; padding: 0; }
+    .footer-links li { margin-bottom: .5rem; }
+    .footer-links a { color: var(--clr-muted); text-decoration: none; font-size: .9rem; transition: color .2s; }
+    .footer-links a:hover { color: var(--clr-accent); }
+    .social-icons a {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 38px; height: 38px; border-radius: 8px;
+      background: var(--clr-card); border: 1px solid var(--clr-border);
+      color: var(--clr-muted); font-size: 1rem;
+      transition: background .2s, color .2s, border-color .2s;
+      text-decoration: none;
+    }
+    .social-icons a:hover { background: var(--clr-accent); color: #fff; border-color: var(--clr-accent); }
+    .footer-bottom { border-top: 1px solid var(--clr-border); padding-top: 1.5rem; margin-top: 3rem; }
+    .footer-bottom p { color: var(--clr-muted); font-size: .85rem; margin: 0; }
+
+    /* ── PROGRESS BARS ── */
+    .skill-label { color: var(--clr-text); font-size: .9rem; font-weight: 500; margin-bottom: .3rem; }
+    .skill-pct { color: var(--clr-accent); font-size: .85rem; font-weight: 700; }
+    .progress {
+      background: var(--clr-border);
+      border-radius: 100px;
+      height: 8px;
+    }
+    .progress-bar {
+      background: linear-gradient(90deg, var(--clr-accent), var(--clr-accent2));
+      border-radius: 100px;
+    }
+
+    /* ── TEAM ── */
+    .team-card {
+      background: var(--clr-card);
+      border: 1px solid var(--clr-border);
+      border-radius: 14px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: border-color .25s, transform .25s;
+    }
+    .team-card:hover { border-color: var(--clr-accent); transform: translateY(-4px); }
+    .team-avatar {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent2));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; font-weight: 800; color: #fff;
+      margin: 0 auto 1rem;
+    }
+    .team-name { color: var(--clr-white); font-weight: 700; margin-bottom: .25rem; }
+    .team-role { color: var(--clr-muted); font-size: .85rem; }
+
+    /* ── BACK TO TOP ── */
+    #backToTop {
+      position: fixed;
+      bottom: 2rem; right: 2rem;
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent2));
+      color: #fff;
+      border: none;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s, transform .2s;
+      z-index: 999;
+    }
+    #backToTop.visible { opacity: 1; pointer-events: all; }
+    #backToTop:hover { transform: translateY(-2px); }
+
+    /* ── DIVIDER ── */
+    .section-divider {
+      border: none;
+      height: 1px;
+      background: var(--clr-border);
+      margin: 0;
+    }
+
+    @media (max-width: 767px) {
+      .hero { padding-top: 5rem; text-align: center; }
+      .hero p { margin: 0 auto; }
+      .hero-img-wrap { margin-top: 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════ NAVBAR ══════════ -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">Nexus</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav ms-auto gap-lg-1 align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item ms-lg-3">
+          <a href="#" class="btn btn-primary-custom btn-sm">Get Started</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6">
+        <span class="hero-eyebrow">✦ Launching 2025</span>
+        <h1>Build faster.<br>Ship <span class="gradient-text">smarter.</span></h1>
+        <p class="mt-3 mb-4">Nexus is the all-in-one platform for modern teams — designed to cut friction, amplify collaboration, and deliver results at speed.</p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#pricing" class="btn btn-primary-custom">Start Free Trial</a>
+          <a href="#features" class="btn btn-outline-custom">See Features <i class="bi bi-arrow-right ms-1"></i></a>
+        </div>
+        <div class="d-flex flex-wrap gap-4 mt-4">
+          <div><span class="fw-bold text-white">10k+</span> <span class="text-muted small">Active users</span></div>
+          <div><span class="fw-bold text-white">99.9%</span> <span class="text-muted small">Uptime SLA</span></div>
+          <div><span class="fw-bold text-white">4.9★</span> <span class="text-muted small">Rating</span></div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="hero-img-wrap">
+          <div class="hero-mockup">
+            <div class="mockup-bar">
+              <div class="mockup-dot"></div>
+              <div class="mockup-dot"></div>
+              <div class="mockup-dot"></div>
+            </div>
+            <div class="mockup-lines">
+              <div></div><div></div><div></div><div></div>
+            </div>
+            <div class="row mt-3 g-2">
+              <div class="col-6">
+                <div style="background:var(--clr-border);border-radius:8px;height:70px;display:flex;align-items:center;justify-content:center;color:var(--clr-accent);font-size:1.5rem;">
+                  <i class="bi bi-bar-chart-fill"></i>
+                </div>
+              </div>
+              <div class="col-6">
+                <div style="background:var(--clr-border);border-radius:8px;height:70px;display:flex;align-items:center;justify-content:center;color:var(--clr-accent2);font-size:1.5rem;">
+                  <i class="bi bi-graph-up-arrow"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ STATS ══════════ -->
+<section class="stats-section py-0">
+  <div class="container">
+    <div class="row g-0 text-center">
+      <div class="col-6 col-md-3 border-end border-bottom border-bottom-md-0" style="border-color:var(--clr-border)!important">
+        <div class="stat-item"><div class="stat-number">10k+</div><div class="stat-label">Users worldwide</div></div>
+      </div>
+      <div class="col-6 col-md-3 border-md-end border-bottom border-bottom-md-0" style="border-color:var(--clr-border)!important">
+        <div class="stat-item"><div class="stat-number">98%</div><div class="stat-label">Customer satisfaction</div></div>
+      </div>
+      <div class="col-6 col-md-3 border-end" style="border-color:var(--clr-border)!important">
+        <div class="stat-item"><div class="stat-number">50+</div><div class="stat-label">Integrations</div></div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-item"><div class="stat-number">24/7</div><div class="stat-label">Expert support</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FEATURES ══════════ -->
+<section id="features">
+  <div class="container">
+    <div class="text-center mb-5">
+      <p class="section-label">Features</p>
+      <h2 class="section-title">Everything you need</h2>
+      <p class="section-sub">Powerful tools built for teams who move fast and care about quality.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+          <h5>Blazing Performance</h5>
+          <p>Sub-100ms response times globally, backed by edge infrastructure across 35+ regions.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-shield-lock-fill"></i></div>
+          <h5>Enterprise Security</h5>
+          <p>SOC 2 Type II, GDPR compliant, end-to-end encryption, and SSO with any identity provider.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-diagram-3-fill"></i></div>
+          <h5>Smart Workflows</h5>
+          <p>Automate repetitive tasks with drag-and-drop flows. No engineering required.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-bar-chart-line-fill"></i></div>
+          <h5>Real-time Analytics</h5>
+          <p>Live dashboards with customizable KPIs. Export to any BI tool in seconds.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-people-fill"></i></div>
+          <h5>Team Collaboration</h5>
+          <p>Comments, mentions, shared views, and live co-editing — all in one place.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-plug-fill"></i></div>
+          <h5>50+ Integrations</h5>
+          <p>Connect Slack, GitHub, Jira, Figma, Salesforce and more — in one click.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══════════ SKILLS / PROGRESS ══════════ -->
+<section id="skills">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-5">
+        <p class="section-label">Our Expertise</p>
+        <h2 class="section-title">Built by specialists</h2>
+        <p class="mt-3" style="color:var(--clr-muted)">Our team brings deep expertise across the full stack — from system design to pixel-perfect UI.</p>
+        <a href="#team" class="btn btn-outline-custom mt-3">Meet the team</a>
+      </div>
+      <div class="col-lg-6 offset-lg-1">
+        <div class="mb-4">
+          <div class="d-flex justify-content-between"><span class="skill-label">Product Design</span><span class="skill-pct">95%</span></div>
+          <div class="progress mt-2"><div class="progress-bar" style="width:95%"></div></div>
+        </div>
+        <div class="mb-4">
+          <div class="d-flex justify-content-between"><span class="skill-label">Backend Engineering</span><span class="skill-pct">92%</span></div>
+          <div class="progress mt-2"><div class="progress-bar" style="width:92%"></div></div>
+        </div>
+        <div class="mb-4">
+          <div class="d-flex justify-content-between"><span class="skill-label">DevOps & Infrastructure</span><span class="skill-pct">88%</span></div>
+          <div class="progress mt-2"><div class="progress-bar" style="width:88%"></div></div>
+        </div>
+        <div class="mb-4">
+          <div class="d-flex justify-content-between"><span class="skill-label">Data & Analytics</span><span class="skill-pct">85%</span></div>
+          <div class="progress mt-2"><div class="progress-bar" style="width:85%"></div></div>
+        </div>
+        <div>
+          <div class="d-flex justify-content-between"><span class="skill-label">Security & Compliance</span><span class="skill-pct">97%</span></div>
+          <div class="progress mt-2"><div class="progress-bar" style="width:97%"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PRICING ══════════ -->
+<section id="pricing" style="background:var(--clr-surface)">
+  <div class="container">
+    <div class="text-center mb-5">
+      <p class="section-label">Pricing</p>
+      <h2 class="section-title">Simple, honest pricing</h2>
+      <p class="section-sub">No hidden fees. Upgrade or downgrade anytime.</p>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4">
+        <div class="pricing-card">
+          <p class="plan-name">Starter</p>
+          <div class="plan-price"><sup>$</sup>0</div>
+          <p class="plan-period">Free forever</p>
+          <hr style="border-color:var(--clr-border);margin:1.5rem 0">
+          <div class="plan-feature"><i class="bi bi-check2"></i> Up to 3 projects</div>
+          <div class="plan-feature"><i class="bi bi-check2"></i> 5GB storage</div>
+          <div class="plan-feature"><i class="bi bi-check2"></i> Basic analytics</div>
+          <div class="plan-feature"><i class="bi bi-check2"></i> Community support</div>
+          <div class="plan-feature" style="color:var(--clr-muted)"><i class="bi bi-x text-danger"></i> Custom domain</div>
+          <a href="#" class="btn btn-outline-custom w-100 mt-4">Get Started Free</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="pricing-card popular">
+          <span class="popular-badge">Most Popular</span>
+          <p class="plan-name">Pro</p>
+          <div class="plan-price"><sup>$</sup>29</div>
+          <p class="plan-period">per month, billed annually</p>
+          <hr style="border-color:var(--clr-border);margin:1.5rem 0">
+          <div class="plan-feature"><i class="bi bi-check2"></i> Unlimited projects</div>
+          <div class="plan-feature"><i class="bi bi-check2"></i> 100GB storage</div>
+          <div class="plan-feature"><i class="bi bi-check2"></i> Advanced analytics</div>
+          <div class="plan-feature"><i class="bi bi-check2"></i> Priority support</div>
+          <div class="plan-feature"><i class="bi bi-check2"></i> Custom domain</div>
+          <a href="#" class="btn btn-primary-custom w-100 mt-4">Start Pro Trial</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="pricing-card">
+          <p class="plan-name">Enterprise</p>
+          <div class="plan-price" style="font-size:2.2rem">Custom</div>
+          <p class="plan-period">Contact for pricing</p>
+          <hr style="border-color:var(--clr-border);margin:1.5rem 0">
+          <div class="plan-feature"><i class="bi bi-check2"></i> Everything in Pro</div>
+          <div class="plan-feature"><i class="bi bi-check2"></i> Unlimited storage</div>
+          <div class="plan-feature"><i class="bi bi-check2"></i> SSO & SAML</div>
+          <div class="plan-feature"><i class="bi bi-check2"></i> Dedicated SLA</div>
+          <div class="plan-feature"><i class="bi bi-check2"></i> On-premise option</div>
+          <a href="#contact" class="btn btn-outline-custom w-100 mt-4">Talk to Sales</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ TESTIMONIALS ══════════ -->
+<section class="testimonials-section" id="testimonials">
+  <div class="container">
+    <div class="text-center mb-5">
+      <p class="section-label">Testimonials</p>
+      <h2 class="section-title">Loved by builders</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Nexus cut our deployment time in half. The workflow automation alone paid for itself in the first week."</p>
+          <div class="d-flex align-items-center gap-3">
+            <div class="testimonial-avatar">AK</div>
+            <div><div class="testimonial-name">Arjun Kumar</div><div class="testimonial-role">CTO, Stackbase</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Finally a platform that's as good for designers as it is for engineers. The real-time collaboration is flawless."</p>
+          <div class="d-flex align-items-center gap-3">
+            <div class="testimonial-avatar">SP</div>
+            <div><div class="testimonial-name">Sara Petrov</div><div class="testimonial-role">Head of Product, Loopify</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"We evaluated six platforms. Nexus was the only one that hit every checkbox without sacrificing usability."</p>
+          <div class="d-flex align-items-center gap-3">
+            <div class="testimonial-avatar">MJ</div>
+            <div><div class="testimonial-name">Marcus Jones</div><div class="testimonial-role">Engineering Lead, Fintex</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ TEAM ══════════ -->
+<section id="team">
+  <div class="container">
+    <div class="text-center mb-5">
+      <p class="section-label">Team</p>
+      <h2 class="section-title">The people behind Nexus</h2>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-6 col-md-3">
+        <div class="team-card">
+          <div class="team-avatar">RN</div>
+          <div class="team-name">Rhea Nair</div>
+          <div class="team-role">CEO & Co-founder</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="team-card">
+          <div class="team-avatar">DM</div>
+          <div class="team-name">Dev Mehta</div>
+          <div class="team-role">CTO & Co-founder</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="team-card">
+          <div class="team-avatar">LC</div>
+          <div class="team-name">Lena Chen</div>
+          <div class="team-role">Head of Design</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="team-card">
+          <div class="team-avatar">OT</div>
+          <div class="team-name">Omar Torres</div>
+          <div class="team-role">Lead Engineer</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FAQ ══════════ -->
+<section id="faq" style="background:var(--clr-surface)">
+  <div class="container">
+    <div class="text-center mb-5">
+      <p class="section-label">FAQ</p>
+      <h2 class="section-title">Common questions</h2>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                Can I try Nexus before buying?
+              </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Yes — our Starter plan is free forever with no credit card required. The Pro plan includes a 14-day free trial so you can explore every feature before committing.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                How does billing work?
+              </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">You're billed annually upfront for the best rate, or month-to-month at a slightly higher price. You can cancel anytime and keep access until your billing period ends.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                Is my data safe?
+              </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Absolutely. All data is encrypted at rest (AES-256) and in transit (TLS 1.3). We are SOC 2 Type II certified and fully GDPR compliant. Enterprise customers can request a Data Processing Agreement.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                Can I migrate from another platform?
+              </button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Yes. We offer free migration assistance for Pro and Enterprise customers. Our team will help you move data, integrations, and workflows with zero downtime.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ NEWSLETTER ══════════ -->
+<section class="newsletter-section">
+  <div class="container">
+    <div class="row align-items-center gy-4 justify-content-between">
+      <div class="col-lg-5">
+        <h2>Stay ahead of the curve.</h2>
+        <p class="mt-2" style="color:var(--clr-muted)">Product updates, engineering insights, and early access drops — straight to your inbox.</p>
+      </div>
+      <div class="col-lg-5">
+        <div class="input-group">
+          <input type="email" class="form-control" placeholder="you@example.com">
+          <button class="btn btn-primary-custom">Subscribe</button>
+        </div>
+        <p class="mt-2" style="color:var(--clr-muted);font-size:.8rem;"><i class="bi bi-lock-fill me-1"></i>No spam, ever. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACT ══════════ -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="row gy-5">
+      <div class="col-lg-4">
+        <p class="section-label">Contact</p>
+        <h2 class="section-title">Let's talk.</h2>
+        <p class="mt-3" style="color:var(--clr-muted)">Have a question, a custom requirement, or just want to say hi? We respond within one business day.</p>
+        <ul class="list-unstyled mt-4" style="color:var(--clr-muted)">
+          <li class="mb-3"><i class="bi bi-envelope-fill me-2" style="color:var(--clr-accent)"></i> hello@nexus.io</li>
+          <li class="mb-3"><i class="bi bi-telephone-fill me-2" style="color:var(--clr-accent)"></i> +1 (800) 123-4567</li>
+          <li><i class="bi bi-geo-alt-fill me-2" style="color:var(--clr-accent)"></i> San Francisco, CA</li>
+        </ul>
+      </div>
+      <div class="col-lg-7 offset-lg-1">
+        <div style="background:var(--clr-card);border:1px solid var(--clr-border);border-radius:16px;padding:2.5rem">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">First name</label>
+              <input type="text" class="form-control" placeholder="Arjun">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Last name</label>
+              <input type="text" class="form-control" placeholder="Kumar">
+            </div>
+            <div class="col-12">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" placeholder="arjun@company.com">
+            </div>
+            <div class="col-12">
+              <label class="form-label">Topic</label>
+              <select class="form-select">
+                <option value="">Select a topic</option>
+                <option>Sales inquiry</option>
+                <option>Technical support</option>
+                <option>Partnership</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" rows="4" placeholder="Tell us how we can help..."></textarea>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary-custom w-100">Send Message <i class="bi bi-send ms-1"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-brand">Nexus</div>
+        <p class="footer-tagline">Build faster. Ship smarter.</p>
+        <div class="social-icons d-flex gap-2 mt-3">
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-github"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6">
+        <p class="footer-heading">Product</p>
+        <ul class="footer-links">
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Changelog</a></li>
+          <li><a href="#">Roadmap</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6">
+        <p class="footer-heading">Company</p>
+        <ul class="footer-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6">
+        <p class="footer-heading">Resources</p>
+        <ul class="footer-links">
+          <li><a href="#">Docs</a></li>
+          <li><a href="#">API Reference</a></li>
+          <li><a href="#">Status</a></li>
+          <li><a href="#">Community</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6">
+        <p class="footer-heading">Legal</p>
+        <ul class="footer-links">
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <p>© 2025 Nexus, Inc. All rights reserved.</p>
+      <p>Made with <span style="color:var(--clr-accent)">♥</span> for builders everywhere.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════ BACK TO TOP ══════════ -->
+<button id="backToTop" title="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Back to top button
+  const btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('visible', window.scrollY > 400);
+  });
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  // Animate progress bars on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.progress-bar').forEach(bar => {
+          bar.style.transition = 'width 1s ease';
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  const skillSection = document.getElementById('skills');
+  if (skillSection) observer.observe(skillSection);
+</script>
+</body>
+</html>
