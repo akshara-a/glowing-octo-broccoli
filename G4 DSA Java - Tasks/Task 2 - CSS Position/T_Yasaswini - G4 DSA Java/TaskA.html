@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Static Position</title>
+    <style>
+        .box{
+            width:100px;
+            height:100px;
+            background:lightblue;
+            margin:10px;
+            text-align:center;
+            line-height:100px;
+        }
+
+        .static-box{
+            position:static;
+            top:50px;
+            left:50px;
+            background:orange;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Static Position</h2>
+
+<div class="box">Box 1</div>
+<div class="box static-box">Box 2</div>
+<div class="box">Box 3</div>
+
+<h3>Observation</h3>
+<p>
+The second box uses position: static. Even though top:50px and left:50px are applied,
+the box does not move because static positioning ignores top, left, right, and bottom properties.
+</p>
+
+</body>
+</html>
