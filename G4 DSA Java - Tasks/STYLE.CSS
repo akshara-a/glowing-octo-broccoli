@@ -1,0 +1,293 @@
+
+body{
+    font-family: Arial;
+    margin:0;
+    padding:20px;
+}
+
+
+h1{
+    text-align:center;
+}
+
+
+
+.navbar{
+
+    position:sticky;
+    top:0;
+
+    background:black;
+    padding:15px;
+
+}
+
+
+.navbar a{
+
+    color:white;
+    margin:20px;
+
+}
+
+
+
+.static-box{
+
+    position:static;
+
+    top:50px;
+    left:50px;
+
+}
+
+
+
+.box{
+
+    width:150px;
+    height:80px;
+
+    background:lightgray;
+
+    margin:20px;
+
+    padding:20px;
+
+}
+
+
+
+.relative-box{
+
+    position:relative;
+
+    left:40px;
+
+    top:20px;
+
+    background:orange;
+
+}
+
+
+
+.parent{
+
+    position:relative;
+
+    height:200px;
+
+    background:#ddd;
+
+}
+
+
+
+.child{
+
+    position:absolute;
+
+    right:0;
+
+    top:0;
+
+    background:red;
+
+    color:white;
+
+    padding:20px;
+
+}
+
+
+
+.product{
+
+    position:relative;
+
+    display:inline-block;
+
+}
+
+
+
+.badge{
+
+    position:absolute;
+
+    right:10px;
+
+    top:10px;
+
+    background:red;
+
+    color:white;
+
+    padding:10px;
+
+}
+
+
+
+.top-button{
+
+
+    position:fixed;
+
+    bottom:20px;
+
+    right:20px;
+
+
+    padding:15px;
+
+    background:blue;
+
+    color:white;
+
+}
+
+
+
+
+.long-content{
+
+    height:600px;
+
+}
+
+
+
+.sticky-title{
+
+
+    position:sticky;
+
+    top:50px;
+
+
+    background:yellow;
+
+    padding:20px;
+
+}
+
+
+
+
+.red,
+.blue,
+.green{
+
+
+    width:120px;
+
+    height:120px;
+
+    position:absolute;
+
+
+}
+
+
+
+.red{
+
+    background:red;
+
+    left:100px;
+
+    z-index:1;
+
+}
+
+
+
+.blue{
+
+    background:blue;
+
+    left:150px;
+
+    top:20px;
+
+    z-index:2;
+
+}
+
+
+
+.green{
+
+
+    background:green;
+
+    left:200px;
+
+    top:40px;
+
+    z-index:3;
+
+}
+
+
+
+
+
+/* Part G Relative banner */
+
+.banner{
+
+
+    position:relative;
+
+
+    left:30px;
+
+
+    background:pink;
+
+
+    padding:30px;
+
+}
+
+
+
+
+
+
+.card{
+
+
+    position:relative;
+
+
+    width:250px;
+
+
+}
+
+
+
+.offer{
+
+
+    position:absolute;
+
+
+    top:5px;
+
+    right:5px;
+
+
+    background:red;
+
+    color:white;
+
+
+    padding:8px;
+
+
+}
