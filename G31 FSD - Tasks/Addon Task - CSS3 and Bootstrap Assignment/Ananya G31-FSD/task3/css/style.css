@@ -1,0 +1,51 @@
+:root{
+    --maroon:#b71c1c;
+    --cream:#FFF8E7;
+    --orange:#FF6B35;
+}
+
+.navbar-custom{
+    background-color: var(--maroon);
+}
+
+.navbar-brand{
+    font-size:1.7rem;
+}
+
+.nav-link:hover{
+    color:#FFD700 !important;
+}
+
+.btn-login{
+    background-color:white;
+    color:var(--maroon);
+    font-weight:bold;
+}
+
+.hero-section{
+    background-color:var(--cream);
+    min-height:85vh;
+    display:flex;
+    align-items:center;
+}
+
+.btn-order{
+    background-color:var(--orange);
+    color:white;
+    border:none;
+}
+
+.btn-order:hover{
+    background-color:#e85a24;
+    color:white;
+}
+
+.hero-img{
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.hero-img:hover{
+    transform:scale(1.03);
+}
