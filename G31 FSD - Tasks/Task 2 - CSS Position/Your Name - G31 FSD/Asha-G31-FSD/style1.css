@@ -1,0 +1,506 @@
+/* General */
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #fff7fb;
+    margin: 20px;
+}
+
+h1{
+    text-align: center;
+    color: #ff4f81;
+}
+
+h2{
+    color: #333;
+    border-bottom: 2px solid #ffb6c1;
+    padding-bottom: 5px;
+}
+
+/* Part A */
+
+.box-container{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.box{
+    width: 220px;
+    background-color: #ffd6e7;
+    border: 2px solid #ff4f81;
+    border-radius: 10px;
+
+    margin: 10px;
+    padding: 10px;
+
+    text-align: center;
+    font-weight: bold;
+}
+
+.box img{
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.banner img{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.category img{
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.makeup{
+    position: static;
+    top: 50px;
+    left: 50px;
+}
+
+/* Part B */
+
+.banner{
+    width: 300px;
+    padding: 20px;
+    background: linear-gradient(to right,#ffb6c1,#ffe4ec);
+    border: 2px solid #ff4f81;
+    border-radius: 12px;
+    font-weight: bold;
+
+    position: relative;
+    left: 40px;
+    top: 20px;
+}
+
+.category{
+    width: 200px;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #444;
+    font-weight: bold;
+}
+
+.skincare{
+    background-color: #d4f8d4;
+
+    position: relative;
+    left: 40px;
+}
+
+.haircare{
+    background-color: #d6ecff;
+}
+
+/* Part C */
+
+.product-card{
+    width: 250px;
+    border: 3px solid #ff4f81;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: white;
+    position: relative;
+    margin: 20px;
+}
+
+.product-card img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.badge{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    background-color: red;
+    color: white;
+
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.image-container{
+    width: 250px;
+    position: relative;
+    margin: 20px;
+}
+
+.image-container img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.notification{
+    position: absolute;
+    top:5px;
+    right: 10px;
+
+    background-color: red;
+    color: white;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+/* Part D - Fixed Position */
+
+.fixed-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    background-color: #ff4f81;
+    color: white;
+
+    padding: 15px;
+    font-weight: bold;
+    text-align: center;
+
+    z-index: 1000;
+}
+
+.content{
+    margin-top: 80px;
+}
+
+.back-to-top{
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+
+
+    background-color: #ff4f81;
+    color: white;
+
+    padding: 12px;
+    border-radius: 10px;
+
+    text-decoration: none;
+
+
+
+}
+
+/* Part E - Sticky Position */
+/* Part E - Sticky Position */
+
+.sticky-navbar{
+    position: sticky;
+    top: 55px;
+
+    background-color: #ff4f81;
+    color: white;
+
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+
+    z-index: 100;
+}
+
+.section{
+    margin: 20px 0;
+    padding: 20px;
+
+    border: 2px solid #ff4f81;
+    border-radius: 10px;
+
+    background-color: white;
+}
+
+.gallery{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    margin-top: 20px;
+}
+
+.product{
+    width: 220px;
+
+    background-color: #fff7fb;
+
+    border: 2px solid #ffb6c1;
+    border-radius: 12px;
+
+    padding: 10px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.product:hover{
+    transform: translateY(-5px);
+}
+
+.product img{
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+.product p{
+    margin-top: 10px;
+
+    color: #ff4f81;
+    font-weight: bold;
+}
+/* Part F - z-index */
+
+.z-container{
+    position: relative;
+    height: 250px;
+}
+
+.red-box,
+.blue-box,
+.green-box{
+    width: 150px;
+    height: 100px;
+
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
+
+    position: absolute;
+}
+
+.red-box{
+    background-color: red;
+
+    top: 20px;
+    left: 20px;
+
+    z-index: 1;
+}
+
+.blue-box{
+    background-color: blue;
+
+    top: 50px;
+    left: 60px;
+
+    z-index: 2;
+}
+
+.green-box{
+    background-color: green;
+
+    top: 80px;
+    left: 100px;
+
+    z-index: 3;
+}
+
+/* ==========================================
+   Part G - Combined Application
+========================================== */
+
+/* Sticky Navbar
+   Used so the navbar sticks to the top
+   while scrolling.
+*/
+.navbar{
+    position: sticky;
+    top: 0;
+
+    background-color: #ff4f81;
+    color: white;
+
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+
+    z-index: 100;
+}
+
+/* Relative Banner
+   Used so the banner can be shifted
+   while keeping its original space.
+*/
+.offer-banner{
+    position: relative;
+
+    left: 20px;
+    top: 10px;
+
+    width: 300px;
+
+    padding: 20px;
+    margin: 20px;
+
+    background-color: #ffd6e7;
+    border: 2px solid #ff4f81;
+    border-radius: 10px;
+}
+.offer-banner img{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Static Content
+   Static is the default position.
+   Used for normal content sections.
+*/
+.content-section{
+    position: static;
+
+    padding: 20px;
+    margin: 20px;
+
+    border: 2px solid #ccc;
+    border-radius: 10px;
+
+    background-color: white;
+}
+
+/* Product Card
+   Relative is used so the absolute badge
+   uses the card as a reference point.
+*/
+.card{
+    position: relative;
+
+    width: 250px;
+
+    margin: 20px;
+    padding: 10px;
+
+    border: 2px solid #ff4f81;
+    border-radius: 10px;
+}
+
+.card img{
+    width: 100%;
+    display: block;
+}
+
+/* Absolute Badge
+   Used to place the badge at the
+   top-right corner of the card.
+*/
+.sale-badge{
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    background-color: red;
+    color: white;
+
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+/* Fixed Chat Button
+   Used so the chat button remains
+   visible while scrolling.
+*/
+.chat-button{
+    position: fixed;
+
+    bottom: 20px;
+    right: 20px;
+
+    background-color: #ff4f81;
+    color: white;
+
+    padding: 15px;
+    border-radius: 50%;
+
+    font-size: 20px;
+}
+
+.gallery{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    margin-top: 20px;
+}
+
+.product{
+    width: 220px;
+
+    background-color: #fff7fb;
+
+    border: 2px solid #ffb6c1;
+    border-radius: 12px;
+
+    padding: 10px;
+
+    text-align: center;
+}
+
+.product img{
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+.product p{
+    margin-top: 10px;
+
+    color: #ff4f81;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.qa-box{
+    background-color: white;
+    border: 2px solid #ffb6c1;
+    border-radius: 12px;
+
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.qa-box h3{
+    color: #ff4f81;
+    margin-bottom: 10px;
+}
+
+.qa-box p{
+    margin: 5px 0;
+}
