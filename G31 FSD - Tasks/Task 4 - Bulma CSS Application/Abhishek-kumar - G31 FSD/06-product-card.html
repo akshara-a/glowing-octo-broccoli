@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Use Case 6 - Product Card</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<style>
+  body { background-color: #f0f3f9; padding: 3rem 0; }
+  .product-card { border: none; border-radius: 0.8rem; box-shadow: 0 4px 14px rgba(0,0,0,0.08); overflow: hidden; transition: transform 0.25s ease, box-shadow 0.25s ease; max-width: 280px; }
+  .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 24px rgba(59,108,246,0.16); }
+  .product-img { height: 180px; object-fit: cover; background-color: #e8edf7; }
+  .product-title { font-weight: 600; color: #1b2a4a; font-size: 1rem; }
+  .product-price { color: #3b6cf6; font-weight: 700; font-size: 1.15rem; }
+  .badge-rating { background-color: #ffe9a8; color: #8a6d1c; font-weight: 500; }
+  .btn-cart { background-color: #3b6cf6; border-color: #3b6cf6; font-weight: 500; }
+  .btn-cart:hover { background-color: #2952d6; border-color: #2952d6; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="row justify-content-center g-4">
+    <div class="col-auto">
+      <div class="card product-card">
+        <img src="Image/images (2).jpg" class="product-img card-img-top" alt="Product image">
+        <div class="card-body">
+          <h6 class="product-title mb-1">Branded Camera</h6>
+          <span class="badge badge-rating mb-2">⭐ 4.5</span>
+          <p class="product-price mb-3">$59.99</p>
+          <button type="button" class="btn btn-cart w-100 text-white">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

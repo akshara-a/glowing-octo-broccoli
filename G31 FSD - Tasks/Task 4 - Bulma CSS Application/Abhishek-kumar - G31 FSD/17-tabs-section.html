@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Use Case 17 - Tabs Section</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<style>
+  body { background-color: #f0f3f9; padding: 3rem 0; }
+  .tabs-card { background: #fff; border-radius: 1rem; box-shadow: 0 6px 18px rgba(0,0,0,0.06); padding: 2rem; max-width: 700px; margin: 0 auto; }
+  .nav-tabs { border-bottom: 2px solid #eef1f8; }
+  .nav-tabs .nav-link { color: #6b7280; font-weight: 500; border: none; border-bottom: 3px solid transparent; }
+  .nav-tabs .nav-link.active { color: #3b6cf6; border-bottom: 3px solid #3b6cf6; background: none; }
+  .nav-tabs .nav-link:hover { border-color: transparent transparent #3b6cf6 transparent; color: #3b6cf6; }
+  .tab-content { padding-top: 1.5rem; color: #4a5568; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="tabs-card">
+    <ul class="nav nav-tabs" id="featureTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview" type="button" role="tab">Overview</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="features-tab" data-bs-toggle="tab" data-bs-target="#features" type="button" role="tab">Features</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab">Reviews</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="support-tab" data-bs-toggle="tab" data-bs-target="#support" type="button" role="tab">Support</button>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="featureTabsContent">
+      <div class="tab-pane fade show active" id="overview" role="tabpanel">
+        This product helps teams plan, track, and deliver work faster with an intuitive dashboard.
+      </div>
+      <div class="tab-pane fade" id="features" role="tabpanel">
+        Includes task boards, time tracking, team chat, file sharing, and detailed analytics.
+      </div>
+      <div class="tab-pane fade" id="reviews" role="tabpanel">
+        Rated 4.8/5 by over 2,000 users for ease of use and reliable performance.
+      </div>
+      <div class="tab-pane fade" id="support" role="tabpanel">
+        Our support team is available 24/7 via chat, email, and phone to help you out.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
