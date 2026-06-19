@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Use Case 10 - Responsive Table</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<style>
+  body { background-color: #f0f3f9; padding: 3rem 0; }
+  .table-card { background: #fff; border-radius: 1rem; box-shadow: 0 6px 20px rgba(0,0,0,0.06); padding: 1.5rem; }
+  .table-title { font-weight: 700; color: #1b2a4a; }
+  table thead { background-color: #f4f7fd; }
+  table thead th { color: #4a5568; font-weight: 600; border-bottom: 2px solid #e3e8f3; }
+  table tbody td { vertical-align: middle; color: #2d3748; }
+  .btn-action { padding: 0.25rem 0.7rem; font-size: 0.8rem; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="table-card">
+    <h4 class="table-title mb-4">Employee List</h4>
+    <div class="table-responsive">
+      <table class="table table-hover align-middle">
+        <thead>
+          <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>EMP001</td>
+            <td>Riya Sharma</td>
+            <td>Engineering</td>
+            <td>riya.sharma@company.com</td>
+            <td><span class="badge bg-success">Active</span></td>
+            <td>
+              <button class="btn btn-outline-primary btn-action">Edit</button>
+              <button class="btn btn-outline-danger btn-action">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>EMP002</td>
+            <td>Arjun Mehta</td>
+            <td>Marketing</td>
+            <td>arjun.mehta@company.com</td>
+            <td><span class="badge bg-warning text-dark">On Leave</span></td>
+            <td>
+              <button class="btn btn-outline-primary btn-action">Edit</button>
+              <button class="btn btn-outline-danger btn-action">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>EMP003</td>
+            <td>Karan Patel</td>
+            <td>Sales</td>
+            <td>karan.patel@company.com</td>
+            <td><span class="badge bg-secondary">Inactive</span></td>
+            <td>
+              <button class="btn btn-outline-primary btn-action">Edit</button>
+              <button class="btn btn-outline-danger btn-action">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>EMP004</td>
+            <td>Neha Verma</td>
+            <td>HR</td>
+            <td>neha.verma@company.com</td>
+            <td><span class="badge bg-success">Active</span></td>
+            <td>
+              <button class="btn btn-outline-primary btn-action">Edit</button>
+              <button class="btn btn-outline-danger btn-action">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

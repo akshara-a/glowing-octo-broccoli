@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Use Case 19 - Order Summary Card</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<style>
+  body { background-color: #f0f3f9; padding: 3rem 0; }
+  .order-card { background: #fff; border-radius: 1rem; box-shadow: 0 6px 18px rgba(0,0,0,0.06); padding: 2rem; max-width: 420px; margin: 0 auto; }
+  .order-title { font-weight: 700; color: #1b2a4a; margin-bottom: 1.5rem; }
+  .order-row { display: flex; justify-content: space-between; color: #4a5568; margin-bottom: 0.7rem; font-size: 0.95rem; }
+  .order-row.discount { color: #1c9b5e; }
+  hr { border-top: 1px solid #eef1f8; }
+  .order-total { display: flex; justify-content: space-between; font-weight: 700; color: #1b2a4a; font-size: 1.15rem; margin: 1rem 0 1.5rem; }
+  .btn-checkout { background-color: #3b6cf6; border-color: #3b6cf6; padding: 0.6rem; font-weight: 500; }
+  .btn-checkout:hover { background-color: #2952d6; border-color: #2952d6; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="order-card">
+    <h5 class="order-title">Order Summary</h5>
+
+    <div class="order-row">
+      <span>Wireless Headphones</span>
+      <span>Qty: 1</span>
+    </div>
+    <div class="order-row">
+      <span>Price</span>
+      <span>$59.99</span>
+    </div>
+    <div class="order-row discount">
+      <span>Discount</span>
+      <span>-$10.00</span>
+    </div>
+
+    <hr>
+
+    <div class="order-total">
+      <span>Total</span>
+      <span>$49.99</span>
+    </div>
+
+    <button type="button" class="btn btn-checkout w-100 text-white">Checkout</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

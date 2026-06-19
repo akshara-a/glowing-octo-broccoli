@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Use Case 8 - Services Section</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<style>
+  body { background-color: #ffffff; padding: 3rem 0; }
+  .section-title { font-weight: 700; color: #1b2a4a; }
+  .section-subtitle { color: #6b7280; }
+  .service-card { border: 1px solid #e3e8f3; border-radius: 1rem; padding: 2rem 1.5rem; text-align: center; height: 100%; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+  .service-card:hover { transform: translateY(-6px); box-shadow: 0 10px 24px rgba(59,108,246,0.14); border-color: transparent; }
+  .service-icon { width: 60px; height: 60px; border-radius: 50%; background-color: #e8f0fe; color: #3b6cf6; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 1.2rem; }
+  .service-title { font-weight: 600; color: #1b2a4a; }
+  .service-desc { color: #6b7280; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="text-center mb-5">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-subtitle">Everything you need to build and grow your product</p>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-3">
+      <div class="service-card">
+        <div class="service-icon">💻</div>
+        <h6 class="service-title mb-2">Web Development</h6>
+        <p class="service-desc mb-0">Custom websites built with modern frameworks and best practices.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="service-card">
+        <div class="service-icon">🔗</div>
+        <h6 class="service-title mb-2">API Integration</h6>
+        <p class="service-desc mb-0">Seamlessly connect your app with third-party services and tools.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="service-card">
+        <div class="service-icon">🎨</div>
+        <h6 class="service-title mb-2">UI Design</h6>
+        <p class="service-desc mb-0">Clean, user-friendly interfaces designed around your audience.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="service-card">
+        <div class="service-icon">🗄️</div>
+        <h6 class="service-title mb-2">Database Support</h6>
+        <p class="service-desc mb-0">Reliable data architecture, optimization, and ongoing maintenance.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
