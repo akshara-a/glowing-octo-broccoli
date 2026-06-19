@@ -1,0 +1,92 @@
+:root{
+
+    --primary-color:#ff7a00;
+    --cream-bg:#FFF8EE;
+
+}
+
+body{
+
+    background:var(--cream-bg);
+    font-family:'Segoe UI',sans-serif;
+
+}
+
+/* Background */
+
+.paw-bg{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:1.5;
+
+    z-index:-1;
+}
+
+/* Section */
+
+.faq-section{
+
+    min-height:100vh;
+
+}
+
+.section-title{
+
+    color:var(--primary-color);
+    font-weight:700;
+
+}
+
+.section-subtitle{
+
+    color:#666;
+
+}
+
+/* Accordion */
+
+.accordion-item{
+
+    border:none;
+    margin-bottom:15px;
+    border-radius:15px !important;
+    overflow:hidden;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+}
+
+.accordion-button{
+
+    font-weight:600;
+
+}
+
+.accordion-button:not(.collapsed){
+
+    background:#fff4e8;
+    color:var(--primary-color);
+
+}
+
+.accordion-button:focus{
+
+    box-shadow:none;
+
+}
+
+.accordion-body{
+
+    background:white;
+    color:#555;
+
+}

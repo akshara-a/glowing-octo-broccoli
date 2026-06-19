@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Part A - Static Position</title>
+
+<style>
+    .container {
+        display: flex;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .box {
+        width: 120px;
+        height: 120px;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        background-color: lightblue;
+    }
+
+    
+    .static-box {
+        position: static; 
+
+        
+        top: 50px;
+        left: 50px;
+
+        
+    }
+</style>
+</head>
+<body>
+
+<h1>Part A - Static Position</h1>
+
+
+
+<div class="container">
+    <div class="box">Box 1</div>
+
+    <div class="box static-box">
+        Box 2<br>(Static)
+    </div>
+
+    <div class="box">Box 3</div>
+</div>
+
+<h2>Observation:</h2>
+
+
+<p>
+    The second box has <strong>position: static</strong> with
+    <strong>top: 50px</strong> and <strong>left: 50px</strong>.
+    Notice that it does not move because static elements ignore
+    top, left, right, and bottom properties.
+</p>
+
+<p>
+    Even though <code>top: 50px</code> and <code>left: 50px</code>
+    are applied to Box 2, the box remains in its normal position.
+</p>
+
+
+</body>
+</html>

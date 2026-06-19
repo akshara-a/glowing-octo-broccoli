@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Part B - Relative Position</title>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        margin: 30px;
+    }
+
+    h2{
+        margin-top: 40px;
+    }
+
+    
+    .relative-box{
+        width: 150px;
+        height: 100px;
+        background-color: lightgreen;
+        border: 2px solid black;
+
+        
+        position: relative;
+
+        
+        left: 40px;
+        top: 20px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    
+    .container{
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .box{
+        width: 120px;
+        height: 120px;
+        border: 2px solid black;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    .box1{
+        background-color: salmon;
+
+        position: relative;
+        left: 50px; 
+    }
+
+    .box2{
+        background-color: skyblue;
+    }
+</style>
+</head>
+<body>
+
+<h1>Part B - Relative Position</h1>
+
+<h2>Example 1: Moving a Relative Box</h2>
+
+<div class="relative-box">
+    Relative Box
+</div>
+
+<p>
+    The box is moved:
+</p>
+
+<ul>
+    <li>40px to the right using left: 40px</li>
+    <li>20px downward using top: 20px</li>
+</ul>
+
+<p>
+    Even though the box moves visually, its original space is still reserved in the layout.
+</p>
+
+<hr>
+
+<h2>Example 2: Two Adjacent Boxes</h2>
+
+<div class="container">
+    <div class="box box1">Box A</div>
+    <div class="box box2">Box B</div>
+</div>
+
+<p>
+    Box A is moved 50px to the right using relative positioning.
+</p>
+
+<p>
+    Notice that Box B does not move into Box A's original space because
+    relative positioning keeps the original space reserved.
+</p>
+
+<h2>Observation</h2>
+
+<ul>
+    <li>position: relative moves the element from its original position.</li>
+    <li>The element remains part of the normal document flow.</li>
+    <li>The original space is still occupied.</li>
+    <li>Nearby elements behave as if the moved element never changed position.</li>
+</ul>
+
+</body>
+</html>
