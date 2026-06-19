@@ -1,48 +1,33 @@
 :root{
---primary-color:#0d6efd;
---light-bg:#f8f9fa;
---dark-text:#212529;
-}
-
-body{
-font-family: Arial, sans-serif;
-color: var(--dark-text);
+--primary:#0d6efd;
 }
 
 .hero{
-background: linear-gradient(to right,#0d6efd,#4f9cff);
-color:white;
-text-align:center;
-padding:80px 20px;
+background:linear-gradient(to right,#0d6efd,#4f9cff);
+padding:80px;
 }
 
-.custom-card{
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+.card{
 transition:0.3s;
 margin-bottom:20px;
 }
 
-.custom-card:hover{
+.card:hover{
 transform:translateY(-5px);
-box-shadow:0 8px 20px rgba(0,0,0,0.2);
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.profile-card{
+border-radius:15px;
+overflow:hidden;
 }
 
 .form-control:focus{
-border-color:var(--primary-color);
-box-shadow:0 0 5px rgba(13,110,253,0.5);
-}
-
-.nav-link:hover{
-color:#ffc107 !important;
-}
-
-footer{
-margin-top:20px;
+box-shadow:0 0 5px #0d6efd;
 }
 
 @media(max-width:768px){
 .hero{
-padding:50px 15px;
+padding:40px;
 }
 }
