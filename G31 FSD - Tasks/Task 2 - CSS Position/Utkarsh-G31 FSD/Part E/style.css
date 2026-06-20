@@ -1,0 +1,15 @@
+.navbar{
+    position: sticky;
+    top: 0;
+    background-color: lightblue;
+    border: 1px solid black;
+    height: 50px;
+    width: 100%;
+}
+.nav{
+    padding: 20px;
+}
+img{
+    height: 500px;
+    width: 350px;
+}

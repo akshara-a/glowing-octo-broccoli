@@ -1,0 +1,13 @@
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: lightblue;
+    border: 2px solid black;
+    margin: 15px;
+    text-align: center;
+}
+.staticBox{
+    position: static;
+    top: 50px;
+    left: 50px;
+}
