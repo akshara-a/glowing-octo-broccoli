@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Absolute Position Example</title>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+
+    /* Parent container */
+    .parent{
+        width: 400px;
+        height: 250px;
+        background-color: lightgray;
+        border: 2px solid black;
+        position: relative; /* Positioning context for child */
+        margin-bottom: 40px;
+    }
+
+    /* Child box positioned at top-right */
+    .child{
+        width: 100px;
+        height: 60px;
+        background-color: orange;
+        color: white;
+        text-align: center;
+        line-height: 60px;
+
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    /* Image container */
+    .image-container{
+        position: relative; /* Positioning context for badge */
+        width: 300px;
+    }
+
+    .image-container img{
+        width: 100%;
+        display: block;
+    }
+
+    /* Notification badge */
+    .badge{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        font-weight: bold;
+    }
+
+    .note{
+        margin-top: 20px;
+        background: #f4f4f4;
+        padding: 10px;
+        border-left: 5px solid blue;
+    }
+</style>
+</head>
+<body>
+
+<h2>Part C – Absolute Position</h2>
+
+<!-- Parent Container and Child Box -->
+<div class="parent">
+    <div class="child">Child</div>
+</div>
+
+<!-- Image with Notification Badge -->
+<div class="image-container">
+    <img src="https://tse2.mm.bing.net/th/id/OIP.b1Sl4ozPJegDtSJSAlvFzwHaHa?pid=Api&h=220&P=0">
+    <div class="badge">5</div>
+</div>
+
+<!-- Explanation -->
+<div class="note">
+    <h3>Explanation</h3>
+    <p>
+        The orange child box is positioned at the top-right corner of the parent
+        using <code>position: absolute</code>.
+    </p>
+
+    <p>
+        The red notification badge is placed on the image using
+        <code>position: absolute</code>.
+    </p>
+
+    <p>
+        If the parent container does <b>not</b> have a positioning context
+        (<code>position: relative</code>, <code>absolute</code>,
+        <code>fixed</code>, or <code>sticky</code>), the absolutely positioned
+        element will be placed relative to the browser window (viewport) instead
+        of the parent container.
+    </p>
+</div>
+
+</body>
+</html>
