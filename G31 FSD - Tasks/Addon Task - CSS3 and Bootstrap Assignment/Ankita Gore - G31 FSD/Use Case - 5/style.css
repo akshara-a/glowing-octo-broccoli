@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Full page background */
+.profile-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4f46e5, #9333ea, #ec4899);
+  padding: 30px 15px;
+}
+
+/* Profile Card */
+.profile-card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.profile-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Image */
+.profile-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #7c3aed;
+}
+
+/* User Name */
+.card-title {
+  font-weight: 700;
+  color: #222;
+}
+
+/* Role */
+.role-text {
+  color: #7c3aed;
+  font-weight: 600;
+}
+
+/* Bio */
+.bio-text {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Follow Button */
+.follow-btn {
+  background-color: #7c3aed;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.follow-btn:hover {
+  background-color: #6d28d9;
+}
+
+/* Card padding */
+.profile-card .card-body {
+  padding: 35px 25px;
+}
