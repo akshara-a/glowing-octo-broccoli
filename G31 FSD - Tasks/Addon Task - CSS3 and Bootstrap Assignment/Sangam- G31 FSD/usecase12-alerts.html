@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Alerts</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="bg-light">
+
+    <div class="container my-5">
+
+        <!--Heading-->
+        <div class="text-center mb-5">
+            <h1>Alert Message</h1>
+            <p class="text-muted">
+                Bootstrap alert examples with icons and dismiss buttons.
+            </p>
+        </div>
+
+        <!--Success Alert-->
+        <div class="alert alert-success alert-dismissible fade show d-flex align-items-center">
+            <i class="bi bi-check-circle-fill me-2"></i>
+            <div>
+                <strong>Success!</strong>Your data has been saved successfully.
+            </div>
+            <button class="btn-close ms-auto"
+            data-bs-dismiss="alert"></button>
+        </div>
+        <!--Error Alert-->
+        <div class="alert alert-danger alert-dismissible fade show d-flex align-items-center">
+            <i class="bi bi-x-circle-fill me-2"></i>
+            <div>
+                <strong>Error!</strong>Something went wrong please try again.
+            </div>
+            <button class="btn-close ms-auto"
+            data-bs-dismiss="alert"></button>
+        </div>
+        <!--Warning Alert-->
+        <div class="alert alert-warning alert-dismissible fade show d-flex align-items-center">
+            <i class="bi bi-exclamation-triangle-fill me-2"></i>
+            <div>
+                <strong>Warning!</strong>Please review the entered information.
+            </div>
+            <button class="btn-close ms-auto"
+            data-bs-dismiss="alert"></button>
+        </div>
+        <!--Info Alert-->
+        <div class="alert alert-info alert-dismissible fade show d-flex align-items-center">
+            <i class="bi bi-info-circle-fill me-2"></i>
+            <div>
+                <strong>Info!</strong>New updates are available.
+            </div>
+            <button class="btn-close ms-auto"
+            data-bs-dismiss="alert"></button>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

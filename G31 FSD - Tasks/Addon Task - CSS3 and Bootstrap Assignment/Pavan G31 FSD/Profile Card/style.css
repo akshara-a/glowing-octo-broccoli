@@ -1,0 +1,187 @@
+/* ==========================
+   CSS VARIABLES
+========================== */
+
+:root{
+    --primary-color:#ff7a00;
+    --primary-dark:#e56700;
+    --white:#ffffff;
+    --dark:#212529;
+    --gray:#6c757d;
+    --cream:#FFF8EE;
+}
+
+/* ==========================
+   GENERAL
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background-color:var(--cream);
+}
+
+/* ==========================
+   PAW BACKGROUND
+========================== */
+
+.paw-bg{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:1.2;
+    z-index:-1;
+}
+
+/* ==========================
+   SECTION
+========================== */
+
+.community-section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    color:var(--primary-color);
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:var(--gray);
+    margin-bottom:60px;
+}
+
+/* ==========================
+   PROFILE ROW
+========================== */
+
+.profile-row{
+    margin-bottom:70px;
+}
+
+/* ==========================
+   CONTENT CARD
+========================== */
+
+.profile-content{
+
+    background:var(--white);
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+
+    transition:0.3s;
+}
+
+.profile-content:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 40px rgba(0,0,0,0.18);
+}
+
+.profile-content h2{
+
+    color:var(--primary-color);
+
+    font-weight:bold;
+
+    margin-bottom:10px;
+}
+
+.profile-content h5{
+
+    color:var(--dark);
+
+    margin-bottom:15px;
+}
+
+.profile-content p{
+
+    color:var(--gray);
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.follow-btn{
+
+    background:var(--primary-color);
+
+    color:white;
+
+    border-radius:10px;
+
+    padding:10px 24px;
+
+    transition:0.3s;
+}
+
+.follow-btn:hover{
+
+    background:var(--primary-dark);
+
+    color:white;
+
+    transform:translateY(-3px);
+}
+
+/* ==========================
+   IMAGE
+========================== */
+
+.profile-img{
+
+    width:100%;
+
+    max-width:450px;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+
+    transition:0.3s;
+}
+
+.profile-img:hover{
+
+    transform:scale(1.03);
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:991px){
+
+    .profile-content{
+
+        margin-bottom:25px;
+
+        text-align:center;
+    }
+
+    .profile-row{
+
+        margin-bottom:50px;
+    }
+}

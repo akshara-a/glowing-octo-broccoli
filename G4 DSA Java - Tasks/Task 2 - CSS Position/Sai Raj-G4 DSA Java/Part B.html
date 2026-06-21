@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Part B - Relative Position</title>
+
+<style>
+
+.container{
+    display:flex;
+    gap:20px;
+    margin-top:30px;
+}
+
+.box{
+    width:120px;
+    height:120px;
+    background:lightgreen;
+    border:2px solid black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.relative-box{
+    position:relative;
+    left:40px;
+    top:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Part B - Relative Position</h1>
+
+<div class="container">
+    <div class="box relative-box">Moved Box</div>
+    <div class="box">Box 2</div>
+</div>
+
+<h2>Observation:</h2>
+
+<p>
+The box moves 40px to the right and 20px downward.
+</p>
+
+<p>
+Its original space remains reserved in the document flow.
+Other elements do not move into its original position.
+</p>
+
+</body>
+</html>

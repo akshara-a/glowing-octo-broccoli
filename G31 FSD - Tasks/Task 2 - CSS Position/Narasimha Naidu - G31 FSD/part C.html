@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Absolute Position Example</title>
+
+<style>
+    .parent {
+        width: 400px;
+        height: 250px;
+        border: 3px solid black;
+        background-color: lightgray;
+
+        
+        position: relative;
+    }
+
+    .child {
+        width: 100px;
+        height: 60px;
+        background-color: orange;
+        border: 2px solid black;
+
+        
+        position: absolute;
+
+        top: 0;
+        right: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+</head>
+<body>
+
+<h2>Absolute Position Example</h2>
+
+<div class="parent">
+    Parent Container
+
+    <div class="child">
+        Child Box
+    </div>
+</div>
+
+<h3>Explanation:</h3>
+
+
+    <ul>
+        <li>position: relative on the parent makes it the reference point.</li>
+        <li>position: absolute on the child removes it from the normal flow.</li>
+        <li>top: 0 places it at the top edge.</li>
+        <li>right: 0 places it at the right edge.</li>
+    </ul>
+
+
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+:root{
+
+    --primary-color:#ff7a00;
+    --cream-bg:#FFF8EE;
+
+}
+
+body{
+
+    background:var(--cream-bg);
+    font-family:'Segoe UI',sans-serif;
+
+}
+
+/* Background */
+
+.paw-bg{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:1.5;
+
+    z-index:-1;
+}
+
+/* Section */
+
+.skills-section{
+
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+
+}
+
+.section-title{
+
+    color:var(--primary-color);
+    font-weight:700;
+
+}
+
+.section-subtitle{
+
+    color:#666;
+
+}
+
+/* Skills Card */
+
+.skills-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+
+}
+
+/* Skill Item */
+
+.skill-item{
+
+    margin-bottom:25px;
+
+}
+
+.skill-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+/* Progress */
+
+.progress{
+
+    height:20px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+/* Custom Colors */
+
+.html-bar{
+
+    background:#ff7a00;
+
+}
+
+.css-bar{
+
+    background:#ff9500;
+
+}
+
+.bootstrap-bar{
+
+    background:#ffb347;
+
+}
+
+.js-bar{
+
+    background:#ff6b35;
+
+}
+
+.csharp-bar{
+
+    background:#ff8c42;
+
+}

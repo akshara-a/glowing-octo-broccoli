@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Part F - z-index</title>
+
+<style>
+    .container {
+        position: relative;
+        width: 400px;
+        height: 300px;
+        margin: 50px auto;
+    }
+
+    .box {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+    }
+
+    
+    .red {
+        background-color: red;
+        top: 20px;
+        left: 20px;
+        z-index: 1;
+    }
+
+    
+    .blue {
+        background-color: blue;
+        top: 60px;
+        left: 60px;
+        z-index: 2;
+    }
+
+    
+    .green {
+        background-color: green;
+        top: 100px;
+        left: 100px;
+        z-index: 3;
+    }
+</style>
+</head>
+<body>
+
+<h1>Part F - z-index Example</h1>
+
+<div class="container">
+    <div class="box red"></div>
+    <div class="box blue"></div>
+    <div class="box green"></div>
+</div>
+
+<h2>Observation</h2>
+
+<ul>
+    <li>Red Box → z-index: 1</li>
+    <li>Blue Box → z-index: 2</li>
+    <li>Green Box → z-index: 3</li>
+</ul>
+
+<p>
+    Since the green box has the highest z-index value, it appears above
+    both the blue and red boxes. The blue box appears above the red box.
+</p>
+
+</body>
+</html>
