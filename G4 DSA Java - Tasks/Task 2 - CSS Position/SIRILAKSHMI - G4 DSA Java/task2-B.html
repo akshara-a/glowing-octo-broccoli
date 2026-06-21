@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height:100vh;
+            align-items:center;
+            justify-content:center;
+            display:flex;
+            margin:0px;
+        }
+        .two-boxes{
+            background-color:blue;
+            display:flex;
+            flex-direction:row;
+            gap:50px;
+            align-items:center;
+            justify-content:center;
+        }
+        .box{
+            background-color:white;
+            height:80px;
+            width:80px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .box1{
+            background-color:red;   
+        }
+        .box2{
+            position:relative;
+            right:40px;
+            bottom:20px;
+            background-color:greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="two-boxes">
+        <div class="box box1">BOX1</div>
+        <div class="box box2">BOX2</div>
+    </div>
+    
+</body>
+</html>
