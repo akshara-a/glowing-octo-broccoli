@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Absolute Position</title>
+    <style>
+        .parent{
+            width:300px;
+            height:200px;
+            border:2px solid black;
+            position:relative;
+            margin-bottom:30px;
+        }
+
+        .child{
+            width:80px;
+            height:80px;
+            background:red;
+            color:white;
+            text-align:center;
+            line-height:80px;
+
+            position:absolute;
+            top:0;
+            right:0;
+        }
+
+        .image-container{
+            height:200px;
+            width:200px;
+            position:relative;
+            display:inline-block;
+        }
+
+        .badge{
+            position:absolute;
+            top:5px;
+            right:5px;
+            background:red;
+            color:white;
+            padding:8px;
+            border-radius:50%;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Absolute Position</h2>
+
+<div class="parent">
+    <div class="child">Child</div>
+</div>
+
+<div class="image-container">
+    <img src="https://operaparallele.org/wp-content/uploads/2023/09/Placeholder_Image.png" alt="Image">
+    <span class="badge">5</span>
+</div>
+
+<h3>Explanation</h3>
+
+<p>
+The child box is positioned at the top-right corner of the parent container.
+</p>
+
+<p>
+The notification badge is placed on the image using absolute positioning.
+</p>
+
+<p>
+If the parent does not have position:relative (or another positioning value),
+the absolute element is positioned relative to the browser window.
+</p>
+
+</body>
+</html>
