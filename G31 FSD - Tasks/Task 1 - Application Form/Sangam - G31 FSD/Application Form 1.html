@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application 1</title>
+    <style>
+        :root {
+            --border: #1f3d7a;
+            --color: #102f6a;
+            --background: #0c2f73;
+        }
+
+        body {
+            background-color: antiquewhite;
+            font-family: Arial, sans-serif;
+            /* padding: 20px; */
+        }
+
+        .page {
+            width:1000px;
+            margin: auto;
+            background-color: white;
+            border: 1px solid, var(--border);
+            padding: 12px;
+        }
+
+        .header {
+            display: grid;
+            grid-template-columns: 120px 1fr 130px;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            height: 110px;
+            border: 3px solid, var(--border);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--border);
+            font-weight: bold;
+        }
+
+        .logo img {
+            height: 110px;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .title h1 {
+            margin: 0;
+            color: var(--color);
+            font-size: 58px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .title h2 {
+            margin: 0;
+            color: var(--color);
+        }
+
+        .photo {
+            height: 165px;
+            border: 1px solid, var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .note {
+            text-align: center;
+            font-style: italic;
+            margin: 10px 0 20px;
+            color: var(--color);
+        }
+
+        .sec {
+            margin-top: 10px;
+        }
+
+        .head {
+            display: inline-block;
+            background-color: var(--background);
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 4px 4px 0 0;
+            /* border-radius: top-right-bottom-left */
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .box {
+            border: 2px solid, var(--border);
+            border-radius: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid, var(--border);
+            padding: 8px;
+            vertical-align: middle;
+        }
+
+        .dd {
+            padding-left: 200px;
+        }
+
+        th {
+            background-color: #6994e93f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="logo">
+                <img src="app3logo.png" alt="This space is for logo">
+            </div>
+            <div class="title">
+                <h1>ACADEMY ENTRY FORM</h1>
+                <h2>Application for Addmission</h2>
+            </div>
+            <div class="photo">Paste Passport Size Photograph Here</div>
+        </div>
+        <div class="note">Please fill in the form in BLOCK LETTERS and submit all required documents.</div>
+        <div class="sec">
+            <div class="head">1. CLASS APPLIED FOR</div>
+            <table class="box">
+                <tr>
+                    <td>Academic Year:_________</td>
+                    <td>Class Applying For:_________ </td>
+                    <td>Date of Admission Required:___/___/____</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Grade/Stream(if applicable):____________________________________</td>
+                    <td class="dd">(DD/MM/YYYY)</td>
+                </tr>
+            </table>
+        </div>
+        <div class="sec">
+            <div class="head">2. STUDENT INFORMATION</div>
+            <table class="box">
+                <tr>
+                    <td colspan="3">Full Name (as per
+                        Certificate):______________________________________________________________________________________
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date of Birth (DD/MM/YYYY):&nbsp;&nbsp;_____/_____/______</td>
+                    <td colspan="2">Gender: □ Male □ Female □ Other</td>
+                </tr>
+                <tr>
+                    <td>Nationality:______________________</td>
+                    <td>Religion:________________________</td>
+                    <td>Mother Tongue:_____________________</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Aadhaar Number / ID (if any):________________________</td>
+                    <td>Blood Group:_______________________</td>
+                </tr>
+                <tr>
+                    <td>Place of Birth:____________________</td>
+                    <td>State:________________________</td>
+                    <td>Country:_______________________</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Student's Residential Address:<br><br>
+                        <hr><br>
+                        <hr>
+                        <!-- ______________________________________________________________________________________________________________ -->
+                        <!-- ______________________________________________________________________________________________________________ -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>City:_________________________</td>
+                    <td>State:________________________</td>
+                    <td>PIN Code:_________________________</td>
+                </tr>
+                <tr>
+                    <td>:Phone Number:______________________</td>
+                    <td colspan="2">Email (if any):_______________________________________________________</td>
+                </tr>
+            </table>
+        </div>
+        <div class="sec">
+            <div class="head">3. PARENT/GUARDIAN INFORMATION</div>
+            <table class="box">
+                <tr>
+                    <th>FATHER / GUARDIAN</th>
+                    <th>MOTHER / GUARDIAN</th>
+                </tr>
+                <tr>
+                    <td>Full Name:________________________
+                        <br><br>
+                        Qualification:_______________________
+                        <br><br>
+                        Occupation:_______________________
+                        <br><br>
+                        Organization/Company:______________
+                        <br><br>
+                        Phone Number:____________________
+                        <br><br>
+                        Email:_______________________
+                    </td>
+                    <td>Full Name:_______________________
+                        <br><br>
+                        Qualification:_______________________
+                        <br><br>
+                        Occupation:_______________________
+                        <br><br>
+                        Organization/Company:______________
+                        <br><br>
+                        Phone Number:____________________
+                        <br><br>
+                        Email:_______________________
+                    </td>
+                </tr>
+                <tr>
+                    <td>Annual Income (Approx.): ₹ __________</td>
+                    <td>Parent/Guardian Signature: __________</td>
+                </tr>
+            </table>
+        </div>
+        <div class="sec">
+            <div class="head">4. PREVIOUS SCHOOL DETAILS</div>
+            <table class="box">
+                <tr>
+                    <td colspan="2">Previous School Name:_______________________________________</td>
+                    <td>Board:______________________</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Last Class Studied:_________________________________</td>
+                    <td>Academic Year:_________________________</td>
+                </tr>
+                <tr>
+                    <td>City:_________________________</td>
+                    <td>State:________________________</td>
+                    <td>Country:_________________________</td>
+                </tr>
+            </table>
+        </div>
+        <div class="sec">
+            <div class="head">5. ADDITIONAL INFORMATION</div>
+            <table class="box">
+                 <tr>
+                    <td>Does the student have any medical condition/allergy? □ Yes □ No</td>
+                    <td>If Yes, please specify: __________</td>
+                </tr>
+                <tr>
+                    <td>Has the student been involved in any disciplinary action? □ Yes □ No</td>
+                    <td>If Yes, please specify: __________</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Hobbies / Interests: _________________________________________________</td>
+                </tr>
+            </table>
+        </div>
+        <div class="sec">
+            <div class="head">6. DOCUMENTS CHECKLIST (please tick)</div>
+            <table class="box">
+                <tr>
+                    <td>□ Birth Certificate</td>
+                    <td>□ Transfer Certificate</td>
+                    <td>□ Medical Certificate</td>
+                </tr>
+                <tr>
+                    <td>□ Passport Size Photographs</td>
+                    <td>□ Address Proof</td>
+                    <td>□ ID Proof (Aadhaar/Passport)</td>
+                </tr>
+                <tr>
+                    <td>□ Previous School Report Card</td>
+                    <td colspan="2">□ Others (Please specify):__________________________</td>
+                </tr>
+            </table>
+        </div>
+        <div class="sec">
+            <div class="head">7. DECLARATION</div>
+            <table class="box">
+                <tr>
+                    <td>I hereby declare that the information provided above is true and correct to the best of my
+                        knowledge and belief.</td>
+                </tr>
+                <tr>
+                    <td>Date: ___/___/_____ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Signature of Parent/Guardian:
+                        ___________________</td>
+                </tr>
+            </table>
+        </div>
+        <div class="sec">
+            <div class="head">8. FOR OFFICE USE ONLY</div>
+            <table class="box">
+                <tr>
+                    <td>Application No.: __________</td>
+                    <td>Date Received: ___/___/_____</td>
+                    <td>Received By: __________</td>
+                </tr>
+                <tr>
+                    <td>Documents Verified: □ Yes □ No</td>
+                    <td>Admission Approved: □ Yes □ No</td>
+                    <td>Remarks: __________</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <h1>Made By- Sangam Gutpa (Sangam-G31 FSD)</h1>
+</body>
+
+</html>

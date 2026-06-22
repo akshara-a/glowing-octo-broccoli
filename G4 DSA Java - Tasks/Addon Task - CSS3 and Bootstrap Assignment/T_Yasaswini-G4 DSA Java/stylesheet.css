@@ -1,0 +1,33 @@
+:root{
+--primary:#0d6efd;
+}
+
+.hero{
+background:linear-gradient(to right,#0d6efd,#4f9cff);
+padding:80px;
+}
+
+.card{
+transition:0.3s;
+margin-bottom:20px;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.profile-card{
+border-radius:15px;
+overflow:hidden;
+}
+
+.form-control:focus{
+box-shadow:0 0 5px #0d6efd;
+}
+
+@media(max-width:768px){
+.hero{
+padding:40px;
+}
+}
