@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Section background */
+.table-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2563eb, #7c3aed, #ec4899);
+  padding: 40px 15px;
+}
+
+/* Card */
+.table-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 30px;
+  overflow: hidden;
+}
+
+/* Table styling */
+.table th,
+.table td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.table thead th {
+  white-space: nowrap;
+}
+
+/* Buttons */
+.btn-sm {
+  border-radius: 8px;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+}
