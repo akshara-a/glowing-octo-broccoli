@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Background section */
+.tabs-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2563eb, #7c3aed, #ec4899);
+  padding: 40px 15px;
+}
+
+/* Main card */
+.tabs-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Tabs styling */
+.nav-tabs {
+  border-bottom: none;
+  gap: 10px;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-weight: 600;
+  color: #555;
+  background-color: #f3f4f6;
+  transition: 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+  background-color: #e5e7eb;
+  color: #222;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #7c3aed;
+  color: #fff;
+}
+
+/* Tab content */
+.tab-content {
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 15px;
+  min-height: 220px;
+}
+
+.tab-pane h3 {
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.tab-pane p,
+.tab-pane li {
+  color: #555;
+  line-height: 1.7;
+}
