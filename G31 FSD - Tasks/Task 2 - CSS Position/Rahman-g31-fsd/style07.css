@@ -1,0 +1,70 @@
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background-color: rgb(218, 240, 232);
+}
+
+
+.navbar{
+    position:sticky;
+    top:0;
+    background-color:black;
+    padding:15px;
+    z-index:1000;
+}
+
+.navbar a{
+    color:rgb(194, 153, 153);
+    text-decoration:none;
+    margin-right:20px;
+}
+
+
+.banner{
+    position:relative;
+    background-color:lightblue;
+    text-align:center;
+    padding:60px;
+}
+
+
+.product-card{
+    position:relative;
+    width:250px;
+    border:2px solid black;
+    margin:40px auto;
+    padding:15px;
+    text-align:center;
+}
+
+
+.badge{
+    position:absolute;
+    top:10px;
+    right:10px;
+    background:red;
+    color:white;
+    padding:5px 10px;
+    border-radius:20px;
+}
+
+
+.content{
+    padding:40px;
+    margin:20px;
+    border:1px solid gray;
+}
+
+
+.chat-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:green;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:50px;
+    cursor:pointer;
+}

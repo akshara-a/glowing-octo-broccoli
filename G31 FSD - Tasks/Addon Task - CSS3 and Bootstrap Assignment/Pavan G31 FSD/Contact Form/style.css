@@ -1,0 +1,152 @@
+:root {
+
+    --primary-color:#ff7a00;
+    --cream-bg:#FFF8EE;
+    --dark-text:#333;
+
+}
+
+body {
+
+    background:var(--cream-bg);
+    font-family:'Segoe UI',sans-serif;
+
+}
+
+/* Background */
+
+.paw-bg{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:1.5;
+
+    z-index:-1;
+}
+
+/* Section */
+
+.contact-section{
+
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+
+}
+
+.section-title{
+
+    color:var(--primary-color);
+    font-weight:700;
+
+}
+
+.section-subtitle{
+
+    color:#666;
+
+}
+
+/* Image */
+
+.contact-image{
+
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+
+}
+
+/* Contact Info */
+
+.info-box{
+
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+}
+
+.info-box h4{
+
+    color:var(--primary-color);
+    margin-bottom:15px;
+
+}
+
+/* Form Card */
+
+.contact-card{
+
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.10);
+    transition:0.4s;
+
+}
+
+.contact-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* Inputs */
+
+.form-control{
+
+    border-radius:12px;
+    padding:12px;
+
+}
+
+.form-control:focus{
+
+    border-color:var(--primary-color);
+    box-shadow:0 0 10px rgba(255,122,0,0.25);
+
+}
+
+/* Button */
+
+.submit-btn{
+
+    background:var(--primary-color);
+    color:white;
+    padding:12px 35px;
+    border:none;
+    border-radius:30px;
+    font-weight:600;
+    transition:0.3s;
+
+}
+
+.submit-btn:hover{
+
+    background:#e56d00;
+    color:white;
+    transform:scale(1.05);
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .contact-card{
+
+        padding:20px;
+
+    }
+
+}

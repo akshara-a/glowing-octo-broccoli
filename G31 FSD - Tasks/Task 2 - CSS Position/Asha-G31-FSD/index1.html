@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Assignment</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <h1>CSS Position Assignment - GlowBox</h1>
+
+    <!-- Part A -->
+
+    <h2>Part A - Static Position</h2>
+
+   <div class="box-container">
+
+    <div class="box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO3G_URDbLSWnmZM05j25GagwYhk9m6MHv3CIKMO0IFA&s=10" alt="Skincare">
+        <p>Skincare</p>
+    </div>
+
+    <div class="box makeup">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS6SO6B_XDOQAppmGhPFiaZ0i7OjSjKlm7mxW1-w2GnQ&s=10" alt="Makeup">
+        <p>Makeup</p>
+    </div>
+
+    <div class="box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5KbR-EODnLMhljb9kqbbnj4vz19lwybXhEPNOM3UyxQ&s=10" alt="Lips">
+        <p>Lips</p>
+    </div>
+
+</div>
+
+    <p style="color:red;">
+        Observation:
+    </p>
+
+    <p style="color:blue;">
+        There is no difference in output after using top:50px and left:50px on the static box because static is the default position value. It ignores top, left, right and bottom properties.
+    </p>
+
+    <hr>
+
+    <!-- Part B -->
+
+    <h2>Part B - Relative Position</h2>
+
+    <div class="banner">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXHtLYMaNJRMsdjrJNSa0GK_7QnmMqFvBTJMUlAcWqyA&s" alt="Summer Glow">
+    <h3>✨ Summer Glow Sale</h3>
+</div>
+
+<h3>Adjacent Boxes</h3>
+
+<div class="category skincare">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpjHiUruei1Ph-Dnp4vqBB8d4Ojmdapm1hvo_b16gpug&s=10" alt="Skincare">
+    <p>🌿 Skincare</p>
+</div>
+
+<div class="category haircare">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtt4ETFwYv0Wc1AafY63U0b4eAS3YsIQ1RpQGA8JPCdw&s=10" alt="Haircare">
+    <p>💇 Haircare</p>
+</div>
+
+    <p style="color:red;">
+        Observation:
+    </p>
+
+    <p style="color:blue;">
+        The banner moved 40px to the right and 20px down using relative positioning. Its original space remained reserved in the document flow.
+    </p>
+
+    <p style="color:blue;">
+        The Skincare box moved 40px to the right. The Haircare box remained in its original position because relative positioning keeps the original space reserved.
+    </p>
+
+    <hr>
+
+    <!-- Part C -->
+
+    <h2>Part C - Absolute Position</h2>
+
+    <h3>Product Card with Badge</h3>
+
+    <div class="product-card">
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF5tB97EV4a7sWf7OubWQvVbI3zIJxa9iXf-zstFwZnw&s=10" alt="Lip Balm">
+
+        <div class="badge">
+            NEW
+        </div>
+
+    </div>
+
+    <br><br>
+
+    <h3>Notification Badge on Image</h3>
+
+    <div class="image-container">
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY7o5kNbfuTi8JIqi25U0NnaWIB37aVBRYBIw_TnjbFA&s=10" alt="Product">
+
+        <div class="notification">
+            3
+        </div>
+
+    </div>
+
+    <p style="color:red;">
+        Observation:
+    </p>
+
+    <p style="color:blue;">
+        The NEW badge is positioned at the top-right corner of the product card using absolute positioning.
+    </p>
+
+    <p style="color:blue;">
+        The parent container uses position: relative so that the absolutely positioned badge uses the card as its reference point.
+    </p>
+
+    <p style="color:blue;">
+        If the parent container does not have a positioning context such as relative, absolute, fixed or sticky, the absolutely positioned element positions itself relative to the webpage.
+    </p>
+
+
+
+    <hr>
+
+<h2>Part D - Fixed Position</h2>
+
+<div class="fixed-header">
+    🌸 GlowBox Header
+</div>
+
+<div class="content">
+    <h3>Beauty Tips</h3>
+
+    <p>Drink enough water for healthy skin.</p>
+    <p>Use sunscreen every day.</p>
+    <p>Cleanse your face twice daily.</p>
+    <p>Moisturize regularly.</p>
+    <p>Get enough sleep.</p>
+
+    <p>Drink enough water for healthy skin.</p>
+    <p>Use sunscreen every day.</p>
+    <p>Cleanse your face twice daily.</p>
+    <p>Moisturize regularly.</p>
+    <p>Get enough sleep.</p>
+
+    <p>Drink enough water for healthy skin.</p>
+    <p>Use sunscreen every day.</p>
+    <p>Cleanse your face twice daily.</p>
+    <p>Moisturize regularly.</p>
+    <p>Get enough sleep.</p>
+
+    <p>Drink enough water for healthy skin.</p>
+    <p>Use sunscreen every day.</p>
+    <p>Cleanse your face twice daily.</p>
+    <p>Moisturize regularly.</p>
+    <p>Get enough sleep.</p>
+</div>
+
+<a href="#top" class="back-to-top">
+    ⬆ Top
+</a>
+
+
+
+<hr>
+<h2>Part E - Sticky Position</h2>
+
+<div class="sticky-navbar">
+    Home | Products | Reviews | Contact
+</div>
+
+<div class="section">
+    <h3>🌿 Skincare Section</h3>
+
+    <div class="gallery">
+
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO3G_URDbLSWnmZM05j25GagwYhk9m6MHv3CIKMO0IFA&s=10">
+            <p>Face Serum</p>
+        </div>
+
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpjHiUruei1Ph-Dnp4vqBB8d4Ojmdapm1hvo_b16gpug&s=10">
+            <p>Moisturizer</p>
+        </div>
+
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF5tB97EV4a7sWf7OubWQvVbI3zIJxa9iXf-zstFwZnw&s=10">
+            <p>Sunscreen</p>
+        </div>
+
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY7o5kNbfuTi8JIqi25U0NnaWIB37aVBRYBIw_TnjbFA&s=10">
+            <p>Night Cream</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="section">
+    <h3>💇 Haircare Section</h3>
+
+    <div class="gallery">
+
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtt4ETFwYv0Wc1AafY63U0b4eAS3YsIQ1RpQGA8JPCdw&s=10">
+            <p>Hair Oil</p>
+        </div>
+
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtt4ETFwYv0Wc1AafY63U0b4eAS3YsIQ1RpQGA8JPCdw&s=10">
+            <p>Shampoo</p>
+        </div>
+
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtt4ETFwYv0Wc1AafY63U0b4eAS3YsIQ1RpQGA8JPCdw&s=10">
+            <p>Conditioner</p>
+        </div>
+
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtt4ETFwYv0Wc1AafY63U0b4eAS3YsIQ1RpQGA8JPCdw&s=10">
+            <p>Hair Mask</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="section">
+    <h3>💄 Makeup Section</h3>
+
+    <div class="gallery">
+
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS6SO6B_XDOQAppmGhPFiaZ0i7OjSjKlm7mxW1-w2GnQ&s=10">
+            <p>Foundation</p>
+        </div>
+
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS6SO6B_XDOQAppmGhPFiaZ0i7OjSjKlm7mxW1-w2GnQ&s=10">
+            <p>Compact</p>
+        </div>
+
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS6SO6B_XDOQAppmGhPFiaZ0i7OjSjKlm7mxW1-w2GnQ&s=10">
+            <p>Blush</p>
+        </div>
+
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS6SO6B_XDOQAppmGhPFiaZ0i7OjSjKlm7mxW1-w2GnQ&s=10">
+            <p>Highlighter</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="section">
+    <h3>💋 Lip Care Section</h3>
+
+    <div class="gallery">
+
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5KbR-EODnLMhljb9kqbbnj4vz19lwybXhEPNOM3UyxQ&s=10">
+            <p>Lip Balm</p>
+        </div>
+
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5KbR-EODnLMhljb9kqbbnj4vz19lwybXhEPNOM3UyxQ&s=10">
+            <p>Lip Tint</p>
+        </div>
+
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5KbR-EODnLMhljb9kqbbnj4vz19lwybXhEPNOM3UyxQ&s=10">
+            <p>Lip Gloss</p>
+        </div>
+
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5KbR-EODnLMhljb9kqbbnj4vz19lwybXhEPNOM3UyxQ&s=10">
+            <p>Lipstick</p>
+        </div>
+
+    </div>
+</div>
+
+<p style="color:red;">
+Observation:
+</p>
+
+<p style="color:blue;">
+The navigation bar behaves like a normal element while scrolling. When it reaches the top of the page, it sticks there and remains visible until the scrolling ends.
+</p>
+
+<p style="color:blue;">
+Fixed positioning keeps an element attached to the viewport at all times. Sticky positioning behaves like a normal element initially and becomes fixed only after reaching the specified position.
+</p>
+<hr>
+
+<h2>Part F - z-index</h2>
+
+<div class="z-container">
+
+    <div class="red-box">
+        Red Box
+    </div>
+
+    <div class="blue-box">
+        Blue Box
+    </div>
+
+    <div class="green-box">
+        Green Box
+    </div>
+
+</div>
+
+<p style="color:red;">
+Observation:
+</p>
+
+<p style="color:blue;">
+The blue box appears above the red box because it has a higher z-index value. The green box appears above both because it has the highest z-index value.
+</p>
+
+<p style="color:blue;">
+The z-index property controls the stacking order of overlapping elements. Elements with higher z-index values appear in front of elements with lower z-index values.
+</p>
+
+<hr>
+
+<h2>Part G - Combined Application</h2>
+
+<h2>Part G - Combined Application</h2>
+
+<!-- Sticky Navbar -->
+<div class="navbar">
+    🌸 GlowBox | Home | Products | Contact
+</div>
+
+<!-- Relative Banner -->
+<div class="offer-banner">
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXHtLYMaNJRMsdjrJNSa0GK_7QnmMqFvBTJMUlAcWqyA&s" alt="Summer Glow">
+
+    <h3>✨ Summer Glow Sale</h3>
+
+    <p>Up to 50% OFF on Beauty Essentials</p>
+
+</div>
+
+<!-- Static Content -->
+
+<div class="content-section">
+
+    <h2>💖 Featured Products</h2>
+
+    <div class="gallery">
+
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO3G_URDbLSWnmZM05j25GagwYhk9m6MHv3CIKMO0IFA&s=10">
+            <p>Face Serum</p>
+        </div>
+
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpjHiUruei1Ph-Dnp4vqBB8d4Ojmdapm1hvo_b16gpug&s=10">
+            <p>Moisturizer</p>
+        </div>
+
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS6SO6B_XDOQAppmGhPFiaZ0i7OjSjKlm7mxW1-w2GnQ&s=10">
+            <p>Foundation</p>
+        </div>
+
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5KbR-EODnLMhljb9kqbbnj4vz19lwybXhEPNOM3UyxQ&s=10">
+            <p>Lip Balm</p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Product Card with Absolute Badge -->
+
+<div class="card">
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF5tB97EV4a7sWf7OubWQvVbI3zIJxa9iXf-zstFwZnw&s=10" alt="Product">
+
+    <div class="sale-badge">
+        NEW
+    </div>
+
+</div>
+
+<!-- Fixed Chat Button -->
+
+<div class="chat-button">
+    💬
+</div>
+
+
+<hr>
+
+<h2>Challenge Questions</h2>
+
+<div class="qa-box">
+    <h3>28. What is the default value of the position property?</h3>
+    <p><strong>Answer:</strong> static</p>
+</div>
+
+<div class="qa-box">
+    <h3>29. Which position type removes an element from the normal document flow?</h3>
+    <p><strong>Answer:</strong> absolute (and fixed).</p>
+</div>
+
+<div class="qa-box">
+    <h3>30. Which position type keeps an element visible during scrolling?</h3>
+    <p><strong>Answer:</strong> fixed.</p>
+</div>
+
+<div class="qa-box">
+    <h3>31. Which position type requires top, left, right, or bottom values to create a sticky effect?</h3>
+    <p><strong>Answer:</strong> sticky.</p>
+</div>
+
+<div class="qa-box">
+    <h3>32. What happens when multiple elements have the same z-index value?</h3>
+    <p><strong>Answer:</strong> The element appearing later in the HTML is displayed on top.</p>
+</div>
+
+<div class="qa-box">
+    <h3>33. When would you use absolute positioning instead of relative positioning?</h3>
+    <p><strong>Answer:</strong> When an element needs exact placement relative to its parent, such as badges and notifications.</p>
+</div>
+
+<div class="qa-box">
+    <h3>34. Real-world Examples</h3>
+
+    <p><strong>Static:</strong> Normal paragraph text.</p>
+    <p><strong>Relative:</strong> Promotional banner shifted slightly.</p>
+    <p><strong>Absolute:</strong> Product badge (NEW).</p>
+    <p><strong>Fixed:</strong> Chat support button.</p>
+    <p><strong>Sticky:</strong> Navigation bar.</p>
+</div>
+
+<div class="qa-box">
+    <h3>35. Complete Webpage Demonstration</h3>
+
+    <p>
+        The GlowBox webpage demonstrates all CSS positioning concepts:
+        static content, relative banner, absolute badge, fixed chat button,
+        sticky navigation bar, and z-index layering.
+    </p>
+</div>
+</body>
+</html>

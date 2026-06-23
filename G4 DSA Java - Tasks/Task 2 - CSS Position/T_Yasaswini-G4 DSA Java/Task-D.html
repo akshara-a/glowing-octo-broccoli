@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fixed Position</title>
+
+    <style>
+        header{
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            background:black;
+            color:white;
+            padding:15px;
+        }
+
+        .top-btn{
+            position:fixed;
+            bottom:20px;
+            right:20px;
+            padding:10px 20px;
+        }
+
+        .content{
+            margin-top:70px;
+            height:2000px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Fixed Header
+</header>
+
+<div class="content">
+    <h2>Scrollable Content</h2>
+    <p>Scroll down to verify fixed elements.</p>
+</div>
+
+<button class="top-btn">
+    Back To Top
+</button>
+
+<h3>Explanation</h3>
+
+<p>
+The header remains fixed at the top of the page.
+The button remains visible at the bottom-right corner even while scrolling.
+</p>
+
+</body>
+</html>

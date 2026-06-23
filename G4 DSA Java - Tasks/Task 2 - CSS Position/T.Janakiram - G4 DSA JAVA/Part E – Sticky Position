@@ -1,0 +1,122 @@
+<!--
+Part E – Sticky Position 
+17.Create a navigation bar using position: sticky. 
+18.Make the navbar stick to the top of the page when scrolling. 
+19.Add multiple content sections to test the sticky behavior. 
+20.Explain the difference between fixed and sticky.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Position</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header */
+        .header {
+            background-color: lightgray;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Sticky Navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: steelblue;
+            padding: 15px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        /* Content Sections */
+        .section {
+            height: 500px;
+            padding: 20px;
+            border-bottom: 1px solid black;
+        }
+
+        .section:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .section:nth-child(odd) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Sticky Navigation Bar Example</h1>
+        <p>Scroll down to see the sticky effect.</p>
+    </div>
+
+    <div class="navbar">
+        <a href="#section1">Section 1</a>
+        <a href="#section2">Section 2</a>
+        <a href="#section3">Section 3</a>
+        <a href="#section4">Section 4</a>
+    </div>
+
+    <div class="section" id="section1">
+        <h2>Section 1</h2>
+        <p>This is the first content section.</p>
+    </div>
+
+    <div class="section" id="section2">
+        <h2>Section 2</h2>
+        <p>This is the second content section.</p>
+    </div>
+
+    <div class="section" id="section3">
+        <h2>Section 3</h2>
+        <p>This is the third content section.</p>
+    </div>
+
+    <div class="section" id="section4">
+        <h2>Section 4</h2>
+        <p>This is the fourth content section.</p>
+    </div>
+
+    <h2>Observation and Explanation</h2>
+
+    <p>
+        The navigation bar uses <code>position: sticky</code> with
+        <code>top: 0</code>. When the page is scrolled and the navbar reaches
+        the top of the viewport, it sticks there and remains visible.
+    </p>
+
+    <p>
+        Multiple content sections are added to make the page scrollable and to
+        demonstrate the sticky behavior.
+    </p>
+
+    <h2>Difference Between Fixed and Sticky</h2>
+
+    <p>
+        <strong>Fixed Position:</strong> The element is always positioned
+        relative to the browser viewport and remains visible even while
+        scrolling.
+    </p>
+
+    <p>
+        <strong>Sticky Position:</strong> The element behaves like a normal
+        element until it reaches a specified scroll position. It then sticks
+        to that position while scrolling within its container.
+    </p>
+
+</body>
+</html>

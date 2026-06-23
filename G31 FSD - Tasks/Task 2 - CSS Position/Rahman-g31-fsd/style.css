@@ -1,0 +1,26 @@
+.box{
+    width:150px;
+    height:150px;
+    margin:10px;
+    color:white;
+    text-align:center;
+    line-height:150px;
+    font-size:24px;
+}
+
+.box1{
+    background:rgb(200, 37, 228);
+}
+
+.box2{
+    background:rgb(26, 171, 200);
+
+    position:static;
+
+    top:50px;
+    left:50px;
+}
+
+.box3{
+    background:rgb(136, 228, 43);
+}

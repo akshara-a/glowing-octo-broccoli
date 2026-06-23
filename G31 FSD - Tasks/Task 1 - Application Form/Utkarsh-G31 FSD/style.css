@@ -1,0 +1,336 @@
+﻿* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    background: #fff;
+    color: #000;
+    padding: 20px;
+}
+
+.container {
+    max-width: 760px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 24px 28px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.header-left .title {
+    font-size: 28px;
+    font-weight: 900;
+    color: #1a2a4a;
+    letter-spacing: 0.5px;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 11px;
+    color: #333;
+    max-width: 460px;
+    line-height: 1.5;
+}
+
+.photo {
+    border: 1.5px solid #333;
+    width: 100px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 10px;
+    color: #333;
+    line-height: 1.6;
+    flex-shrink: 0;
+}
+
+.section-title,
+.section1-title,
+.section2-title,
+.section3-title,
+.section4 .section-title,
+.declaration-title {
+    background: #1a2a4a;
+    color: #fff;
+    font-weight: 700;
+    font-size: 11.5px;
+    padding: 6px 10px;
+    letter-spacing: 0.3px;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-top: 8px;
+}
+
+td, th {
+    padding: 5px 8px;
+    vertical-align: top;
+    font-size: 11px;
+}
+
+table input,
+table textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+table textarea {
+    resize: vertical;
+}
+
+th {
+    font-weight: 700;
+    text-align: left;
+}
+
+.position-table td {
+    padding: 6px 10px;
+    vertical-align: middle;
+    border: 1px solid #bbb;
+}
+
+.field-label,
+.cell-label,
+.eligibility-label {
+    font-weight: 700;
+    font-size: 11px;
+}
+
+.underline-field,
+.line,
+.line2,
+.short-line {
+    border: none;
+    border-bottom: 1px solid #333;
+    width: 100%;
+    display: block;
+    margin-top: 2px;
+    height: 15px;
+    outline: none;
+    font-size: 11px;
+    background: transparent;
+}
+
+.line2 {
+    margin-top: 8px;
+}
+
+.personal-table td {
+    padding: 7px 8px;
+    border: 1px solid #bbb;
+}
+
+.gender-options,
+.checkbox-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+    font-size: 11px;
+}
+
+.gender-options label,
+.checkbox-row label {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+}
+
+.address-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.field-inline {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.short-line {
+    width: 140px;
+}
+
+.eligibility-block {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.prev-employment-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+}
+
+.section4 .skills-container {
+    display: flex;
+    gap: 16px;
+    flex-wrap: nowrap;
+    margin-top: 8px;
+}
+
+.section4 .skill-box {
+    flex: 1 1 calc(33.333% - 11px);
+    min-width: 0;
+}
+
+.section4 .skill-box label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.section4 .skill-box input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.references-title {
+    margin-top: 16px;
+    font-weight: 700;
+    font-size: 11px;
+}
+
+.section2 table th,
+.section2 table td,
+.section3 table th,
+.section3 table td,
+.reference-table th,
+.reference-table td {
+    padding: 6px 8px;
+    border: 1px solid #bbb;
+}
+
+.input-no-border {
+    border: none;
+}
+
+/* Work and skill sections can keep original table style */
+
+.reference-table,
+.skills-inner,
+.official-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.skills-inner td,
+.official-table td,
+.reference-table td,
+.reference-table th {
+    border: 1px solid #bbb;
+    padding: 6px 8px;
+    font-size: 11px;
+}
+
+.declaration-box {
+    border: 1px solid #bbb;
+    padding: 12px;
+    font-size: 11px;
+    line-height: 1.5;
+    margin-top: 8px;
+}
+
+.declaration-box p {
+    margin-bottom: 16px;
+}
+
+.sign-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.sign-field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    flex: 1;
+}
+
+.sign-field span {
+    white-space: nowrap;
+}
+
+.sign-line {
+    border: none;
+    border-bottom: 1px solid #333;
+    flex: 1;
+    height: 18px;
+    outline: none;
+    font-size: 11px;
+    background: transparent;
+}
+
+.official-section {
+    margin-top: 12px;
+}
+
+.official-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #bbb;
+}
+
+.official-table td {
+    border: 1px solid #bbb;
+    padding: 8px 10px;
+    vertical-align: middle;
+}
+
+.official-header {
+    color: #1a2a4a;
+    font-weight: 700;
+    font-size: 11px;
+    text-align: left;
+    padding: 6px 10px;
+}
+
+.official-field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+}
+
+.official-field input {
+    flex: 1;
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+    font-size: 11px;
+    background: transparent;
+    padding: 4px 0;
+}
+
+.official-field .field-label {
+    white-space: nowrap;
+    font-weight: 700;
+}

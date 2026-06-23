@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visa Application Form</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    padding:20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    background:#fff;
+    padding:20px;
+    border:1px solid #ccc;
+}
+
+h1{
+    color:#003c8f;
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    margin-bottom:20px;
+}
+
+.top-section{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+.photo-box{
+    width:180px;
+    height:220px;
+    border:2px solid #888;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-size:14px;
+}
+
+.blue-header{
+    background:#003c8f;
+    color:white;
+    padding:8px;
+    font-weight:bold;
+}
+
+.row{
+    display:flex;
+    width:100%;
+}
+
+.col{
+    flex:1;
+}
+
+.box{
+    border:1px solid #999;
+}
+
+.field{
+    border:1px solid #999;
+    padding:8px;
+    min-height:45px;
+}
+
+label{
+    font-weight:bold;
+    display:block;
+    margin-bottom:5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"]{
+    width:100%;
+    border:none;
+    outline:none;
+}
+
+.section-title{
+    background:#003c8f;
+    color:#fff;
+    padding:8px;
+    font-weight:bold;
+}
+
+.checkbox-group{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:10px;
+}
+
+.checkbox-group label{
+    font-weight:normal;
+}
+
+.signature{
+    display:flex;
+    justify-content:space-between;
+    margin-top:30px;
+}
+
+.note{
+    margin-top:20px;
+    border:1px solid #999;
+    padding:10px;
+}
+
+ul{
+    margin-left:20px;
+    margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>VISA APPLICATION FORM</h1>
+<p class="subtitle">
+Please fill in the form completely and correctly in BLOCK LETTERS.
+</p>
+
+<div class="top-section">
+
+<div style="flex:1">
+
+<div class="blue-header">FOR OFFICIAL USE ONLY</div>
+
+<div class="box">
+
+<div class="field">Application No.</div>
+<div class="field">Date of Application</div>
+<div class="field">Visa Category</div>
+<div class="field">Received By</div>
+
+</div>
+
+</div>
+
+<div style="flex:1.5">
+
+<div class="blue-header">TYPE OF VISA APPLIED FOR</div>
+
+<div class="box checkbox-group">
+
+<label><input type="checkbox"> Tourist / Visitor</label>
+<label><input type="checkbox"> Business</label>
+<label><input type="checkbox"> Transit</label>
+<label><input type="checkbox"> Student</label>
+<label><input type="checkbox"> Work</label>
+<label><input type="checkbox"> Family Visit</label>
+<label><input type="checkbox"> Medical</label>
+<label><input type="checkbox"> Others</label>
+
+</div>
+
+</div>
+
+<div class="photo-box">
+PHOTO<br>
+35mm x 45mm<br>
+White Background
+</div>
+
+</div>
+
+<!-- PERSONAL INFORMATION -->
+
+<div class="section-title">1. PERSONAL INFORMATION</div>
+
+<div class="row">
+<div class="field col">
+<label>1.1 Full Name</label>
+<input type="text">
+</div>
+
+<div class="field col">
+<label>1.2 Date of Birth</label>
+<input type="date">
+</div>
+</div>
+
+<div class="row">
+<div class="field col">
+<label>1.3 Gender</label>
+<input type="radio" name="g"> Male
+<input type="radio" name="g"> Female
+<input type="radio" name="g"> Other
+</div>
+
+<div class="field col">
+<label>1.4 Place of Birth</label>
+<input type="text">
+</div>
+
+<div class="field col">
+<label>1.5 Nationality</label>
+<input type="text">
+</div>
+</div>
+
+<div class="row">
+<div class="field col">
+<label>1.6 Marital Status</label>
+<input type="radio" name="m"> Single
+<input type="radio" name="m"> Married
+<input type="radio" name="m"> Divorced
+<input type="radio" name="m"> Widowed
+</div>
+
+<div class="field col">
+<label>1.7 Mother's Full Name</label>
+<input type="text">
+</div>
+</div>
+
+<div class="field">
+<label>1.8 Father's Full Name</label>
+<input type="text">
+</div>
+
+<div class="row">
+<div class="field col">
+<label>1.9 Passport Number</label>
+<input type="text">
+</div>
+
+<div class="field col">
+<label>1.10 Date of Issue</label>
+<input type="date">
+</div>
+
+<div class="field col">
+<label>1.11 Date of Expiry</label>
+<input type="date">
+</div>
+</div>
+
+<div class="row">
+<div class="field col">
+<label>1.12 Place of Issue</label>
+<input type="text">
+</div>
+
+<div class="field col">
+<label>1.13 National ID Number</label>
+<input type="text">
+</div>
+</div>
+
+<div class="row">
+<div class="field col">
+<label>1.14 Occupation</label>
+<input type="text">
+</div>
+
+<div class="field col">
+<label>1.15 Employer / Business Name</label>
+<input type="text">
+</div>
+</div>
+
+<div class="field">
+<label>1.16 Employer / Business Address</label>
+<input type="text">
+</div>
+
+<div class="row">
+<div class="field col">
+<label>1.17 Phone Number</label>
+<input type="text">
+</div>
+
+<div class="field col">
+<label>1.18 Email Address</label>
+<input type="email">
+</div>
+
+<div class="field col">
+<label>1.19 Alternate Contact Number</label>
+<input type="text">
+</div>
+</div>
+
+<!-- TRAVEL INFORMATION -->
+
+<div class="section-title">2. TRAVEL INFORMATION</div>
+
+<div class="field">
+<label>2.1 Purpose of Visit</label>
+<input type="text">
+</div>
+
+<div class="row">
+<div class="field col">
+<label>2.2 Date of Arrival</label>
+<input type="date">
+</div>
+
+<div class="field col">
+<label>2.3 Date of Departure</label>
+<input type="date">
+</div>
+
+<div class="field col">
+<label>2.4 Port of Entry</label>
+<input type="text">
+</div>
+</div>
+
+<div class="field">
+<label>2.5 Address in Country of Visit</label>
+<input type="text">
+</div>
+
+<div class="field">
+<label>2.6 Contact Person / Organization</label>
+<input type="text">
+</div>
+
+<div class="row">
+<div class="field col">
+<label>2.7 Accompanied by Anyone?</label>
+<input type="radio" name="a"> Yes
+<input type="radio" name="a"> No
+</div>
+
+<div class="field col">
+<label>2.8 If Yes, Details</label>
+<input type="text">
+</div>
+</div>
+
+<!-- PREVIOUS TRAVEL -->
+
+<div class="section-title">3. PREVIOUS TRAVEL INFORMATION</div>
+
+<div class="row">
+<div class="field col">
+<label>3.1 Visited this Country Before?</label>
+<input type="radio" name="v"> Yes
+<input type="radio" name="v"> No
+</div>
+
+<div class="field col">
+<label>3.2 Last Visit Date</label>
+<input type="date">
+</div>
+</div>
+
+<div class="row">
+<div class="field col">
+<label>3.3 Visa Refused Before?</label>
+<input type="radio" name="r"> Yes
+<input type="radio" name="r"> No
+</div>
+
+<div class="field col">
+<label>3.4 If Yes, Details</label>
+<input type="text">
+</div>
+</div>
+
+<!-- DECLARATION -->
+
+<div class="section-title">4. DECLARATION</div>
+
+<div class="field" style="height:120px;">
+I hereby declare that the information provided above is true,
+complete and correct to the best of my knowledge.
+</div>
+
+<div class="signature">
+<div>Date: __________________</div>
+<div>Applicant Signature: __________________</div>
+</div>
+
+<div class="note">
+<b>NOTE:</b>
+
+<ul>
+<li>Valid Passport</li>
+<li>Passport Size Photograph</li>
+<li>Travel Itinerary / Flight Booking</li>
+<li>Proof of Accommodation</li>
+<li>Financial Proof</li>
+<li>Any Other Supporting Documents</li>
+</ul>
+
+</div>
+
+</div>
+
+</body>
+</html>

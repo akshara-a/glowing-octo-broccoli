@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Cards</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .pricing-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .recommended {
+            border: 3px solid #0d6efd;
+            transform: scale(1.05);
+        }
+
+        .recommended .card-header {
+            background-color: #0d6efd;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container py-5">
+    <h2 class="text-center mb-5">Choose Your Plan</h2>
+
+    <div class="row g-4">
+
+        <!-- Basic Plan -->
+        <div class="col-md-4">
+            <div class="card pricing-card h-100 text-center">
+                <div class="card-header">
+                    <h4>Basic</h4>
+                </div>
+
+                <div class="card-body">
+                    <h2>₹499<span class="fs-6">/month</span></h2>
+
+                    <ul class="list-group list-group-flush my-3">
+                        <li class="list-group-item">1 User</li>
+                        <li class="list-group-item">5 GB Storage</li>
+                        <li class="list-group-item">Email Support</li>
+                    </ul>
+
+                    <button class="btn btn-outline-primary">
+                        Choose Plan
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Standard Plan (Recommended) -->
+        <div class="col-md-4">
+            <div class="card pricing-card recommended h-100 text-center">
+                <div class="card-header">
+                    <h4>Standard ⭐</h4>
+                </div>
+
+                <div class="card-body">
+                    <h2>₹999<span class="fs-6">/month</span></h2>
+
+                    <ul class="list-group list-group-flush my-3">
+                        <li class="list-group-item">5 Users</li>
+                        <li class="list-group-item">50 GB Storage</li>
+                        <li class="list-group-item">Priority Support</li>
+                        <li class="list-group-item">Analytics Dashboard</li>
+                    </ul>
+
+                    <button class="btn btn-primary">
+                        Choose Plan
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="col-md-4">
+            <div class="card pricing-card h-100 text-center">
+                <div class="card-header">
+                    <h4>Premium</h4>
+                </div>
+
+                <div class="card-body">
+                    <h2>₹1999<span class="fs-6">/month</span></h2>
+
+                    <ul class="list-group list-group-flush my-3">
+                        <li class="list-group-item">Unlimited Users</li>
+                        <li class="list-group-item">200 GB Storage</li>
+                        <li class="list-group-item">24/7 Support</li>
+                        <li class="list-group-item">Advanced Analytics</li>
+                        <li class="list-group-item">Custom Integrations</li>
+                    </ul>
+
+                    <button class="btn btn-outline-primary">
+                        Choose Plan
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
