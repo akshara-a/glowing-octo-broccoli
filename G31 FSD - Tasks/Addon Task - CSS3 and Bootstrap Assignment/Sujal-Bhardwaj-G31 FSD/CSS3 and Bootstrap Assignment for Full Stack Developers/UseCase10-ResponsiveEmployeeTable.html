@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Employee Table</title>
+
+<!-- Bootstrap 5 CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+:root{
+    --primary-color:#0d6efd;
+}
+
+body{
+    background:#f4f6f9;
+    transition:0.4s;
+}
+
+/* Table Card */
+.table-card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Table Hover Effect */
+.table tbody tr:hover{
+    background:#eef4ff;
+}
+
+/* Dark Mode */
+.dark-mode{
+    background:#121212;
+    color:white;
+}
+
+.dark-mode .table-card{
+    background:#1f1f1f;
+}
+
+.dark-mode .table{
+    color:white;
+}
+
+.dark-mode .modal-content{
+    background:#1f1f1f;
+    color:white;
+}
+
+.dark-mode .form-control{
+    background:#2c2c2c;
+    color:white;
+    border:1px solid #555;
+}
+
+.dark-mode .form-control::placeholder{
+    color:#bbb;
+}
+</style>
+</head>
+<body>
+
+<div class="container py-5">
+
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <h2 class="fw-bold">
+            Employee Management System
+        </h2>
+
+        <button id="darkBtn" class="btn btn-dark">
+            🌙 Dark Mode
+        </button>
+
+    </div>
+
+    <!-- Search Box -->
+    <input
+        type="text"
+        id="searchInput"
+        class="form-control mb-4"
+        placeholder="Search Employee by Name, Department, Email...">
+
+    <!-- Employee Table -->
+    <div class="table-card">
+
+        <div class="table-responsive">
+
+            <table class="table table-bordered table-hover text-center align-middle">
+
+                <thead class="table-primary">
+
+                    <tr>
+                        <th>Employee ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="employeeTable">
+
+                    <tr>
+                        <td>EMP101</td>
+                        <td>Sujal</td>
+                        <td>Development</td>
+                        <td>sujal@gmail.com</td>
+
+                        <td>
+                            <span class="badge bg-success">
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn btn-warning btn-sm editBtn">
+                                Edit
+                            </button>
+
+                            <button class="btn btn-danger btn-sm deleteBtn">
+                                Delete
+                            </button>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>EMP102</td>
+                        <td>Rahul</td>
+                        <td>Human Resource</td>
+                        <td>rahul@gmail.com</td>
+
+                        <td>
+                            <span class="badge bg-warning text-dark">
+                                Pending
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn btn-warning btn-sm editBtn">
+                                Edit
+                            </button>
+
+                            <button class="btn btn-danger btn-sm deleteBtn">
+                                Delete
+                            </button>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>EMP103</td>
+                        <td>Priya</td>
+                        <td>Finance</td>
+                        <td>priya@gmail.com</td>
+
+                        <td>
+                            <span class="badge bg-success">
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn btn-warning btn-sm editBtn">
+                                Edit
+                            </button>
+
+                            <button class="btn btn-danger btn-sm deleteBtn">
+                                Delete
+                            </button>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>EMP104</td>
+                        <td>Amit</td>
+                        <td>Support</td>
+                        <td>amit@gmail.com</td>
+
+                        <td>
+                            <span class="badge bg-danger">
+                                Inactive
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn btn-warning btn-sm editBtn">
+                                Edit
+                            </button>
+
+                            <button class="btn btn-danger btn-sm deleteBtn">
+                                Delete
+                            </button>
+
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Edit Employee Modal -->
+<div class="modal fade" id="editModal">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">
+                    Edit Employee Details
+                </h5>
+
+                <button
+                    class="btn-close"
+                    data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <input
+                    type="text"
+                    id="editID"
+                    class="form-control mb-3"
+                    placeholder="Employee ID">
+
+                <input
+                    type="text"
+                    id="editName"
+                    class="form-control mb-3"
+                    placeholder="Employee Name">
+
+                <input
+                    type="text"
+                    id="editDepartment"
+                    class="form-control mb-3"
+                    placeholder="Department">
+
+                <input
+                    type="email"
+                    id="editEmail"
+                    class="form-control mb-3"
+                    placeholder="Email">
+
+                <select
+                    id="editStatus"
+                    class="form-control">
+
+                    <option>Active</option>
+                    <option>Pending</option>
+                    <option>Inactive</option>
+
+                </select>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal">
+                    Close
+                </button>
+
+                <button
+                    class="btn btn-primary"
+                    id="saveChanges">
+                    Save Changes
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+// ==========================
+// DARK MODE
+// ==========================
+
+const darkBtn = document.getElementById("darkBtn");
+
+darkBtn.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+
+        darkBtn.innerHTML = "☀️ Light Mode";
+
+        darkBtn.classList.remove("btn-dark");
+        darkBtn.classList.add("btn-warning");
+
+    }else{
+
+        darkBtn.innerHTML = "🌙 Dark Mode";
+
+        darkBtn.classList.remove("btn-warning");
+        darkBtn.classList.add("btn-dark");
+    }
+
+});
+
+// ==========================
+// SEARCH FILTER
+// ==========================
+
+document
+.getElementById("searchInput")
+.addEventListener("keyup", function(){
+
+    let filter = this.value.toLowerCase();
+
+    let rows =
+    document.querySelectorAll("#employeeTable tr");
+
+    rows.forEach(row => {
+
+        let text =
+        row.innerText.toLowerCase();
+
+        row.style.display =
+        text.includes(filter)
+        ? ""
+        : "none";
+
+    });
+
+});
+
+// ==========================
+// EDIT EMPLOYEE
+// ==========================
+
+let currentRow;
+
+document
+.querySelectorAll(".editBtn")
+.forEach(button => {
+
+    button.addEventListener("click", function(){
+
+        currentRow =
+        this.closest("tr");
+
+        let cells =
+        currentRow.querySelectorAll("td");
+
+        document.getElementById("editID").value =
+        cells[0].innerText;
+
+        document.getElementById("editName").value =
+        cells[1].innerText;
+
+        document.getElementById("editDepartment").value =
+        cells[2].innerText;
+
+        document.getElementById("editEmail").value =
+        cells[3].innerText;
+
+        document.getElementById("editStatus").value =
+        cells[4].innerText.trim();
+
+        let modal =
+        new bootstrap.Modal(
+        document.getElementById("editModal"));
+
+        modal.show();
+
+    });
+
+});
+
+// ==========================
+// SAVE CHANGES
+// ==========================
+
+document
+.getElementById("saveChanges")
+.addEventListener("click", function(){
+
+    let cells =
+    currentRow.querySelectorAll("td");
+
+    cells[0].innerText =
+    document.getElementById("editID").value;
+
+    cells[1].innerText =
+    document.getElementById("editName").value;
+
+    cells[2].innerText =
+    document.getElementById("editDepartment").value;
+
+    cells[3].innerText =
+    document.getElementById("editEmail").value;
+
+    let status =
+    document.getElementById("editStatus").value;
+
+    if(status === "Active"){
+
+        cells[4].innerHTML =
+        '<span class="badge bg-success">Active</span>';
+
+    }
+
+    else if(status === "Pending"){
+
+        cells[4].innerHTML =
+        '<span class="badge bg-warning text-dark">Pending</span>';
+
+    }
+
+    else{
+
+        cells[4].innerHTML =
+        '<span class="badge bg-danger">Inactive</span>';
+
+    }
+
+    alert("Employee Updated Successfully!");
+
+    bootstrap.Modal
+    .getInstance(
+    document.getElementById("editModal"))
+    .hide();
+
+});
+
+// ==========================
+// DELETE EMPLOYEE
+// ==========================
+
+document
+.querySelectorAll(".deleteBtn")
+.forEach(button => {
+
+    button.addEventListener("click", function(){
+
+        let confirmDelete =
+        confirm(
+        "Are you sure you want to delete this employee?"
+        );
+
+        if(confirmDelete){
+
+            this.closest("tr").remove();
+
+            alert(
+            "Employee Deleted Successfully!"
+            );
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>

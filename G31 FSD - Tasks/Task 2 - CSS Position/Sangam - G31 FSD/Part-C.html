@@ -1,0 +1,74 @@
+<!--
+## Part C – Absolute Position
+
+9. Create a parent container and a child box.
+10. Position the child at the top-right corner of the parent using `position: absolute`.
+11. Place a notification badge on an image using absolute positioning.
+12. Explain what happens when the parent container does not have a positioning context (`relative`, `absolute`, etc.).
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Absolute</title>
+    <style>
+        .parent {
+            background-color: rgba(250, 34, 218, 0.2);
+            border: 2px solid;
+        }
+
+        .child {
+            background-color: rgb(190, 190, 57);
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+        }
+
+        .badge {
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            background-color: red;
+            border-radius: 50%;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child">
+            <div class="badge">5</div>
+        </div>
+    </div>
+    <br><br><br>
+    <h1>Explaination:</h1>
+    <h3>If the parent element does not have a position value such as:
+        <div>
+            <code>
+                <br>
+                position: absolute;<br>
+                position: fixed;<br>
+                position: sticky;<br>
+                position: relative;<br>
+                <br>
+            </code>
+        </div>
+        then an absolutely positioned child will not use the parent as its reference.
+
+        Instead, it will position itself relative to the nearest positioned ancestor. If no ancestor has a position set,
+        it will use the entire webpage (viewport).
+        as we can identify by border on parent.
+    </h3>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!--
+# Part G – Combined Application
+
+25. Design a webpage that includes:
+   - A sticky navigation bar
+   - A fixed chat/support button
+   - A product card with an absolute notification badge
+   - A relative-positioned banner
+   - Static content sections
+
+26. Ensure all five position values are used at least once.
+27. Add comments in the CSS explaining why each position type was chosen.
+
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Position Example </title>
+    <style>
+        body {
+            font-family: cursive;
+            margin: 0;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            z-index: 100;
+        }
+        .banner{
+            position: relative;
+            background-color: lightblue;
+            padding: 50px;
+            text-align: center;
+        }
+        .product-card{
+            position: relative;
+            width: 250px;
+            margin: 30px auto;
+            padding: 20px;
+            border: 2px solid gray;
+            text-align: center;
+        }
+        .content{
+            position: static;
+            background-color:#f2f2f2;
+            padding: 40px;
+            margin: 20px;
+        }
+        .chat-btn{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;    
+            background-color:green;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="navbar">
+        <h2>Sangam Developer Groups &#128187</h2>
+    </nav>
+
+    <!-- Relative Positioned Banner -->
+    <section class="banner">
+        <h1>Welcome to Our Website</h1>
+        <p>Best Deals Available!</p>
+    </section>
+
+    <!-- Product Card -->
+    <div class="product-card">
+        <img src="product.jpg" alt="Product">
+        <div class="badge">New</div>
+        <h3>Website Design</h3>
+        <p>$49.99</p>
+    </div>
+
+    <!-- Static Content Sections -->
+    <section class="content">
+        <h2>About Us</h2>
+        <p>
+            We provide quality products at affordable prices.
+        </p>
+    </section>
+
+    <section class="content">
+        <h2>Services</h2>
+        <p>
+            Fast delivery and excellent customer support.
+        </p>
+    </section>
+
+    <section class="content">
+        <h2>Contact</h2>
+        <p>
+            Email: support@example.com
+        </p>
+    </section>
+
+    <!-- Fixed Chat Button -->
+    <button class="chat-btn">
+        Chat
+    </button>
+
+</body>
+
+</html>

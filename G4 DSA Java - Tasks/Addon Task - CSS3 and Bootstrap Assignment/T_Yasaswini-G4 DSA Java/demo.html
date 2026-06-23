@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College Management Portal</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<div class="container">
+<a class="navbar-brand" href="#">ABC College</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Departments</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Admissions</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+<li class="nav-item"><button class="btn btn-light">Login</button></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- Hero -->
+<section class="hero text-center text-white">
+<div class="container">
+<h1>Welcome to College Management Portal</h1>
+<p>Providing Quality Education and Student Services</p>
+<button class="btn btn-light">Apply Now</button>
+<button class="btn btn-outline-light">Explore Courses</button>
+</div>
+</section>
+
+<!-- Dashboard Cards -->
+<div class="container my-5">
+<div class="row text-center">
+
+<div class="col-md-3">
+<div class="card">
+<div class="card-body">
+<h3>5000+</h3>
+<p>Students</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card">
+<div class="card-body">
+<h3>200+</h3>
+<p>Faculty</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card">
+<div class="card-body">
+<h3>50+</h3>
+<p>Courses</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card">
+<div class="card-body">
+<h3>95%</h3>
+<p>Placements</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Login Form -->
+<div class="container my-5">
+<h2>Student Login</h2>
+
+<form>
+<input type="email" class="form-control mb-3" placeholder="Email">
+<input type="password" class="form-control mb-3" placeholder="Password">
+
+<div class="form-check">
+<input class="form-check-input" type="checkbox">
+<label class="form-check-label">Remember Me</label>
+</div>
+
+<button class="btn btn-primary mt-3">Login</button>
+</form>
+</div>
+
+<!-- Registration Form -->
+<div class="container my-5">
+<h2>Student Registration</h2>
+
+<form>
+<input type="text" class="form-control mb-3" placeholder="Full Name">
+<input type="email" class="form-control mb-3" placeholder="Email">
+<input type="password" class="form-control mb-3" placeholder="Password">
+<input type="password" class="form-control mb-3" placeholder="Confirm Password">
+
+<div class="form-check mb-3">
+<input class="form-check-input" type="checkbox">
+<label class="form-check-label">Accept Terms</label>
+</div>
+
+<button class="btn btn-success">Register</button>
+</form>
+</div>
+
+<!-- Faculty Profile Card -->
+<div class="container my-5">
+<h2>Faculty Profile</h2>
+
+<div class="card profile-card" style="width:18rem;">
+<img src="https://via.placeholder.com/300" class="card-img-top">
+
+<div class="card-body text-center">
+<h5>Dr. John Smith</h5>
+<p>Professor - Computer Science</p>
+<button class="btn btn-primary">Follow</button>
+</div>
+
+</div>
+</div>
+
+<!-- Course Card -->
+<div class="container my-5">
+<h2>Featured Course</h2>
+
+<div class="card" style="width:18rem;">
+<img src="https://via.placeholder.com/300" class="card-img-top">
+
+<div class="card-body">
+<h5>B.Tech CSE</h5>
+<p>Duration: 4 Years</p>
+<span class="badge bg-success">4.8 Rating</span>
+<button class="btn btn-warning mt-2">Enroll</button>
+</div>
+</div>
+</div>
+
+<!-- Departments -->
+<div class="container my-5">
+<h2>Departments</h2>
+
+<div class="row">
+
+<div class="col-md-3"><div class="card"><div class="card-body">Computer Science</div></div></div>
+<div class="col-md-3"><div class="card"><div class="card-body">Electronics</div></div></div>
+<div class="col-md-3"><div class="card"><div class="card-body">Mechanical</div></div></div>
+<div class="col-md-3"><div class="card"><div class="card-body">Civil</div></div></div>
+
+</div>
+</div>
+
+<!-- Contact Form -->
+<div class="container my-5">
+<h2>Contact Us</h2>
+
+<form>
+<input class="form-control mb-3" placeholder="Name">
+<input class="form-control mb-3" placeholder="Email">
+<input class="form-control mb-3" placeholder="Subject">
+<textarea class="form-control mb-3"></textarea>
+<button class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+<!-- Student Table -->
+<div class="container my-5">
+<h2>Student Records</h2>
+
+<div class="table-responsive">
+<table class="table table-bordered">
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Branch</th>
+<th>Email</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>101</td>
+<td>Rahul</td>
+<td>CSE</td>
+<td>rahul@gmail.com</td>
+<td><span class="badge bg-success">Active</span></td>
+</tr>
+
+</table>
+</div>
+</div>
+
+<!-- Alerts -->
+<div class="container my-5">
+<div class="alert alert-success">Admission Successful</div>
+<div class="alert alert-danger">Registration Failed</div>
+<div class="alert alert-warning">Fee Due</div>
+<div class="alert alert-info">New Notification Available</div>
+</div>
+
+<!-- Modal -->
+<div class="container my-5">
+<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal">
+Open Admission Details
+</button>
+
+<div class="modal fade" id="infoModal">
+<div class="modal-dialog">
+<div class="modal-content">
+
+<div class="modal-header">
+<h5>Admission Details</h5>
+</div>
+
+<div class="modal-body">
+Admissions Open for 2026 Batch
+</div>
+
+<div class="modal-footer">
+<button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+<button class="btn btn-success">Save</button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<!-- FAQ Accordion -->
+<div class="container my-5">
+<h2>FAQ</h2>
+
+<div class="accordion" id="faq">
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q1">
+How to Apply?
+</button>
+</h2>
+
+<div id="q1" class="accordion-collapse collapse show">
+<div class="accordion-body">
+Fill the online admission form.
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Progress Bars -->
+<div class="container my-5">
+<h2>Skill Progress</h2>
+
+<p>HTML</p>
+<div class="progress mb-3">
+<div class="progress-bar" style="width:90%">90%</div>
+</div>
+
+<p>CSS</p>
+<div class="progress mb-3">
+<div class="progress-bar bg-success" style="width:85%">85%</div>
+</div>
+
+</div>
+
+<!-- Tabs -->
+<div class="container my-5">
+<ul class="nav nav-tabs">
+
+<li class="nav-item">
+<button class="nav-link active" data-bs-toggle="tab" data-bs-target="#overview">
+Overview
+</button>
+</li>
+
+<li class="nav-item">
+<button class="nav-link" data-bs-toggle="tab" data-bs-target="#placements">
+Placements
+</button>
+</li>
+
+</ul>
+
+<div class="tab-content border p-3">
+<div class="tab-pane fade show active" id="overview">
+College Overview Information
+</div>
+
+<div class="tab-pane fade" id="placements">
+95% Placement Record
+</div>
+</div>
+</div>
+
+<!-- Breadcrumb -->
+<div class="container my-5">
+<nav>
+<ol class="breadcrumb">
+<li class="breadcrumb-item">Home</li>
+<li class="breadcrumb-item">Admissions</li>
+<li class="breadcrumb-item active">Registration</li>
+</ol>
+</nav>
+</div>
+
+<!-- Pagination -->
+<div class="container my-5">
+<ul class="pagination">
+<li class="page-item"><a class="page-link">Previous</a></li>
+<li class="page-item active"><a class="page-link">1</a></li>
+<li class="page-item"><a class="page-link">2</a></li>
+<li class="page-item"><a class="page-link">Next</a></li>
+</ul>
+</div>
+
+<!-- Fee Summary -->
+<div class="container my-5">
+<div class="card">
+<div class="card-body">
+<h4>Fee Summary</h4>
+<p>Course: B.Tech CSE</p>
+<p>Semester Fee: ₹50,000</p>
+<p>Discount: ₹5,000</p>
+<h5>Total: ₹45,000</h5>
+<button class="btn btn-success">Pay Now</button>
+</div>
+</div>
+</div>
+
+<footer class="bg-dark text-white text-center p-3">
+© 2026 ABC College Management Portal
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

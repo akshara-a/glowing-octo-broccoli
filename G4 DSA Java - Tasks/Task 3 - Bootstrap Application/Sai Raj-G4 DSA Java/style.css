@@ -1,0 +1,169 @@
+html{
+    scroll-behavior:smooth;
+}
+
+:root{
+    --primary:#1f2937;
+    --secondary:#f59e0b;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    padding:0;
+    background:#f8f9fa;
+}
+
+/* Navbar */
+
+.navbar-brand{
+    font-weight:700;
+    font-size:1.5rem;
+}
+
+/* Hero Section */
+
+.hero{
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
+    ),
+    url('bg.jpg');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    min-height:85vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:3rem;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    max-width:800px;
+    margin:auto;
+    margin-bottom:25px;
+}
+
+/* Carousel */
+
+.carousel{
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.carousel-img{
+    height:500px;
+    object-fit:cover;
+}
+
+/* Book Cards */
+
+.card-book{
+    height:320px;
+    object-fit:cover;
+}
+
+.card{
+    border:none;
+    transition:all 0.3s ease;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* About Section */
+
+.about-section{
+    background:#ffffff;
+    padding:80px 0;
+}
+
+.about-section h2{
+    margin-bottom:20px;
+    font-weight:700;
+}
+
+.about-section p{
+    max-width:900px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+/* Why Choose Us */
+
+.why-us{
+    padding:80px 0;
+    background:#f8f9fa;
+}
+
+.feature-box{
+    padding:25px;
+}
+
+.feature-box h1{
+    font-size:3rem;
+}
+
+.feature-box h4{
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+/* Contact Form */
+
+form{
+    background:white !important;
+}
+
+form .form-control{
+    padding:12px;
+}
+
+/* Footer */
+
+footer{
+    margin-top:40px;
+    font-size:1rem;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .hero{
+        min-height:70vh;
+        padding:20px;
+    }
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    .carousel-img{
+        height:300px;
+    }
+
+    .card-book{
+        height:250px;
+    }
+}

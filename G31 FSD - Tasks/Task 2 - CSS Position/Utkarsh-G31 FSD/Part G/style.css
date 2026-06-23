@@ -1,0 +1,76 @@
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+}
+
+/* Sticky navbar remains visible while scrolling */
+.navbar{
+    position:sticky;
+    top:0;
+    background-color:#333;
+    padding:15px;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin-right:20px;
+}
+
+/* Relative positioning used to shift banner */
+.banner{
+    position:relative;
+    left:20px;
+    margin-top:20px;
+    padding:20px;
+    background-color:lightblue;
+    width:80%;
+}
+
+/* Parent container for absolute badge */
+.product-card{
+    position:relative;
+    width:250px;
+    margin:30px;
+    border:2px solid black;
+    padding:10px;
+}
+
+img{
+    width:200px;
+    height:200px;
+}
+/* Absolute positioning used for notification badge */
+.badge{
+    position:absolute;
+    top:-10px;
+    right:-10px;
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    background:red;
+    color:white;
+    text-align:center;
+    line-height:30px;
+    font-weight:bold;
+}
+
+/* Static content section (default position) */
+.section{
+    padding:20px;
+    margin:20px;
+    border:1px solid gray;
+    height:300px;
+}
+
+/* Fixed button remains visible on screen */
+.chat-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    padding:15px 20px;
+    border:none;
+    background:green;
+    color:white;
+    cursor:pointer;
+}

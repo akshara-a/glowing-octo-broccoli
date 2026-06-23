@@ -1,0 +1,101 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f2f2f2;
+    padding:20px;
+}
+
+.container{
+    width:1000px;
+    margin:auto;
+    background:white;
+    padding:10px;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:10px;
+}
+
+.title h1{
+    color:#001f6b;
+    font-size:48px;
+    margin-bottom:10px;
+    text-align:left;
+}
+
+.title p{
+    font-size:18px;
+    width:700px;
+}
+
+.photo-box{
+    width:150px;
+    height:140px;
+    border:1px solid black;
+    text-align:center;
+    padding-top:30px;
+    line-height:25px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-bottom:10px;
+}
+
+table,th,td{
+    border:1px solid #555;
+}
+
+th,td{
+    padding:10px;
+    vertical-align:top;
+}
+
+.section th{
+    background:#001f6b;
+    color:white;
+    text-align:left;
+}
+
+input[type="text"],
+input[type="email"]{
+    width:100%;
+    border:none;
+    border-bottom:1px solid black;
+    margin-top:8px;
+    padding:4px;
+}
+
+textarea{
+    width:100%;
+    height:60px;
+    border:none;
+    border-bottom:1px solid black;
+    margin-top:8px;
+    resize:none;
+}
+
+input[type="checkbox"]{
+    width:auto;
+    margin-left:10px;
+}
+
+.right{
+    float:right;
+}
+
+hr{
+    border:0;
+    border-top:1px solid #555;
+    margin:15px 0;
+
+}
