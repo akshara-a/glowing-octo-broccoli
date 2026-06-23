@@ -1,0 +1,49 @@
+<!--
+## Part B - Relative Position
+5. Create a box and apply position: relative.
+6. Move the box 40px to the right and 20px down.
+7. Explain how the box's original space is affected.
+8. Create two adjacent boxes and move one using relative positioning.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Part B - Relative Position</title>
+  <style>
+    .box {
+      width: 150px;
+      height: 150px;
+      color: white;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+    }
+    .box1 { 
+      background-color: red; 
+    }
+    .box2 {
+      background-color: blue;
+      position: relative;
+      left: 40px;
+      top: 20px;
+    }
+    .box3 { 
+      background-color: green; 
+    }
+    p { 
+      font-size: 16px; margin: 20px; 
+    }
+  </style>
+</head>
+<body>
+  <h1>Part B - Relative Position</h1>
+  <div class="box box1">Box 1</div>
+  <div class="box box2">Box 2 (Relative)</div>
+  <div class="box box3">Box 3</div>
+  <p>Observation: The blue box moved 40px right and 20px down but its original space is still reserved.</p>
+</body>
+</html>

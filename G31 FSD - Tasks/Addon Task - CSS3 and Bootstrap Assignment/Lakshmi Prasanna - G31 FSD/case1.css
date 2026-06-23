@@ -1,0 +1,39 @@
+:root {
+  --primary-color: #0d6efd;
+  --dark-bg: #212529;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  background-color: var(--dark-bg) !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.navbar-brand {
+  font-size: 22px;
+  color: white !important;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  color: #ccc !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important;
+}
+
+.btn-warning {
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+h2 {
+  color: var(--dark-bg);
+  margin-top: 30px;
+}

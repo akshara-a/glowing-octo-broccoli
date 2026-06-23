@@ -1,0 +1,74 @@
+<!--
+## Part C - Absolute Position
+9. Create a parent container and a child box.
+10. Position the child at top-right corner using position: absolute.
+11. Place a notification badge on an image.
+12. Explain what happens when parent has no positioning context.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Part C - Absolute Position</title>
+  <style>
+    .parent {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      background-color: lightgray;
+      margin: 20px;
+    }
+    .child {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .image-container {
+      position: relative;
+      width: 150px;
+      margin: 20px;
+    }
+    .image-container img {
+      width: 150px;
+      height: 150px;
+      background-color: orange;
+    }
+    .badge {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background-color: red;
+      color: white;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    p { 
+      font-size: 16px; margin: 20px; 
+    }
+  </style>
+</head>
+<body>
+  <h1>Part C - Absolute Position</h1>
+  <div class="parent">
+    Parent Container
+    <div class="child">Child (Absolute)</div>
+  </div>
+  <div class="image-container">
+    <div style="width:150px;height:150px;background:orange;"></div>
+    <div class="badge">5</div>
+  </div>
+  <p>Observation: Absolute position places the child relative to the nearest positioned parent. Without a positioned parent, it moves relative to the page.</p>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!--
+## Part B – Relative Position
+
+5. Create a box and apply `position: relative`.
+6. Move the box 40px to the right and 20px down.
+7. Explain how the box's original space is affected.
+8. Create two adjacent boxes and move one using relative positioning. Describe the behavior of the other box.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Relative</title>
+    <style>
+        body {
+            background-color: darkgoldenrod;
+        }
+        .container{
+            border: 2px solid black;
+        }
+        .box {
+            height: 50px;
+            width: 50px;
+            background-color: yellowgreen;
+            position: relative;
+            left: 40px;
+            top: 20px;
+        }
+        .box1, .box2{
+            height: 50px;
+            width: 50px;
+        }
+        .box1{
+            background-color: aqua;
+            position: relative;
+            top: 50px;
+            left: 50px;
+        }
+        .box2{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">1</div>
+    <div class="container">second main
+        <div class="box1">2</div>
+        <div class="box2">3</div>
+    </div>
+    <h1>Explaination for the first question:</h1>
+    <p>When i created a box and applying `position: relative`.
+and Move the box 40px to the right and 20px down then is goes done 20px to the top and 40px from the left to push the on right.</p>
+<h1>Question 2:Create two adjacent boxes and move one using relative positioning. Describe the behavior of the other box</h1>
+<p>when i created two boxes and apply position:relative property then the box on which i have applide the property moved and the other box still on thier previous position.</p>
+</body>
+
+</html>

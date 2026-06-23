@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Section</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .service-card {
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container my-5">
+        <!--Heading-->
+        <div class="text-center mb-5">
+            <h1>Our Services</h1>
+            <p class="text-muted">We provide modern solutions for your business needs.</p>
+        </div>
+
+        <!--Service Row-->
+        <div class="row g-4">
+
+            <!--Web Development-->
+            <div class="col-sm-6 col-lg-3">
+                <div class="card service-card h-100 shadow">
+                    <div class="card-body text-center">
+                        <h4 class="card-title text-primary">Web Development</h4>
+                        <p class="card-text">Built responsive and scalable websites using modern technologies.</p>
+                        <button class="btn btn-primary">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="card service-card h-100 shadow">
+                    <div class="card-body text-center">
+                        <h4 class="card-title text-success">API Integration</h4>
+                        <p class="card-text">Connect third-party services and automate workflows efficiently.</p>
+                        <button class="btn btn-success">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="card service-card h-100 shadow">
+                    <div class="card-body text-center">
+                        <h4 class="card-title text-danger">UI Desing</h4>
+                        <p class="card-text">Create beautiful and user-friendly interfaces for applications.</p>
+                        <button class="btn btn-danger">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="card service-card h-100 shadow">
+                    <div class="card-body text-center">
+                        <h4 class="card-title text-warning">Database Support</h4>
+                        <p class="card-text">Manage and optimize databse for performance and security.</p>
+                        <button class="btn btn-warning">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

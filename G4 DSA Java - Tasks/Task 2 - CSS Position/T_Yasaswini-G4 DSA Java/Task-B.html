@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Relative Position</title>
+    <style>
+        .box1{
+            width:120px;
+            height:120px;
+            background:red;
+            color:white;
+            text-align:center;
+            line-height:120px;
+
+            position:relative;
+            left:40px;
+            top:20px;
+        }
+
+        .box2{
+            width:120px;
+            height:120px;
+            background:blue;
+            color:white;
+            text-align:center;
+            line-height:120px;
+            margin-top:20px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Relative Position</h2>
+
+<div class="box1">Box 1</div>
+<div class="box2">Box 2</div>
+
+<h3>Explanation</h3>
+<p>
+Box 1 is moved 40px to the right and 20px down using relative positioning.
+</p>
+
+<p>
+The original space of Box 1 remains reserved in the page layout.
+Box 2 does not move into that space because relative positioning keeps the element in the normal document flow.
+</p>
+
+</body>
+</html>

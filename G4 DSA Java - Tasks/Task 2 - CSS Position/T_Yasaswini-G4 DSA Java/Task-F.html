@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>z-index</title>
+
+    <style>
+        .box{
+            width:150px;
+            height:150px;
+            position:absolute;
+        }
+
+        .red{
+            background:red;
+            left:50px;
+            top:50px;
+            z-index:1;
+        }
+
+        .blue{
+            background:blue;
+            left:100px;
+            top:100px;
+            z-index:2;
+        }
+
+        .green{
+            background:green;
+            left:150px;
+            top:150px;
+            z-index:3;
+        }
+    </style>
+</head>
+<body>
+
+<h2>z-index</h2>
+
+<div class="box red"></div>
+<div class="box blue"></div>
+<div class="box green"></div>
+
+<div style="margin-top:350px;">
+<h3>Explanation</h3>
+
+<p>
+z-index controls stacking order of overlapping elements.
+</p>
+
+<p>
+Green box (z-index:3) appears above all boxes.
+Blue box (z-index:2) appears above the red box.
+</p>
+</div>
+
+</body>
+</html>

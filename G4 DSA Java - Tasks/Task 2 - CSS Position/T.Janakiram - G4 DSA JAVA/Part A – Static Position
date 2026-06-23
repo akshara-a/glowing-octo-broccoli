@@ -1,0 +1,72 @@
+<!--
+Part A – Static Position
+1.Create a webpage containing three boxes.
+2.Apply position: static to the second box.
+3.Try using top: 50px and left: 50px on the static box.
+4.Observe and explain the result.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Position</title>
+
+    <style>
+        .container {
+            background-color: rgb(76, 131, 131);
+            padding: 10px;
+        }
+
+        .box {
+            height: 50px;
+            width: 50px;
+            margin: 10px;
+            color: black;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .box1 {
+            background-color: aquamarine;
+        }
+
+        .box2 {
+            background-color: rgb(127, 140, 255);
+            position: static;
+            top: 50px;
+            left: 50px;
+        }
+
+        .box3 {
+            background-color: rgb(255, 127, 255);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box box1">Box 1</div>
+        <div class="box box2">Box 2</div>
+        <div class="box box3">Box 3</div>
+    </div>
+
+    <h1>Observation and Explanation of Result</h1>
+
+    <p>
+        The second box has <code>position: static</code>. Even though
+        <code>top: 50px</code> and <code>left: 50px</code> are applied,
+        the box does not move from its original position.
+    </p>
+
+    <p>
+        This happens because the default value of the position property is
+        <code>static</code>. For static elements, the properties
+        <code>top</code>, <code>right</code>, <code>bottom</code>, and
+        <code>left</code> have no effect. The element remains in the normal
+        document flow.
+    </p>
+
+</body>
+</html>

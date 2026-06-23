@@ -1,0 +1,65 @@
+:root {
+  --primary-color: #0d6efd;
+  --light-bg: #f8f9fa;
+}
+
+body {
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  font-family: Arial, sans-serif;
+}
+
+.profile-card {
+  background-color: white;
+  width: 350px;
+  border-radius: 20px !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-10px);
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.role {
+  color: #6610f2;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.bio {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.stats {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.stats h5 {
+  color: var(--primary-color);
+}
+
+.btn-primary {
+  border-radius: 25px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+}

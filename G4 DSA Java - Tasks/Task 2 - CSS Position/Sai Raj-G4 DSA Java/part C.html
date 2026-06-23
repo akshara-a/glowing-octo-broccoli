@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Part C - Absolute Position</title>
+
+<style>
+
+.parent{
+    width:350px;
+    height:200px;
+    border:3px solid black;
+    position:relative;
+}
+
+.child{
+    width:80px;
+    height:80px;
+    background:red;
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Part C - Absolute Position</h1>
+
+<div class="parent">
+    Parent Container
+    <div class="child"></div>
+</div>
+
+<h2>Observation:</h2>
+
+<p>
+The child box is positioned at the top-right corner of the parent container.
+</p>
+
+<p>
+Without a positioned parent, the child would be positioned relative to the webpage.
+</p>
+
+</body>
+</html>

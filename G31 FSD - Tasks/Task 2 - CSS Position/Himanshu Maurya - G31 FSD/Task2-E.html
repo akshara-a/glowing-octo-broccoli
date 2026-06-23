@@ -1,0 +1,142 @@
+
+‎viewport‎
+Loading
+Skip to content
+himanshumaurya2504-ux
+Himanshu-Maurya-G31-FSD
+Repository navigation
+Code
+Issues
+Pull requests
+Agents
+Actions
+Projects
+Wiki
+Himanshu-Maurya-G31-FSD/Task2
+/Task2-E.html
+himanshumaurya2504-ux
+himanshumaurya2504-ux
+Add sticky navbar layout in Task2-E.html
+3c86331
+ · 
+3 hours ago
+115 lines (97 loc) · 3.18 KB
+
+Code
+
+Blame
+<!--position : sticky allows to scrolling until the element reaches at the edge or specifed point 
+while fixed positon doesnt allow scrolling the posititon remains constant-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Navbar</title>
+
+    <style>
+      body {
+        margin: 20px;
+        background: #0b1220;
+      }
+
+      .Navbar {
+        height: 10vh;
+        background: #0f172a;
+
+        position: sticky;
+        top: 0;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 0 20px;
+
+        border-bottom: 2px solid #fbbf24;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      }
+
+      .Navlinks {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+
+      a {
+        text-decoration: none;
+        background-color: #fbbf24;
+        color: #0f172a;
+
+        padding: 6px 12px;
+        border-radius: 6px;
+
+        transition:
+          transform 0.2s,
+          background 0.2s;
+        display: inline-block;
+      }
+
+      a:hover {
+        transform: scale(1.08);
+        background-color: #fde68a;
+      }
+
+      img {
+        height: 70%;
+      }
+
+      p {
+        color: #cbd5e1;
+        padding: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="Navbar">
+      <img
+        src="https://img1.wsimg.com/isteam/ip/6f038646-2052-4598-8c4e-ed7fea8124d5/SURE%20INITIATIVE%20LOGO.png/:/rs=h:200,cg:true,m/qt=q:95"
+        alt="logo"
+      />
+
+      <div class="Navlinks">
+        <a href="#home">HOME</a>
+        <a href="#services">SERVICES</a>
+        <a href="#about">ABOUT-US</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+    </div>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, error
+      animi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+      voluptatem, quibusdam, architecto, voluptatibus doloremque saepe
+      repellendus maiores facilis eveniet exercitationem iusto!
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+      nesciunt, odit atque illo commodi ratione asperiores cumque minima
+      similique. Laboriosam, doloribus.
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+      inventore vel, aspernatur dolorum sequi, recusandae veritatis eius
+      blanditiis amet distinctio.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo aut minima
+      adipisci delectus ut ullam consectetur nihil enim dolores, sapiente quis
+      saepe doloremque sit atque ea repellat, amet quidem magnam! Tempora
+      voluptatibus possimus id sunt eius reprehenderit dolore cumque harum
+      quisquam ipsam, nam itaque, eveniet libero. Eum pariatur saepe voluptates
+      consequuntur officia, molestias sequi vitae consequatur unde, corrupti
+      quam esse? Cum architecto, provident unde soluta atque laudantium
+      repudiandae, nobis cupiditate earum rerum asperiores, quod consequatur a?
+      Placeat, omnis. Voluptas autem sequi reiciendis ea cupiditate commodi
+      porro dolore odit rem earum.
+    </p>
+  </body>
+</html>
