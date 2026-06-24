@@ -1,8 +1,11 @@
-1. B
-2. B
+HTML5 | CSS3 | Bootstrap | Bulma CSS 
+QUIZ Solutions
+Lakshmi Prasanna - G31 FSD
+1. B 
+2. B 
 3. C
 4. B
-5. B
+5. B 
 6. B
 7. A
 8. B
