@@ -1,0 +1,72 @@
+<!--
+## Part F – z-index
+
+21. Create three overlapping boxes.
+22. Use `z-index` to place the blue box above the red box.
+23. Place the green box above both.
+24. Explain how `z-index` affects stacking order.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index</title>
+    <style>
+        .container {
+            position: relative;
+            width: 300px;
+            height: 250px;
+        }
+
+        .box {
+            width: 120px;
+            height: 120px;
+            position: absolute;
+        }
+
+        .red {
+            background-color: red;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+        }
+
+        .blue {
+            background-color: blue;
+            top: 50px;
+            left: 50px;
+            z-index: 2;
+        }
+
+        .green {
+            background-color: green;
+            top: 80px;
+            left: 80px;
+            z-index: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box red"></div>
+        <div class="box blue"></div>
+        <div class="box green"></div>
+    </div>
+    <div>
+        <h1>Explaination</h1>
+        <h3>z-index controls the front-to-back order of overlapping elements.
+
+            Elements with a higher z-index value appear in front of elements with lower values.
+            Elements with a lower z-index value appear behind.
+            z-index works only on elements whose position is:
+            relative
+            absolute
+            fixed
+            sticky</h3>
+    </div>
+</body>
+
+</html>

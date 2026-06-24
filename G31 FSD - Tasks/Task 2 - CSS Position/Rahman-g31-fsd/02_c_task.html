@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style03.css">
+</head>
+<body>
+    <h3>Part C - Absolute Position</h3>
+    <div class="parent">
+    
+
+    <div class="child">
+        Child
+    </div>
+
+
+</div>
+</div>
+<br>
+<div class="image-container">
+
+    <img src="../IMG/download.png" alt="Image">
+
+    <span class="badge">5</span>
+
+
+
+</div>
+
+<p id="p1">
+    Explain what happens when the parent container does not have a positioning context (relative, absolute, etc.)? </p>
+
+   <p id="p2">
+    When the parent container does not have a positioning context (position: relative, absolute, fixed, or sticky), an element with position: absolute will not use that parent as its reference point. Instead, it will look for the nearest ancestor that has a position other than static. If none exists, it will be positioned relative to the browser window (the initial containing block).
+   </p>
+
+</body>
+</html>

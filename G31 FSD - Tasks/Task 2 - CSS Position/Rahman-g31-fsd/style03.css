@@ -1,0 +1,58 @@
+.parent{
+    background-color:rgb(237, 207, 237);
+    width:400px;
+    height:250px;
+    border:3px solid black;
+
+    position:relative;
+}
+
+.child{
+    width:80px;
+    height:40px;
+
+    background:rgb(185, 176, 7);
+    color:white;
+    word-wrap:break-word;
+    position:absolute;
+    top:0;
+    right:0;
+    margin:10px;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.image-container{
+    position:relative;
+    display:inline-block;
+}
+
+.badge{
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 25px;
+    height: 25px;
+
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 14px;
+    font-weight: bold;
+
+}
+#p1{
+    width:400px;
+    height:100px;
+    color:rgb(131, 52, 52);
+}   
+    

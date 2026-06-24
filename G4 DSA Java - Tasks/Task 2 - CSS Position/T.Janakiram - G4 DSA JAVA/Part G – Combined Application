@@ -1,0 +1,187 @@
+<!--
+Part G – Combined Application 
+25.Design a webpage that includes: 
+  - A sticky navigation bar 
+  - A fixed chat/support button 
+  - A product card with an absolute notification badge
+  - A relative-positioned banner 
+  - Static content sections
+26.Ensure all five position values are used at least once. 
+27.Add comments in the CSS explaining why each position type was chosen.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined CSS Position Example</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* STATIC:
+           Default positioning. Content remains in normal document flow. */
+        .content-section {
+            position: static;
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #ccc;
+            background-color: #f4f4f4;
+        }
+
+        /* STICKY:
+           Navigation bar sticks to the top when scrolling. */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            padding: 15px;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        /* RELATIVE:
+           Banner is moved slightly from its original position.
+           It also acts as a positioning context for child elements if needed. */
+        .banner {
+            position: relative;
+            left: 20px;
+            top: 10px;
+            background-color: gold;
+            padding: 30px;
+            margin: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* RELATIVE:
+           Product card provides a positioning context
+           for the absolute notification badge. */
+        .product-card {
+            position: relative;
+            width: 250px;
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid black;
+            background-color: white;
+        }
+
+        /* ABSOLUTE:
+           Badge is positioned relative to the product card. */
+        .badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: red;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+        }
+
+        /* FIXED:
+           Chat button remains visible at the bottom-right corner
+           even while scrolling. */
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: green;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* ABSOLUTE + z-index demonstration */
+        .extra-box {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: lightblue;
+            padding: 5px;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Relative Positioned Banner -->
+    <div class="banner">
+        Welcome to Our Store!
+    </div>
+
+    <!-- Product Card with Absolute Badge -->
+    <div class="product-card">
+        <div class="badge">5</div>
+        <h2>Wireless Headphones</h2>
+        <p>High-quality sound with noise cancellation.</p>
+        <p><strong>Price: ₹2,999</strong></p>
+    </div>
+
+    <!-- Static Content Sections -->
+    <div class="content-section">
+        <h2>Section 1</h2>
+        <p>
+            This section uses static positioning, which is the default
+            positioning behavior in CSS.
+        </p>
+    </div>
+
+    <div class="content-section">
+        <h2>Section 2</h2>
+        <p>
+            Scroll down to observe the sticky navigation bar and fixed chat
+            button.
+        </p>
+    </div>
+
+    <div class="content-section">
+        <h2>Section 3</h2>
+        <p>
+            Additional content has been added to make the page scrollable.
+        </p>
+    </div>
+
+    <div class="content-section">
+        <h2>Section 4</h2>
+        <p>
+            CSS position values used:
+            static, relative, absolute, fixed, and sticky.
+        </p>
+    </div>
+
+    <div class="content-section">
+        <h2>Section 5</h2>
+        <p>
+            This page demonstrates all major CSS positioning techniques.
+        </p>
+    </div>
+
+    <!-- Fixed Chat Button -->
+    <a href="#" class="chat-button">Chat Support</a>
+
+</body>
+</html>

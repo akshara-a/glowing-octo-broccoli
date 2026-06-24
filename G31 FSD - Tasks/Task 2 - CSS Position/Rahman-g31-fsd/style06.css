@@ -1,0 +1,48 @@
+.container{
+    position: relative;
+    width: 500px;
+    height: 350px;
+    border: 2px solid black;
+    margin: 50px auto;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    line-height: 200px;
+}
+
+.red{
+    background-color: red;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+.blue{
+    background-color: blue;
+    top: 70px;
+    left: 70px;
+    z-index: 2;
+}
+
+.green{
+    background-color: green;
+    top: 120px;
+    left: 120px;
+    z-index: 3;
+}
+
+#p1,
+#p{
+    width: 500px;
+    height: 100px;
+    color: rgb(131, 52, 52);
+    border: 3px solid black;
+    margin: 10px auto;
+    border-radius: 10px;
+}

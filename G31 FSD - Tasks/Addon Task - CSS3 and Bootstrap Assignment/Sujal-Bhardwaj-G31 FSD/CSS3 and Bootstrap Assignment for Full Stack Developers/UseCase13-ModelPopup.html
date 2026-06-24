@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bootstrap Modal Popup</title>
+
+<!-- Bootstrap 5 CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{
+    background:#f4f6f9;
+    transition:0.4s;
+}
+
+/* Modal Button */
+.open-btn{
+    padding:12px 25px;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.open-btn:hover{
+    transform:scale(1.05);
+}
+
+/* Dark Mode */
+.dark-mode{
+    background:#121212;
+    color:white;
+}
+
+.dark-mode .modal-content{
+    background:#1f1f1f;
+    color:white;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container py-5 text-center">
+
+    <h2 class="mb-4 fw-bold">
+        Bootstrap Modal Popup Example
+    </h2>
+
+    <!-- Dark Mode Button -->
+    <button id="darkBtn" class="btn btn-dark mb-4">
+        🌙 Dark Mode
+    </button>
+
+    <br>
+
+    <!-- Open Modal Button -->
+    <button
+        type="button"
+        class="btn btn-primary open-btn"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal">
+
+        Open Modal
+
+    </button>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+
+                <h5 class="modal-title">
+                    User Information
+                </h5>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+
+                <p>
+                    Welcome to the Bootstrap Modal Popup Demo.
+                </p>
+
+                <p>
+                    This modal can be used for:
+                </p>
+
+                <ul>
+                    <li>User Registration</li>
+                    <li>Login Forms</li>
+                    <li>Confirmation Messages</li>
+                    <li>Profile Updates</li>
+                </ul>
+
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+
+                <!-- Close Button -->
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal">
+
+                    Close
+
+                </button>
+
+                <!-- Save Button -->
+                <button
+                    type="button"
+                    class="btn btn-success"
+                    id="saveBtn">
+
+                    Save
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+// Save Button Action
+document.getElementById("saveBtn")
+.addEventListener("click", function(){
+
+    alert("Data Saved Successfully!");
+
+});
+
+// Dark Mode Toggle
+const darkBtn = document.getElementById("darkBtn");
+
+darkBtn.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+
+        darkBtn.innerHTML = "☀️ Light Mode";
+
+        darkBtn.classList.remove("btn-dark");
+        darkBtn.classList.add("btn-warning");
+
+    }else{
+
+        darkBtn.innerHTML = "🌙 Dark Mode";
+
+        darkBtn.classList.remove("btn-warning");
+        darkBtn.classList.add("btn-dark");
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>

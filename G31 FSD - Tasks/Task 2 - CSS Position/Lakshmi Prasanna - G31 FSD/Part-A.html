@@ -1,0 +1,49 @@
+<!--
+## Part A - Static Position
+1. Create a webpage containing three boxes.
+2. Apply position: static to the second box.
+3. Try using top: 50px and left: 50px on the static box.
+4. Observe and explain the result.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Part A - Static Position</title>
+  <style>
+    .box {
+      width: 150px;
+      height: 150px;
+      margin: 10px;
+      color: white;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .box1 { 
+      background-color: red; 
+    }
+    .box2 {
+      background-color: blue;
+      position: static;
+      top: 50px;
+      left: 50px;
+    }
+    .box3 { 
+      background-color: green; 
+    }
+    p { 
+      font-size: 16px; margin: 20px; 
+    }
+  </style>
+</head>
+<body>
+  <h1>Part A - Static Position</h1>
+  <div class="box box1">Box 1</div>
+  <div class="box box2">Box 2 (Static)</div>
+  <div class="box box3">Box 3</div>
+  <p>Observation: position static ignores top and left values. The box stays in normal document flow.</p>
+</body>
+</html>

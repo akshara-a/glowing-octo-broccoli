@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Part D - Fixed Position</title>
+
+<style>
+
+body{
+    margin:0;
+}
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:black;
+    color:white;
+    padding:15px;
+    text-align:center;
+}
+
+.content{
+    margin-top:70px;
+    padding:20px;
+}
+
+.top-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:blue;
+    color:white;
+    padding:15px;
+    border-radius:5px;
+}
+
+.section{
+    height:500px;
+    border:1px solid gray;
+    margin-top:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    Fixed Header
+</div>
+
+<div class="content">
+
+<h1>Part D - Fixed Position</h1>
+
+<div class="section">Scroll Down Section 1</div>
+<div class="section">Scroll Down Section 2</div>
+<div class="section">Scroll Down Section 3</div>
+
+</div>
+
+<div class="top-btn">
+    Top
+</div>
+
+<h2>Observation:</h2>
+
+<p>
+The header and button remain visible even while scrolling.
+</p>
+
+</body>
+</html>

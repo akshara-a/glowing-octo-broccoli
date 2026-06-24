@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Homepage</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        header{
+            position: sticky;
+            top:0;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">My Website</a>
+
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#top">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+
+        <!-- Container 1 : Hero Section -->
+        <div class="container my-5">
+            <div class="p-5 bg-primary text-white rounded text-center">
+                <h1>Welcome to My Website</h1>
+                <p class="lead">
+                    A responsive homepage created using Bootstrap 5.
+                </p>
+                <button class="btn btn-light">Learn More</button>
+            </div>
+        </div>
+
+        <!-- Container 2 : Cards Section -->
+        <div class="container my-5" id="services">
+            <h2 class="text-center mb-4">Our Services</h2>
+
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Web Design</h4>
+                            <p class="card-text">
+                                Modern and responsive website designs.
+                            </p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Development</h4>
+                            <p class="card-text">
+                                Fast and scalable web applications.
+                            </p>
+                            <a href="#" class="btn btn-success">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Support</h4>
+                            <p class="card-text">
+                                24/7 support for your business needs.
+                            </p>
+                            <a href="#" class="btn btn-danger">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Container 3 : About Section -->
+        <div class="container my-5" id="about">
+            <div class="row align-items-center">
+
+                <div class="col-md-6">
+                    <h2>About Us</h2>
+                    <p>
+                        We create beautiful and responsive websites using
+                        Bootstrap. Our goal is to deliver high-quality
+                        solutions for businesses and individuals.
+                    </p>
+                    <button class="btn btn-dark">
+                        Explore More
+                    </button>
+                </div>
+
+                <div class="col-md-6">
+                    <img src="https://picsum.photos/600/350"
+                        class="img-fluid rounded shadow"
+                        alt="Image">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Extra Section -->
+        <section class="bg-light py-5" id="contact">
+            <div class="container">
+                <h2 class="text-center mb-4">Contact Us</h2>
+
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <input type="text" class="form-control mb-3"
+                            placeholder="Your Name">
+
+                        <input type="email" class="form-control mb-3"
+                            placeholder="Your Email">
+
+                        <textarea class="form-control mb-3"
+                            rows="4"
+                            placeholder="Message"></textarea>
+
+                        <button class="btn btn-primary">
+                            Send Message
+                        </button>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h4>Address</h4>
+                        <p>Lucknow, Uttar Pradesh, India</p>
+
+                        <h4>Email</h4>
+                        <p>info@example.com</p>
+
+                        <h4>Phone</h4>
+                        <p>+91 9876543210</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0">
+            © 2026 MyWebsite. All Rights Reserved.
+        </p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
