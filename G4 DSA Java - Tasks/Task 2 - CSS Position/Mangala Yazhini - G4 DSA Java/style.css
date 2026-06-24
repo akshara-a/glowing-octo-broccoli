@@ -1,0 +1,131 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  border : 2px solid rgb(92, 84, 55) ; 
+  background-color: rgb(255, 248, 239);
+  margin : 25px; 
+}
+
+
+img{
+  height : 250px; 
+  width : 250px; 
+  opacity : 0.75; 
+}
+
+h1{
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+  border : 1px solid grey; 
+  padding: 10px;
+  background-color: rgb(92, 84, 55);
+  color : cornsilk; 
+  position: sticky; 
+  top : 0px; 
+  margin: 0px; 
+}
+
+
+h3{
+  text-align: center;
+  margin: 0 auto 25px; 
+  width : 500px; 
+  padding-top : 50px; 
+}
+
+h4 {
+  /* border : 2px solid black ;  */
+  background-color : rgba(248, 209, 175, 0.751); 
+  padding : 10px;
+  width : 100px; 
+  text-align: center;
+  border-radius: 5px;
+  margin: 0 auto 25px; 
+}
+
+
+.static-image{
+  border-radius: 5px;
+  position : static; 
+}
+
+
+.relative-image{
+  border-radius: 5px;
+  position : relative; 
+  left : 25px; 
+  bottom : 20px; 
+}
+
+.absolute-flow-image{
+  border-radius: 5px;
+  position : absolute; 
+  /* left : 10px;  */
+
+}
+
+.absolute-no-parent-image{
+
+  border-radius: 5px;
+  position : absolute; 
+  left : 30px; 
+  
+
+}
+.absolute-relative-parent-image{
+  border-radius: 5px;
+  position : absolute; 
+  left : 30px; 
+}
+
+.static-div{
+  position :static; 
+  border : 2px solid lightcoral; 
+  background-color: antiquewhite;
+  height : 350px; 
+  width  : 300px; 
+  border-radius: 5px;
+}
+
+.relative-div{
+  position : relative; 
+  border : 2px solid lightcoral; 
+  background-color: rgb(215, 230, 246);
+  height : 350px; 
+  width  : 300px; 
+  border-radius: 5px;
+}
+
+.container{
+  border : 2px solid rgba(37, 36, 36, 0.7); 
+  border-radius: 5px;
+  padding : 40px; 
+  height : 550px; 
+  width : 300px;
+  margin : auto; 
+}
+
+.content-para{
+  text-align: justify;
+}
+
+.circle{
+  width : 200px; 
+  height : 200px ; 
+  border : 2px solid grey; 
+  background-color: rgb(255, 86, 84);
+  color : rgb(255,255,255);
+  border-radius : 50%; 
+  text-align: center;
+  align-content: center;
+  font-weight: bolder;
+}
+
+
+.fixed-box{
+  position : fixed; 
+  top : 250px; 
+  right : 45px; 
+}

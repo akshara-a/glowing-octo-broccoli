@@ -1,0 +1,148 @@
+:root{
+    --primary-color:#ff7a00;
+    --cream-bg:#FFF8EE;
+    --dark-text:#333;
+}
+
+body{
+    background:var(--cream-bg);
+    font-family:'Segoe UI',sans-serif;
+    position:relative;
+}
+
+/* Paw Background */
+
+.paw-bg{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0.12;
+    z-index:-1;
+}
+
+/* Section */
+
+.pricing-section{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+}
+
+.section-title{
+    color:var(--primary-color);
+    font-weight:700;
+}
+
+.section-subtitle{
+    color:#666;
+    font-size:1.1rem;
+}
+
+/* Cards */
+
+.pricing-card{
+    border:none;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    transition:0.4s;
+    overflow:hidden;
+    background:white;
+}
+
+.pricing-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* Featured Card */
+
+.featured-card{
+    border:3px solid var(--primary-color);
+    transform:scale(1.03);
+}
+
+.recommended-badge{
+    background:var(--primary-color);
+    color:white;
+    text-align:center;
+    padding:10px;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+/* Pricing */
+
+.plan-title{
+    color:var(--primary-color);
+    font-weight:700;
+    margin-top:15px;
+}
+
+.price{
+    font-size:2.5rem;
+    font-weight:bold;
+    color:var(--dark-text);
+    margin:20px 0;
+}
+
+.price span{
+    font-size:1rem;
+    color:#777;
+}
+
+/* Features */
+
+.feature-list li{
+    padding:10px 0;
+    border-bottom:1px solid #eee;
+}
+
+/* Button */
+
+.choose-btn{
+    background:var(--primary-color);
+    color:white;
+    margin-top:20px;
+    padding:10px 25px;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.choose-btn:hover{
+    background:#e56d00;
+    color:white;
+    transform:scale(1.05);
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .featured-card{
+        transform:none;
+    }
+
+    .section-title{
+        font-size:2rem;
+    }
+
+}
+.paw-bg{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:1.5;
+
+    z-index:-1;
+}

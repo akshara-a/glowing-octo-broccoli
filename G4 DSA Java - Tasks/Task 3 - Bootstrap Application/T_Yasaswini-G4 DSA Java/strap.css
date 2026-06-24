@@ -1,0 +1,50 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    color: #0d6efd;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* About Section */
+.about {
+    padding: 50px 0;
+}
+
+/* Course Cards */
+.card {
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact Form */
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+}

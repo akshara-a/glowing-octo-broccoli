@@ -1,0 +1,109 @@
+<!--
+Part C – Absolute Position 
+9.Create a parent container and a child box. 
+10.Position the child at the top-right corner of the parent using position: absolute. 
+11.Place a notification badge on an image using absolute positioning. 
+12.Explain what happens when the parent container does not have a positioning context (relative, absolute, etc.).
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute Position</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Parent Container */
+        .parent {
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+            background-color: lightgray;
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        /* Child Box */
+        .child {
+            width: 60px;
+            height: 60px;
+            background-color: coral;
+            position: absolute;
+            top: 0;
+            right: 0;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        /* Image Container */
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .image-container img {
+            width: 250px;
+            height: 150px;
+        }
+
+        /* Notification Badge */
+        .badge {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: red;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 25px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Absolute Position Inside Parent Container</h2>
+
+    <div class="parent">
+        Parent Container
+        <div class="child">Box</div>
+    </div>
+
+    <h2>Notification Badge on Image</h2>
+
+    <div class="image-container">
+        <img src="https://via.placeholder.com/250x150" alt="Sample Image">
+        <div class="badge">3</div>
+    </div>
+
+    <h2>Explanation</h2>
+
+    <p>
+        The child box uses <code>position: absolute</code> and is placed at the
+        top-right corner of the parent container using
+        <code>top: 0</code> and <code>right: 0</code>.
+    </p>
+
+    <p>
+        The notification badge is also positioned absolutely. Since the image
+        container has <code>position: relative</code>, the badge is positioned
+        relative to the image.
+    </p>
+
+    <p>
+        If the parent container does not have a positioning context
+        (<code>position: relative</code>, <code>absolute</code>,
+        <code>fixed</code>, or <code>sticky</code>), the absolutely positioned
+        element will be placed relative to the browser window (viewport) or the
+        nearest positioned ancestor.
+    </p>
+
+</body>
+</html>

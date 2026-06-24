@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <h1>JOB APPLICATION FORM</h1>
+      <p>Please fill in this form completely and accurately. All information provided will be treated as confidential.</p>
+    </div>
+    <div class="photo-box">
+      <p>Photograph (Passport Size) Affix Recent Photo</p>
+    </div>
+  </div>
+
+
+  
+  <form action="/submit-application" method="POST">
+  
+    <!-- Position Information -->
+    <div class="position-div">
+      <table cellspacing="0">
+        <tr class="table-heading">
+          <th colspan="4"><label for="job-position">1. POSITION APPLIED FOR</label></th>
+        </tr>
+        <tr>
+          <td><label for="position">Position / Job Title:</label></td>
+          <td><input type="text" id="position" name="position" class="line-input" required></td>
+          <td><label for="dept">Department:</label></td>
+          <td><input type="text" id="dept" name="dept" class="line-input" required></td>
+        </tr>
+        <tr>
+          <td><label for="salary">Expected Salary:</label></td>
+          <td><input type="text" id="salary" name="salary" class="line-input" required></td>
+          <td><label for="join-date">Date Available to Join:</label></td>
+          <td><input type="date" id="join-date" name="join-date" class="line-input" required></td>
+        </tr>
+      </table>
+    </div>
+
+
+    <!-- Personal Information -->
+    <div class="personal-info-div">
+      <table>
+        <tr>
+          <th colspan="4"><label for="job-position">2. PERSONAL INFORMATION</label></th>
+        </tr>
+
+        <tr>
+          <td>
+            <table class="nested-table">  
+              <tr>
+                <td><label for="name">Full Name (As per ID Proof):</label></td>
+              </tr>
+              <tr>
+                <td><input type="text" id="name" name="name" class="line-input" required></td>
+              </tr>
+            </table>
+          </td>
+      
+          <td>
+            <table class="nested-table">
+              <tr>
+                <td><label for="dob">Date of Birth:</label></td>
+                <td><label for="gender">Gender</label></td>
+              </tr>
+              <tr>
+                <td><input type="date" id="dob" name="dob" class="line-input" required></td>
+                <td>
+                  <label for="male"><input type="radio" id="male" name="gender" value="Male"  required> Male</label>
+                  <label for="female"><input type="radio" id="female" name="gender" value="Female"  required> Female</label>
+                  <label for="other"><input type="radio" id="other" name="gender" value="Other"  required> Other</label>
+                </td>
+              </tr>
+            </table>
+          </td>          
+        </tr>
+
+        <tr>
+          <td>
+            <table class="nested-table">
+              <tr>
+                <td><label for="father-name">Father's / Guardian Name:</label></td>
+              </tr>
+              <tr>
+                <td><input type="text" id="father-name" name="father-name" class="line-input" required></td>
+              </tr>
+            </table>
+          </td>
+          <td>
+            <table class="nested-table">
+              <tr>
+                <td><label for="mother-name">Mother's Name:</label></td>
+              </tr>
+              <tr>
+                <td><input type="text" id="mother-name" name="mother-name" class="line-input" required></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <table class="nested-table">
+              <tr>
+                <td><label for="email">Email Address:</label></td>
+              </tr>
+              <tr>
+                <td><input type="email" id="email" name="email" class="line-input" required></td>
+              </tr>
+            </table>
+          </td>
+
+          <td>
+            <table class="nested-table">
+              <tr>
+                <td><label for="phone">Phone Number:</label></td>
+                <td><label for="alternate-phone">Alternate Phone Number:</label></td>
+              </tr>
+              <tr>
+                <td><input type="tel" id="phone" name="phone" class="line-input" required></td>
+                <td><input type="tel" id="alternate-phone" name="alternate-phone" class="line-input" required></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <table class="nested-table">
+              <tr>
+                <td><label for="address">Permanent Address:</label></td>
+              </tr>
+              <tr>
+                <td><input type="text" id="address" name="address" class="line-input" required></td>
+              </tr>
+            </table>
+          </td>
+
+          <td>
+            <table class="nested-table">
+              <tr>
+                <td><label for="current-address">Current Address:</label></td>
+              </tr>
+              <tr>
+                <td><input type="text" id="current-address" name="current-address" class="line-input" required></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <table class="nested-table location-table">
+              <tr>
+                <td><label for="city">City:</label></td>
+                <td><input type="text" id="city" name="city" class="line-input" required></td>
+
+                <td><label for="state">State:</label></td>
+                <td><input type="text" id="state" name="state" class="line-input" required></td>
+
+                <td><label for="pin-code">PIN Code:</label></td>
+                <td><input type="text" id="pin-code" name="pin-code" class="line-input" required></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Educational Information -->
+    <div class="education-div">
+      <table border="1">
+        <tr>
+          <th colspan="5"><label for="education">3. EDUCATIONAL QUALIFICATION</label></th>
+        </tr>
+        <tr>
+          <td>Qualification</td>
+          <td>Name of Institution</td>
+          <td>Board / University</td>
+          <td>Year of Passing</td>
+          <td>Percentage / CGPA</td>
+        </tr>
+        <tr>
+          <td>High School / SSC</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Higher Secondary / HSC</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Bachelor's Degree</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Master's Degree</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Other (Specify)</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Work Experience -->
+    <div class="work-div">
+      <table border="1">
+        <tr>
+          <th colspan="6"><label for="work">4. WORK EXPERIENCE</label></th>
+        </tr>
+        <tr>
+          <td>Company Name</td>
+          <td>Job Title</td>
+          <td>From (MM/YYYY)</td>
+          <td>To (MM/YYYY)</td>
+          <td>Total Experience</td>
+          <td>Key Responsibilities</td>
+        </tr>
+        <tr>
+          <td>Company 1</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Company 2</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Company 3</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+       
+      </table>
+    </div>
+
+
+    <!-- Skills and Additional Information -->
+    <div class="skills-div">
+      <table border="1">
+        <tr>
+          <th colspan="6"><label for="work">5. SKILLS AND ADDITIONAL INFORMATION</label></th>
+        </tr>
+        <tr>
+          <td>Key Skills / Technical Skills</td>
+          <td>Languages Known</td>
+          <td>Certifications / Trainings (if any)</td>
+        </tr>
+        <tr>
+          <td><input type="text" id="key-skills" name="key-skills" class="line-input" required></td>
+          <td><input type="text" id="languages" name="languages" class="line-input" required></td>
+          <td><input type="text" id="certifications" name="certifications" class="line-input" required></td>
+        </tr>        
+      </table>
+    </div>
+
+    <!-- Reference Information -->
+    <div class="ref-div">
+      <table  border="1">
+        <tr>
+          <td colspan="5">Reference (Optional)</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>Designation</td>
+          <td>Company / Organization</td>
+          <td>Phone Number</td>
+          <td>Email Address</td>
+        </tr>
+
+        <tr>
+          <td>Reference 1</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Reference 2</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    
+    <!-- Declaration -->
+    <div class="declaration-div">
+      <table border="1">
+        <tr>
+          <th colspan="2">6. Declaration</th>
+        </tr>
+        <tr>
+          <td colspan="2">
+            I hereby declare that the information provided in this application is true and correct to the best of my knowledge.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="date-of-declaration">Date:</label>
+            <input type="text" id="date-of-declaration" name="date-of-declaration" class="inline-input" required>
+          </td>
+          <td>
+            <label for="signature">Signature:</label>
+            <input type="text" id="signature" name="signature" class="inline-input" required>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Other Details -->
+    <div class="details-div">
+      <table border="1">
+        <tr>
+          <th colspan="2" class="details-header">FOR OFFICIAL USE ONLY</th>
+        </tr>
+        <tr>
+          <td colspan="2">
+            I hereby declare that the information provided in this application is true and correct to the best of my knowledge.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="date-of-application">Application Received On:</label>
+            <input type="text" id="date-of-application" name="date-of-application" class="inline-input" required>
+          </td>
+          <td>
+            <label for="received-date">Received By:</label>
+            <input type="text" id="received-date" name="received-date" class="inline-input" required>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="remarks">Remarks:</label>
+            <input type="text" id="remarks" name="remarks" class="inline-input" required>
+          </td>
+          <td>
+            <label>Shortlisted:</label>
+            <input type="radio" id="shortlisted" name="shortlisted" value="yes">
+            <label for="shortlisted">Yes</label>
+            
+            <input type="radio" id="shortlisted" name="shortlisted" value="no">
+            <label for="shortlisted">No</label>
+            
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  </form>
+
+</body>
+</html>
+
+

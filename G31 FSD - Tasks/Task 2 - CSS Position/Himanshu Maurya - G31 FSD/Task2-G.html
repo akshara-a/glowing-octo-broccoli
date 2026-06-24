@@ -1,0 +1,53 @@
+<!--Greater the Z value the more priority it gets on rendering -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Z-Index Example</title>
+
+  <style>
+    .container {
+      position: relative;
+      height: 300px;
+      width: 300px;
+      border: 2px solid black;
+    }
+
+    .box {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      opacity: 0.9;
+    }
+
+    .red {
+      background: red;
+      top: 40px;
+      left: 40px;
+      z-index: 1;
+    }
+
+    .blue {
+      background: blue;
+      top: 70px;
+      left: 70px;
+      z-index: 2; /* above red */
+    }
+
+    .green {
+      background: green;
+      top: 100px;
+      left: 100px;
+      z-index: 3; /* above both */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box red"></div>
+    <div class="box blue"></div>
+    <div class="box green"></div>
+  </div>
+</body>
+</html>

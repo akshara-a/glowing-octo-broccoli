@@ -1,0 +1,637 @@
+/* =========================
+   Global Styles
+========================= */
+
+:root {
+    color-scheme: dark;
+    --bg: #070b1f;
+    --surface: #101837;
+    --surface-strong: #17204f;
+    --accent: #5b8dff;
+    --accent-strong: #74b9ff;
+    --text: #edf2ff;
+    --muted: #a5b1cd;
+    --shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at top, rgba(91, 141, 255, 0.14), transparent 28%),
+        var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    border-radius: 14px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+.section-header h2,
+.section-header p {
+    margin: 0;
+}
+
+.section-header p {
+    color: var(--muted);
+    margin-top: 0.75rem;
+}
+
+/* =========================
+   Header and Navigation
+========================= */
+
+.site-header,
+.main-nav {
+    width: 100%;
+    left: 0;
+    z-index: 50;
+}
+
+.site-header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: rgba(9, 14, 40, 0.96);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.brand-mark {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    background: var(--accent);
+    color: #08192b;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+.brand h1 {
+    font-size: 1.15rem;
+    margin: 0;
+}
+
+.brand p {
+    margin: 0.15rem 0 0;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+.header-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.header-links a {
+    color: var(--text);
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.header-links a:hover {
+    color: var(--accent-strong);
+}
+
+.main-nav {
+    position: sticky;
+    top: 80px;
+    background: rgba(7, 11, 31, 0.96);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.main-nav ul {
+    margin: 0;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.main-nav a {
+    color: var(--text);
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: var(--accent);
+}
+
+/* =========================
+   Page Sections
+========================= */
+
+main {
+    padding-top: 180px;
+}
+
+.hero-section,
+.promo-section,
+.featured-section,
+.support-section,
+.z-index-section,
+.courses-section,
+.testimonials,
+.faq-section,
+.challenge-section {
+    padding: 4rem 0;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, rgba(91, 141, 255, 0.12), transparent 48%),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.05), transparent);
+}
+
+.hero-copy {
+    width: min(700px, 100%);
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+.hero-copy .eyebrow {
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.hero-copy h2 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    margin-bottom: 1rem;
+}
+
+.hero-copy p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--muted);
+}
+
+.hero-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    width: min(1100px, 100%);
+    margin: 0 auto;
+}
+
+.hero-card {
+    background: var(--surface);
+    padding: 1rem;
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: transform 0.25s ease;
+}
+
+.hero-card:hover {
+    transform: translateY(-4px);
+}
+
+.hero-card h3 {
+    margin: 1rem 0 0.5rem;
+}
+
+.hero-card p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.static-card {
+    position: static;
+    top: 50px; /* Ignored because static elements do not use top/left */
+    left: 50px; /* Ignored because static elements stay in normal flow */
+}
+
+/* =========================
+   Promo Section / Relative Position
+========================= */
+
+.promo-section {
+    background: rgba(11, 17, 49, 0.95);
+}
+
+.promo-banner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(91, 141, 255, 0.18), rgba(4, 9, 28, 0.9));
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    top: 20px; /* move banner 20px down from its normal position */
+    left: 40px; /* move banner 40px right from its normal position */
+}
+
+.promo-banner span {
+    display: inline-flex;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(91, 141, 255, 0.18);
+    color: var(--accent-strong);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+}
+
+.adjacent-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2.5rem auto 0;
+    width: min(980px, 100%);
+}
+
+.mini-card {
+    background: var(--surface-strong);
+    padding: 1.75rem;
+    border-radius: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+}
+
+.relative-card-demo {
+    position: relative;
+    left: 20px;
+    top: 10px;
+}
+
+.mini-card h3 {
+    margin-top: 0;
+}
+
+/* =========================
+   Featured Course / Absolute Position
+========================= */
+
+.featured-section .course-card {
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative; /* establishes positioning context for absolute badge */
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) 1.4fr;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 2rem;
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: var(--shadow);
+}
+
+.featured-section .course-card img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.course-copy h3 {
+    margin-top: 0;
+}
+
+.course-copy ul {
+    padding-left: 1.25rem;
+    color: var(--muted);
+}
+
+.course-copy li {
+    margin-bottom: 0.75rem;
+}
+
+.badge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    padding: 0.65rem 1rem;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #08192b;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+/* If the parent container did not have position: relative, the badge would position relative to the nearest ancestor that is positioned, or the viewport if none exists. */
+
+/* =========================
+   Support / Fixed Position
+========================= */
+
+.support-section {
+    background: rgba(11, 17, 49, 0.95);
+}
+
+.support-copy {
+    max-width: 980px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(260px, 1fr) 1.5fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.support-copy div {
+    color: var(--muted);
+}
+
+.support-copy h3 {
+    margin-top: 0;
+}
+
+.support-chat {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: linear-gradient(135deg, #5b8dff, #74b9ff);
+    color: #08192b;
+    padding: 1rem 1.2rem;
+    border-radius: 999px;
+    border: none;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+    cursor: pointer;
+    z-index: 80;
+}
+
+/* =========================
+   z-index Demonstration
+========================= */
+
+.z-index-section {
+    background: linear-gradient(180deg, rgba(7, 11, 31, 0.96), rgba(13, 20, 55, 0.96));
+}
+
+.stack-demo {
+    position: relative;
+    min-height: 260px;
+    margin: 2rem auto 0;
+    width: min(680px, 100%);
+}
+
+.stack-box {
+    width: 220px;
+    height: 220px;
+    border-radius: 24px;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    color: white;
+    position: absolute;
+    inset: auto auto auto auto;
+}
+
+.red-box {
+    background: rgba(255, 79, 79, 0.9);
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.blue-box {
+    background: rgba(94, 165, 255, 0.92);
+    top: 40px;
+    left: 80px;
+    z-index: 20;
+}
+
+.green-box {
+    background: rgba(119, 221, 149, 0.92);
+    top: 80px;
+    left: 160px;
+    z-index: 30;
+}
+
+/* =========================
+   Course Listings
+========================= */
+
+.courses-section {
+    background: rgba(7, 10, 29, 0.95);
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.catalog-card {
+    background: var(--surface);
+    padding: 1.5rem;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: var(--shadow);
+}
+
+.catalog-icon {
+    width: 72px;
+    height: 72px;
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+    background: rgba(91, 141, 255, 0.18);
+    color: var(--accent-strong);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.catalog-card h3 {
+    margin-top: 1rem;
+}
+
+.catalog-card p {
+    color: var(--muted);
+}
+
+/* =========================
+   Testimonials
+========================= */
+
+.testimonials {
+    background: rgba(11, 16, 47, 0.96);
+}
+
+.testimonial-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.testimonial-cards article {
+    background: var(--surface);
+    padding: 1.75rem;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.testimonial-cards p {
+    margin: 0 0 1rem;
+    color: var(--muted);
+}
+
+.testimonial-cards span {
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* =========================
+   FAQ and Challenge
+========================= */
+
+.faq-list,
+.challenge-answers {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.faq-list article,
+.challenge-answers p,
+.challenge-answers ul {
+    background: var(--surface);
+    padding: 1.4rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.faq-list h3,
+.challenge-answers strong {
+    color: var(--text);
+}
+
+.challenge-answers ul {
+    margin: 0.75rem 0 0;
+    padding-left: 1.25rem;
+}
+
+.challenge-answers li {
+    margin-bottom: 0.5rem;
+}
+
+.position-table-wrap {
+    overflow-x: auto;
+    margin-top: 1.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+th,
+td {
+    padding: 1rem 1.25rem;
+    text-align: left;
+}
+
+th {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text);
+}
+
+tbody tr {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+tbody td {
+    color: var(--muted);
+}
+
+/* =========================
+   Footer
+========================= */
+
+.site-footer {
+    padding: 2rem 1.5rem 3rem;
+    text-align: center;
+    color: var(--muted);
+}
+
+/* =========================
+   Responsive Layout
+========================= */
+
+@media (max-width: 900px) {
+    .support-copy,
+    .featured-section .course-card,
+    .promo-banner {
+        grid-template-columns: 1fr;
+    }
+
+    .site-header,
+    .main-nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .main-nav {
+        top: 140px;
+    }
+}
+
+@media (max-width: 700px) {
+    .site-header {
+        padding: 1rem;
+    }
+
+    .header-links {
+        justify-content: center;
+    }
+
+    .main-nav ul {
+        gap: 0.85rem;
+    }
+
+    .hero-card,
+    .mini-card,
+    .catalog-card,
+    .testimonial-cards article,
+    .faq-list article,
+    .challenge-answers p {
+        border-radius: 20px;
+    }
+
+    .promo-banner {
+        left: 0;
+        top: 0;
+    }
+
+    .relative-card-demo {
+        left: 0;
+        top: 0;
+    }
+}

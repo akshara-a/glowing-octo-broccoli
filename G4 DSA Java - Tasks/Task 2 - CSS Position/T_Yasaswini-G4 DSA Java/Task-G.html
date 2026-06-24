@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Combined Application</title>
+
+    <style>
+
+        /* Sticky navbar remains visible while scrolling */
+        .navbar{
+            position:sticky;
+            top:0;
+            background:black;
+            color:white;
+            padding:15px;
+        }
+
+        /* Relative banner moved from original position */
+        .banner{
+            position:relative;
+            left:30px;
+            top:10px;
+            background:orange;
+            padding:20px;
+            margin:20px;
+        }
+
+        /* Product card creates positioning context */
+        .card{
+            position:relative;
+            width:250px;
+            border:1px solid gray;
+            padding:20px;
+            margin:20px;
+        }
+
+        /* Absolute badge positioned inside card */
+        .badge{
+            position:absolute;
+            top:10px;
+            right:10px;
+            background:red;
+            color:white;
+            border-radius:50%;
+            padding:8px;
+        }
+
+        /* Static content follows normal flow */
+        .content{
+            position:static;
+            padding:20px;
+        }
+
+        /* Fixed chat button always visible */
+        .chat-btn{
+            position:fixed;
+            bottom:20px;
+            right:20px;
+            background:blue;
+            color:white;
+            border:none;
+            padding:15px;
+            border-radius:50%;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    Sticky Navbar
+</nav>
+
+<div class="banner">
+    Relative Positioned Banner
+</div>
+
+<div class="card">
+    Product Card
+    <span class="badge">3</span>
+</div>
+
+<div class="content">
+    <h3>Static Content Section</h3>
+    <p>This section uses static positioning.</p>
+</div>
+
+<div style="height:1500px;"></div>
+
+<button class="chat-btn">
+    Chat
+</button>
+
+<h2>Position Types Used</h2>
+
+<ul>
+<li>Static - Content Section</li>
+<li>Relative - Banner</li>
+<li>Absolute - Notification Badge</li>
+<li>Fixed - Chat Button</li>
+<li>Sticky - Navigation Bar</li>
+</ul>
+
+</body>
+</html>

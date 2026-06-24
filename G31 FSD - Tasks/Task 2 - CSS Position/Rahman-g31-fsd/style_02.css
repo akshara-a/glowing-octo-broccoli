@@ -1,0 +1,36 @@
+.box{
+    width:150px;
+    height:150px;
+    background:orange;
+    color:white;
+    text-align:center;
+    line-height:150px;
+}
+
+
+.relative-box{
+
+    position:relative;
+
+    left:400px;
+
+    top:50px;
+}
+.container{
+    display:flex;
+}
+
+.boxA{
+    width:250px;
+    height:250px;
+    background:red;
+
+    position:relative;
+    left:500px;
+}
+
+.boxB{
+    width:150px;
+    height:150px;
+    background:blue;
+}
