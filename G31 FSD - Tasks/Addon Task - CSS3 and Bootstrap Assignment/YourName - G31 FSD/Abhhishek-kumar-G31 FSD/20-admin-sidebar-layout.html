@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Use Case 20 - Admin Sidebar Layout</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<style>
+  body { background-color: #f0f3f9; margin: 0; }
+  .layout-wrap { display: flex; min-height: 100vh; }
+
+  .sidebar { width: 230px; background-color: #ffffff; border-right: 1px solid #e3e8f3; flex-shrink: 0; padding: 1.5rem 1rem; }
+  .sidebar-brand { font-weight: 700; color: #3b6cf6; font-size: 1.2rem; margin-bottom: 2rem; padding-left: 0.5rem; }
+  .sidebar .nav-link { color: #4a5568; font-weight: 500; border-radius: 0.5rem; padding: 0.6rem 0.9rem; margin-bottom: 0.3rem; }
+  .sidebar .nav-link.active { background-color: #e8f0fe; color: #3b6cf6; }
+  .sidebar .nav-link:hover { background-color: #f4f7fd; color: #3b6cf6; }
+
+  .main-area { flex-grow: 1; display: flex; flex-direction: column; }
+
+  .topbar { background-color: #ffffff; border-bottom: 1px solid #e3e8f3; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+  .topbar-title { font-weight: 600; color: #1b2a4a; margin: 0; }
+  .btn-logout { background-color: #fdeaea; color: #d9534f; border: none; padding: 0.4rem 1.2rem; font-weight: 500; border-radius: 0.5rem; }
+  .btn-logout:hover { background-color: #f8d4d4; color: #d9534f; }
+
+  .content-area { padding: 1.5rem; flex-grow: 1; }
+  .dash-card { background: #fff; border-radius: 0.8rem; box-shadow: 0 4px 14px rgba(0,0,0,0.05); padding: 1.3rem; height: 100%; }
+  .dash-card-value { font-weight: 700; color: #1b2a4a; font-size: 1.4rem; }
+  .dash-card-label { color: #6b7280; font-size: 0.85rem; }
+
+  @media (max-width: 768px) {
+    .layout-wrap { flex-direction: column; }
+    .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #e3e8f3; }
+  }
+</style>
+</head>
+<body>
+
+<div class="layout-wrap">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-brand">AdminPanel</div>
+    <ul class="nav flex-column">
+      <li class="nav-item"><a class="nav-link active" href="#">Dashboard</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Users</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Orders</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Reports</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Area -->
+  <div class="main-area">
+
+    <!-- Header -->
+    <div class="topbar">
+      <h5 class="topbar-title">Dashboard</h5>
+      <button type="button" class="btn btn-logout">Logout</button>
+    </div>
+
+    <!-- Content -->
+    <div class="content-area">
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-3">
+          <div class="dash-card">
+            <p class="dash-card-value mb-1">2,540</p>
+            <p class="dash-card-label mb-0">Total Users</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="dash-card">
+            <p class="dash-card-value mb-1">1,128</p>
+            <p class="dash-card-label mb-0">Total Orders</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="dash-card">
+            <p class="dash-card-value mb-1">$48,200</p>
+            <p class="dash-card-label mb-0">Revenue</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="dash-card">
+            <p class="dash-card-value mb-1">37</p>
+            <p class="dash-card-label mb-0">Pending Tasks</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

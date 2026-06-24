@@ -1,0 +1,126 @@
+
+.Main,
+.first,
+.second,
+.third,
+.fourth,
+.fifth,
+.sixth{
+    width: 270px;
+    border-radius: 10px;
+    background-color: rgb(233, 155, 53);
+}
+
+.first{
+    background-color: aqua;
+}
+
+ .box{
+    padding: 10%;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: rgb(125, 174, 174);
+    display: flex;
+    gap: 30px;
+
+}
+
+.box1,
+.box2,
+.box3{
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+}
+
+.box1{
+    background-color: rgb(246, 46, 229);
+}
+
+.box2{
+    top: 50px;
+    left: 50px;
+    background-color: brown;
+    position: static;
+}
+
+.box3{
+    background-color: blueviolet;
+}
+
+.second{
+    background-color: blueviolet;
+}
+
+.box4{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(182, 105, 3);
+    border: 1px solid black;
+}
+.abhi{
+    position: relative;
+    background-color: rgb(8, 150, 77);
+    top: 20px;
+    left: 40px;
+}
+
+/* Part C – Absolute Position */
+.third{
+    background-color: bisque;
+}
+
+.container{
+    padding: 10%;
+    margin: 10px;
+    display: flex;
+    background-color: rgb(192, 154, 154);
+    
+}
+
+.child{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(162, 40, 121);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+  .image-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 25px;
+            height: 25px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 25px;
+            font-weight: bold;
+        }
+
+        img {
+            width: 200px;
+            border: 2px solid black;
+        }
+
+        .parent {
+    width: 300px;
+    height: 200px;
+    background: lightgray;
+    /* position: relative;  <-- Missing */
+}
+
+.chilt {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
