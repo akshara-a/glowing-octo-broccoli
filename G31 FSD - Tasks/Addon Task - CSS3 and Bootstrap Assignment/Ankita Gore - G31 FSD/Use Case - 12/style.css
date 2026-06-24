@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Section background */
+.alerts-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2563eb, #7c3aed, #ec4899);
+  padding: 40px 15px;
+}
+
+/* Card */
+.alerts-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Alert spacing and icon alignment */
+.custom-alert {
+  border-radius: 12px;
+  font-size: 1rem;
+  padding: 14px 16px;
+}
+
+.custom-alert i {
+  font-size: 1.2rem;
+}

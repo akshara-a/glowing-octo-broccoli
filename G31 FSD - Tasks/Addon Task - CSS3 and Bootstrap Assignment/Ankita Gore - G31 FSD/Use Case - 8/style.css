@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Section background */
+.services-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2563eb, #7c3aed, #ec4899);
+  padding: 50px 15px;
+}
+
+.section-subtitle {
+  color: #f3f4f6;
+  font-size: 1rem;
+}
+
+/* Service card */
+.service-card {
+  border: none;
+  border-radius: 18px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+/* Equal card height */
+.service-card .card-body {
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Hover effect */
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon */
+.service-icon {
+  font-size: 2.5rem;
+}
+
+/* Title */
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #222;
+}
+
+/* Text */
+.card-text {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
