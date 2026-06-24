@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LearnHub | CSS Position Assignment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Fixed header remains visible during scrolling -->
+    <header class="site-header">
+        <div class="brand">
+            <span class="brand-mark">LH</span>
+            <div>
+                <h1>LearnHub</h1>
+                <p>Online Learning Platform</p>
+            </div>
+        </div>
+        <div class="header-links">
+            <a href="#courses">Courses</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#faq">FAQ</a>
+        </div>
+    </header>
+
+    <!-- Sticky navigation bar sticks after header when scrolling -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#promo">Promotions</a></li>
+            <li><a href="#featured">Featured</a></li>
+            <li><a href="#discover">Discover</a></li>
+            <li><a href="#challenge">Challenge</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Part A: Static Position -->
+        <section class="hero-section" id="home">
+            <div class="hero-copy">
+                <p class="eyebrow">Part A — Static Position</p>
+                <h2>LearnHub makes skill growth effortless.</h2>
+                <p>
+                    The second course preview uses <strong>position: static</strong>. The top and left offsets are ignored
+                    by static positioning, so the text remains in the normal document flow.
+                </p>
+            </div>
+
+            <div class="hero-cards">
+                <article class="hero-card">
+                    <img src="Img1.jpg" alt="Data science course" />
+                    <h3>Data Science Launch</h3>
+                    <p>Interactive lessons and real-world projects.</p>
+                </article>
+                <article class="hero-card static-card">
+                    <img src="Img2.jpg" alt="Web development course" />
+                    <h3>Web Dev Essentials</h3>
+                    <p>Build responsive sites with HTML, CSS and JavaScript.</p>
+                </article>
+                <article class="hero-card">
+                    <img src="Img3.jpg" alt="UX design course" />
+                    <h3>UX Design Basics</h3>
+                    <p>Design modern interfaces with clarity and usability.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Part B: Relative Position -->
+        <section class="promo-section" id="promo">
+            <div class="promo-banner">
+                <span>Promotional Banner</span>
+                <h2>Save 30% on mentor-led courses</h2>
+                <p>
+                    This banner uses <strong>position: relative</strong>. It moves 40px to the right and 20px down from
+                    its original place, while its original space remains reserved.
+                </p>
+            </div>
+
+            <div class="adjacent-boxes">
+                <article class="mini-card">
+                    <h3>Skill Path</h3>
+                    <p>Follow a guided learning journey.</p>
+                </article>
+                <article class="mini-card relative-card-demo">
+                    <h3>Flexible Schedule</h3>
+                    <p>The card is moved with relative positioning.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Part C: Absolute Position -->
+        <section class="featured-section" id="featured">
+            <div class="section-header">
+                <h2>Featured Course Card</h2>
+                <p>
+                    A parent container with <strong>position: relative</strong> sets the positioning context. The badge is
+                    absolutely placed in the top-right corner of that parent.
+                </p>
+            </div>
+
+            <article class="course-card">
+                <img src="Img4.jpg" alt="Featured course illustration" />
+                <div class="course-copy">
+                    <h3>Full-Stack Mastery</h3>
+                    <p>Complete project-based training for frontend and backend developers.</p>
+                    <ul>
+                        <li>20+ lessons</li>
+                        <li>Live code reviews</li>
+                        <li>Certificate included</li>
+                    </ul>
+                </div>
+                <span class="badge">NEW</span>
+            </article>
+        </section>
+
+        <!-- Part D: Fixed Position -->
+        <section class="support-section" id="discover">
+            <div class="section-header">
+                <h2>Fixed Elements</h2>
+                <p>
+                    The header and support chat button are fixed; they remain visible while the page scrolls.
+                </p>
+            </div>
+
+            <div class="support-copy">
+                <img src="Img5.jpg" alt="Support chat illustration" />
+                <div>
+                    <h3>Always available support</h3>
+                    <p>
+                        Our chat button stays in the bottom-right corner using <strong>position: fixed</strong>. It is
+                        independent of normal flow and remains visible even when you scroll.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part F: z-index Demonstration -->
+        <section class="z-index-section">
+            <div class="section-header">
+                <h2>Part F — z-index Stacking</h2>
+                <p>
+                    The blue box is above the red box, and the green box is above both. z-index controls stacking order within
+                    the same stacking context.
+                </p>
+            </div>
+            <div class="stack-demo">
+                <div class="stack-box red-box">Red Box</div>
+                <div class="stack-box blue-box">Blue Box</div>
+                <div class="stack-box green-box">Green Box</div>
+            </div>
+        </section>
+
+        <!-- Course listings and student testimonials -->
+        <section class="courses-section" id="courses">
+            <div class="section-header">
+                <h2>Course Listings</h2>
+                <p>Browse top categories for designers, developers, and data experts.</p>
+            </div>
+            <div class="course-grid">
+                <article class="catalog-card">
+                    <img src="Img6.jpg" alt="Marketing course" />
+                    <h3>Marketing Analytics</h3>
+                    <p>Learn to turn data into profitable campaigns.</p>
+                </article>
+                <article class="catalog-card">
+                    <img src="Img7.jpg" alt="Cloud course" />
+                    <h3>Cloud Foundations</h3>
+                    <p>Launch scalable apps with modern cloud tools.</p>
+                </article>
+                <article class="catalog-card">
+                    <div class="catalog-icon">UI</div>
+                    <h3>UI Prototyping</h3>
+                    <p>Create user interfaces that delight customers.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="testimonials" id="testimonials">
+            <div class="section-header">
+                <h2>Student Testimonials</h2>
+                <p>Real learners share how LearnHub helped them grow.</p>
+            </div>
+            <div class="testimonial-cards">
+                <article>
+                    <p>"The mentor sessions helped me launch my first freelance website."</p>
+                    <span>— Maya, Web Developer</span>
+                </article>
+                <article>
+                    <p>"I loved how the learning path kept me on track every week."</p>
+                    <span>— Aaron, Data Analyst</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+            <div class="section-header">
+                <h2>FAQ</h2>
+                <p>Answers to the most common questions about this assignment layout.</p>
+            </div>
+            <div class="faq-list">
+                <article>
+                    <h3>Why use a fixed header?</h3>
+                    <p>Fixed headers keep navigation visible even when users scroll down the page.</p>
+                </article>
+                <article>
+                    <h3>What makes sticky navigation different?</h3>
+                    <p>Sticky navigation stays in place after the user scrolls past it, while fixed navigation stays always visible.</p>
+                </article>
+                <article>
+                    <h3>When should absolute positioning be used?</h3>
+                    <p>Use absolute positioning for badges and overlays inside a positioned container.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="challenge-section" id="challenge">
+            <div class="section-header">
+                <h2>Challenge Questions</h2>
+            </div>
+            <div class="challenge-answers">
+                <p><strong>1.</strong> The default value of the position property is <code>static</code>.</p>
+                <p><strong>2.</strong> <code>absolute</code> removes an element from the normal document flow.</p>
+                <p><strong>3.</strong> <code>fixed</code> keeps an element visible during scrolling.</p>
+                <p><strong>4.</strong> <code>sticky</code> requires a <code>top</code>, <code>left</code>, <code>right</code>, or <code>bottom</code> value to stick.</p>
+                <p><strong>5.</strong> When multiple elements share the same <code>z-index</code>, the later element in HTML order appears on top within that stacking context.</p>
+                <p><strong>6.</strong> Use <code>absolute</code> positioning instead of <code>relative</code> when you want an element to be placed precisely inside a container without affecting other elements’ layout.</p>
+                <p><strong>7.</strong> Real-world examples:</p>
+                <ul>
+                    <li>Static — article paragraphs in a blog post.</li>
+                    <li>Relative — a badge moved slightly on a card.</li>
+                    <li>Absolute — a notification badge on a product card.</li>
+                    <li>Fixed — a chat button or sticky header.</li>
+                    <li>Sticky — a navigation bar that sticks after scrolling.</li>
+                </ul>
+            </div>
+
+            <h3>Position Summary Table</h3>
+            <div class="position-table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Position Type</th>
+                            <th>Usage in Project</th>
+                            <th>Key Behavior</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>static</td>
+                            <td>Hero course preview box</td>
+                            <td>Default flow, ignores top/left</td>
+                        </tr>
+                        <tr>
+                            <td>relative</td>
+                            <td>Promotional banner + card offset</td>
+                            <td>Moves element while keeping original space reserved</td>
+                        </tr>
+                        <tr>
+                            <td>absolute</td>
+                            <td>Featured course badge</td>
+                            <td>Positions relative to nearest positioned ancestor</td>
+                        </tr>
+                        <tr>
+                            <td>fixed</td>
+                            <td>Header and support chat button</td>
+                            <td>Fixed to viewport, stays visible on scroll</td>
+                        </tr>
+                        <tr>
+                            <td>sticky</td>
+                            <td>Navigation bar</td>
+                            <td>Becomes fixed after scrolling past its original spot</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Fixed support chat button at bottom-right -->
+    <button class="support-chat" type="button">Support Chat</button>
+
+    <footer class="site-footer">
+        <p>LearnHub &copy; 2026 | Built with HTML5 and CSS3 for the CSS Position Assignment.</p>
+    </footer>
+</body>
+</html>

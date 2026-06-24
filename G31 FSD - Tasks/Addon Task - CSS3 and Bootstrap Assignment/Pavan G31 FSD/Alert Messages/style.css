@@ -1,0 +1,73 @@
+:root{
+
+    --primary-color:#ff7a00;
+    --cream-bg:#FFF8EE;
+
+}
+
+body{
+
+    background:var(--cream-bg);
+    font-family:'Segoe UI',sans-serif;
+
+}
+
+/* Background */
+
+.paw-bg{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:1.5;
+
+    z-index:-1;
+}
+
+/* Section */
+
+.alerts-section{
+
+    min-height:100vh;
+
+}
+
+.section-title{
+
+    color:var(--primary-color);
+    font-weight:700;
+
+}
+
+.section-subtitle{
+
+    color:#666;
+
+}
+
+/* Custom Alerts */
+
+.custom-alert{
+
+    border:none;
+    border-radius:20px;
+    padding:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+    transition:0.3s;
+
+}
+
+.custom-alert:hover{
+
+    transform:translateY(-5px);
+
+}

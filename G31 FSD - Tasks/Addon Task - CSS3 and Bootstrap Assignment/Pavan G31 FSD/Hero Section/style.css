@@ -1,0 +1,329 @@
+/* ==========================
+   CSS VARIABLES
+========================== */
+
+:root{
+    --primary-color:#ff7a00;
+    --primary-dark:#e56700;
+    --white:#ffffff;
+    --dark:#212529;
+    --gray:#6c757d;
+}
+
+/* ==========================
+   GENERAL
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+}
+
+/* ==========================
+   HERO SECTION
+========================== */
+
+.hero-section{
+
+    min-height:100vh;
+
+    background:linear-gradient(
+        135deg,
+        #ff7a00,
+        #ff9a3c
+    );
+
+    display:flex;
+
+    align-items:center;
+
+    padding:60px 0;
+}
+
+/* ==========================
+   HERO CARD
+========================== */
+
+.hero-card{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+
+    transition:all 0.3s ease;
+}
+
+.hero-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 40px rgba(0,0,0,0.2);
+}
+
+/* ==========================
+   BADGE
+========================== */
+
+.hero-badge{
+
+    background:white;
+
+    color:var(--primary-color);
+
+    border:2px solid var(--primary-color);
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    display:inline-block;
+
+    margin-bottom:20px;
+}
+
+/* ==========================
+   HEADING
+========================== */
+
+.hero-card h1{
+
+    font-size:3rem;
+
+    font-weight:bold;
+
+    color:var(--dark);
+
+    margin-bottom:20px;
+}
+
+/* ==========================
+   DESCRIPTION
+========================== */
+
+.hero-card p{
+
+    color:var(--gray);
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+}
+
+.shop-btn{
+
+    background-color:var(--primary-color);
+
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:10px;
+
+    transition:all 0.3s ease;
+}
+
+.shop-btn:hover{
+
+    background-color:var(--primary-dark);
+
+    color:white;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.learn-btn{
+
+    border:2px solid var(--primary-color);
+
+    color:var(--primary-color);
+
+    padding:12px 25px;
+
+    border-radius:10px;
+
+    transition:all 0.3s ease;
+}
+
+.learn-btn:hover{
+
+    background-color:var(--primary-color);
+
+    color:white;
+
+    transform:translateY(-3px);
+}
+
+/* ==========================
+   FEATURES
+========================== */
+
+.features{
+
+    margin-top:25px;
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    color:#555;
+
+    font-weight:500;
+}
+
+/* ==========================
+   HERO IMAGE
+========================== */
+
+.hero-image{
+
+    max-width:100%;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+
+    transition:all 0.3s ease;
+}
+
+.hero-image:hover{
+
+    transform:scale(1.03);
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:991px){
+
+    .hero-section{
+
+        text-align:center;
+    }
+
+    .hero-card{
+
+        margin-bottom:30px;
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+    }
+
+    .features{
+
+        justify-content:center;
+    }
+
+    .hero-card h1{
+
+        font-size:2.2rem;
+    }
+}
+
+@media(max-width:576px){
+
+    .hero-card{
+
+        padding:25px;
+    }
+
+    .hero-card h1{
+
+        font-size:1.8rem;
+    }
+}
+/* ==========================
+   DOG INFO CARD
+========================== */
+
+.dog-info-card{
+
+    background:white;
+
+    margin-top:20px;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+    transition:all 0.3s ease;
+}
+
+.dog-info-card:hover{
+
+    transform:translateY(-5px);
+}
+
+.dog-info-card h3{
+
+    color:var(--primary-color);
+
+    font-weight:bold;
+
+    margin-bottom:10px;
+}
+
+.dog-info-card p{
+
+    color:var(--gray);
+
+    margin-bottom:15px;
+}
+
+.dog-tags{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+}
+
+.dog-tags span{
+
+    background:var(--primary-color);
+
+    color:white;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:14px;
+}

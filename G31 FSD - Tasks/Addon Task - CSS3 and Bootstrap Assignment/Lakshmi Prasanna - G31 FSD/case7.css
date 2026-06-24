@@ -1,0 +1,69 @@
+:root {
+  --primary-color: #0d6efd;
+  --dark-color: #212529;
+}
+
+body {
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  font-family: Arial, sans-serif;
+}
+
+.pricing-card {
+  background-color: white;
+  border-radius: 20px !important;
+  transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+}
+
+.pricing-card.recommended {
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  color: white;
+}
+
+.pricing-card.recommended ul li {
+  color: white;
+}
+
+.price {
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.pricing-card.recommended .price {
+  color: #ffc107;
+}
+
+.price span {
+  font-size: 16px;
+  font-weight: normal;
+  color: #6c757d;
+}
+
+.pricing-card.recommended .price span {
+  color: #ddd;
+}
+
+ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+}
+
+.pricing-card.recommended ul li {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.btn {
+  border-radius: 25px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}

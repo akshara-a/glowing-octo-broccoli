@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 & Bootstrap 20 Mini UI Use Cases Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-uppercase tracking-wider" href="#">DevPortal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#hero-section">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#forms-section">Forms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cards-section">Components</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#table-section">Directory</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <button class="btn btn-outline-light btn-sm" id="darkModeToggle">Toggle Theme</button>
+                    <a href="#login-box" class="btn btn-primary btn-sm px-3">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse border-end p-3">
+                <div class="position-sticky pt-3">
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mb-3 text-muted text-uppercase fw-bold small">
+                        <span>UI Use Cases Menu</span>
+                    </h6>
+                    <ul class="nav flex-column gap-1 dashboard-sidebar-nav">
+                        <li class="nav-item"><a class="nav-link active text-dark rounded p-2 d-block" href="#hero-section">Hero & Navbar</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark rounded p-2 d-block" href="#forms-section">Forms Elements</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark rounded p-2 d-block" href="#cards-section">Cards & Summaries</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark rounded p-2 d-block" href="#services-section">Services Blocks</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark rounded p-2 d-block" href="#table-section">Data Matrix Table</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark rounded p-2 d-block" href="#stats-section">Analytics Metrics</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark rounded p-2 d-block" href="#alerts-section">Modals & Signals</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark rounded p-2 d-block" href="#faq-section">FAQ Collapsible</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark rounded p-2 d-block" href="#gallery-section">Media Asset Grid</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark rounded p-2 d-block" href="#progress-section">Skill Indicators</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark rounded p-2 d-block" href="#tabs-section">Tabs & Paging</a></li>
+                    </ul>
+                    <hr>
+                    <button class="btn btn-danger btn-sm w-100 mt-2">Logout</button>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+                
+                <section id="hero-section" class="py-5 mb-5 rounded-4 custom-hero-bg text-white p-5 shadow-sm">
+                    <div class="row align-items-center g-5">
+                        <div class="col-lg-6">
+                            <h1 class="display-5 fw-bold lh-1 mb-3">Build Robust Full-Stack Interfaces</h1>
+                            <p class="lead text-light-50">Master client presentation structures with production-grade utility grids, modular CSS transformations, and performant asset binding layout models.</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-4">
+                                <a href="#table-section" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Explore Matrix</a>
+                                <button type="button" class="btn btn-outline-light btn-lg px-4" data-bs-toggle="modal" data-bs-target="#demoModal">Launch Window</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 text-center">
+                            <img src="images/workspace-hero.jpg" class="img-fluid rounded-3 shadow-lg custom-img-frame" alt="Development Platform Space" width="500" height="320">
+                        </div>
+                    </div>
+                </section>
+
+                <section id="forms-section" class="mb-5">
+                    <h2 class="pb-2 border-bottom mb-4">Input & Communication Channels</h2>
+                    <div class="row g-4">
+                        <div class="col-lg-4" id="login-box">
+                            <div class="card h-100 custom-card p-3 shadow-sm">
+                                <div class="card-body">
+                                    <h4 class="card-title fw-bold mb-3">Account Sign In</h4>
+                                    <form id="loginForm" class="needs-validation" novalidate>
+                                        <div class="mb-3">
+                                            <label for="loginEmail" class="form-label small fw-semibold">Email Target</label>
+                                            <input type="email" class="form-control" id="loginEmail" required>
+                                            <div class="invalid-feedback">A valid communication routing address is required.</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="loginPassword" class="form-label small fw-semibold">Security Passkey</label>
+                                            <input type="password" class="form-control" id="loginPassword" required>
+                                            <div class="invalid-feedback">Please input your access safety code.</div>
+                                        </div>
+                                        <div class="mb-3 d-flex justify-content-between align-items-center">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                                <label class="form-check-label small text-muted" for="rememberMe">Keep Authorized</label>
+                                            </div>
+                                            <a href="#" class="small text-decoration-none">Reset Token</a>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary w-100">Authenticate Base</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="card h-100 custom-card p-3 shadow-sm">
+                                <div class="card-body">
+                                    <h4 class="card-title fw-bold mb-3">Register Identity</h4>
+                                    <form id="registerForm" class="needs-validation" novalidate>
+                                        <div class="mb-2">
+                                            <label class="form-label small mb-1">Identity Context Name</label>
+                                            <input type="text" class="form-control form-control-sm" id="regName" required>
+                                        </div>
+                                        <div class="mb-2">
+                                            <label class="form-label small mb-1">Target Delivery Email</label>
+                                            <input type="email" class="form-control form-control-sm" id="regEmail" required>
+                                        </div>
+                                        <div class="mb-2">
+                                            <label class="form-label small mb-1">Passphrase</label>
+                                            <input type="password" class="form-control form-control-sm" id="regPassword" required>
+                                        </div>
+                                        <div class="mb-2">
+                                            <label class="form-label small mb-1">Confirm Token Pass</label>
+                                            <input type="password" class="form-control form-control-sm" id="regConfirmPassword" required>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input type="checkbox" class="form-check-input" id="regTerms" required>
+                                            <label class="form-check-label small text-muted" for="regTerms">Agree with base license SLAs</label>
+                                        </div>
+                                        <button type="submit" class="btn btn-success btn-sm w-100">Initialize Identity</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="card h-100 custom-card p-3 shadow-sm">
+                                <div class="card-body">
+                                    <h4 class="card-title fw-bold mb-3">Dispatch Help Ticket</h4>
+                                    <form id="contactForm" class="needs-validation" novalidate>
+                                        <div class="mb-2">
+                                            <label class="form-label small mb-1">User Identifier</label>
+                                            <input type="text" class="form-control form-control-sm" id="contactName" required>
+                                        </div>
+                                        <div class="mb-2">
+                                            <label class="form-label small mb-1">Return Email Route</label>
+                                            <input type="email" class="form-control form-control-sm" id="contactEmail" required>
+                                        </div>
+                                        <div class="mb-2">
+                                            <label class="form-label small mb-1">Subject Scope</label>
+                                            <input type="text" class="form-control form-control-sm" id="contactSubject" required>
+                                        </div>
+                                        <div class="mb-2">
+                                            <label class="form-label small mb-1">Problem Narrative Payload</label>
+                                            <textarea class="form-control form-control-sm" id="contactMessage" rows="2" required></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-dark btn-sm w-100 mt-2">Transmit Matrix Packet</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="cards-section" class="mb-5">
+                    <h2 class="pb-2 border-bottom mb-4">Functional UI Component Presentation Layouts</h2>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card custom-card border-0 text-center shadow-sm p-3 h-100 bg-white">
+                                <div class="mt-3">
+                                    <img src="images/avatar-engineer.jpg" class="rounded-circle border border-3 border-primary p-1 profile-card-img" alt="Systems Engineer Portrait" width="100" height="100">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="fw-bold mb-0">Sarah Jenkins</h5>
+                                    <small class="text-primary fw-semibold d-block mb-2">Cloud Systems Architect</small>
+                                    <p class="card-text text-muted small">Specializing in cloud architecture optimization patterns, microservices, and reactive data pipelining strategies.</p>
+                                    <button class="btn btn-sm btn-primary w-100 rounded-pill mt-2">View Pipeline Stacks</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card custom-card border-0 shadow-sm h-100 bg-white">
+                                <div class="position-relative">
+                                    <img src="images/monitor-display.jpg" class="card-img-top rounded-top product-card-img" alt="Curved Matrix Workspace Monitor">
+                                    <span class="position-absolute top-0 end-0 bg-danger text-white px-2 py-1 m-2 small rounded fw-bold">PROMO</span>
+                                </div>
+                                <div class="card-body d-flex flex-column justify-content-between">
+                                    <div>
+                                        <h6 class="fw-bold mb-1 text-truncate">Ultra-Wide 4K Workspace Monitor</h6>
+                                        <div class="text-warning small mb-2">★★★★★ <span class="text-muted small">(48 nodes)</span></div>
+                                        <h5 class="text-success fw-bold mb-3">$349.99</h5>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-dark w-100">Add to Terminal Order</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card custom-card bg-light border-1 shadow-sm h-100 d-flex flex-column justify-content-between p-3">
+                                <div>
+                                    <h5 class="fw-bold pb-2 border-bottom mb-3">Order Invoice Summary</h5>
+                                    <div class="d-flex justify-content-between mb-2 small"><span class="text-muted">Workspace Monitor (x1)</span><strong>$349.99</strong></div>
+                                    <div class="d-flex justify-content-between mb-2 small"><span class="text-muted">Cloud Framework Kit</span><strong>$49.00</strong></div>
+                                    <div class="d-flex justify-content-between mb-2 small"><span class="text-muted">System Promo Discount</span><strong class="text-danger">-$25.00</strong></div>
+                                </div>
+                                <div class="border-top pt-3 mt-3">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <span class="fw-bold small">Total Matrix Balance:</span>
+                                        <span class="fs-5 fw-bold text-primary">$373.99</span>
+                                    </div>
+                                    <button class="btn btn-success btn-sm w-100 py-2">Execute Financial Layer</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card custom-card border-2 border-primary shadow h-100 text-center p-3 bg-white">
+                                <div class="card-header bg-primary text-white rounded mb-3 py-1 fw-bold small">RECOMMENDED PROFILE</div>
+                                <h4 class="fw-bold text-dark mb-1">Standard Pro</h4>
+                                <h2 class="fw-extrabold text-primary my-2">$79<span class="fs-6 text-muted fw-normal">/mo</span></h2>
+                                <ul class="list-unstyled my-3 text-start small d-flex flex-column gap-2 text-muted">
+                                    <li>✔ 20 Compute Clusters</li>
+                                    <li>✔ Automated Pipeline Actions</li>
+                                    <li>✔ Telemetry Access Hub</li>
+                                    <li>✔ 24/7 Priority Support SLA</li>
+                                </ul>
+                                <button class="btn btn-primary btn-sm w-100 mt-auto">Deploy Plan Model</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="services-section" class="mb-5 bg-light p-4 rounded-3 shadow-sm border">
+                    <h2 class="pb-2 border-bottom mb-4">Operational Architecture Layers</h2>
+                    <div class="row g-3">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card h-100 custom-card border-0 shadow-sm p-3">
+                                <h5 class="fw-bold text-primary">Web Development</h5>
+                                <p class="small text-muted mb-0">Building robust fluid interfaces aligned with highly responsive component architectures.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card h-100 custom-card border-0 shadow-sm p-3">
+                                <h5 class="fw-bold text-success">API Integrations</h5>
+                                <p class="small text-muted mb-0">Constructing scalable web pipeline services with verified contract payload integrity rules.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card h-100 custom-card border-0 shadow-sm p-3">
+                                <h5 class="fw-bold text-warning">UI Design Token</h5>
+                                <p class="small text-muted mb-0">Establishing cohesive UI layout styles mapping cleanly to functional layout parameters.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card h-100 custom-card border-0 shadow-sm p-3">
+                                <h5 class="fw-bold text-info">Database Support</h5>
+                                <p class="small text-muted mb-0">Relational schema execution profiling, indexing setups, and telemetry metrics monitoring.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="table-section" class="mb-5">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center pb-2 border-bottom mb-4 gap-3">
+                        <h2>Internal Node Registry Matrix</h2>
+                        <div class="col-md-4">
+                            <input type="text" id="tableSearchInput" class="form-control form-control-sm" placeholder="Filter active worker names instantly...">
+                        </div>
+                    </div>
+                    <div class="table-responsive shadow-sm rounded-3">
+                        <table class="table table-hover align-middle bg-white mb-0" id="employeeTable">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Employee ID</th>
+                                    <th>Name</th>
+                                    <th>Department</th>
+                                    <th>Email Link</th>
+                                    <th>Status Node</th>
+                                    <th>Action Control</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>#EMP-902</strong></td>
+                                    <td class="fw-semibold">Marcus Vance</td>
+                                    <td>Engineering Systems</td>
+                                    <td>marcus.v@devportal.io</td>
+                                    <td><span class="badge bg-success">Active Node</span></td>
+                                    <td><button class="btn btn-xs btn-outline-primary py-0 px-2 fs-7">Edit Stack</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>#EMP-411</strong></td>
+                                    <td class="fw-semibold">Elena Rostova</td>
+                                    <td>Product Infrastructure</td>
+                                    <td>elena.r@devportal.io</td>
+                                    <td><span class="badge bg-success">Active Node</span></td>
+                                    <td><button class="btn btn-xs btn-outline-primary py-0 px-2 fs-7">Edit Stack</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>#EMP-105</strong></td>
+                                    <td class="fw-semibold">Devon Craig</td>
+                                    <td>Security Frameworks</td>
+                                    <td>devon.c@devportal.io</td>
+                                    <td><span class="badge bg-warning text-dark">On Idle</span></td>
+                                    <td><button class="btn btn-xs btn-outline-primary py-0 px-2 fs-7">Edit Stack</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>#EMP-788</strong></td>
+                                    <td class="fw-semibold">Amara Kante</td>
+                                    <td>Data Pipelines</td>
+                                    <td>amara.k@devportal.io</td>
+                                    <td><span class="badge bg-danger">Deallocated</span></td>
+                                    <td><button class="btn btn-xs btn-outline-primary py-0 px-2 fs-7">Edit Stack</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="stats-section" class="mb-5">
+                    <h2 class="pb-2 border-bottom mb-4">Operational Performance Statistics</h2>
+                    <div class="row g-3">
+                        <div class="col-6 col-lg-3">
+                            <div class="card custom-card shadow-sm border-0 bg-primary text-white p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div><small class="text-uppercase tracking-wider opacity-75">Total Users</small><h3 class="fw-bold mb-0">12,480</h3></div>
+                                    <span class="fs-3 opacity-50">👥</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <div class="card custom-card shadow-sm border-0 bg-success text-white p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div><small class="text-uppercase tracking-wider opacity-75">Total Orders</small><h3 class="fw-bold mb-0">3,124</h3></div>
+                                    <span class="fs-3 opacity-50">🛒</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <div class="card custom-card shadow-sm border-0 bg-info text-white p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div><small class="text-uppercase tracking-wider opacity-75">Revenue Metric</small><h3 class="fw-bold mb-0">$89,450</h3></div>
+                                    <span class="fs-3 opacity-50">💰</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <div class="card custom-card shadow-sm border-0 bg-warning text-dark p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div><small class="text-uppercase tracking-wider opacity-75">Pending Tasks</small><h3 class="fw-bold mb-0">14 Active</h3></div>
+                                    <span class="fs-3 opacity-50">⏳</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="alerts-section" class="mb-5">
+                    <h2 class="pb-2 border-bottom mb-4">Notification Alerts & Overlay Control Modals</h2>
+                    <div class="row g-4">
+                        <div class="col-md-7">
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>Success state:</strong> Deployment sequence memory sync executed completely.
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <strong>Error state:</strong> Database clusters target connection timeout encountered.
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                <strong>Warning state:</strong> RAM utilization approaching limits (88% system buffer capacity).
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                                <strong>Info state:</strong> Scheduling optimization script execution window shifted forward.
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        </div>
+                        <div class="col-md-5 d-flex align-items-center justify-content-center bg-light rounded border p-4">
+                            <div class="text-center">
+                                <p class="text-muted small">Invoke modal structures via Javascript hooks to handle security override parameters safely.</p>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#demoModal">Launch Context Modal</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="faq-section" class="mb-5">
+                    <h2 class="pb-2 border-bottom mb-4">System Structural Frequently Asked Questions</h2>
+                    <div class="accordion shadow-sm" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqOne"><button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">What is this application?</button></h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body text-muted">This tracking cockpit acts as a modular layout workbench to configure and validate custom UI design elements.</div></div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqTwo"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">How do I register?</button></h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body text-muted">Input valid identity metadata constraints in the registration column container block within the user form segment.</div></div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqThree"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">Can I reset my password?</button></h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body text-muted">A dedicated token regeneration path link option is nested in the primary connection system container.</div></div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqFour"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">Is my data secure?</button></h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body text-muted">All active client transport sequences are cryptographically sealed via TLS token verification channels.</div></div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqFive"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">How do I contact support?</button></h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body text-muted">Submit an automated structural information payload directly through the terminal contact layout section.</div></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="gallery-section" class="mb-5">
+                    <h2 class="pb-2 border-bottom mb-4">Media Static Assets Grid</h2>
+                    <div class="row g-3">
+                        <div class="col-6 col-md-4">
+                            <div class="gallery-item-wrap shadow-sm rounded overflow-hidden bg-white">
+                                <div class="zoom-box"><img src="images/gallery-asset-1.jpg" class="img-fluid w-100 gallery-img-height" alt="Web Development Logic Flow"></div>
+                                <div class="p-2 text-center bg-white"><small class="fw-semibold text-dark">Data Lifecycle Alpha</small></div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="gallery-item-wrap shadow-sm rounded overflow-hidden bg-white">
+                                <div class="zoom-box"><img src="images/gallery-asset-2.jpg" class="img-fluid w-100 gallery-img-height" alt="Metrics Analytics UI Dashboard"></div>
+                                <div class="p-2 text-center bg-white"><small class="fw-semibold text-dark">Telemetry Architecture Beta</small></div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="gallery-item-wrap shadow-sm rounded overflow-hidden bg-white">
+                                <div class="zoom-box"><img src="images/gallery-asset-3.jpg" class="img-fluid w-100 gallery-img-height" alt="Abstract Blueprint Logic Matrix"></div>
+                                <div class="p-2 text-center bg-white"><small class="fw-semibold text-dark">Connectivity Circuit Gamma</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="progress-section" class="mb-5 bg-white p-4 rounded-3 shadow-sm border">
+                    <h2 class="pb-2 border-bottom mb-4">Core Structural Capability Indices</h2>
+                    <div class="d-flex flex-column gap-3">
+                        <div>
+                            <div class="d-flex justify-content-between mb-1 small fw-bold text-muted"><span>HTML5 Document Validation</span><span>95%</span></div>
+                            <div class="progress" style="height: 12px;"><div class="progress-bar bg-primary" role="progressbar" style="width: 95%"></div></div>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between mb-1 small fw-bold text-muted"><span>CSS3 Cascade Property Overrides</span><span>90%</span></div>
+                            <div class="progress" style="height: 12px;"><div class="progress-bar bg-success" role="progressbar" style="width: 90%"></div></div>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between mb-1 small fw-bold text-muted"><span>Bootstrap 5 Utility Class Application</span><span>85%</span></div>
+                            <div class="progress" style="height: 12px;"><div class="progress-bar bg-info" role="progressbar" style="width: 85%"></div></div>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between mb-1 small fw-bold text-muted"><span>JavaScript Event Handlers Integration</span><span>80%</span></div>
+                            <div class="progress" style="height: 12px;"><div class="progress-bar bg-warning" role="progressbar" style="width: 80%"></div></div>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between mb-1 small fw-bold text-muted"><span>C# Server Architecture Layer Logic</span><span>75%</span></div>
+                            <div class="progress" style="height: 12px;"><div class="progress-bar bg-danger" role="progressbar" style="width: 75%"></div></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="tabs-section" class="mb-5">
+                    <h2 class="pb-2 border-bottom mb-4">Tabular Workspace Router & Micro-Navigation Elements</h2>
+                    
+                    <nav aria-label="breadcrumb" class="mb-3">
+                        <ol class="breadcrumb bg-light p-2 rounded px-3 border">
+                            <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Dashboard Base</a></li>
+                            <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Component Interface Layouts</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Tabular Frame Environment</li>
+                        </ol>
+                    </nav>
+
+                    <div class="card shadow-sm border">
+                        <div class="card-header bg-white border-bottom-0 pt-3">
+                            <ul class="nav nav-tabs card-header-tabs" id="hubTabs" role="tablist">
+                                <li class="nav-item"><button class="nav-link active fw-bold" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview-content" type="button" role="tab">Overview</button></li>
+                                <li class="nav-item"><button class="nav-link fw-bold" id="features-tab" data-bs-toggle="tab" data-bs-target="#features-content" type="button" role="tab">Features</button></li>
+                                <li class="nav-item"><button class="nav-link fw-bold" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews-content" type="button" role="tab">Reviews</button></li>
+                                <li class="nav-item"><button class="nav-link fw-bold" id="support-tab" data-bs-toggle="tab" data-bs-target="#support-content" type="button" role="tab">Support</button></li>
+                            </ul>
+                        </div>
+                        <div class="card-body bg-white p-4 border-top">
+                            <div class="tab-content" id="hubTabsContent">
+                                <div class="tab-pane fade show active" id="overview-content" role="tabpanel">
+                                    <h5>System Landscape Summary</h5>
+                                    <p class="text-muted mb-0">This dashboard presents custom structured utility frameworks optimized for validation, design flexibility testing, and modern interface layout workflows.</p>
+                                </div>
+                                <div class="tab-pane fade" id="features-content" role="tabpanel">
+                                    <h5>Core System Feature Sets</h5>
+                                    <p class="text-muted mb-0">Built using native CSS root architecture variables, comprehensive transitions configurations, integrated global dark mode toggles, and direct table query arrays filters.</p>
+                                </div>
+                                <div class="tab-pane fade" id="reviews-content" role="tabpanel">
+                                    <h5>Developer Peer Audit Transmissions</h5>
+                                    <p class="text-muted mb-0">"The structural class separation, data query filter response speeds, and clean asset mapping provide a fantastic foundational model template configuration."</p>
+                                </div>
+                                <div class="tab-pane fade" id="support-content" role="tabpanel">
+                                    <h5>Enterprise Service Help Desks</h5>
+                                    <p class="text-muted mb-0">Submit an interactive problem payload document cleanly utilizing the verified support communication card component container.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <nav class="d-flex justify-content-center mt-4" aria-label="Component Pagination Controls">
+                        <ul class="pagination mb-0">
+                            <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Previous</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="demoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="demoModalLabel">Administrative Override Command</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-muted">
+                    This window confirms execution of a browser script context event hook. Verify your data structures correlate seamlessly with system schema metrics before confirming execution.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Dismiss Hook</button>
+                    <button type="button" class="btn btn-primary" id="saveChangesModalBtn">Commit Variable Data</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

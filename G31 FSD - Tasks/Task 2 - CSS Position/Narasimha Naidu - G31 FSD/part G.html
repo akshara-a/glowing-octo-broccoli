@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Part G - Combined Positioning Example</title>
+
+<style>
+
+
+.section{
+    background:#f4f4f4;
+    margin:20px;
+    padding:20px;
+    border-radius:10px;
+}
+
+
+.navbar{
+    position:sticky;
+    top:0;
+    background:#222;
+    color:white;
+    padding:15px;
+    text-align:center;
+}
+
+
+.banner{
+    position:relative;
+    left:20px;
+    top:10px;
+
+    background:lightblue;
+    padding:20px;
+    margin:20px;
+    border-radius:10px;
+}
+
+
+.card{
+    position:relative;
+    width:250px;
+    border:1px solid #ccc;
+    padding:20px;
+    margin:20px;
+    background:white;
+}
+
+
+.badge{
+    position:absolute;
+    top:10px;
+    right:10px;
+
+    background:red;
+    color:white;
+    padding:8px 12px;
+    border-radius:50%;
+}
+
+
+.chat-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+
+    background:green;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:25px;
+    cursor:pointer;
+}
+
+</style>
+</head>
+<body>
+
+
+<nav class="navbar">
+    Sticky Navigation Bar
+</nav>
+
+
+<div class="banner">
+    <h2>Welcome Banner</h2>
+    <p>This banner uses relative positioning.</p>
+</div>
+
+<div class="card">
+    <span class="badge">New</span>
+
+    <h3>Smart Watch</h3>
+    <p>Price: ₹2,999</p>
+</div>
+
+<div class="section">
+    <h2>Section 1</h2>
+    <p>This section uses the default static position.</p>
+</div>
+
+<div class="section">
+    <h2>Section 2</h2>
+    <p>Scroll down to test sticky and fixed positioning.</p>
+</div>
+
+<div class="section" style="height:600px;">
+    <h2>Section 3</h2>
+    <p>Extra content to make the page scrollable.</p>
+</div>
+
+<button class="chat-btn">
+    Chat Support
+</button>
+
+</body>
+</html>

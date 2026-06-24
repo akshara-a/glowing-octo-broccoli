@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Positioning Challenge Questions (28–35)</title>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        background-color: #f4f4f4;
+    }
+
+    h1{
+        text-align: center;
+        color: #333;
+    }
+
+    .question{
+        background: white;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+    table, th, td{
+        border: 1px solid #333;
+    }
+
+    th{
+        background: #007bff;
+        color: white;
+    }
+
+    th, td{
+        padding: 10px;
+        text-align: left;
+    }
+
+    /* Q35 Demonstration Styles */
+
+    /* Sticky Navbar */
+    .navbar{
+        position: sticky;
+        top: 0;
+        background: #333;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    /* Relative Banner */
+    .banner{
+        position: relative;
+        background: lightblue;
+        height: 150px;
+        text-align: center;
+        padding-top: 60px;
+        margin-top: 20px;
+    }
+
+    /* Product Card */
+    .card{
+        position: relative;
+        width: 250px;
+        background: white;
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin: 30px auto;
+        text-align: center;
+    }
+
+    /* Absolute Badge */
+    .badge{
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background: red;
+        color: white;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        line-height: 35px;
+    }
+
+    /* z-index Example */
+    .overlap{
+        position: relative;
+        width: 300px;
+        height: 200px;
+        margin: 20px auto;
+    }
+
+    .red{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: red;
+        top: 20px;
+        left: 20px;
+        z-index: 1;
+    }
+
+    .blue{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: blue;
+        top: 50px;
+        left: 50px;
+        z-index: 2;
+    }
+
+    .green{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: green;
+        top: 80px;
+        left: 80px;
+        z-index: 3;
+    }
+
+    /* Static Content */
+    .section{
+        position: static;
+        height: 300px;
+        padding: 20px;
+        background: white;
+        margin: 10px 0;
+    }
+
+    /* Fixed Button */
+    .chat-btn{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: green;
+        color: white;
+        padding: 15px 20px;
+        text-decoration: none;
+        border-radius: 30px;
+    }
+</style>
+</head>
+<body>
+
+<h1>CSS Positioning Challenge Questions (28–35)</h1>
+
+<!-- Q28 -->
+<div class="question">
+    <h2>28. What is the default value of the position property?</h2>
+    <p><strong>Answer:</strong> The default value of the <code>position</code> property is <code>static</code>.</p>
+</div>
+
+<!-- Q29 -->
+<div class="question">
+    <h2>29. Which position type removes an element from the normal document flow?</h2>
+    <p><strong>Answer:</strong> <code>absolute</code> and <code>fixed</code> positioning remove elements from the normal document flow.</p>
+</div>
+
+<!-- Q30 -->
+<div class="question">
+    <h2>30. Which position type keeps an element visible during scrolling?</h2>
+    <p><strong>Answer:</strong> <code>fixed</code> positioning keeps an element visible while scrolling.</p>
+</div>
+
+<!-- Q31 -->
+<div class="question">
+    <h2>31. Which position type requires top, left, right, or bottom values to create a sticky effect?</h2>
+    <p><strong>Answer:</strong> <code>sticky</code> positioning requires values such as <code>top:0</code>.</p>
+</div>
+
+<!-- Q32 -->
+<div class="question">
+    <h2>32. What happens when multiple elements have the same z-index value?</h2>
+    <p>
+        If multiple elements have the same z-index value, the element that appears
+        later in the HTML code will appear on top.
+    </p>
+</div>
+
+<!-- Q33 -->
+<div class="question">
+    <h2>33. When would you use absolute positioning instead of relative positioning?</h2>
+    <p>
+        Absolute positioning is used when an element must be placed at an exact
+        location inside a parent container, such as notification badges,
+        tooltips, dropdown menus, or image labels.
+    </p>
+</div>
+
+<!-- Q34 -->
+<div class="question">
+    <h2>34. Real-World Examples of Each Position Type</h2>
+
+    <table>
+        <tr>
+            <th>Position Type</th>
+            <th>Real-World Example</th>
+        </tr>
+
+        <tr>
+            <td>Static</td>
+            <td>Blog paragraphs and normal page content</td>
+        </tr>
+
+        <tr>
+            <td>Relative</td>
+            <td>Hero banner shifted slightly from its original position</td>
+        </tr>
+
+        <tr>
+            <td>Absolute</td>
+            <td>Notification badge on a shopping cart icon</td>
+        </tr>
+
+        <tr>
+            <td>Fixed</td>
+            <td>WhatsApp chat button or Back-to-Top button</td>
+        </tr>
+
+        <tr>
+            <td>Sticky</td>
+            <td>Navigation bar that sticks while scrolling</td>
+        </tr>
+    </table>
+</div>
+
+<!-- Q35 -->
+<div class="question">
+    <h2>35. Complete Webpage Demonstrating All CSS Positioning Concepts</h2>
+
+    <!-- Sticky Navbar -->
+    <div class="navbar">
+        Sticky Navigation Bar
+    </div>
+
+    <!-- Relative Banner -->
+    <div class="banner">
+        <h3>Relative Positioned Banner</h3>
+    </div>
+
+    <!-- Static Content -->
+    <div class="section">
+        <h3>Static Content Section</h3>
+        <p>This section uses the default static positioning.</p>
+    </div>
+
+    <!-- Product Card -->
+    <div class="card">
+        <div class="badge">5</div>
+        <h3>Product Card</h3>
+        <p>Absolute Notification Badge Example</p>
+    </div>
+
+    <!-- z-index Demonstration -->
+    <div class="overlap">
+        <div class="red"></div>
+        <div class="blue"></div>
+        <div class="green"></div>
+    </div>
+
+    <!-- More Static Sections -->
+    <div class="section">
+        <h3>Content Section 1</h3>
+    </div>
+
+    <div class="section">
+        <h3>Content Section 2</h3>
+    </div>
+
+</div>
+
+<!-- Fixed Chat Button -->
+<a href="#" class="chat-btn">💬 Chat</a>
+
+</body>
+</html>

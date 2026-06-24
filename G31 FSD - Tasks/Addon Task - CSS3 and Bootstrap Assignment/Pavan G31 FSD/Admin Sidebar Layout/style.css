@@ -1,0 +1,237 @@
+:root{
+
+    --primary-color:#ff7a00;
+    --cream-bg:#FFF8EE;
+
+}
+
+body{
+
+    margin:0;
+
+    background:var(--cream-bg);
+
+    font-family:'Segoe UI',sans-serif;
+
+}
+
+/* Background */
+
+.paw-bg{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:1.5;
+
+    z-index:-1;
+}
+
+/* Layout */
+
+.dashboard-wrapper{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+/* Sidebar */
+
+.sidebar{
+
+    width:250px;
+
+    background:#fff;
+
+    padding:30px 20px;
+
+    box-shadow:0 0 20px rgba(0,0,0,0.1);
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.logo{
+
+    color:var(--primary-color);
+
+    margin-bottom:30px;
+
+    font-weight:700;
+
+}
+
+.menu{
+
+    list-style:none;
+
+    padding:0;
+
+    flex-grow:1;
+
+}
+
+.menu li{
+
+    margin-bottom:15px;
+
+}
+
+.menu a{
+
+    text-decoration:none;
+
+    color:#555;
+
+    font-weight:600;
+
+    display:block;
+
+    padding:10px;
+
+    border-radius:10px;
+
+    transition:0.3s;
+
+}
+
+.menu a:hover{
+
+    background:#fff4e8;
+
+    color:var(--primary-color);
+
+}
+
+.logout-btn{
+
+    background:var(--primary-color);
+
+    color:white;
+
+    border:none;
+
+    padding:12px;
+
+    border-radius:30px;
+
+}
+
+.logout-btn:hover{
+
+    background:#e56d00;
+
+}
+
+/* Main Content */
+
+.main-content{
+
+    flex:1;
+
+    padding:30px;
+
+}
+
+/* Header */
+
+.dashboard-header{
+
+    margin-bottom:30px;
+
+}
+
+.dashboard-header h1{
+
+    color:var(--primary-color);
+
+}
+
+/* Cards */
+
+.stat-card{
+
+    background:white;
+
+    padding:25px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+
+    transition:0.3s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.stat-card h3{
+
+    color:var(--primary-color);
+
+    font-size:2rem;
+
+}
+
+/* Activity */
+
+.activity-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+
+}
+
+.activity-card h4{
+
+    color:var(--primary-color);
+
+    margin-bottom:15px;
+
+}
+
+.activity-card ul{
+
+    padding-left:20px;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .dashboard-wrapper{
+
+        flex-direction:column;
+
+    }
+
+    .sidebar{
+
+        width:100%;
+
+    }
+
+}

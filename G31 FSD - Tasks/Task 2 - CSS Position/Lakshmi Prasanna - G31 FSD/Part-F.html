@@ -1,0 +1,63 @@
+<!--
+## Part F - Z-Index
+21. Create three overlapping boxes.
+22. Use z-index to place blue box above red box.
+23. Place green box above both.
+24. Explain how z-index affects stacking order.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Part F - Z-Index</title>
+  <style>
+    .container {
+      position: relative;
+      height: 300px;
+      margin: 20px;
+    }
+    .box {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .red {
+      background-color: red;
+      top: 20px;
+      left: 20px;
+      z-index: 1;
+    }
+    .blue {
+      background-color: blue;
+      top: 60px;
+      left: 60px;
+      z-index: 2;
+    }
+    .green {
+      background-color: green;
+      top: 100px;
+      left: 100px;
+      z-index: 3;
+    }
+    p { 
+      font-size: 16px; margin: 20px; 
+    }
+  </style>
+</head>
+<body>
+  <h1>Part F - Z-Index</h1>
+  <div class="container">
+    <div class="box red">Red (z-index:1)</div>
+    <div class="box blue">Blue (z-index:2)</div>
+    <div class="box green">Green (z-index:3)</div>
+  </div>
+  <p>Observation: Higher z-index value means the element appears on top. Green(3) is above Blue(2) which is above Red(1).</p>
+</body>
+</html>

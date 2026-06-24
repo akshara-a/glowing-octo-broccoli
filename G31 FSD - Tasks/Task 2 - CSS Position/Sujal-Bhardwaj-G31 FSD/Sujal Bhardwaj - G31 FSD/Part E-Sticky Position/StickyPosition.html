@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .section {
+            height: 500px;
+            padding: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+         body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        caption {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="section">
+        <h2>Section 1</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt ipsum sed, saepe voluptates eaque porro consectetur cum ad officiis officia aliquam odit debitis necessitatibus. Qui unde omnis cumque veritatis illo at, nam reprehenderit excepturi nisi tempora et soluta dicta commodi recusandae. Iste placeat ratione soluta maiores, facilis, repudiandae necessitatibus beatae possimus nam fugiat, eum sit quisquam! Eveniet dolore voluptatem ipsa repellat molestiae libero, dignissimos totam?</p>
+    </div>
+
+    <div class="section">
+        <h2>Section 2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit adipisci tenetur dolores dignissimos reprehenderit eos velit ipsa praesentium quos animi alias, modi a ducimus dolorum voluptate cum maxime blanditiis unde. Consequatur, maiores saepe.</p>
+    </div>
+
+    <div class="section">
+        <h2>Section 3</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum itaque nihil aperiam earum facere rerum culpa quos iste aut. Fugiat ipsam eos tempore eveniet, commodi nam blanditiis placeat minima sapiente optio dicta corporis quibusdam sit sint, reprehenderit odit officia quia!</p>
+    </div>
+
+    <div class="section">
+        <h2>Section 4</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam iure ex quasi dolorum aspernatur, nihil accusamus omnis corrupti necessitatibus ipsum ducimus dolorem ut dignissimos voluptas quos ullam laboriosam! Qui accusamus corporis minima consequuntur dicta doloribus.</p>
+    </div>
+    <!-- Difference Between fixed and sticky -->
+    
+
+
+    <table>
+        <caption>Difference Between Fixed and Sticky Position</caption>
+
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>position: fixed</th>
+                <th>position: sticky</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Position Reference</td>
+                <td>Viewport (browser window)</td>
+                <td>Parent container and viewport</td>
+            </tr>
+
+            <tr>
+                <td>Scroll Behavior</td>
+                <td>Always stays fixed on the screen</td>
+                <td>Scrolls normally until reaching the specified position, then sticks</td>
+            </tr>
+
+            <tr>
+                <td>Document Flow</td>
+                <td>Removed from normal document flow</td>
+                <td>Remains in normal document flow</td>
+            </tr>
+
+            <tr>
+                <td>Space Reserved</td>
+                <td>No space is reserved</td>
+                <td>Original space remains reserved</td>
+            </tr>
+
+            <tr>
+                <td>Common Uses</td>
+                <td>Headers, chat buttons, back-to-top buttons</td>
+                <td>Navigation bars, section headings</td>
+            </tr>
+
+            <tr>
+                <td>Needs top/left/right/bottom</td>
+                <td>Yes</td>
+                <td>Yes (to define the sticky point)</td>
+            </tr>
+
+            <tr>
+                <td>Example</td>
+                <td><code>position: fixed; top: 0;</code></td>
+                <td><code>position: sticky; top: 0;</code></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
+
+</body>
+</html>

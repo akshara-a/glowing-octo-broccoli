@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Table</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container my-5">
+
+        <!-- Heading -->
+        <div class="text-center mb-4">
+            <h1>Employee Management</h1>
+            <p class="text-muted">
+                Responsive Employee Table using Bootstrap
+            </p>
+        </div>
+
+        <!-- Responsive Table -->
+        <div class="table-responsive">
+
+            <table class="table table-striped table-hover table-bordered align-middle shadow">
+
+                <!-- Table Header -->
+                <thead class="table-dark">
+                    <tr>
+                        <th>Employee ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <!-- Table Body -->
+                <tbody>
+
+                    <tr>
+                        <td>EMP101</td>
+                        <td>Sangam Gupta</td>
+                        <td>AI/ML</td>
+                        <td>sangam@example.com</td>
+                        <td>
+                            <span class="badge bg-success">
+                                Active
+                            </span>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-sm">
+                                Edit
+                            </button>
+
+                            <button class="btn btn-danger btn-sm">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>EMP102</td>
+                        <td>Rahul Sharma</td>
+                        <td>Frontend</td>
+                        <td>rahul@example.com</td>
+                        <td>
+                            <span class="badge bg-warning text-dark">
+                                Pending
+                            </span>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-sm">
+                                Edit
+                            </button>
+
+                            <button class="btn btn-danger btn-sm">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>EMP103</td>
+                        <td>Priya Singh</td>
+                        <td>Backend</td>
+                        <td>priya@example.com</td>
+                        <td>
+                            <span class="badge bg-danger">
+                                Inactive
+                            </span>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-sm">
+                                Edit
+                            </button>
+
+                            <button class="btn btn-danger btn-sm">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>EMP104</td>
+                        <td>Amit Verma</td>
+                        <td>Database</td>
+                        <td>amit@example.com</td>
+                        <td>
+                            <span class="badge bg-success">
+                                Active
+                            </span>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-sm">
+                                Edit
+                            </button>
+
+                            <button class="btn btn-danger btn-sm">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

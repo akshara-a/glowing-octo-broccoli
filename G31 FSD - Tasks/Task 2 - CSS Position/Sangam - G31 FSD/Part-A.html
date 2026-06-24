@@ -1,0 +1,65 @@
+<!--
+# CSS Position Assignment 
+
+## Part A – Static Position
+
+1. Create a webpage containing three boxes.
+2. Apply `position: static` to the second box.
+3. Try using `top: 50px` and `left: 50px` on the static box.
+4. Observe and explain the result.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Position</title>
+    <style>
+        .container {
+            background-color: rgb(76, 131, 131);
+
+        }
+
+        .container .box {
+            height: 50px;
+            width: 50px;
+            /* margin: 23px;
+            padding: 10px; */
+        }
+
+        .box1 {
+            background-color: aquamarine;
+        }
+
+        .box2 {
+            background-color: rgb(127, 140, 255);
+            position: static;
+            top: 50px;
+            left: 50px;
+        }
+
+        .box3 {
+            background-color: rgb(255, 127, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1">box 1</div>
+        <div class="box box2">box 2</div>
+        <div class="box box3">box 3</div>
+    </div>
+
+    <p>
+    <h1> Observation and Explaination of result: </h1>
+    <h3>After applying the position as static there is no effect of top and left properties.</h3>
+    <h3>The position: static property prevents top, bottom, left, right from having an effect.
+    </h3>
+    <h4>The element is positioned according to the Normal Flow of the document. The top, right, bottom, left, and z-index properties have no effect. This is the default value.</h4>
+    </p>
+</body>
+
+</html>

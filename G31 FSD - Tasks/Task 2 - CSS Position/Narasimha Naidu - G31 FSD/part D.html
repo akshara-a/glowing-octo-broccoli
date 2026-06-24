@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Part D - Fixed Position</title>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding-top: 70px; 
+    }
+
+    
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        background-color: #333;
+        color: white;
+
+        text-align: center;
+        padding: 20px;
+
+        font-size: 20px;
+    }
+
+    
+    .content{
+        padding: 20px;
+    }
+
+    .section{
+        height: 500px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    /* Back to Top Button */
+    .top-btn{
+        position: fixed;
+
+        bottom: 20px;
+        right: 20px;
+
+        background-color: blue;
+        color: white;
+
+        padding: 12px 20px;
+        text-decoration: none;
+
+        border-radius: 5px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+
+<div class="header">
+    Fixed Header
+</div>
+
+
+<div class="content">
+
+    <div class="section">
+        <h2>Section 1</h2>
+        <p>Scroll down to see the fixed elements stay visible.</p>
+    </div>
+
+    <div class="section">
+        <h2>Section 2</h2>
+    </div>
+
+    <div class="section">
+        <h2>Section 3</h2>
+    </div>
+
+    <div class="section">
+        <h2>Section 4</h2>
+    </div>
+
+</div>
+
+
+<a href="#" class="top-btn">↑ Top</a>
+
+</body>
+</html>
