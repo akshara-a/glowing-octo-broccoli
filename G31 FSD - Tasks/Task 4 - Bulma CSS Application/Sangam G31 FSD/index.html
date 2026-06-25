@@ -1,11 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bulma CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bulma Starter App</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            flex: 1;
+        }
+
+        .dashboard-card {
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+
 </head>
+
 <body>
-    <h1>Not Learned Yet</h1>
+
+    <!-- Navbar -->
+    <nav class="navbar is-warning">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="#top" class="navbar-item">
+                    <strong>My App</strong>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item">
+                        Home
+                    </a>
+                    <a class="navbar-item">
+                        Services
+                    </a>
+                    <a class="navbar-item">
+                        Projects
+                    </a>
+                </div>
+                <div class="navabar-end">
+                    <a class="navbar-item">
+                        Login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+
+    <section class="hero is-primary">
+
+        <div class="hero-body">
+
+            <div class="container">
+
+                <h1 class="title">
+                    Bulma Starter Application
+                </h1>
+
+                <h2 class="subtitle">
+                    Fully Responsive Layout
+                </h2>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="main-content">
+
+        <!-- Dashboard Cards -->
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="columns">
+
+                    <div class="column">
+
+                        <div class="card dashboard-card ">
+
+                            <div class="card-content">
+
+                                <p class="title">
+                                    120
+                                </p>
+
+                                <p class="subtitle">
+                                    Users
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="column">
+
+                        <div class="card dashboard-card">
+
+                            <div class="card-content">
+
+                                <p class="title">
+                                    85
+                                </p>
+
+                                <p class="subtitle">
+                                    Orders
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="column">
+
+                        <div class="card dashboard-card">
+
+                            <div class="card-content">
+
+                                <p class="title">
+                                    45
+                                </p>
+
+                                <p class="subtitle">
+                                    Projects
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Notification -->
+
+        <section class="section pt-0">
+
+            <div class="container">
+
+                <div class="notification is-success">
+
+                    Welcome to Bulma CSS Framework 
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Form Section -->
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="columns">
+
+                    <div class="column is-6">
+
+                        <h2 class="title is-4">
+                            Contact Form
+                        </h2>
+
+                        <div class="field">
+
+                            <label class="label">
+                                Name
+                            </label>
+
+                            <div class="control">
+
+                                <input class="input" type="text" placeholder="Enter Name">
+
+                            </div>
+
+                        </div>
+
+                        <div class="field">
+
+                            <label class="label">
+                                Email
+                            </label>
+
+                            <div class="control">
+
+                                <input class="input" type="email" placeholder="Enter Email">
+
+                            </div>
+
+                        </div>
+
+                        <div class="field">
+
+                            <label class="label">
+                                Message
+                            </label>
+
+                            <div class="control">
+
+                                <textarea class="textarea" placeholder="Write message">
+</textarea>
+
+                            </div>
+
+                        </div>
+
+                        <button class="button is-primary">
+
+                            Submit
+
+                        </button>
+
+                    </div>
+
+                    <!-- Table -->
+
+                    <div class="column is-6">
+
+                        <h2 class="title is-4">
+                            Recent Users
+                        </h2>
+
+                        <table class="table is-fullwidth is-striped">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Status</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>1</td>
+                                    <td>Sangam</td>
+                                    <td>Active</td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>2</td>
+                                    <td>Rahul</td>
+                                    <td>Active</td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>3</td>
+                                    <td>Aman</td>
+                                    <td>Inactive</td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Box Section -->
+
+        <section class="section pt-0">
+
+            <div class="container">
+
+                <div class="box">
+
+                    <h3 class="title is-5">
+
+                        Bulma Components
+
+                    </h3>
+
+                    <p>
+
+                        You can convert this template into:
+
+                    </p>
+
+                    <ul>
+
+                        <li>Portfolio Website</li>
+                        <li>Admin Dashboard</li>
+                        <li>AI Resume Analyzer</li>
+                        <li>Salon Website</li>
+                        <li>E-commerce Website</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+
+        <div class="content has-text-centered">
+
+            <p>
+
+                © 2026 My Application 
+
+            </p>
+
+        </div>
+
+    </footer>
+
 </body>
+
 </html>
