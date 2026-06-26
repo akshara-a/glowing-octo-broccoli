@@ -10,12 +10,12 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="Addon_j_Task.css" />
+    <link rel="stylesheet" href="Addon_k_Task.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Stayhalal-coders</a>
+        <a class="navbar-brand" href="#">Navbar</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -46,13 +46,13 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Devlopment link
+                Dropdown link
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">web</a></li>
-                <li><a class="dropdown-item" href="#">App</a></li>
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
                 <li>
-                  <a class="dropdown-item" href="#"> here</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
                 </li>
               </ul>
             </li>
@@ -61,6 +61,49 @@
       </div>
     </nav>
 
+    <section class="dashboard-section py-5">
+      <div class="container">
+        <h2 class="text-center text-white mb-5">Dashboard Overview</h2>
+
+        <div class="row g-4">
+          <!-- Total Users -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card dashboard-card text-center p-4">
+              <div class="icon-circle">U</div>
+              <h5 class="mt-3">Total Users</h5>
+              <h2>1,250</h2>
+            </div>
+          </div>
+
+          <!-- Total Orders -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card dashboard-card text-center p-4">
+              <div class="icon-circle">O</div>
+              <h5 class="mt-3">Total Orders</h5>
+              <h2>845</h2>
+            </div>
+          </div>
+
+          <!-- Revenue -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card dashboard-card text-center p-4">
+              <div class="icon-circle">₹</div>
+              <h5 class="mt-3">Revenue</h5>
+              <h2>₹95K</h2>
+            </div>
+          </div>
+
+          <!-- Pending Tasks -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card dashboard-card text-center p-4">
+              <div class="icon-circle">T</div>
+              <h5 class="mt-3">Pending Tasks</h5>
+              <h2>24</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="employee-section py-5">
       <div class="container">
         <h2 class="text-center text-white mb-4">Employee Management</h2>
