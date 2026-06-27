@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Food Delivery Demo</title>
+<style>
+    /* Sticky Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #ff4d4d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  color: white;
+  z-index: 1000;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Relative Banner with Food Ad Image */
+.banner {
+  position: relative;
+  top: 10px;
+  background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') no-repeat center/cover;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Product Card with Absolute Badge */
+.product-card {
+  position: relative;
+  width: 300px;
+  margin: 40px auto;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding: 20px;
+}
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #ff4d4d;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+/* Static Content Sections */
+.content-section {
+  position: static;
+  background: #f2f2f2;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Contact Section */
+.contact-section {
+  position: static;
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  margin-top: 40px;
+}
+
+/* Fixed Chat Button */
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #28a745;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+
+  <!-- Sticky Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">🍔 FoodExpress</div>
+    <ul>
+      <li><a href="#banner">Home</a></li>
+      <li><a href="#product">Products</a></li>
+      <li><a href="#content">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Relative Banner -->
+  <section id="banner" class="banner">
+    <h1>Delicious Meals Delivered Fast</h1>
+    <p>Order your favorite food anytime, anywhere.</p>
+  </section>
+
+  <!-- Product Card with Absolute Badge -->
+  <section id="product" class="product-card">
+    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
+   
+
+    <span class="badge">50% OFF</span>
+    <h2>Cheese Burst Pizza</h2>
+    <p>Hot & fresh pizza with extra cheese.</p>
+    <button>Order Now</button>
+  </section>
+
+  <!-- Static Content Sections -->
+  <section id="content" class="content-section">
+    <h2>Why Choose Us?</h2>
+    <p>We deliver food from top restaurants in your city.</p>
+  </section>
+
+  <section class="content-section">
+    <h2>Customer Reviews</h2>
+    <p>“Best delivery service, always on time!”</p>
+  </section>
+
+  <!-- Contact Section -->
+  <footer id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <p>Email: support@foodexpress.com</p>
+    <p>Phone: +91 8112672296</p>
+    <p>Address: FoodExpress HQ, Lucknow, India</p>
+  </footer>
+
+  <!-- Fixed Chat/Support Button -->
+  <a href="#chat" class="chat-button">💬 Chat Support</a>
+
+</body>
+</html>
