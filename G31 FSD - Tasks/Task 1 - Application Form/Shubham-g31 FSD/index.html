@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Application Form</title>
+  
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+  color: darkblue;
+}
+
+fieldset {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 2px solid #333;
+  background: #fff;
+}
+
+legend {
+  font-weight: bold;
+  color: darkred;
+}
+
+label {
+  display: block;
+  margin: 8px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table, th, td {
+  border: 1px solid #333;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background: darkblue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: navy;
+}
+
+  </style>
+</head>
+<body>
+  <h1>JOB APPLICATION FORM</h1>
+  <p>Please fill in this form completely and accurately. All information provided will be treated as confidential.</p>
+
+  <!-- Position Applied -->
+  <fieldset>
+    <legend>Position Applied For</legend>
+    <label>Position / Job Title: <input type="text" name="jobTitle"></label><br>
+    <label>Department: <input type="text" name="department"></label><br>
+    <label>Expected Salary: <input type="text" name="salary"></label><br>
+    <label>Date Available to Join: <input type="date" name="joinDate"></label>
+  </fieldset>
+
+  <!-- Personal Information -->
+  <fieldset>
+    <legend>1. Personal Information</legend>
+    <label>Full Name: <input type="text" name="fullName"></label><br>
+    <label>Date of Birth: <input type="date" name="dob"></label><br>
+    <label>Gender:
+      <select name="gender">
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+    </label><br>
+    <label>Father’s / Guardian’s Name: <input type="text" name="fatherName"></label><br>
+    <label>Mother’s Name: <input type="text" name="motherName"></label><br>
+    <label>Email Address: <input type="email" name="email"></label><br>
+    <label>Phone Number: <input type="tel" name="phone"></label><br>
+    <label>Alternate Phone Number: <input type="tel" name="altPhone"></label><br>
+    <label>Current Address: <input type="text" name="currentAddress"></label><br>
+    <label>Permanent Address: <input type="text" name="permanentAddress"></label><br>
+    <label>City: <input type="text" name="city"></label><br>
+    <label>State: <input type="text" name="state"></label><br>
+    <label>PIN Code: <input type="text" name="pin"></label><br>
+    <label>Legally eligible to work? 
+      <input type="radio" name="eligible" value="Yes"> Yes
+      <input type="radio" name="eligible" value="No"> No
+    </label>
+  </fieldset>
+
+  <!-- Education -->
+  <fieldset>
+    <legend>2. Educational Qualification</legend>
+    <table>
+      <tr><th>Qualification</th><th>Institution</th><th>Board/University</th><th>Year</th><th>Percentage/CGPA</th></tr>
+      <tr><td>High School</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+      <tr><td>Higher Secondary</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+      <tr><td>Bachelor’s Degree</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+      <tr><td>Master’s Degree</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+      <tr><td>Other</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+    </table>
+  </fieldset>
+
+  <!-- Work Experience -->
+  <fieldset>
+    <legend>3. Work Experience</legend>
+    <table>
+      <tr><th>Company</th><th>Job Title</th><th>From</th><th>To</th><th>Total Experience</th><th>Responsibilities</th></tr>
+      <tr>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="month"></td>
+        <td><input type="month"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+      </tr>
+    </table>
+    <label>Employed with our organization before?
+      <input type="radio" name="employed" value="Yes"> Yes
+      <input type="radio" name="employed" value="No"> No
+    </label>
+  </fieldset>
+
+  <!-- Skills -->
+  <fieldset>
+    <legend>4. Skills & Additional Information</legend>
+    <label>Key Skills: <input type="text"></label><br>
+    <label>Languages Known: <input type="text"></label><br>
+    <label>Certifications/Training: <input type="text"></label>
+  </fieldset>
+
+  <!-- Declaration -->
+  <fieldset>
+    <legend>5. Declaration</legend>
+    <p>I hereby declare that all the information provided above is true and correct to the best of my knowledge.</p>
+    <label>Date: <input type="date"></label><br>
+    <label>Signature: <input type="text"></label>
+  </fieldset>
+
+  <button type="submit">Submit Application</button>
+  </body>
+  </html>

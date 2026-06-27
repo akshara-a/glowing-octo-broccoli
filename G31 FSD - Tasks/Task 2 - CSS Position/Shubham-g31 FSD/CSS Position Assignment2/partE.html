@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Sticky Navbar */
+.navbar {
+  position: sticky;   /* sticks when scrolling */
+  top: 0;             /* sticks to top */
+  background-color: darkblue;
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+  color: white;
+  z-index: 1000;      /* stays above content */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Content Sections */
+.section {
+  height: 600px;
+  padding: 20px;
+  font-size: 20px;
+  border-bottom: 2px solid gray;
+}
+#section1 { background-color: lightcoral; }
+#section2 { background-color: lightgreen; }
+#section3 { background-color: lightyellow; }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Navigation Bar -->
+  <nav class="navbar">
+    <a href="#section1">Section 1</a>
+    <a href="#section2">Section 2</a>
+    <a href="#section3">Section 3</a>
+  </nav>
+
+  <!-- Content Sections -->
+  <div id="section1" class="section">Section 1 Content<br><p><h6>Explain the difference between fixed and sticky.</h6></p></div>
+  <div id="section2" class="section">Section 2 Content<br><p><h6>POSITION : FIXED =- keeps an element permanently attached to the browser viewport. Once an element is fixed, it stays in the same location even when the user scrolls the page. It is removed from the normal document flow and remains visible at all times. This property is commonly used for floating chat buttons, back-to-top buttons, and fixed headers.</h6></p></div></div>
+  <div id="section3" class="section">Section 3 Content<br><p><h6>
+POSITION: STICKY =- keeps an element in the normal document flow until it reaches a specified point (like a threshold), at which point it becomes fixed. This property is useful for creating navigation menus that remain visible as the user scrolls down the page.</h6></p></div></div>
+
+</body>
+</html>
