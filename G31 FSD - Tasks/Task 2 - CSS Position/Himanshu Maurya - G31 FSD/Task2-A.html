@@ -1,0 +1,58 @@
+
+<!--Static property  makes the element ignorant to Display offsets {top,left,right,down}  -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task1-Static</title>
+
+    <style>
+      html body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0px;
+      }
+
+      .threeboxes {
+        background-color: cadetblue;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        width: 100%;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        display:flex; 
+        background-color: bisque;
+        height: 100px;
+        width: 100px;
+        border: solid skyblue 3px;
+        justify-content: center;
+        align-items:center;
+        color: red;
+        box-shadow: 3px red ;
+        font-size : 30px;
+        text-shadow: 2px 1px 3px    rebeccapurple ;
+        
+      }
+
+      .box2 {
+        position: static;
+        top: 200px;
+        left: 300px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="threeboxes">
+      <div class="box box1">BOX1</div>
+      <div class="box box2">BOX2</div>
+      <div class="box box3">BOX3</div>
+    </div>
+  </body>
+</html>

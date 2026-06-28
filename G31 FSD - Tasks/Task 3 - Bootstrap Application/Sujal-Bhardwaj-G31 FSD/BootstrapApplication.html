@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Railway Portal</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .hero {
+            background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+                        url('https://images.unsplash.com/photo-1474487548417-781cb71495f3');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            color: white;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            transition: 0.3s;
+        }
+
+        footer {
+            background-color: #212529;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+            🚆 Railway Department
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero d-flex align-items-center text-center">
+    <div class="container">
+        <h1 class="display-3 fw-bold">
+            Welcome to Railway Department Portal
+        </h1>
+        <p class="lead mt-3">
+            Track Trains, Check Schedules, Book Tickets & Stay Updated
+        </p>
+
+        <a href="#services" class="btn btn-warning btn-lg mt-3">
+            Explore Services
+        </a>
+    </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Railway Services</h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card service-card h-100 shadow">
+                    <div class="card-body text-center">
+                        <h3>🎫</h3>
+                        <h5>Ticket Booking</h5>
+                        <p>
+                            Book railway tickets quickly and securely.
+                        </p>
+                        <button class="btn btn-primary">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card service-card h-100 shadow">
+                    <div class="card-body text-center">
+                        <h3>📍</h3>
+                        <h5>Train Tracking</h5>
+                        <p>
+                            Track live train status and expected arrival times.
+                        </p>
+                        <button class="btn btn-success">
+                            Track Train
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card service-card h-100 shadow">
+                    <div class="card-body text-center">
+                        <h3>🧾</h3>
+                        <h5>Complaint Portal</h5>
+                        <p>
+                            Register complaints and feedback online.
+                        </p>
+                        <button class="btn btn-danger">
+                            Submit Complaint
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Schedule -->
+<section id="schedule" class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Train Schedule</h2>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Train No.</th>
+                        <th>Train Name</th>
+                        <th>Departure</th>
+                        <th>Arrival</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>12002</td>
+                        <td>Shatabdi Express</td>
+                        <td>06:00 AM</td>
+                        <td>11:30 AM</td>
+                        <td>
+                            <span class="badge bg-success">
+                                On Time
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>12952</td>
+                        <td>Rajdhani Express</td>
+                        <td>05:45 PM</td>
+                        <td>08:00 AM</td>
+                        <td>
+                            <span class="badge bg-warning">
+                                Delayed
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>12230</td>
+                        <td>Lucknow Mail</td>
+                        <td>10:30 PM</td>
+                        <td>06:15 AM</td>
+                        <td>
+                            <span class="badge bg-success">
+                                On Time
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- Announcements -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Latest Announcements</h2>
+
+        <div class="alert alert-info">
+            New Vande Bharat service launched between Delhi and Varanasi.
+        </div>
+
+        <div class="alert alert-warning">
+            Maintenance work scheduled on Platform 5 this weekend.
+        </div>
+
+        <div class="alert alert-success">
+            Online reservation system upgraded for faster booking.
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Contact Railway Department</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                <form class="shadow p-4 bg-white rounded">
+
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Enter your name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email"
+                               class="form-control"
+                               placeholder="Enter your email">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-control"
+                                  rows="5"
+                                  placeholder="Write your query"></textarea>
+                    </div>
+
+                    <button class="btn btn-primary">
+                        Submit
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-4 text-center">
+    <div class="container">
+        <p class="mb-0">
+            © 2026 Railway Department Portal | Built with Bootstrap 5
+        </p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

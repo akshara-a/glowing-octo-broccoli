@@ -1,0 +1,126 @@
+/* --- CSS3 Design System Custom Root Variables --- */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --light-bg: #f8f9fa;
+    --dark-text: #212529;
+    --card-hover-translate: translateY(-6px);
+    --card-shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
+    --transition-smooth: all 0.3s ease-in-out;
+}
+
+/* --- Dark Theme Variable Mapping Overrides --- */
+body.dark-mode {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+body.dark-mode .bg-light, 
+body.dark-mode #sidebarMenu,
+body.dark-mode .card,
+body.dark-mode .modal-content,
+body.dark-mode .table,
+body.dark-mode .breadcrumb {
+    background-color: #1e1e1e !important;
+    color: #e0e0e0 !important;
+    border-color: #333333 !important;
+}
+body.dark-mode .nav-link,
+body.dark-mode .form-label,
+body.dark-mode th,
+body.dark-mode td,
+body.dark-mode .text-muted {
+    color: #b0b0b0 !important;
+}
+body.dark-mode .form-control {
+    background-color: #2b2b2b !important;
+    border-color: #444444 !important;
+    color: #ffffff !important;
+}
+body.dark-mode .form-control:focus {
+    background-color: #333333 !important;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.4);
+}
+
+/* --- Core Base Layout Structure --- */
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* --- Typographical Spacing Extensions --- */
+.tracking-wider {
+    letter-spacing: 0.06em;
+}
+
+/* --- Use Case 2: Custom Hero Background Gradient --- */
+.custom-hero-bg {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a4baf 100%);
+}
+
+/* --- Reusable Box Shadows & Transitions --- */
+.custom-card {
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+.custom-card:hover {
+    transform: var(--card-hover-translate);
+    box-shadow: var(--card-shadow-hover) !important;
+}
+
+/* --- Specific Asset Image Framing Constraints --- */
+.custom-img-frame {
+    max-height: 280px;
+    object-fit: cover;
+    width: 100%;
+}
+.profile-card-img {
+    object-fit: cover;
+    object-position: center top;
+}
+.product-card-img {
+    height: 180px;
+    object-fit: contain;
+    background-color: #ffffff;
+    padding: 10px;
+}
+.gallery-img-height {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* --- Pseudo-classes (:hover, :focus) Customizations --- */
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.2);
+}
+.dashboard-sidebar-nav .nav-link:hover {
+    background-color: rgba(13, 110, 253, 0.1);
+    color: var(--primary-color) !important;
+    font-weight: 600;
+}
+
+/* --- Use Case 15: Image Zoom Transform Animations --- */
+.gallery-item-wrap {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition: var(--transition-smooth);
+}
+.gallery-item-wrap .zoom-box {
+    overflow: hidden;
+}
+.gallery-item-wrap img {
+    transition: transform 0.4s ease-in-out;
+}
+.gallery-item-wrap:hover img {
+    transform: scale(1.08);
+}
+.gallery-item-wrap:hover {
+    box-shadow: var(--card-shadow-hover);
+}
+
+/* --- Micro Font Standardizations --- */
+.fs-7 {
+    font-size: 0.75rem;
+}

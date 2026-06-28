@@ -1,0 +1,94 @@
+<!--
+Part F – z-index
+21.Create three overlapping boxes.
+22.Use z-index to place the blue box above the red box.
+23.Place the green box above both.
+24.Explain how z-index affects stacking order.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index Example</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            position: relative;
+            width: 400px;
+            height: 250px;
+            margin: 50px;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            color: white;
+            text-align: center;
+            line-height: 150px;
+            font-size: 20px;
+        }
+
+        .red {
+            background-color: red;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+        }
+
+        .blue {
+            background-color: blue;
+            top: 50px;
+            left: 50px;
+            z-index: 2;
+        }
+
+        .green {
+            background-color: green;
+            top: 80px;
+            left: 80px;
+            z-index: 3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>z-index Example</h1>
+
+    <div class="container">
+        <div class="box red">Red Box</div>
+        <div class="box blue">Blue Box</div>
+        <div class="box green">Green Box</div>
+    </div>
+
+    <h2>Observation and Explanation</h2>
+
+    <p>
+        Three boxes are overlapped using <code>position: absolute</code>.
+    </p>
+
+    <p>
+        The blue box has a higher <code>z-index</code> value than the red box,
+        so it appears above the red box.
+    </p>
+
+    <p>
+        The green box has the highest <code>z-index</code> value, so it appears
+        above both the red and blue boxes.
+    </p>
+
+    <p>
+        The <code>z-index</code> property controls the stacking order of
+        positioned elements. An element with a higher <code>z-index</code>
+        appears in front of elements with lower <code>z-index</code> values.
+    </p>
+
+</body>
+</html>

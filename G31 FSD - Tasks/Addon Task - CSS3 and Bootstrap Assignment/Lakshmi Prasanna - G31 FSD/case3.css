@@ -1,0 +1,50 @@
+:root {
+  --primary-color: #0d6efd;
+  --light-bg: #f8f9fa;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  font-family: Arial, sans-serif;
+}
+
+.login-card {
+  background-color: white;
+  width: 400px;
+  border-radius: 15px !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.login-card h2 {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px rgba(13,110,253,0.3);
+}
+
+.btn-primary {
+  border-radius: 10px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.02);
+}
+
+a {
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: #764ba2;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Part F - z-index</title>
+
+<style>
+
+.container{
+    position:relative;
+    height:350px;
+}
+
+.red{
+    width:150px;
+    height:150px;
+    background:red;
+    position:absolute;
+    left:50px;
+    top:50px;
+    z-index:1;
+}
+
+.blue{
+    width:150px;
+    height:150px;
+    background:blue;
+    position:absolute;
+    left:100px;
+    top:100px;
+    z-index:2;
+}
+
+.green{
+    width:150px;
+    height:150px;
+    background:green;
+    position:absolute;
+    left:150px;
+    top:150px;
+    z-index:3;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Part F - z-index</h1>
+
+<div class="container">
+
+<div class="red"></div>
+
+<div class="blue"></div>
+
+<div class="green"></div>
+
+</div>
+
+<h2>Observation:</h2>
+
+<p>
+Blue appears above Red because it has a higher z-index.
+Green appears above both because it has the highest z-index.
+</p>
+
+</body>
+</html>
