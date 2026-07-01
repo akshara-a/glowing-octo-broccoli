@@ -1,0 +1,38 @@
+body{
+    background: linear-gradient(135deg,#735a6b,#43203c,#670654);
+    min-height: 100vh;
+}
+
+.employee-section{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.table{
+    background: rgba(255,255,255,0.95);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.table tbody tr{
+    transition: 0.3s;
+}
+
+.table tbody tr:hover{
+    background: #dff6ee;
+    transform: scale(1.01);
+}
+
+.badge{
+    padding: 8px 12px;
+    font-size: 0.85rem;
+}
+
+.btn{
+    transition: 0.3s;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+}
