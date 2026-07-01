@@ -315,9 +315,3 @@ Bulma container?
 Answer: A
 
 ---
-
-## Final Summary
-
-Total Questions: 50  
-Correct Answers: 43  
-Incorrect Answers: 7
