@@ -1,0 +1,109 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background:#f5f7fa;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.navbar{
+    background:white;
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
+}
+.navbar-item{
+    font-weight:600;
+}
+.navbar-item:hover{
+    color:#2E8B57 !important;
+}
+
+
+
+.hero{
+    background:linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url("https://imgs.search.brave.com/I76XQvmj4B_fHrwzvWU2OIjR8dVsbQfdc-cY0PJBlrM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMTAv/NjQ4LzU5OS9zbWFs/bC9yZWFsLWVzdGF0/ZS1icm9rZXItYWdl/bnQtcHJlc2VudGlu/Zy1hbmQtY29uc3Vs/dC10by1jdXN0b21l/ci10by1kZWNpc2lv/bi1tYWtpbmctc2ln/bi1pbnN1cmFuY2Ut/Zm9ybS1hZ3JlZW1l/bnQtYnV5LWFuZC1z/ZWxsLWhvbWUtbW9k/ZWwtY29uY2Vybmlu/Zy1tb3J0Z2FnZS1s/b2FuLW9mZmVyLWZv/ci1hbmQtaG91c2Ut/aW5zdXJhbmNlLWZy/ZWUtcGhvdG8uanBn");
+    background-size:cover;
+    background-position:center;
+}
+.hero .title,
+.hero .subtitle{
+    color:white;
+}
+.hero .button{
+    margin-right:10px;
+}
+
+
+
+#properties{
+    padding-top:70px;
+}
+.card{
+    border-radius:15px;
+    overflow:hidden;
+    transition:.3s;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+.card:hover{
+    transform:translateY(-10px);
+   box-shadow:0 12px 28px rgba(0,0,0,.18);
+}
+.card-image img{
+    object-fit:cover;
+    transition:.4s;
+}
+.card:hover img{
+    transform:scale(1.05);
+}
+.card-content{
+    padding:1.4rem;
+}
+
+
+
+.button.is-success{
+    background:#2E8B57;
+    border:none;
+}
+.button.is-success:hover{
+    background:#256d46;
+}
+.button.is-warning{
+    background:#D4AF37;
+    color:white;
+}
+.button.is-warning:hover{
+    background:#bf9824;
+}
+
+
+
+
+.title{
+    color:#222;
+}
+.subtitle{
+    color:#666;
+}
+
+
+
+.footer{
+    background:#1b1b1b;
+    color:white;
+    margin-top:70px;
+    padding:40px 20px;
+}
+.footer .title{
+    color:white;
+}
+
+
+@media(max-width:768px){
+.hero{
+    text-align:center;
+}
+}
