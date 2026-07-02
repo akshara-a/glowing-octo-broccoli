@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nova AI Dashboard</title>
+
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
+
+<style>
+
+
+*{
+box-sizing:border-box;
+}
+
+
+body{
+
+background:
+radial-gradient(circle at top,#1e293b,#020617);
+
+min-height:100vh;
+
+font-family:
+Inter,system-ui,sans-serif;
+
+color:white;
+
+}
+
+
+
+/* Sidebar */
+
+
+.sidebar{
+
+position:fixed;
+
+left:0;
+top:0;
+
+width:260px;
+
+height:100vh;
+
+background:
+rgba(15,23,42,.85);
+
+backdrop-filter:blur(20px);
+
+padding:25px;
+
+border-right:1px solid rgba(255,255,255,.1);
+
+}
+
+
+
+.logo{
+
+font-size:26px;
+
+font-weight:800;
+
+margin-bottom:40px;
+
+}
+
+
+
+.menu a{
+
+display:block;
+
+color:#cbd5e1;
+
+padding:14px;
+
+border-radius:12px;
+
+margin-bottom:8px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+
+
+.menu a:hover,
+.menu a.active{
+
+background:#2563eb;
+
+color:white;
+
+}
+
+
+
+/* Main */
+
+
+.main{
+
+margin-left:260px;
+
+padding:35px;
+
+}
+
+
+
+/* Cards */
+
+
+.glass{
+
+
+background:
+
+rgba(255,255,255,.08);
+
+
+backdrop-filter:
+
+blur(15px);
+
+
+border-radius:22px;
+
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+
+padding:25px;
+
+
+transition:.3s;
+
+}
+
+
+
+.glass:hover{
+
+transform:translateY(-5px);
+
+}
+
+
+
+.stat{
+
+font-size:40px;
+
+font-weight:800;
+
+}
+
+
+
+.tag{
+
+border-radius:20px;
+
+}
+
+
+
+/* Chart */
+
+
+.chart{
+
+height:180px;
+
+display:flex;
+
+align-items:end;
+
+gap:15px;
+
+}
+
+
+
+.bar{
+
+width:35px;
+
+background:#3b82f6;
+
+border-radius:10px 10px 0 0;
+
+animation:grow 1s;
+
+}
+
+
+
+@keyframes grow{
+
+from{
+
+height:0;
+
+}
+
+}
+
+
+
+/* Mobile */
+
+
+@media(max-width:800px){
+
+
+.sidebar{
+
+position:relative;
+
+width:100%;
+
+height:auto;
+
+}
+
+
+.main{
+
+margin-left:0;
+
+}
+
+
+}
+
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<aside class="sidebar">
+
+
+<div class="logo">
+
+🚀 Nova AI
+
+</div>
+
+
+
+<div class="menu">
+
+
+<a class="active"
+onclick="page('home',this)">
+🏠 Dashboard
+</a>
+
+
+<a onclick="page('analytics',this)">
+📊 Analytics
+</a>
+
+
+<a onclick="page('messages',this)">
+💬 Messages
+</a>
+
+
+<a onclick="page('settings',this)">
+⚙ Settings
+</a>
+
+
+
+</div>
+
+
+
+</aside>
+
+
+
+
+
+
+<main class="main">
+
+
+<div id="app"></div>
+
+
+</main>
+
+
+
+
+
+<script>
+
+
+const app=document.getElementById("app");
+
+
+
+const views={
+
+
+
+home:`
+
+<h1 class="title has-text-white">
+Good Morning 👋
+</h1>
+
+<p class="subtitle has-text-grey-light">
+Welcome to Nova AI workspace
+</p>
+
+
+
+<div class="columns">
+
+
+<div class="column">
+
+<div class="glass">
+
+Users
+
+<div class="stat">
+12.4K
+</div>
+
+
+<span class="tag is-success">
++18%
+</span>
+
+
+</div>
+
+</div>
+
+
+
+
+<div class="column">
+
+
+<div class="glass">
+
+Revenue
+
+<div class="stat">
+
+$48K
+
+</div>
+
+
+<span class="tag is-info">
+Monthly
+</span>
+
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="column">
+
+
+<div class="glass">
+
+Status
+
+<div class="stat">
+
+🟢
+
+</div>
+
+
+Online
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div class="glass mt-5">
+
+
+<h2 class="title is-4 has-text-white">
+
+Growth Chart
+
+</h2>
+
+
+
+<div class="chart">
+
+
+<div class="bar" style="height:40%"></div>
+
+<div class="bar" style="height:70%"></div>
+
+<div class="bar" style="height:55%"></div>
+
+<div class="bar" style="height:90%"></div>
+
+<div class="bar" style="height:75%"></div>
+
+
+</div>
+
+
+</div>
+
+
+`,
+
+
+
+
+
+analytics:`
+
+<div class="glass">
+
+
+<h1 class="title has-text-white">
+Analytics
+</h1>
+
+
+<p>
+Performance overview
+</p>
+
+
+
+<progress
+class="progress is-info mt-5"
+value="85"
+max="100">
+</progress>
+
+
+<p>
+AI efficiency 85%
+</p>
+
+
+
+<progress
+class="progress is-success mt-5"
+value="92"
+max="100">
+</progress>
+
+
+<p>
+System health 92%
+</p>
+
+
+</div>
+
+
+`,
+
+
+
+
+messages:`
+
+<div class="glass">
+
+
+<h1 class="title has-text-white">
+Messages 💬
+</h1>
+
+
+
+<div class="notification is-dark">
+
+New user joined project
+
+</div>
+
+
+
+<div class="notification is-dark">
+
+Server update completed
+
+</div>
+
+
+
+<div class="notification is-dark">
+
+Backup successful
+
+</div>
+
+
+
+</div>
+
+
+`,
+
+
+
+
+
+
+settings:`
+
+<div class="glass">
+
+
+<h1 class="title has-text-white">
+
+Settings ⚙
+
+</h1>
+
+
+
+<label class="checkbox">
+
+<input type="checkbox" checked>
+
+ Enable notifications
+
+</label>
+
+
+<br><br>
+
+
+<button class="button is-primary">
+
+Save Settings
+
+</button>
+
+
+
+</div>
+
+
+`
+
+
+
+};
+
+
+
+
+
+function page(name,element){
+
+
+app.innerHTML=views[name];
+
+
+document
+.querySelectorAll(".menu a")
+.forEach(x=>x.classList.remove("active"));
+
+
+if(element)
+element.classList.add("active");
+
+
+
+history.pushState(
+{},
+"",
+"#"+name
+);
+
+
+}
+
+
+
+
+window.onload=()=>{
+
+
+let current=
+location.hash.replace("#","")
+||"home";
+
+
+page(current);
+
+
+};
+
+
+
+
+
+window.onpopstate=()=>{
+
+
+let current=
+location.hash.replace("#","")
+||"home";
+
+
+page(current);
+
+
+};
+
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
