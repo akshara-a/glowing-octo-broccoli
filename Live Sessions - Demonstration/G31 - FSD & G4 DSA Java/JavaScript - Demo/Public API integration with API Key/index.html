@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <h2>Weather App</h2>
+
+    <label for="cityInput">Enter City Name:</label>
+    <input 
+      type="text" 
+      id="cityInput" 
+      placeholder="Enter city name, e.g. Chennai" 
+    />
+
+    <button onclick="fetchData()">Get Weather</button>
+
+
+    <div id="weatherCard" class="weather-card">
+      Longitude:<p id="lon"></p>
+      Latitude:<p id="lat"></p>
+      City Name: <p id="city"></p>
+      Temperature: <p id="temp"></p>
+      Humidity: <p id="humidity"></p>
+    </div>
+  </div>
+
+  <script src="./config.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
