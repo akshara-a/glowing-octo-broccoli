@@ -1,0 +1,28 @@
+/* Navbar */
+.navbar-brand {
+  font-size: 24px;
+}
+
+/* Hero Section */
+.bg-warning {
+  background: linear-gradient(135deg, #f6d365, #fda085) !important;
+}
+
+/* Product Cards */
+.card {
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card .fs-1 {
+  font-size: 60px !important;
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+}

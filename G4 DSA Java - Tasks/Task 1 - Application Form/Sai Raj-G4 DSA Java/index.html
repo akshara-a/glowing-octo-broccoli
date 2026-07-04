@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="form-container">
+    
+    <div class="header-section">
+        <div class="header-text">
+            <h1>JOB APPLICATION FORM</h1>
+            <p>Please fill in this form completely and accurately. All information provided<br>will be treated as confidential.</p>
+        </div>
+        <div class="photo-box">
+            Photograph<br>(Passport Size)<br>Affix Recent<br>Photo
+        </div>
+    </div>
+
+    <div class="section-header">Position Applied For</div>
+    <div class="section-content">
+        <div class="row mb-0">
+            <div class="col divider-col">
+                <div class="input-group">
+                    <label>Position / Job Title:</label>
+                    <input type="text" class="input-line">
+                </div>
+                <div class="input-group mt-10">
+                    <label>Expected Salary:</label>
+                    <input type="text" class="input-line">
+                </div>
+            </div>
+            <div class="col divider-col-left">
+                <div class="input-group">
+                    <label>Department:</label>
+                    <input type="text" class="input-line">
+                </div>
+                <div class="input-group mt-10">
+                    <label>Date Available to Join:</label>
+                    <input type="text" class="input-line">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-header">1. Personal Information</div>
+    <div class="section-content">
+        <div class="row">
+            <div class="col col-2 divider-col">
+                <div class="input-group">
+                    <label>Full Name</label> <label class="sub-label">(As per ID Proof)</label>
+                    <input type="text" class="input-line">
+                </div>
+            </div>
+            <div class="col divider-col divider-col-left">
+                <div class="input-group">
+                    <label>Date of Birth</label> <label class="sub-label">(DD/MM/YYYY)</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="input-line" style="text-align: center" placeholder="___ / ___ / _______">
+                </div>
+            </div>
+            <div class="col divider-col-left">
+                <label style="font-weight: bold; margin-bottom: 5px; display: block;">Gender</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-item"><input type="checkbox"> Male</label>
+                    <label class="checkbox-item"><input type="checkbox"> Female</label>
+                    <label class="checkbox-item"><input type="checkbox"> Other</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row" style="border-top: 1px solid #000; padding-top: 10px;">
+            <div class="col divider-col">
+                <div class="input-group">
+                    <label>Father's / Guardian's Name</label>
+                    <input type="text" class="input-line">
+                </div>
+            </div>
+            <div class="col divider-col-left">
+                <div class="input-group">
+                    <label>Mother's Name</label>
+                    <input type="text" class="input-line">
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="border-top: 1px solid #000; padding-top: 10px;">
+            <div class="col col-2 divider-col">
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="text" class="input-line">
+                </div>
+            </div>
+            <div class="col divider-col divider-col-left">
+                <div class="input-group">
+                    <label>Phone Number</label>
+                    <input type="text" class="input-line">
+                </div>
+            </div>
+            <div class="col divider-col-left">
+                <div class="input-group">
+                    <label>Alternate Phone Number</label>
+                    <input type="text" class="input-line">
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="border-top: 1px solid #000; padding-top: 10px;">
+            <div class="col divider-col">
+                <div class="input-group">
+                    <label>Current Address</label>
+                    <input type="text" class="input-line">
+                </div>
+                <div class="input-group">
+                    <input type="text" class="input-line">
+                </div>
+            </div>
+            <div class="col divider-col-left">
+                <div class="input-group">
+                    <label>Permanent Address</label>
+                    <input type="text" class="input-line">
+                </div>
+                <div class="input-group">
+                    <input type="text" class="input-line">
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="border-top: 1px solid #000; padding-top: 10px;">
+            <div class="col" style="flex: 2;">
+                <div class="input-group">
+                    <label>City:</label>
+                    <input type="text" class="input-line">
+                </div>
+            </div>
+            <div class="col" style="flex: 2;">
+                <div class="input-group">
+                    <label>State:</label>
+                    <input type="text" class="input-line">
+                </div>
+            </div>
+            <div class="col" style="flex: 1;">
+                <div class="input-group">
+                    <label>PIN Code:</label>
+                    <input type="text" class="input-line">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-0" style="border-top: 1px solid #000; padding-top: 10px; align-items: center;">
+            <div class="col-2 checkbox-group">
+                <label style="font-weight: bold;">Are you legally eligible to work in this country?</label>
+                <label class="checkbox-item"><input type="checkbox"> Yes</label>
+                <label class="checkbox-item"><input type="checkbox"> No</label>
+            </div>
+            <div class="col-2 input-group mb-0">
+                <label>If No, please specify:</label>
+                <input type="text" class="input-line">
+            </div>
+        </div>
+    </div>
+
+    <div class="section-header">2. Educational Qualification</div>
+    <div class="section-content" style="padding: 0;">
+        <table style="margin: 0; border: none;">
+            <tr>
+                <th style="border-top: none; border-left: none;">Qualification</th>
+                <th style="border-top: none;">Name of Institution</th>
+                <th style="border-top: none;">Board / University</th>
+                <th style="border-top: none;">Year of Passing</th>
+                <th style="border-top: none; border-right: none;">Percentage / CGPA</th>
+            </tr>
+            <tr>
+                <td style="text-align: left; font-weight: bold; border-left: none;">High School / SSC</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td style="border-right: none;"><input type="text"></td>
+            </tr>
+            <tr>
+                <td style="text-align: left; font-weight: bold; border-left: none;">Higher Secondary / HSC</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td style="border-right: none;"><input type="text"></td>
+            </tr>
+            <tr>
+                <td style="text-align: left; font-weight: bold; border-left: none;">Bachelor's Degree</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td style="border-right: none;"><input type="text"></td>
+            </tr>
+            <tr>
+                <td style="text-align: left; font-weight: bold; border-left: none;">Master's Degree</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td style="border-right: none;"><input type="text"></td>
+            </tr>
+            <tr>
+                <td style="text-align: left; font-weight: bold; border-left: none; border-bottom: none;">Other (Specify)</td>
+                <td style="border-bottom: none;"><input type="text"></td>
+                <td style="border-bottom: none;"><input type="text"></td>
+                <td style="border-bottom: none;"><input type="text"></td>
+                <td style="border-bottom: none; border-right: none;"><input type="text"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section-header">3. Work Experience (Start with the most recent)</div>
+    <div class="section-content" style="padding: 0;">
+        <table style="margin: 0; border: none; border-bottom: 1px solid #000;">
+            <tr>
+                <th style="border-top: none; border-left: none;">Company Name</th>
+                <th style="border-top: none;">Job Title</th>
+                <th style="border-top: none;">From (MM/YYYY)</th>
+                <th style="border-top: none;">To (MM/YYYY)</th>
+                <th style="border-top: none;">Total Experience</th>
+                <th style="border-top: none; border-right: none;">Key Responsibilities</th>
+            </tr>
+            <tr>
+                <td style="border-left: none; height: 25px;"><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td style="border-right: none;"><input type="text"></td>
+            </tr>
+            <tr>
+                <td style="border-left: none; height: 25px;"><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td style="border-right: none;"><input type="text"></td>
+            </tr>
+            <tr>
+                <td style="border-left: none; border-bottom: none; height: 25px;"><input type="text"></td>
+                <td style="border-bottom: none;"><input type="text"></td>
+                <td style="border-bottom: none;"><input type="text"></td>
+                <td style="border-bottom: none;"><input type="text"></td>
+                <td style="border-bottom: none;"><input type="text"></td>
+                <td style="border-bottom: none; border-right: none;"><input type="text"></td>
+            </tr>
+        </table>
+        <div class="row mb-0" style="padding: 10px; align-items: center;">
+            <div class="col-2 checkbox-group">
+                <label style="font-weight: bold;">Have you ever been employed with our organization before?</label>
+                <label class="checkbox-item"><input type="checkbox"> Yes</label>
+                <label class="checkbox-item"><input type="checkbox"> No</label>
+            </div>
+            <div class="col-2 input-group mb-0">
+                <label>If Yes, please specify:</label>
+                <input type="text" class="input-line">
+            </div>
+        </div>
+    </div>
+
+    <div class="section-header">4. Skills & Additional Information</div>
+    <div class="section-content">
+        <div class="row">
+            <div class="col divider-col">
+                <label style="font-weight: bold; display: block; margin-bottom: 5px;">Key Skills / Technical Skills:</label>
+                <input type="text" class="input-line mb-0" style="width: 100%; margin-bottom: 10px;">
+                <input type="text" class="input-line mb-0" style="width: 100%; margin-bottom: 10px;">
+                <input type="text" class="input-line mb-0" style="width: 100%;">
+            </div>
+            <div class="col divider-col divider-col-left">
+                <label style="font-weight: bold; display: block; margin-bottom: 5px;">Languages Known:</label>
+                <input type="text" class="input-line mb-0" style="width: 100%; margin-bottom: 10px;">
+                <input type="text" class="input-line mb-0" style="width: 100%; margin-bottom: 10px;">
+                <input type="text" class="input-line mb-0" style="width: 100%;">
+            </div>
+            <div class="col divider-col-left">
+                <label style="font-weight: bold; display: block; margin-bottom: 5px;">Certification / Training (if any):</label>
+                <input type="text" class="input-line mb-0" style="width: 100%; margin-bottom: 10px;">
+                <input type="text" class="input-line mb-0" style="width: 100%; margin-bottom: 10px;">
+                <input type="text" class="input-line mb-0" style="width: 100%;">
+            </div>
+        </div>
+        
+        <div style="border-top: 1px solid #000; padding-top: 10px; margin-top: 15px;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px;">References (Optional)</label>
+            <table style="margin: 0;">
+                <tr>
+                    <th>Name</th>
+                    <th>Designation</th>
+                    <th>Company / Organization</th>
+                    <th>Phone Number</th>
+                    <th>Email Address</th>
+                </tr>
+                <tr>
+                    <td style="height: 25px;"><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td style="height: 25px;"><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="section-header">5. Declaration</div>
+    <div class="section-content">
+        <p class="declaration-text">
+            I hereby declare that all the information provided above is true and correct to the best of my knowledge and belief. I understand that any false or misleading information may disqualify me from consideration for employment or may result in my dismissal if hired.
+        </p>
+        <div class="row mb-0">
+            <div class="col">
+                <div class="input-group" style="width: 60%;">
+                    <label>Date:</label>
+                    <input type="text" class="input-line">
+                </div>
+            </div>
+            <div class="col">
+                <div class="input-group" style="width: 60%; float: right;">
+                    <label>Signature:</label>
+                    <input type="text" class="input-line">
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="official-use">
+        <div class="section-header">FOR OFFICIAL USE ONLY</div>
+        <div class="row mt-10">
+            <div class="col">
+                <div class="input-group">
+                    <label>Application Received On:</label>
+                    <input type="text" class="input-line">
+                </div>
+            </div>
+            <div class="col">
+                <div class="input-group">
+                    <label>Received By:</label>
+                    <input type="text" class="input-line">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-10 mb-0">
+            <div class="col" style="flex: 3;">
+                <div class="input-group">
+                    <label>Remarks:</label>
+                    <input type="text" class="input-line">
+                </div>
+            </div>
+            <div class="col" style="flex: 1; display: flex; align-items: flex-end; justify-content: flex-end;">
+                <div class="checkbox-group">
+                    <label style="font-weight: bold;">Shortlisted:</label>
+                    <label class="checkbox-item"><input type="checkbox"> Yes</label>
+                    <label class="checkbox-item"><input type="checkbox"> No</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

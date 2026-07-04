@@ -1,0 +1,12 @@
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: lightblue;
+    border: 2px solid black;
+    text-align: center;
+}
+.box1{
+    position: relative;
+    left: 40px;
+    top: 20px;
+}

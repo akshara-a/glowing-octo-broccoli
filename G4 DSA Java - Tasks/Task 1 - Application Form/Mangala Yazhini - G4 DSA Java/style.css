@@ -1,0 +1,282 @@
+body{
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+  display: flex;
+  /* border: 3px solid red; */
+  padding: 20px;
+}
+
+p{
+  font-size: 0.85em;
+}
+
+.header-content {
+  /* flex : 5; */
+   flex: 1;
+}
+
+
+
+.header h1{
+  /* border: 3px solid blue; */
+  padding: 5px;
+  margin: 0;
+  width: 85%; 
+  font-size: 2.5em;
+  font-weight : light;
+  color : rgb(2, 2, 80); 
+}
+
+.header p{
+  /* border: 3px solid green; */
+  padding: 5px;
+  width: 85%; 
+  margin: 0px; 
+}
+
+.header > div{
+  /* border: 1px solid black; */
+  padding: 0px;
+}
+
+.photo-box{
+  
+  border: 1px solid black;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-box p{
+  font-size: 0.7em;
+  text-align: center;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+
+
+.line-input{
+  border: none;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+
+
+
+.position-div
+{
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px; 
+  margin-right: 20px;
+}
+
+.personal-info-div
+{
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px; 
+  margin-right: 20px;
+}
+
+.education-div
+{
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px; 
+  margin-right: 20px;
+}
+
+
+.work-div 
+{
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px; 
+  margin-right: 20px;
+}
+
+.skills-div 
+{
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px; 
+  margin-right: 20px;
+}
+
+
+.ref-div
+{
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px; 
+  margin-right: 20px;
+}
+
+.declaration-div
+{
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px; 
+  margin-right: 20px;
+}
+
+.details-div
+{
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px; 
+  margin-right: 20px;
+}
+
+.details-header{
+  background-color: white;
+  color: black;
+}
+
+.position-div table{
+    width: 100%;
+    table-layout: auto;
+    border: 1px solid black;
+  
+}
+
+
+.personal-info-div > table{
+    width: 100%;
+    table-layout: auto;
+    border: 1px solid black;
+}
+
+.education-div table{
+    width: 100%;
+    table-layout: auto;
+    border: 1px solid black;
+}
+
+.work-div table{
+    width: 100%;
+    table-layout: auto;
+    border: 1px solid black;
+}
+
+.skills-div table{
+    width: 100%;
+    table-layout: auto;
+    border: 1px solid black;
+}
+
+
+.ref-div table{
+    width: 100%;
+    table-layout: auto;
+    border: 1px solid black;
+}
+
+
+.declaration-div table {
+    width: 100%;
+    table-layout: auto;
+    border: 1px solid black;
+} 
+
+.position-div td:nth-child(1),
+.position-div td:nth-child(3){
+    white-space: nowrap; /* label takes only required space */
+}
+
+.position-div td:nth-child(2),
+.position-div td:nth-child(4){
+    width: 50%; /* remaining space goes to inputs */
+}
+
+.line-input{
+    /* width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0; */
+
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #555;
+    background: transparent;
+    outline: none;
+    box-sizing: border-box;
+    padding: 2px 0;
+    margin: 0px;
+    font-size: 16px;
+}
+
+.inline-input{
+    border: none;
+    border-bottom: 1px solid black;
+    
+}
+
+.line-input{
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+
+.table-heading{
+
+    border: 1px solid black;
+}
+
+table 
+{
+  border: 0px; 
+  border-spacing : 0px; 
+}
+
+
+th{
+  color : white; 
+  background-color : rgb(2, 2, 80); 
+  margin-top : 0px;
+  margin-bottom : 0px;
+  text-align: left;
+  padding: 5px; 
+
+}
+
+td {
+  padding: 5px; 
+}
+
+
+
+.division
+{
+  display: flex;
+  flex-direction: column;
+  /* border: 3px solid red; */
+}
+
+.nested-table td
+{
+  margin: 0px; 
+  padding: 0px;
+  /* border : 1px solid red ; */
+  
+}
+
+.nested-table
+{
+  /* border: 0px;  */
+  border-spacing : 0px; 
+  width: 100%;  
+}
+

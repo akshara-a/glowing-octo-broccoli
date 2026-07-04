@@ -1,0 +1,90 @@
+<!--
+Part B – Relative Position 
+5.Create a box and apply position: relative.
+6.Move the box 40px to the right and 20px down. 
+7.Explain how the box's original space is affected. 
+8.Create two adjacent boxes and move one using relative positioning. 
+Describe the behavior of the other box.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Position</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .box {
+            height: 60px;
+            width: 60px;
+            background-color: yellowgreen;
+            text-align: center;
+            line-height: 60px;
+            position: relative;
+            left: 40px;
+            top: 20px;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .box1,
+        .box2 {
+            height: 60px;
+            width: 60px;
+            display: inline-block;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .box1 {
+            background-color: aqua;
+            position: relative;
+            left: 40px;
+            top: 20px;
+        }
+
+        .box2 {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Relative Position Example</h2>
+
+    <div class="box">1</div>
+
+    <h2>Two Adjacent Boxes</h2>
+
+    <div class="container">
+        <div class="box1">2</div>
+        <div class="box2">3</div>
+    </div>
+
+    <h2>Explanation</h2>
+
+    <p>
+        The first box uses <code>position: relative</code>.
+        Applying <code>left: 40px</code> moves the box 40 pixels to the right,
+        and <code>top: 20px</code> moves it 20 pixels down from its original position.
+    </p>
+
+    <p>
+        The original space of the box is still reserved in the document layout.
+        Other elements behave as if the box is still in its original location.
+    </p>
+
+    <p>
+        In the second example, only Box 2 is moved using relative positioning.
+        Box 3 remains in its original position and does not move to fill the empty space left by Box 2.
+    </p>
+
+</body>
+</html>
