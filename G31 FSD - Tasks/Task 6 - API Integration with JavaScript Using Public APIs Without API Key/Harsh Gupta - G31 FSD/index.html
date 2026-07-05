@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather App</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+}
+
+.container{
+    width:350px;
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+h1{
+    margin-bottom:20px;
+    color:#333;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:2px solid #4facfe;
+    border-radius:8px;
+    outline:none;
+    font-size:16px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    border:none;
+    border-radius:8px;
+    background:#4facfe;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#007bff;
+}
+
+.weather-card{
+    margin-top:20px;
+    padding:20px;
+    border-radius:12px;
+    background:linear-gradient(135deg,#36d1dc,#5b86e5);
+    color:white;
+    display:none;
+}
+
+.weather-card h2{
+    margin-bottom:15px;
+}
+
+.weather-card p{
+    margin:10px 0;
+    font-size:18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>🌤 Weather App</h1>
+
+    <input type="text" id="city" placeholder="Enter City Name">
+
+    <button onclick="getWeather()">Get Weather</button>
+
+    <div id="weather" class="weather-card"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
