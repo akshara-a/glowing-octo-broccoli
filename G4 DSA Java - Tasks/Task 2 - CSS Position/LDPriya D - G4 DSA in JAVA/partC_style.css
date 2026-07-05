@@ -12,7 +12,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* ---------- Example 1 ---------- */
+/* Example 1 */
 
 .parent-container {
     width: 320px;
@@ -33,13 +33,13 @@ h2 {
     line-height: 60px;
 
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 0px;
+    right: 0px;
 
     border-radius: 5px;
 }
 
-/* ---------- Example 2 ---------- */
+/* Example 2 */
 
 .notification-container {
     width: 180px;
