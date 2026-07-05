@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Visa Application Form</title>
+   <link rel="stylesheet" href="visa-application-form.css">
+</head>
+<body>
+<div class="page">
+
+   <!-- HEADER -->
+   <div class="header">
+      <div class="header-left">
+         <h1>VISA APPLICATION FORM</h1>
+         <p>Please fill in the form completely and correctly in BLOCK LETTERS.</p>
+      </div>
+      <div class="photo-box">PHOTO<br>(35mm x 45mm)<br>(White Background)</div>
+   </div>
+   <hr class="header-divider">
+   <div class="official-top">
+      <div class="official-left">
+         <div class="official-section-title">For Official Use Only</div>
+         <div class="official-left-body">
+            <div class="form-row" style="margin-bottom:6px;">
+               <div class="field-inline"><label>Application No.</label><div class="line"></div></div>
+            </div>
+            <div class="form-row" style="margin-bottom:6px;">
+               <div class="field-inline"><label>Date of Application</label><div class="line"></div></div>
+            </div>
+            <div class="form-row" style="margin-bottom:6px;">
+               <div class="field-inline"><label>Visa Category</label><div class="line"></div></div>
+            </div>
+            <div class="form-row">
+               <div class="field-inline"><label>Received By</label><div class="line"></div></div>
+            </div>
+         </div>
+      </div>
+      <div>
+         <div class="official-right-body" style="padding-top:6px;">
+            <div class="visa-type-label">Type of Visa Applied For <span style="font-weight:400;">(Please tick one)</span></div>
+            <div class="visa-types-grid">
+               <div class="check-item"><input type="checkbox"> <span>Tourist / Visitor</span></div>
+               <div class="check-item"><input type="checkbox"> <span>Business</span></div>
+               <div class="check-item"><input type="checkbox"> <span>Transit</span></div>
+               <div class="check-item"><input type="checkbox"> <span>Student</span></div>
+               <div class="check-item"><input type="checkbox"> <span>Work</span></div>
+               <div class="check-item"><input type="checkbox"> <span>Family Visit</span></div>
+               <div class="check-item"><input type="checkbox"> <span>Medical</span></div>
+               <div class="check-item" style="grid-column:span 2;">
+                  <input type="checkbox"> <span>Others (Please specify)</span>
+                  <div style="border-bottom:1px solid #000;flex:1;height:16px;min-width:40px;margin-left:4px;"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- 1. PERSONAL INFORMATION -->
+   <div class="section">
+      <div class="section-title">1. Personal Information</div>
+      <div class="cell-grid cell-grid-2">
+         <div class="cell">
+            <span class="cell-label">1.1 Full Name <span style="font-weight:400;">(as in passport)</span></span>
+            <div class="line"></div>
+         </div>
+         <div class="cell" style="border-right:none;">
+            <span class="cell-label">1.2 Date of Birth (DD/MM/YYYY)</span>
+            <div style="display:flex;align-items:flex-end;gap:2px;">
+               <div style="border-bottom:1px solid #000;width:30px;height:16px;"></div><span>/</span>
+               <div style="border-bottom:1px solid #000;width:30px;height:16px;"></div><span>/</span>
+               <div style="border-bottom:1px solid #000;width:44px;height:16px;"></div>
+            </div>
+         </div>
+      </div>
+      <div class="cell-grid cell-grid-3">
+         <div class="cell">
+            <span class="cell-label">1.3 Gender</span>
+            <div class="inline-checks">
+               <div class="check-item"><input type="checkbox"> <span>Male</span></div>
+               <div class="check-item"><input type="checkbox"> <span>Female</span></div>
+               <div class="check-item"><input type="checkbox"> <span>Other</span></div>
+            </div>
+         </div>
+         <div class="cell">
+            <span class="cell-label">1.4 Place of Birth</span>
+            <div class="line"></div>
+         </div>
+         <div class="cell" style="border-right:none;">
+            <span class="cell-label">1.5 Nationality</span>
+            <div class="line"></div>
+         </div>
+      </div>
+      <div class="cell-grid cell-grid-2">
+         <div class="cell">
+            <span class="cell-label">1.6 Marital Status</span>
+            <div class="inline-checks">
+               <div class="check-item"><input type="checkbox"> <span>Single</span></div>
+               <div class="check-item"><input type="checkbox"> <span>Married</span></div>
+               <div class="check-item"><input type="checkbox"> <span>Divorced</span></div>
+               <div class="check-item"><input type="checkbox"> <span>Widowed</span></div>
+            </div>
+         </div>
+         <div class="cell" style="border-right:none;">
+            <span class="cell-label">1.7 Mother's Full Name</span>
+            <div class="line"></div>
+         </div>
+      </div>
+      <div class="cell-grid cell-grid-1">
+         <div class="cell" style="border-right:none;">
+            <span class="cell-label">1.8 Father's Full Name</span>
+            <div class="line"></div>
+         </div>
+      </div>
+      <div class="cell-grid cell-grid-3">
+         <div class="cell">
+            <span class="cell-label">1.9 Passport Number</span>
+            <div class="line"></div>
+         </div>
+         <div class="cell">
+            <span class="cell-label">1.10 Date of Issue (DD/MM/YYYY)</span>
+            <div style="display:flex;align-items:flex-end;gap:2px;">
+               <div style="border-bottom:1px solid #000;width:26px;height:16px;"></div><span>/</span>
+               <div style="border-bottom:1px solid #000;width:26px;height:16px;"></div><span>/</span>
+               <div style="border-bottom:1px solid #000;width:36px;height:16px;"></div>
+            </div>
+         </div>
+         <div class="cell" style="border-right:none;">
+            <span class="cell-label">1.11 Date of Expiry (DD/MM/YYYY)</span>
+            <div style="display:flex;align-items:flex-end;gap:2px;">
+               <div style="border-bottom:1px solid #000;width:26px;height:16px;"></div><span>/</span>
+               <div style="border-bottom:1px solid #000;width:26px;height:16px;"></div><span>/</span>
+               <div style="border-bottom:1px solid #000;width:36px;height:16px;"></div>
+            </div>
+         </div>
+      </div>
+      <div class="cell-grid cell-grid-2">
+         <div class="cell">
+            <span class="cell-label">1.12 Place of Issue</span>
+            <div class="line"></div>
+         </div>
+         <div class="cell" style="border-right:none;">
+            <span class="cell-label">1.13 National ID Number <span style="font-weight:400;">(if any)</span></span>
+            <div class="line"></div>
+         </div>
+      </div>
+      <div class="cell-grid cell-grid-2">
+         <div class="cell">
+            <span class="cell-label">1.14 Occupation</span>
+            <div class="line"></div>
+         </div>
+         <div class="cell" style="border-right:none;">
+            <span class="cell-label">1.15 Employer / Business Name</span>
+            <div class="line"></div>
+         </div>
+      </div>
+      <div class="cell-grid cell-grid-1">
+         <div class="cell" style="border-right:none;">
+            <span class="cell-label">1.16 Employer / Business Address</span>
+            <div class="line"></div>
+         </div>
+      </div>
+      <div class="cell-grid cell-grid-3">
+         <div class="cell">
+            <span class="cell-label">1.17 Phone Number</span>
+            <div class="line"></div>
+         </div>
+         <div class="cell">
+            <span class="cell-label">1.18 Email Address</span>
+            <div class="line"></div>
+         </div>
+         <div class="cell" style="border-right:none;">
+            <span class="cell-label">1.19 Alternate Contact Number</span>
+            <div class="line"></div>
+         </div>
+      </div>
+   </div>
+   <!-- 2. TRAVEL INFORMATION -->
+   <div class="section">
+      <div class="section-title">2. Travel Information</div>
+
+      <div class="cell-grid cell-grid-1">
+         <div class="cell" style="border-right:none;">
+            <span class="cell-label">2.1 Purpose of Visit</span>
+            <div class="line"></div>
+         </div>
+      </div>
+
+      <div class="cell-grid cell-grid-3">
+         <div class="cell">
+            <span class="cell-label">2.2 Date of Arrival (DD/MM/YYYY)</span>
+            <div style="display:flex;align-items:flex-end;gap:2px;">
+               <div style="border-bottom:1px solid #000;width:26px;height:16px;"></div><span>/</span>
+               <div style="border-bottom:1px solid #000;width:26px;height:16px;"></div><span>/</span>
+               <div style="border-bottom:1px solid #000;width:36px;height:16px;"></div>
+            </div>
+         </div>
+         <div class="cell">
+            <span class="cell-label">2.3 Date of Departure (DD/MM/YYYY)</span>
+            <div style="display:flex;align-items:flex-end;gap:2px;">
+               <div style="border-bottom:1px solid #000;width:26px;height:16px;"></div><span>/</span>
+               <div style="border-bottom:1px solid #000;width:26px;height:16px;"></div><span>/</span>
+               <div style="border-bottom:1px solid #000;width:36px;height:16px;"></div>
+            </div>
+         </div>
+         <div class="cell" style="border-right:none;">
+            <span class="cell-label">2.4 Port of Entry</span>
+            <div class="line"></div>
+         </div>
+      </div>
+
+      <div class="cell-grid cell-grid-1">
+         <div class="cell" style="border-right:none;">
+            <span class="cell-label">2.5 Address in the Country of Visit</span>
+            <div class="line"></div>
+         </div>
+      </div>
+
+      <div class="cell-grid cell-grid-1">
+         <div class="cell" style="border-right:none;">
+            <span class="cell-label">2.6 Name &amp; Address of Contact Person / Organization in the Country of Visit</span>
+            <div class="line"></div>
+         </div>
+      </div>
+
+      <div class="cell-grid cell-grid-2">
+         <div class="cell">
+            <span class="cell-label">2.7 Will you be accompanied by anyone?</span>
+            <div class="inline-checks">
+               <div class="check-item"><input type="checkbox"> <span>Yes</span></div>
+               <div class="check-item"><input type="checkbox"> <span>No</span></div>
+            </div>
+         </div>
+         <div class="cell" style="border-right:none;">
+            <span class="cell-label">2.8 If yes, please provide details</span>
+            <div class="line"></div>
+         </div>
+      </div>
+   </div>
+   <!-- 3. PREVIOUS TRAVEL INFORMATION -->
+   <div class="section">
+      <div class="section-title">3. Previous Travel Information</div>
+
+      <div class="cell-grid cell-grid-2">
+         <div class="cell">
+            <span class="cell-label">3.1 Have you ever visited this country before?</span>
+            <div class="inline-checks">
+               <div class="check-item"><input type="checkbox"> <span>Yes</span></div>
+               <div class="check-item"><input type="checkbox"> <span>No</span></div>
+            </div>
+         </div>
+         <div class="cell" style="border-right:none;">
+            <span class="cell-label">3.2 If yes, last visit date (DD/MM/YYYY)</span>
+            <div style="display:flex;align-items:flex-end;gap:2px;">
+               <div style="border-bottom:1px solid #000;width:26px;height:16px;"></div><span>/</span>
+               <div style="border-bottom:1px solid #000;width:26px;height:16px;"></div><span>/</span>
+               <div style="border-bottom:1px solid #000;width:40px;height:16px;"></div>
+            </div>
+         </div>
+      </div>
+      <div class="cell-grid cell-grid-2">
+         <div class="cell">
+            <span class="cell-label">3.3 Have you ever been refused a visa for this country or any other country?</span>
+            <div class="inline-checks">
+               <div class="check-item"><input type="checkbox"> <span>Yes</span></div>
+               <div class="check-item"><input type="checkbox"> <span>No</span></div>
+            </div>
+         </div>
+         <div class="cell" style="border-right:none;">
+            <span class="cell-label">3.4 If yes, please provide details</span>
+            <div class="line" style="margin-top:8px;"></div>
+         </div>
+      </div>
+   </div>
+   <!-- 4. DECLARATION -->
+   <div class="section">
+      <div class="section-title">4. Declaration</div>
+      <p class="declaration-text">I hereby declare that the information given above is true, complete and correct to the best of my knowledge and belief. I understand that any false information may lead to the refusal of my application or cancellation of visa.</p>
+      <div class="decl-sign-row">
+         <div class="field-inline">
+            <label>Date:</label>
+            <div class="line"></div>
+         </div>
+         <div class="field-inline" style="flex:2;">
+            <label>Applicant's Signature:</label>
+            <div class="line"></div>
+         </div>
+      </div>
+      <div style="height:10px;"></div>
+   </div>
+   <div class="note-section">
+      <div>
+         <div class="note-label">NOTE:</div>
+         <div style="margin-top:3px;font-size:11px;">Please attach the following documents with your application:</div>
+      </div>
+      <ul>
+         <li>Valid Passport</li>
+         <li>Passport Size Photograph</li>
+         <li>Travel Itinerary / Flight Booking</li>
+      </ul>
+      <ul>
+         <li>Proof of Accommodation</li>
+         <li>Financial Proof</li>
+         <li>Any other supporting documents</li>
+      </ul>
+   </div>
+
+</div>
+</body>
+</html>
