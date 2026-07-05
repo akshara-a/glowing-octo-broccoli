@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 30px;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* ---------- Example 1 ---------- */
+
+.parent-container {
+    width: 320px;
+    height: 220px;
+    background-color: #dceeff;
+    border: 2px solid #4a6fa5;
+    border-radius: 8px;
+    position: relative;
+}
+
+.child-box {
+    width: 80px;
+    height: 60px;
+    background-color: #ff7043;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 60px;
+
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    border-radius: 5px;
+}
+
+/* ---------- Example 2 ---------- */
+
+.notification-container {
+    width: 180px;
+    position: relative;
+}
+
+.bell-image {
+    width: 150px;
+    display: block;
+}
+
+.badge-main {
+    position: absolute;
+    top: 28px;
+    left: 72px;
+
+    width: 42px;
+    height: 42px;
+    background-color: #e53935;
+    color: white;
+
+    border-radius: 50%;
+    border: 3px solid white;
+
+    text-align: center;
+    line-height: 42px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.badge-small {
+    position: absolute;
+    top: 10px;
+    left: 132px;
+
+    width: 26px;
+    height: 26px;
+    background-color: red;
+    color: white;
+
+    border-radius: 50%;
+
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    font-weight: bold;
+}
