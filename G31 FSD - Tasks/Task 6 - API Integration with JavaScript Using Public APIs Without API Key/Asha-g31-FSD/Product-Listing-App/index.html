@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing App</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>🛒 Product Listing App</h1>
+        
+    </header>
+
+    <section class="controls">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search Products..."
+        >
+
+        <select id="sortSelect">
+            <option value="">Sort By</option>
+            <option value="low">Price Low → High</option>
+            <option value="high">Price High → Low</option>
+        </select>
+
+        <select id="categorySelect">
+            <option value="all">All Categories</option>
+        </select>
+
+    </section>
+
+    <h3 id="productCount"></h3>
+
+    <div id="loading">
+        Loading Products...
+    </div>
+
+    <div id="error"></div>
+
+    <section id="productContainer"></section>
+
+    <button id="scrollTop">⬆</button>
+
+    <div id="modal" class="modal">
+
+        <div class="modal-content">
+
+            <span id="closeModal">&times;</span>
+
+            <div id="modalBody"></div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
