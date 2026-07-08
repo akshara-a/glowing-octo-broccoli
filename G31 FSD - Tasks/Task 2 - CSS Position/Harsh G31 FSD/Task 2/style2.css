@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Task 5 & 6 */
+.box {
+    width: 150px;
+    height: 100px;
+    background-color: lightblue;
+    border: 2px solid blue;
+
+    position: relative;
+    left: 40px;
+    top: 20px;
+}
+
+/* Task 8 */
+.container {
+    margin-top: 50px;
+}
+
+.box1,
+.box2 {
+    width: 120px;
+    height: 80px;
+    border: 2px solid black;
+    display: inline-block;
+    text-align: center;
+    line-height: 80px;
+}
+
+.box1 {
+    background-color: lightgreen;
+
+    position: relative;
+    left: 40px;
+    top: 20px;
+}
+
+.box2 {
+    background-color: lightcoral;
+}
