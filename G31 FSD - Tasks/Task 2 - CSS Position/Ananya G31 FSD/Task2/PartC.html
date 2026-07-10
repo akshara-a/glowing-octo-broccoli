@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Part C - Absolute Position</title>
+
+<style>
+
+/* Parent container */
+.parent{
+    width:300px;
+    height:200px;
+    border:2px solid black;
+    margin-bottom:50px;
+    position:relative;
+}
+
+/* Child box */
+.child{
+    width:60px;
+    height:60px;
+    background:red;
+
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+/* Image container */
+.image-container{
+    position:relative;
+    display:inline-block;
+}
+
+/* Image */
+.image-container img{
+    width:250px;
+    height:auto;
+    display:block;
+}
+
+/* Notification badge */
+.badge{
+    position:absolute;
+    top:5px;
+    right:5px;
+
+    width:30px;
+    height:30px;
+    border-radius:50%;
+
+    background:red;
+    color:white;
+
+    text-align:center;
+    line-height:30px;
+    font-weight:bold;
+}
+
+</style>
+</head>
+<body>
+
+<h2>Absolute Position Inside Parent</h2>
+
+<div class="parent">
+    <div class="child"></div>
+</div>
+
+<h2>Notification Badge on Image</h2>
+
+<div class="image-container">
+    <img src="image.png" alt="Flower Image">
+    <div class="badge">5</div>
+</div>
+</body>
+</html>
