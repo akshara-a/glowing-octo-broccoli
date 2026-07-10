@@ -1,0 +1,108 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#0b0f1a;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:30px;
+min-height:100vh;
+}
+
+.container{
+width:900px;
+background:#121b2d;
+padding:30px;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,0,0,.5);
+}
+
+h1{
+text-align:center;
+margin-bottom:20px;
+color:#4fc3f7;
+}
+
+.search{
+display:flex;
+gap:10px;
+justify-content:center;
+align-items:center;
+margin-bottom:20px;
+flex-wrap:wrap;
+}
+
+input{
+padding:10px;
+font-size:16px;
+border-radius:6px;
+border:none;
+}
+
+button{
+padding:10px 20px;
+background:#4fc3f7;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-size:16px;
+font-weight:bold;
+}
+
+button:hover{
+background:#03a9f4;
+}
+
+#loading{
+color:yellow;
+text-align:center;
+margin:10px;
+font-weight:bold;
+}
+
+#error{
+color:red;
+text-align:center;
+margin:10px;
+font-weight:bold;
+}
+
+.card{
+margin-top:20px;
+text-align:center;
+}
+
+.card img{
+width:100%;
+max-width:700px;
+border-radius:10px;
+margin:20px 0;
+}
+
+iframe{
+width:100%;
+height:450px;
+border:none;
+margin-top:20px;
+}
+
+.card p{
+margin:10px 0;
+line-height:1.6;
+text-align:justify;
+}
+
+.card h2{
+margin:15px 0;
+color:#ffd54f;
+}
+
+.card a{
+color:#81d4fa;
+}
