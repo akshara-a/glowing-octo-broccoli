@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="top"></div>
+
+        <h1>Application Form</h1>
+
+        <!-- GENERAL DETAILS -->
+        <p class="section-title">General Information</p>
+
+        <div class="content">
+
+            <div class="row">
+                <label>Proposed Insured's Name</label>
+                <input type="text" placeholder="Enter your full name">
+            </div>
+
+            <div class="row-3">
+                <div>
+                    <label>Birth Date</label>
+                    <input type="date">
+                </div>
+
+                <div>
+                    <label>Gender</label>
+                    <div class="radio-box">
+                        <label><input type="radio" name="gender"> Male</label>
+                        <label><input type="radio" name="gender"> Female</label>
+                    </div>
+                </div>
+
+                <div>
+                    <label>Passport Number</label>
+                    <input type="text" placeholder="Passport no.">
+                </div>
+            </div>
+
+            <div class="row">
+                <label>Address</label>
+                <input type="text" placeholder="Enter your full address">
+            </div>
+
+            <div class="row-2">
+                <div>
+                    <label>Phone Number</label>
+                    <input type="text" placeholder="Enter phone number">
+                </div>
+
+                <div>
+                    <label>Email Address</label>
+                    <input type="email" placeholder="Enter email">
+                </div>
+            </div>
+
+            <div class="row-2">
+                <div>
+                    <label>ID Number</label>
+                    <input type="text" placeholder="ID number">
+                </div>
+
+                <div>
+                    <label>Social Security Number</label>
+                    <input type="text" placeholder="SSN">
+                </div>
+            </div>
+
+            <div class="row">
+                <label>Status</label>
+                <div class="radio-box">
+                    <label><input type="radio" name="status"> Single</label>
+                    <label><input type="radio" name="status"> Married</label>
+                    <label><input type="radio" name="status"> Divorced</label>
+                    <label><input type="radio" name="status"> Others</label>
+                </div>
+            </div>
+
+            <div class="row-2">
+                <div>
+                    <label>Occupation</label>
+                    <input type="text" placeholder="Your occupation">
+                </div>
+
+                <div>
+                    <label>Are you a retiree?</label>
+                    <div class="radio-box">
+                        <label><input type="radio" name="retiree"> Yes</label>
+                        <label><input type="radio" name="retiree"> No</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PERSONAL DETAILS -->
+        <p class="section-title">Personal Details</p>
+
+        <div class="content">
+
+            <div class="row">
+                <label>Name of Beneficiary</label>
+                <input type="text" placeholder="Name of beneficiary">
+            </div>
+
+            <div class="row">
+                <label>Bank Account</label>
+                <input type="text" placeholder="Bank account / ID number">
+            </div>
+
+            <div class="row column">
+                <label>Name & Address of Beneficiary's Bank</label>
+                <input type="text" placeholder="Bank Name">
+                <input type="text" placeholder="Bank Address">
+            </div>
+
+            <!-- Plans -->
+            <div class="plan-box">
+                <div class="plan">
+                    <label>Employee</label>
+                    <div class="radio-box">
+                        <label><input type="radio" name="emp"> Yes</label>
+                        <label><input type="radio" name="emp"> No</label>
+                    </div>
+                </div>
+
+                <div class="plan">
+                    <label>Spouse</label>
+                    <div class="radio-box">
+                        <label><input type="radio" name="spouse"> Yes</label>
+                        <label><input type="radio" name="spouse"> No</label>
+                    </div>
+                </div>
+
+                <div class="plan">
+                    <label>Children</label>
+                    <div class="radio-box">
+                        <label><input type="radio" name="child"> Yes</label>
+                        <label><input type="radio" name="child"> No</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plan-choice">
+                <label><input type="radio" name="plan"> <b>PLAN A</b></label>
+                <p>Starting from $25 per week (VAT excluded)</p>
+            </div>
+
+            <div class="plan-choice">
+                <label><input type="radio" name="plan"> <b>PLAN B — JOIN NOW!</b></label>
+                <p>Starting from $21 per week (VAT excluded)</p>
+            </div>
+
+        </div>
+
+        <!-- POLICY DETAILS -->
+        <p class="section-title">Policy Details</p>
+
+        <div class="content">
+            <div class="row-2">
+                <div>
+                    <label>Units</label>
+                    <input type="text">
+                </div>
+
+                <div>
+                    <label>Annual Premium</label>
+                    <input type="text">
+                </div>
+            </div>
+
+            <div class="row">
+                <label>Payment Mode</label>
+                <div class="radio-box">
+                    <label><input type="radio" name="payment"> Annual</label>
+                    <label><input type="radio" name="payment"> Semi-Annual</label>
+                    <label><input type="radio" name="payment"> Monthly PAT</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <label>Cash with Application</label>
+                <input type="text" placeholder="$ Amount">
+            </div>
+
+            <div class="row">
+                <label>Planned Modal Premium</label>
+                <input type="text" placeholder="$ Amount">
+            </div>
+        </div>
+
+        <!-- TERMS -->
+        <div class="terms">
+            <p><b>Terms & Conditions:</b><br>Improvement should be measured regularly and assessed in order for
+            you to know what's beneficial and what is not. This will help you
+            set new targets.</p>
+
+            <div class="sign">
+                <div>
+                    <label>Signature</label>
+                    <input type="text" placeholder="Signature">
+                </div>
+
+                <div>
+                    <label>Date</label>
+                    <input type="date">
+                </div>
+            </div>
+        </div>
+
+        <button class="submit-btn">Submit</button>
+
+    </div>
+
+</body>
+</html>

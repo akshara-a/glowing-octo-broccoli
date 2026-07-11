@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Application Form</title>
+
+<style>
+    *{
+        box-sizing:border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body{
+        background:#f4f4f4;
+        padding:20px;
+    }
+
+    .container{
+        max-width:1100px;
+        margin:auto;
+        background:#fff;
+        border:1px solid #000;
+        padding:15px;
+    }
+
+    h1{
+        color:#0a1f5b;
+        margin:0;
+        font-size:32px;
+        font-weight:bold;
+    }
+
+    .subtitle{
+        font-size:12px;
+        margin-bottom:10px;
+    }
+
+    .section-title{
+        background:#0a1f5b;
+        color:white;
+        padding:6px 10px;
+        font-weight:bold;
+        margin-top:10px;
+        font-size:14px;
+    }
+
+    table{
+        width:100%;
+        border-collapse:collapse;
+    }
+
+    td, th{
+        border:1px solid #000;
+        padding:5px;
+        font-size:12px;
+        vertical-align:top;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="number"],
+    textarea,
+    select{
+        width:100%;
+        border:none;
+        outline:none;
+        padding:4px;
+    }
+
+    textarea{
+        resize:vertical;
+    }
+
+    .photo-box{
+        width:120px;
+        height:120px;
+        border:1px solid #000;
+        text-align:center;
+        font-size:11px;
+        padding-top:25px;
+        float:right;
+    }
+
+    .radio-group{
+        display:flex;
+        gap:10px;
+        align-items:center;
+    }
+
+    .signature-row{
+        display:flex;
+        justify-content:space-between;
+        margin-top:20px;
+    }
+
+    .signature-box{
+        width:250px;
+    }
+
+    .signature-line{
+        border-bottom:1px solid #000;
+        height:30px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="photo-box">
+        Photograph<br>
+        (Passport Size)<br>
+        Affix Recent<br>
+        Photo
+    </div>
+
+    <h1>JOB APPLICATION FORM</h1>
+    <div class="subtitle">
+        Please fill in this form completely and accurately. All information provided
+        will be treated as confidential.
+    </div>
+     <Br>
+        <Br>
+            <Br>
+    <!-- Position Applied -->
+    <div class="section-title">POSITION APPLIED FOR</div>
+
+    <table>
+        <tr>
+            <td width="35%">Position / Job Title</td>
+            <td width="25%">Department</td>
+        </tr>
+        <tr>
+            <td>Expected Salary</td>
+            <td>Date Available to Join</td>
+        </tr>
+    </table>
+
+    <!-- Personal Information -->
+    <div class="section-title">1. PERSONAL INFORMATION</div>
+
+    <table>
+        <tr>
+            <td width="25%">Full Name (As per ID Proof)</td>
+            <td><input type="text"></td>
+            <td width="15%">Date of Birth (DD/MM/YYYY)</td>
+            <td width="15%"><input type="date"></td>
+            <td width="20%">
+                Gender<br>
+                <label><input type="radio" name="gender"> Male</label>
+                <label><input type="radio" name="gender"> Female</label>
+                <label><input type="radio" name="gender"> Other</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Father's / Guardian's Name</td>
+            <td><input type="text"></td>
+            <td>Mother's Name</td>
+            <td colspan="2"><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td>Email Address</td>
+            <td><input type="email"></td>
+            <td>Phone Number</td>
+            <td colspan="2"><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td>Current Address</td>
+            <td colspan="4"><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td>Permanent Address</td>
+            <td colspan="4"><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td>City</td>
+            <td><input type="text"></td>
+            <td>State</td>
+            <td><input type="text"></td>
+            <td>ZIP Code <input type="text"></td>
+        </tr>
+
+        <tr>
+            <td>Are you legally eligible to work in this country?</td>
+            <td>
+                <label><input type="radio" name="eligible"> Yes</label>
+                <label><input type="radio" name="eligible"> No</label>
+            </td>
+            <td colspan="3">
+                If No, please specify:
+                <input type="text">
+            </td>
+        </tr>
+    </table>
+
+    <!-- Education -->
+    <div class="section-title">2. EDUCATIONAL QUALIFICATION</div>
+
+    <table>
+        <tr>
+            <th>Qualification</th>
+            <th>Name of Institute</th>
+            <th>Board / University</th>
+            <th>Year of Passing</th>
+            <th>Percentage / CGPA</th>
+        </tr>
+
+        <tr>
+            <td>High School / SSC</td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td>Higher Secondary / HSC</td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td>Bachelor Degree</td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td>Master Degree</td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td>Other Degree</td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+    </table>
+
+    <!-- Work Experience -->
+    <div class="section-title">3. WORK EXPERIENCE (Start with the most recent)</div>
+
+    <table>
+        <tr>
+            <th>Company Name</th>
+            <th>Job Title</th>
+            <th>From (MM/YYYY)</th>
+            <th>To (MM/YYYY)</th>
+            <th>Total Experience</th>
+            <th>Key Responsibilities</th>
+        </tr>
+
+        <tr>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td width="50%">
+                Have you ever been employed with our organization before?
+            </td>
+            <td>
+                <label><input type="radio" name="previous"> Yes</label>
+                <label><input type="radio" name="previous"> No</label>
+            </td>
+            <td>
+                If Yes, please specify:
+                <input type="text">
+            </td>
+        </tr>
+    </table>
+
+    <!-- Skills -->
+    <div class="section-title">4. SKILLS & ADDITIONAL INFORMATION</div>
+
+    <table>
+        <tr>
+            <td width="33%">
+                Key Skills / Technical Skills
+                <textarea rows="5"></textarea>
+            </td>
+
+            <td width="33%">
+                Languages Known
+                <textarea rows="5"></textarea>
+            </td>
+
+            <td width="34%">
+                Certifications / Training (if any)
+                <textarea rows="5"></textarea>
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Reference (Optional)</th>
+            <th>Designation</th>
+            <th>Company / Organization</th>
+            <th>Phone Number</th>
+            <th>Email Address</th>
+        </tr>
+
+        <tr>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+    </table>
+
+    <!-- Declaration -->
+    <div class="section-title">5. DECLARATION</div>
+
+    <p style="font-size:12px;">
+        I hereby declare that all the information provided above is true and correct
+        to the best of my knowledge and belief. I understand that any false or
+        misleading information may disqualify me from consideration for employment
+        or may result in my dismissal if hired.
+    </p>
+
+    <div class="signature-row">
+        <div class="signature-box">
+            Date:
+            <div class="signature-line"></div>
+        </div>
+
+        <div class="signature-box">
+            Signature:
+            <div class="signature-line"></div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

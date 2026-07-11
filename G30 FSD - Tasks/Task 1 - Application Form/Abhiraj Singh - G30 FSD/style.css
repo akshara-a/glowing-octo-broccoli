@@ -1,0 +1,309 @@
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f3f4f6; /* gray-100 */
+        margin: 0;
+        padding: 40px 10px;
+      }
+
+      /* Main container table */
+      .form-container {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        border-collapse: collapse;
+        background-color: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        overflow: hidden; /* To keep radius */
+      }
+
+      .form-container > tr > td {
+        padding: 24px 40px;
+      }
+
+      /* Form Header */
+      .form-header {
+        text-align: center;
+        padding-bottom: 20px;
+      }
+      .form-header h1 {
+        font-size: 36px;
+        font-weight: 700;
+        color: #4338ca; /* indigo-700 */
+        margin: 0 0 4px 0;
+      }
+      .form-header p {
+        font-size: 16px;
+        color: #6b7280; /* gray-500 */
+        margin: 0;
+      }
+
+      /* Section Header */
+      .section-header h2 {
+        font-size: 24px;
+        font-weight: 600;
+        color: #1f2937; /* gray-800 */
+        border-bottom: 2px solid #c7d2fe; /* indigo-200 */
+        padding-bottom: 8px;
+        margin-top: 20px;
+        margin-bottom: 24px;
+      }
+
+      /* Form Section Table */
+      .form-section {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+
+      .form-section tr {
+        vertical-align: top;
+      }
+
+      .form-section td {
+        padding: 8px 4px;
+      }
+
+      /* Labels */
+      label,
+      .label {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        color: #374151; /* gray-700 */
+        margin-bottom: 4px;
+      }
+      label span,
+      .label span {
+        font-size: 12px;
+        font-weight: 400;
+        color: #6b7280; /* gray-500 */
+      }
+
+      /* Inputs */
+      input[type='text'],
+      input[type='date'],
+      input[type='tel'],
+      input[type='email'],
+      textarea {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #d1d5db; /* gray-300 */
+        border-radius: 8px;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        box-sizing: border-box; /* Important for 100% width */
+      }
+      input[type='text']:focus,
+      input[type='date']:focus,
+      input[type='tel']:focus,
+      input[type='email']:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #4f46e5; /* indigo-500 */
+        box-shadow: 0 0 0 2px #4f46e5;
+      }
+
+      /* Radio/Checkbox groups */
+      .radio-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        padding-top: 8px;
+      }
+      .radio-group label {
+        font-weight: 400;
+        color: #4b5563; /* gray-600 */
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+      }
+      .radio-group input {
+        margin-right: 6px;
+        height: 16px;
+        width: 16px;
+      }
+
+      /* Plan Coverage Box */
+      .coverage-table {
+        width: 100%;
+        border: 1px solid #e5e7eb; /* gray-200 */
+        border-radius: 8px;
+        padding: 16px;
+        box-sizing: border-box; /* Added for better responsive handling */
+      }
+      .coverage-table td {
+        padding: 8px;
+      }
+
+      /* Plan Choice Cards */
+      .plan-card {
+        border: 1px solid #d1d5db; /* gray-300 */
+        border-radius: 8px;
+        padding: 16px;
+        position: relative;
+        height: 100%;
+        box-sizing: border-box;
+      }
+      .plan-card-join {
+        position: absolute;
+        top: -12px;
+        right: -12px;
+        background-color: #dc2626; /* red-600 */
+        color: white;
+        font-size: 12px;
+        font-weight: 700;
+        padding: 4px 8px;
+        border-radius: 99px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      }
+      .plan-card input[type='radio'] {
+        height: 20px;
+        width: 20px;
+        margin-right: 12px;
+        vertical-align: top; /* Align radio button better */
+      }
+      .plan-card-content {
+        display: inline-block;
+        vertical-align: top;
+      }
+      .plan-card-content p {
+        margin: 0;
+      }
+      .plan-card-title {
+        font-weight: 700;
+        font-size: 16px;
+        color: #111827; /* gray-900 */
+      }
+      .plan-card-details {
+        font-size: 14px;
+        color: #4b5563; /* gray-600 */
+        margin-top: 4px;
+      }
+
+      /* Input with currency */
+      .currency-input {
+        position: relative;
+      }
+      .currency-symbol {
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+        color: #6b7280; /* gray-500 */
+      }
+      .currency-input input {
+        padding-left: 28px;
+      }
+
+      /* Terms box */
+      .terms-box {
+        background-color: #f9fafb; /* gray-50 */
+        padding: 24px;
+        border-radius: 8px;
+        border: 1px solid #e5e7eb; /* gray-200 */
+      }
+      .terms-box h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1f2937; /* gray-800 */
+        margin: 0 0 8px 0;
+      }
+      .terms-box p {
+        font-size: 14px;
+        color: #4b5563; /* gray-600 */
+        margin: 0;
+      }
+      .terms-agree {
+        margin-top: 16px;
+      }
+      /* New: Ensure label wraps with checkbox */
+      .terms-agree label {
+        display: flex;
+        align-items: flex-start;
+        font-weight: 500;
+      }
+      .terms-agree input {
+        flex-shrink: 0;
+        margin-top: 2px;
+        margin-right: 8px;
+      }
+
+      /* Signature */
+      input.signature {
+        font-family: 'Georgia', serif;
+        font-size: 20px;
+      }
+
+      /* Submit Button */
+      .submit-cell {
+        text-align: right;
+        padding-top: 24px;
+      }
+      .submit-button {
+        background-color: #4f46e5; /* indigo-600 */
+        color: white;
+        font-weight: 700;
+        padding: 12px 32px;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .submit-button:hover {
+        background-color: #4338ca; /* indigo-700 */
+      }
+
+      /* == Responsive Fixes == */
+      @media (max-width: 768px) {
+        body {
+          padding: 20px 5px; /* Reduce body padding */
+        }
+
+        .form-container > tr > td {
+          padding: 20px 15px; /* Reduce main container padding */
+        }
+
+        .form-header h1 {
+          font-size: 28px; /* Reduce header size */
+        }
+        .section-header h2 {
+          font-size: 20px; /* Reduce section header size */
+          margin-bottom: 16px;
+        }
+
+        /* This is the main fix: stack table cells */
+        .form-section td[style*='width'],
+        .coverage-table td[style*='width'] {
+          display: block;
+          width: 100% !important; /* Force full width */
+          padding-left: 4px;
+          padding-right: 4px;
+        }
+
+        /* Add spacing between stacked cells */
+        .form-section td[style*='width']:not(:last-child) {
+          padding-bottom: 16px;
+        }
+
+        /* Fix padding on specific cells that had it */
+        td[style*='padding-left'] {
+          padding-left: 4px !important;
+        }
+
+        /* Stack plan choice cards */
+        .plan-card {
+          margin-bottom: 16px;
+        }
+        .plan-card-join {
+          top: 8px; /* Adjust badge position */
+          right: 8px;
+        }
+
+        /* Stack coverage options */
+        .coverage-table td {
+          padding-bottom: 16px !important;
+        }
+      }

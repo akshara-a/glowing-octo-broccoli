@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+<!-- Heading -->
+    <div class="header">
+        <div class="header-left">
+            <div class="title">Job Application Form</div>
+            <div class="subtitle">Please fill in this form completely and accurately. All information provided will be treated as confidential.</div>
+        </div>
+        <div class="photo">
+            Photograph (Passport Size) Affix Recent Photo
+        </div>
+    </div>
+
+<!-- POSTION APPLIED FOR -->
+    <div class="section">
+        <div class="section-title">POSITION APPLIED FOR</div>
+        <table class="position-table">
+          <tr>
+            <td>
+              <span class="field-label">Position / Job Title</span>
+              <input class="underline-field" type="text" name="position">
+            </td>
+            <td>
+              <span class="field-label">Department</span>
+              <input class="underline-field" type="text" name="department">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="field-label">Expected Salary</span>
+              <input class="underline-field" type="text" name="salary">
+            </td>
+            <td>
+              <span class="field-label">Date Available to Join</span>
+              <input class="underline-field" type="date" name="date-available">
+            </td>
+          </tr>
+        </table>
+    </div>
+
+<!-- SECTION 1: PERSONAL INFORMATION -->
+    <div class="section1">
+        <div class="section1-title">1. PERSONAL INFORMATION</div>
+        <table class="personal-table">
+          <tr>
+            <td style="width:48%">
+              <span class="cell-label">Full Name (As per ID Proof)</span>
+              <input class="line" type="text" id="full-name" name="full-name">
+            </td>
+            <td style="width:27%">
+              <span class="cell-label">Date of Birth (DD/MM/YYYY)</span>
+              <input class="line" type="text" id="dob" name="dob">
+            </td>
+            <td style="width:25%">
+              <span class="cell-label">Gender</span>
+              <div class="gender-options">
+                <label><input type="radio" id="male" name="gender" value="male"> Male</label>
+                <label><input type="radio" id="female" name="gender" value="female"> Female</label>
+                <label><input type="radio" id="other" name="gender" value="other"> Other</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="cell-label">Father's / Guardian's Name</span>
+              <input class="line" type="text" id="father-name" name="father-name">
+            </td>
+            <td colspan="2">
+              <span class="cell-label">Mother's Name</span>
+              <input class="line" type="text" id="mother-name" name="mother-name">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="cell-label">Email Address</span>
+              <input class="line" type="email" id="email" name="email">
+            </td>
+            <td>
+              <span class="cell-label">Phone Number</span>
+              <input class="line" type="text" id="mobile" name="mobile">
+            </td>
+            <td>
+              <span class="cell-label">Alternate Phone Number</span>
+              <input class="line" type="text" id="alternate-mobile" name="alternate-mobile">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="cell-label">Current Address</span>
+              <input class="line" type="text" name="current-address-line1">
+              <input class="line2" type="text" name="current-address-line2">
+            </td>
+            <td colspan="2">
+              <span class="cell-label">Permanent Address</span>
+              <input class="line" type="text" id="permanent-add" name="permanent-add">
+              <input class="line2" type="text" name="permanent-address-line2">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <div class="address-row">
+                <div class="field-inline">
+                  <span class="field-label">City:</span>
+                  <input class="short-line" type="text" id="city" name="city">
+                </div>
+                <div class="field-inline">
+                  <span class="field-label">State:</span>
+                  <input class="short-line" type="text" id="state" name="state">
+                </div>
+                <div class="field-inline">
+                  <span class="field-label">PIN Code:</span>
+                  <input class="short-line" type="text" id="pincode" name="pincode">
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr class="eligibility-row">
+            <td colspan="3">
+              <div class="eligibility-block">
+                <span class="eligibility-label">Are you legally eligible to work in this country?</span>
+                <label class="checkbox-row"><input type="radio" id="eligible-yes" name="eligibility" value="yes"> Yes</label>
+                <label class="checkbox-row"><input type="radio" id="eligible-no" name="eligibility" value="no"> No</label>
+                <span class="if-no">
+                  <strong>If No, please specify:</strong>
+                  <input class="short-line" type="text" id="xnationality" name="xnationality">
+                </span>
+              </div>
+            </td>
+          </tr>
+        </table>
+    </div>
+
+
+    <div class="section2">
+        <div class="section2-title">2. EDUCATIONAL QUALIFICATIONS</div>
+        <div class="section2-content">
+            <table>
+                <tr>
+                <th>Qualification</th>
+                <th>Name of Institution</th>
+                <th>Board/University</th>
+                <th>Year of Passing</th>
+                <th>Percentage/CGPA</th>
+                </tr>
+
+                <tr>
+                    <td>High School / SSC</td>
+                    <td><input type="text" name="institution-10th"></td>
+                    <td><input type="text" name="board-10th"></td>
+                    <td><input type="text" name="year-10th"></td>
+                    <td><input type="text" name="percentage-10th"></td>
+                </tr>
+
+                <tr>
+                    <td>Higher Secondary / HSC</td>
+                    <td><input type="text" name="institution-12th"></td>
+                    <td><input type="text" name="board-12th"></td>
+                    <td><input type="text" name="year-12th"></td>
+                    <td><input type="text" name="percentage-12th"></td>
+                </tr>
+
+                <tr>
+                    <td>Bachelor's Degree</td>
+                    <td><input type="text" name="institution-bachelors"></td>
+                    <td><input type="text" name="board-bachelors"></td>
+                    <td><input type="text" name="year-bachelors"></td>
+                    <td><input type="text" name="percentage-bachelors"></td>
+                </tr>
+
+                <tr>
+                    <td>Master's Degree</td>
+                    <td><input type="text" name="institution-masters"></td>
+                    <td><input type="text" name="board-masters"></td>
+                    <td><input type="text" name="year-masters"></td>
+                    <td><input type="text" name="percentage-masters"></td>
+                </tr>
+
+                <tr>
+                    <td>Other (Specify)</td>
+                    <td><input type="text" name="institution-other"></td>
+                    <td><input type="text" name="board-other"></td>
+                    <td><input type="text" name="year-other"></td>
+                    <td><input type="text" name="percentage-other"></td>
+                </tr>
+            </table>
+        </div>
+        </div>
+
+        <!-- Work Experience Section -->
+    <div class="section3">
+        <div class="section3-title">3. WORK EXPERIENCE (Start with the most recent)</div>
+        <div class="section3-content">
+        <table>
+            <tr>
+                <th>Company Name</th>
+                <th>Job Title</th>
+                <th>From (MM/YYYY)</th>
+                <th>To (MM/YYYY)</th>
+                <th>Total Experience</th>
+                <th>KeyResponsibilities</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="company1"></td>
+                <td><input type="text" name="job-title1"></td>
+                <td><input type="text" name="from1"></td>
+                <td><input type="text" name="to1"></td>
+                <td><input type="text" name="experience1"></td>
+                <td><textarea name="responsibilities1" rows="4" cols="50"></textarea></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="company2"></td>
+                <td><input type="text" name="job-title2"></td>
+                <td><input type="text" name="from2"></td>
+                <td><input type="text" name="to2"></td>
+                <td><input type="text" name="experience2"></td>
+                <td><textarea name="responsibilities2" rows="4" cols="50"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <div class="prev-employment-row">
+                        <span class="cell-label">Have you ever been employed with our organization before?</span>
+                        <label class="checkbox-row"><input type="radio" id="employed-yes" name="employed-before" value="yes"> Yes</label>
+                        <label class="checkbox-row"><input type="radio" id="employed-no" name="employed-before" value="no"> No</label>
+                        <span class="if-yes">
+                            <strong>If Yes, please specify:</strong>
+                            <input class="short-line" type="text" name="employed-details">
+                        </span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        </div>
+    </div>
+
+    <!-- Skill Set Section  -->
+     <div class="section4">
+
+    <div class="section-title">
+        4. SKILLS & ADDITIONAL INFORMATION
+    </div>
+
+    <div class="skills-container">
+
+        <div class="skill-box">
+            <label>Key Skills / Technical Skills:</label>
+            <br><br>
+            <input type="text">
+            <br><br>
+            <input type="text">
+            <br><br>
+            <input type="text">
+        </div>
+
+        <div class="skill-box">
+            <label>Languages Known:</label>
+            <br><br>
+            <input type="text">
+            <br><br>
+            <input type="text">
+            <br><br>
+            <input type="text">
+        </div>
+
+        <div class="skill-box">
+            <label>Certification / Training (if any):</label>
+            <br><br>
+            <input type="text">
+            <br><br>
+            <input type="text">
+            <br><br>
+            <input type="text">
+        </div>
+
+    </div>
+
+    <div class="references-title">
+        References (Optional)
+    </div>
+
+    <table class="reference-table">
+
+        <tr>
+            <th>Name</th>
+            <th>Designation</th>
+            <th>Company / Organization</th>
+            <th>Phone Number</th>
+            <th>Email Address</th>
+        </tr>
+
+        <tr>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="email"></td>
+        </tr>
+
+        <tr>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="email"></td>
+        </tr>
+
+    </table>
+</div>
+
+<!-- declaration section -->
+ <div class="section5">
+    <div class="declaration-title">
+        5. DECLARATION
+    </div>
+
+    <div class="declaration-box">
+        <p>I hereby declare that the information provided in this application form is true and correct to the best of my knowledge and belief. I understand that any false information or misrepresentation may disqualify me from consideration for employment or may result in my dismissal if hired.</p>
+        <div class="sign-row">
+            <div class="sign-field">
+                <span>Date:</span>
+                <input class="sign-line" type="text" id="date" name="date">
+            </div>
+            <div class="sign-field">
+                <span>Signature:</span>
+                <input class="sign-line" type="text" id="signature" name="signature">
+            </div>
+        </div>
+    </div>
+ </div>
+
+
+ <!-- Footer section -->
+<div class="official-section">
+    <table class="official-table">
+        <tr>
+            <td colspan="2" class="official-header">FOR OFFICIAL USE ONLY</td>
+        </tr>
+        <tr>
+            <td style="width:50%">
+                <div class="official-field">
+                    <span class="field-label">Application Received On:</span>
+                    <input type="text" id="part1" name="part1">
+                </div>
+            </td>
+            <td style="width:50%">
+                <div class="official-field">
+                    <span class="field-label">Received By:</span>
+                    <input type="text" id="part2" name="part2">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="official-field">
+                    <span class="field-label">Remarks:</span>
+                    <input type="text" id="part3" name="part3">
+                </div>
+            </td>
+            <td>
+                <div class="official-field">
+                    <span class="field-label">Shortlisted:</span>
+                    <label class="checkbox-row"><input type="radio" id="shortlisted-yes" name="shortlisted" value="yes"> Yes</label>
+                    <label class="checkbox-row"><input type="radio" id="shortlisted-no" name="shortlisted" value="no"> No</label>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+</div>
+</body>
+</html>

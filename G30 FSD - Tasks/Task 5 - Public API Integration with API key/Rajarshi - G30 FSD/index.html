@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Weather UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="appBg">
+    <div class="container">
+        <div class="weather-card">
+
+            <h2 class="title">Live Weather App</h2>
+
+            <div class="search-box">
+                <input type="text" id="cityInput" placeholder="Enter city name...">
+                <button id="searchBtn">Search</button>
+            </div>
+
+            <p id="errorMessage" class="error hide"></p>
+            <div id="loader" class="loader hide"></div>
+
+            <div id="weatherDisplay" class="result hide">
+                <img id="weatherIcon" class="icon">
+                <h1 id="temp" class="temp">--°C</h1>
+                <h2 id="cityName" class="city">--</h2>
+                <p id="desc" class="type">--</p>
+
+                <div class="info-box">
+                    <div>
+                        <h4>Humidity</h4>
+                        <p id="humidity">--%</p>
+                    </div>
+                    <div>
+                        <h4>Feels Like</h4>
+                        <p id="feelsLike">--°C</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

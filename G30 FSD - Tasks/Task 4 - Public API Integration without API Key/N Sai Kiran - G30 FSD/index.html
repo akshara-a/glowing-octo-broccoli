@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+    <header>
+      <h1>Open-Meteo — Current Weather</h1>
+    </header>
+    <section class="controls"></section>
+     <label>
+        Latitude
+        <input id="lat" type="number" step="0.0001" value="17.3850" />
+      </label>
+      <label>
+        Longitude
+        <input id="lon" type="number" step="0.0001" value="78.4867" />
+      </label>
+
+      <button id="getWeatherBtn">Get Weather</button>
+    </section>
+
+    <section id="result" class="result hidden" aria-live="polite">
+      <div class="row">
+        <div class="card">
+          <div class="label">Temperature</div>
+          <div id="temp" class="value">-- °C</div>
+        </div>
+
+        <div class="card">
+          <div class="label">Wind Speed</div>
+          <div id="wind" class="value">-- km/h</div>
+        </div>
+
+        <div class="card">
+          <div class="label">Condition</div>
+          <div id="condition" class="value">--</div>
+        </div>
+      </div>
+
+      <div class="meta">
+        <small id="metaText"></small>
+      </div>
+    </section>
+
+    <div id="error" class="error hidden"></div>
+    <div id="loading" class="loading hidden">Loading…</div>
+
+    <footer class="footer">
+      <small>Data from <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a></small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

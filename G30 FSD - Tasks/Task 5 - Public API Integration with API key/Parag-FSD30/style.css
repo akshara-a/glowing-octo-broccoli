@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(160deg, #1e3c72, #2a5298);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: background 0.6s ease;
+}
+
+.app {
+    width: 360px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #00b4d8;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0096c7;
+}
+
+.weather-card {
+    background: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 15px;
+    animation: fadeIn 0.6s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+#temperature {
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.info-grid div {
+    background: rgba(255,255,255,0.25);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.info-grid span {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+.footer {
+    margin-top: 15px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+
+body.sunny { background: linear-gradient(160deg, #ffb703, #fb8500); }
+body.cloudy { background: linear-gradient(160deg, #6c757d, #adb5bd); }
+body.rainy { background: linear-gradient(160deg, #03045e, #0077b6); }
+body.clear { background: linear-gradient(160deg, #48cae4, #0096c7); }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Positioning Demo</title>
+
+<style>
+
+/* General Styling */
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background-color:#f4f4f4;
+}
+
+/* STICKY:
+   Navbar should remain visible at the top while scrolling */
+.navbar{
+    position:sticky;
+    top:0;
+    background-color:#1e3a8a;
+    color:white;
+    padding:15px;
+    display:flex;
+    justify-content:space-around;
+    z-index:1000;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* RELATIVE:
+   Banner is moved slightly from its normal position */
+.banner{
+    position:relative;
+    top:10px;
+    left:20px;
+
+    width:80%;
+    margin:20px auto;
+    padding:20px;
+    background-color:#fbbf24;
+    text-align:center;
+    font-size:24px;
+    font-weight:bold;
+    border-radius:10px;
+}
+
+/* Product Card Container */
+.product-container{
+    display:flex;
+    justify-content:center;
+    margin-top:40px;
+}
+
+/* RELATIVE:
+   Product card becomes the positioning context
+   for the absolute badge */
+.product-card{
+    position:relative;
+
+    width:250px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+.product-card img{
+    width:100%;
+    border-radius:10px;
+}
+
+/* ABSOLUTE:
+   Badge is placed relative to the product card */
+.badge{
+    position:absolute;
+    top:10px;
+    right:10px;
+
+    background:red;
+    color:white;
+    width:30px;
+    height:30px;
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-weight:bold;
+}
+
+/* STATIC:
+   Normal content sections follow the default document flow */
+.section{
+    position:static;
+
+    margin:30px;
+    padding:20px;
+    background:white;
+    border-radius:10px;
+}
+
+/* FIXED:
+   Chat button stays visible even while scrolling */
+.chat-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+
+    background:#16a34a;
+    color:white;
+    padding:15px 20px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Sticky Navigation Bar -->
+<div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</div>
+
+<!-- Relative Banner -->
+<div class="banner">
+     Special Sale - Up to 50% Off!
+</div>
+
+<!-- Product Card with Absolute Badge -->
+<div class="product-container">
+
+    <div class="product-card">
+
+        <div class="badge">5</div>
+
+        <img src="data:image/jpeg;base64,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" alt="Product">
+
+        <h3>Smart Watch</h3>
+
+        <p>Modern smartwatch with health tracking features.</p>
+
+    </div>
+
+</div>
+
+<!-- Static Content Sections -->
+<div class="section">
+    <h2>Section 1</h2>
+    <p>
+        This section uses static positioning. It follows the normal
+        document flow and scrolls naturally with the page.
+    </p>
+</div>
+
+<div class="section">
+    <h2>Section 2</h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Accusantium, impedit. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit.
+    </p>
+</div>
+
+<div class="section">
+    <h2>Section 3</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Voluptatibus, deleniti. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit.
+    </p>
+</div>
+
+<div class="section">
+    <h2>Section 4</h2>
+    <p>
+        Add more content here to make the page scrollable and observe
+        the sticky navbar and fixed chat button behavior.
+    </p>
+</div>
+
+<div class="section">
+    <h2>Section 5</h2>
+    <p>
+        Keep scrolling. The navbar remains at the top and the chat
+        button remains at the bottom-right corner.
+    </p>
+</div>
+
+<!-- Fixed Chat Button -->
+<a href="#" class="chat-btn">💬 Chat</a>
+
+</body>
+</html>

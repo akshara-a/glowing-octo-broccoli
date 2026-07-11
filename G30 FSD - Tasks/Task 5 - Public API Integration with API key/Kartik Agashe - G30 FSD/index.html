@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Current Weather Explorer</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main class="container">
+
+    <header class="header">
+      <h1>Current Weather Explorer</h1>
+      <p class="location-info">
+        WeatherAPI integration • Default: Kolkata, India
+      </p>
+    </header>
+
+    <section class="weather-section">
+
+      <div class="search-box">
+        <label for="city-input">Enter City</label>
+        <input
+          type="text"
+          id="city-input"
+          placeholder="e.g., Delhi, Mumbai, London"
+        />
+        <button id="get-weather-btn">Get Weather</button>
+      </div>
+
+      <div id="weather-result" class="weather-card">
+        <p class="hint-text">Search a city to see current weather</p>
+      </div>
+
+    </section>
+
+    <footer class="foot-note">
+      <small>
+        For local testing, keep <code>apiKey.js</code> private.
+      </small>
+    </footer>
+
+  </main>
+
+  <!-- JS FILES -->
+  <script src="apiKey.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

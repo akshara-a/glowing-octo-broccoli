@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5 Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <h1>Weather App</h1>
+
+        <div class="weather-container">
+
+            <form class="form-container" data-searchForm>
+                <input type="text" id="cityInput" placeholder="Enter city name">
+                <button type="submit" class="btn" id="getWeatherBtn">Search</button>
+            </form>
+
+            <div class="user-info-container">
+
+                <p id="cityTitle" class="city-title">Weather Info</p>
+                <p id="description" class="desc">--</p>
+                <p id="temp" class="temp">--</p>
+
+                <div class="parameter-container top-row">
+
+                    <div class="parameter">
+                        <p>Feels Like</p>
+                        <p id="feelsLike">--</p>
+                    </div>
+
+                    <div class="parameter">
+                        <p>Humidity</p>
+                        <p id="humidity">--</p>
+                    </div>
+
+                    <div class="parameter">
+                        <p>Wind</p>
+                        <p id="wind">--</p>
+                    </div>
+
+                </div>
+
+                <div class="parameter-container bottom-row">
+
+                    <div class="parameter">
+                        <p>Sunrise</p>
+                        <p id="sunrise">--</p>
+                    </div>
+
+                    <div class="parameter">
+                        <p>Sunset</p>
+                        <p id="sunset">--</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <br>
+        <p>
+            Data from <a href="https://rapidapi.com" target="_blank">OpenWeather (RapidAPI)</a>
+        </p>
+        <p class="footer">By Varsha - G30 FSD</p>
+
+
+    </div>
+
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

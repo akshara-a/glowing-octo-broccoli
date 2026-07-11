@@ -1,0 +1,15 @@
+body{
+    background: linear-gradient(135deg,#da9d9d,#b1964d,#6b760a);
+    min-height: 100vh;
+}
+
+h2{
+    color: white;
+}
+
+.alert{
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}

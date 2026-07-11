@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Registration Form</title>
+   <link rel="stylesheet" href="FORM.CSS" />
+</head>
+<body>
+  <main class="container">
+    <section class="intro">
+      <h1>Join Our Innovation Summit 2025</h1>
+      <p>Fill out the registration form below to confirm your participation in the upcoming event.  
+      Choose your sessions, tell us about your interests, and secure your seat today.</p>
+    </section>
+
+    <form class="form">
+      <!-- Personal Details -->
+      <h2>Personal Details</h2>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="John" required>
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Doe" required>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="john@example.com" required>
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" placeholder="+91 98765 43210">
+        </div>
+      </div>
+
+      <!-- Preferences -->
+      <h2>Event Preferences</h2>
+      <div class="form-grid">
+        <div class="form-group full">
+          <label>Choose your track</label>
+          <div class="options">
+            <label><input type="checkbox"> Tech</label>
+            <label><input type="checkbox"> Design</label>
+            <label><input type="checkbox"> Business</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Dietary Preference</label>
+          <select>
+            <option>None</option>
+            <option>Vegetarian</option>
+            <option>Vegan</option>
+            <option>Gluten-free</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Arrival Date</label>
+          <input type="date">
+        </div>
+
+        <div class="form-group full">
+          <label>Additional Notes</label>
+          <textarea placeholder="Any special requirements or notes"></textarea>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="form-actions">
+        <button type="reset" class="btn btn-secondary">Reset</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
+
+

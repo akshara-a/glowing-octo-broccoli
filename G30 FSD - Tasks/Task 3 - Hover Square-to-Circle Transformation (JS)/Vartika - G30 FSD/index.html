@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#ffffff;
+}
+
+/* SQUARE */
+.shape {
+  width: 120px;
+  height: 120px;
+  background: red;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.shape:hover {
+  width: 0;
+  height: 0;
+  background: transparent;
+
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 100px solid blue;  
+  transition: all 0.4s ease-in-out;
+}
+
+
+.shape:hover {
+  animation: colorChange 2s infinite;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="shape"></div>
+
+</body>
+</html>

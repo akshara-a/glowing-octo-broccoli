@@ -1,0 +1,48 @@
+<!--The Second box remains where it was initalized and The first box changes it's position as per the paramters -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.boxes{
+    width:100%;
+    height :96vh;
+    background-color:rgb(241, 233, 240);
+    padding:2px;
+}
+/*<!--comment out .box2 property to see what get changed with realtive property-->*/
+.box2{
+    position:relative ; 
+    top : 20%;
+    left:25%;
+
+}
+.box{
+
+    border:3px solid #7035;
+    width:30%;
+    height:25%;
+    background-color:rgb(171, 224, 239);
+    border: 5px rgb(241, 241, 245) solid;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:bisque;
+    box-shadow: 3px 2px 3px brown;
+    outline:2px solid gray;
+    
+    
+
+}
+    </style>
+</head>
+<body>
+    <div class = "boxes">
+        <div class = " box box1">BOX1</div>
+        <div class = " box box2">BOX2</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,255 @@
+/* =========================
+   CSS VARIABLES
+========================= */
+
+:root{
+    --primary-color:#ff7a00;
+    --primary-dark:#e56700;
+    --white:#ffffff;
+    --black:#212529;
+    --cream:#FFF8EE;
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background-color:var(--cream);
+}
+
+/* =========================
+   PAW BACKGROUND
+========================= */
+
+.paw-bg{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:1.5;
+
+    z-index:-1;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+
+    background-color:rgba(255,255,255,0.95);
+
+    backdrop-filter:blur(8px);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+}
+
+/* =========================
+   BRAND
+========================= */
+
+.brand-logo{
+
+    background-color:var(--primary-color);
+
+    padding:10px 18px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    transition:all 0.3s ease;
+}
+
+.brand-logo:hover{
+
+    transform:translateY(-3px) scale(1.03);
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.logo-box{
+
+    font-size:24px;
+
+    margin-right:10px;
+}
+
+.brand-text{
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    line-height:1.2;
+}
+
+.brand-tagline{
+
+    color:white;
+
+    font-size:11px;
+
+    display:block;
+}
+
+/* =========================
+   NAV LINKS
+========================= */
+
+.custom-link{
+
+    position:relative;
+
+    color:var(--black) !important;
+
+    margin:0 12px;
+
+    font-weight:500;
+
+    transition:all 0.3s ease;
+}
+
+.custom-link::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-5px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary-color);
+
+    transition:0.3s;
+}
+
+.custom-link:hover{
+
+    color:var(--primary-color) !important;
+
+    transform:translateY(-3px);
+}
+
+.custom-link:hover::after{
+
+    width:100%;
+}
+
+.active-link{
+
+    color:var(--primary-color) !important;
+
+    font-weight:700;
+}
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.login-btn{
+
+    background:var(--primary-color);
+
+    color:white !important;
+
+    border:none;
+
+    padding:8px 20px;
+
+    border-radius:8px;
+
+    transition:0.3s;
+}
+
+.login-btn:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   SIGNUP BUTTON
+========================= */
+
+.signup-btn{
+
+    margin-left:10px;
+
+    border:2px solid var(--primary-color);
+
+    color:var(--primary-color);
+
+    padding:8px 20px;
+
+    border-radius:8px;
+
+    transition:0.3s;
+}
+
+.signup-btn:hover{
+
+    background:var(--primary-color);
+
+    color:white;
+
+    transform:translateY(-3px);
+}
+
+/* =========================
+   MOBILE VIEW
+========================= */
+
+@media(max-width:991px){
+
+    .navbar-nav{
+
+        text-align:center;
+
+        margin-top:15px;
+    }
+
+    .login-btn,
+    .signup-btn{
+
+        display:block;
+
+        width:100%;
+
+        margin-top:15px;
+    }
+
+    .signup-btn{
+
+        margin-left:0;
+    }
+}

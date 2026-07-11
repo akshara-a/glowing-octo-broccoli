@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Application Form</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Job Application Form</h1>
+  <div class="post-section">
+    <h2>AP EAPCET </h2>
+    <div class="form-group">
+    <select id="Postname" name="Postname" required>
+      <option value="">Select</option>
+      <option value="MPC">MPC</option>
+      <option value="Bipc">Pharmacy</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+  </div>
+
+  <h2 class="section-title">Personal Details</h2>
+  
+  <div class="form-group">
+    <label for="fullname">Full Name of Applicant</label>
+    <input type="text" id="fullname" name="fullname" required>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="fathername">Father Name</label>
+      <input type="text" id="fathername" name="fathername" required>
+    </div>
+    <div class="form-group">
+      <label for="mothername">Mother Name</label>
+      <input type="text" id="mothername" name="mothername" required>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required>
+    </div>
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" required>
+        <option value="">-- Select Gender --</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="aadhar">Aadhar Number</label>
+      <input type="text" id="aadhar" name="aadhar" maxlength="12" required>
+    </div>
+    <div class="form-group">
+      <label for="sscroll">SSC Roll Number</label>
+      <input type="text" id="sscroll" name="sscroll" required>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="datepassing">Date of Passing</label>
+      <input type="date" id="datepassing" name="datepassing" required>
+    </div>
+    <div class="form-group">
+      <label for="nationality">Nationality</label>
+      <input type="text" id="nationality" name="nationality" value="Indian" required>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="religion">Religion</label>
+      <input type="text" id="religion" name="religion" required>
+    </div>
+    <div class="form-group">
+      <label for="mobile">Mobile Number</label>
+      <input type="tel" id="mobile" name="mobile" maxlength="10" required>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="marital">Marital Status</label>
+      <select id="marital" name="marital" required>
+        <option value="">-- Select Status --</option>
+        <option value="married">Married</option>
+        <option value="unmarried">Unmarried</option>
+      </select>
+    </div>
+  </div>
+
+  <h2 class="section-title">Address</h2>
+
+  <div class="form-group">
+    <label for="address">Address</label>
+    <input type="text" id="address" name="address" required>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="state">State</label>
+      <input type="text" id="state" name="state" required>
+    </div>
+    <div class="form-group">
+      <label for="district">District</label>
+      <input type="text" id="district" name="district" required>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="village">Village</label>
+      <input type="text" id="village" name="village" required>
+    </div>
+    <div class="form-group">
+      <label for="pincode">Pincode</label>
+      <input type="text" id="pincode" name="pincode" maxlength="6" required>
+    </div>
+  </div>
+
+  <h2 class="section-title">Qualification Details</h2>
+
+  <div class="table-container">
+    <table class="qualification-table">
+      <thead>
+        <tr>
+          <th>Qualification</th>
+          <th>Subject</th>
+          <th>Board</th>
+          <th>State</th>
+          <th>Date of Passing</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <select name="qual1">
+              <option value="">Select</option>
+              <option value="10th">10th</option>
+              <option value="12th">12th</option>
+              <option value="graduation">Graduation</option>
+            </select>
+          </td>
+          <td><input type="text" name="subject1"></td>
+          <td><input type="text" name="board1"></td>
+          <td><input type="text" name="state1"></td>
+          <td><input type="date" name="date1"></td>
+        </tr>
+        <tr>
+          <td>
+            <select name="qual2">
+              <option value="">Select</option>
+              <option value="10th">10th</option>
+              <option value="12th">12th</option>
+              <option value="graduation">Graduation</option>
+            </select>
+          </td>
+          <td><input type="text" name="subject2"></td>
+          <td><input type="text" name="board2"></td>
+          <td><input type="text" name="state2"></td>
+          <td><input type="date" name="date2"></td>
+        </tr>
+        <tr>
+          <td>
+            <select name="qual3">
+              <option value="">Select</option>
+              <option value="10th">10th</option>
+              <option value="12th">12th</option>
+              <option value="graduation">Graduation</option>
+            </select>
+          </td>
+          <td><input type="text" name="subject3"></td>
+          <td><input type="text" name="board3"></td>
+          <td><input type="text" name="state3"></td>
+          <td><input type="date" name="date3"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="section-title">Community Details</h2>
+
+  <div class="form-group">
+    <label for="community">Community</label>
+    <select id="community" name="community" required>
+      <option value="">-- Select Community --</option>
+      <option value="general">General</option>
+      <option value="obc">OBC</option>
+      <option value="sc">SC</option>
+      <option value="st">ST</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+
+  <h2 class="section-title">Person with Disability</h2>
+
+  <div class="form-group">
+    <label for="disability">Are you a Person with Disability (PwBD)?</label>
+    <select id="disability" name="disability" required>
+      <option value="">-- Select Option --</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+  </div>
+
+  <h2 class="section-title">Declaration</h2>
+
+  <div class="declaration">
+    <p>I hereby declare that all the information provided above is true and correct to the best of my knowledge and belief. I understand that any false information or misrepresentation may lead to the rejection of my application or termination of employment if discovered at a later stage. I am willing to abide by the rules and regulations of the organization.</p>
+  </div>
+
+  <div class="signature-section">
+    <div class="signature-box">
+      <label for="place">Place:</label>
+      <input type="text" id="place" name="place">
+      
+      <label for="signdate">Date:</label>
+      <input type="date" id="signdate" name="signdate">
+    </div>
+    <div class="signature-box">
+      <label for="signature">Signature of Applicant</label>
+      <input type="text" id="signature" name="signature" placeholder="Type your name here">
+    </div>
+  </div>
+
+  <button type="submit" class="submit-btn">Submit Application</button>
+
+</div>
+  
+</body>
+</html>

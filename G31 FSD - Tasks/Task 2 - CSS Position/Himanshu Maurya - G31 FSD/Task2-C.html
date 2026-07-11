@@ -1,0 +1,33 @@
+<!--If the parent container doesn't have any other positioning other than Static , 
+the absolute elements adjust themself according to the page itself-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute</title>
+<style>
+    .Parentbox{
+        position:relative;
+        width:100%;
+        height:100vh;
+        background-color:azure;
+
+    }
+    .Notificationbadge{
+        position: absolute ; 
+        top:10px;
+        right:10px;
+        width:120px;
+    }
+</style>
+
+</head>
+<body>
+    <div class="Parentbox">
+        <img src="https://img1.wsimg.com/isteam/ip/6f038646-2052-4598-8c4e-ed7fea8124d5/SURE%20INITIATIVE%20LOGO.png/:/rs=h:200,cg:true,m/qt=q:95"
+         class="Notificationbadge">
+    </div>
+    
+</body>
+</html>

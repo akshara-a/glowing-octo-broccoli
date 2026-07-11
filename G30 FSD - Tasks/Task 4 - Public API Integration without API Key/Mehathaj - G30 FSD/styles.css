@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #6a85b6, #bac8e0);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Background Blur */
+.background {
+  position: fixed;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1500&q=80');
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px) brightness(0.5);
+  z-index: -1;
+}
+
+/* Fade Animations */
+.fade-in {
+  animation: fade 1.2s ease-in-out;
+}
+@keyframes fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.search-container input {
+  padding: 12px 15px;
+  width: 270px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 16px;
+}
+
+.search-container button {
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background: #ffffff;
+  color: #333;
+  transition: 0.3s;
+}
+
+.search-container button:hover {
+  background: #f0f0f0;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin-top: 40px;
+  color: white;
+}
+
+.hero-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.hero img {
+  width: 80px;
+}
+
+.hero h2 {
+  font-size: 4rem;
+}
+
+/* Cards Section */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  margin: 40px 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+  color: white;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Air Quality */
+.air-quality {
+  margin: 20px;
+  color: white;
+  text-align: center;
+}
+
+.aq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.aq-card {
+  padding: 15px;
+  border-radius: 15px;
+  color: #fff;
+}
+
+.good { background: rgba(76, 175, 80, 0.7); }
+.moderate { background: rgba(255, 193, 7, 0.7); }
+.unhealthy { background: rgba(244, 67, 54, 0.7); }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero h2 { font-size: 3rem; }
+  .search-container input { width: 200px; }
+}

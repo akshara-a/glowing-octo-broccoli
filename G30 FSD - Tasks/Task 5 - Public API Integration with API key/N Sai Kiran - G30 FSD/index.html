@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Closed-API</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Open-Weather API</h1>
+
+    <section class="card">
+      <h2>OpenWeatherMap — City Weather</h2>
+      <div class="form-row">
+        <input id="cityInput" placeholder="Enter city (e.g., London)" />
+        <button id="getCityWeatherBtn">Get Weather</button>
+      </div>
+
+      <div id="weatherLoading" class="muted hidden">Loading weather…</div>
+      <div id="weatherError" class="error hidden"></div>
+
+      <div id="weatherResult" class="result hidden">
+        <div class="row">
+          <div><strong>Temperature:</strong> <span id="ow_temp">--</span> °C</div>
+          <div><strong>Feels like:</strong> <span id="ow_feels">--</span> °C</div>
+          <div><strong>Humidity:</strong> <span id="ow_humidity">--</span> %</div>
+          <div><strong>Description:</strong> <span id="ow_desc">--</span></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  
+<script type="module" src="script.js"></script>
+
+</body>
+</html>

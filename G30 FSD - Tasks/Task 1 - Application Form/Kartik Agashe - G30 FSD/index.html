@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Signup Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Volunteer Signup Form</h1>
+
+        <form id="volunteerForm">
+
+            <!-- PERSONAL DETAILS -->
+            <h2 class="section-title">Personal Information</h2>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input type="text" id="fullName" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Date of Birth *</label>
+                    <input type="date" id="dob" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender *</label>
+                    <select id="gender" required>
+                        <option value="">Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address *</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Mobile Number *</label>
+                    <input type="tel" id="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Alternate Contact Number</label>
+                    <input type="tel" id="altPhone">
+                </div>
+
+                <div class="form-group address-group">
+                    <label>Residential Address *</label>
+                    <textarea id="address" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>City, State, ZIP Code *</label>
+                    <input type="text" id="location" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Emergency Contact Name & Number *</label>
+                    <input type="text" id="emergencyContact" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Relationship to Emergency Contact *</label>
+                    <input type="text" id="relationship" required>
+                </div>
+
+            </div>
+
+            <!-- BACKGROUND & SKILLS -->
+            <h2 class="section-title">Background & Skills</h2>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Educational Qualification *</label>
+                    <input type="text" id="education" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Current Occupation *</label>
+                    <input type="text" id="occupation" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Languages Spoken *</label>
+                    <input type="text" id="languages" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Skills & Expertise *</label>
+                    <textarea id="skills" rows="3" required placeholder="e.g., first aid, teaching, event planning"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Previous Volunteer Experience *</label>
+                    <select id="experience" required>
+                        <option value="">Select</option>
+                        <option>No</option>
+                        <option>Yes</option>
+                    </select>
+                </div>
+
+                <div class="form-group exp-details-group">
+                    <label>If yes, provide brief details</label>
+                    <textarea id="expDetails" rows="3"></textarea>
+                </div>
+
+            </div>
+
+            <!-- AVAILABILITY -->
+            <h2 class="section-title">Availability</h2>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Preferred Days *</label>
+                    <input type="text" id="days" required placeholder="Weekdays, Weekends, Specific Days">
+                </div>
+
+                <div class="form-group">
+                    <label>Preferred Time Slots *</label>
+                    <input type="text" id="timeSlots" required placeholder="Morning, Afternoon, Evening">
+                </div>
+
+                <div class="form-group">
+                    <label>Available Start Date *</label>
+                    <input type="date" id="startDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Duration of Commitment *</label>
+                    <input type="text" id="duration" required placeholder="1 month, 3 months, ongoing">
+                </div>
+
+            </div>
+
+            <!-- INTERESTS -->
+            <h2 class="section-title">Interests & Preferences</h2>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Areas of Interest *</label>
+                    <input type="text" id="areas" required placeholder="Environment, Education, Health, etc.">
+                </div>
+
+                <div class="form-group">
+                    <label>Preferred Type of Work *</label>
+                    <input type="text" id="workType" required placeholder="Fieldwork, Admin, Social Media">
+                </div>
+
+            </div>
+
+            <!-- LEGAL & CONSENT -->
+            <h2 class="section-title">Legal & Consent</h2>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Government ID Proof Type *</label>
+                    <input type="text" id="idType" required>
+                </div>
+
+                <div class="form-group">
+                    <label>ID Proof Number *</label>
+                    <input type="text" id="idNumber" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Consent to Background Check *</label>
+                    <select id="backgroundCheck" required>
+                        <option value="">Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Medical Conditions / Allergies (Optional)</label>
+                    <textarea id="medical" rows="2"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Photo/Video Consent *</label>
+                    <select id="photoConsent" required>
+                        <option value="">Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+
+                <div class="form-group waiver-group">
+                    <label>
+                        <input type="checkbox" id="liability" required>
+                        I agree to the Liability Waiver Agreement *
+                    </label>
+                </div>
+
+            </div>
+
+            <!-- DECLARATION -->
+            <h2 class="section-title">Declaration</h2>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Signature *</label>
+                    <input type="text" id="signature" required placeholder="Type your full name">
+                </div>
+
+                <div class="form-group">
+                    <label>Date *</label>
+                    <input type="date" id="signDate" required>
+                </div>
+
+                <div class="form-group declaration-group">
+                    <label>
+                        <input type="checkbox" id="terms" required>
+                        I agree to the Terms & Conditions *
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="submit-box">
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather Sans", sans-serif;
+}
+
+body {
+    background: linear-gradient(160deg, #0f38a2 0%, #4c7eca 100%);
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    color: white;
+    padding-top: 40px;
+}
+
+
+h1 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.form-container input {
+    width: 300px;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    padding-left: 15px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.35);
+    color: white;
+}
+
+.form-container input::placeholder {
+    color: #ebebeb;
+}
+
+.btn {
+    background: #1e5bb8;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    letter-spacing: 1px;
+}
+
+.city-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.desc {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.temp {
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.parameter-container {
+    width: 90%;
+    max-width: 750px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.top-row {
+    margin-bottom: 15px;
+}
+
+.parameter {
+    width: 30%;
+    min-width: 150px;
+    height: 110px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    padding-top: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.parameter p:first-child {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.parameter p:last-child {
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+.parameter:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.footer {
+    margin-top: 10px;
+    opacity: 0.9;
+    font-size: 15px;
+}
+
+body.sunny {
+    background: linear-gradient(160deg, #ffcf71 0%, #ff9f1c 100%);
+}
+
+body.cloudy {
+    background: linear-gradient(160deg, #4b4e57 0%, #8d99ae 100%);
+}
+
+body.rainy {
+    background: linear-gradient(160deg, #0f2027 0%, #203a43 100%);
+}
+
+body.haze {
+    background: linear-gradient(160deg, #d45adb 0%, #2c73ae 100%);
+}
+
+body.overcast {
+    background: linear-gradient(160deg, #757f9a 0%, #76a3f5 100%);
+}
+
+body.clearsky {
+    background: linear-gradient(160deg, #339b98 0%, #28646e 100%);
+}

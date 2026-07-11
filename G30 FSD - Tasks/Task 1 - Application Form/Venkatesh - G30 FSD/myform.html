@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Application Form</title>
+  <style>
+    /* Base Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0d0d0d, #007bff);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .form-container {
+      background: #ffffff;
+      width: 90%;
+      max-width: 950px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    header {
+      background: linear-gradient(90deg, #007bff, #004a99);
+      color: white;
+      text-align: center;
+      padding: 25px;
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 30px 40px;
+    }
+
+    .section-title {
+      grid-column: 1 / -1;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #004a99;
+      border-left: 5px solid #007bff;
+      padding-left: 10px;
+      margin-top: 10px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #222;
+    }
+
+    input, select, textarea {
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .radio-group, .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .radio-group label, .checkbox-group label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .radio-group label:hover, .checkbox-group label:hover {
+      color: #007bff;
+    }
+
+    /* Hover dynamic effects */
+    input[type="text"]:hover,
+    input[type="email"]:hover,
+    textarea:hover {
+      background-color: #f5f9ff;
+    }
+
+    .submit-btn {
+      grid-column: 1 / -1;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 14px 35px;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: #004a99;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      header {
+        font-size: 1.5rem;
+        padding: 15px;
+      }
+      form {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <header>Online Application Form</header>
+
+    <form>
+      <!-- Personal Details -->
+      <div class="section-title">Personal Information</div>
+
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="Enter your full name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" required />
+      </div>
+
+      <div class="form-group">
+        <label>Gender</label>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" /> Male</label>
+          <label><input type="radio" name="gender" /> Female</label>
+          <label><input type="radio" name="gender" /> Other</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="example@email.com" required />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="+91 9876543210" required />
+      </div>
+
+      <!-- Education -->
+      <div class="section-title">Educational Details</div>
+
+      <div class="form-group">
+        <label for="college">College / University</label>
+        <input type="text" id="college" placeholder="Enter your college name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="course">Course / Major</label>
+        <input type="text" id="course" placeholder="e.g., Computer Science" required />
+      </div>
+
+      <div class="form-group">
+        <label for="year">Year of Study</label>
+        <select id="year" required>
+          <option value="">Select Year</option>
+          <option>1st Year</option>
+          <option>2nd Year</option>
+          <option>3rd Year</option>
+          <option>Final Year</option>
+          <option>Graduate</option>
+        </select>
+      </div>
+
+      <!-- Internship Info -->
+      <div class="section-title">Internship Preferences</div>
+
+      <div class="form-group">
+        <label for="role">Preferred Role</label>
+        <select id="role" required>
+          <option value="">Select Role</option>
+          <option>Web Developer</option>
+          <option>Data Analyst</option>
+          <option>Graphic Designer</option>
+          <option>UI/UX Designer</option>
+          <option>Marketing</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Skills</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" /> HTML</label>
+          <label><input type="checkbox" /> CSS</label>
+          <label><input type="checkbox" /> JavaScript</label>
+          <label><input type="checkbox" /> Python</label>
+          <label><input type="checkbox" /> Java</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="reason">Why should we hire you?</label>
+        <textarea id="reason" placeholder="Write about your strengths or motivation..." required></textarea>
+      </div>
+
+      <!-- Submission -->
+      <div class="submit-btn">
+        <button type="submit">Submit Application</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

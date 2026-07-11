@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="weather-box">
+        <h1 class="title">Check Weather</h1>
+        <p class="subtitle">Enter a city name to see the current weather.</p>
+
+        <div class="input-group">
+          <input
+            type="text"
+            id="city-input"
+            placeholder="e.g. Delhi, London, New York"
+          />
+          <button id="check-weather">Check Weather</button>
+        </div>
+
+        <p id="loading" class="info hidden">Fetching weather...</p>
+
+        <p id="error" class="error hidden"></p>
+
+        <div id="weather-card" class="card hidden">
+          <h2 id="city-name"></h2>
+          <p id="weather-desc"></p>
+
+          <div class="row">
+            <span class="label">Temperature</span>
+            <span class="value" id="temp"></span>
+          </div>
+
+          <div class="row">
+            <span class="label">Feels like</span>
+            <span class="value" id="feels-like"></span>
+          </div>
+
+          <div class="row">
+            <span class="label">Humidity</span>
+            <span class="value" id="humidity"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Removed stray '\' -->
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+:root{
+    --anime-purple: #8b5cf6;
+    --anime-pink: #ec4899;
+}
+h1, h2{
+    color: var(--anime-purple);
+}
+.btn-primary{
+    background-color: var(--anime-purple);
+    border: none;
+}
+
+.btn-primary:hover{
+    background-color: var(--anime-pink);
+}
+body{
+    background: linear-gradient(to bottom, #0f172a, #1e293b);
+    color: white;
+}
+section{
+    padding: 60px 0;
+}
+.card{
+    transition: 0.3s;
+    background-color: #2f4363;
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.5);
+}
+#genres .card{
+    text-align: center;
+    padding: 10px;
+}
+
+#genres .card-title{
+    color: #8b5cf6;
+}

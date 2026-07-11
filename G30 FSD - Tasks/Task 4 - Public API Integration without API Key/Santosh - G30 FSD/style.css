@@ -1,0 +1,22 @@
+body {
+    text-align: center;
+    font-family: Arial;
+    background: lightblue;
+}
+
+button {
+    padding: 8px 20px;
+    margin-top: 10px;
+    background: navy;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#resultBox {
+    margin: 20px auto;
+    width: 200px;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+}

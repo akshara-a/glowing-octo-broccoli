@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Responsive Image Gallery</title>
+
+<!-- Bootstrap 5 CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+body{
+    background:#f4f6f9;
+    transition:0.4s;
+}
+
+/* Gallery Card */
+.gallery-card{
+    border:none;
+    overflow:hidden;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+/* Image Styling */
+.gallery-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+/* Hover Zoom Effect */
+.gallery-card:hover img{
+    transform:scale(1.1);
+}
+
+.gallery-card:hover{
+    transform:translateY(-5px);
+}
+
+.caption{
+    padding:12px;
+    text-align:center;
+    font-weight:bold;
+}
+
+/* Dark Mode */
+.dark-mode{
+    background:#121212;
+    color:white;
+}
+
+.dark-mode .gallery-card{
+    background:#1f1f1f;
+    color:white;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container py-5">
+
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <h2 class="fw-bold">
+            Responsive Image Gallery
+        </h2>
+
+        <button id="darkBtn" class="btn btn-dark">
+            🌙 Dark Mode
+        </button>
+
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="row g-4">
+
+        <!-- Image 1 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card gallery-card">
+                <img src="https://picsum.photos/id/1015/600/400" alt="Nature">
+                <div class="caption">Beautiful Nature</div>
+            </div>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card gallery-card">
+                <img src="https://picsum.photos/id/1016/600/400" alt="Mountain">
+                <div class="caption">Mountain View</div>
+            </div>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card gallery-card">
+                <img src="https://picsum.photos/id/1018/600/400" alt="River">
+                <div class="caption">Peaceful River</div>
+            </div>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card gallery-card">
+                <img src="https://picsum.photos/id/1020/600/400" alt="Road">
+                <div class="caption">Long Highway</div>
+            </div>
+        </div>
+
+        <!-- Image 5 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card gallery-card">
+                <img src="https://picsum.photos/id/1024/600/400" alt="Dog">
+                <div class="caption">Cute Dog</div>
+            </div>
+        </div>
+
+        <!-- Image 6 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card gallery-card">
+                <img src="https://picsum.photos/id/1035/600/400" alt="Beach">
+                <div class="caption">Sunny Beach</div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- JavaScript -->
+<script>
+
+// Dark Mode Toggle
+const darkBtn = document.getElementById("darkBtn");
+
+darkBtn.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+
+        darkBtn.innerHTML = "☀️ Light Mode";
+        darkBtn.classList.remove("btn-dark");
+        darkBtn.classList.add("btn-warning");
+
+    }else{
+
+        darkBtn.innerHTML = "🌙 Dark Mode";
+        darkBtn.classList.remove("btn-warning");
+        darkBtn.classList.add("btn-dark");
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>

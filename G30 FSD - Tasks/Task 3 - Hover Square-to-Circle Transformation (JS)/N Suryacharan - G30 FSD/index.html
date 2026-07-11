@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Triangle to Square Hover</title>
+    <style>
+        #shape {
+            width: 0;
+            height: 0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+            border-bottom: 100px solid blue;
+            margin: 120px auto;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="shape"></div>
+
+    <script>
+        let shape = document.getElementById("shape");
+
+        shape.addEventListener("mouseover", function () {
+            shape.style.border = "none";
+            shape.style.width = "220px";
+            shape.style.height = "220px";
+            shape.style.backgroundColor = "green";
+        });
+
+        shape.addEventListener("mouseout", function () {
+            shape.style.backgroundColor = "transparent";
+            shape.style.width = "0";
+            shape.style.height = "0";
+
+            shape.style.borderLeft = "60px solid transparent";
+            shape.style.borderRight = "60px solid transparent";
+            shape.style.borderBottom = "100px solid blue";
+        });
+    </script>
+
+</body>
+</html>

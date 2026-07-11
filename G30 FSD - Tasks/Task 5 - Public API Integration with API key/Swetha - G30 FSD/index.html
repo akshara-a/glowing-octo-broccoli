@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Task 5 - Weather + Sentiment</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Weather & Sentiment Demo</h1>
+
+    <section class="card" id="weather-section">
+      <h2>Current Weather</h2>
+      <div class="form-row">
+        <input id="city-input" placeholder="Enter city (e.g. London)" />
+        <button id="get-weather">Get Weather</button>
+      </div>
+
+      <div id="weather-loading" class="muted hidden">Loading...</div>
+      <div id="weather-error" class="error hidden"></div>
+
+      <div id="weather-result" class="result hidden">
+        <p><strong>Temperature:</strong> <span id="temp"></span> °C</p>
+        <p><strong>Feels like:</strong> <span id="feels"></span> °C</p>
+        <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+        <p><strong>Description:</strong> <span id="description"></span></p>
+      </div>
+    </section>
+
+    <section class="card" id="sentiment-section">
+      <h2>MeaningCloud Sentiment</h2>
+      <textarea id="text-input" rows="5" placeholder="Type a sentence or paragraph..."></textarea>
+      <div class="form-row">
+        <button id="analyze">Analyze Sentiment</button>
+      </div>
+
+      <div id="sentiment-loading" class="muted hidden">Analyzing...</div>
+      <div id="sentiment-error" class="error hidden"></div>
+
+      <div id="sentiment-result" class="result hidden">
+        <p><strong>Sentiment:</strong> <span id="sentiment"></span></p>
+        <p><strong>Confidence:</strong> <span id="confidence"></span>%</p>
+        <p><strong>Score Tag:</strong> <span id="score_tag"></span></p>
+      </div>
+    </section>
+
+    <footer class="muted small">Do NOT commit <code>config.js</code> — add it to <code>.gitignore</code>.</footer>
+  </main>
+  
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

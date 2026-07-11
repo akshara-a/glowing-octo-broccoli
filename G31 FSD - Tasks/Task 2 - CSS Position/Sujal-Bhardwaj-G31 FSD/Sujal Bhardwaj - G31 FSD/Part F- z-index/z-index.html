@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            position: relative;
+            width: 300px;
+            height: 250px;
+            margin: 50px;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+        }
+
+        .red {
+            background-color: red;
+            top: 20px;
+            left: 20px;
+            z-index: 1
+        }
+
+        .blue {
+            background-color: blue;
+            top: 60px;
+            left: 60px;
+            z-index: 2
+        }
+
+        .green {
+            background-color: green;
+            top: 100px;
+            left: 100px;
+            z-index: 3
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box red"></div>
+        <div class="box blue"></div>
+        <div class="box green"></div>
+    </div>
+
+
+    <h1>Explain How z-index Affects Stacking Order</h1>
+    <p>Definition:<br>
+
+The z-index property controls the stacking order of overlapping elements along the z-axis (front-to-back direction).
+<br>
+
+Rules:
+<br>
+1. Elements with a higher z-index appear in front of elements with a lower z-index.
+<br>
+2. z-index works on positioned elements (relative, absolute, fixed, or sticky).
+<br>
+3. If two elements have the same z-index, the element that appears later in the HTML code is displayed on top.</p>
+
+</body>
+</html>

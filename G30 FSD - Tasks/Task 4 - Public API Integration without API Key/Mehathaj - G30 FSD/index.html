@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Weather App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="background"></div>
+
+  <!-- Search Bar -->
+  <div class="search-container fade-in">
+      <input type="text" id="searchInput" placeholder="Search city (e.g., London)">
+      <button onclick="fetchWeather()">Search</button>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero fade-in">
+      <h1 id="cityName">London</h1>
+      <p id="localtime">2021-02-21 08:42</p>
+      <div class="hero-info">
+          <img id="weatherIcon" src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="">
+          <h2 id="temperature">11° C</h2>
+          <p id="conditionText">Partly Cloudy</p>
+      </div>
+  </section>
+
+  <!-- Weather Cards -->
+  <section class="cards fade-in">
+      <div class="card">
+          <h3>Humidity</h3>
+          <p id="humidity">82%</p>
+      </div>
+
+      <div class="card">
+          <h3>Wind</h3>
+          <p id="wind">6.1 km/h SW</p>
+      </div>
+
+      <div class="card">
+          <h3>Pressure</h3>
+          <p id="pressure">1009 mb</p>
+      </div>
+
+      <div class="card">
+          <h3>Visibility</h3>
+          <p id="visibility">10 km</p>
+      </div>
+
+      <div class="card">
+          <h3>Cloud Cover</h3>
+          <p id="cloud">75%</p>
+      </div>
+
+      <div class="card">
+          <h3>Feels Like</h3>
+          <p id="feelslike">9.5° C</p>
+      </div>
+
+      <div class="card">
+          <h3>UV Index</h3>
+          <p id="uv">1</p>
+      </div>
+  </section>
+
+  <!-- Air Quality Section -->
+  <section class="air-quality fade-in">
+      <h2>Air Quality Index</h2>
+
+      <div class="aq-grid">
+          <div class="aq-card good">
+              <h4>PM 2.5</h4>
+              <p id="pm25">8.6</p>
+          </div>
+
+          <div class="aq-card moderate">
+              <h4>PM 10</h4>
+              <p id="pm10">11.3</p>
+          </div>
+
+          <div class="aq-card good">
+              <h4>O₃</h4>
+              <p id="o3">54.3</p>
+          </div>
+
+          <div class="aq-card good">
+              <h4>NO₂</h4>
+              <p id="no2">13.5</p>
+          </div>
+
+          <div class="aq-card good">
+              <h4>SO₂</h4>
+              <p id="so2">7.9</p>
+          </div>
+
+          <div class="aq-card good">
+              <h4>CO</h4>
+              <p id="co">230.3</p>
+          </div>
+      </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

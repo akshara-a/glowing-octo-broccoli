@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sticky Navigation Bar</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color:#eef4ff;
+}
+
+.navbar{
+    position:sticky;
+    top:0;
+
+    height:75px;
+    background-color:#1e3a8a;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 40px;
+
+    border-bottom:3px solid #60a5fa;
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+.logo img{
+    height:55px;
+    width:auto;
+}
+
+.nav-links{
+    display:flex;
+    gap:18px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+
+    background-color:#2563eb;
+    padding:8px 16px;
+    border-radius:20px;
+
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    background-color:#60a5fa;
+    transform:translateY(-2px);
+}
+
+.content{
+    padding:30px;
+}
+
+.content h2{
+    color:#1e3a8a;
+    margin-bottom:15px;
+}
+
+.content p{
+    margin-bottom:20px;
+    line-height:1.8;
+    color:#334155;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+
+    <div class="logo">
+        <img src="https://img1.wsimg.com/isteam/ip/6f038646-2052-4598-8c4e-ed7fea8124d5/SURE%20INITIATIVE%20LOGO.png/:/rs=h:200,cg:true,m/qt=q:95" alt="Logo">
+    </div>
+
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+    </div>
+
+</div>
+
+<div class="content">
+
+    <h2>Sticky Navbar Example</h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Suspendisse potenti. Curabitur at justo vitae nunc feugiat bibendum.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, rem. Nulla voluptatem aliquid aspernatur repellendus saepe recusandae.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae aliquam asperiores vero placeat illum porro molestias.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat exercitationem molestias explicabo reprehenderit praesentium deserunt.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione officiis incidunt molestiae voluptate quisquam minima.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus neque inventore eaque optio veritatis velit.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus deserunt aspernatur magnam pariatur earum.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium exercitationem provident rerum cumque quas.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis possimus autem unde quia ducimus.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil vitae perferendis recusandae molestias deleniti.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque saepe, quasi velit temporibus porro.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quia porro ratione quaerat asperiores.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita possimus autem adipisci repellendus pariatur.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, perferendis. Hic voluptatem aspernatur accusantium.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus beatae exercitationem necessitatibus blanditiis est.</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doctor Prescription Form</title>
+  <link rel="stylesheet" href="form.css" />
+</head>
+<body>
+
+  <div class="main">
+    <div class="top"></div>
+    <h1>Doctor Prescription form</h1>
+
+    <!-- Patient Details -->
+    <section class="section">
+      <h2 class="header">Patient Details</h2>
+      <div class="grid">
+        <div class="field">
+          <label class="label">Patient Name</label>
+          <input type="text" class="input" placeholder="Enter full name" />
+        </div>
+        <div class="field">
+          <label class="label">Age</label>
+          <input type="number" class="input" placeholder="Enter age" />
+        </div>
+        <div class="field flex-field">
+          <label class="label">Gender</label>
+          <div class="radio-row">
+            <label><input type="radio" name="gender" /> Male</label>
+            <label><input type="radio" name="gender" /> Female</label>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Contact Number</label>
+          <input type="text" class="input" placeholder="Enter number" />
+        </div>
+        <div class="field full">
+          <label class="label">Address</label>
+          <input type="text" class="input" placeholder="Enter address" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Medical Details -->
+    <section class="section">
+      <h2 class="header">Medical Details</h2>
+      <div class="grid">
+        <div class="field">
+          <label class="label">Symptoms</label>
+          <input type="text" class="input" placeholder="Cough, Fever, etc." />
+        </div>
+        <div class="field">
+          <label class="label">Allergies</label>
+          <input type="text" class="input" placeholder="Enter allergies" />
+        </div>
+        <div class="field full">
+          <label class="label">Doctor Remarks</label>
+          <textarea class="input" rows="3" placeholder="Doctor's notes..."></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prescription Section -->
+    <section class="section">
+      <h2 class="header">Prescription Details</h2>
+      <div class="medicine-grid">
+        <div class="medicine-row">
+          <input type="text" class="input med-name" placeholder="Medicine Name" />
+          <input type="text" class="input" placeholder="Dosage" />
+          <input type="text" class="input" placeholder="Duration" />
+          <input type="text" class="input" placeholder="Instructions" />
+        </div>
+        <div class="medicine-row">
+          <input type="text" class="input med-name" placeholder="Medicine Name" />
+          <input type="text" class="input" placeholder="Dosage" />
+          <input type="text" class="input" placeholder="Duration" />
+          <input type="text" class="input" placeholder="Instructions" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="sign flex">
+        <label>Doctor’s Signature:</label>
+        <input type="text" class="input small" placeholder="Sign here" />
+      </div>
+      <div class="btn-box flex">
+        <button class="submit-btn">Save Prescription</button>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>

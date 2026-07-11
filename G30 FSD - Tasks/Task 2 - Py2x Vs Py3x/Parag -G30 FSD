@@ -1,0 +1,60 @@
+# Differences Between Python 2 and Python 3
+                by parag 
+
+Python 2 and Python 3 are different versions of Python. Python 3 is the latest and recommended version. Here’s a simple comparison:
+
+---
+
+## 1. Print Statement
+- **Python 2:** `print "Hello"`  
+- **Python 3:** `print("Hello")`
+
+---
+
+## 2. Integer Division
+- **Python 2:** `/` does integer division if both numbers are integers  
+  ```python
+  5 / 2  # Output: 2
+Python 3: / always gives float, // for integer division
+
+python
+Copy code
+5 / 2   # Output: 2.5
+5 // 2  # Output: 2
+3. Strings
+Python 2: Strings are bytes by default
+
+Python 3: Strings are Unicode by default, bytes handled separately
+
+Example:
+
+python
+Copy code
+# Python 3
+b = b"Hello"  # bytes
+s = "Hello"   # Unicode
+4. Integer Types
+Python 2: int and long
+
+Python 3: Only int (automatically handles big numbers)
+
+5. Libraries
+Python 2: Some old libraries may only work here
+
+Python 3: Supports latest libraries and updates
+
+6. Error Handling
+Python 2: except Exception, e:
+
+Python 3: except Exception as e:
+
+Summary Table
+Feature	Python 2	Python 3
+Print	print "Hello"	print("Hello")
+Division	/ integer by default	/ float, // integer
+Strings	Bytes by default	Unicode by default
+Integers	int & long	Only int
+Exception	except Exception, e:	except Exception as e:
+
+Conclusion:
+Python 3 is modern, consistent, and recommended for new projects. Python 2 is outdated and not maintained anymore

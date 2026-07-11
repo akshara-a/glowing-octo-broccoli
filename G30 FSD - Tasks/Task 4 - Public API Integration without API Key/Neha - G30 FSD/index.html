@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card">
+        <h2>Weather Finder</h2>
+
+        <div class="input-group">
+            <input type="text" id="latInput" placeholder="Latitude">
+            <input type="text" id="lonInput" placeholder="Longitude">
+        </div>
+
+        <button id="getWeatherBtn">Get Weather</button>
+
+        <!-- Hide initially -->
+        <div id="weatherResult" class="weather-info" style="display:none;">
+            <img id="weatherIcon" src="" class="icon" />
+
+            <h3 id="weatherMeaning"></h3>
+
+            <div class="details">
+                <p><strong>Temp:</strong> <span id="temperature"></span> °C</p>
+                <p><strong>Feels Like:</strong> <span id="feelsLike"></span> °C</p>
+                <p><strong>Wind:</strong> <span id="windSpeed"></span> km/h</p>
+                <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+                <p><strong>Pressure:</strong> <span id="pressure"></span> hPa</p>
+                <p><strong>Code:</strong> <span id="weatherCode"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
