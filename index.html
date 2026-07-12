@@ -3,54 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pokémon Search</title>
+  <title>Weather Dashboard</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <div class="app">
-    <h1>Pokémon Search</h1>
-    <p class="subtitle">Type a name or ID to look up a Pokémon</p>
+    <h1>Weather Dashboard</h1>
+    <p class="subtitle">Search any city to see the current weather</p>
 
     <div class="search-box">
-      <input type="text" id="searchInput" placeholder="e.g. pikachu or 25" />
+      <input type="text" id="cityInput" placeholder="e.g. Chennai" />
       <button id="searchBtn">Search</button>
     </div>
 
     <p id="statusMessage"></p>
 
-    <div id="resultCard" class="result-card hidden">
-      <img id="pokemonImage" src="" alt="Pokémon image" />
-      <h2 id="pokemonName"></h2>
-      <p id="pokemonId"></p>
+    <div id="weatherCard" class="weather-card hidden">
+      <h2 id="cityName"></h2>
+      <p id="weatherCondition"></p>
+
+      <div class="temp-block">
+        <span id="temperature"></span>
+        <span class="unit">°C</span>
+      </div>
 
       <div class="info-grid">
         <div>
-          <span class="label">Height</span>
-          <span id="pokemonHeight"></span>
+          <span class="label">Humidity</span>
+          <span id="humidity"></span>
         </div>
         <div>
-          <span class="label">Weight</span>
-          <span id="pokemonWeight"></span>
+          <span class="label">Wind Speed</span>
+          <span id="windSpeed"></span>
         </div>
-        <div>
-          <span class="label">Type</span>
-          <span id="pokemonTypes"></span>
-        </div>
-      </div>
-
-      <div class="abilities">
-        <span class="label">Abilities</span>
-        <p id="pokemonAbilities"></p>
-      </div>
-
-      <div class="stats">
-        <span class="label">Base Stats</span>
-        <ul id="pokemonStats"></ul>
       </div>
     </div>
   </div>
 
+  <script src="config.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
