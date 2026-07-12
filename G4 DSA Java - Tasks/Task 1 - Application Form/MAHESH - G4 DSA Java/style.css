@@ -1,0 +1,126 @@
+body{
+
+    font-family: Arial, sans-serif;
+    background:#f5f5f5;
+
+}
+
+
+.container{
+
+    width:90%;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border:2px solid #333;
+
+}
+
+
+h1{
+
+    text-align:center;
+    color:#0b2458;
+    font-size:40px;
+
+}
+
+
+h3{
+
+    text-align:center;
+
+}
+
+
+.note{
+
+    text-align:center;
+    font-style:italic;
+
+}
+
+
+.photo{
+
+    width:130px;
+    height:160px;
+    border:1px solid black;
+
+    text-align:center;
+    padding-top:30px;
+
+    float:right;
+
+}
+
+
+
+section{
+
+    border:1px solid #333;
+    margin-top:25px;
+    padding:15px;
+
+}
+
+
+
+h2{
+
+    background:#102b5c;
+    color:white;
+
+    padding:8px;
+    font-size:18px;
+
+}
+
+
+
+label{
+
+    display:inline-block;
+    width:180px;
+    margin:8px;
+
+}
+
+
+
+input{
+
+    border:none;
+    border-bottom:1px solid black;
+    padding:5px;
+
+}
+
+
+
+textarea{
+
+    width:80%;
+    height:60px;
+
+    display:block;
+
+}
+
+
+
+input[type="radio"],
+input[type="checkbox"]{
+
+    width:auto;
+
+}
+
+
+
+section h3{
+
+    text-align:left;
+    color:#102b5c;
+
+}

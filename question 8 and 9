@@ -1,0 +1,19 @@
+Short explanation of selected API
+The API used in this project is called OpenWeatherMap Current Weather API.
+It is a free online service that gives you real-time weather information for almost any city in the world. You just send it a city name, and it sends back a reply full of weather details for that place — the current temperature, how humid it is, wind speed, and a short description like "cloudy" or "clear sky."
+To use it, you don't need to know anything complicated. You just:
+
+Sign up on their website and get a free API key (a special code that identifies you as the person calling their service).
+Send a request using that key and a city name.
+Get back a reply in JSON format, which is just a structured way of organizing data using labels and values.
+
+This API was picked for this project because:
+
+It's free to use for basic requests.
+The reply is simple and doesn't have too many confusing layers.
+It's a great first project for learning how real apps talk to outside services.
+Weather is something everyone understands, so it's easy to test and see if it's working correctly.
+
+Explanation of API response fields used
+When you ask the API for weather in a city, it sends back a big JSON reply. Inside that reply, only a few specific pieces are picked out and shown on the webpage. Here they are, explained simply:
+FieldWhat it actually isWhy we use itnameThe name of the city, exactly as the API understands itShown at the top so the user knows which city's weather they're looking atsys.countryA two-letter code for the country (like IN for India, US for United States)Displayed right next to the city name, e.g. "Chennai, IN"main.tempThe current temperature, given in Celsius (because we asked for units=metric in the request)Shown as the big number in the middle — the main thing people want to seemain.humidityHow much moisture is in the air, shown as a percentageTells the user if the air feels dry or humidweather[0].descriptionA short phrase describing the sky/weather, like "scattered clouds" or "clear sky"Displayed below the city name so users get a quick sense of the weather without reading numberswind.speedHow fast the wind is blowing, measured in meters per secondShown in the info section so users know if it's windy outside

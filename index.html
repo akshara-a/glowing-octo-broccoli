@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+    <h1>Weather Dashboard</h1>
+    <p class="subtitle">Search any city to see the current weather</p>
+
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="e.g. Chennai" />
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <p id="statusMessage"></p>
+
+    <div id="weatherCard" class="weather-card hidden">
+      <h2 id="cityName"></h2>
+      <p id="weatherCondition"></p>
+
+      <div class="temp-block">
+        <span id="temperature"></span>
+        <span class="unit">°C</span>
+      </div>
+
+      <div class="info-grid">
+        <div>
+          <span class="label">Humidity</span>
+          <span id="humidity"></span>
+        </div>
+        <div>
+          <span class="label">Wind Speed</span>
+          <span id="windSpeed"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
