@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4 - Bulma CSS Application</title>
+
+    <link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+     <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <!-- Logo -->
+    <a class="navbar-item has-text-weight-bold is-size-4" href="#">
+      🏡 DreamNest
+    </a>
+    <!-- Mobile Burger -->
+    <a role="button"
+      class="navbar-burger"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div id="navbarBasicExample" class="navbar-menu">
+    <!-- Left Side -->
+    <div class="navbar-start">
+
+      <a class="navbar-item" href="#home">
+        Home
+      </a>
+      <a class="navbar-item" href="#properties">
+        Properties
+      </a>
+      <a class="navbar-item" href="#services">
+        Services
+      </a>
+      <a class="navbar-item" href="#testimonials">
+        Testimonials
+      </a>
+      <a class="navbar-item" href="#contact">
+        Contact
+      </a>
+    </div>
+    <!-- Right Side -->
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-success">
+            <strong>Get Started</strong>
+          </a>
+          <a class="button is-light">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+     <!-- Hero Section -->
+<section class="hero is-primary is-medium" id="home">
+  <div class="hero-body">
+    <div class="container">
+      <p class="title">
+        Find Your Dream Home
+      </p>
+      <p class="subtitle">
+        Explore luxury villas, modern apartments, and premium properties in the best locations.
+      </p>
+      <div class="buttons mt-5">
+        <a class="button is-warning">
+          Explore Properties
+        </a>
+        <a class="button is-light">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Property Card -->
+
+<section id="properties" class="section">
+  <div class="container">
+    <h1 class="title has-text-centered">
+      Featured Properties
+    </h1>
+    <p class="subtitle has-text-centered">
+      Explore our premium collection of homes designed for modern living.
+    </p>
+    <div class="columns is-multiline">
+
+      <!-- Property 1 -->
+      <div class="column is-4">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="images/house1.png" alt="Luxury Villa" />
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-5">Luxury Villa</p>
+            <p class="subtitle is-6">📍 Pune, Maharashtra</p>
+            <div class="content">
+              <strong>₹1.8 Crore</strong><br>
+              4 Bedrooms • 3 Bathrooms • Garden
+            </div>
+            <button class="button is-success is-fullwidth">
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Property 2 -->
+      <div class="column is-4">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="images/house2.png" alt="Modern Apartment" />
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-5">Modern Apartment</p>
+            <p class="subtitle is-6">📍 Mumbai, Maharashtra</p>
+            <div class="content">
+              <strong>₹95 Lakh</strong><br>
+              2 Bedrooms • 2 Bathrooms • Balcony
+            </div>
+            <button class="button is-success is-fullwidth">
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Property 3 -->
+      <div class="column is-4">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="images/house3.png" alt="Premium Penthouse" />
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-5">Premium Penthouse</p>
+            <p class="subtitle is-6">📍 Bengaluru, Karnataka</p>
+            <div class="content">
+              <strong>₹2.5 Crore</strong><br>
+              5 Bedrooms • Private Terrace • Pool
+            </div>
+            <button class="button is-success is-fullwidth">
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Property 4 -->
+      <div class="column is-4">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="images/house4.png" alt="Beach House" />
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-5">Beach House</p>
+            <p class="subtitle is-6">📍 Goa</p>
+            <div class="content">
+              <strong>₹3.2 Crore</strong><br>
+              Sea View • 4 Bedrooms • Infinity Pool
+            </div>
+            <button class="button is-success is-fullwidth">
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Property 5 -->
+      <div class="column is-4">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="images/house5.png" alt="Family Home" />
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-5">Family Home</p>
+            <p class="subtitle is-6">📍 Hyderabad, Telangana</p>
+            <div class="content">
+              <strong>₹1.2 Crore</strong><br>
+              3 Bedrooms • Parking • Garden
+            </div>
+            <button class="button is-success is-fullwidth">
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Property 6 -->
+      <div class="column is-4">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="images/house6.png" alt="Studio Apartment" />
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-5">Studio Apartment</p>
+            <p class="subtitle is-6">📍 New Delhi</p>
+            <div class="content">
+              <strong>₹75 Lakh</strong><br>
+              1 Bedroom • City View • Smart Home
+            </div>
+            <button class="button is-success is-fullwidth">
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+ <!-- Footer -->
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p class="title is-5">
+      🏡 DreamNest
+    </p>
+    <p>
+      Helping you find your perfect home with trust, comfort, and excellence.
+    </p>
+    <p>
+      © 2026 DreamNest. All Rights Reserved.
+    </p>
+  </div>
+</footer>
+</body>
+</html>
