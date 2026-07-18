@@ -4,234 +4,371 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABC Public School</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Bulma CSS -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
 </head>
+
 <body>
 
-    <!-- ================= NAVIGATION BAR ================= -->
+<!-- ================= NAVBAR ================= -->
 
-    <header>
-        <nav class="navbar">
+<nav class="navbar is-primary">
+    <div class="container">
 
-            <div class="logo">
-                <h2>ABC Public School</h2>
+        <div class="navbar-brand">
+            <a class="navbar-item">
+                <strong>ABC Public School</strong>
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-end">
+
+                <a class="navbar-item" href="#">Home</a>
+                <a class="navbar-item" href="#about">About</a>
+                <a class="navbar-item" href="#courses">Programs</a>
+                <a class="navbar-item" href="#facilities">Facilities</a>
+                <a class="navbar-item" href="#teachers">Teachers</a>
+                <a class="navbar-item" href="#contact">Contact</a>
+
             </div>
+        </div>
 
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#courses">Programs</a></li>
-                <li><a href="#facilities">Facilities</a></li>
-                <li><a href="#teachers">Teachers</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    </div>
+</nav>
 
-        </nav>
-    </header>
+<!-- ================= HERO ================= -->
 
-    <!-- ================= HERO SECTION ================= -->
+<section class="hero is-info is-large">
 
-    <section class="hero">
+    <div class="hero-body">
 
-        <div class="hero-content">
+        <div class="container has-text-centered">
 
-            <h1>Welcome to ABC Public School</h1>
+            <h1 class="title is-1">
+                Welcome to ABC Public School
+            </h1>
 
-            <p>
+            <p class="subtitle is-4">
                 Empowering Students with Knowledge,
                 Creativity and Leadership.
             </p>
 
-            <a href="#" class="btn">Enroll Now</a>
-            <a href="#" class="btn">Learn More</a>
+            <a class="button is-warning is-medium">
+                Enroll Now
+            </a>
+
+            <a class="button is-light is-medium">
+                Learn More
+            </a>
 
         </div>
 
-    </section>
+    </div>
 
-    <!-- ================= ABOUT ================= -->
+</section>
 
-    <section id="about">
+<!-- ================= ABOUT ================= -->
 
-        <h2>About Our School</h2>
+<section id="about" class="section">
 
-        <p>
+    <div class="container">
+
+        <h2 class="title has-text-centered">
+            About Our School
+        </h2>
+
+        <p class="has-text-centered">
             ABC Public School is committed to providing quality education,
             experienced teachers, modern classrooms, and overall student
             development through academics, sports, and extracurricular
             activities.
         </p>
 
-    </section>
+    </div>
 
-    <!-- ================= PROGRAMS ================= -->
+</section>
 
-    <section id="courses">
+<!-- ================= PROGRAMS ================= -->
 
-        <h2>Our Programs</h2>
+<section id="courses" class="section">
 
-        <div class="course-container">
+    <div class="container">
 
-            <div class="course-card">
-                <h3>Primary School</h3>
-                <p>Classes 1 to 5</p>
+        <h2 class="title has-text-centered">
+            Our Programs
+        </h2>
+
+        <div class="columns is-multiline">
+
+            <div class="column is-3">
+                <div class="card">
+                    <div class="card-content has-text-centered">
+                        <h3 class="title is-4">Primary School</h3>
+                        <p>Classes 1 to 5</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="course-card">
-                <h3>Secondary School</h3>
-                <p>Classes 6 to 10</p>
+            <div class="column is-3">
+                <div class="card">
+                    <div class="card-content has-text-centered">
+                        <h3 class="title is-4">Secondary School</h3>
+                        <p>Classes 6 to 10</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="course-card">
-                <h3>Higher Secondary</h3>
-                <p>Classes 11 & 12</p>
+            <div class="column is-3">
+                <div class="card">
+                    <div class="card-content has-text-centered">
+                        <h3 class="title is-4">Higher Secondary</h3>
+                        <p>Classes 11 & 12</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="course-card">
-                <h3>Computer Education</h3>
-                <p>Coding and Technology Skills</p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- ================= FACILITIES ================= -->
-
-    <section id="facilities">
-
-        <h2>Our Facilities</h2>
-
-        <div class="facility-container">
-
-            <div class="facility-card">
-                <h3>Library</h3>
-            </div>
-
-            <div class="facility-card">
-                <h3>Computer Lab</h3>
-            </div>
-
-            <div class="facility-card">
-                <h3>Science Lab</h3>
-            </div>
-
-            <div class="facility-card">
-                <h3>Sports Ground</h3>
-            </div>
-
-            <div class="facility-card">
-                <h3>Transport</h3>
-            </div>
-
-            <div class="facility-card">
-                <h3>Cafeteria</h3>
+            <div class="column is-3">
+                <div class="card">
+                    <div class="card-content has-text-centered">
+                        <h3 class="title is-4">Computer Education</h3>
+                        <p>Coding and Technology Skills</p>
+                    </div>
+                </div>
             </div>
 
         </div>
 
-    </section>
+    </div>
 
-    <!-- ================= TEACHERS ================= -->
+</section>
 
-    <section id="teachers">
+<!-- ================= FACILITIES ================= -->
 
-        <h2>Our Teachers</h2>
+<section id="facilities" class="section">
 
-        <div class="teacher-container">
+    <div class="container">
 
-            <div class="teacher-card">
-                <img src="images/teacher1.jpg" alt="Teacher">
-                <h3>John Smith</h3>
-                <p>Mathematics Teacher</p>
+        <h2 class="title has-text-centered">
+            Our Facilities
+        </h2>
+
+        <div class="columns is-multiline">
+
+            <div class="column is-4">
+                <div class="notification is-link has-text-centered">
+                    Library
+                </div>
             </div>
 
-            <div class="teacher-card">
-                <img src="images/teacher2.jpg" alt="Teacher">
-                <h3>Sarah Johnson</h3>
-                <p>Science Teacher</p>
+            <div class="column is-4">
+                <div class="notification is-link has-text-centered">
+                    Computer Lab
+                </div>
             </div>
 
-            <div class="teacher-card">
-                <img src="images/teacher3.jpg" alt="Teacher">
-                <h3>David Williams</h3>
-                <p>English Teacher</p>
+            <div class="column is-4">
+                <div class="notification is-link has-text-centered">
+                    Science Lab
+                </div>
+            </div>
+
+            <div class="column is-4">
+                <div class="notification is-link has-text-centered">
+                    Sports Ground
+                </div>
+            </div>
+
+            <div class="column is-4">
+                <div class="notification is-link has-text-centered">
+                    Transport
+                </div>
+            </div>
+
+            <div class="column is-4">
+                <div class="notification is-link has-text-centered">
+                    Cafeteria
+                </div>
             </div>
 
         </div>
 
-    </section>
+    </div>
 
-    <!-- ================= TESTIMONIALS ================= -->
+</section>
 
-    <section id="testimonials">
+<!-- ================= TEACHERS ================= -->
 
-        <h2>Student Testimonials</h2>
+<section id="teachers" class="section">
 
-        <div class="testimonial-card">
+    <div class="container">
+
+        <h2 class="title has-text-centered">
+            Our Teachers
+        </h2>
+
+        <div class="columns">
+
+            <div class="column">
+
+                <div class="card">
+
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="images/teacher1.jpg" alt="">
+                        </figure>
+                    </div>
+
+                    <div class="card-content has-text-centered">
+                        <h3 class="title is-5">John Smith</h3>
+                        <p>Mathematics Teacher</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="column">
+
+                <div class="card">
+
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="images/teacher2.jpg" alt="">
+                        </figure>
+                    </div>
+
+                    <div class="card-content has-text-centered">
+                        <h3 class="title is-5">Sarah Johnson</h3>
+                        <p>Science Teacher</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="column">
+
+                <div class="card">
+
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="images/teacher3.jpg" alt="">
+                        </figure>
+                    </div>
+
+                    <div class="card-content has-text-centered">
+                        <h3 class="title is-5">David Williams</h3>
+                        <p>English Teacher</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+
+<section id="testimonials" class="section">
+
+    <div class="container">
+
+        <h2 class="title has-text-centered">
+            Student Testimonials
+        </h2>
+
+        <div class="box">
 
             <p>
                 "The teachers are supportive, and the school provides
                 excellent learning opportunities."
             </p>
 
-            <h4>- Rahul</h4>
+            <strong>- Rahul</strong>
 
         </div>
 
-        <div class="testimonial-card">
+        <div class="box">
 
             <p>
                 "The computer lab and sports facilities are amazing!"
             </p>
 
-            <h4>- Priya</h4>
+            <strong>- Priya</strong>
 
         </div>
 
-    </section>
+    </div>
 
-    <!-- ================= CONTACT ================= -->
+</section>
 
-    <section id="contact">
+<!-- ================= CONTACT ================= -->
 
-        <h2>Contact Us</h2>
+<section id="contact" class="section">
 
-        <form>
+    <div class="container">
 
-            <input
-                type="text"
-                placeholder="Enter your Name"
-                required
-            >
+        <h2 class="title has-text-centered">
+            Contact Us
+        </h2>
 
-            <input
-                type="email"
-                placeholder="Enter your Email"
-                required
-            >
+        <div class="columns is-centered">
 
-            <textarea
-                placeholder="Enter your Message"
-                rows="5"
-            ></textarea>
+            <div class="column is-half">
 
-            <button type="submit">
-                Send Message
-            </button>
+                <form>
 
-        </form>
+                    <div class="field">
+                        <input class="input"
+                        type="text"
+                        placeholder="Enter your Name">
+                    </div>
 
-    </section>
+                    <div class="field">
+                        <input class="input"
+                        type="email"
+                        placeholder="Enter your Email">
+                    </div>
 
-    <!-- ================= FOOTER ================= -->
+                    <div class="field">
+                        <textarea class="textarea"
+                        placeholder="Enter your Message"></textarea>
+                    </div>
 
-    <footer>
+                    <button class="button is-primary is-fullwidth">
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="content has-text-centered">
+
         <p>
             © 2026 ABC Public School. All Rights Reserved.
         </p>
 
-    </footer>
+    </div>
+
+</footer>
 
 </body>
 </html>
