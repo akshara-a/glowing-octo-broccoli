@@ -1,0 +1,66 @@
+.hero-bg{
+    background-image: url("aa.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(30, 195, 30);
+
+}
+
+body{
+    background-color: #9ecedf;
+}
+.card{
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+.box{
+    transition: 0.3s;
+}
+
+.box:hover{
+    transform: scale(1.03);
+}
+
+.button{
+    transition: 0.3s;
+}
+
+.button:hover{
+    transform: scale(1.05);
+}
+
+.contact-section{
+    background: linear-gradient(
+        135deg,
+        #1c1c1c,
+        #b1b2b3,
+        #222222
+    );
+}
+
+.featured-profiles{
+    background: linear-gradient(
+        135deg,
+        #0f2027,
+        #203a43,
+        #2a5365
+    );
+    color: white;
+}
+.contact-section{
+    background: linear-gradient(
+        135deg,
+        #141e30,
+        #243b55
+    );
+}
+
+.contact-section h2,
+.contact-section label{
+    color: rgb(248, 243, 243);
+}
