@@ -1,0 +1,12 @@
+body{
+    background-color: lightgray;
+}
+
+h1{
+    color: darkblue;
+    margin-top: 20px;
+}
+
+.navbar{
+    margin-top: 10px;
+}
