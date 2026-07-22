@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Demo</title>
+    <link rel="stylesheet" href="Combined.css">
+</head>
+<body>
+
+    <!-- Relative Positioned Banner -->
+    <div class="banner">
+        <h1>Welcome to Our Store</h1>
+        <p>Best Deals Available Today!</p>
+    </div>
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Static Content Section -->
+    <section class="content" id="home">
+        <h2>Home</h2>
+        <p>
+            This section uses normal document flow (static positioning).
+            Scroll down to see the sticky navbar and fixed chat button.
+        </p>
+    </section>
+
+    <!-- Product Card with Absolute Badge -->
+    <section class="content" id="products">
+        <h2>Featured Product</h2>
+
+        <div class="product-card">
+            <div class="badge">New</div>
+            <img src="images (1).jpg" alt="Product">
+            <h3>Smart Watch</h3>
+            <p>₹2,999</p>
+        </div>
+    </section>
+
+    <section class="content" id="services">
+        <h2>Services</h2>
+        <p>We provide fast delivery and customer support.</p>
+    </section>
+
+    <section class="content" id="contact">
+        <h2>Contact</h2>
+        <p>Email: support@example.com</p>
+    </section>
+
+    <!-- Fixed Chat Button -->
+    <button class="chat-btn">💬 Chat</button>
+
+</body>
+</html>

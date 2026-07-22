@@ -1,0 +1,106 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* ------------------------------------------------ */
+/* RELATIVE POSITION                                */
+/* Chosen because child elements can be positioned  */
+/* relative to this banner if needed.               */
+/* ------------------------------------------------ */
+.banner {
+    position: relative;
+    background: lightblue;
+    text-align: center;
+    padding: 50px;
+}
+
+/* ------------------------------------------------ */
+/* STICKY POSITION                                  */
+/* Chosen so navbar scrolls normally at first and   */
+/* sticks to the top when reached.                  */
+/* ------------------------------------------------ */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: #333;
+    padding: 15px;
+    z-index: 100;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+/* ------------------------------------------------ */
+/* STATIC POSITION                                  */
+/* Default positioning. Content follows normal page */
+/* flow without any special positioning.            */
+/* ------------------------------------------------ */
+.content {
+    position: static;
+    padding: 40px;
+    min-height: 500px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* ------------------------------------------------ */
+/* RELATIVE POSITION                                */
+/* Parent card is relative so the badge can use it  */
+/* as a positioning reference.                      */
+/* ------------------------------------------------ */
+.product-card {
+    position: relative;
+    width: 250px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* ------------------------------------------------ */
+/* ABSOLUTE POSITION                                */
+/* Badge is removed from normal flow and placed     */
+/* precisely at the top-right corner of the card.   */
+/* ------------------------------------------------ */
+.badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+/* ------------------------------------------------ */
+/* FIXED POSITION                                   */
+/* Chat button remains visible even when the page   */
+/* is scrolled. Positioned relative to viewport.    */
+/* ------------------------------------------------ */
+.chat-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: green;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* ------------------------------------------------ */
+/* ABSOLUTE + Z-INDEX EXAMPLE                       */
+/* Demonstrates layering when needed.               */
+/* ------------------------------------------------ */
+.badge {
+    z-index: 10;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Use Case 13 - Modal Popup</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<style>
+  body { background-color: #f0f3f9; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+  .btn-open-modal { background-color: #3b6cf6; border-color: #3b6cf6; padding: 0.6rem 1.8rem; font-weight: 500; }
+  .btn-open-modal:hover { background-color: #2952d6; border-color: #2952d6; }
+  .modal-content { border-radius: 1rem; border: none; }
+  .modal-header { border-bottom: 1px solid #eef1f8; }
+  .modal-title { font-weight: 700; color: #1b2a4a; }
+  .modal-footer { border-top: 1px solid #eef1f8; }
+  .btn-save { background-color: #3b6cf6; border-color: #3b6cf6; }
+  .btn-save:hover { background-color: #2952d6; border-color: #2952d6; }
+</style>
+</head>
+<body>
+
+<button type="button" class="btn btn-open-modal text-white" data-bs-toggle="modal" data-bs-target="#demoModal">
+  Open Modal
+</button>
+
+<div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="demoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="demoModalLabel">Edit Profile</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="text-muted mb-3">Update your profile information below.</p>
+        <div class="mb-3">
+          <label for="modalName" class="form-label">Name</label>
+          <input type="text" class="form-control" id="modalName" placeholder="Your name">
+        </div>
+        <div class="mb-3">
+          <label for="modalEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="modalEmail" placeholder="you@example.com">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-save text-white">Save Changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

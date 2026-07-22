@@ -1,0 +1,41 @@
+.container {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    margin: 50px auto;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 150px;
+    position: absolute;
+}
+
+/* Red Box */
+.red {
+    background-color: red;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+/* Blue Box (Above Red) */
+.blue {
+    background-color: blue;
+    top: 60px;
+    left: 60px;
+    z-index: 2;
+}
+
+/* Green Box (Above Both) */
+.green {
+    background-color: green;
+    top: 100px;
+    left: 100px;
+    z-index: 3;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Use Case 9 - Contact Form</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<style>
+  body { background-color: #eef2f9; padding: 3rem 0; }
+  .contact-card { background: #fff; border-radius: 1rem; box-shadow: 0 8px 24px rgba(59,108,246,0.10); padding: 2.5rem; max-width: 600px; margin: 0 auto; }
+  .contact-title { font-weight: 700; color: #1b2a4a; }
+  .form-control { border-radius: 0.5rem; padding: 0.6rem 0.9rem; border: 1px solid #d8e0f0; }
+  .form-control:focus { border-color: #3b6cf6; box-shadow: 0 0 0 0.2rem rgba(59,108,246,0.15); }
+  .required-mark { color: #e15554; }
+  .btn-submit { background-color: #3b6cf6; border-color: #3b6cf6; padding: 0.6rem 2rem; font-weight: 500; }
+  .btn-submit:hover { background-color: #2952d6; border-color: #2952d6; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="contact-card">
+    <h3 class="contact-title text-center mb-4">Get in Touch</h3>
+    <form>
+      <div class="row g-3 mb-3">
+        <div class="col-md-6">
+          <label for="contactName" class="form-label">Name <span class="required-mark">*</span></label>
+          <input type="text" class="form-control" id="contactName" placeholder="Your name" required>
+        </div>
+        <div class="col-md-6">
+          <label for="contactEmail" class="form-label">Email <span class="required-mark">*</span></label>
+          <input type="email" class="form-control" id="contactEmail" placeholder="you@example.com" required>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="contactSubject" class="form-label">Subject <span class="required-mark">*</span></label>
+        <input type="text" class="form-control" id="contactSubject" placeholder="What is this about?" required>
+      </div>
+      <div class="mb-4">
+        <label for="contactMessage" class="form-label">Message <span class="required-mark">*</span></label>
+        <textarea class="form-control" id="contactMessage" rows="5" placeholder="Write your message here..." required></textarea>
+      </div>
+      <div class="text-end">
+        <button type="submit" class="btn btn-submit text-white">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

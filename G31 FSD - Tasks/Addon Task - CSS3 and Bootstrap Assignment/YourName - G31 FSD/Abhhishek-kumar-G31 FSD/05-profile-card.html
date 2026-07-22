@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Use Case 5 - Profile Card</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<style>
+  body { background-color: #f0f3f9; min-height: 100vh; display: flex; align-items: center; }
+  .profile-card { border: none; border-radius: 1rem; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: transform 0.25s ease, box-shadow 0.25s ease; max-width: 320px; margin: 0 auto; }
+  .profile-card:hover { transform: translateY(-6px); box-shadow: 0 12px 28px rgba(59,108,246,0.18); }
+  .profile-img { width: 110px; height: 110px; object-fit: cover; border-radius: 50%; border: 4px solid #e8f0fe; margin: -55px auto 0; display: block; }
+  .profile-card-top { height: 70px; background: linear-gradient(135deg, #3b6cf6, #7aa2ff); border-radius: 1rem 1rem 0 0; }
+  .profile-name { font-weight: 700; color: #1b2a4a; }
+  .profile-role { color: #3b6cf6; font-size: 0.9rem; font-weight: 500; }
+  .profile-bio { color: #6b7280; font-size: 0.9rem; }
+  .btn-follow { background-color: #3b6cf6; border-color: #3b6cf6; padding: 0.4rem 1.5rem; font-weight: 500; }
+  .btn-follow:hover { background-color: #2952d6; border-color: #2952d6; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="card profile-card">
+    <div class="profile-card-top"></div>
+    <img src="Image/images (1).jpg" class="profile-img" alt="Profile picture">
+    <div class="card-body text-center pt-3">
+      <h5 class="profile-name mb-1">Sarah Mitchell</h5>
+      <p class="profile-role mb-2">Product Designer</p>
+      <p class="profile-bio mb-4">Designing clean, user-friendly interfaces for growing startups.</p>
+      <button type="button" class="btn btn-follow text-white">Follow</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

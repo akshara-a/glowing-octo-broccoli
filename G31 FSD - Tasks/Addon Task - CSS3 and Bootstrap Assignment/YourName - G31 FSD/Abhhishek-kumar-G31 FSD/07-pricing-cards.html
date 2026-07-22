@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Use Case 7 - Pricing Cards</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<style>
+  body { background-color: #f0f3f9; padding: 3rem 0; }
+  .pricing-card { border: 1px solid #e3e8f3; border-radius: 1rem; transition: transform 0.25s ease; height: 100%; }
+  .pricing-card:hover { transform: translateY(-6px); }
+  .pricing-card.recommended { border: 2px solid #3b6cf6; box-shadow: 0 10px 28px rgba(59,108,246,0.18); position: relative; }
+  .recommended-badge { background-color: #3b6cf6; color: #fff; font-size: 0.75rem; font-weight: 600; padding: 0.3rem 0.9rem; border-radius: 1rem; position: absolute; top: -14px; left: 50%; transform: translateX(-50%); }
+  .plan-name { font-weight: 700; color: #1b2a4a; }
+  .plan-price { font-weight: 800; color: #3b6cf6; font-size: 2.2rem; }
+  .plan-price span { font-size: 1rem; color: #6b7280; font-weight: 500; }
+  .feature-list { list-style: none; padding-left: 0; color: #4a5568; }
+  .feature-list li { padding: 0.4rem 0; }
+  .feature-list li::before { content: "✔"; color: #3b6cf6; margin-right: 0.5rem; }
+  .btn-choose { padding: 0.55rem; font-weight: 500; }
+  .btn-outline-choose { border-color: #3b6cf6; color: #3b6cf6; }
+  .btn-outline-choose:hover { background-color: #3b6cf6; color: #fff; }
+  .btn-solid-choose { background-color: #3b6cf6; border-color: #3b6cf6; color: #fff; }
+  .btn-solid-choose:hover { background-color: #2952d6; border-color: #2952d6; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="row g-4 justify-content-center">
+
+    <!-- Basic Plan -->
+    <div class="col-md-4">
+      <div class="card pricing-card p-4 text-center">
+        <h5 class="plan-name mb-3">Basic</h5>
+        <p class="plan-price mb-4">$9<span>/month</span></p>
+        <ul class="feature-list mb-4">
+          <li>5 Projects</li>
+          <li>2 GB Storage</li>
+          <li>Email Support</li>
+        </ul>
+        <button type="button" class="btn btn-outline-choose btn-choose">Choose Plan</button>
+      </div>
+    </div>
+
+    <!-- Standard Plan (Recommended) -->
+    <div class="col-md-4">
+      <div class="card pricing-card recommended p-4 text-center">
+        <span class="recommended-badge">Most Popular</span>
+        <h5 class="plan-name mb-3 mt-2">Standard</h5>
+        <p class="plan-price mb-4">$29<span>/month</span></p>
+        <ul class="feature-list mb-4">
+          <li>20 Projects</li>
+          <li>20 GB Storage</li>
+          <li>Priority Support</li>
+          <li>Team Collaboration</li>
+        </ul>
+        <button type="button" class="btn btn-solid-choose btn-choose">Choose Plan</button>
+      </div>
+    </div>
+
+    <!-- Premium Plan -->
+    <div class="col-md-4">
+      <div class="card pricing-card p-4 text-center">
+        <h5 class="plan-name mb-3">Premium</h5>
+        <p class="plan-price mb-4">$59<span>/month</span></p>
+        <ul class="feature-list mb-4">
+          <li>Unlimited Projects</li>
+          <li>100 GB Storage</li>
+          <li>24/7 Support</li>
+          <li>Advanced Analytics</li>
+        </ul>
+        <button type="button" class="btn btn-outline-choose btn-choose">Choose Plan</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
