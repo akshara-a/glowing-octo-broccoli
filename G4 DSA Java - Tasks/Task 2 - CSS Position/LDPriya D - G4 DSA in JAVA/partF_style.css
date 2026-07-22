@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+
+header {
+    background-color: #1f4e79;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Sections */
+
+section {
+    width: 80%;
+    margin: 25px auto;
+    background: white;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+section h2 {
+    margin-top: 0;
+    color: #1f4e79;
+}
+
+section p,
+section li {
+    line-height: 1.6;
+}
+
+/* Overlapping Boxes */
+
+.demo {
+    position: relative;
+    height: 310px;
+}
+
+.box {
+    position: absolute;
+    width: 200px;
+    height: 160px;
+    padding: 15px;
+    box-sizing: border-box;
+    color: white;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.box h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.box p {
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* Individual Boxes */
+
+.red {
+    background-color: #d62839;
+    left: 70px;
+    top: 160px;
+    z-index: 1;
+}
+
+.blue {
+    background-color: #4267d6;
+    left: 185px;
+    top: 105px;
+    z-index: 2;
+}
+
+.green {
+    background-color: #2f9e63;
+    left: 305px;
+    top: 60px;
+    z-index: 3;
+}
+
+/* Observation */
+
+.observation ul {
+    padding-left: 20px;
+}
+
+.observation li {
+    margin-bottom: 5px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #1f4e79;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+footer p {
+    margin: 0;
+}

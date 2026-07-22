@@ -1,0 +1,333 @@
+/* ---------- Global ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: #f5f5f5;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex: 1;
+}
+/* ---------- Navbar ---------- */
+nav {
+    background: #ef5350;
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+nav a:hover {
+    color: #ffd54f;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 55px;
+    width: auto;
+}
+.logo h1 {
+    font-size: 28px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: #ffe082;
+}
+
+/* ---------- Header ---------- */
+header {
+    text-align: center;
+    padding: 50px 20px;
+}
+header h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+header p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* ---------- Search Section ---------- */
+#searchSection {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.search-container {
+    display: flex;
+    gap: 15px;
+}
+#pokemonInput {
+    width: 350px;
+    padding: 14px;
+    border: 2px solid #ef5350;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+#pokemonInput:focus {
+    border-color: #d32f2f;
+}
+#searchBtn {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    background: #3498db;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+#searchBtn:hover {
+    background: #2980b9;
+}
+
+/* ---------- Loading & Error ---------- */
+#loading,
+#error {
+    display: none;
+    text-align: center;
+    margin: 20px;
+    font-weight: bold;
+}
+#error {
+    color: #e53935;
+}
+
+/* ---------- Pokemon Card ---------- */
+#pokemonCard {
+    display: none;
+    width: 500px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,.12);
+    animation: fadeIn .4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to {
+        opacity:1;
+        transform:translateY(0);
+        }
+}
+
+#pokemonCard:hover {
+    transform: translateY(-8px);
+    transition: .3s;
+}
+
+#pokemonImage {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+#pokemonImage:hover {
+    transform: scale(1.08);
+}
+#pokemonName {
+    margin: 20px 0;
+    text-transform: capitalize;
+}
+#pokemonCard p {
+    margin: 10px 0;
+}
+#pokemonStats {
+    margin-top: 20px;
+    padding-left: 20px;
+    text-align: left;
+}
+#pokemonStats li {
+    margin-bottom: 8px;
+}
+#pokemonName {
+    font-size: 32px;
+    margin: 15px 0 5px;
+    text-transform: capitalize;
+}
+
+.pokemon-number {
+    color: #777;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background: #111827;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .search-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #pokemonInput {
+        width: 300px;
+    }
+    #pokemonCard {
+        width: 90%;
+    }
+}
+
+/* ---------- Stats ---------- */
+
+.stat {
+    margin: 18px 0;
+}
+
+.stat-info {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 6px;
+    text-transform: capitalize;
+}
+
+.progress {
+    width: 100%;
+    height: 12px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #ef5350;
+    border-radius: 10px;
+    transition: width 0.8s ease;
+}
+
+/* ---------- Type Badges ---------- */
+
+#pokemonType {
+    margin-top: 10px;
+}
+
+.type-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    margin: 5px;
+    border-radius: 20px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+/* Pokemon Types */
+
+.fire { background:#F08030; }
+.water { background:#6890F0; }
+.grass { background:#78C850; }
+.electric { background:#F8D030; color:black; }
+.psychic { background:#F85888; }
+.ice { background:#98D8D8; color:black; }
+.fighting { background:#C03028; }
+.poison { background:#A040A0; }
+.ground { background:#E0C068; color:black; }
+.flying { background:#A890F0; }
+.bug { background:#A8B820; }
+.rock { background:#B8A038; }
+.ghost { background:#705898; }
+.dragon { background:#7038F8; }
+.dark { background:#705848; }
+.steel { background:#B8B8D0; color:black; }
+.fairy { background:#EE99AC; color:black; }
+.normal { background:#A8A878; }
+
+/* ---------- Pokemon Info ---------- */
+
+.pokemon-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.info-box {
+    flex: 1;
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.info-box h4 {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.info-box p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ef5350;
+}
