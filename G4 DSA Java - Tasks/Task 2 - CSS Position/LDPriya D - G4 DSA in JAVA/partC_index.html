@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2 - Part C</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Task 2 - Part C: Absolute Position</h1>
+
+    <h2>Example 1: Child Box Inside Parent</h2>
+
+    <div class="parent-container">
+        <div class="child-box">
+            Child
+        </div>
+    </div>
+
+    <h2>Example 2: Notification Badge on Image</h2>
+
+    <div class="notification-container">
+
+        <img src="https://static.thenounproject.com/png/4554595-512.png" alt="Notification Bell" class="bell-image">
+
+        <span class="badge-main">5</span>
+
+    </div>
+
+    <h3>Observation and Explanation</h3>
+
+    <p>
+    The child box is positioned at the top-right corner of the parent using
+    <code>position: absolute</code>. When the parent has
+    <code>position: relative</code>, the child is positioned relative to the
+    parent container. If the parent does not have a positioning context
+    (<code>relative</code>, <code>absolute</code>, <code>fixed</code>, or
+    <code>sticky</code>), the child is positioned relative to the webpage
+    instead of the parent.
+    
+    </p>
+
+</body>
+</html>

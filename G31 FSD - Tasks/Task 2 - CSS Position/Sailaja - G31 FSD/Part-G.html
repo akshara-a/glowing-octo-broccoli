@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Positions Demo</title>
+<style>
+/* Sticky Navbar */
+.navbar{
+    position: sticky;
+    top: 0;
+    background: blue;
+    color: white;
+    padding: 10px;
+}
+
+/* Relative Banner */
+.banner{
+    position: relative;
+    left: 20px;
+    background: orange;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Static Section */
+.section{
+    position: static;
+    padding: 20px;
+    background: lightgray;
+    margin: 10px;
+}
+
+/* Relative Parent */
+.card{
+    position: relative;
+    width: 200px;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Absolute Badge */
+.badge{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+/* Fixed Chat Button */
+.chat{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: green;
+    color: white;
+    padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">Sticky Navbar</div>
+
+<div class="banner">Relative Banner</div>
+
+<div class="section">Static Content Section 1</div>
+
+<div class="card">
+    Product Card
+    <div class="badge">3</div>
+</div>
+
+<div class="section">Static Content Section 2</div>
+<div class="section">Static Content Section 3</div>
+<div class="section">Static Content Section 4</div>
+
+<div class="chat">Chat</div>
+
+</body>
+</html>

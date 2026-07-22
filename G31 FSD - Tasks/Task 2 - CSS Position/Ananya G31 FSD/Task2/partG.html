@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Part G</title>
+
+<style>
+
+/* Sticky navigation bar stays at the top while scrolling */
+.navbar{
+    position: sticky;
+    top: 0;
+    background: black;
+    color: white;
+    padding: 15px;
+}
+
+/* Relative banner moved slightly from its original position */
+.banner{
+    position: relative;
+    left: 20px;
+    background: lightblue;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Product card acts as parent for the badge */
+.card{
+    position: relative;
+    width: 250px;
+    height: 150px;
+    background: lightgray;
+    margin: 20px;
+    padding: 20px;
+}
+
+/* Absolute badge placed on top of the product card */
+.badge{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: red;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+}
+
+/* Static content follows normal document flow */
+.content{
+    position: static;
+    border: 1px solid gray;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Fixed chat button remains visible while scrolling */
+.chat-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: green;
+    color: white;
+    padding: 10px;
+}
+
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+    Navigation Bar
+</nav>
+
+<div class="banner">
+    Welcome Banner
+</div>
+
+<div class="card">
+    Product Card
+    <div class="badge">5</div>
+</div>
+
+<div class="content">
+    <h2>Section 1</h2>
+    <p>Static content section.</p>
+</div>
+
+<div class="content">
+    <h2>Section 2</h2>
+    <p>Another static content section.</p>
+</div>
+
+<div style="height:800px;"></div>
+
+<div class="chat-btn">
+    Chat
+</div>
+
+</body>
+</html>
