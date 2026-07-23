@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Search</title>
+    <link rel="stylesheet" href="a.css"/>
+</head>
+<body>
+
+      <div class="container">
+
+    <h1> Pokémon Search </h1>
+
+    <input
+        type="text"
+        id="pokemonName"
+        placeholder="Enter Pokémon Name">
+
+    <button onclick="fetchData()">
+        Search Pokémon
+    </button>
+
+    <br><br>
+
+    <label class="switch">
+    <input type="checkbox" id="shinyToggle">
+    <span> Show Shiny Pokémon</span>
+</label>
+
+    <div class="card">
+
+        <img
+            id="pokemonSprite"
+            alt="Pokemon Sprite">
+
+        <div id="pokemonInfo"></div>
+
+    </div>
+    <div id="loading"></div>
+
+<div class="card">
+
+    
+</div>
+<div id="evolution"></div>
+
+</div>
+
+    <script src="a.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bulma Landing Page</title>
+
+<!-- Bulma CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+html{
+    scroll-behavior:smooth;
+}
+
+.hero{
+    background:linear-gradient(135deg,#3273dc,#00d1b2);
+    color:white;
+}
+
+.hero h1,
+.hero p{
+    color:white;
+}
+
+.feature-card{
+    transition:.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+
+.section-title{
+    margin-bottom:40px;
+}
+
+.footer{
+    background:#222;
+    color:white;
+}
+
+.footer a{
+    color:#00d1b2;
+}
+
+.box{
+    border-radius:12px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar is-white">
+<div class="container">
+
+<div class="navbar-brand">
+<a class="navbar-item">
+<strong>MyWebsite</strong>
+</a>
+
+<a role="button"
+class="navbar-burger"
+data-target="navMenu">
+
+<span></span>
+<span></span>
+<span></span>
+
+</a>
+</div>
+
+<div id="navMenu" class="navbar-menu">
+
+<div class="navbar-end">
+
+<a href="#home" class="navbar-item">Home</a>
+<a href="#features" class="navbar-item">Features</a>
+<a href="#about" class="navbar-item">About</a>
+<a href="#contact" class="navbar-item">Contact</a>
+
+<a class="navbar-item">
+<button class="button is-primary">
+Sign Up
+</button>
+</a>
+
+</div>
+
+</div>
+
+</div>
+</nav>
+
+<!-- Hero -->
+
+<section id="home" class="hero is-medium">
+
+<div class="hero-body">
+
+<div class="container has-text-centered">
+
+<h1 class="title is-1">
+Build Beautiful Websites
+</h1>
+
+<p class="subtitle is-4">
+Responsive pages using Bulma CSS Framework
+</p>
+
+<br>
+
+<a class="button is-warning is-medium">
+Get Started
+</a>
+
+<a class="button is-light is-medium">
+Learn More
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Features -->
+
+<section id="features" class="section">
+
+<div class="container">
+
+<h2 class="title has-text-centered section-title">
+Features
+</h2>
+
+<div class="columns">
+
+<div class="column">
+
+<div class="box feature-card has-text-centered">
+
+<span class="icon is-large has-text-info">
+<i class="fas fa-laptop-code fa-3x"></i>
+</span>
+
+<h3 class="title is-4">
+Responsive
+</h3>
+
+<p>
+Looks great on desktop, tablet and mobile.
+</p>
+
+</div>
+
+</div>
+
+<div class="column">
+
+<div class="box feature-card has-text-centered">
+
+<span class="icon is-large has-text-success">
+<i class="fas fa-bolt fa-3x"></i>
+</span>
+
+<h3 class="title is-4">
+Fast
+</h3>
+
+<p>
+Lightweight CSS framework with no JavaScript dependency.
+</p>
+
+</div>
+
+</div>
+
+<div class="column">
+
+<div class="box feature-card has-text-centered">
+
+<span class="icon is-large has-text-danger">
+<i class="fas fa-palette fa-3x"></i>
+</span>
+
+<h3 class="title is-4">
+Modern Design
+</h3>
+
+<p>
+Clean UI with elegant components.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- About -->
+
+<section id="about" class="section has-background-light">
+
+<div class="container">
+
+<div class="columns is-vcentered">
+
+<div class="column">
+
+<h2 class="title">
+About Bulma
+</h2>
+
+<p>
+Bulma is a modern CSS framework based on Flexbox. It helps developers build responsive websites quickly without writing lots of CSS.
+</p>
+
+<br>
+
+<button class="button is-primary">
+Read More
+</button>
+
+</div>
+
+<div class="column">
+
+<figure class="image">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800" alt="">
+</figure>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact" class="section">
+
+<div class="container">
+
+<h2 class="title has-text-centered">
+Contact Us
+</h2>
+
+<div class="columns is-centered">
+
+<div class="column is-half">
+
+<div class="box">
+
+<div class="field">
+
+<label class="label">
+Name
+</label>
+
+<div class="control">
+<input class="input" type="text" placeholder="Your Name">
+</div>
+
+</div>
+
+<div class="field">
+
+<label class="label">
+Email
+</label>
+
+<div class="control">
+<input class="input" type="email" placeholder="Email Address">
+</div>
+
+</div>
+
+<div class="field">
+
+<label class="label">
+Message
+</label>
+
+<div class="control">
+<textarea class="textarea" placeholder="Write your message"></textarea>
+</div>
+
+</div>
+
+<div class="field">
+
+<button class="button is-primary is-fullwidth">
+Send Message
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer class="footer">
+
+<div class="content has-text-centered">
+
+<p>
+
+<strong>Bulma Landing Page</strong>
+
+<br><br>
+
+<i class="fab fa-facebook fa-lg"></i>
+
+&nbsp;
+
+<i class="fab fa-twitter fa-lg"></i>
+
+&nbsp;
+
+<i class="fab fa-instagram fa-lg"></i>
+
+&nbsp;
+
+<i class="fab fa-linkedin fa-lg"></i>
+
+</p>
+
+<p>
+
+© 2026 All Rights Reserved.
+
+</p>
+
+</div>
+
+</footer>
+
+<script>
+
+document.addEventListener('DOMContentLoaded',()=>{
+
+const burgers=document.querySelectorAll('.navbar-burger');
+
+burgers.forEach(el=>{
+
+el.addEventListener('click',()=>{
+
+const target=el.dataset.target;
+
+const menu=document.getElementById(target);
+
+el.classList.toggle('is-active');
+menu.classList.toggle('is-active');
+
+});
+
+});
+
+});
+
+</script>
+
+</body>
+</html>

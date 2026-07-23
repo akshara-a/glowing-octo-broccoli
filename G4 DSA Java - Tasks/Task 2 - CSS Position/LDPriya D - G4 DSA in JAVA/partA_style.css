@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 30px;
+}
+
+h2 {
+    color: #1f4e79;
+    margin-bottom: 10px;
+}
+
+p {
+    max-width: 700px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.box-container {
+    display: flex;
+    gap: 20px;
+}
+
+.box {
+    width: 120px;
+    height: 120px;
+    border: 1px solid #333;
+    text-align: center;
+    line-height: 120px;
+    color: white;
+    font-weight: bold;
+}
+
+.box1 {
+    background-color: steelblue;
+}
+
+.box2 {
+    background-color: tomato;
+    position: static;
+    top: 50px;
+    left: 50px;
+}
+
+.box3 {
+    background-color: seagreen;
+}
+
+h3 {
+    color: #1f4e79;
+    margin-top: 35px;
+    margin-bottom: 10px;
+}

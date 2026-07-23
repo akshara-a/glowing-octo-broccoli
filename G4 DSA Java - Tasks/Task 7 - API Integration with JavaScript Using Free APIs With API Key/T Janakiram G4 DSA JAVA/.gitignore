@@ -1,0 +1,7 @@
+# Prevent sensitive credential configuration files from leaking online
+config.js
+.env
+
+# System Logging files
+.DS_Store
+Thumbs.db
