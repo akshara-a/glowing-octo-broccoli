@@ -71,9 +71,6 @@ print("\nEmployee Count in each department")
 print(department_count)
 
 
-# -----------------------------------
-# Task 5: Save High Salary Employees
-# -----------------------------------
 
 high_salary_employees_df.to_parquet(
     "high_salary_employees.parquet",
