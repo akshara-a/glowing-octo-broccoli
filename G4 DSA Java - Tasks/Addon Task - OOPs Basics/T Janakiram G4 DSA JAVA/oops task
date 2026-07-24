@@ -1,0 +1,132 @@
+1. What are the four main principles of Object-Oriented Programming?
+
+The four main principles of OOP are:
+
+1. Encapsulation:
+Wrapping data and methods into a single class and restricting direct access to data.
+
+2. Inheritance:
+Allowing one class to acquire properties and methods from another class.
+
+3. Polymorphism:
+Allowing objects or methods to take multiple forms.
+
+4. Abstraction:
+Hiding implementation details and showing only essential information.
+
+2. What is the difference between a class and an object?
+
+Class:
+A blueprint or template used to create objects.
+
+Object:
+An instance of a class that represents a real-world entity.
+
+Example:
+Car → Class
+MyCar → Object
+
+3. What is encapsulation, and why is it important?
+
+Encapsulation is the process of binding data and methods together inside a class and controlling access to data.
+
+Importance:
+
+Provides data security.
+Prevents unauthorized access.
+Improves code maintainability.
+4. What is inheritance? What are its advantages and disadvantages?
+
+Inheritance allows one class to reuse the properties and methods of another class.
+
+Advantages:
+
+Code reusability.
+Reduces code duplication.
+Improves program structure.
+
+Disadvantages:
+
+Creates tight coupling.
+Changes in parent class may affect child classes.
+5. What is polymorphism? Explain compile-time and runtime polymorphism.
+
+Polymorphism means one name having multiple forms.
+
+Compile-time Polymorphism:
+
+Achieved using method overloading.
+Decided during compilation.
+
+Runtime Polymorphism:
+
+Achieved using method overriding.
+Decided during execution.
+6. What is abstraction, and how is it different from encapsulation?
+
+Abstraction:
+Hides unnecessary implementation details and shows only required features.
+
+Difference:
+
+Abstraction hides complexity.
+Encapsulation hides and protects data.
+7. What is the difference between an abstract class and an interface?
+
+Abstract Class:
+
+Can contain abstract and normal methods.
+Supports single inheritance.
+
+Interface:
+
+Defines rules that classes must follow.
+Supports multiple inheritance.
+8. What is method overloading, and how is it different from method overriding?
+
+Method Overloading:
+
+Same method name with different parameters.
+Example: Multiple add() methods.
+
+Method Overriding:
+
+Child class provides a new implementation of a parent method.
+
+Difference:
+
+Overloading → Compile-time polymorphism.
+Overriding → Runtime polymorphism.
+9. What is the difference between composition and inheritance? When should composition be preferred?
+
+Inheritance:
+
+Represents an IS-A relationship.
+Example: Dog is an Animal.
+
+Composition:
+
+Represents a HAS-A relationship.
+Example: Car has an Engine.
+
+Composition is preferred when flexibility and loose coupling are required.
+
+10. What are access modifiers, and how do they control access?
+
+Access modifiers define the visibility of classes, variables, and methods.
+
+Types:
+
+Private:
+Accessible only within the same class.
+
+Default:
+Accessible within the same package.
+
+Protected:
+Accessible within the package and subclasses.
+
+Public:
+Accessible from anywhere.
+
+They help achieve security and encapsulation.

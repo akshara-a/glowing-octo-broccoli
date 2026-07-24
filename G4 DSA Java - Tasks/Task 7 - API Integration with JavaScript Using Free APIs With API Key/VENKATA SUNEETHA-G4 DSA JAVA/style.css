@@ -1,0 +1,423 @@
+/* ==========================================================================
+   Weather Station — design tokens
+   ========================================================================== */
+
+:root {
+  --ink:        #12213D;   /* deep navy background */
+  --ink-2:      #0C1830;   /* darker gradient stop */
+  --panel:      #1D2E52;   /* panel surface */
+  --panel-2:    #24365F;   /* panel surface, lighter */
+  --line:       #34456F;   /* hairline borders */
+  --paper:      #ECEFF3;   /* primary text on dark */
+  --mist:       #93A2C4;   /* secondary / muted text */
+  --amber:      #E7A24C;   /* sun / temperature accent */
+  --amber-dim:  #7A5A2E;
+  --teal:       #4FA697;   /* humidity / wind accent */
+  --teal-dim:   #2E5750;
+  --danger:     #E2745A;
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 20% -10%, rgba(231,162,76,0.10), transparent 55%),
+    radial-gradient(ellipse at 100% 100%, rgba(79,166,151,0.10), transparent 55%),
+    linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%);
+  color: var(--paper);
+  font-family: var(--font-body);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 48px 20px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* ==========================================================================
+   Station shell
+   ========================================================================== */
+
+.station {
+  width: 100%;
+  max-width: 560px;
+  background: linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.04);
+  overflow: hidden;
+}
+
+.station__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 26px 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand__mark {
+  font-size: 26px;
+  color: var(--amber);
+  line-height: 1;
+}
+
+.brand__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 19px;
+  letter-spacing: 0.2px;
+}
+
+.brand__sub {
+  margin: 2px 0 0;
+  font-size: 11.5px;
+  color: var(--mist);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.header__clock {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--mist);
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   Search
+   ========================================================================== */
+
+.search {
+  padding: 22px 26px 4px;
+}
+
+.search__label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--mist);
+  margin-bottom: 8px;
+}
+
+.search__row {
+  display: flex;
+  gap: 10px;
+}
+
+.search__input {
+  flex: 1;
+  background: rgba(0,0,0,0.18);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--paper);
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.search__input::placeholder { color: var(--mist); opacity: 0.7; }
+
+.search__input:focus-visible {
+  border-color: var(--amber);
+  box-shadow: 0 0 0 3px rgba(231,162,76,0.22);
+}
+
+.search__button {
+  background: var(--amber);
+  color: #241505;
+  border: none;
+  border-radius: 10px;
+  padding: 0 22px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14.5px;
+  cursor: pointer;
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+.search__button:hover { filter: brightness(1.08); }
+.search__button:active { transform: scale(0.97); }
+
+.search__button:focus-visible,
+.search__input:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+.search__error {
+  min-height: 20px;
+  margin: 10px 2px 0;
+  font-size: 13px;
+  color: var(--danger);
+}
+
+/* ==========================================================================
+   Readout area / states
+   ========================================================================== */
+
+.readout {
+  padding: 10px 26px 28px;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.state {
+  text-align: center;
+  color: var(--mist);
+  padding: 30px 10px;
+}
+
+/* [hidden] must always win over the display rules below, otherwise
+   .state--loading's `display:flex` and .panel's implicit block can
+   tie in specificity with the browser's [hidden] rule and show
+   through. */
+[hidden] {
+  display: none !important;
+}
+
+.state__glyph {
+  font-size: 34px;
+  color: var(--line);
+  margin: 0 0 6px;
+}
+
+.state__hint {
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.state--loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.spinner {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 3px solid var(--line);
+  border-top-color: var(--amber);
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ==========================================================================
+   Data panel
+   ========================================================================== */
+
+.panel {
+  width: 100%;
+  animation: rise 0.4s ease both;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.panel__primary {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed var(--line);
+  margin-bottom: 22px;
+}
+
+.temp {
+  display: flex;
+  align-items: flex-start;
+  font-family: var(--font-display);
+}
+
+.temp__value {
+  font-size: 68px;
+  font-weight: 600;
+  line-height: 0.9;
+  color: var(--paper);
+}
+
+.temp__unit {
+  font-size: 22px;
+  margin-top: 8px;
+  color: var(--amber);
+}
+
+.place { text-align: right; }
+
+.place__name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.place__condition {
+  margin: 4px 0 0;
+  font-size: 13.5px;
+  color: var(--mist);
+  text-transform: capitalize;
+}
+
+/* ==========================================================================
+   Gauges (signature element)
+   ========================================================================== */
+
+.panel__gauges {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.15fr;
+  gap: 14px;
+}
+
+.gauge {
+  background: rgba(0,0,0,0.16);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 8px 14px;
+  text-align: center;
+}
+
+.gauge__dial {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.gauge__track {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 8;
+  stroke-linecap: round;
+}
+
+.gauge__fill {
+  fill: none;
+  stroke: var(--teal);
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 157;
+  stroke-dashoffset: 157;
+  transition: stroke-dashoffset 0.7s cubic-bezier(.4,0,.2,1);
+}
+
+.gauge__fill--wind { stroke: var(--amber); }
+
+.gauge__needle {
+  stroke: var(--paper);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  transform-origin: 60px 65px;
+  transition: transform 0.7s cubic-bezier(.4,0,.2,1);
+  transform: rotate(-90deg);
+}
+
+.gauge__hub { fill: var(--paper); }
+
+.gauge__value {
+  margin: 4px 0 0;
+  font-family: var(--font-mono);
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.gauge__unit {
+  font-size: 11px;
+  color: var(--mist);
+  margin-left: 2px;
+}
+
+.gauge__label {
+  margin: 2px 0 0;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--mist);
+}
+
+.readbox {
+  background: transparent;
+  border: none;
+  padding: 4px 2px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.readbox__label {
+  margin: 0;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--mist);
+}
+
+.readbox__label--spaced { margin-top: 10px; }
+
+.readbox__value {
+  margin: 3px 0 0;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--paper);
+  text-transform: capitalize;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.station__footer {
+  padding: 14px 26px 20px;
+  border-top: 1px solid var(--line);
+}
+
+.station__footer p {
+  margin: 0;
+  font-size: 11px;
+  color: var(--mist);
+  text-align: center;
+}
+
+.station__footer code {
+  font-family: var(--font-mono);
+  color: var(--teal);
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 480px) {
+  .temp__value { font-size: 52px; }
+  .panel__gauges { grid-template-columns: 1fr 1fr; }
+  .readbox { grid-column: span 2; flex-direction: row; gap: 22px; }
+  .search__row { flex-direction: column; }
+  .search__button { padding: 12px; }
+}

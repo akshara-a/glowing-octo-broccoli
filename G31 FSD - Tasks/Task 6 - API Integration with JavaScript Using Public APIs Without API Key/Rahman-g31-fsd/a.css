@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+    linear-gradient(
+    135deg,
+    #1e3146,
+    #282e56,
+    #080845);
+
+    overflow:hidden;
+}
+
+
+
+body::after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:rgba(133, 14, 14, 0.06);
+    border-radius:50%;
+    bottom:-150px;
+    right:-150px;
+}
+
+/* Main Container */
+
+.container{
+    position:relative;
+    z-index:10;
+    width:450px;
+    text-align:center;
+}
+
+/* Heading */
+
+h1{
+    color:white;
+    margin-bottom:20px;
+    text-shadow:0 0 15px gold;
+}
+
+/* Input */
+
+input{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    outline:none;
+    text-align:center;
+    font-size:17px;
+    margin-bottom:15px;
+}
+
+/* Button */
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:#ffcb05;
+    color:#111;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    background:#ffe066;
+}
+
+/* Pokemon Card */
+
+.card{
+    margin-top:25px;
+    padding:25px;
+    border-radius:20px;
+
+    background:
+    linear-gradient(
+    145deg,
+    rgba(255,255,255,.25),
+    rgba(255,255,255,.1));
+
+    backdrop-filter:blur(20px);
+
+    border:2px solid rgba(255,255,255,.2);
+
+    box-shadow:
+    0 0 20px rgba(255,203,5,.5),
+    0 0 50px rgba(59,76,202,.4);
+
+    transition:.4s;
+}
+
+.card:hover{
+    transform:scale(1.03);
+}
+
+/* Pokemon Image */
+
+#pokemonSprite{
+    width:220px;
+    display:none;
+    margin:auto;
+    animation:float 2s infinite ease-in-out;
+}
+
+/* Pokemon Info */
+
+#pokemonInfo{
+    color:white;
+    margin-top:15px;
+}
+
+#pokemonInfo h2{
+    text-transform:capitalize;
+    margin-bottom:10px;
+}
+
+#pokemonInfo p{
+    margin:8px 0;
+}
+
+/* Floating Animation */
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-12px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:500px){
+
+.container{
+width:95%;
+}
+
+#pokemonSprite{
+width:180px;
+}
+
+}
+#loading{
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    margin-top:15px;
+}
+.type-badge{
+
+    display:inline-block;
+
+    padding:8px 14px;
+
+    margin:5px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+    color:white;
+
+    background:#ffcb05;
+
+}
+.stat{
+
+    margin:10px 0;
+
+    text-align:left;
+
+}
+
+.progress{
+
+    width:100%;
+
+    height:15px;
+
+    background:#ddd;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+}
+
+.progress-bar{
+
+    height:100%;
+
+    background:linear-gradient(
+    90deg,
+    #ffcb05,
+    #ff6b6b
+    );
+
+}
+.error{
+
+    color:#ff4b4b;
+
+    font-weight:bold;
+
+    font-size:18px;
+
+    margin-top:15px;
+
+}
+#evolution{
+
+    margin-top:20px;
+
+    color:white;
+
+}
+
+.evolution-card{
+
+    display:inline-block;
+
+    margin:10px;
+
+    padding:10px;
+
+    background:rgba(255,255,255,.15);
+
+    border-radius:15px;
+
+}
+
+.evolution-card img{
+
+    width:120px;
+
+}
