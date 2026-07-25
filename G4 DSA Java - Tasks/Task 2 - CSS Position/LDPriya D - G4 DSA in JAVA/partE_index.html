@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2 - Part E</title>
+    <link rel="stylesheet" href="partE_style.css">
+</head>
+
+<body>
+
+    <header class="page-header">
+        <h1>Task 2 - Part E: Sticky Position</h1>
+    </header>
+
+    <section class="welcome-section">
+        <h2>Welcome!</h2>
+
+        <p>
+            Welcome to this demonstration of CSS Sticky Position.
+            This webpage explains how a sticky navigation bar behaves while
+            scrolling. Explore the sections below to understand where sticky
+            positioning is useful in web design.
+        </p>
+    </section>
+
+    <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#features">Applications</a>
+        <a href="#comparison">Comparison</a>
+        <a href="#contact">Conclusion</a>
+    </nav>
+
+    <main class="content">
+
+        <section id="home">
+
+            <h2>Home</h2>
+
+            <p>
+                Sticky positioning allows an element to behave like a normal
+                element while scrolling. When it reaches a specified position,
+                it sticks to that position and remains visible.
+            </p>
+
+            <p>
+                In this example, the navigation bar becomes sticky when it
+                reaches the top of the browser window.
+            </p>
+
+            <p>
+                Continue scrolling through the webpage to observe how the
+                navigation bar stays at the top while you move between sections.
+            </p>
+
+        </section>
+
+        <section id="about">
+
+            <h2>About Sticky Position</h2>
+
+            <p>
+                The <strong>position: sticky</strong> property combines the
+                behavior of relative and fixed positioning. It moves normally
+                with the page until it reaches the specified position.
+            </p>
+
+            <p>
+                After reaching that position, it stays fixed until its parent
+                container is no longer visible.
+            </p>
+
+            <p>
+                Sticky positioning is widely used to improve navigation and
+                provide quick access to important page elements.
+            </p>
+
+        </section>
+
+        <section id="features">
+
+            <h2>Applications</h2>
+
+            <ul>
+                <li>Navigation menus</li>
+                <li>Shopping website category bars</li>
+                <li>Sticky table headers</li>
+                <li>Documentation side menus</li>
+                <li>Educational websites</li>
+            </ul>
+
+            <p>
+                These applications improve the browsing experience by keeping
+                important navigation options available while users scroll.
+            </p>
+
+        </section>
+
+        <section id="comparison">
+
+            <h2>Difference Between Fixed and Sticky</h2>
+
+            <table>
+
+                <tr>
+                    <th>Fixed Position</th>
+                    <th>Sticky Position</th>
+                </tr>
+
+                <tr>
+                    <td>Always stays fixed on the screen.</td>
+                    <td>Acts like a normal element until scrolling reaches it.</td>
+                </tr>
+
+                <tr>
+                    <td>Removed from the normal document flow.</td>
+                    <td>Remains in the normal document flow before sticking.</td>
+                </tr>
+
+                <tr>
+                    <td>Visible throughout the page.</td>
+                    <td>Becomes fixed only after reaching the specified position.</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+        <section id="contact">
+
+            <h2>Conclusion</h2>
+
+            <p>
+                Sticky positioning helps create webpages that are easier to
+                navigate by keeping important elements visible only when needed.
+            </p>
+
+            <p>
+                In this example, the navigation bar demonstrates how
+                <strong>position: sticky</strong> works and how it differs from
+                <strong>position: fixed</strong>.
+            </p>
+
+            <p>
+                Scroll back to the top using the navigation links and observe
+                the sticky behavior once again.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>CSS Positioning Assignment | Task 2 - Part E</p>
+    </footer>
+
+</body>
+
+</html>

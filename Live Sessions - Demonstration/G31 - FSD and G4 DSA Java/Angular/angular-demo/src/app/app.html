@@ -1,0 +1,20 @@
+<div>
+  <h1> {{ title }} </h1>
+
+  <label for="name"> Enter your name </label>
+  <input 
+    id="name"
+    type="text"
+    [(ngModel)]="name"
+    placeholder="Enter your name"
+  />
+
+  <button type="button" (click)="showGreeting()">
+    Click Me!
+  </button>
+
+  @if (message) {
+    <p> {{ message }} </p>
+  }
+
+</div>
