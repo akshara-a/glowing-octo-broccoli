@@ -1,0 +1,30 @@
+body{
+    background:#f5f5f5;
+}
+
+.hero{
+    margin-bottom:30px;
+}
+
+.box{
+    border-radius:15px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+.button{
+    transition:0.3s;
+}
+
+.button:hover{
+    transform:scale(1.05);
+}
+
+.footer{
+    margin-top:40px;
+}
+
+.input:focus,
+.textarea:focus{
+    border-color:#3273dc;
+    box-shadow:0 0 8px rgba(50,115,220,0.4);
+}
