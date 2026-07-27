@@ -1,0 +1,226 @@
+/* =====================================
+   Weather Dashboard
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#4facfe,#00c6fb);
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+}
+
+.container{
+
+    width:500px;
+    max-width:100%;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.20);
+
+}
+
+h1{
+
+    text-align:center;
+    margin-bottom:30px;
+
+    color:#0d6efd;
+
+}
+
+.search-box{
+
+    display:flex;
+    gap:12px;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    padding:14px;
+
+    font-size:18px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    outline:none;
+
+}
+
+.search-box input:focus{
+
+    border:2px solid #0d6efd;
+
+}
+
+.search-box button{
+
+    padding:14px 25px;
+
+    background:#0d6efd;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:17px;
+
+}
+
+.search-box button:hover{
+
+    background:#084fc7;
+
+    transform:translateY(-2px);
+
+}
+
+.loading{
+
+    color:#0d6efd;
+
+    text-align:center;
+
+    margin-top:20px;
+
+    font-weight:bold;
+
+}
+
+.error{
+
+    color:red;
+
+    text-align:center;
+
+    margin-top:20px;
+
+    font-weight:bold;
+
+}
+
+.weather-card{
+
+    margin-top:30px;
+
+    border-radius:15px;
+
+    background:#f8fbff;
+
+    padding:25px;
+
+    display:none;
+
+}
+
+.weather-card img{
+
+    display:block;
+
+    margin:auto;
+
+    width:100px;
+
+}
+
+.weather-card h2{
+
+    text-align:center;
+
+    margin:10px 0;
+
+}
+
+.weather-details{
+
+    margin-top:20px;
+
+}
+
+.detail-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:12px 0;
+
+    border-bottom:1px solid #ddd;
+
+    font-size:18px;
+
+}
+
+.detail-row:last-child{
+
+    border-bottom:none;
+
+}
+
+.detail-row span:first-child{
+
+    font-weight:bold;
+
+}
+
+@media(max-width:600px){
+
+.search-box{
+
+    flex-direction:column;
+
+}
+
+.search-box button{
+
+    width:100%;
+
+}
+
+.container{
+
+    width:95%;
+
+}
+
+h1{
+
+    font-size:30px;
+
+}
+
+.detail-row{
+
+    font-size:16px;
+
+}
+
+}
