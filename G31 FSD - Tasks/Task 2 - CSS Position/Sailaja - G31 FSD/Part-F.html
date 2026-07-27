@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Z-Index Example</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin: 50px;
+}
+
+.container{
+    position: relative;
+    width: 400px;
+    height: 300px;
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 150px;
+}
+
+/* Red Box - Bottom */
+.red{
+    background: red;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+/* Blue Box - Above Red */
+.blue{
+    background: blue;
+    top: 70px;
+    left: 70px;
+    z-index: 2;
+}
+
+/* Green Box - Above Both */
+.green{
+    background: green;
+    top: 120px;
+    left: 120px;
+    z-index: 3;
+}
+</style>
+</head>
+<body>
+
+<h2>Z-Index Example</h2>
+
+<div class="container">
+    <div class="box red">Red</div>
+    <div class="box blue">Blue</div>
+    <div class="box green">Green</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+body{
+    background:rgb(50, 146, 119);
+}
+
+.login-section{
+    background: #aec1d4;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.form-control:focus{
+    border-color: #0d0d0d;
+    box-shadow: 0 0 8px rgba(192, 212, 203, 0.4);
+}
+
+.card{
+    border-radius: 25px !important;
+    border: none !important;
+    box-shadow: 0 8px 20px  rgb(1, 26, 19) !important;
+}
+
+.btn-success:hover{
+    transform: scale(1.03) !important;
+    transition: .3s;
+}

@@ -1,0 +1,58 @@
+:root {
+    --primary-color: #0d6efd;
+    --soft-border: #d9dee6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+    color: #212529;
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+.card,
+.form-control,
+.table,
+.accordion-item,
+.tab-content {
+    border-color: var(--soft-border);
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+.progress {
+    height: 16px;
+}
+
+.admin-sidebar {
+    background: #212529;
+    min-height: 100vh;
+}
+
+.admin-sidebar .nav-link {
+    color: #fff;
+    border-radius: 6px;
+    padding: 0.6rem 0.75rem;
+}
+
+.admin-sidebar .nav-link:hover,
+.admin-sidebar .nav-link.active {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+}
+
+@media (max-width: 991.98px) {
+    .admin-sidebar {
+        min-height: auto;
+    }
+}

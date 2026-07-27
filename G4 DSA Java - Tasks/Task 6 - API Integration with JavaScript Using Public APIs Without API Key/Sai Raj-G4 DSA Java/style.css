@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #4facd3, #5cc0e6);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: #fff;
+    width: 500px;
+    max-width: 100%;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 42px;
+}
+
+.search-box {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 14px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.search-box button {
+    padding: 14px 25px;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #0b5ed7;
+}
+
+.loading {
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.error {
+    text-align: center;
+    color: red;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.pokemon-img {
+    width: 170px;
+    display: block;
+    margin: 20px auto;
+}
+
+.pokemon-details {
+    margin-top: 20px;
+}
+
+.pokemon-details p {
+    font-size: 19px;
+    margin: 10px 0;
+}
+
+.stats-title {
+    text-align: center;
+    margin: 25px 0 15px;
+    font-size: 28px;
+}
+
+.stats {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 18px;
+    border-bottom: 1px solid #eee;
+    font-size: 18px;
+}
+
+.stat-row:last-child {
+    border-bottom: none;
+}
+
+.stat-row:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.stat-row span:first-child {
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+    .pokemon-details p {
+        font-size: 17px;
+    }
+
+    .stat-row {
+        font-size: 16px;
+        padding: 10px 14px;
+    }
+}

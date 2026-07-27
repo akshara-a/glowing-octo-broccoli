@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Part D - Fixed Position</title>
+
+<style>
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Fixed Header */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Page Content */
+.content{
+    margin-top: 80px;
+    padding: 20px;
+}
+
+.section{
+    height: 600px;
+    border: 1px solid gray;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+/* Back To Top Button */
+.top-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    background: blue;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+</style>
+</head>
+
+<body id="top">
+
+<header>
+    Fixed Header
+</header>
+
+<div class="content">
+
+    <div class="section">
+        <h2>Section 1</h2>
+        <p>Scroll down to test the fixed header and button.</p>
+    </div>
+
+    <div class="section">
+        <h2>Section 2</h2>
+    </div>
+
+    <div class="section">
+        <h2>Section 3</h2>
+    </div>
+
+    <div class="section">
+        <h2>Section 4</h2>
+    </div>
+
+</div>
+
+<a href="#top" class="top-btn">Back To Top</a>
+
+
+</body>
+</html>

@@ -1,0 +1,548 @@
+/* ===================================
+   SMARTBANK - ONLINE BANKING DASHBOARD
+   style.css
+=================================== */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===========================
+   General
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f7fc;
+    color:#333;
+}
+
+/* ===========================
+   Navbar
+=========================== */
+
+.navbar{
+    box-shadow:0 3px 12px rgba(0,0,0,0.15);
+}
+
+.navbar-brand{
+    font-size:28px;
+    font-weight:700;
+}
+
+.nav-link{
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:#ffd43b !important;
+}
+
+/* ===========================
+   Hero Section
+=========================== */
+
+#home{
+    background:linear-gradient(135deg,#0d6efd,#4f46e5);
+    color:white;
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+}
+
+#home h1{
+    font-size:52px;
+    font-weight:700;
+    line-height:1.2;
+}
+
+#home p{
+    font-size:20px;
+    margin-top:20px;
+    margin-bottom:25px;
+}
+
+#home img{
+    max-width:100%;
+    animation:float 3s ease-in-out infinite;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+
+/* Floating Animation */
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/* Hero Buttons */
+
+#home .btn{
+
+    border-radius:30px;
+    padding:12px 28px;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+#home .btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* ===========================
+   Dashboard Cards
+=========================== */
+
+.card{
+
+    border:none;
+    border-radius:18px;
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+    box-shadow:0 18px 35px rgba(0,0,0,.15);
+
+}
+
+.card-body{
+
+    padding:28px;
+
+}
+
+.card-body i{
+
+    font-size:45px;
+
+}
+
+.card-body h3{
+
+    margin-top:15px;
+    font-weight:700;
+
+}
+/* ===========================
+   Transactions Section
+=========================== */
+
+#transactions{
+    background:#ffffff;
+}
+
+#transactions h2{
+    font-weight:700;
+    margin-bottom:25px;
+}
+
+.table{
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.table thead{
+    background:#0d6efd;
+    color:white;
+}
+
+.table tbody tr{
+    transition:.3s;
+}
+
+.table tbody tr:hover{
+    background:#eef5ff;
+}
+
+/* ===========================
+   Quick Transfer Card
+=========================== */
+
+form{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.form-control{
+    border-radius:10px;
+    padding:12px;
+}
+
+.form-control:focus{
+    box-shadow:none;
+    border:2px solid #0d6efd;
+}
+
+.btn-success{
+    font-weight:600;
+    border-radius:10px;
+}
+
+/* ===========================
+   Customer Profile
+=========================== */
+
+#accounts{
+    scroll-margin-top:90px;
+    padding-top:30px;
+}
+#accounts img{
+    border:6px solid white;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+#accounts h2{
+    font-weight:700;
+}
+
+#accounts p{
+    font-size:17px;
+    margin-bottom:12px;
+}
+
+#accounts .btn{
+    border-radius:25px;
+}
+
+/* ===========================
+   Banking Services
+=========================== */
+
+#services{
+    background:#f8fbff;
+}
+
+#services .card{
+    text-align:center;
+    padding:15px;
+    height:100%;
+}
+
+#services .card i{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+#services .card h5{
+    font-weight:700;
+}
+
+#services .card:hover{
+    background:#0d6efd;
+    color:white;
+}
+
+#services .card:hover i{
+    color:white !important;
+}
+
+/* ===========================
+   Credit Cards
+=========================== */
+
+#cards .card{
+    border-radius:20px;
+    color:white;
+    overflow:hidden;
+}
+
+#cards .card-body{
+    padding:30px;
+}
+
+#cards h3{
+    letter-spacing:3px;
+    margin:30px 0;
+}
+
+#cards small{
+    opacity:.8;
+}
+
+#cards .bg-primary{
+    background:linear-gradient(135deg,#2563eb,#1d4ed8)!important;
+}
+
+#cards .bg-dark{
+    background:linear-gradient(135deg,#1f2937,#111827)!important;
+}
+
+#cards .bg-success{
+    background:linear-gradient(135deg,#16a34a,#15803d)!important;
+}
+/* ===========================
+   Financial Goals
+=========================== */
+
+.progress{
+    height:24px;
+    border-radius:20px;
+    background:#e9ecef;
+    overflow:hidden;
+    margin-bottom:25px;
+}
+
+.progress-bar{
+    font-weight:600;
+    font-size:14px;
+}
+
+/* ===========================
+   Notifications
+=========================== */
+
+.alert{
+    border:none;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    font-size:16px;
+}
+
+/* ===========================
+   FAQ
+=========================== */
+
+.accordion-item{
+    border:none;
+    margin-bottom:12px;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.accordion-button{
+    font-weight:600;
+}
+
+.accordion-button:not(.collapsed){
+    background:#0d6efd;
+    color:white;
+}
+
+.accordion-button:focus{
+    box-shadow:none;
+}
+
+/* ===========================
+   Customer Reviews
+=========================== */
+
+#reviews .card,
+.card.shadow-sm{
+
+    border-radius:18px;
+
+}
+
+#reviews .card:hover,
+.card.shadow-sm:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* ===========================
+   Contact Section
+=========================== */
+
+#support{
+
+    background:#f8fbff;
+
+}
+
+#support form{
+
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+textarea{
+
+    resize:none;
+
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:30px 0;
+    margin-top:60px;
+
+}
+
+footer p{
+
+    margin:0;
+    letter-spacing:.5px;
+
+}
+
+/* ===========================
+   Utility Classes
+=========================== */
+
+section{
+
+    padding-top:70px;
+    padding-bottom:70px;
+
+}
+
+h2{
+
+    margin-bottom:30px;
+    font-weight:700;
+
+}
+
+.badge{
+
+    padding:8px 14px;
+    font-size:14px;
+
+}
+
+.btn{
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* ===========================
+   Responsive Design
+=========================== */
+
+@media(max-width:992px){
+
+#home{
+
+    text-align:center;
+    min-height:auto;
+    padding:80px 0;
+
+}
+
+#home h1{
+
+    font-size:42px;
+
+}
+
+#home img{
+
+    margin-top:40px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.navbar-brand{
+
+    font-size:24px;
+
+}
+
+#home h1{
+
+    font-size:34px;
+
+}
+
+.card{
+
+    margin-bottom:20px;
+
+}
+
+.table{
+
+    font-size:14px;
+
+}
+
+#cards h3{
+
+    font-size:22px;
+    letter-spacing:2px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+#home h1{
+
+    font-size:28px;
+
+}
+
+#home p{
+
+    font-size:16px;
+
+}
+
+.btn{
+
+    width:100%;
+    margin-bottom:12px;
+
+}
+
+.card-body{
+
+    padding:20px;
+
+}
+
+}

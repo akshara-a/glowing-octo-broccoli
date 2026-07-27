@@ -1,0 +1,54 @@
+body{
+    background: linear-gradient(135deg,#1f4037,#99f2c8);
+    min-height: 100vh;
+}
+
+.profile-section{
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.profile-card{
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    width: 350px;
+    border: none;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: 0.4s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.profile-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  
+}
+    .profile-card:hover .profile-img{
+    transform: scale(1.05);
+
+}
+
+.profile-img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #198754;
+    transition: 0.4s;
+
+}
+
+.card-title{
+    font-weight: bold;
+}
+
+.btn-success{
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn-success:hover{
+    transform: scale(1.05);
+}

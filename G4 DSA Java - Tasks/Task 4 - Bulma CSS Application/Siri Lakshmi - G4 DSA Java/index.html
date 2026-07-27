@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Siri Restaurant</title>
+
+    <!-- Bulma CSS CDN -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
+    <style>
+        html{
+            scroll-behavior:smooth;
+        }
+
+        .hero{
+            background:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80') center/cover;
+        }
+
+        .hero-body{
+            background:rgba(0,0,0,0.55);
+        }
+
+        .hero-title,
+        .hero-subtitle{
+            color:white;
+        }
+
+        .section-title{
+            margin-bottom:20px;
+        }
+
+        footer{
+            background:#222;
+            color:white;
+            padding:20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar is-danger">
+
+<div class="container">
+
+<div class="navbar-brand">
+
+<a class="navbar-item has-text-weight-bold has-text-white">
+🍴 Siri Restaurant
+</a>
+
+</div>
+
+<div class="navbar-menu">
+
+<div class="navbar-end">
+
+<a href="#home" class="navbar-item has-text-white">Home</a>
+
+<a href="#about" class="navbar-item has-text-white">About</a>
+
+<a href="#menu" class="navbar-item has-text-white">Menu</a>
+
+<a href="#contact" class="navbar-item has-text-white">Contact</a>
+
+</div>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- Hero -->
+
+<section class="hero is-fullheight" id="home">
+
+<div class="hero-body">
+
+<div class="container has-text-centered">
+
+<h1 class="title is-1 hero-title">
+Welcome to Siri Restaurant
+</h1>
+
+<p class="subtitle is-4 hero-subtitle">
+Fresh Food • Great Taste • Happy Moments
+</p>
+
+<a href="#menu" class="button is-warning is-medium">
+Explore Menu
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- About -->
+
+<section class="section" id="about">
+
+<div class="container">
+
+<h2 class="title has-text-centered section-title">
+About Us
+</h2>
+
+<p class="has-text-centered">
+
+Siri Restaurant offers delicious Indian, Chinese and Continental dishes
+prepared using fresh ingredients. We provide a warm atmosphere,
+excellent customer service and unforgettable dining experiences.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- Menu -->
+
+<section class="section has-background-light" id="menu">
+
+<div class="container">
+
+<h2 class="title has-text-centered section-title">
+Our Menu
+</h2>
+
+<div class="columns">
+
+<div class="column">
+
+<div class="card">
+
+<div class="card-content">
+
+<h3 class="title is-4">🍕 Pizza</h3>
+
+<p>
+Cheesy pizza with fresh vegetables and premium toppings.
+</p>
+
+<br>
+
+<button class="button is-danger">
+₹299
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="column">
+
+<div class="card">
+
+<div class="card-content">
+
+<h3 class="title is-4">🍔 Burger</h3>
+
+<p>
+Juicy burger served with crispy fries and fresh vegetables.
+</p>
+
+<br>
+
+<button class="button is-success">
+₹199
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="column">
+
+<div class="card">
+
+<div class="card-content">
+
+<h3 class="title is-4">🥗 Veg Meals</h3>
+
+<p>
+Healthy and delicious South Indian meals with unlimited servings.
+</p>
+
+<br>
+
+<button class="button is-primary">
+₹249
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Services -->
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="title has-text-centered">
+Our Services
+</h2>
+
+<div class="columns">
+
+<div class="column has-text-centered">
+
+<span class="icon is-large">
+🍽️
+</span>
+
+<h3 class="title is-5">
+Dine In
+</h3>
+
+</div>
+
+<div class="column has-text-centered">
+
+<span class="icon is-large">
+🚚
+</span>
+
+<h3 class="title is-5">
+Home Delivery
+</h3>
+
+</div>
+
+<div class="column has-text-centered">
+
+<span class="icon is-large">
+🎉
+</span>
+
+<h3 class="title is-5">
+Party Orders
+</h3>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+
+<section class="section has-background-light" id="contact">
+
+<div class="container">
+
+<h2 class="title has-text-centered">
+Contact Us
+</h2>
+
+<div class="columns is-centered">
+
+<div class="column is-half">
+
+<div class="field">
+
+<label class="label">
+Name
+</label>
+
+<div class="control">
+
+<input class="input" type="text" placeholder="Enter your name">
+
+</div>
+
+</div>
+
+<div class="field">
+
+<label class="label">
+Email
+</label>
+
+<div class="control">
+
+<input class="input" type="email" placeholder="Enter your email">
+
+</div>
+
+</div>
+
+<div class="field">
+
+<label class="label">
+Message
+</label>
+
+<div class="control">
+
+<textarea class="textarea" placeholder="Enter your message"></textarea>
+
+</div>
+
+</div>
+
+<button class="button is-danger is-fullwidth">
+Send Message
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+<div class="content has-text-centered">
+
+<h3 class="title is-5 has-text-white">
+Siri Restaurant
+</h3>
+
+<p>
+📍 Ongole, Andhra Pradesh
+</p>
+
+<p>
+📞 +91 0000000000
+</p>
+
+<p>
+© 2026 Siri Restaurant. All Rights Reserved.
+</p>
+
+</div>
+
+</footer>
+
+</body>
+</html>

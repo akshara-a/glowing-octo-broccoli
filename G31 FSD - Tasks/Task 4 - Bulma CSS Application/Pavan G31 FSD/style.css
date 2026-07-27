@@ -1,0 +1,96 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#eef5ff;
+}
+
+/* Navbar */
+
+.navbar{
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+}
+
+/* Hero */
+
+.hero{
+    background:linear-gradient(135deg,#2193b0,#6dd5ed);
+    color:white;
+}
+
+/* Search */
+
+.input{
+    border-radius:10px;
+}
+
+.button{
+    border-radius:10px;
+}
+
+/* Weather Card */
+
+.card{
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card-content{
+    padding:30px;
+}
+
+/* Weather Highlight Boxes */
+
+.box{
+    border-radius:15px;
+    transition:.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.box:hover{
+    transform:scale(1.05);
+}
+
+/* Popular City Buttons */
+
+.buttons .button{
+    margin-bottom:10px;
+}
+
+/* Forecast Cards */
+
+.columns .box{
+    text-align:center;
+}
+
+/* Footer */
+
+.footer{
+    margin-top:40px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.hero .title{
+    font-size:2rem;
+}
+
+.hero .subtitle{
+    font-size:1rem;
+}
+
+}

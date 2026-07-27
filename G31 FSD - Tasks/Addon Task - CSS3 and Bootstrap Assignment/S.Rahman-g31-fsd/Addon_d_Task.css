@@ -1,0 +1,68 @@
+body{
+    background: linear-gradient(135deg,#212222,#2e5561,#012c40);
+    min-height: 100vh;
+  
+}
+
+.register-section{
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    color: aqua;
+}
+
+.card{
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    border-radius: 20px;
+    color: white;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+h2{
+    color: #359468;
+    font-weight: bold;
+}
+
+.form-control{
+    background: rgba(255,255,255,0.15);
+    color: rgb(220, 100, 100);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.form-control::placeholder{
+    color: rgba(186, 126, 126, 0.7);
+}
+
+.form-control:focus{
+    border-color: #198754;
+    box-shadow: 0 0 10px rgba(151, 210, 183, 0.4);
+}
+
+.form-check-input:checked{
+    background-color: #198754;
+    border-color: #198754;
+}
+
+.btn-success{
+    border-radius: 25px;
+    padding: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-success:hover{
+    transform: scale(1.03);
+}
+
+.invalid-feedback{
+    font-size: 14px;
+}

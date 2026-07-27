@@ -1,0 +1,49 @@
+body{
+    background: linear-gradient(135deg,#1c1c1c,#203a43,#2c5364);
+    min-height: 100vh;
+}
+
+.dashboard-section{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-card{
+    border: none;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.dashboard-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.icon-circle{
+    width: 70px;
+    height: 70px;
+    margin: auto;
+
+    background: #198754;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.dashboard-card h5{
+    color: #198754;
+    font-weight: 600;
+}
+
+.dashboard-card h2{
+    font-weight: bold;
+}

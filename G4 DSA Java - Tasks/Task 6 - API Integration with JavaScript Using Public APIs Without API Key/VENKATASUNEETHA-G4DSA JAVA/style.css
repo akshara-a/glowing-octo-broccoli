@@ -1,0 +1,43 @@
+body{
+    font-family: Arial;
+    background:#f4f4f4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:white;
+    padding:30px;
+    width:350px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+}
+
+input{
+    width:90%;
+    padding:10px;
+    margin:10px 0;
+}
+
+button{
+    padding:10px 20px;
+    cursor:pointer;
+    background:#2196F3;
+    color:white;
+    border:none;
+}
+
+img{
+    width:150px;
+}
+
+#error{
+    color:red;
+}
+
+#loading{
+    color:green;
+}
