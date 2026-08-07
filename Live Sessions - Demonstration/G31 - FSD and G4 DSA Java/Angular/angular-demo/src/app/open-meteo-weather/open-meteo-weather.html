@@ -1,0 +1,78 @@
+<section class="weather-panel">
+  <h2>Open-Meteo Weather</h2>
+
+  <form class="weather-form" (ngSubmit)="getWeather()">
+    <label for="latitude">Latitude</label>
+    <input
+      id="latitude"
+      name="latitude"
+      type="number"
+      step="0.0001"
+      min="-90"
+      max="90"
+      [(ngModel)]="latitude"
+      placeholder="12.9716"
+    />
+
+    <label for="longitude">Longitude</label>
+    <input
+      id="longitude"
+      name="longitude"
+      type="number"
+      step="0.0001"
+      min="-180"
+      max="180"
+      [(ngModel)]="longitude"
+      placeholder="77.5946"
+    />
+
+    <button type="submit" [disabled]="isLoading">
+      {{ isLoading ? 'Loading...' : 'Get Weather' }}
+    </button>
+  </form>
+
+  @if (errorMessage) {
+    <p class="error-message">{{ errorMessage }}</p>
+  }
+
+  @if (weather) {
+    <article class="weather-result">
+      <div>
+        <span>Temperature</span>
+        <strong>
+          {{ weather.current.temperature_2m }}
+          {{ weather.current_units['temperature_2m'] }}
+        </strong>
+      </div>
+
+      <div>
+        <span>Feels Like</span>
+        <strong>
+          {{ weather.current.apparent_temperature }}
+          {{ weather.current_units['apparent_temperature'] }}
+        </strong>
+      </div>
+
+      <div>
+        <span>Humidity</span>
+        <strong>
+          {{ weather.current.relative_humidity_2m }}
+          {{ weather.current_units['relative_humidity_2m'] }}
+        </strong>
+      </div>
+
+      <div>
+        <span>Wind Speed</span>
+        <strong>
+          {{ weather.current.wind_speed_10m }}
+          {{ weather.current_units['wind_speed_10m'] }}
+        </strong>
+      </div>
+
+      <p class="weather-summary">
+        {{ getWeatherLabel(weather.current.weather_code) }} in
+        {{ weather.timezone }} at {{ weather.current.time }}
+      </p>
+    </article>
+  }
+</section>

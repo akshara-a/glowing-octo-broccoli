@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather Station · Live Readout</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+
+  <div class="station">
+
+    <header class="station__header">
+      <div class="header__brand">
+        <span class="brand__mark" aria-hidden="true">☉</span>
+        <div>
+          <p class="brand__title">Weather Station</p>
+          <p class="brand__sub">Live surface readout</p>
+        </div>
+      </div>
+      <div class="header__clock" id="clock" aria-hidden="true"></div>
+    </header>
+
+    <form class="search" id="searchForm" role="search">
+      <label for="cityInput" class="search__label">Station location</label>
+      <div class="search__row">
+        <input
+          type="text"
+          id="cityInput"
+          class="search__input"
+          placeholder="Enter a city — e.g. Chennai"
+          autocomplete="off"
+        >
+        <button type="submit" class="search__button" id="searchButton">
+          <span>Search</span>
+        </button>
+      </div>
+      <p class="search__error" id="errorMsg" role="alert" aria-live="polite"></p>
+    </form>
+
+    <main class="readout" id="readout" aria-live="polite">
+
+      <!-- Loading state -->
+      <div class="state state--loading" id="loadingState" hidden>
+        <div class="spinner" aria-hidden="true"></div>
+        <p>Reading the instruments…</p>
+      </div>
+
+      <!-- Empty state -->
+      <div class="state state--empty" id="emptyState">
+        <p class="state__glyph" aria-hidden="true">◌</p>
+        <p>No station selected yet.</p>
+        <p class="state__hint">Search a city above to bring the panel online.</p>
+      </div>
+
+      <!-- Data state -->
+      <div class="panel" id="dataState" hidden>
+
+        <section class="panel__primary">
+          <div class="temp">
+            <span class="temp__value" id="temp">--</span>
+            <span class="temp__unit">°C</span>
+          </div>
+          <div class="place">
+            <p class="place__name" id="cityName">—</p>
+            <p class="place__condition" id="condition">—</p>
+          </div>
+        </section>
+
+        <section class="panel__gauges">
+
+          <div class="gauge" id="gaugeHumidity">
+            <svg viewBox="0 0 120 70" class="gauge__dial" aria-hidden="true">
+              <path d="M10,65 A50,50 0 0,1 110,65" class="gauge__track"/>
+              <path d="M10,65 A50,50 0 0,1 110,65" class="gauge__fill" id="humidityArc"/>
+              <line x1="60" y1="65" x2="60" y2="20" class="gauge__needle" id="humidityNeedle"/>
+              <circle cx="60" cy="65" r="4" class="gauge__hub"/>
+            </svg>
+            <p class="gauge__value"><span id="humidity">--</span><span class="gauge__unit">%</span></p>
+            <p class="gauge__label">Humidity</p>
+          </div>
+
+          <div class="gauge" id="gaugeWind">
+            <svg viewBox="0 0 120 70" class="gauge__dial" aria-hidden="true">
+              <path d="M10,65 A50,50 0 0,1 110,65" class="gauge__track"/>
+              <path d="M10,65 A50,50 0 0,1 110,65" class="gauge__fill gauge__fill--wind" id="windArc"/>
+              <line x1="60" y1="65" x2="60" y2="20" class="gauge__needle gauge__needle--wind" id="windNeedle"/>
+              <circle cx="60" cy="65" r="4" class="gauge__hub"/>
+            </svg>
+            <p class="gauge__value"><span id="wind">--</span><span class="gauge__unit">m/s</span></p>
+            <p class="gauge__label">Wind speed</p>
+          </div>
+
+          <div class="readbox">
+            <p class="readbox__label">Description</p>
+            <p class="readbox__value" id="description">—</p>
+            <p class="readbox__label readbox__label--spaced">Country</p>
+            <p class="readbox__value" id="country">—</p>
+          </div>
+
+        </section>
+
+      </div>
+
+    </main>
+
+    <footer class="station__footer">
+      <p>Data via OpenWeatherMap · Requires a free API key stored locally in <code>config.js</code></p>
+    </footer>
+
+  </div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

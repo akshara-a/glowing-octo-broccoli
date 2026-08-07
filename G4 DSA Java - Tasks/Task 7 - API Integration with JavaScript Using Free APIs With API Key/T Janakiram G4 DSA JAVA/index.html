@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CosmosExplorer - NASA Astronomy Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <header>
+            <h1>CosmosExplorer</h1>
+            <p>Discover the cosmos! Fetch NASA's famous Astronomy Picture of the Day.</p>
+        </header>
+
+        <main>
+            <div class="control-panel">
+                <label for="date-picker">Select Cosmic Date:</label>
+                <div class="input-group">
+                    <input type="date" id="date-picker">
+                    <button id="fetch-btn">Explore</button>
+                </div>
+            </div>
+
+            <div id="loading-state" class="status-msg hidden">Retrieving imagery from NASA deep-space servers...</div>
+            <div id="error-state" class="status-msg error hidden"></div>
+
+            <article id="apod-card" class="display-card hidden">
+                <h2 id="apod-title">Dynamic Cosmic Title</h2>
+                <time id="apod-date">Date</time>
+                
+                <div id="media-viewport" class="viewport"></div>
+
+                <div class="meta-info">
+                    <span id="apod-copyright" class="copyright-tag"></span>
+                    <h3>Description</h3>
+                    <p id="apod-explanation">Explanation paragraph goes here...</p>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
