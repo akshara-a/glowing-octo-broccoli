@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            background-color: #f8f9fa;
+        }
+
+        .gallery-item{
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .gallery-item img{
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img{
+            transform: scale(1.1);
+        }
+
+        .caption{
+            background-color: white;
+            padding: 12px;
+            text-align: center;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+
+        <!-- Heading -->
+        <div class="text-center mb-5">
+            <h1>Image Gallery</h1>
+            <p class="text-muted">
+                Responsive Bootstrap Image Gallery
+            </p>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="row g-4">
+
+            <!-- Image 1 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/id/1015/600/400" alt="Nature">
+                    <div class="caption">Nature View</div>
+                </div>
+            </div>
+
+            <!-- Image 2 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/id/1016/600/400" alt="Mountain">
+                    <div class="caption">Mountain Scene</div>
+                </div>
+            </div>
+
+            <!-- Image 3 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/id/1025/600/400" alt="Dog">
+                    <div class="caption">Cute Dog</div>
+                </div>
+            </div>
+
+            <!-- Image 4 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/id/1035/600/400" alt="River">
+                    <div class="caption">River Landscape</div>
+                </div>
+            </div>
+
+            <!-- Image 5 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/id/1040/600/400" alt="Forest">
+                    <div class="caption">Green Forest</div>
+                </div>
+            </div>
+
+            <!-- Image 6 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/id/1069/600/400" alt="Beach">
+                    <div class="caption">Sunny Beach</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
