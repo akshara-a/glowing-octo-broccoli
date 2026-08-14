@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academy Entry Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title-section">
+                <h1>ACADEMY ENTRY FORM</h1>
+                <h2>Application for Admission</h2>
+                <p>Please fill in the form in BLOCK LETTERS and submit all required documents.</p>
+            </div>
+            <div class="photo-box">
+                <p>Paste Passport Size Photograph Here</p>
+            </div>
+        </div>
+        <form>
+            <section>
+                <h3>1. CLASS APPLIED FOR</h3>
+                <div class="row">
+                    <div class="form-group">
+                        <label>Academic Year</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Class Applying For</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Date of Admission Required</label>
+                        <input type="date">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Grade / Stream</label>
+                    <input type="text">
+                </div>
+            </section>
+            <section>
+                <h3>2. STUDENT INFORMATION</h3>
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text">
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label>Date of Birth</label>
+                        <input type="date">
+                    </div>
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="gender"> Male</label>
+                            <label><input type="radio" name="gender"> Female</label>
+                            <label><input type="radio" name="gender"> Other</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label>Nationality</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Religion</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Mother Tongue</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label>Aadhaar Number</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Blood Group</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label>Place of Birth</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>State</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Country</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Residential Address</label>
+                    <textarea rows="4"></textarea>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label>City</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>State</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="form-group">
+                        <label>PIN Code</label>
+                        <input type="text">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email">
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3>3. PARENT / GUARDIAN INFORMATION</h3>
+
+                <div class="parent-grid">
+
+                    <div>
+                        <h4>Father / Guardian</h4>
+
+                        <input type="text" placeholder="Full Name">
+                        <input type="text" placeholder="Qualification">
+                        <input type="text" placeholder="Occupation">
+                        <input type="text" placeholder="Organization">
+                        <input type="text" placeholder="Phone Number">
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div>
+                        <h4>Mother / Guardian</h4>
+
+                        <input type="text" placeholder="Full Name">
+                        <input type="text" placeholder="Qualification">
+                        <input type="text" placeholder="Occupation">
+                        <input type="text" placeholder="Organization">
+                        <input type="text" placeholder="Phone Number">
+                        <input type="email" placeholder="Email">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3>4. PREVIOUS SCHOOL DETAILS</h3>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label>Previous School Name</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Board</label>
+                        <input type="text">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label>Last Class Studied</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Academic Year</label>
+                        <input type="text">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3>5. ADDITIONAL INFORMATION</h3>
+
+                <div class="form-group">
+                    <label>Medical Condition / Allergy</label>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label>Disciplinary Action</label>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label>Hobbies / Interests</label>
+                    <input type="text">
+                </div>
+            </section>
+            <section>
+                <h3>6. DOCUMENTS CHECKLIST</h3>
+                <div class="checkbox-list">
+                    <label><input type="checkbox"> Birth Certificate</label>
+                    <label><input type="checkbox"> Transfer Certificate</label>
+                    <label><input type="checkbox"> Passport Size Photographs</label>
+                    <label><input type="checkbox"> Address Proof</label>
+                    <label><input type="checkbox"> Previous School Report Card</label>
+                    <label><input type="checkbox"> ID Proof</label>
+                </div>
+            </section>
+            <section>
+                <h3>7. DECLARATION</h3>
+                <p class="declaration">
+                    I hereby declare that the information provided above is true and correct to the best of my knowledge and belief.
+                </p>
+                <div class="row">
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="date">
+                    </div>
+                    <div class="form-group">
+                        <label>Parent Signature</label>
+                        <input type="text">
+                    </div>
+                </div>
+            </section>
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>
