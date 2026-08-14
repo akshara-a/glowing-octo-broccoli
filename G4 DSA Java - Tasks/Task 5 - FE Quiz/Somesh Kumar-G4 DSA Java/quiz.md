@@ -1,4 +1,4 @@
-##TASK-5
+TASK-5
 #QUIZ
 
 1ANS-B-article
@@ -10,7 +10,7 @@
 7 ans-a<nav>
 8 ans-b.display temporary hint in text
 9 ans-b.main
-10ans-c.source
+10 ans-c.source
 11 ans-c.date
 12 ans-a.canvas
 13ans-a.target_blank

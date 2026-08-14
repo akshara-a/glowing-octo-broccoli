@@ -1,0 +1,378 @@
+/* 
+   GOOGLE RESET
++*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
+    url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=1600");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+}
+
+/* 
+        HEADER
+ */
+
+.header{
+    text-align:center;
+    padding:40px 20px;
+}
+
+.header h1{
+    font-size:2.7rem;
+    margin-bottom:15px;
+}
+
+.header p{
+    color:#dcdcdc;
+    font-size:1rem;
+}
+
+/* 
+      SEARCH SECTION
+ */
+
+.search-section{
+    display:flex;
+    justify-content:center;
+    margin-bottom:30px;
+}
+
+.search-box{
+    display:flex;
+    gap:15px;
+    align-items:end;
+    flex-wrap:wrap;
+
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+
+    padding:20px;
+    border-radius:15px;
+}
+
+.search-box label{
+    display:block;
+    margin-bottom:6px;
+}
+
+.search-box input{
+    padding:12px;
+    border:none;
+    outline:none;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.search-box button{
+    padding:12px 24px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+
+    background:#0077ff;
+    color:white;
+    font-size:16px;
+
+    transition:.3s;
+}
+
+.search-box button:hover{
+    background:#0056c9;
+    transform:translateY(-2px);
+}
+
+/* CONTAINER */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/*  IMAGE CARD  */
+
+.media-card{
+
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+
+    border-radius:18px;
+    overflow:hidden;
+
+    margin-bottom:25px;
+}
+
+.media-container{
+    position:relative;
+}
+
+#apodImage{
+
+    width:100%;
+    height:550px;
+
+    object-fit:cover;
+
+    display:none;
+}
+
+#apodVideo{
+
+    width:100%;
+    height:550px;
+
+    display:none;
+}
+
+/*        OVERLAY  */
+
+.overlay{
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    padding:25px;
+
+    background:linear-gradient(
+    transparent,
+    rgba(0,0,0,.85)
+    );
+
+}
+
+.overlay h2{
+
+    font-size:2rem;
+
+    margin-bottom:10px;
+}
+
+.overlay p{
+
+    color:#ddd;
+}
+
+/*        DETAILS  */
+
+.details-card{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+    margin-bottom:30px;
+}
+
+.detail{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:15px;
+
+    padding:20px;
+
+    text-align:center;
+}
+
+.detail h3{
+
+    margin-bottom:12px;
+
+    color:#61dafb;
+}
+
+/* 
+      BUTTON
+ */
+
+.button-section{
+
+    text-align:center;
+
+    margin-bottom:30px;
+}
+
+#hdImageBtn{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    background:#00b894;
+
+    color:white;
+
+    padding:14px 28px;
+
+    border-radius:10px;
+
+    transition:.3s;
+}
+
+#hdImageBtn:hover{
+
+    background:#009870;
+
+    transform:scale(1.05);
+}
+
+/* 
+     EXPLANATION
+ */
+
+.explanation-card{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    padding:30px;
+
+    border-radius:18px;
+
+    margin-bottom:50px;
+}
+
+.explanation-card h2{
+
+    margin-bottom:20px;
+}
+
+.explanation-card p{
+
+    line-height:1.8;
+
+    text-align:justify;
+}
+
+/* 
+      LOADING
+ */
+
+.loading{
+
+    display:none;
+
+    text-align:center;
+
+    margin:25px;
+}
+
+.loader{
+
+    width:55px;
+    height:55px;
+
+    margin:auto;
+
+    border:6px solid #ddd;
+    border-top:6px solid #0077ff;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+    }
+
+    to{
+
+        transform:rotate(360deg);
+    }
+
+}
+
+/* 
+      ERROR
+ */
+
+.error-message{
+
+    display:none;
+
+    width:90%;
+
+    max-width:1000px;
+
+    margin:20px auto;
+
+    background:#ff4d4d;
+
+    padding:18px;
+
+    border-radius:10px;
+
+    text-align:center;
+}
+
+/* 
+        FOOTER
+ */
+
+footer{
+
+    text-align:center;
+
+    padding:25px;
+
+    color:#ddd;
+}
+
+/* 
+      RESPONSIVE
+ */
+
+@media(max-width:768px){
+
+.header h1{
+
+    font-size:2rem;
+}
+
+.search-box{
+
+    width:100%;
+}
+
+.search-box input,
+.search-box button{
+
+    width:100%;
+}
+
+#apodImage,
+#apodVideo{
+
+    height:300px;
+}
+
+.overlay h2{
+
+    font-size:1.3rem;
+}
+
+}
