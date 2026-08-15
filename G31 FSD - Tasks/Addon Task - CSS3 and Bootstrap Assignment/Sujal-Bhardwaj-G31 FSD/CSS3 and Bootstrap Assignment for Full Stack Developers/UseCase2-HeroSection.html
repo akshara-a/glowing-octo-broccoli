@@ -1,102 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hero Section</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap 5 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<title>Hero Section with Dark Mode</title>
 
-    <style>
+<!-- Bootstrap 5 CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        /* Hero Section */
-        .hero{
-            background: linear-gradient(135deg,#0d6efd,#6610f2);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            color: white;
-        }
+<style>
 
-        /* Image Placeholder */
-        .hero-image{
-            background-color: white;
-            color: black;
-            height: 350px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 15px;
-            font-size: 24px;
-            font-weight: bold;
-            box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
-        }
+body{
+    transition: all 0.4s ease;
+}
 
-        /* Button Hover Effects */
-        .btn-primary-custom:hover{
-            transform: translateY(-3px);
-            transition: 0.3s;
-        }
+/* Hero Section */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    background:linear-gradient(135deg,#0d6efd,#6610f2);
+    color:white;
+    transition:0.4s;
+}
 
-        .btn-secondary-custom:hover{
-            transform: translateY(-3px);
-            transition: 0.3s;
-        }
+/* Hero Image */
+.hero img{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
 
-    </style>
+/* Dark Mode */
+.dark-mode{
+    background:#121212;
+    color:white;
+}
+
+.dark-mode .hero{
+    background:linear-gradient(135deg,#1f1f1f,#343a40);
+}
+
+.dark-mode .navbar{
+    background:#212529 !important;
+}
+
+.dark-mode .navbar-brand{
+    color:white !important;
+}
+
+.dark-mode .btn-outline-dark{
+    color:white;
+    border-color:white;
+}
+
+</style>
 </head>
 <body>
 
-    <!-- Hero Section Start -->
+<!-- Navbar -->
+<nav class="navbar navbar-light bg-light shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+            MyWebsite
+        </a>
 
-    <section class="hero">
+        <!-- Dark Mode Button -->
+        <button id="darkBtn" class="btn btn-dark">
+            🌙 Dark Mode
+        </button>
+    </div>
+</nav>
 
-        <div class="container">
+<!-- Hero Section -->
+<section class="hero">
 
-            <div class="row align-items-center">
+<div class="container">
 
-                <!-- Left Content -->
+<div class="row align-items-center">
 
-                <div class="col-lg-6 text-center text-lg-start">
+    <!-- Left Content -->
+    <div class="col-lg-6 text-center text-lg-start">
 
-                    <h1 class="display-4 fw-bold">
-                        Build Modern Web Applications
-                    </h1>
+        <h1 class="display-4 fw-bold">
+            Build Amazing Websites
+        </h1>
 
-                    <p class="lead my-4">
-                        Learn Full Stack Development with HTML,
-                        CSS, Bootstrap, JavaScript, React, Node.js
-                        and Database Technologies.
-                    </p>
+        <p class="lead my-4">
+            Learn HTML, CSS, Bootstrap and JavaScript to create modern responsive websites.
+        </p>
 
-                    <button class="btn btn-warning btn-lg me-2 btn-primary-custom">
-                        Get Started
-                    </button>
+        <button class="btn btn-warning btn-lg me-2">
+            Get Started
+        </button>
 
-                    <button class="btn btn-outline-light btn-lg btn-secondary-custom">
-                        Learn More
-                    </button>
+        <button class="btn btn-outline-light btn-lg">
+            Learn More
+        </button>
 
-                </div>
+    </div>
 
-                <!-- Right Content -->
+    <!-- Right Image -->
+    <div class="col-lg-6 text-center mt-5 mt-lg-0">
 
-                <div class="col-lg-6 mt-5 mt-lg-0">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.YBr-f_yTUJvBHjv1WkQ_kAHaHa?pid=Api&h=220&P=0">
 
-                    <div class="hero-image">
-                        IMAGE PLACEHOLDER
-                    </div>
+    </div>
 
-                </div>
+</div>
 
-            </div>
+</div>
 
-        </div>
+</section>
 
-    </section>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Hero Section End -->
+<script>
+
+// Dark Mode Toggle
+
+const darkBtn = document.getElementById("darkBtn");
+
+darkBtn.addEventListener("click", function(){
+
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+
+        darkBtn.innerHTML = "☀️ Light Mode";
+        darkBtn.classList.remove("btn-dark");
+        darkBtn.classList.add("btn-warning");
+
+    }
+    else{
+
+        darkBtn.innerHTML = "🌙 Dark Mode";
+        darkBtn.classList.remove("btn-warning");
+        darkBtn.classList.add("btn-dark");
+
+    }
+
+});
+
+</script>
 
 </body>
 </html>

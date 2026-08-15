@@ -1,100 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap 5 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<title>Responsive Navbar</title>
 
-    <style>
-        /* Hover Effect on Navigation Links */
-        .navbar-nav .nav-link:hover{
-            color: #ffc107 !important;
-            transition: 0.3s;
-        }
+<!-- Bootstrap 5 CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        /* Login Button Hover Effect */
-        .btn-login:hover{
-            background-color: #ffc107;
-            color: black;
-            transition: 0.3s;
-        }
-    </style>
+<style>
+
+/* Smooth Transition */
+body{
+    transition:0.4s;
+}
+
+/* Navbar Hover Effect */
+.navbar-nav .nav-link{
+    position:relative;
+    transition:0.3s;
+}
+
+.navbar-nav .nav-link:hover{
+    color:#0d6efd !important;
+}
+
+/* Underline Animation */
+.navbar-nav .nav-link::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0;
+    height:2px;
+    background:#0d6efd;
+    transition:0.3s;
+}
+
+.navbar-nav .nav-link:hover::after{
+    width:100%;
+}
+
+/* Dark Mode */
+.dark-mode{
+    background:#121212;
+    color:white;
+}
+
+.dark-mode .navbar{
+    background:#1f1f1f !important;
+}
+
+.dark-mode .navbar-brand,
+.dark-mode .nav-link{
+    color:white !important;
+}
+
+.dark-mode .hero{
+    background:#222;
+    color:white;
+}
+
+</style>
+
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<!-- Navbar Start -->
 
-        <div class="container">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
 
-            <!-- Brand Name -->
-            <a class="navbar-brand fw-bold" href="#">
-                BusinessApp
-            </a>
+    <div class="container">
 
-            <!-- Hamburger Menu Button -->
-            <button class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav">
+        <!-- Brand Name -->
+        <a class="navbar-brand fw-bold" href="#">
+            TechCorp
+        </a>
 
-                <span class="navbar-toggler-icon"></span>
+        <!-- Hamburger Menu -->
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarContent">
 
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse"
+             id="navbarContent">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        Services
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- Login Button -->
+            <button class="btn btn-primary ms-lg-3">
+                Login
             </button>
 
-            <!-- Navbar Links -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-
-                <ul class="navbar-nav ms-auto">
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">
-                            Home
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            About
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            Services
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            Contact
-                        </a>
-                    </li>
-
-                </ul>
-
-                <!-- Login Button -->
-                <button class="btn btn-light btn-login ms-lg-3">
-                    Login
-                </button>
-
-            </div>
+            <!-- Dark Mode Button -->
+            <button id="darkBtn"
+                    class="btn btn-dark ms-2">
+                🌙
+            </button>
 
         </div>
 
-    </nav>
-
-    <!-- Page Content -->
-    <div class="container mt-5">
-        <h1>Welcome to BusinessApp</h1>
-        <p>This is a responsive navigation bar created using Bootstrap 5.</p>
     </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</nav>
+
+<!-- Sample Content -->
+<section class="hero text-center py-5">
+
+    <div class="container">
+
+        <h1 class="display-4 fw-bold">
+            Welcome to TechCorp
+        </h1>
+
+        <p class="lead">
+            A responsive business website using Bootstrap 5.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+/* Dark Mode Toggle */
+
+const darkBtn = document.getElementById("darkBtn");
+
+darkBtn.addEventListener("click",()=>{
+
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+
+        darkBtn.innerHTML="☀️";
+
+        darkBtn.classList.remove("btn-dark");
+        darkBtn.classList.add("btn-warning");
+
+    }else{
+
+        darkBtn.innerHTML="🌙";
+
+        darkBtn.classList.remove("btn-warning");
+        darkBtn.classList.add("btn-dark");
+
+    }
+
+});
+
+</script>
 
 </body>
 </html>

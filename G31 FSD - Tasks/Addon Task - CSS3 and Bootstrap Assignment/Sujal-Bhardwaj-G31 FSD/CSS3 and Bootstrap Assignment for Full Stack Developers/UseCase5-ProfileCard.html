@@ -1,93 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Card</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap 5 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<title>Profile Card</title>
 
-    <style>
+<!-- Bootstrap 5 CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        body{
-            background-color: #f4f6f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+<style>
 
-        /* Profile Card */
-        .profile-card{
-            width: 350px;
-            border: none;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            transition: 0.3s;
-        }
+body{
+    background:#f4f6f9;
+    transition:0.4s;
+}
 
-        /* Hover Effect */
-        .profile-card:hover{
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
+/* Profile Card */
+.profile-card{
+    max-width:400px;
+    margin:60px auto;
+    border:none;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+    transition:0.4s;
+}
 
-        /* Profile Image */
-        .profile-img{
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #0d6efd;
-            margin-top: 20px;
-        }
+.profile-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
 
-        /* Follow Button */
-        .btn-follow:hover{
-            background-color: #0b5ed7;
-        }
+/* Profile Image */
+.profile-img{
+    width:140px;
+    height:140px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #0d6efd;
+    margin-top:20px;
+}
 
-    </style>
+/* Dark Mode */
+.dark-mode{
+    background:#121212;
+    color:white;
+}
+
+.dark-mode .profile-card{
+    background:#1f1f1f;
+    color:white;
+}
+
+.dark-mode .card-text{
+    color:#dcdcdc;
+}
+
+</style>
 </head>
 <body>
 
-    <!-- Profile Card -->
-    <div class="card profile-card text-center">
+<!-- Header -->
+<div class="container mt-4">
+
+    <div class="d-flex justify-content-between align-items-center">
+
+        <h2>Profile Card</h2>
+
+        <button id="darkBtn" class="btn btn-dark">
+            🌙 Dark Mode
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Profile Card -->
+<div class="card profile-card text-center">
+
+    <div class="card-body">
 
         <!-- Profile Image -->
         <img src="https://tse2.mm.bing.net/th/id/OIP.U0lavRZhl9Y5-e_-UiptAwHaHa?pid=Api&h=220&P=0"
              alt="Profile Image"
-             class="profile-img mx-auto">
+             class="profile-img">
 
-        <div class="card-body">
+        <!-- User Name -->
+        <h3 class="mt-3">
+            Sujal Bhardwaj
+        </h3>
 
-            <!-- User Name -->
-            <h3 class="card-title">
-                Sujal Bhardwaj
-            </h3>
+        <!-- Role -->
+        <h5 class="text-primary">
+            Full Stack Developer
+        </h5>
 
-            <!-- User Role -->
-            <h6 class="text-primary mb-3">
-                Full Stack Developer
-            </h6>
+        <!-- Bio -->
+        <p class="card-text mt-3">
+            Passionate Full Stack Developer with expertise in HTML, CSS,
+            Bootstrap, JavaScript, Java, DBMS and modern web technologies.
+        </p>
 
-            <!-- Short Bio -->
-            <p class="card-text">
-                Passionate Full Stack Developer with skills in
-                HTML, CSS, Bootstrap, JavaScript, Java, and DBMS.
-                Loves building modern and responsive web applications.
-            </p>
-
-            <!-- Follow Button -->
-            <button class="btn btn-primary btn-follow px-4">
-                Follow
-            </button>
-
-        </div>
+        <!-- Follow Button -->
+        <button class="btn btn-primary px-4"
+                onclick="followUser()">
+            Follow
+        </button>
 
     </div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+/* Follow Button */
+
+function followUser(){
+
+    alert("You are now following this user!");
+
+}
+
+/* Dark Mode Toggle */
+
+const darkBtn = document.getElementById("darkBtn");
+
+darkBtn.addEventListener("click",()=>{
+
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+
+        darkBtn.innerHTML="☀️ Light Mode";
+
+        darkBtn.classList.remove("btn-dark");
+        darkBtn.classList.add("btn-warning");
+
+    }else{
+
+        darkBtn.innerHTML="🌙 Dark Mode";
+
+        darkBtn.classList.remove("btn-warning");
+        darkBtn.classList.add("btn-dark");
+
+    }
+
+});
+
+</script>
 
 </body>
 </html>
