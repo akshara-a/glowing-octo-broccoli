@@ -1,20 +1,32 @@
-<div>
-  <h1> {{ title }} </h1>
+<div class="app-shell">
+  <header class="app-header">
+    <h1>{{ title }}</h1>
 
-  <label for="name"> Enter your name </label>
-  <input 
-    id="name"
-    type="text"
-    [(ngModel)]="name"
-    placeholder="Enter your name"
-  />
+    <nav class="main-nav" aria-label="Main navigation">
+      <a routerLink="/">Home</a>
+      <a routerLink="/weather">Open-Meteo Weather</a>
+    </nav>
+  </header>
 
-  <button type="button" (click)="showGreeting()">
-    Click Me!
-  </button>
+  <section class="greeting-card">
+    <h2>Greeting Demo</h2>
 
-  @if (message) {
-    <p> {{ message }} </p>
-  }
+    <label for="name">Enter your name</label>
+    <input
+      id="name"
+      type="text"
+      [(ngModel)]="name"
+      placeholder="Enter your name"
+    />
 
+    <button type="button" (click)="showGreeting()">
+      Click Me!
+    </button>
+
+    @if (message) {
+      <p>{{ message }}</p>
+    }
+  </section>
+
+  <router-outlet />
 </div>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1>Product Store</h1>
+    </nav>
+
+    <!-- Search and Filter Section -->
+    <section class="controls">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search products..."
+        >
+
+        <select id="sort">
+            <option value="">Sort by Price</option>
+            <option value="low-high">Low to High</option>
+            <option value="high-low">High to Low</option>
+        </select>
+
+        <select id="category">
+            <option value="all">All Categories</option>
+        </select>
+
+    </section>
+
+    <!-- Loading -->
+    <h2 id="loading">
+        Loading Products...
+    </h2>
+
+    <!-- Error -->
+    <h2 id="error"></h2>
+
+    <!-- Product Container -->
+    <div id="product-container">
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
