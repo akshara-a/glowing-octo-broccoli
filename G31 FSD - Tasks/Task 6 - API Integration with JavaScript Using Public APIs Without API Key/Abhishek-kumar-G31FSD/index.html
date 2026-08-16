@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Weather</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1> My Weather</h1>
+  <p class="subtitle">Uses your current location to fetch live weather.</p>
+
+  <div class="card">
+    <div class="condition" id="place">Waiting for location…</div>
+    <div class="temp" id="temp">--°</div>
+    <div class="condition" id="condition-text">—</div>
+    <div class="details">
+      <div class="item">Wind<strong id="wind">--</strong></div>
+      <div class="item">Humidity<strong id="humidity">--</strong></div>
+    </div>
+  </div>
+
+  <button id="refresh-btn">Refresh</button>
+  <div id="status"></div>
+<br>
+<br>
+
+<input type="text" id="city" placeholder="Enter city name">
+<button onclick="getHumidity()">Check</button>
+<h2 id="result">--</h2>
+
+  <script src="script.js"></script>
+</body>
+</html>
