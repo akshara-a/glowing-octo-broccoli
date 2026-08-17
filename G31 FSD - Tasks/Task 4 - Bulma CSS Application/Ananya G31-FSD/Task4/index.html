@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase</title>
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar is-primary">
+    <div class="container">
+
+        <div class="navbar-brand">
+            <a class="navbar-item has-text-weight-bold is-size-4">
+                🛒 ShopEase
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-end">
+
+                <a class="navbar-item">Home</a>
+                <a class="navbar-item">Products</a>
+                <a class="navbar-item">Contact</a>
+
+                <div class="navbar-item">
+                    <button class="button is-warning">
+                        Cart (<span id="cartCount">0</span>)
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+<!-- Hero -->
+
+<section class="hero is-info">
+    <div class="hero-body has-text-centered">
+
+        <h1 class="title">
+            Welcome to ShopEase
+        </h1>
+
+        <p class="subtitle">
+            Shop the Best Products at Affordable Prices
+        </p>
+
+        <button class="button is-warning is-medium"
+                onclick="shopNow()">
+            Shop Now
+        </button>
+
+    </div>
+</section>
+
+<!-- Search -->
+
+<section class="section pb-0">
+    <div class="container">
+
+        <div class="field">
+            <div class="control">
+                <input
+                    class="input"
+                    id="search"
+                    type="text"
+                    placeholder="Search Products..."
+                    onkeyup="searchProducts()">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Products -->
+
+<section class="section" id="products">
+
+<div class="container">
+
+<h2 class="title has-text-centered">
+Featured Products
+</h2>
+
+<div class="columns">
+
+<!-- Product 1 -->
+
+<div class="column product">
+
+<div class="card">
+
+<div class="card-image">
+
+<figure class="image is-4by3">
+
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500">
+
+</figure>
+
+</div>
+
+<div class="card-content">
+
+<h3 class="title is-5">
+Running Shoes
+</h3>
+
+<p>
+Comfortable sports shoes.
+</p>
+
+<br>
+
+<span class="tag is-success">
+₹2,999
+</span>
+
+<br><br>
+
+<button
+class="button is-primary is-fullwidth"
+onclick="addToCart()">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Product 2 -->
+
+<div class="column product">
+
+<div class="card">
+
+<div class="card-image">
+
+<figure class="image is-4by3">
+
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500">
+
+</figure>
+
+</div>
+
+<div class="card-content">
+
+<h3 class="title is-5">
+Smartphone
+</h3>
+
+<p>
+Latest Android smartphone.
+</p>
+
+<br>
+
+<span class="tag is-success">
+₹24,999
+</span>
+
+<br><br>
+
+<button
+class="button is-primary is-fullwidth"
+onclick="addToCart()">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Product 3 -->
+
+<div class="column product">
+
+<div class="card">
+
+<div class="card-image">
+
+<figure class="image is-4by3">
+
+<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500">
+
+</figure>
+
+</div>
+
+<div class="card-content">
+
+<h3 class="title is-5">
+Wireless Headphones
+</h3>
+
+<p>
+Bluetooth Noise Cancelling.
+</p>
+
+<br>
+
+<span class="tag is-success">
+₹3,999
+</span>
+
+<br><br>
+
+<button
+class="button is-primary is-fullwidth"
+onclick="addToCart()">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer class="footer">
+
+<div class="content has-text-centered">
+
+<p>
+
+<strong>ShopEase</strong>
+
+<br>
+
+Quality Products | Fast Delivery | Secure Payment
+
+</p>
+
+</div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
