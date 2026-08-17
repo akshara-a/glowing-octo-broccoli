@@ -1,0 +1,150 @@
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#e3f2fd,#f3e5f5);
+    margin:0;
+    padding:20px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+h1{
+    text-align:center;
+    color:#ffffff;
+    background:linear-gradient(90deg,#1565c0,#7b1fa2);
+    padding:25px;
+    margin:0;
+    font-size:48px;
+    letter-spacing:2px;
+}
+
+.section-title{
+    background:linear-gradient(90deg,#1565c0,#7b1fa2);
+    color:#fff;
+    padding:10px 15px;
+    font-size:18px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.form-section{
+    padding:15px;
+}
+
+.form-row{
+    display:flex;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+.form-group{
+    flex:1;
+}
+
+label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:600;
+    color:#333;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:10px;
+    border:2px solid #d1c4e9;
+    border-radius:8px;
+    outline:none;
+    transition:.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    border-color:#7b1fa2;
+    box-shadow:0 0 8px rgba(123,31,162,.3);
+}
+
+.photo-box{
+    width:170px;
+    height:200px;
+    border:3px dashed #7b1fa2;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#7b1fa2;
+    font-weight:bold;
+    background:#f8f5ff;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+table th{
+    background:linear-gradient(90deg,#1565c0,#7b1fa2);
+    color:#fff;
+    padding:12px;
+}
+
+table td{
+    padding:10px;
+    border:1px solid #ddd;
+}
+
+table tr:nth-child(even){
+    background:#f8f9ff;
+}
+
+.checkbox-group{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+button{
+    background:linear-gradient(90deg,#1565c0,#7b1fa2);
+    color:white;
+    border:none;
+    padding:12px 30px;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 5px 15px rgba(123,31,162,.4);
+}
+
+.signature{
+    display:flex;
+    justify-content:space-between;
+    margin-top:30px;
+}
+
+.signature div{
+    width:250px;
+    border-top:2px solid #7b1fa2;
+    text-align:center;
+    padding-top:8px;
+    color:#555;
+}
+
+.footer-box{
+    background:#f3e5f5;
+    padding:15px;
+    border-top:3px solid #7b1fa2;
+}
