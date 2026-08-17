@@ -1,0 +1,3 @@
+employee_id,name,department,salary,city,bonus
+1,Asha,IT,60000,Delhi,6000.0
+3,Neha,IT,70000,Bengaluru,7000.0

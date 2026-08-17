@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA APOD Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <h1>🚀 NASA Explorer</h1>
+        </div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#apod">APOD</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- Hero -->
+        <header id="home">
+
+            <h2>Astronomy Picture of the Day</h2>
+
+            <p>
+                Discover breathtaking images from NASA and explore our universe one day at a time.
+            </p>
+
+        </header>
+
+        <!-- Search -->
+        <section id="searchSection">
+
+            <input
+                type="date"
+                id="dateInput">
+
+            <button id="searchBtn">
+                View Picture
+            </button>
+
+        </section>
+
+        <!-- Loading -->
+        <section id="loading">
+
+            <p>Loading...</p>
+
+        </section>
+
+        <!-- Error -->
+        <section id="error">
+
+            <p>Something went wrong.</p>
+
+        </section>
+
+        <!-- APOD Card -->
+        <section id="apodCard">
+
+            <h2 id="title">
+                Title
+            </h2>
+
+            <p id="date">
+                Date
+            </p>
+            <p id="copyright"></p>
+
+            <div id="mediaContainer">
+                <a id="hdImage" target="_blank">
+    View HD Image
+</a>
+            </div>
+
+            <p id="explanation">
+
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer id="about">
+
+        <p>
+            Powered by NASA APOD API
+        </p>
+
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

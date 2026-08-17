@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Full page background */
+.product-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2563eb, #7c3aed, #ec4899);
+  padding: 30px 15px;
+}
+
+/* Product Card */
+.product-card {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Product image */
+.product-img {
+  height: 180px;
+  width: 100%;
+  object-fit: contain;
+  background-color: #f8f9fa;
+  padding: 10px;
+}
+
+/* Product title */
+.card-title {
+  font-weight: 700;
+  color: #222;
+}
+
+/* Price */
+.price-text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #7c3aed;
+}
+
+/* Rating badge */
+.rating-badge {
+  background-color: #facc15;
+  color: #222;
+  font-size: 0.95rem;
+  padding: 8px 14px;
+  border-radius: 20px;
+}
+
+/* Button */
+.cart-btn {
+  background-color: #7c3aed;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.cart-btn:hover {
+  background-color: #6d28d9;
+}

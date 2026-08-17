@@ -1,0 +1,340 @@
+/* ============================
+   VISA APPLICATION FORM STYLES
+   ============================ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  background: #f0f0f0;
+  color: #222;
+  padding: 20px;
+}
+
+/* Page Container */
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px 35px;
+  border: 1px solid #ccc;
+}
+
+/* ============================
+   HEADER
+   ============================ */
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.header-left h1 {
+  font-size: 28px;
+  font-weight: 900;
+  color: #1a2a4a;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.header-left p {
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.header-line {
+  border: none;
+  border-top: 2px solid #1a2a4a;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.photo-box {
+  border: 1.5px solid #888;
+  width: 110px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 11px;
+  color: #555;
+  line-height: 1.6;
+  flex-shrink: 0;
+}
+
+/* ============================
+   SECTION HEADER
+   ============================ */
+.section-header {
+  padding: 6px 10px;
+  font-weight: 700;
+  font-size: 12.5px;
+  letter-spacing: 0.5px;
+  margin-bottom: 0;
+}
+
+.section-header.dark {
+  background-color: #1a2a4a;
+  color: #fff;
+}
+
+/* ============================
+   OFFICIAL USE SECTION
+   ============================ */
+.section-box {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.official-grid {
+  display: flex;
+}
+
+.official-left {
+  flex: 0 0 45%;
+  border-right: 1px solid #ccc;
+}
+
+.official-right {
+  flex: 1;
+  padding: 8px 12px;
+}
+
+.official-fields {
+  padding: 8px 12px;
+}
+
+.field-line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  gap: 8px;
+}
+
+.field-line label {
+  white-space: nowrap;
+  min-width: 130px;
+  font-size: 12.5px;
+}
+
+.field-line .underline {
+  display: inline-block;
+  flex: 1;
+  border-bottom: 1px solid #555;
+  height: 16px;
+}
+
+.visa-type-header {
+  font-size: 12.5px;
+  margin-bottom: 8px;
+}
+
+.visa-types {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px 10px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12.5px;
+}
+
+.inline-input {
+  border: none;
+  border-bottom: 1px solid #555;
+  outline: none;
+  width: 80px;
+  font-size: 12px;
+}
+
+/* ============================
+   FORM TABLE (main sections)
+   ============================ */
+.form-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  border-top: none;
+  margin-bottom: 10px;
+}
+
+.form-table td,
+.form-table th {
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  vertical-align: top;
+}
+
+.td-label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #1a2a4a;
+  min-height: 45px;
+}
+
+.td-label .hint {
+  font-weight: 400;
+  color: #555;
+  font-size: 11.5px;
+}
+
+.field-input {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #999;
+  outline: none;
+  font-size: 13px;
+  padding: 4px 2px;
+  margin-top: 5px;
+  background: transparent;
+  color: #222;
+}
+
+.field-input:focus {
+  border-bottom-color: #1a2a4a;
+}
+
+/* Checkbox rows inside td */
+.checkbox-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 5px;
+  font-weight: 400;
+  color: #222;
+  font-size: 12.5px;
+}
+
+.checkbox-row label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+/* ============================
+   DECLARATION
+   ============================ */
+.declaration-box {
+  border: 1px solid #ccc;
+  border-top: none;
+  padding: 14px 12px;
+  margin-bottom: 10px;
+}
+
+.declaration-box p {
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.signature-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.sig-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.sig-field label {
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.underline.long {
+  display: inline-block;
+  flex: 1;
+  border-bottom: 1px solid #555;
+  height: 18px;
+}
+
+/* ============================
+   NOTE BOX
+   ============================ */
+.note-box {
+  display: flex;
+  border: 1px solid #ccc;
+  padding: 12px;
+  gap: 20px;
+  font-size: 12.5px;
+}
+
+.note-left {
+  flex: 0 0 200px;
+  font-size: 12.5px;
+  line-height: 1.7;
+}
+
+.note-right {
+  display: flex;
+  gap: 30px;
+  flex: 1;
+}
+
+.note-right ul {
+  padding-left: 16px;
+  line-height: 1.9;
+  color: #333;
+}
+
+/* ============================
+   PRINT STYLES
+   ============================ */
+@media print {
+  body {
+    background: #fff;
+    padding: 0;
+  }
+  .page {
+    border: none;
+    padding: 15px 20px;
+    max-width: 100%;
+  }
+}
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+@media (max-width: 650px) {
+  .form-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .official-grid {
+    flex-direction: column;
+  }
+  .official-left {
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+  .visa-types {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .signature-row {
+    flex-direction: column;
+  }
+  .note-right {
+    flex-direction: column;
+    gap: 0;
+  }
+}
