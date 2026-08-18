@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Background section */
+.faq-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2563eb, #7c3aed, #ec4899);
+  padding: 40px 15px;
+}
+
+/* FAQ card */
+.faq-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Accordion styling */
+.accordion-item {
+  border: none;
+  border-radius: 12px !important;
+  overflow: hidden;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.accordion-button {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 16px 18px;
+  background-color: #f8f9fa;
+  color: #222;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #7c3aed;
+  color: #fff;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.accordion-body {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  background-color: #fff;
+}

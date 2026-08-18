@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Background section */
+.progress-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2563eb, #7c3aed, #ec4899);
+  padding: 40px 15px;
+}
+
+/* Card */
+.progress-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Skill labels */
+.skill-label {
+  font-weight: 600;
+  color: #222;
+}
+
+.skill-percent {
+  font-weight: 600;
+  color: #555;
+}
+
+/* Progress bar */
+.progress {
+  height: 28px;
+  border-radius: 20px;
+  background-color: #e5e7eb;
+  overflow: hidden;
+}
+
+.progress-bar {
+  font-weight: 600;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+/* Custom colors */
+.html-bar {
+  background-color: #e34c26;
+}
+
+.css-bar {
+  background-color: #264de4;
+}
+
+.bootstrap-bar {
+  background-color: #7c3aed;
+}
+
+.js-bar {
+  background-color: #facc15;
+  color: #222;
+}
+
+.csharp-bar {
+  background-color: #16a34a;
+}
