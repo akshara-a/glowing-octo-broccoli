@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Position Assignment</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      color: #1a202c;
+      line-height: 1.6;
+    }
+
+    /* PART D: Fixed header — always on top, never scrolls away */
+    .fixed-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #1a202c;
+      color: #fff;
+      padding: 0 32px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+    .fixed-header span { font-size: 1.1rem; font-weight: 700; }
+    .fixed-header small { font-size: 0.75rem; background: #4299e1; padding: 2px 10px; border-radius: 20px; }
+
+    /* PART E: Sticky nav — scrolls until it hits top, then sticks */
+    .sticky-nav {
+      position: sticky;
+      top: 56px;
+      background: #2d3748;
+      z-index: 900;
+      display: flex;
+      gap: 4px;
+      padding: 10px 32px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .sticky-nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+      padding: 6px 16px;
+      border-radius: 6px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .sticky-nav a:hover { background: #4a5568; }
+
+    .main-wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 140px 24px 120px;
+    }
+
+    .section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 40px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    .section h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #2d3748;
+      border-left: 4px solid #4299e1;
+      padding-left: 12px;
+    }
+    .section .desc {
+      font-size: 0.875rem;
+      color: #718096;
+      margin-bottom: 20px;
+    }
+    .explanation {
+      margin-top: 16px;
+      background: #ebf8ff;
+      border-left: 4px solid #4299e1;
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.85rem;
+      color: #2b6cb0;
+    }
+
+    /* PART A: Static */
+    .static-demo { display: flex; gap: 16px; flex-wrap: wrap; }
+    .box {
+      width: 110px; height: 110px;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.8rem; font-weight: 600;
+      color: #fff; text-align: center;
+    }
+    .box-a1 { background: #48bb78; }
+    .box-a2 {
+      background: #ed8936;
+      position: static; /* top/left are IGNORED on static */
+      top: 50px;
+      left: 50px;
+    }
+    .box-a3 { background: #667eea; }
+
+    /* PART B: Relative */
+    .relative-demo { display: flex; gap: 0; }
+    .box-b1 { background: #f687b3; }
+    .box-b2 {
+      background: #4299e1;
+      position: relative; /* moves visually; original space preserved */
+      top: 20px;
+      left: 40px;
+    }
+    .box-b3 { background: #68d391; }
+
+    /* PART C: Absolute */
+    .abs-parent {
+      position: relative; /* creates positioning context */
+      width: 260px; height: 180px;
+      background: #e2e8f0;
+      border-radius: 10px;
+      border: 2px dashed #a0aec0;
+      margin-bottom: 20px;
+    }
+    .abs-parent span {
+      position: absolute;
+      top: 8px; left: 8px;
+      font-size: 0.75rem; color: #718096;
+    }
+    .box-c-child {
+      position: absolute; /* pinned to parent corner, out of flow */
+      top: 0; right: 0;
+      width: 80px; height: 80px;
+      background: #9f7aea;
+      border-radius: 0 10px 0 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 0.75rem; font-weight: 700;
+    }
+
+    .img-badge-wrap {
+      position: relative; /* context for the badge */
+      display: inline-block;
+    }
+    .img-placeholder {
+      width: 120px; height: 120px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 0.8rem;
+    }
+    .badge {
+      position: absolute; /* floats over image corner */
+      top: -8px; right: -8px;
+      background: #fc8181; color: #fff;
+      border-radius: 50%;
+      width: 28px; height: 28px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem; font-weight: 700;
+      border: 2px solid #fff;
+    }
+
+    /* PART D: Fixed Back to Top button */
+    .back-to-top {
+      position: fixed; /* glued to viewport */
+      bottom: 28px; right: 28px;
+      background: #4299e1; color: #fff;
+      border: none; border-radius: 50%;
+      width: 52px; height: 52px;
+      font-size: 1.4rem; cursor: pointer;
+      z-index: 999;
+      box-shadow: 0 4px 16px rgba(66,153,225,0.5);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .back-to-top:hover { background: #2b6cb0; transform: scale(1.1); }
+
+    /* PART F: Z-index */
+    .z-demo { position: relative; height: 170px; }
+    .z-box {
+      position: absolute; /* z-index only works on positioned elements */
+      width: 120px; height: 120px;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-weight: 700; font-size: 0.85rem;
+    }
+    .z-red   { background: #fc8181; top: 20px; left: 20px;  z-index: 1; }
+    .z-blue  { background: #4299e1; top: 40px; left: 60px;  z-index: 2; }
+    .z-green { background: #48bb78; top: 10px; left: 110px; z-index: 3; }
+
+    /* PART G: Combined */
+    .rel-banner {
+      position: relative; /* slight nudge; stays in flow */
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff; padding: 20px 28px;
+      border-radius: 10px; margin-bottom: 20px;
+    }
+    .rel-banner::after {
+      content: '✦ position: relative';
+      position: absolute;
+      top: 8px; right: 12px;
+      font-size: 0.7rem; opacity: 0.6;
+    }
+
+    .product-card {
+      position: relative; /* context for absolute badge */
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px; padding: 20px;
+      width: 200px; display: inline-block;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-bottom: 20px;
+    }
+    .product-card .product-badge {
+      position: absolute; /* floats outside flow */
+      top: -10px; right: -10px;
+      background: #fc8181; color: #fff;
+      border-radius: 20px; padding: 2px 10px;
+      font-size: 0.7rem; font-weight: 700;
+      border: 2px solid #fff;
+    }
+
+    /* Fixed chat button */
+    .chat-btn {
+      position: fixed; /* always on screen */
+      bottom: 90px; right: 28px;
+      background: #48bb78; color: #fff;
+      border: none; border-radius: 50%;
+      width: 52px; height: 52px;
+      font-size: 1.4rem; cursor: pointer;
+      z-index: 998;
+      box-shadow: 0 4px 16px rgba(72,187,120,0.5);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .chat-btn:hover { background: #276749; transform: scale(1.1); }
+
+    /* Challenge table */
+    .challenge-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+    .challenge-table th { background: #2d3748; color: #fff; padding: 10px 14px; text-align: left; }
+    .challenge-table td { padding: 10px 14px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+    .challenge-table tr:nth-child(even) td { background: #f7fafc; }
+    .tag {
+      display: inline-block; background: #ebf8ff; color: #2b6cb0;
+      border-radius: 4px; padding: 1px 7px;
+      font-family: monospace; font-size: 0.8rem;
+    }
+
+    .scroll-filler {
+      background: #fff; border-radius: 12px;
+      padding: 32px; margin-bottom: 40px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07); color: #4a5568;
+    }
+    .scroll-filler h3 { color: #2d3748; margin-bottom: 12px; font-size: 1rem; }
+  </style>
+</head>
+<body id="top">
+
+  <!-- PART D: Fixed Header -->
+  <header class="fixed-header">
+    <span>📐 CSS Positioning Assignment</span>
+    <small>All 5 position types</small>
+  </header>
+
+  <!-- PART E: Sticky Nav -->
+  <nav class="sticky-nav">
+    <a href="#partA">A–Static</a>
+    <a href="#partB">B–Relative</a>
+    <a href="#partC">C–Absolute</a>
+    <a href="#partD">D–Fixed</a>
+    <a href="#partE">E–Sticky</a>
+    <a href="#partF">F–Z-index</a>
+    <a href="#partG">G–Combined</a>
+    <a href="#challenge">Challenge</a>
+  </nav>
+
+  <div class="main-wrapper">
+
+    <!-- PART A -->
+    <section class="section" id="partA">
+      <h2>Part A – Static Position</h2>
+      <p class="desc">The orange box has <code>position: static</code> with <code>top: 50px; left: 50px;</code> — both are completely ignored.</p>
+      <div class="static-demo">
+        <div class="box box-a1">Box 1<br>(default)</div>
+        <div class="box box-a2">Box 2<br>static<br>top/left ignored</div>
+        <div class="box box-a3">Box 3<br>(default)</div>
+      </div>
+      <div class="explanation">
+        ✏️ <strong>Result:</strong> <code>top</code> and <code>left</code> have NO effect on <code>position: static</code>.
+        The box stays exactly where normal document flow places it.
+        Offset properties only work on relative, absolute, fixed, and sticky.
+      </div>
+    </section>
+
+    <!-- PART B -->
+    <section class="section" id="partB">
+      <h2>Part B – Relative Position</h2>
+      <p class="desc">The blue box is moved <code>top: 20px; left: 40px;</code>. The pink and green boxes do NOT shift — the original slot is preserved.</p>
+      <div class="relative-demo">
+        <div class="box box-b1">Box 1<br>pink</div>
+        <div class="box box-b2">Box 2<br>relative<br>moved ↓→</div>
+        <div class="box box-b3">Box 3<br>green</div>
+      </div>
+      <div class="explanation">
+        ✏️ <strong>Original space:</strong> The blue box moves visually, but its original space is <em>preserved</em>.
+        The green box does not fill the gap. Sibling elements are completely unaffected.
+      </div>
+    </section>
+
+    <!-- PART C -->
+    <section class="section" id="partC">
+      <h2>Part C – Absolute Position</h2>
+      <p class="desc">Child pinned to the top-right corner of its <code>position: relative</code> parent. Also: a notification badge on an image.</p>
+
+      <div class="abs-parent">
+        <span>Parent (relative)</span>
+        <div class="box-c-child">top-right<br>absolute</div>
+      </div>
+
+      <p style="margin-bottom:14px; font-size:0.875rem; color:#4a5568;">Notification badge using absolute positioning:</p>
+      <div class="img-badge-wrap">
+        <div class="img-placeholder">🖼 Image</div>
+        <div class="badge">9+</div>
+      </div>
+
+      <div class="explanation">
+        ✏️ <strong>No positioned parent?</strong> If the parent has no positioning context (relative/absolute/fixed/sticky),
+        the absolutely-positioned child escapes and positions itself relative to the nearest positioned ancestor — usually &lt;body&gt;.
+        Always set <code>position: relative</code> on the parent to contain the child.
+      </div>
+    </section>
+
+    <!-- PART D -->
+    <section class="section" id="partD">
+      <h2>Part D – Fixed Position</h2>
+      <p class="desc">The blue ▲ "Back to Top" button and green 💬 chat button are <code>position: fixed</code> at the bottom-right. The dark header at the top is also fixed. Scroll to verify.</p>
+      <div class="explanation">
+        ✏️ <code>position: fixed</code> removes the element from normal flow and pins it to the <em>viewport</em>.
+        It never moves no matter how much you scroll.
+        Use for persistent UI: headers, FABs, cookie banners.
+      </div>
+    </section>
+
+    <!-- PART E -->
+    <section class="section" id="partE">
+      <h2>Part E – Sticky Position</h2>
+      <p class="desc">The dark navigation bar above uses <code>position: sticky; top: 56px</code>. It scrolls with the page until it hits that threshold, then sticks.</p>
+      <div class="explanation">
+        ✏️ <strong>Fixed vs Sticky:</strong><br>
+        • <code>fixed</code> → always relative to the viewport; completely out of flow; stays even after parent ends.<br>
+        • <code>sticky</code> → stays in flow; scrolls normally until threshold is reached; stops sticking once its parent scrolls past.<br>
+        Sticky is ideal for navbars and table headers that should only persist in context.
+      </div>
+    </section>
+
+    <!-- PART F -->
+    <section class="section" id="partF">
+      <h2>Part F – Z-Index</h2>
+      <p class="desc">Red (z-index: 1) → Blue (z-index: 2) → Green (z-index: 3). Higher value = painted on top.</p>
+      <div class="z-demo">
+        <div class="z-box z-red">Red<br>z:1</div>
+        <div class="z-box z-blue">Blue<br>z:2</div>
+        <div class="z-box z-green">Green<br>z:3</div>
+      </div>
+      <div class="explanation">
+        ✏️ <strong>Z-index stacking:</strong> Higher <code>z-index</code> = rendered above lower values.
+        Only works on <em>positioned</em> elements (anything except static).
+        When two elements share the same z-index, the one later in the HTML source is on top.
+      </div>
+    </section>
+
+    <!-- PART G -->
+    <section class="section" id="partG">
+      <h2>Part G – Combined Application</h2>
+      <p class="desc">All five position types used together in one layout.</p>
+
+      <div class="rel-banner">
+        🎉 This banner uses <strong>position: relative</strong> — stays in flow with optional nudge available.
+      </div>
+
+      <div class="product-card">
+        <div class="product-badge">NEW</div>
+        <div style="width:100%;height:80px;background:#ebf8ff;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;font-size:1.5rem;">📦</div>
+        <div style="font-weight:600;font-size:0.9rem;">Product Card</div>
+        <div style="font-size:0.75rem;color:#718096;">Parent: relative<br>Badge: absolute</div>
+      </div>
+
+      <div style="color:#4a5568; margin-top: 10px;">
+        <p>📄 <strong>Static content:</strong> These paragraphs use default <code>position: static</code> — no CSS declaration needed. They flow naturally in the document.</p>
+        <br>
+        <p>The sticky navbar, fixed header, and fixed buttons overlay this static content without disrupting it.</p>
+      </div>
+
+      <div class="explanation">
+        ✏️ All 5 types used:<br>
+        • <strong>sticky</strong> → navbar (sticks on scroll within parent)<br>
+        • <strong>fixed</strong> → header + back-to-top + chat button<br>
+        • <strong>absolute</strong> → product badge, child in relative parent<br>
+        • <strong>relative</strong> → banner, parent containers<br>
+        • <strong>static</strong> → regular content paragraphs (default)
+      </div>
+    </section>
+
+    <!-- Scroll filler -->
+    <div class="scroll-filler">
+      <h3>📜 Scroll Content – test Fixed &amp; Sticky behavior</h3>
+      <p>Scroll down slowly to watch the sticky nav lock in place and confirm the fixed elements never move.</p>
+      <br>
+      <p style="color:#a0aec0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+      <br>
+      <p style="color:#a0aec0;">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident deserunt mollit anim id est laborum.</p>
+      <br>
+      <p style="color:#a0aec0;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+      <br>
+      <p style="color:#a0aec0;">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt neque porro quisquam.</p>
+    </div>
+
+    <!-- Challenge Answers -->
+    <section class="section" id="challenge">
+      <h2>Challenge Questions – Answers</h2>
+      <br>
+      <table class="challenge-table">
+        <thead>
+          <tr><th>#</th><th>Question</th><th>Answer</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Default value of <code>position</code>?</td>
+            <td><span class="tag">static</span></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Removes element from document flow?</td>
+            <td><span class="tag">absolute</span> and <span class="tag">fixed</span></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Stays visible during scrolling?</td>
+            <td><span class="tag">fixed</span> (and <span class="tag">sticky</span> within its parent)</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Requires top/left/right/bottom to stick?</td>
+            <td><span class="tag">sticky</span> — without e.g. <code>top: 0</code> it won't stick</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Same z-index on multiple elements?</td>
+            <td>The element <strong>later in the HTML source</strong> is rendered on top</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Absolute vs Relative — when?</td>
+            <td>Use <span class="tag">absolute</span> to break out of flow and pin precisely (badges, tooltips). Use <span class="tag">relative</span> for small visual nudges while keeping the layout slot.</td>
+          </tr>
+          <tr>
+            <td>7a</td>
+            <td>Real-world: Static</td>
+            <td>Regular article paragraphs and headings in a blog post.</td>
+          </tr>
+          <tr>
+            <td>7b</td>
+            <td>Real-world: Relative</td>
+            <td>A button icon shifted 2px up for optical alignment without affecting nearby text.</td>
+          </tr>
+          <tr>
+            <td>7c</td>
+            <td>Real-world: Absolute</td>
+            <td>A notification dot pinned to a profile avatar's top-right corner.</td>
+          </tr>
+          <tr>
+            <td>7d</td>
+            <td>Real-world: Fixed</td>
+            <td>A cookie consent banner always visible at the bottom of the screen.</td>
+          </tr>
+          <tr>
+            <td>7e</td>
+            <td>Real-world: Sticky</td>
+            <td>A table's header row that sticks to the top while scrolling through hundreds of rows.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </div>
+
+  <!-- Fixed Back to Top -->
+  <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to Top">▲</button>
+
+  <!-- Fixed Chat Button -->
+  <button class="chat-btn" title="Chat Support">💬</button>
+
+</body>
+</html>

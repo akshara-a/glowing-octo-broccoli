@@ -1,0 +1,9 @@
+employee_id,name,department,salary,city
+1,Asha,IT,60000,Delhi
+2,Rahul,HR,45000,Mumbai
+3,Neha,IT,70000,Bengaluru
+4,Vikram,Finance,55000,Delhi
+5,Priya,HR,48000,Mumbai
+6,Arjun,Finance,65000,Chennai
+7,Meera,IT,75000,Bengaluru
+8,Karan,Sales,50000,Delhi
