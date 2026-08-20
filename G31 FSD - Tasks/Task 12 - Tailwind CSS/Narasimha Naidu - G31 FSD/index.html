@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechNova - Product Landing Page</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Dark Mode Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-white">
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="bg-white dark:bg-gray-800 shadow-md fixed w-full top-0 z-50">
+
+        <div class="max-w-7xl mx-auto px-6 py-4">
+
+            <div class="flex items-center justify-between">
+
+                <!-- Logo -->
+                <a href="#" class="text-2xl font-bold text-blue-600">
+                    TechNova
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+
+                    <a href="#home"
+                        class="hover:text-blue-600 transition duration-300">
+                        Home
+                    </a>
+
+                    <a href="#features"
+                        class="hover:text-blue-600 transition duration-300">
+                        Products
+                    </a>
+
+                    <a href="#about"
+                        class="hover:text-blue-600 transition duration-300">
+                        About
+                    </a>
+
+                    <a href="#contact"
+                        class="hover:text-blue-600 transition duration-300">
+                        Contact
+                    </a>
+
+                    <a href="#pricing"
+                        class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                        Login
+                    </a>
+
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menuBtn"
+                    class="md:hidden text-2xl focus:outline-none">
+                    ☰
+                </button>
+
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-3">
+
+                <a href="#home"
+                    class="block py-2 hover:text-blue-600">
+                    Home
+                </a>
+
+                <a href="#features"
+                    class="block py-2 hover:text-blue-600">
+                    Products
+                </a>
+
+                <a href="#about"
+                    class="block py-2 hover:text-blue-600">
+                    About
+                </a>
+
+                <a href="#contact"
+                    class="block py-2 hover:text-blue-600">
+                    Contact
+                </a>
+
+                <a href="#pricing"
+                    class="inline-block bg-blue-600 text-white px-5 py-2 rounded-lg">
+                    Login
+                </a>
+
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- ================= HERO SECTION ================= -->
+    <section id="home"
+        class="pt-32 pb-20 px-6 bg-gradient-to-r from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+
+        <div class="max-w-7xl mx-auto">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+                <!-- Hero Text -->
+                <div>
+
+                    <span class="text-blue-600 font-semibold text-lg">
+                        Welcome to TechNova
+                    </span>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mt-4 leading-tight">
+                        Build Better.
+                        <span class="text-blue-600">
+                            Live Smarter.
+                        </span>
+                    </h1>
+
+                    <p class="mt-6 text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+                        Discover innovative technology products designed
+                        to make your everyday life easier, faster and smarter.
+                    </p>
+
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4">
+
+                        <a href="#pricing"
+                            class="bg-blue-600 text-white px-8 py-3 rounded-lg text-center font-semibold
+                            hover:bg-blue-700 hover:scale-105 transition duration-300">
+                            Get Started
+                        </a>
+
+                        <a href="#features"
+                            class="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg text-center
+                            hover:bg-blue-600 hover:text-white transition duration-300">
+                            Explore Products
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Hero Image -->
+                <div class="flex justify-center">
+
+                    <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8
+                                hover:-translate-y-2 transition duration-500">
+
+                        <div class="text-center">
+
+                            <div class="text-8xl mb-6">
+                                💻
+                            </div>
+
+                            <h2 class="text-2xl font-bold">
+                                Smart Technology
+                            </h2>
+
+                            <p class="text-gray-500 dark:text-gray-400 mt-3">
+                                Innovation for your everyday life
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES SECTION ================= -->
+    <section id="features" class="py-20 px-6">
+
+        <div class="max-w-7xl mx-auto">
+
+            <!-- Section Heading -->
+            <div class="text-center mb-12">
+
+                <p class="text-blue-600 font-semibold">
+                    FEATURES
+                </p>
+
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">
+                    Why Choose TechNova?
+                </h2>
+
+                <p class="text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
+                    We provide powerful and reliable technology solutions
+                    designed for modern users.
+                </p>
+
+            </div>
+
+
+            <!-- Feature Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Card 1 -->
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md
+                            hover:shadow-2xl hover:-translate-y-2
+                            transition duration-300">
+
+                    <div class="text-5xl mb-6">
+                        ⚡
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-3">
+                        Fast Performance
+                    </h3>
+
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Experience fast and reliable performance with
+                        our modern technology solutions.
+                    </p>
+
+                </div>
+
+
+                <!-- Card 2 -->
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md
+                            hover:shadow-2xl hover:-translate-y-2
+                            transition duration-300">
+
+                    <div class="text-5xl mb-6">
+                        🔒
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-3">
+                        Secure & Safe
+                    </h3>
+
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Your information stays protected with our
+                        advanced security features.
+                    </p>
+
+                </div>
+
+
+                <!-- Card 3 -->
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md
+                            hover:shadow-2xl hover:-translate-y-2
+                            transition duration-300">
+
+                    <div class="text-5xl mb-6">
+                        📱
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-3">
+                        Fully Responsive
+                    </h3>
+
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Our products and services work perfectly on
+                        mobile, tablet and desktop devices.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT SECTION ================= -->
+    <section id="about"
+        class="py-20 px-6 bg-gray-100 dark:bg-gray-800">
+
+        <div class="max-w-6xl mx-auto text-center">
+
+            <p class="text-blue-600 font-semibold">
+                ABOUT US
+            </p>
+
+            <h2 class="text-3xl md:text-4xl font-bold mt-2">
+                Technology Made Simple
+            </h2>
+
+            <p class="max-w-3xl mx-auto mt-6 text-gray-600 dark:text-gray-300 leading-relaxed">
+                TechNova is focused on creating simple, powerful and
+                affordable technology solutions. Our goal is to make
+                modern technology accessible to everyone.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRICING SECTION ================= -->
+    <section id="pricing" class="py-20 px-6">
+
+        <div class="max-w-7xl mx-auto">
+
+            <!-- Heading -->
+            <div class="text-center mb-12">
+
+                <p class="text-blue-600 font-semibold">
+                    PRICING
+                </p>
+
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">
+                    Choose Your Plan
+                </h2>
+
+                <p class="text-gray-600 dark:text-gray-400 mt-4">
+                    Select a plan that works best for you.
+                </p>
+
+            </div>
+
+
+            <!-- Pricing Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+
+                <!-- Basic -->
+                <div class="border dark:border-gray-700 rounded-2xl p-8
+                            shadow-md hover:shadow-2xl hover:-translate-y-2
+                            transition duration-300">
+
+                    <h3 class="text-2xl font-bold">
+                        Basic
+                    </h3>
+
+                    <p class="text-gray-500 dark:text-gray-400 mt-2">
+                        For beginners
+                    </p>
+
+                    <div class="my-6">
+                        <span class="text-4xl font-bold">
+                            ₹499
+                        </span>
+                        <span class="text-gray-500">
+                            /month
+                        </span>
+                    </div>
+
+                    <ul class="space-y-3 text-gray-600 dark:text-gray-300">
+
+                        <li>✓ 5 Projects</li>
+                        <li>✓ 5GB Storage</li>
+                        <li>✓ Basic Support</li>
+                        <li>✓ Basic Features</li>
+
+                    </ul>
+
+                    <button
+                        class="w-full mt-8 bg-blue-600 text-white py-3 rounded-lg
+                               hover:bg-blue-700 transition duration-300">
+                        Choose Plan
+                    </button>
+
+                </div>
+
+
+                <!-- Pro -->
+                <div class="border-2 border-blue-600 rounded-2xl p-8
+                            shadow-xl hover:-translate-y-2
+                            transition duration-300 relative">
+
+                    <span class="absolute top-4 right-4
+                                 bg-blue-600 text-white px-3 py-1
+                                 rounded-full text-sm">
+                        Popular
+                    </span>
+
+                    <h3 class="text-2xl font-bold">
+                        Pro
+                    </h3>
+
+                    <p class="text-gray-500 dark:text-gray-400 mt-2">
+                        For professionals
+                    </p>
+
+                    <div class="my-6">
+                        <span class="text-4xl font-bold">
+                            ₹999
+                        </span>
+                        <span class="text-gray-500">
+                            /month
+                        </span>
+                    </div>
+
+                    <ul class="space-y-3 text-gray-600 dark:text-gray-300">
+
+                        <li>✓ 20 Projects</li>
+                        <li>✓ 50GB Storage</li>
+                        <li>✓ Priority Support</li>
+                        <li>✓ Advanced Features</li>
+
+                    </ul>
+
+                    <button
+                        class="w-full mt-8 bg-blue-600 text-white py-3 rounded-lg
+                               hover:bg-blue-700 hover:scale-105
+                               transition duration-300">
+                        Choose Plan
+                    </button>
+
+                </div>
+
+
+                <!-- Premium -->
+                <div class="border dark:border-gray-700 rounded-2xl p-8
+                            shadow-md hover:shadow-2xl hover:-translate-y-2
+                            transition duration-300">
+
+                    <h3 class="text-2xl font-bold">
+                        Premium
+                    </h3>
+
+                    <p class="text-gray-500 dark:text-gray-400 mt-2">
+                        For businesses
+                    </p>
+
+                    <div class="my-6">
+                        <span class="text-4xl font-bold">
+                            ₹1999
+                        </span>
+                        <span class="text-gray-500">
+                            /month
+                        </span>
+                    </div>
+
+                    <ul class="space-y-3 text-gray-600 dark:text-gray-300">
+
+                        <li>✓ Unlimited Projects</li>
+                        <li>✓ 200GB Storage</li>
+                        <li>✓ 24/7 Support</li>
+                        <li>✓ Premium Features</li>
+
+                    </ul>
+
+                    <button
+                        class="w-full mt-8 bg-blue-600 text-white py-3 rounded-lg
+                               hover:bg-blue-700 transition duration-300">
+                        Choose Plan
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TESTIMONIAL SECTION ================= -->
+    <section class="py-20 px-6 bg-blue-600 text-white">
+
+        <div class="max-w-4xl mx-auto text-center">
+
+            <p class="text-blue-200 font-semibold">
+                TESTIMONIAL
+            </p>
+
+            <h2 class="text-3xl md:text-4xl font-bold mt-2">
+                What Our Customers Say
+            </h2>
+
+            <div class="mt-10 bg-white text-gray-800 rounded-2xl p-8 shadow-xl">
+
+                <div class="text-yellow-400 text-2xl">
+                    ★★★★★
+                </div>
+
+                <p class="mt-4 text-lg italic">
+                    "TechNova has completely changed the way I use
+                    technology. The products are simple, fast and reliable."
+                </p>
+
+                <p class="mt-6 font-bold">
+                    — Rahul Kumar
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact" class="py-20 px-6">
+
+        <div class="max-w-3xl mx-auto">
+
+            <div class="text-center mb-10">
+
+                <p class="text-blue-600 font-semibold">
+                    CONTACT
+                </p>
+
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">
+                    Get In Touch
+                </h2>
+
+                <p class="text-gray-600 dark:text-gray-400 mt-4">
+                    Have a question? Send us a message.
+                </p>
+
+            </div>
+
+
+            <!-- Contact Form -->
+            <form class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl">
+
+                <!-- Name -->
+                <div class="mb-6">
+
+                    <label class="block font-semibold mb-2">
+                        Name
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="Enter your name"
+                        class="w-full px-4 py-3 border border-gray-300
+                               dark:border-gray-600 dark:bg-gray-700
+                               rounded-lg focus:outline-none
+                               focus:ring-2 focus:ring-blue-500">
+
+                </div>
+
+
+                <!-- Email -->
+                <div class="mb-6">
+
+                    <label class="block font-semibold mb-2">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                        class="w-full px-4 py-3 border border-gray-300
+                               dark:border-gray-600 dark:bg-gray-700
+                               rounded-lg focus:outline-none
+                               focus:ring-2 focus:ring-blue-500">
+
+                </div>
+
+
+                <!-- Message -->
+                <div class="mb-6">
+
+                    <label class="block font-semibold mb-2">
+                        Message
+                    </label>
+
+                    <textarea
+                        rows="5"
+                        placeholder="Write your message"
+                        class="w-full px-4 py-3 border border-gray-300
+                               dark:border-gray-600 dark:bg-gray-700
+                               rounded-lg focus:outline-none
+                               focus:ring-2 focus:ring-blue-500"></textarea>
+
+                </div>
+
+
+                <!-- Submit -->
+                <button
+                    type="submit"
+                    class="w-full bg-blue-600 text-white py-3 rounded-lg
+                           font-semibold hover:bg-blue-700
+                           hover:scale-105 transition duration-300">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-gray-900 text-white py-10 px-6">
+
+        <div class="max-w-7xl mx-auto">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Website -->
+                <div>
+
+                    <h3 class="text-2xl font-bold text-blue-400">
+                        TechNova
+                    </h3>
+
+                    <p class="text-gray-400 mt-3">
+                        Smart technology for a smarter future.
+                    </p>
+
+                </div>
+
+
+                <!-- Social Media -->
+                <div>
+
+                    <h3 class="font-bold text-lg">
+                        Follow Us
+                    </h3>
+
+                    <div class="flex gap-5 mt-4">
+
+                        <a href="#"
+                            class="text-gray-400 hover:text-white transition">
+                            Instagram
+                        </a>
+
+                        <a href="#"
+                            class="text-gray-400 hover:text-white transition">
+                            LinkedIn
+                        </a>
+
+                        <a href="#"
+                            class="text-gray-400 hover:text-white transition">
+                            Facebook
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Links -->
+                <div>
+
+                    <h3 class="font-bold text-lg">
+                        Legal
+                    </h3>
+
+                    <div class="mt-4 space-y-2">
+
+                        <a href="#"
+                            class="block text-gray-400 hover:text-white">
+                            Privacy Policy
+                        </a>
+
+                        <a href="#"
+                            class="block text-gray-400 hover:text-white">
+                            Terms & Conditions
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center">
+
+                <p class="text-gray-400">
+                    © 2026 TechNova. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script>
+
+        // Mobile Menu
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+
+    </script>
+
+</body>
+
+</html>
