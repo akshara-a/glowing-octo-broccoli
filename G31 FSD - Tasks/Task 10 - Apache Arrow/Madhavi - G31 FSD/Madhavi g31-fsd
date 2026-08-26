@@ -1,0 +1,138 @@
+import pyarrow as pa
+import pyarrow.compute as pc
+import pyarrow.parquet as pq
+import pyarrow.ipc as ipc
+import pandas as pd
+data = {
+    "employee_id": [1, 2, 3, 4, 5, 6],
+    "name": ["Asha", "Rahul", "Neha", "Vikram", "Priya", "Arjun"],
+    "department": ["IT", "HR", "IT", "Finance", "HR", "Finance"],
+    "salary": [60000, 45000, 70000, 55000, 48000, 65000],
+    "city": ["Delhi", "Mumbai", "Bengaluru", "Delhi", "Mumbai", "Chennai"]
+}
+employee_table = pa.table(data)
+print("===== Task 1 =====")
+print(employee_table)
+print("\n===== Task 2 =====")
+print(employee_table.schema)
+print("\n===== Task 3 =====")
+print("Rows:", employee_table.num_rows)
+print("Columns:", employee_table.num_columns)
+print("Column Names:", employee_table.column_names)
+print("\nName Column:")
+print(employee_table.column("name"))
+print("\nFirst 3 Rows:")
+print(employee_table.slice(0,3))
+print("\n===== Task 4 =====")
+selected_table = employee_table.select(
+    ["name","department","salary"]
+)
+print(selected_table)
+print("\n===== Task 5 =====")
+salary_filter = pc.greater(
+    employee_table["salary"],
+    50000
+)
+high_salary = employee_table.filter(salary_filter)
+print(high_salary)
+print("\n===== Task 6 =====")
+department_filter = pc.equal(
+    employee_table["department"],
+    "IT"
+)
+it_table = employee_table.filter(department_filter)
+print(it_table)
+print("\n===== Task 7 =====")
+salary = employee_table["salary"]
+print("Average Salary:", pc.mean(salary).as_py())
+print("Maximum Salary:", pc.max(salary).as_py())
+print("Minimum Salary:", pc.min(salary).as_py())
+print("Total Salary:", pc.sum(salary).as_py())
+print("\n===== Task 8 =====")
+bonus = pc.multiply(
+    employee_table["salary"],
+    0.10
+)
+employee_table = employee_table.append_column(
+    "bonus",
+    bonus
+)
+print(employee_table)
+print("\n===== Task 9 =====")
+employee_df = employee_table.to_pandas()
+print(employee_df)
+print("\n===== Task 10 =====")
+new_arrow_table = pa.Table.from_pandas(
+    employee_df,
+    preserve_index=False
+)
+print(new_arrow_table)
+print("\n===== Task 11 =====")
+pq.write_table(
+    employee_table,
+    "employees.parquet"
+)
+print("employees.parquet created.")
+print("\n===== Task 12 =====")
+loaded_table = pq.read_table(
+    "employees.parquet"
+)
+print(loaded_table)
+print("\n===== Task 13 =====")
+with ipc.new_file(
+    "employees.arrow",
+    employee_table.schema
+) as writer:
+    writer.write_table(employee_table)
+print("employees.arrow created.")
+print("\n===== Task 14 =====")
+with ipc.open_file(
+    "employees.arrow"
+) as reader:
+    ipc_table = reader.read_all()
+print(ipc_table)
+print("\n===== Bonus 1 =====")
+delhi_filter = pc.equal(
+    employee_table["city"],
+    "Delhi"
+)
+print(employee_table.filter(delhi_filter))
+print("\n===== Bonus 2 =====")
+between = pc.and_(
+    pc.greater_equal(employee_table["salary"],50000),
+    pc.less_equal(employee_table["salary"],65000)
+)
+print(employee_table.filter(between))
+print("\n===== Bonus 3 =====")
+annual_salary = pc.multiply(
+    employee_table["salary"],
+    12
+)
+employee_table = employee_table.append_column(
+    "annual_salary",
+    annual_salary
+)
+print(employee_table)
+print("\n===== Bonus 4 =====")
+it_filter = pc.equal(
+    employee_table["department"],
+    "IT"
+)
+pq.write_table(
+    employee_table.filter(it_filter),
+    "it_employees.parquet"
+)
+print("it_employees.parquet created.")
+print("\n===== Bonus 5 =====")
+selected = pq.read_table(
+    "employees.parquet",
+    columns=["name","salary"]
+)
+print(selected)
+print("\n===== Bonus 6 =====")
+sorted_df = employee_table.to_pandas().sort_values(
+    by="salary",
+    ascending=False
+)
+print(sorted_df)
+print("\nAssignment Completed Successfully!")

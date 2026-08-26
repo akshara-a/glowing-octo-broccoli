@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Full background */
+.register-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2563eb, #7c3aed, #ec4899);
+  padding: 30px 15px;
+}
+
+/* Form card */
+.register-card {
+  background-color: #ffffff;
+  padding: 35px 30px;
+  border-radius: 18px;
+}
+
+/* Heading */
+.register-card h2 {
+  font-weight: 700;
+  color: #222;
+}
+
+/* Input styling */
+.custom-input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  transition: 0.3s ease;
+}
+
+/* Focus styling */
+.custom-input:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 0.2rem rgba(124, 58, 237, 0.2);
+}
+
+/* Validation message */
+.invalid-feedback {
+  font-size: 0.9rem;
+}
+
+/* Button */
+.register-btn {
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: #7c3aed;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #6d28d9;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .register-card {
+    padding: 25px 20px;
+  }
+}
