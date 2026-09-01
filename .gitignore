@@ -1,2 +1,8 @@
 config.js
 node_modules/
+company.duckdb
+employees.parquet
+high_salary_employees.parquet
+employees.arrow
+employees.parquet
+it_employees.parquet
