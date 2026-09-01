@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXA // Future Technology</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        neon: "#b7ff00",
+                        neonPurple: "#a855f7"
+                    },
+                    boxShadow: {
+                        neon: "0 0 30px rgba(183,255,0,0.25)",
+                        neonStrong: "0 0 40px rgba(183,255,0,0.45)"
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #050505;
+        }
+
+        ::selection {
+            background: #b7ff00;
+            color: #000;
+        }
+
+        .grid-bg {
+            background-image:
+                linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .glow-text {
+            text-shadow: 0 0 25px rgba(183,255,0,0.35);
+        }
+
+        .neon-line {
+            box-shadow: 0 0 15px rgba(183,255,0,0.7);
+        }
+
+        .glass {
+            background: rgba(15,15,15,0.75);
+            backdrop-filter: blur(15px);
+        }
+    </style>
+</head>
+
+<body class="bg-[#050505] text-white">
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="fixed top-0 left-0 w-full z-50 border-b border-zinc-800/80 bg-black/80 backdrop-blur-xl">
+
+        <nav class="max-w-7xl mx-auto px-6 py-5">
+
+            <div class="flex items-center justify-between">
+
+                <!-- Logo -->
+                <a href="#home" class="flex items-center gap-3">
+
+                    <div class="w-10 h-10 bg-neon text-black rounded-lg flex items-center justify-center font-black text-xl shadow-neon">
+                        N
+                    </div>
+
+                    <div>
+                        <span class="font-black tracking-widest text-xl">
+                            NEXA
+                        </span>
+
+                        <span class="hidden sm:inline text-zinc-500 text-xs ml-2">
+                            / TECHNOLOGY
+                        </span>
+                    </div>
+
+                </a>
+
+
+                <!-- Desktop Navigation -->
+
+                <div class="hidden md:flex items-center gap-8 text-sm">
+
+                    <a href="#home"
+                       class="text-neon hover:text-white transition">
+                        HOME
+                    </a>
+
+                    <a href="#features"
+                       class="text-zinc-400 hover:text-neon transition">
+                        FEATURES
+                    </a>
+
+                    <a href="#products"
+                       class="text-zinc-400 hover:text-neon transition">
+                        PRODUCTS
+                    </a>
+
+                    <a href="#about"
+                       class="text-zinc-400 hover:text-neon transition">
+                        ABOUT
+                    </a>
+
+                    <a href="#contact"
+                       class="text-zinc-400 hover:text-neon transition">
+                        CONTACT
+                    </a>
+
+                </div>
+
+
+                <!-- Desktop Button -->
+
+                <a href="#contact"
+                   class="hidden md:block border border-neon text-neon px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-neon hover:text-black hover:shadow-neon transition">
+                    JOIN NEXA →
+                </a>
+
+
+                <!-- Mobile Menu Button -->
+
+                <button
+                    onclick="toggleMenu()"
+                    class="md:hidden border border-zinc-700 p-2 rounded-lg hover:border-neon transition">
+
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- Mobile Navigation -->
+
+            <div id="mobileMenu"
+                 class="hidden md:hidden pt-6 pb-2">
+
+                <div class="flex flex-col gap-5 text-sm">
+
+                    <a href="#home"
+                       onclick="closeMenu()"
+                       class="text-neon">
+                        HOME
+                    </a>
+
+                    <a href="#features"
+                       onclick="closeMenu()"
+                       class="text-zinc-400 hover:text-neon">
+                        FEATURES
+                    </a>
+
+                    <a href="#products"
+                       onclick="closeMenu()"
+                       class="text-zinc-400 hover:text-neon">
+                        PRODUCTS
+                    </a>
+
+                    <a href="#about"
+                       onclick="closeMenu()"
+                       class="text-zinc-400 hover:text-neon">
+                        ABOUT
+                    </a>
+
+                    <a href="#contact"
+                       onclick="closeMenu()"
+                       class="text-zinc-400 hover:text-neon">
+                        CONTACT
+                    </a>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section id="home"
+             class="min-h-screen pt-32 pb-20 flex items-center relative overflow-hidden grid-bg">
+
+        <!-- Neon Glow -->
+
+        <div class="absolute top-40 left-1/2 -translate-x-1/2 w-96 h-96 bg-lime-400/10 rounded-full blur-[120px]">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 w-full relative">
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Hero Text -->
+
+                <div>
+
+                    <div class="inline-flex items-center gap-2 border border-zinc-800 bg-zinc-950 px-4 py-2 rounded-full mb-8">
+
+                        <span class="w-2 h-2 bg-neon rounded-full animate-pulse">
+                        </span>
+
+                        <span class="text-xs tracking-widest text-zinc-400">
+                            THE FUTURE IS HERE
+                        </span>
+
+                    </div>
+
+
+                    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight">
+
+                        BUILD
+
+                        <span class="block text-neon glow-text">
+                            WITHOUT
+                        </span>
+
+                        LIMITS.
+
+                    </h1>
+
+
+                    <p class="mt-8 text-lg text-zinc-400 max-w-xl leading-relaxed">
+
+                        Nexa creates powerful digital tools that help
+                        ambitious people move faster, think smarter
+                        and build the future.
+
+                    </p>
+
+
+                    <!-- Buttons -->
+
+                    <div class="flex flex-col sm:flex-row gap-4 mt-10">
+
+                        <a href="#products"
+                           class="bg-neon text-black px-7 py-4 rounded-lg font-black text-sm text-center hover:bg-lime-300 hover:shadow-neonStrong hover:-translate-y-1 transition duration-300">
+
+                            EXPLORE PRODUCTS
+                            →
+
+                        </a>
+
+
+                        <a href="#features"
+                           class="border border-zinc-700 px-7 py-4 rounded-lg font-bold text-sm text-center hover:border-neon hover:text-neon transition">
+
+                            DISCOVER MORE
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Stats -->
+
+                    <div class="grid grid-cols-3 gap-6 mt-14 pt-8 border-t border-zinc-800">
+
+                        <div>
+
+                            <h3 class="text-2xl font-black">
+                                10K+
+                            </h3>
+
+                            <p class="text-xs text-zinc-500 mt-1">
+                                USERS
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3 class="text-2xl font-black">
+                                99.9%
+                            </h3>
+
+                            <p class="text-xs text-zinc-500 mt-1">
+                                UPTIME
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3 class="text-2xl font-black">
+                                24/7
+                            </h3>
+
+                            <p class="text-xs text-zinc-500 mt-1">
+                                SUPPORT
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Hero Dashboard -->
+
+                <div class="relative">
+
+                    <div class="absolute -inset-4 bg-neon/10 blur-3xl rounded-full">
+                    </div>
+
+
+                    <div class="relative glass border border-zinc-800 rounded-2xl p-5 shadow-2xl">
+
+                        <!-- Dashboard Header -->
+
+                        <div class="flex items-center justify-between border-b border-zinc-800 pb-4">
+
+                            <div class="flex items-center gap-2">
+
+                                <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                                <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+                                <span class="w-3 h-3 rounded-full bg-neon"></span>
+
+                            </div>
+
+                            <span class="text-xs text-zinc-600">
+                                NEXA_SYSTEM_v2.0
+                            </span>
+
+                        </div>
+
+
+                        <!-- Dashboard -->
+
+                        <div class="py-7">
+
+                            <div class="flex justify-between items-start">
+
+                                <div>
+
+                                    <p class="text-xs text-zinc-500 uppercase tracking-widest">
+                                        Productivity
+                                    </p>
+
+                                    <h2 class="text-5xl font-black mt-2">
+                                        87.4<span class="text-neon">%</span>
+                                    </h2>
+
+                                </div>
+
+
+                                <div class="bg-neon/10 border border-neon/30 px-3 py-2 rounded-lg">
+
+                                    <span class="text-neon text-sm font-bold">
+                                        +24.8%
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Chart -->
+
+                            <div class="h-40 mt-8 flex items-end gap-2">
+
+                                <div class="flex-1 bg-zinc-800 rounded-t h-[35%]"></div>
+
+                                <div class="flex-1 bg-zinc-800 rounded-t h-[48%]"></div>
+
+                                <div class="flex-1 bg-zinc-800 rounded-t h-[42%]"></div>
+
+                                <div class="flex-1 bg-zinc-700 rounded-t h-[60%]"></div>
+
+                                <div class="flex-1 bg-zinc-700 rounded-t h-[55%]"></div>
+
+                                <div class="flex-1 bg-neon/60 rounded-t h-[75%]"></div>
+
+                                <div class="flex-1 bg-neon rounded-t h-[92%] neon-line"></div>
+
+                            </div>
+
+
+                            <!-- Bottom Cards -->
+
+                            <div class="grid grid-cols-2 gap-4 mt-6">
+
+                                <div class="bg-black border border-zinc-800 rounded-xl p-4">
+
+                                    <i data-lucide="activity"
+                                       class="text-neon w-5 h-5 mb-3">
+                                    </i>
+
+                                    <p class="text-xs text-zinc-500">
+                                        ACTIVE TASKS
+                                    </p>
+
+                                    <p class="text-xl font-bold mt-1">
+                                        24
+                                    </p>
+
+                                </div>
+
+
+                                <div class="bg-black border border-zinc-800 rounded-xl p-4">
+
+                                    <i data-lucide="zap"
+                                       class="text-neonPurple w-5 h-5 mb-3">
+                                    </i>
+
+                                    <p class="text-xs text-zinc-500">
+                                        EFFICIENCY
+                                    </p>
+
+                                    <p class="text-xl font-bold mt-1">
+                                        +38%
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FEATURES
+    ====================================================== -->
+
+    <section id="features"
+             class="py-24 border-t border-zinc-900 bg-black">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="max-w-2xl mb-16">
+
+                <p class="text-neon text-sm font-bold tracking-[0.3em]">
+                    WHY NEXA
+                </p>
+
+                <h2 class="text-4xl sm:text-5xl font-black mt-4">
+                    BUILT FOR
+                    <span class="text-zinc-600">
+                        THE NEXT.
+                    </span>
+                </h2>
+
+                <p class="text-zinc-500 mt-5">
+                    Everything you need to turn ideas into results.
+                </p>
+
+            </div>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+                <!-- Feature 1 -->
+
+                <div class="group bg-zinc-950 border border-zinc-800 p-8 rounded-2xl hover:border-neon hover:shadow-neon transition duration-300">
+
+                    <div class="w-14 h-14 border border-zinc-700 rounded-xl flex items-center justify-center group-hover:border-neon group-hover:bg-neon group-hover:text-black transition">
+
+                        <i data-lucide="zap" class="w-7 h-7"></i>
+
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-7">
+                        Lightning Fast
+                    </h3>
+
+                    <p class="text-zinc-500 mt-3 leading-relaxed">
+                        Optimized performance that keeps your workflow
+                        moving without unnecessary delays.
+                    </p>
+
+                    <div class="mt-7 text-neon text-sm font-bold">
+                        LEARN MORE →
+                    </div>
+
+                </div>
+
+
+                <!-- Feature 2 -->
+
+                <div class="group bg-zinc-950 border border-zinc-800 p-8 rounded-2xl hover:border-neon hover:shadow-neon transition duration-300">
+
+                    <div class="w-14 h-14 border border-zinc-700 rounded-xl flex items-center justify-center group-hover:border-neon group-hover:bg-neon group-hover:text-black transition">
+
+                        <i data-lucide="shield-check" class="w-7 h-7"></i>
+
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-7">
+                        Secure By Design
+                    </h3>
+
+                    <p class="text-zinc-500 mt-3 leading-relaxed">
+                        Modern security practices keep your data,
+                        projects and information protected.
+                    </p>
+
+                    <div class="mt-7 text-neon text-sm font-bold">
+                        LEARN MORE →
+                    </div>
+
+                </div>
+
+
+                <!-- Feature 3 -->
+
+                <div class="group bg-zinc-950 border border-zinc-800 p-8 rounded-2xl hover:border-neon hover:shadow-neon transition duration-300">
+
+                    <div class="w-14 h-14 border border-zinc-700 rounded-xl flex items-center justify-center group-hover:border-neon group-hover:bg-neon group-hover:text-black transition">
+
+                        <i data-lucide="bar-chart-3" class="w-7 h-7"></i>
+
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-7">
+                        Smart Analytics
+                    </h3>
+
+                    <p class="text-zinc-500 mt-3 leading-relaxed">
+                        Understand your performance with powerful
+                        analytics and meaningful insights.
+                    </p>
+
+                    <div class="mt-7 text-neon text-sm font-bold">
+                        LEARN MORE →
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PRODUCTS / PRICING
+    ====================================================== -->
+
+    <section id="products"
+             class="py-24 bg-[#080808] border-t border-zinc-900">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="text-center max-w-2xl mx-auto mb-16">
+
+                <p class="text-neon text-sm font-bold tracking-[0.3em]">
+                    PRODUCTS
+                </p>
+
+                <h2 class="text-4xl sm:text-5xl font-black mt-4">
+                    CHOOSE YOUR
+                    <span class="text-neon">
+                        POWER.
+                    </span>
+                </h2>
+
+                <p class="text-zinc-500 mt-5">
+                    Simple plans. Serious performance.
+                </p>
+
+            </div>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+
+                <!-- Starter -->
+
+                <div class="bg-black border border-zinc-800 p-8 rounded-2xl hover:border-zinc-600 transition">
+
+                    <p class="text-zinc-500 text-sm tracking-widest">
+                        STARTER
+                    </p>
+
+                    <h3 class="text-2xl font-black mt-3">
+                        BASE
+                    </h3>
+
+                    <div class="mt-8">
+
+                        <span class="text-5xl font-black">
+                            ₹499
+                        </span>
+
+                        <span class="text-zinc-600">
+                            /month
+                        </span>
+
+                    </div>
+
+                    <p class="text-zinc-500 mt-5">
+                        For individuals getting started.
+                    </p>
+
+
+                    <ul class="space-y-4 mt-8 text-sm">
+
+                        <li class="flex gap-3">
+                            <span class="text-neon">✓</span>
+                            5 Projects
+                        </li>
+
+                        <li class="flex gap-3">
+                            <span class="text-neon">✓</span>
+                            Basic Analytics
+                        </li>
+
+                        <li class="flex gap-3">
+                            <span class="text-neon">✓</span>
+                            Email Support
+                        </li>
+
+                    </ul>
+
+
+                    <a href="#contact"
+                       class="block text-center border border-zinc-700 mt-10 py-3 rounded-lg font-bold hover:border-neon hover:text-neon transition">
+
+                        GET STARTED
+
+                    </a>
+
+                </div>
+
+
+                <!-- Pro -->
+
+                <div class="relative bg-zinc-950 border-2 border-neon p-8 rounded-2xl shadow-neon">
+
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+
+                        <span class="bg-neon text-black text-xs font-black px-4 py-2 rounded-full">
+                            MOST POPULAR
+                        </span>
+
+                    </div>
+
+
+                    <p class="text-neon text-sm tracking-widest mt-2">
+                        PROFESSIONAL
+                    </p>
+
+                    <h3 class="text-2xl font-black mt-3">
+                        PRO
+                    </h3>
+
+                    <div class="mt-8">
+
+                        <span class="text-5xl font-black">
+                            ₹999
+                        </span>
+
+                        <span class="text-zinc-600">
+                            /month
+                        </span>
+
+                    </div>
+
+                    <p class="text-zinc-500 mt-5">
+                        For ambitious teams and creators.
+                    </p>
+
+
+                    <ul class="space-y-4 mt-8 text-sm">
+
+                        <li class="flex gap-3">
+                            <span class="text-neon">✓</span>
+                            Unlimited Projects
+                        </li>
+
+                        <li class="flex gap-3">
+                            <span class="text-neon">✓</span>
+                            Advanced Analytics
+                        </li>
+
+                        <li class="flex gap-3">
+                            <span class="text-neon">✓</span>
+                            Priority Support
+                        </li>
+
+                    </ul>
+
+
+                    <a href="#contact"
+                       class="block text-center bg-neon text-black mt-10 py-3 rounded-lg font-black hover:bg-lime-300 hover:shadow-neonStrong transition">
+
+                        START FREE TRIAL
+
+                    </a>
+
+                </div>
+
+
+                <!-- Enterprise -->
+
+                <div class="bg-black border border-zinc-800 p-8 rounded-2xl hover:border-zinc-600 transition">
+
+                    <p class="text-zinc-500 text-sm tracking-widest">
+                        ENTERPRISE
+                    </p>
+
+                    <h3 class="text-2xl font-black mt-3">
+                        ULTRA
+                    </h3>
+
+                    <div class="mt-8">
+
+                        <span class="text-5xl font-black">
+                            ₹1,999
+                        </span>
+
+                        <span class="text-zinc-600">
+                            /month
+                        </span>
+
+                    </div>
+
+                    <p class="text-zinc-500 mt-5">
+                        For organizations scaling fast.
+                    </p>
+
+
+                    <ul class="space-y-4 mt-8 text-sm">
+
+                        <li class="flex gap-3">
+                            <span class="text-neon">✓</span>
+                            Unlimited Everything
+                        </li>
+
+                        <li class="flex gap-3">
+                            <span class="text-neon">✓</span>
+                            Custom Analytics
+                        </li>
+
+                        <li class="flex gap-3">
+                            <span class="text-neon">✓</span>
+                            Dedicated Support
+                        </li>
+
+                    </ul>
+
+
+                    <a href="#contact"
+                       class="block text-center border border-zinc-700 mt-10 py-3 rounded-lg font-bold hover:border-neon hover:text-neon transition">
+
+                        CONTACT SALES
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section id="about"
+             class="py-24 bg-black border-t border-zinc-900">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <div>
+
+                    <p class="text-neon text-sm font-bold tracking-[0.3em]">
+                        ABOUT US
+                    </p>
+
+                    <h2 class="text-4xl sm:text-5xl font-black mt-5 leading-tight">
+
+                        WE DON'T
+                        <span class="text-zinc-600">
+                            FOLLOW
+                        </span>
+
+                        <br>
+
+                        THE FUTURE.
+
+                        <span class="text-neon">
+                            WE BUILD IT.
+                        </span>
+
+                    </h2>
+
+                    <p class="text-zinc-500 mt-7 leading-relaxed max-w-xl">
+                        Nexa is a technology-focused company creating
+                        digital products for the next generation of
+                        creators, teams and businesses.
+                    </p>
+
+                    <a href="#contact"
+                       class="inline-block mt-8 border border-neon text-neon px-6 py-3 rounded-lg font-bold hover:bg-neon hover:text-black transition">
+
+                        WORK WITH US →
+
+                    </a>
+
+                </div>
+
+
+                <!-- About Stats -->
+
+                <div class="grid grid-cols-2 gap-4">
+
+                    <div class="bg-zinc-950 border border-zinc-800 p-7 rounded-xl">
+
+                        <p class="text-4xl font-black text-neon">
+                            10K+
+                        </p>
+
+                        <p class="text-zinc-500 mt-2 text-sm">
+                            ACTIVE USERS
+                        </p>
+
+                    </div>
+
+
+                    <div class="bg-zinc-950 border border-zinc-800 p-7 rounded-xl">
+
+                        <p class="text-4xl font-black">
+                            50+
+                        </p>
+
+                        <p class="text-zinc-500 mt-2 text-sm">
+                            COUNTRIES
+                        </p>
+
+                    </div>
+
+
+                    <div class="bg-zinc-950 border border-zinc-800 p-7 rounded-xl">
+
+                        <p class="text-4xl font-black">
+                            99.9%
+                        </p>
+
+                        <p class="text-zinc-500 mt-2 text-sm">
+                            UPTIME
+                        </p>
+
+                    </div>
+
+
+                    <div class="bg-zinc-950 border border-zinc-800 p-7 rounded-xl">
+
+                        <p class="text-4xl font-black text-neonPurple">
+                            24/7
+                        </p>
+
+                        <p class="text-zinc-500 mt-2 text-sm">
+                            SUPPORT
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         TESTIMONIALS
+    ====================================================== -->
+
+    <section class="py-24 bg-[#080808] border-t border-zinc-900">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="text-center mb-14">
+
+                <p class="text-neon text-sm font-bold tracking-[0.3em]">
+                    TESTIMONIALS
+                </p>
+
+                <h2 class="text-4xl font-black mt-4">
+                    WHAT PEOPLE SAY
+                </h2>
+
+            </div>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+
+                <div class="bg-black border border-zinc-800 p-7 rounded-xl hover:border-neon transition">
+
+                    <div class="text-neon text-xl">
+                        ★★★★★
+                    </div>
+
+                    <p class="text-zinc-400 mt-5 leading-relaxed">
+                        "Nexa completely changed the way our team
+                        manages projects. Everything feels faster."
+                    </p>
+
+                    <div class="mt-7">
+
+                        <p class="font-bold">
+                            Priya Sharma
+                        </p>
+
+                        <p class="text-zinc-600 text-sm">
+                            Product Designer
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="bg-black border border-zinc-800 p-7 rounded-xl hover:border-neon transition">
+
+                    <div class="text-neon text-xl">
+                        ★★★★★
+                    </div>
+
+                    <p class="text-zinc-400 mt-5 leading-relaxed">
+                        "The analytics give us exactly the information
+                        we need without unnecessary complexity."
+                    </p>
+
+                    <div class="mt-7">
+
+                        <p class="font-bold">
+                            Rahul Kumar
+                        </p>
+
+                        <p class="text-zinc-600 text-sm">
+                            Software Engineer
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="bg-black border border-zinc-800 p-7 rounded-xl hover:border-neon transition">
+
+                    <div class="text-neon text-xl">
+                        ★★★★★
+                    </div>
+
+                    <p class="text-zinc-400 mt-5 leading-relaxed">
+                        "Clean interface, excellent performance and
+                        genuinely enjoyable to use."
+                    </p>
+
+                    <div class="mt-7">
+
+                        <p class="font-bold">
+                            Ananya Rao
+                        </p>
+
+                        <p class="text-zinc-600 text-sm">
+                            Founder
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section id="contact"
+             class="py-24 bg-black border-t border-zinc-900">
+
+        <div class="max-w-5xl mx-auto px-6">
+
+            <div class="grid lg:grid-cols-2 gap-14">
+
+                <!-- Contact Text -->
+
+                <div>
+
+                    <p class="text-neon text-sm font-bold tracking-[0.3em]">
+                        CONTACT
+                    </p>
+
+                    <h2 class="text-4xl sm:text-5xl font-black mt-5">
+                        LET'S BUILD
+                        <span class="text-neon">
+                            SOMETHING.
+                        </span>
+                    </h2>
+
+                    <p class="text-zinc-500 mt-6 leading-relaxed">
+                        Have an idea, question or project?
+                        Send us a message and our team will get back to you.
+                    </p>
+
+                    <div class="mt-10 space-y-5">
+
+                        <div class="flex items-center gap-4">
+
+                            <div class="w-11 h-11 border border-zinc-800 rounded-lg flex items-center justify-center">
+                                <i data-lucide="mail" class="text-neon"></i>
+                            </div>
+
+                            <div>
+                                <p class="text-xs text-zinc-600">
+                                    EMAIL
+                                </p>
+
+                                <p class="text-sm">
+                                    hello@nexa.tech
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="flex items-center gap-4">
+
+                            <div class="w-11 h-11 border border-zinc-800 rounded-lg flex items-center justify-center">
+                                <i data-lucide="map-pin" class="text-neon"></i>
+                            </div>
+
+                            <div>
+                                <p class="text-xs text-zinc-600">
+                                    LOCATION
+                                </p>
+
+                                <p class="text-sm">
+                                    Hyderabad, India
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Contact Form -->
+
+                <form id="contactForm"
+                      class="bg-zinc-950 border border-zinc-800 p-7 sm:p-9 rounded-2xl">
+
+                    <div class="mb-6">
+
+                        <label for="name"
+                               class="block text-sm font-bold mb-2">
+                            NAME
+                        </label>
+
+                        <input
+                            id="name"
+                            type="text"
+                            placeholder="Your name"
+                            required
+                            class="w-full bg-black border border-zinc-800 rounded-lg px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-neon focus:ring-1 focus:ring-neon transition">
+
+                    </div>
+
+
+                    <div class="mb-6">
+
+                        <label for="email"
+                               class="block text-sm font-bold mb-2">
+                            EMAIL
+                        </label>
+
+                        <input
+                            id="email"
+                            type="email"
+                            placeholder="you@example.com"
+                            required
+                            class="w-full bg-black border border-zinc-800 rounded-lg px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-neon focus:ring-1 focus:ring-neon transition">
+
+                    </div>
+
+
+                    <div class="mb-6">
+
+                        <label for="message"
+                               class="block text-sm font-bold mb-2">
+                            MESSAGE
+                        </label>
+
+                        <textarea
+                            id="message"
+                            rows="5"
+                            placeholder="Tell us about your idea..."
+                            required
+                            class="w-full bg-black border border-zinc-800 rounded-lg px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-neon focus:ring-1 focus:ring-neon transition"></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="w-full bg-neon text-black py-4 rounded-lg font-black hover:bg-lime-300 hover:shadow-neonStrong transition">
+
+                        SEND MESSAGE →
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="border-t border-zinc-900 bg-black">
+
+        <div class="max-w-7xl mx-auto px-6 py-12">
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+
+
+                <!-- Brand -->
+
+                <div>
+
+                    <div class="flex items-center gap-3">
+
+                        <div class="w-9 h-9 bg-neon text-black rounded-lg flex items-center justify-center font-black">
+                            N
+                        </div>
+
+                        <span class="font-black tracking-widest">
+                            NEXA
+                        </span>
+
+                    </div>
+
+                    <p class="text-zinc-600 text-sm mt-5 leading-relaxed">
+                        Building digital products for the people
+                        creating tomorrow.
+                    </p>
+
+                </div>
+
+
+                <!-- Explore -->
+
+                <div>
+
+                    <h3 class="font-bold mb-5">
+                        EXPLORE
+                    </h3>
+
+                    <div class="space-y-3 text-sm">
+
+                        <a href="#home"
+                           class="block text-zinc-500 hover:text-neon transition">
+                            Home
+                        </a>
+
+                        <a href="#features"
+                           class="block text-zinc-500 hover:text-neon transition">
+                            Features
+                        </a>
+
+                        <a href="#products"
+                           class="block text-zinc-500 hover:text-neon transition">
+                            Products
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Company -->
+
+                <div>
+
+                    <h3 class="font-bold mb-5">
+                        COMPANY
+                    </h3>
+
+                    <div class="space-y-3 text-sm">
+
+                        <a href="#about"
+                           class="block text-zinc-500 hover:text-neon transition">
+                            About
+                        </a>
+
+                        <a href="#contact"
+                           class="block text-zinc-500 hover:text-neon transition">
+                            Contact
+                        </a>
+
+                        <a href="#"
+                           class="block text-zinc-500 hover:text-neon transition">
+                            Privacy Policy
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Social -->
+
+                <div>
+
+                    <h3 class="font-bold mb-5">
+                        CONNECT
+                    </h3>
+
+                    <div class="flex gap-3">
+
+                        <a href="#"
+                           class="w-10 h-10 border border-zinc-800 rounded-lg flex items-center justify-center hover:border-neon hover:text-neon transition">
+
+                            <i data-lucide="instagram" class="w-4 h-4"></i>
+
+                        </a>
+
+
+                        <a href="#"
+                           class="w-10 h-10 border border-zinc-800 rounded-lg flex items-center justify-center hover:border-neon hover:text-neon transition">
+
+                            <i data-lucide="twitter" class="w-4 h-4"></i>
+
+                        </a>
+
+
+                        <a href="#"
+                           class="w-10 h-10 border border-zinc-800 rounded-lg flex items-center justify-center hover:border-neon hover:text-neon transition">
+
+                            <i data-lucide="github" class="w-4 h-4"></i>
+
+                        </a>
+
+
+                        <a href="#"
+                           class="w-10 h-10 border border-zinc-800 rounded-lg flex items-center justify-center hover:border-neon hover:text-neon transition">
+
+                            <i data-lucide="linkedin" class="w-4 h-4"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Copyright -->
+
+            <div class="border-t border-zinc-900 mt-12 pt-6 flex flex-col sm:flex-row justify-between gap-3 text-xs text-zinc-600">
+
+                <p>
+                    © 2026 NEXA. ALL RIGHTS RESERVED.
+                </p>
+
+                <p>
+                    DESIGNED WITH TAILWIND CSS.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        // Initialize icons
+        lucide.createIcons();
+
+
+        // Mobile menu
+        function toggleMenu() {
+
+            const menu = document.getElementById("mobileMenu");
+
+            menu.classList.toggle("hidden");
+
+        }
+
+
+        function closeMenu() {
+
+            document.getElementById("mobileMenu")
+                .classList.add("hidden");
+
+        }
+
+
+        // Contact form
+        document.getElementById("contactForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                alert("Message sent successfully!");
+
+                this.reset();
+
+            });
+
+    </script>
+
+</body>
+</html>
