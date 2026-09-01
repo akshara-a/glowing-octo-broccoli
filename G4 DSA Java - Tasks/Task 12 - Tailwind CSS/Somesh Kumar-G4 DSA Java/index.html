@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NovaPods - Premium Wireless Audio</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: "class"
+        };
+    </script>
+</head>
+
+<body class="bg-white text-gray-900 dark:bg-gray-950 dark:text-white transition-colors duration-300">
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-950/90 backdrop-blur-md shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+
+                <!-- Logo -->
+                <a href="#" class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
+                    NovaPods
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="hover:text-indigo-600 transition">Home</a>
+                    <a href="#features" class="hover:text-indigo-600 transition">Products</a>
+                    <a href="#pricing" class="hover:text-indigo-600 transition">Pricing</a>
+                    <a href="#about" class="hover:text-indigo-600 transition">About</a>
+                    <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
+
+                    <button
+                        id="darkModeBtn"
+                        class="px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                        🌙
+                    </button>
+
+                    <a href="#pricing"
+                       class="bg-indigo-600 text-white px-5 py-2 rounded-lg hover:bg-indigo-700 transition">
+                        Sign Up
+                    </a>
+                </div>
+
+                <!-- Mobile Buttons -->
+                <div class="flex items-center gap-2 md:hidden">
+
+                    <button
+                        id="mobileDarkModeBtn"
+                        class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
+                        🌙
+                    </button>
+
+                    <button
+                        id="menuBtn"
+                        class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
+                        ☰
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+
+                <a href="#home"
+                   class="block py-2 hover:text-indigo-600">
+                    Home
+                </a>
+
+                <a href="#features"
+                   class="block py-2 hover:text-indigo-600">
+                    Products
+                </a>
+
+                <a href="#pricing"
+                   class="block py-2 hover:text-indigo-600">
+                    Pricing
+                </a>
+
+                <a href="#about"
+                   class="block py-2 hover:text-indigo-600">
+                    About
+                </a>
+
+                <a href="#contact"
+                   class="block py-2 hover:text-indigo-600">
+                    Contact
+                </a>
+
+                <a href="#pricing"
+                   class="inline-block mt-2 bg-indigo-600 text-white px-5 py-2 rounded-lg">
+                    Sign Up
+                </a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+    <section id="home" class="bg-gradient-to-br from-indigo-50 to-purple-100 dark:from-gray-900 dark:to-indigo-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Hero Text -->
+                <div>
+                    <p class="text-indigo-600 dark:text-indigo-400 font-semibold mb-4">
+                        NEXT GENERATION AUDIO
+                    </p>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+                        Experience Sound
+                        <span class="text-indigo-600 dark:text-indigo-400">
+                            Without Limits
+                        </span>
+                    </h1>
+
+                    <p class="mt-6 text-lg text-gray-600 dark:text-gray-300 max-w-xl">
+                        NovaPods deliver powerful sound, intelligent noise cancellation
+                        and all-day comfort in a beautifully designed wireless experience.
+                    </p>
+
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4">
+
+                        <a href="#pricing"
+                           class="text-center bg-indigo-600 text-white px-7 py-3 rounded-xl font-semibold hover:bg-indigo-700 hover:scale-105 transition">
+                            Shop Now
+                        </a>
+
+                        <a href="#features"
+                           class="text-center border border-gray-300 dark:border-gray-600 px-7 py-3 rounded-xl font-semibold hover:bg-white dark:hover:bg-gray-800 transition">
+                            Explore Features
+                        </a>
+
+                    </div>
+
+                    <div class="mt-8 flex gap-8 text-sm">
+                        <div>
+                            <strong class="block text-2xl">48h</strong>
+                            Battery
+                        </div>
+
+                        <div>
+                            <strong class="block text-2xl">40dB</strong>
+                            Noise Cancel
+                        </div>
+
+                        <div>
+                            <strong class="block text-2xl">4.9★</strong>
+                            Rating
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Image -->
+                <div class="flex justify-center">
+
+                    <div class="w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-indigo-200 dark:bg-indigo-900 flex items-center justify-center shadow-2xl">
+
+                        <div class="text-center">
+                            <div class="text-8xl sm:text-9xl">
+                                🎧
+                            </div>
+
+                            <p class="mt-4 font-bold text-xl">
+                                NovaPods Pro
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+    <section id="features" class="py-20 bg-white dark:bg-gray-950">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-12">
+
+                <p class="text-indigo-600 font-semibold">
+                    WHY NOVAPODS
+                </p>
+
+                <h2 class="text-3xl sm:text-4xl font-bold mt-2">
+                    Powerful Features
+                </h2>
+
+                <p class="mt-4 text-gray-600 dark:text-gray-400">
+                    Everything you need for an amazing listening experience.
+                </p>
+
+            </div>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Feature 1 -->
+                <div class="p-8 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition">
+
+                    <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-indigo-100 dark:bg-indigo-900 text-3xl">
+                        🔇
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-6">
+                        Active Noise Cancellation
+                    </h3>
+
+                    <p class="mt-3 text-gray-600 dark:text-gray-400">
+                        Block unwanted background noise and focus completely
+                        on your music, podcasts and calls.
+                    </p>
+
+                </div>
+
+
+                <!-- Feature 2 -->
+                <div class="p-8 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition">
+
+                    <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-purple-100 dark:bg-purple-900 text-3xl">
+                        🔋
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-6">
+                        Long Battery Life
+                    </h3>
+
+                    <p class="mt-3 text-gray-600 dark:text-gray-400">
+                        Enjoy up to 48 hours of listening with the charging case.
+                        Less charging, more listening.
+                    </p>
+
+                </div>
+
+
+                <!-- Feature 3 -->
+                <div class="p-8 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition">
+
+                    <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-pink-100 dark:bg-pink-900 text-3xl">
+                        💧
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-6">
+                        Water Resistant
+                    </h3>
+
+                    <p class="mt-3 text-gray-600 dark:text-gray-400">
+                        Built for everyday life with protection against sweat
+                        and light water exposure.
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="py-20 bg-gray-50 dark:bg-gray-900">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <div>
+                    <p class="text-indigo-600 font-semibold">
+                        ABOUT NOVAPODS
+                    </p>
+
+                    <h2 class="text-3xl sm:text-4xl font-bold mt-3">
+                        Designed for the way you live.
+                    </h2>
+
+                    <p class="mt-6 text-gray-600 dark:text-gray-400 leading-relaxed">
+                        NovaPods combines modern technology with comfortable design
+                        to create an audio experience that fits naturally into your
+                        everyday life.
+                    </p>
+
+                    <p class="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Whether you are working, travelling, exercising or relaxing,
+                        NovaPods helps you stay connected to the sounds that matter.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-5">
+
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow">
+                        <p class="text-3xl font-bold text-indigo-600">1M+</p>
+                        <p class="mt-2 text-gray-500">Happy Customers</p>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow">
+                        <p class="text-3xl font-bold text-indigo-600">25+</p>
+                        <p class="mt-2 text-gray-500">Countries</p>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow">
+                        <p class="text-3xl font-bold text-indigo-600">4.9★</p>
+                        <p class="mt-2 text-gray-500">Average Rating</p>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow">
+                        <p class="text-3xl font-bold text-indigo-600">24/7</p>
+                        <p class="mt-2 text-gray-500">Support</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ================= PRICING ================= -->
+    <section id="pricing" class="py-20 bg-white dark:bg-gray-950">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-12">
+
+                <p class="text-indigo-600 font-semibold">
+                    CHOOSE YOUR NOVAPODS
+                </p>
+
+                <h2 class="text-3xl sm:text-4xl font-bold mt-2">
+                    Simple Pricing
+                </h2>
+
+            </div>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Basic -->
+                <div class="p-8 rounded-2xl border dark:border-gray-800 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition">
+
+                    <h3 class="text-2xl font-bold">
+                        NovaPods Lite
+                    </h3>
+
+                    <p class="mt-3 text-gray-500">
+                        Perfect for everyday listening.
+                    </p>
+
+                    <div class="mt-6">
+                        <span class="text-4xl font-extrabold">
+                            ₹2,999
+                        </span>
+                    </div>
+
+                    <ul class="mt-6 space-y-3 text-gray-600 dark:text-gray-400">
+                        <li>✓ 24-hour battery</li>
+                        <li>✓ Clear audio</li>
+                        <li>✓ Bluetooth 5.3</li>
+                        <li>✓ Comfortable fit</li>
+                    </ul>
+
+                    <button class="w-full mt-8 bg-gray-900 dark:bg-indigo-600 text-white py-3 rounded-xl hover:bg-indigo-700 transition">
+                        Choose Lite
+                    </button>
+
+                </div>
+
+
+                <!-- Pro -->
+                <div class="relative p-8 rounded-2xl border-2 border-indigo-600 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition">
+
+                    <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-indigo-600 text-white px-4 py-1 rounded-full text-sm">
+                        Most Popular
+                    </span>
+
+                    <h3 class="text-2xl font-bold">
+                        NovaPods Pro
+                    </h3>
+
+                    <p class="mt-3 text-gray-500">
+                        Premium sound for everyone.
+                    </p>
+
+                    <div class="mt-6">
+                        <span class="text-4xl font-extrabold">
+                            ₹5,999
+                        </span>
+                    </div>
+
+                    <ul class="mt-6 space-y-3 text-gray-600 dark:text-gray-400">
+                        <li>✓ 48-hour battery</li>
+                        <li>✓ Active noise cancellation</li>
+                        <li>✓ Spatial audio</li>
+                        <li>✓ Water resistant</li>
+                    </ul>
+
+                    <button class="w-full mt-8 bg-indigo-600 text-white py-3 rounded-xl hover:bg-indigo-700 transition">
+                        Choose Pro
+                    </button>
+
+                </div>
+
+
+                <!-- Ultra -->
+                <div class="p-8 rounded-2xl border dark:border-gray-800 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition">
+
+                    <h3 class="text-2xl font-bold">
+                        NovaPods Ultra
+                    </h3>
+
+                    <p class="mt-3 text-gray-500">
+                        The ultimate audio experience.
+                    </p>
+
+                    <div class="mt-6">
+                        <span class="text-4xl font-extrabold">
+                            ₹8,999
+                        </span>
+                    </div>
+
+                    <ul class="mt-6 space-y-3 text-gray-600 dark:text-gray-400">
+                        <li>✓ 60-hour battery</li>
+                        <li>✓ Advanced ANC</li>
+                        <li>✓ Premium spatial audio</li>
+                        <li>✓ Wireless charging</li>
+                    </ul>
+
+                    <button class="w-full mt-8 bg-gray-900 dark:bg-indigo-600 text-white py-3 rounded-xl hover:bg-indigo-700 transition">
+                        Choose Ultra
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-900">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-12">
+
+                <p class="text-indigo-600 font-semibold">
+                    CUSTOMER REVIEWS
+                </p>
+
+                <h2 class="text-3xl sm:text-4xl font-bold mt-2">
+                    Loved by Our Customers
+                </h2>
+
+            </div>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <div class="bg-white dark:bg-gray-800 p-7 rounded-2xl shadow">
+                    <div class="text-yellow-400 text-xl">★★★★★</div>
+
+                    <p class="mt-4 text-gray-600 dark:text-gray-300">
+                        "The sound quality is amazing and the noise cancellation
+                        works really well."
+                    </p>
+
+                    <p class="mt-5 font-bold">
+                        — Rahul
+                    </p>
+                </div>
+
+
+                <div class="bg-white dark:bg-gray-800 p-7 rounded-2xl shadow">
+                    <div class="text-yellow-400 text-xl">★★★★★</div>
+
+                    <p class="mt-4 text-gray-600 dark:text-gray-300">
+                        "Very comfortable for long working hours. Battery life
+                        is excellent."
+                    </p>
+
+                    <p class="mt-5 font-bold">
+                        — Priya
+                    </p>
+                </div>
+
+
+                <div class="bg-white dark:bg-gray-800 p-7 rounded-2xl shadow">
+                    <div class="text-yellow-400 text-xl">★★★★★</div>
+
+                    <p class="mt-4 text-gray-600 dark:text-gray-300">
+                        "The Pro version is worth every rupee. Great audio and
+                        beautiful design."
+                    </p>
+
+                    <p class="mt-5 font-bold">
+                        — Arjun
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="py-20 bg-white dark:bg-gray-950">
+
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-10">
+
+                <p class="text-indigo-600 font-semibold">
+                    CONTACT US
+                </p>
+
+                <h2 class="text-3xl sm:text-4xl font-bold mt-2">
+                    Get in Touch
+                </h2>
+
+                <p class="mt-4 text-gray-600 dark:text-gray-400">
+                    Have a question? We would love to hear from you.
+                </p>
+
+            </div>
+
+
+            <form id="contactForm" class="space-y-6">
+
+                <div>
+                    <label for="name" class="block mb-2 font-medium">
+                        Name
+                    </label>
+
+                    <input
+                        id="name"
+                        type="text"
+                        placeholder="Enter your name"
+                        required
+                        class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                </div>
+
+
+                <div>
+                    <label for="email" class="block mb-2 font-medium">
+                        Email
+                    </label>
+
+                    <input
+                        id="email"
+                        type="email"
+                        placeholder="Enter your email"
+                        required
+                        class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                </div>
+
+
+                <div>
+                    <label for="message" class="block mb-2 font-medium">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        rows="5"
+                        placeholder="Write your message..."
+                        required
+                        class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="w-full bg-indigo-600 text-white py-3 rounded-xl font-semibold hover:bg-indigo-700 hover:scale-[1.02] transition">
+                    Send Message
+                </button>
+
+                <p id="formMessage" class="text-center text-green-600 font-medium"></p>
+
+            </form>
+
+        </div>
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-gray-900 text-gray-300">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <div>
+                    <h3 class="text-2xl font-bold text-white">
+                        NovaPods
+                    </h3>
+
+                    <p class="mt-3 text-gray-400">
+                        Premium wireless audio designed for your everyday life.
+                    </p>
+                </div>
+
+
+                <div>
+                    <h4 class="font-semibold text-white">
+                        Quick Links
+                    </h4>
+
+                    <div class="mt-4 space-y-2">
+                        <a href="#home" class="block hover:text-white">Home</a>
+                        <a href="#features" class="block hover:text-white">Products</a>
+                        <a href="#pricing" class="block hover:text-white">Pricing</a>
+                        <a href="#contact" class="block hover:text-white">Contact</a>
+                    </div>
+                </div>
+
+
+                <div>
+                    <h4 class="font-semibold text-white">
+                        Follow Us
+                    </h4>
+
+                    <div class="flex gap-4 mt-4">
+
+                        <a href="#" class="hover:text-white">
+                            Facebook
+                        </a>
+
+                        <a href="#" class="hover:text-white">
+                            Instagram
+                        </a>
+
+                        <a href="#" class="hover:text-white">
+                            Twitter
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col sm:flex-row justify-between gap-4 text-sm">
+
+                <p>
+                    © 2026 NovaPods. All rights reserved.
+                </p>
+
+                <div class="flex gap-5">
+                    <a href="#" class="hover:text-white">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#" class="hover:text-white">
+                        Terms & Conditions
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
