@@ -1,5 +1,6 @@
 {
     "liveServer.settings.port": 5501,
+<<<<<<< Updated upstream
     "workbench.editorAssociations": {
         "*.copilotmd": "vscode.markdown.preview.editor",
         "*.parquet": "duckdb.dataFileViewer",
@@ -7,4 +8,9 @@
         "*.tsv": "duckdb.dataFileViewer",
         "*.xlsx": "duckdb.dataFileViewer"
     }
+=======
+    "python-envs.defaultEnvManager": "ms-python.python:conda",
+    "python-envs.defaultPackageManager": "ms-python.python:conda",
+    "python-envs.pythonProjects": []
+>>>>>>> Stashed changes
 }
