@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather App</title>
+</head>
+<body>
+
+  <h1>Weather Checker</h1>
+  <input type="text" id="cityInput" placeholder="Enter city name">
+  <button onclick="getWeather()">Get Weather</button>
+
+  <p id="result"></p>
+
+  <script>
+    const API_KEY = "192b148cb4e87228dd2daa6822b8ab1e"; // paste your real key here
+
+    function getWeather() {
+      const city = document.getElementById("cityInput").value;
+
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`)
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById("result").textContent =
+            `${data.name}: ${data.main.temp}°C, ${data.weather[0].description}`;
+        })
+        .catch(error => {
+          document.getElementById("result").textContent = "Error: city not found";
+          console.error(error);
+        });
+    }
+  </script>
+
+</body>
+</html>
