@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Fixed Header */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: darkred;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  z-index: 1000;
+}
+
+/* Push content below header */
+.content {
+  margin-top: 70px;
+}
+
+/* Section styling */
+section {
+  margin-bottom: 50px;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: navy;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+  </style>
+</head>
+<body id="top">
+
+  <!-- Fixed Header -->
+  <header class="fixed-header">
+    Fixed Header - Always Visible
+  </header>
+
+  <!-- Page Content -->
+  <div class="content">
+    <section>
+      <h2>Section 1</h2>
+      <p>This is the first section. Scroll down to see more...</p>
+      <div style="height:400px; background:lightyellow;"></div>
+    </section>
+
+    <section>
+      <h2>Section 2</h2>
+      <p>This is the second section.</p>
+      <div style="height:400px; background:lightblue;"></div>
+    </section>
+
+    <section>
+      <h2>Section 3</h2>
+      <p>This is the third section.</p>
+      <div style="height:400px; background:lightgreen;"></div>
+    </section>
+
+    <section>
+      <h2>Section 4</h2>
+      <p>This is the fourth section.</p>
+      <div style="height:400px; background:lightgray;"></div>
+    </section>
+  </div>
+
+  <!-- Back to Top Button -->
+  <a href="#top" class="back-to-top">↑ Back to Top</a>
+  <h1>Explanation</h1>
+
+</body>
+</html>
+
