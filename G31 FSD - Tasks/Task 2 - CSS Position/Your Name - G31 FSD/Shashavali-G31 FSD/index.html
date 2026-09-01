@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Part D - Fixed Header -->
+    <header class="header">
+        Fixed Header
+    </header>
+
+    <!-- Part E - Sticky Navbar -->
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Part A - Static Position -->
+    <section>
+        <h2>Part A - Static Position</h2>
+
+        <div class="box">Box 1</div>
+        <div class="box static-box">Box 2 (Static)</div>
+        <div class="box">Box 3</div>
+
+        <p>
+            The second box uses <b>position: static</b>.
+            Even though <b>top:50px</b> and <b>left:50px</b> are applied,
+            the box does not move because static elements ignore these properties.
+        </p>
+    </section>
+
+    <!-- Part B - Relative Position -->
+    <section>
+        <h2>Part B - Relative Position</h2>
+
+        <div class="relative-box">
+            Relative Box
+        </div>
+
+        
+
+        <div class="row">
+            <div class="box relative-move">Moved Box</div>
+            <div class="box">Normal Box</div>
+        </div>
+
+        <p>
+            The second box stays in its original position because relative positioning
+            only changes the visual position of the moved element.
+        </p>
+    </section>
+
+    <!-- Part C - Absolute Position -->
+    <section>
+        <h2>Part C - Absolute Position</h2>
+
+        <div class="parent">
+            Parent Container
+            <div class="child">Child</div>
+        </div>
+
+        <br>
+
+        <div class="product-card">
+            <img src="https://picsum.photos/250/180" alt="Product">
+            <span class="badge">NEW</span>
+        </div>
+
+        <p>
+            The notification badge is positioned using absolute positioning.
+        </p>
+
+        <p>
+            If the parent does not have a positioning context
+            (relative, absolute, fixed, or sticky), the child
+            will be positioned relative to the page instead.
+        </p>
+    </section>
+
+    <!-- Part F - z-index -->
+    <section>
+        <h2>Part F - z-index</h2>
+
+        <div class="stack-container">
+
+            <div class="stack red">Red</div>
+
+            <div class="stack blue">Blue</div>
+
+            <div class="stack green">Green</div>
+
+        </div>
+
+        <p>
+            Green appears above Blue, and Blue appears above Red because
+            higher z-index values are displayed on top.
+        </p>
+    </section>
+
+    <!-- Part G - Combined Application -->
+    <section>
+
+        <h2>Part G - Combined Application</h2>
+
+        <div class="banner">
+            Welcome to Our Online Store
+        </div>
+
+        <div class="product-card">
+            <img src="https://picsum.photos/250/180?2" alt="Product">
+            <span class="badge">20% OFF</span>
+        </div>
+
+    </section>
+
+    <!-- Scrollable Content -->
+    <section class="content">
+        <h2>Content Section 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
+
+    <section class="content">
+        <h2>Content Section 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
+
+    <section class="content">
+        <h2>Content Section 3</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
+
+    <section class="content">
+        <h2>Content Section 4</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
+
+    <section class="content">
+        <h2>Content Section 5</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
+
+    <!-- Fixed Chat Button -->
+    <button class="chat-btn">
+        💬 Chat
+    </button>
+
+</body>
+</html>
