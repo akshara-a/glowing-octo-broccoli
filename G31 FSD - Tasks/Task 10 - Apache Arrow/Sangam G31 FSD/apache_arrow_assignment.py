@@ -1,3 +1,4 @@
+print("==========Taks 1: Create an arrow table =========")
 import pyarrow as pa
 
 data = {
@@ -12,9 +13,9 @@ employee_table = pa.table(data)
 
 print(employee_table)
 
-print('-------Task 2-------')
+print('======= Task 2=======')
 print(employee_table.schema)
-print('--------Task 3-------')
+print('=======Task 3=======')
 print("Rows:", employee_table.num_rows)
 print("Columns:", employee_table.num_columns)
 print("Column names:", employee_table.column_names)
@@ -22,14 +23,14 @@ print("Column names:", employee_table.column_names)
 print(employee_table.column("name"))
 print(employee_table.slice(0, 3))
 
-print('--------Task 4: Select Specific Columns--------')
+print('=======Task 4: Select Specific Columns=======')
 selected_table = employee_table.select(
     ["name", "department", "salary"]
 )
 
 print(selected_table)
 
-print('-------Task 5: Filter Records------')
+print('=======Task 5: Filter Records=======')
 import pyarrow.compute as pc
 
 salary_filter = pc.greater(
@@ -41,7 +42,7 @@ high_salary_table = employee_table.filter(salary_filter)
 
 print(high_salary_table)
 
-print('-----Task 6: Filter by Department-----')
+print('======Task 6: Filter by Department========')
 
 department_filter = pc.equal(
     employee_table["department"],
@@ -52,7 +53,7 @@ it_employees = employee_table.filter(department_filter)
 
 print(it_employees)
 
-print('------Task 7: Perform Calculations------')
+print('=======Task 7: Perform Calculations=======')
 
 salary_column = employee_table["salary"]
 
@@ -61,7 +62,7 @@ print("Maximum salary:", pc.max(salary_column).as_py())
 print("Minimum salary:", pc.min(salary_column).as_py())
 print("Total salary:", pc.sum(salary_column).as_py())
 
-print('------Task 8: Add a New Column------')
+print('=======Task 8: Add a New Column=======')
 bonus_column = pc.multiply(
     employee_table["salary"],
     0.10
@@ -74,13 +75,13 @@ employee_table = employee_table.append_column(
 
 print(employee_table)
 
-print('------Task 9: Convert Arrow to Pandas-------')
+print('=======Task 9: Convert Arrow to Pandas=======')
 employee_df = employee_table.to_pandas()
 
 print(employee_df)
 
 
-print('--------Task 10: Convert Pandas to Arrow----------')
+print('=======Task 10: Convert Pandas to Arrow=======')
 new_arrow_table = pa.Table.from_pandas(
     employee_df,
     preserve_index=False
@@ -88,7 +89,7 @@ new_arrow_table = pa.Table.from_pandas(
 
 print(new_arrow_table)
 
-print('-------Task 11 : Save as a Parquet file-------')
+print('=======Task 11 : Save as a Parquet file=======')
 import pyarrow.parquet as pq
 
 pq.write_table(
@@ -99,14 +100,14 @@ pq.write_table(
 print("Parquet file created successfully.")
 
 
-print('------Task 12: Read the Parquet File-------')
+print('=======Task 12: Read the Parquet File=======')
 loaded_table = pq.read_table(
     "employees.parquet"
 )
 
 print(loaded_table)
 
-print('-------Task 13: Save as an Arrow IPC File------')
+print('=======Task 13: Save as an Arrow IPC File=======')
 import pyarrow.ipc as ipc
 
 with ipc.new_file(
@@ -118,14 +119,14 @@ with ipc.new_file(
 print("Arrow IPC file created successfully.")
 
 
-print('--------Task 14: Read the Arrow IPC File-------')
+print('=======Task 14: Read the Arrow IPC File=======')
 with ipc.open_file("employees.arrow") as reader:
     ipc_table = reader.read_all()
 
 print(ipc_table)
 
 
-print('------Task 14: Display employees who work in Delhi-------')
+print('=======Task 15: Display employees who work in Delhi=======')
 display_employees = pc.equal(
     employee_table["city"],
     "Delhi"
@@ -137,7 +138,7 @@ print(it_employees)
 
 
 print('==========BONUS TASKS============')
-print('------Task 15: Display employees with salaries between 50000 and 65000.------')
+print('=======Task 16: Display employees with salaries between 50000 and 65000.=======')
 
 lower_limit = pc.greater_equal(
     employee_table["salary"],
@@ -158,7 +159,7 @@ employees_between_salary = employee_table.filter(salary_filter)
 
 print(employees_between_salary)
 
-print('----Task 16 : Add a column named annual_salary by multiplying salary by 12.------')
+print('========Task 17 : Add a column named annual_salary by multiplying salary by 12.=======')
 annual_salary = pc.multiply(
     employee_table["salary"],
     12
@@ -171,7 +172,7 @@ employee_table = employee_table.append_column(
 
 print(employee_table)
 
-print('-----Task 17: Save only IT employees to it_employees.parquet.=======')
+print('========Task 18: Save only IT employees to it_employees.parquet.=======')
 
 import pyarrow.parquet as pq
 
@@ -191,7 +192,7 @@ pq.write_table(
 print("Parquet file created successfully.")
 
 
-print('=======Task 18: Read only the name and salary columns from the Parquet file.=====')
+print('=======Task 19: Read only the name and salary columns from the Parquet file.=====')
 
 read_specific_columns = pq.read_table(
     "employees.parquet",
@@ -200,7 +201,7 @@ read_specific_columns = pq.read_table(
 
 print(read_specific_columns)
 
-print('=======Task 19: Sort employees by salary from highest to lowest.=====')
+print('=======Task 20: Sort employees by salary from highest to lowest.=====')
 
 sorted_indices = pc.sort_indices(
     employee_table,
