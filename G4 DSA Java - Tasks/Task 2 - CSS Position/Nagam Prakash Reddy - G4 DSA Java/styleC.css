@@ -1,0 +1,33 @@
+.parent{
+    width:300px;
+    height:200px;
+    background:lightgray;
+    position:relative;
+}
+
+.child{
+    width:80px;
+    height:50px;
+    background:red;
+    color:white;
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+.product{
+    width:250px;
+    height:150px;
+    background:lightblue;
+    position:relative;
+}
+
+.badge{
+    background:red;
+    color:white;
+    padding:5px;
+    border-radius:50%;
+    position:absolute;
+    top:10px;
+    right:10px;
+}

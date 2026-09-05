@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #74ebd5,
+        #9face6
+    );
+
+    padding: 50px 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    width: 350px;
+
+    padding: 14px 16px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+.search-box button {
+    padding: 14px 25px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #222;
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #444;
+}
+
+.loading {
+    display: none;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    margin: 20px;
+}
+
+.error {
+    color: #b00020;
+
+    font-weight: bold;
+
+    margin: 20px;
+}
+
+.weather-card {
+    background: white;
+
+    max-width: 550px;
+
+    margin: 30px auto;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.city-name {
+    font-size: 32px;
+
+    margin-bottom: 10px;
+
+    text-transform: capitalize;
+}
+
+.temperature {
+    font-size: 48px;
+
+    font-weight: bold;
+
+    margin: 15px 0;
+}
+
+.weather-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.condition {
+    font-size: 24px;
+
+    margin-bottom: 5px;
+}
+
+.description {
+    text-transform: capitalize;
+
+    color: #555;
+
+    margin-bottom: 25px;
+}
+
+.weather-details {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.detail {
+    background: #f2f2f2;
+
+    padding: 18px;
+
+    border-radius: 10px;
+}
+
+.detail strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 15px;
+}
+
+.detail span {
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 30px 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+    .weather-details {
+        grid-template-columns: 1fr;
+    }
+
+    .temperature {
+        font-size: 40px;
+    }
+}
