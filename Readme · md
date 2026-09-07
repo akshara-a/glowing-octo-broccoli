@@ -1,0 +1,77 @@
+# Nomad Roasters — Tailwind CSS Landing Page
+
+A single-file, fully responsive product landing page for a fictional specialty coffee
+subscription brand, built with **HTML + Tailwind CSS** for the "Responsive Website Using
+Tailwind CSS" assignment.
+
+## What's included
+
+- `index.html` — the entire site (markup, Tailwind config, and a small vanilla-JS script block)
+
+No build step, no `node_modules`, no bundler. Tailwind is loaded from the **Play CDN**
+(`<script src="https://cdn.tailwindcss.com">`), which is the fastest way to use Tailwind for a
+static assignment like this — see the "Running it" section below for the production-build
+alternative.
+
+## Sections implemented
+
+| Section | Notes |
+|---|---|
+| Navbar | Logo, Home/Products/About/Contact, Sign Up button, hamburger menu on mobile, dark-mode toggle |
+| Hero | Heading, subtext, two CTAs, product photo, small CSS "steam" animation |
+| Features | 3 cards (`grid grid-cols-1 md:grid-cols-3`), icon, title, description, hover lift + shadow |
+| Products/Pricing | 3 plans, middle plan visually highlighted, hover effects on all cards/buttons |
+| Testimonials (bonus) | 3 quote cards |
+| About | Supports the "About" nav link with a short brand story |
+| Contact | Name / Email / Message form, focus states, JS-only success message (no backend) |
+| Footer | Brand name, copyright, social links, Privacy/Terms links |
+
+## Bonus tasks covered
+
+1. **Dark mode** — toggle button in the navbar (desktop + mobile), remembers your choice via
+   `localStorage`, and respects the OS's `prefers-color-scheme` on first visit.
+2. **Animations/transitions** — hover lifts on cards/buttons, a fade-up on the hero text, and a
+   looping "steam" animation defined in the Tailwind config's `keyframes`/`animation`.
+3. **Mobile navigation menu** — hamburger icon that slides open a stacked link list, closes again
+   on link tap.
+4. **Testimonials section** — three subscriber quotes.
+5. **Reusable styling** — repeated utility clusters (card, button, input) are consistent across
+   sections so they read as one component system even without extracting `@apply` classes.
+
+## Tailwind concepts demonstrated
+
+Typography (`font-display`/`font-body`, tracking, leading), color & background utilities
+(including opacity modifiers like `bg-rust/10`), spacing (`p-*`, `gap-*`, `py-*`), Flexbox
+(`flex`, `items-center`, `justify-between`), Grid (`grid-cols-1 md:grid-cols-3`), borders &
+radius (`rounded-2xl`, `border`), shadows (`shadow-sm` → `shadow-2xl`), hover/focus states
+(`hover:*`, `focus:*`, `group-hover:*`), and responsive prefixes (`sm: md: lg:`).
+
+## Running it
+
+**Fastest — just open the file:**
+Double-click `index.html`, or drag it into a browser tab. Because Tailwind is loaded from the
+CDN, it needs an internet connection the first time it loads (fonts + Tailwind's compiler), but
+otherwise there is nothing to install.
+
+**Recommended for editing — VS Code Live Server** (see the step-by-step guide below).
+
+**Optional — real Tailwind build (not required for this assignment):**
+If your instructor wants a proper Tailwind install (CLI/PostCSS) instead of the Play CDN:
+```bash
+npm install -D tailwindcss
+npx tailwindcss init
+# point content: ["./index.html"] in tailwind.config.js
+npx tailwindcss -i ./input.css -o ./output.css --watch
+```
+and swap the CDN `<script>` tag for a `<link rel="stylesheet" href="output.css">`. The CDN
+build in this submission is intentionally simpler for a class assignment.
+
+## Screenshots
+
+Add your own desktop and mobile screenshots here before submitting, e.g.:
+
+- `screenshots/desktop.png`
+- `screenshots/mobile.png`
+
+(Take these directly from your browser — see the VS Code instructions below for how to preview
+at both sizes with DevTools' device toolbar.)

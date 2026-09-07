@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nomad Roasters — Coffee, Sourced Honestly</title>
+
+<!-- Tailwind Play CDN (no build step needed for this assignment) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          espresso: '#2B1B14',
+          espresso2: '#3B2A20',
+          parchment: '#F7F0E3',
+          rust: '#A9652E',
+          rustdark: '#8C5024',
+          moss: '#5B6B3A',
+          cream: '#F2E9DA'
+        },
+        fontFamily: {
+          display: ['Fraunces', 'serif'],
+          body: ['Inter', 'sans-serif']
+        },
+        keyframes: {
+          rise: {
+            '0%':   { transform: 'translateY(0) scaleX(1)',   opacity: '0.55' },
+            '50%':  { transform: 'translateY(-18px) scaleX(1.3)', opacity: '0.25' },
+            '100%': { transform: 'translateY(-38px) scaleX(0.8)', opacity: '0' }
+          },
+          fadeUp: {
+            '0%':   { opacity: '0', transform: 'translateY(14px)' },
+            '100%': { opacity: '1', transform: 'translateY(0)' }
+          }
+        },
+        animation: {
+          steam1: 'rise 3.2s ease-in-out infinite',
+          steam2: 'rise 3.2s ease-in-out 1s infinite',
+          steam3: 'rise 3.2s ease-in-out 2s infinite',
+          fadeUp: 'fadeUp 0.6s ease-out both'
+        }
+      }
+    }
+  }
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* Only what Tailwind utilities genuinely can't do */
+  html { scroll-behavior: smooth; }
+  :focus-visible { outline: 2px solid #A9652E; outline-offset: 2px; }
+</style>
+</head>
+
+<body class="bg-parchment text-espresso dark:bg-espresso dark:text-cream font-body transition-colors duration-300">
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="sticky top-0 z-50 bg-parchment/90 dark:bg-espresso/90 backdrop-blur border-b border-espresso/10 dark:border-cream/10">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+
+      <!-- Logo -->
+      <a href="#" class="font-display text-2xl font-semibold tracking-tight">
+        Nomad <span class="text-rust">Roasters</span>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <li><a href="#home" class="hover:text-rust transition-colors">Home</a></li>
+        <li><a href="#products" class="hover:text-rust transition-colors">Products</a></li>
+        <li><a href="#about" class="hover:text-rust transition-colors">About</a></li>
+        <li><a href="#contact" class="hover:text-rust transition-colors">Contact</a></li>
+      </ul>
+
+      <div class="hidden md:flex items-center gap-3">
+        <!-- Dark mode toggle -->
+        <button id="theme-toggle" aria-label="Toggle dark mode"
+          class="w-9 h-9 grid place-items-center rounded-full border border-espresso/20 dark:border-cream/20 hover:bg-espresso/5 dark:hover:bg-cream/10 transition-colors">
+          <span id="theme-icon">🌙</span>
+        </button>
+        <a href="#" class="bg-rust hover:bg-rustdark text-cream px-5 py-2 rounded-full text-sm font-semibold transition-colors">
+          Sign Up
+        </a>
+      </div>
+
+      <!-- Mobile controls -->
+      <div class="flex items-center gap-2 md:hidden">
+        <button id="theme-toggle-mobile" aria-label="Toggle dark mode"
+          class="w-9 h-9 grid place-items-center rounded-full border border-espresso/20 dark:border-cream/20">
+          <span id="theme-icon-mobile">🌙</span>
+        </button>
+        <button id="menu-toggle" aria-label="Open menu" aria-expanded="false"
+          class="w-10 h-10 grid place-items-center rounded-lg border border-espresso/20 dark:border-cream/20">
+          <svg id="icon-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 border-t border-espresso/10 dark:border-cream/10">
+      <ul class="flex flex-col gap-4 pt-4 text-sm font-medium">
+        <li><a href="#home" class="block hover:text-rust">Home</a></li>
+        <li><a href="#products" class="block hover:text-rust">Products</a></li>
+        <li><a href="#about" class="block hover:text-rust">About</a></li>
+        <li><a href="#contact" class="block hover:text-rust">Contact</a></li>
+        <li><a href="#" class="block text-center bg-rust hover:bg-rustdark text-cream px-5 py-2 rounded-full font-semibold">Sign Up</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section id="home" class="max-w-7xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+    <div class="animate-fadeUp">
+      <p class="uppercase tracking-[0.2em] text-xs font-semibold text-rust mb-4">Small-batch · Direct trade</p>
+      <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.05] mb-6">
+        Coffee that tells you<br class="hidden sm:block"> where it grew up.
+      </h1>
+      <p class="text-base sm:text-lg text-espresso/70 dark:text-cream/70 max-w-md mb-8">
+        We roast in small batches, weekly, and print the farm, the altitude, and the harvest date
+        right on the bag. No blends you can't trace, no beans older than three months.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#products" class="bg-rust hover:bg-rustdark text-cream px-7 py-3 rounded-full font-semibold shadow-lg shadow-rust/20 transition-all hover:-translate-y-0.5">
+          Shop Beans
+        </a>
+        <a href="#about" class="border border-espresso/20 dark:border-cream/30 px-7 py-3 rounded-full font-semibold hover:bg-espresso/5 dark:hover:bg-cream/10 transition-colors">
+          Our Story
+        </a>
+      </div>
+    </div>
+
+    <!-- Product image + signature steam animation -->
+    <div class="relative flex justify-center">
+      <div class="absolute -top-2 left-1/2 -translate-x-1/2 flex gap-3">
+        <span class="w-1.5 h-8 rounded-full bg-espresso/20 dark:bg-cream/30 animate-steam1"></span>
+        <span class="w-1.5 h-10 rounded-full bg-espresso/20 dark:bg-cream/30 animate-steam2"></span>
+        <span class="w-1.5 h-8 rounded-full bg-espresso/20 dark:bg-cream/30 animate-steam3"></span>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80"
+        alt="Bag of Nomad Roasters coffee beans beside a cup of pour-over coffee"
+        class="rounded-3xl shadow-2xl w-full max-w-md object-cover aspect-[4/5]" />
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section id="features" class="bg-espresso2/5 dark:bg-cream/5 py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-4">Why people stay subscribed</h2>
+        <p class="text-espresso/70 dark:text-cream/70">Three habits we refuse to compromise on, batch after batch.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+
+        <!-- Card 1 -->
+        <div class="group bg-parchment dark:bg-espresso2 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-espresso/5 dark:border-cream/5">
+          <div class="w-12 h-12 rounded-xl bg-rust/10 text-rust grid place-items-center text-2xl mb-5 group-hover:bg-rust group-hover:text-cream transition-colors">
+            🌱
+          </div>
+          <h3 class="font-display text-xl font-semibold mb-2">Direct-trade sourcing</h3>
+          <p class="text-sm text-espresso/70 dark:text-cream/70">
+            We buy straight from co-ops in Ethiopia, Colombia, and Sumatra, paying well above
+            commodity price so farmers can plan past a single harvest.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group bg-parchment dark:bg-espresso2 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-espresso/5 dark:border-cream/5">
+          <div class="w-12 h-12 rounded-xl bg-moss/10 text-moss grid place-items-center text-2xl mb-5 group-hover:bg-moss group-hover:text-cream transition-colors">
+            🔥
+          </div>
+          <h3 class="font-display text-xl font-semibold mb-2">Roasted the week you order</h3>
+          <p class="text-sm text-espresso/70 dark:text-cream/70">
+            Nothing sits in a warehouse. Beans are roasted in small batches and shipped within
+            48 hours, so what you brew is never stale.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group bg-parchment dark:bg-espresso2 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-espresso/5 dark:border-cream/5">
+          <div class="w-12 h-12 rounded-xl bg-rust/10 text-rust grid place-items-center text-2xl mb-5 group-hover:bg-rust group-hover:text-cream transition-colors">
+            📋
+          </div>
+          <h3 class="font-display text-xl font-semibold mb-2">Full traceability on the bag</h3>
+          <p class="text-sm text-espresso/70 dark:text-cream/70">
+            Farm name, altitude, process, and harvest date are printed on every bag — scan the
+            code for the exact lot report.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCTS / PRICING ============ -->
+  <section id="products" class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-4">Pick a subscription</h2>
+        <p class="text-espresso/70 dark:text-cream/70">Pause, skip, or cancel anytime — no questions, no phone tree.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+
+        <!-- Plan 1 -->
+        <div class="flex flex-col rounded-2xl border border-espresso/10 dark:border-cream/10 p-8 hover:shadow-xl transition-shadow duration-300">
+          <h3 class="font-display text-xl font-semibold mb-1">Explorer</h3>
+          <p class="text-sm text-espresso/60 dark:text-cream/60 mb-6">One bag, once a month</p>
+          <p class="text-4xl font-semibold mb-6">$18<span class="text-base font-normal text-espresso/60 dark:text-cream/60">/mo</span></p>
+          <ul class="space-y-3 text-sm mb-8 flex-1">
+            <li class="flex gap-2"><span class="text-moss">✓</span> 340g single-origin bag</li>
+            <li class="flex gap-2"><span class="text-moss">✓</span> New farm every month</li>
+            <li class="flex gap-2"><span class="text-moss">✓</span> Brew guide included</li>
+          </ul>
+          <button class="border border-espresso/30 dark:border-cream/30 rounded-full py-3 font-semibold hover:bg-espresso hover:text-cream dark:hover:bg-cream dark:hover:text-espresso transition-colors">
+            Choose Explorer
+          </button>
+        </div>
+
+        <!-- Plan 2 (highlighted) -->
+        <div class="relative flex flex-col rounded-2xl bg-espresso text-cream dark:bg-cream dark:text-espresso p-8 shadow-2xl md:-translate-y-4 hover:-translate-y-5 transition-transform duration-300">
+          <span class="absolute -top-3 left-8 bg-rust text-cream text-xs font-semibold px-3 py-1 rounded-full">Most popular</span>
+          <h3 class="font-display text-xl font-semibold mb-1">Regular</h3>
+          <p class="text-sm opacity-60 mb-6">Two bags, every two weeks</p>
+          <p class="text-4xl font-semibold mb-6">$32<span class="text-base font-normal opacity-60">/mo</span></p>
+          <ul class="space-y-3 text-sm mb-8 flex-1">
+            <li class="flex gap-2"><span class="text-rust">✓</span> 2 × 340g bags biweekly</li>
+            <li class="flex gap-2"><span class="text-rust">✓</span> Choose roast strength</li>
+            <li class="flex gap-2"><span class="text-rust">✓</span> Free grinder tune-up kit</li>
+            <li class="flex gap-2"><span class="text-rust">✓</span> Priority on limited lots</li>
+          </ul>
+          <button class="bg-rust hover:bg-rustdark text-cream rounded-full py-3 font-semibold transition-colors">
+            Choose Regular
+          </button>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="flex flex-col rounded-2xl border border-espresso/10 dark:border-cream/10 p-8 hover:shadow-xl transition-shadow duration-300">
+          <h3 class="font-display text-xl font-semibold mb-1">Household</h3>
+          <p class="text-sm text-espresso/60 dark:text-cream/60 mb-6">Four bags, every week</p>
+          <p class="text-4xl font-semibold mb-6">$54<span class="text-base font-normal text-espresso/60 dark:text-cream/60">/mo</span></p>
+          <ul class="space-y-3 text-sm mb-8 flex-1">
+            <li class="flex gap-2"><span class="text-moss">✓</span> 4 × 340g bags weekly</li>
+            <li class="flex gap-2"><span class="text-moss">✓</span> Mix roasts across the house</li>
+            <li class="flex gap-2"><span class="text-moss">✓</span> Dedicated tasting notes card</li>
+          </ul>
+          <button class="border border-espresso/30 dark:border-cream/30 rounded-full py-3 font-semibold hover:bg-espresso hover:text-cream dark:hover:bg-cream dark:hover:text-espresso transition-colors">
+            Choose Household
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS (bonus) ============ -->
+  <section id="testimonials" class="bg-espresso2/5 dark:bg-cream/5 py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold text-center mb-14">What subscribers say</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+
+        <blockquote class="bg-parchment dark:bg-espresso2 rounded-2xl p-8 shadow-sm">
+          <p class="text-sm mb-6 text-espresso/80 dark:text-cream/80">
+            "I've cancelled three other subscriptions for this one. The tasting notes actually
+            match what's in the cup — first time that's happened for me."
+          </p>
+          <footer class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-rust/20 grid place-items-center font-semibold text-rust">P</div>
+            <div>
+              <p class="text-sm font-semibold">Priya N.</p>
+              <p class="text-xs text-espresso/50 dark:text-cream/50">Subscriber since 2023</p>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="bg-parchment dark:bg-espresso2 rounded-2xl p-8 shadow-sm">
+          <p class="text-sm mb-6 text-espresso/80 dark:text-cream/80">
+            "The Regular plan changed my mornings. Being able to nudge the roast strength up
+            for winter and back down in summer is such a small, smart feature."
+          </p>
+          <footer class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-moss/20 grid place-items-center font-semibold text-moss">D</div>
+            <div>
+              <p class="text-sm font-semibold">Diego R.</p>
+              <p class="text-xs text-espresso/50 dark:text-cream/50">Subscriber since 2024</p>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="bg-parchment dark:bg-espresso2 rounded-2xl p-8 shadow-sm">
+          <p class="text-sm mb-6 text-espresso/80 dark:text-cream/80">
+            "Skipped a month before a trip with two taps, no guilt-tripping email, no phone
+            call. It's rare that cancelling a plan is this easy."
+          </p>
+          <footer class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-rust/20 grid place-items-center font-semibold text-rust">L</div>
+            <div>
+              <p class="text-sm font-semibold">Lena K.</p>
+              <p class="text-xs text-espresso/50 dark:text-cream/50">Subscriber since 2022</p>
+            </div>
+          </footer>
+        </blockquote>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT (supports #about link) ============ -->
+  <section id="about" class="max-w-7xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+    <img
+      src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=80"
+      alt="Coffee farm workers sorting freshly picked coffee cherries"
+      class="rounded-3xl shadow-xl w-full object-cover aspect-[4/3] order-2 md:order-1" />
+    <div class="order-1 md:order-2">
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-5">Started at one farm gate in 2019</h2>
+      <p class="text-espresso/70 dark:text-cream/70 mb-4">
+        Nomad Roasters began when our founder bought forty kilos of green coffee from a single
+        farm in Huila, Colombia, and roasted it in a popcorn machine on a balcony. That lot
+        sold out in a weekend.
+      </p>
+      <p class="text-espresso/70 dark:text-cream/70">
+        Six years later we still buy from named farms, still roast in small batches, and still
+        print the whole story on the bag — we just have a proper roaster now.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="bg-espresso2/5 dark:bg-cream/5 py-16 md:py-24">
+    <div class="max-w-2xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-4">Get in touch</h2>
+        <p class="text-espresso/70 dark:text-cream/70">Questions about an order, wholesale, or just want to talk beans.</p>
+      </div>
+
+      <form id="contact-form" class="bg-parchment dark:bg-espresso2 rounded-2xl p-8 shadow-sm space-y-5">
+        <div>
+          <label for="name" class="block text-sm font-semibold mb-2">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Jordan Lee"
+            class="w-full rounded-lg border border-espresso/20 dark:border-cream/20 bg-transparent px-4 py-3 text-sm placeholder-espresso/40 dark:placeholder-cream/40 focus:border-rust focus:ring-2 focus:ring-rust/30 outline-none transition" />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-semibold mb-2">Email</label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com"
+            class="w-full rounded-lg border border-espresso/20 dark:border-cream/20 bg-transparent px-4 py-3 text-sm placeholder-espresso/40 dark:placeholder-cream/40 focus:border-rust focus:ring-2 focus:ring-rust/30 outline-none transition" />
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-semibold mb-2">Message</label>
+          <textarea id="message" name="message" rows="4" required placeholder="How can we help?"
+            class="w-full rounded-lg border border-espresso/20 dark:border-cream/20 bg-transparent px-4 py-3 text-sm placeholder-espresso/40 dark:placeholder-cream/40 focus:border-rust focus:ring-2 focus:ring-rust/30 outline-none transition resize-none"></textarea>
+        </div>
+        <button type="submit"
+          class="w-full bg-rust hover:bg-rustdark text-cream rounded-lg py-3 font-semibold transition-colors">
+          Send Message
+        </button>
+        <p id="form-success" class="hidden text-sm text-moss font-medium text-center pt-2">
+          Thanks — we'll get back to you within a day.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="border-t border-espresso/10 dark:border-cream/10 py-12">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="text-center md:text-left">
+        <p class="font-display text-xl font-semibold mb-1">Nomad <span class="text-rust">Roasters</span></p>
+        <p class="text-xs text-espresso/50 dark:text-cream/50">&copy; 2026 Nomad Roasters Co. All rights reserved.</p>
+      </div>
+
+      <div class="flex gap-5 text-sm">
+        <a href="#" class="hover:text-rust transition-colors" aria-label="Instagram">Instagram</a>
+        <a href="#" class="hover:text-rust transition-colors" aria-label="Twitter / X">Twitter</a>
+        <a href="#" class="hover:text-rust transition-colors" aria-label="TikTok">TikTok</a>
+      </div>
+
+      <div class="flex gap-5 text-sm text-espresso/60 dark:text-cream/60">
+        <a href="#" class="hover:text-rust transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-rust transition-colors">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ---- Mobile nav toggle ----
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+
+    menuToggle.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      iconOpen.classList.toggle('hidden');
+      iconClose.classList.toggle('hidden');
+      menuToggle.setAttribute('aria-expanded', String(isHidden));
+    });
+
+    // Close mobile menu after tapping a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+      });
+    });
+
+    // ---- Dark mode toggle (persists via localStorage) ----
+    const root = document.documentElement;
+    const themeIcon = document.getElementById('theme-icon');
+    const themeIconMobile = document.getElementById('theme-icon-mobile');
+
+    function setTheme(isDark) {
+      root.classList.toggle('dark', isDark);
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      const icon = isDark ? '☀️' : '🌙';
+      themeIcon.textContent = icon;
+      themeIconMobile.textContent = icon;
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setTheme(savedTheme ? savedTheme === 'dark' : prefersDark);
+
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      setTheme(!root.classList.contains('dark'));
+    });
+    document.getElementById('theme-toggle-mobile').addEventListener('click', () => {
+      setTheme(!root.classList.contains('dark'));
+    });
+
+    // ---- Contact form (front-end only demo) ----
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      document.getElementById('form-success').classList.remove('hidden');
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
