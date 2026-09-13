@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechStore - Product Landing Page</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-white">
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="bg-white dark:bg-gray-800 shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+      <!-- Logo -->
+      <h1 class="text-2xl font-bold text-blue-600">TechStore</h1>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#home" class="hover:text-blue-600">Home</a>
+        <a href="#features" class="hover:text-blue-600">Products</a>
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+
+        <button
+          onclick="toggleDarkMode()"
+          class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-lg">
+          🌙
+        </button>
+
+        <a href="#contact"
+          class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">
+          Sign Up
+        </a>
+      </div>
+
+      <!-- Mobile Button -->
+      <button onclick="toggleMenu()" class="md:hidden text-2xl">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 space-y-3">
+      <a href="#home" class="block">Home</a>
+      <a href="#features" class="block">Products</a>
+      <a href="#about" class="block">About</a>
+      <a href="#contact" class="block">Contact</a>
+      <a href="#contact"
+        class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">
+        Sign Up
+      </a>
+    </div>
+  </nav>
+
+
+  <!-- ================= HERO ================= -->
+  <section id="home" class="py-20">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+
+      <div>
+        <p class="text-blue-600 font-semibold mb-3">SMART PRODUCTS</p>
+
+        <h2 class="text-4xl md:text-6xl font-bold mb-6">
+          Make Your Life
+          <span class="text-blue-600">Smarter</span>
+        </h2>
+
+        <p class="text-gray-600 dark:text-gray-300 text-lg mb-8">
+          Discover modern and powerful products designed to make
+          your everyday life easier and better.
+        </p>
+
+        <a href="#products"
+          class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg
+                 hover:bg-blue-700 hover:scale-105 transition">
+          Shop Now →
+        </a>
+      </div>
+
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1498049794561-7780e7231661"
+          alt="Technology Products"
+          class="rounded-2xl shadow-xl w-full h-80 object-cover">
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= FEATURES ================= -->
+  <section id="features" class="py-16 bg-white dark:bg-gray-800">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <h2 class="text-3xl font-bold text-center mb-3">
+        Our Features
+      </h2>
+
+      <p class="text-center text-gray-500 mb-10">
+        Everything you need in one place.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Card 1 -->
+        <div class="p-8 bg-gray-50 dark:bg-gray-700 rounded-xl shadow
+                    hover:-translate-y-2 hover:shadow-xl transition">
+          <div class="text-4xl mb-4">🚀</div>
+          <h3 class="text-xl font-bold mb-3">Fast Performance</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Enjoy fast and reliable performance for your daily tasks.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="p-8 bg-gray-50 dark:bg-gray-700 rounded-xl shadow
+                    hover:-translate-y-2 hover:shadow-xl transition">
+          <div class="text-4xl mb-4">🔒</div>
+          <h3 class="text-xl font-bold mb-3">Secure</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Your data and information are protected with modern security.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="p-8 bg-gray-50 dark:bg-gray-700 rounded-xl shadow
+                    hover:-translate-y-2 hover:shadow-xl transition">
+          <div class="text-4xl mb-4">💡</div>
+          <h3 class="text-xl font-bold mb-3">Smart Design</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Simple and modern design that is easy for everyone to use.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= PRODUCTS ================= -->
+  <section id="products" class="py-16">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <h2 class="text-3xl font-bold text-center mb-10">
+        Our Plans
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Basic -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg
+                    hover:scale-105 transition">
+          <h3 class="text-2xl font-bold">Basic</h3>
+
+          <p class="text-4xl font-bold text-blue-600 my-5">
+            ₹499
+            <span class="text-sm text-gray-500">/month</span>
+          </p>
+
+          <ul class="space-y-3 mb-6">
+            <li>✓ 5 Products</li>
+            <li>✓ Basic Support</li>
+            <li>✓ 5 GB Storage</li>
+          </ul>
+
+          <button class="w-full bg-blue-600 text-white py-3 rounded-lg
+                         hover:bg-blue-700 transition">
+            Choose Plan
+          </button>
+        </div>
+
+        <!-- Premium -->
+        <div class="bg-blue-600 text-white p-8 rounded-xl shadow-xl
+                    hover:scale-105 transition">
+          <p class="text-sm font-semibold">POPULAR</p>
+
+          <h3 class="text-2xl font-bold mt-2">Premium</h3>
+
+          <p class="text-4xl font-bold my-5">
+            ₹999
+            <span class="text-sm">/month</span>
+          </p>
+
+          <ul class="space-y-3 mb-6">
+            <li>✓ 20 Products</li>
+            <li>✓ Priority Support</li>
+            <li>✓ 50 GB Storage</li>
+          </ul>
+
+          <button class="w-full bg-white text-blue-600 py-3 rounded-lg
+                         hover:bg-gray-100 transition">
+            Choose Plan
+          </button>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg
+                    hover:scale-105 transition">
+          <h3 class="text-2xl font-bold">Enterprise</h3>
+
+          <p class="text-4xl font-bold text-blue-600 my-5">
+            ₹1999
+            <span class="text-sm text-gray-500">/month</span>
+          </p>
+
+          <ul class="space-y-3 mb-6">
+            <li>✓ Unlimited Products</li>
+            <li>✓ 24/7 Support</li>
+            <li>✓ 200 GB Storage</li>
+          </ul>
+
+          <button class="w-full bg-blue-600 text-white py-3 rounded-lg
+                         hover:bg-blue-700 transition">
+            Choose Plan
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="py-16 bg-white dark:bg-gray-800">
+    <div class="max-w-4xl mx-auto text-center px-6">
+
+      <h2 class="text-3xl font-bold mb-5">
+        About TechStore
+      </h2>
+
+      <p class="text-gray-600 dark:text-gray-300 text-lg">
+        TechStore provides modern technology products and services
+        that help people work smarter, faster and more efficiently.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- ================= TESTIMONIAL ================= -->
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+
+      <h2 class="text-3xl font-bold mb-8">
+        What Our Customers Say
+      </h2>
+
+      <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+        <p class="text-lg italic mb-4">
+          "TechStore products are simple, fast and very easy to use."
+        </p>
+
+        <p class="font-bold">- Sailu</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="py-16 bg-white dark:bg-gray-800">
+
+    <div class="max-w-2xl mx-auto px-6">
+
+      <h2 class="text-3xl font-bold text-center mb-8">
+        Contact Us
+      </h2>
+
+      <form class="space-y-5">
+
+        <input
+          type="text"
+          placeholder="Your Name"
+          class="w-full p-3 border rounded-lg
+                 focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+        <input
+          type="email"
+          placeholder="Your Email"
+          class="w-full p-3 border rounded-lg
+                 focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+        <textarea
+          rows="5"
+          placeholder="Your Message"
+          class="w-full p-3 border rounded-lg
+                 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+
+        <button
+          type="submit"
+          class="w-full bg-blue-600 text-white py-3 rounded-lg
+                 hover:bg-blue-700 transition">
+          Send Message
+        </button>
+
+      </form>
+    </div>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-gray-900 text-white py-8">
+
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+      <h2 class="text-xl font-bold mb-3">TechStore</h2>
+
+      <div class="flex justify-center gap-6 mb-4">
+        <a href="#" class="hover:text-blue-400">Facebook</a>
+        <a href="#" class="hover:text-blue-400">Instagram</a>
+        <a href="#" class="hover:text-blue-400">LinkedIn</a>
+      </div>
+
+      <div class="mb-4">
+        <a href="#" class="hover:text-blue-400">Privacy Policy</a>
+        <span class="mx-2">|</span>
+        <a href="#" class="hover:text-blue-400">Terms</a>
+      </div>
+
+      <p class="text-gray-400">
+        © 2026 TechStore. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("hidden");
+    }
+
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle("dark");
+    }
+
+  </script>
+
+</body>
+</html>
