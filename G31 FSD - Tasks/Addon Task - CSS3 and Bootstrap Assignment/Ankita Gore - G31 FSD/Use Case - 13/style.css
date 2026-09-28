@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Background section */
+.modal-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2563eb, #7c3aed, #ec4899);
+  padding: 40px 15px;
+}
+
+/* Open modal button */
+.open-btn {
+  background-color: #ffffff;
+  color: #7c3aed;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.open-btn:hover {
+  background-color: #f3f4f6;
+  color: #6d28d9;
+}
+
+/* Modal box */
+.custom-modal {
+  border-radius: 18px;
+  overflow: hidden;
+  border: none;
+}
+
+/* Modal header */
+.modal-header {
+  background-color: #7c3aed;
+  color: #fff;
+  border-bottom: none;
+}
+
+.modal-title {
+  font-weight: 700;
+}
+
+/* Modal body */
+.modal-body {
+  font-size: 1rem;
+  color: #444;
+  padding: 25px;
+  line-height: 1.6;
+}
+
+/* Footer buttons */
+.close-btn {
+  background-color: #e5e7eb;
+  color: #222;
+  border-radius: 10px;
+  padding: 8px 18px;
+  border: none;
+}
+
+.close-btn:hover {
+  background-color: #d1d5db;
+}
+
+.save-btn {
+  background-color: #7c3aed;
+  color: #fff;
+  border-radius: 10px;
+  padding: 8px 18px;
+  border: none;
+}
+
+.save-btn:hover {
+  background-color: #6d28d9;
+  color: #fff;
+}
