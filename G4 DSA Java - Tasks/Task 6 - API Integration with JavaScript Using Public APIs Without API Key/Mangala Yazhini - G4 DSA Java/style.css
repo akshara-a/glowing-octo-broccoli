@@ -1,0 +1,13 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input,button{
+  padding: 5px; 
+}
+
+
+.data-div{
+  display : flex; 
+  flex-direction: row;
+}

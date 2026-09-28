@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéFinder - Pokémon Search App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>PokéFinder</h1>
+            <p>Search for your favorite Pokémon by Name or National Pokédex ID!</p>
+        </header>
+
+        <main>
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="search-input" 
+                    placeholder="e.g., pikachu or 25"
+                    aria-label="Pokémon Name or ID"
+                >
+                <button id="search-btn">Search</button>
+            </div>
+
+            <div id="loading-state" class="hidden">Loading regional data...</div>
+            <div id="error-state" class="hidden"></div>
+
+            <div id="pokemon-card" class="card hidden">
+                </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

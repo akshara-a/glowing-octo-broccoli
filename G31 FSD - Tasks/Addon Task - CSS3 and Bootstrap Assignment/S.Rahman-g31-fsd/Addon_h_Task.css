@@ -1,0 +1,57 @@
+body{
+    background: linear-gradient(
+        135deg,
+        #cfa3a3,
+        #cd734c,
+        #e50a0a
+    );
+
+    min-height:100vh;
+}
+
+.services-section{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+}
+
+.services-section h2{
+    color:white;
+}
+
+.service-card{
+    border:none;
+    border-radius:20px;
+
+    transition:0.4s ease;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.2);
+}
+
+.service-card h3{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.service-card h5{
+    color:#198754;
+    font-weight:bold;
+}
+
+.service-card:hover{
+    transform:
+    translateY(-10px)
+    scale(1.03);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,0.3);
+}
+
+.service-card p{
+    color:#555;
+}
+
+.text-muted{
+    color:#d6d6d6 !important;
+}

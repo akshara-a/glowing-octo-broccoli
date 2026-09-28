@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>🌤 Weather Dashboard</h1>
+        <p class="subtitle">
+            Fetch Current Weather using Open-Meteo API
+        </p>
+
+        <h3>Location:</h3>
+
+        <!-- Input Section -->
+        <div class="input-box">
+
+            <label>Latitude</label>
+            <input
+                type="number"
+                id="latitude"
+                placeholder="Enter Latitude"
+                step="any"
+            >
+
+            <label>Longitude</label>
+            <input
+                type="number"
+                id="longitude"
+                placeholder="Enter Longitude"
+                step="any"
+            >
+
+            <button id="weatherBtn">
+                Get Weather
+            </button>
+
+        </div>
+
+        <!-- Default Cities -->
+        <div class="cities">
+
+            <h3>Quick Select</h3>
+
+            <button class="city"
+                data-lat="13.08"
+                data-lon="80.27">
+                Chennai
+            </button>
+
+            <button class="city"
+                data-lat="12.97"
+                data-lon="77.59">
+                Bengaluru
+            </button>
+
+            <button class="city"
+                data-lat="17.38"
+                data-lon="78.48">
+                Hyderabad
+            </button>
+
+            <button class="city"
+                data-lat="19.07"
+                data-lon="72.87">
+                Mumbai
+            </button>
+
+            <button class="city"
+                data-lat="28.61"
+                data-lon="77.20">
+                Delhi
+            </button>
+
+        </div>
+
+        <!-- Loading -->
+        <div id="loading" class="loading"></div>
+
+        <!-- Error -->
+        <div id="error" class="error"></div>
+
+        <!-- Weather Card -->
+        <div id="weatherCard" class="card">
+
+            <h2>Current Weather</h2>
+
+            <div class="row">
+                <span>Latitude: </span>
+                <span id="lat">--</span>
+            </div>
+
+            <div class="row">
+                <span>Longitude: </span>
+                <span id="lon">--</span>
+            </div>
+
+            <div class="row">
+                <span>Temperature: </span>
+                <span id="temp">--</span>
+            </div>
+
+            <div class="row">
+                <span>Wind Speed: </span>
+                <span id="wind">--</span>
+            </div>
+
+            <div class="row">
+                <span>Time: </span>
+                <span id="time">--</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

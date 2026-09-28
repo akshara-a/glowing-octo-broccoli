@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sticky Navbar</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+.header{
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+.navbar{
+    position:sticky;
+    top:0;
+    background:#007bff;
+    padding:15px;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+.section{
+    height:100px;
+    padding: 5px;
+}
+
+.section:nth-child(odd){
+    background:#f4f4f4;
+}
+
+.section:nth-child(even){
+    background:#ddd;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Sticky Navigation Bar Example</h1>
+</div>
+
+<div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</div>
+
+<div class="section">
+    <h2>Section 1</h2>
+    <p>Scroll down to see the navbar stick to the top.</p>
+</div>
+
+<div class="section">
+    <h2>Section 2</h2>
+</div>
+
+<div class="section">
+    <h2>Section 3</h2>
+</div>
+
+<div class="section">
+    <h2>Section 4</h2>
+</div>
+
+</body>
+</html>

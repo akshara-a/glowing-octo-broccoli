@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Position Assignment</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* ==========================
+   PART A - STATIC POSITION
+   Static elements ignore top,
+   left, right, bottom values.
+========================== */
+.static-container{
+    display:flex;
+    gap:10px;
+    margin:20px;
+}
+
+.box{
+    width:120px;
+    height:120px;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.box1{background:red;}
+
+.box2{
+    background:green;
+    position:static;
+    top:50px;      /* Ignored */
+    left:50px;     /* Ignored */
+}
+
+.box3{background:blue;}
+
+/* ==========================
+   PART B - RELATIVE POSITION
+   Moves from original position
+   while keeping original space.
+========================== */
+.relative-box{
+    width:150px;
+    height:100px;
+    background:orange;
+    position:relative;
+    left:40px;
+    top:20px;
+    margin:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.relative-container{
+    display:flex;
+    gap:10px;
+    margin:30px;
+}
+
+.rel1{
+    width:120px;
+    height:120px;
+    background:purple;
+    position:relative;
+    left:30px;
+}
+
+.rel2{
+    width:120px;
+    height:120px;
+    background:teal;
+}
+
+/* ==========================
+   PART C - ABSOLUTE POSITION
+   Child positioned relative
+   to parent container.
+========================== */
+.parent{
+    width:300px;
+    height:200px;
+    border:3px solid black;
+    margin:30px;
+    position:relative;
+}
+
+.child{
+    width:80px;
+    height:80px;
+    background:red;
+    color:white;
+    position:absolute;
+    top:0;
+    right:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Product Card Badge */
+.card{
+    width:250px;
+    background:white;
+    margin:30px;
+    padding:10px;
+    position:relative;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.card img{
+    width:100%;
+}
+
+.badge{
+    position:absolute;
+    top:5px;
+    right:5px;
+    background:red;
+    color:white;
+    padding:5px 10px;
+    border-radius:20px;
+}
+
+/* ==========================
+   PART D - FIXED POSITION
+   Stays visible while scrolling.
+========================== */
+.fixed-header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#333;
+    color:white;
+    padding:15px;
+    text-align:center;
+    z-index:1000;
+}
+
+.back-to-top{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#007bff;
+    color:white;
+    padding:10px 15px;
+    border-radius:5px;
+    text-decoration:none;
+}
+
+/* ==========================
+   PART E - STICKY POSITION
+   Becomes fixed after reaching
+   the specified scroll position.
+========================== */
+.sticky-nav{
+    position:sticky;
+    top:60px;
+    background:#222;
+    color:white;
+    padding:15px;
+    text-align:center;
+    z-index:999;
+}
+
+/* ==========================
+   PART F - Z-INDEX
+   Controls stacking order.
+========================== */
+.z-container{
+    position:relative;
+    height:250px;
+    margin:40px;
+}
+
+.red{
+    width:150px;
+    height:150px;
+    background:red;
+    position:absolute;
+    left:20px;
+    top:20px;
+    z-index:1;
+}
+
+.blue{
+    width:150px;
+    height:150px;
+    background:blue;
+    position:absolute;
+    left:70px;
+    top:70px;
+    z-index:2;
+}
+
+.green{
+    width:150px;
+    height:150px;
+    background:green;
+    position:absolute;
+    left:120px;
+    top:120px;
+    z-index:3;
+}
+
+/* ==========================
+   PART G - COMBINED APPLICATION
+========================== */
+
+/* Sticky Navbar */
+.navbar{
+    position:sticky;
+    top:0;
+    background:#444;
+    color:white;
+    padding:15px;
+    text-align:center;
+    z-index:1000;
+}
+
+/* Relative Banner */
+.banner{
+    position:relative;
+    left:20px;
+    top:10px;
+    background:gold;
+    padding:20px;
+    margin:20px;
+    text-align:center;
+}
+
+/* Product Card with Absolute Badge */
+.product-card{
+    width:250px;
+    background:white;
+    padding:15px;
+    margin:20px;
+    border-radius:10px;
+    position:relative;
+}
+
+.notify{
+    position:absolute;
+    top:10px;
+    right:10px;
+    background:red;
+    color:white;
+    padding:5px 8px;
+    border-radius:50%;
+}
+
+/* Fixed Chat Button */
+.chat-btn{
+    position:fixed;
+    bottom:30px;
+    left:30px;
+    background:green;
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+/* Static Content */
+.content{
+    position:static;
+    margin:20px;
+    padding:20px;
+    background:white;
+}
+
+.section{
+    height:400px;
+    padding:20px;
+    background:white;
+    margin:20px;
+}
+</style>
+</head>
+<body>
+
+<!-- Fixed Header -->
+<div class="fixed-header">
+    Fixed Header
+</div>
+
+<br><br><br><br>
+
+<!-- PART A -->
+<h2>Part A - Static Position</h2>
+<div class="static-container">
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Static</div>
+    <div class="box box3">Box 3</div>
+</div>
+
+<!-- PART B -->
+<h2>Part B - Relative Position</h2>
+<div class="relative-box">Relative Box</div>
+
+<div class="relative-container">
+    <div class="rel1"></div>
+    <div class="rel2"></div>
+</div>
+
+<!-- PART C -->
+<h2>Part C - Absolute Position</h2>
+
+<div class="parent">
+    <div class="child">Child</div>
+</div>
+
+<div class="card">
+    <span class="badge">New</span>
+    <img src="https://via.placeholder.com/250x150" alt="">
+    <h3>Product Card</h3>
+</div>
+
+<!-- PART E -->
+<div class="sticky-nav">
+    Sticky Navigation Bar
+</div>
+
+<!-- PART F -->
+<h2>Part F - z-index</h2>
+<div class="z-container">
+    <div class="red"></div>
+    <div class="blue"></div>
+    <div class="green"></div>
+</div>
+
+<!-- PART G -->
+<h2>Part G - Combined Application</h2>
+
+<div class="navbar">
+    Sticky Navbar
+</div>
+
+<div class="banner">
+    Relative Positioned Banner
+</div>
+
+<div class="product-card">
+    <span class="notify">3</span>
+    <img src="https://via.placeholder.com/220x120" alt="">
+    <h3>Product</h3>
+    <p>Product Description</p>
+</div>
+
+<div class="content">
+    Static Content Section
+</div>
+
+<div class="chat-btn">
+    Chat
+</div>
+
+<!-- Scrollable Content -->
+<div class="section">Section 1</div>
+<div class="section">Section 2</div>
+<div class="section">Section 3</div>
+<div class="section">Section 4</div>
+
+<!-- Fixed Back to Top Button -->
+<a href="#" class="back-to-top">Top</a>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Part F - z-index</title>
+
+<style>
+
+.container{
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+/* Red Box */
+.red{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: red;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+/* Blue Box */
+.blue{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: blue;
+    top: 60px;
+    left: 60px;
+    z-index: 2;
+}
+
+/* Green Box */
+.green{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: green;
+    top: 100px;
+    left: 100px;
+    z-index: 3;
+}
+
+</style>
+</head>
+<body>
+
+<h2>z-index Example</h2>
+
+<div class="container">
+    <div class="red"></div>
+    <div class="blue"></div>
+    <div class="green"></div>
+</div>
+
+</body>
+</html>

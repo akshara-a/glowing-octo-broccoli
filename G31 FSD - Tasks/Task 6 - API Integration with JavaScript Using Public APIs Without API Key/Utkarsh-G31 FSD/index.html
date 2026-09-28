@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+    <!-- Navbar -->
+<nav>
+    <div class="logo">
+    <img src="images/logo.png" alt="Pokédex Explorer Logo">
+     </div>
+    <ul>
+        <li>
+            <a href="#searchSection">Home</a>
+        </li>
+        <li>
+            <a href="#" id="randomBtn">Random</a>
+        </li>
+        <li>
+            <a href="#favorites">Favorites</a>
+        </li>
+        <li>
+            <a href="#about">About</a>
+        </li>
+    </ul>
+</nav>
+
+
+    <!-- Header -->
+<header>
+    <h2>
+        Search any Pokémon by Name or ID
+    </h2>
+    <p>
+        Discover Pokémon information including stats, abilities, types and much more.
+    </p>
+</header>
+
+
+<!-- Search Section -->
+<section id="searchSection">
+    <div class="search-container">
+        <input
+            type="text"
+            id="pokemonInput"
+            placeholder="Enter Pokémon Name or ID">
+        <button id="searchBtn">
+            Search
+        </button>
+    </div>
+</section>
+
+
+<!-- Loading Message -->
+<section id="loading">
+    <p>Loading Pokémon...</p>
+</section>
+
+
+<!-- Error Message -->
+<section id="error">
+    <p>Pokémon not found. Please try again.</p>
+</section>
+
+<!-- Pokemon Card -->
+<section id="pokemonCard">
+   <img id="pokemonImage" src="" alt="Pokemon">
+
+<h2 id="pokemonName">Pokemon Name</h2>
+
+<p class="pokemon-number">
+    #<span id="pokemonId">--</span>
+</p>
+
+<div class="pokemon-info">
+
+    <div class="info-box">
+        <h4>Height</h4>
+        <p id="pokemonHeight">--</p>
+    </div>
+
+    <div class="info-box">
+        <h4>Weight</h4>
+        <p id="pokemonWeight">--</p>
+    </div>
+
+    <div class="info-box">
+        <h4>Type</h4>
+        <div id="pokemonType"></div>
+    </div>
+
+</div>
+
+<div class="abilities">
+
+    <h3>Abilities</h3>
+
+    <div id="pokemonAbilities"></div>
+
+</div>
+
+<div class="stats">
+
+    <h3>Base Stats</h3>
+
+    <div id="pokemonStats"></div>
+
+</div>
+</section>
+    </main>
+
+<!-- Footer -->
+<footer id="about">
+    <p>
+        Built with JavaScript & PokéAPI
+    </p>
+</footer>
+
+
+ <script src="script.js"></script>
+</body>
+</html>

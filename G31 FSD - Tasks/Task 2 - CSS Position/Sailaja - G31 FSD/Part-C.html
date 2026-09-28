@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Absolute Position Example</title>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+
+    /* Parent Container */
+    .parent{
+        width: 400px;
+        height: 250px;
+        border: 3px solid black;
+        position: relative;
+        margin-bottom: 50px;
+    }
+
+    /* Child Box at Top-Right */
+    .child{
+        width: 100px;
+        height: 60px;
+        background: royalblue;
+        color: white;
+        text-align: center;
+        line-height: 60px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    /* Image Container */
+    .image-container{
+        position: relative;
+        display: inline-block;
+    }
+
+    .image-container img{
+        width: 300px;
+        height: 200px;
+        display: block;
+    }
+
+    /* Notification Badge */
+    .badge{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        background: red;
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<h2>Absolute Position Child in Parent</h2>
+
+<div class="parent">
+    <div class="child">Child</div>
+</div>
+
+<h2>Notification Badge on Image</h2>
+
+<div class="image-container">
+    <img src="C:\Users\reddy\OneDrive\Documenti\Immagini\133861371266925255.jpg" alt="Image">
+    <div class="badge">5</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tamil Nadu Weather Dashboard</title>
+
+    <!-- Bulma CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar is-primary">
+
+        <div class="container">
+
+            <div class="navbar-brand">
+
+                <a class="navbar-item">
+
+                    <span class="icon">
+                        <i class="fas fa-cloud-sun"></i>
+                    </span>
+
+                    <strong class="ml-2">
+                        TN Weather Dashboard
+                    </strong>
+
+                </a>
+
+            </div>
+
+            <div class="navbar-menu">
+
+                <div class="navbar-end">
+
+                    <a class="navbar-item">Home</a>
+                    <a class="navbar-item">Cities</a>
+                    <a class="navbar-item">Forecast</a>
+                    <a class="navbar-item">About</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- Hero -->
+
+    <section class="hero is-info is-medium">
+
+        <div class="hero-body">
+
+            <div class="container has-text-centered">
+
+                <h1 class="title is-2">
+                    Tamil Nadu Weather Dashboard
+                </h1>
+
+                <p class="subtitle">
+                    Live weather updates for major cities across Tamil Nadu
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Search -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="field has-addons">
+
+                <div class="control is-expanded">
+
+                    <input
+                        class="input is-medium"
+                        type="text"
+                        placeholder="Search City">
+
+                </div>
+
+                <div class="control">
+
+                    <button class="button is-primary is-medium">
+
+                        <span class="icon">
+                            <i class="fas fa-search"></i>
+                        </span>
+
+                        <span>Search</span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Popular Cities -->
+
+    <section class="section pt-0">
+
+        <div class="container">
+
+            <h2 class="title is-4">
+
+                Popular Cities
+
+            </h2>
+
+            <div class="buttons">
+
+                <button class="button is-link is-light">Chennai</button>
+                <button class="button is-link is-light">Coimbatore</button>
+                <button class="button is-link is-light">Madurai</button>
+                <button class="button is-link is-light">Salem</button>
+                <button class="button is-link is-light">Trichy</button>
+                <button class="button is-link is-light">Erode</button>
+                <button class="button is-link is-light">Vellore</button>
+                <button class="button is-link is-light">Kanyakumari</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Current Weather -->
+
+    <section class="section pt-0">
+
+        <div class="container">
+
+            <div class="card">
+
+                <div class="card-content">
+
+                    <div class="columns is-vcentered">
+
+                        <div class="column">
+
+                            <h2 class="title">
+                                Chennai
+                            </h2>
+
+                            <h3 class="subtitle">
+                                ☀ Sunny
+                            </h3>
+
+                            <h1 class="title is-1">
+                                33°C
+                            </h1>
+
+                            <p>
+                                Feels Like : 36°C
+                            </p>
+
+                        </div>
+
+                        <div class="column has-text-right">
+
+                            <i class="fas fa-sun fa-6x has-text-warning"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Weather Highlights -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <h2 class="title is-4">
+
+                Weather Highlights
+
+            </h2>
+
+            <div class="columns is-multiline">
+
+                <div class="column is-3">
+                    <div class="box has-text-centered">
+                        <h4 class="title is-6">Humidity</h4>
+                        <p>75%</p>
+                    </div>
+                </div>
+
+                <div class="column is-3">
+                    <div class="box has-text-centered">
+                        <h4 class="title is-6">Wind</h4>
+                        <p>18 km/h</p>
+                    </div>
+                </div>
+
+                <div class="column is-3">
+                    <div class="box has-text-centered">
+                        <h4 class="title is-6">Pressure</h4>
+                        <p>1012 hPa</p>
+                    </div>
+                </div>
+
+                <div class="column is-3">
+                    <div class="box has-text-centered">
+                        <h4 class="title is-6">Visibility</h4>
+                        <p>10 km</p>
+                    </div>
+                </div>
+
+                <div class="column is-3">
+                    <div class="box has-text-centered">
+                        <h4 class="title is-6">UV Index</h4>
+                        <p>7</p>
+                    </div>
+                </div>
+
+                <div class="column is-3">
+                    <div class="box has-text-centered">
+                        <h4 class="title is-6">Air Quality</h4>
+                        <p>Good</p>
+                    </div>
+                </div>
+
+                <div class="column is-3">
+                    <div class="box has-text-centered">
+                        <h4 class="title is-6">Sunrise</h4>
+                        <p>5:58 AM</p>
+                    </div>
+                </div>
+
+                <div class="column is-3">
+                    <div class="box has-text-centered">
+                        <h4 class="title is-6">Sunset</h4>
+                        <p>6:40 PM</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Hourly Forecast -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <h2 class="title is-4">
+
+                Hourly Forecast
+
+            </h2>
+
+            <div class="columns">
+
+                <div class="column">
+                    <div class="box has-text-centered">
+                        <p>9 AM</p>
+                        ☀
+                        <h4>30°C</h4>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="box has-text-centered">
+                        <p>12 PM</p>
+                        ☀
+                        <h4>33°C</h4>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="box has-text-centered">
+                        <p>3 PM</p>
+                        🌤
+                        <h4>34°C</h4>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="box has-text-centered">
+                        <p>6 PM</p>
+                        ☁
+                        <h4>31°C</h4>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="box has-text-centered">
+                        <p>9 PM</p>
+                        🌙
+                        <h4>28°C</h4>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- 7 Day Forecast -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <h2 class="title is-4">
+
+                7-Day Forecast
+
+            </h2>
+
+            <div class="columns">
+
+                <div class="column"><div class="box has-text-centered">Mon<br>☀<br>33°C</div></div>
+                <div class="column"><div class="box has-text-centered">Tue<br>🌤<br>32°C</div></div>
+                <div class="column"><div class="box has-text-centered">Wed<br>🌧<br>29°C</div></div>
+                <div class="column"><div class="box has-text-centered">Thu<br>☁<br>31°C</div></div>
+                <div class="column"><div class="box has-text-centered">Fri<br>☀<br>34°C</div></div>
+                <div class="column"><div class="box has-text-centered">Sat<br>🌧<br>30°C</div></div>
+                <div class="column"><div class="box has-text-centered">Sun<br>☀<br>33°C</div></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="footer has-background-primary has-text-white">
+
+        <div class="content has-text-centered">
+
+            <p class="has-text-white">
+
+                <strong class="has-text-white">
+                    Tamil Nadu Weather Dashboard
+                </strong>
+
+                <br>
+
+                Built using Bulma CSS
+
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

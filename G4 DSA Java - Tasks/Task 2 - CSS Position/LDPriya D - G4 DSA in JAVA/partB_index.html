@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2 - Part B</title>
+    <link rel="stylesheet" href="partB_style.css">
+</head>
+<body>
+
+    <h1>Task 2 - Part B : Relative Position</h1>
+
+    <p>
+        This page demonstrates how <strong>position: relative</strong> works.
+        The first example shows a single box moved from its original position.
+        The second example demonstrates that moving one element using relative
+        positioning does not affect adjacent elements.
+    </p>
+
+    <hr>
+
+    <h2>Example 1 : Relative Position</h2>
+
+    <div class="example1">
+
+        <div class="placeholder"></div>
+
+        <div class="relative-box">
+            Relative Box
+        </div>
+
+    </div>
+
+    <p class="note">
+        <strong>Observation:</strong> The blue box is moved 40px to the right
+        and 20px downward using <code>position: relative</code>. The dashed
+        outline represents its original position, which remains reserved in
+        the normal document flow.
+    </p>
+
+    <hr>
+
+    <h2>Example 2 : Adjacent Boxes</h2>
+
+    <div class="example2">
+
+        <div class="box box1">
+            Box 1
+        </div>
+
+        <div class="box box2">
+            Box 2
+        </div>
+
+    </div>
+
+    <p class="note">
+        <strong>Observation:</strong> Box 2 is moved using relative
+        positioning. Box 1 remains in its original position because relative
+        positioning keeps the moved element in the normal document flow.
+    </p>
+
+</body>
+</html>

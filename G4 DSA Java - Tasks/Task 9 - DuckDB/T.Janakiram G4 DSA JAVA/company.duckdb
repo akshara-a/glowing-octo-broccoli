@@ -1,0 +1,6 @@
+Column Name,SQL Type,Nullable,Primary Key,Description
+employee_id,BIGINT,No,Yes,Unique employee identifier (1–8)
+name,VARCHAR,No,No,Full employee name
+department,VARCHAR,No,No,Operating business unit
+salary,BIGINT,No,No,Annual compensation
+city,VARCHAR,No,No,Office location

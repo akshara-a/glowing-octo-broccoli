@@ -1,0 +1,28 @@
+.hero{
+    min-height: 90vh;
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.hero img{
+    max-height: 450px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.nav-link:hover{
+    color: gold !important;
+    transition: 0.3s;
+}
+
+.navbar-brand:hover{
+    color: orange !important;
+}
+
+.btn-success:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}

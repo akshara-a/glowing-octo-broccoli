@@ -1,0 +1,258 @@
+/* ==========================
+   Google Font
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==========================
+   Reset
+========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ==========================
+   Body
+========================== */
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+
+    color:#333;
+
+    padding:20px;
+}
+
+/* ==========================
+   Header
+========================== */
+
+header{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    color:white;
+
+}
+
+header h1{
+
+    font-size:40px;
+
+    margin-bottom:10px;
+
+}
+
+header p{
+
+    font-size:18px;
+
+}
+
+/* ==========================
+   Main
+========================== */
+
+main{
+
+    width:100%;
+    max-width:500px;
+
+}
+
+/* ==========================
+   Search Section
+========================== */
+
+.search-section{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-bottom:20px;
+
+}
+
+.search-section input{
+
+    flex:1;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+.search-section button{
+
+    padding:15px 25px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#0077ff;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.search-section button:hover{
+
+    background:#005fd1;
+
+}
+
+/* ==========================
+   Loading
+========================== */
+
+#loading{
+
+    text-align:center;
+
+    font-size:18px;
+
+    color:white;
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================
+   Error
+========================== */
+
+#errorMessage{
+
+    text-align:center;
+
+    background:#ff4d4d;
+
+    color:white;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================
+   Weather Card
+========================== */
+
+.weather-card{
+
+    background:rgba(255,255,255,0.2);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    color:white;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+
+}
+
+.weather-card h2{
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================
+   Weather Rows
+========================== */
+
+.weather-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin:15px 0;
+
+    padding-bottom:10px;
+
+    border-bottom:1px solid rgba(255,255,255,.3);
+
+}
+
+.label{
+
+    font-weight:600;
+
+}
+
+/* ==========================
+   Footer
+========================== */
+
+footer{
+
+    margin-top:25px;
+
+    color:white;
+
+}
+
+/* ==========================
+   Utility Class
+========================== */
+
+.hidden{
+
+    display:none;
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:600px){
+
+.search-section{
+
+    flex-direction:column;
+
+}
+
+.search-section button{
+
+    width:100%;
+
+}
+
+}

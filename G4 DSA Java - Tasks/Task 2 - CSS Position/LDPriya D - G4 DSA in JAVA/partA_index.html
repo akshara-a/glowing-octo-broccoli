@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2 - Part A</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Task 2 - Part A: Static Position</h2>
+
+    <p>
+        This example demonstrates the <strong>static</strong> position in CSS.
+        The second box is assigned <code>position: static</code> along with
+        <code>top: 50px</code> and <code>left: 50px</code>.
+    </p>
+
+    <div class="box-container">
+        <div class="box box1">Box 1</div>
+        <div class="box box2">Box 2</div>
+        <div class="box box3">Box 3</div>
+    </div>
+
+    <h3>Observation and Explanation</h3>
+
+    <p>
+        The second box remains in its original position even after applying
+        <code>top: 50px</code> and <code>left: 50px</code>. This happens because
+        <code>position: static</code> is the default positioning method and follows
+        the normal document flow. Therefore, the <code>top</code> and <code>left</code>
+        properties are ignored.
+    </p>
+
+</body>
+</html>

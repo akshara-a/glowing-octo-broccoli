@@ -1,0 +1,93 @@
+body{
+    background: linear-gradient(135deg,#1c1c1c,#203a43,#2c5364);
+    min-height: 100vh;
+    
+}
+
+.product-section{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.product-card{
+    border: 50px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.4s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.product-card:hover{
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+.product-card img{
+    height: 250px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.product-card:hover img{
+    transform: scale(1.05);
+}
+
+.price{
+    color: #198754;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.pricing-section{
+    border-top: 2px solid rgba(255,255,255,0.1);
+}
+
+.rating{
+    color: gold;
+    font-size: 1.1rem;
+}
+
+.badge-sale{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+}
+
+.btn-success{
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn-success:hover{
+    transform: scale(1.05);
+}
+
+.display-4,
+.lead{
+    color: white;
+}
+.pricing-card{
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+}
+
+.featured{
+    transform: scale(1.08);
+    border: 4px solid #20c997;
+}
+
+.btn{
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+}
+
+.pricing-card h3{
+    color: #198754;
+    font-weight: bold;
+}

@@ -1,0 +1,311 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+
+.header {
+    background-color: #1f4e79;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 34px;
+}
+
+.header p {
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+/* Sticky Position:
+   Used for the navigation bar so it stays visible
+   at the top of the page while scrolling. */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    text-align: center;
+    z-index: 1000;
+}
+
+.navbar a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 22px;
+}
+
+.navbar a:hover {
+    background-color: #1f4e79;
+}
+
+/* Relative Position:
+   Used for the banner to keep it in the normal
+   document flow while allowing position adjustments. */
+
+.banner {
+    position: relative;
+    background: linear-gradient(rgba(31, 78, 121, 0.65),
+                rgba(31, 78, 121, 0.65)),
+                url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.banner-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.banner h2 {
+    margin-top: 0;
+    font-size: 34px;
+}
+
+.banner p {
+    line-height: 1.7;
+    margin: 20px 0;
+}
+
+.banner button {
+    padding: 12px 22px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.banner button:hover {
+    background-color: #218838;
+}
+
+/* Static Position:
+   Used for normal webpage sections because they
+   follow the default document flow. */
+
+.package-section,
+.destinations,
+.why-us,
+.about,
+.contact {
+    position: static;
+    width: 80%;
+    margin: 35px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.package-section h2,
+.destinations h2,
+.why-us h2,
+.about h2,
+.contact h2 {
+    margin-top: 0;
+    color: #1f4e79;
+}
+
+/* Relative Position:
+   Used so the POPULAR badge is positioned
+   relative to the travel package card. */
+
+.package-card {
+    position: relative;
+    width: 340px;
+    margin: 25px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    text-align: center;
+}
+
+.package-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.package-card h3 {
+    margin: 15px 0 10px;
+}
+
+.package-card p {
+    margin: 8px 0;
+}
+
+.package-card button {
+    margin: 15px 0 20px;
+    padding: 10px 18px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.package-card button:hover {
+    background-color: #218838;
+}
+
+/* Absolute Position:
+   Used to place the POPULAR badge at the
+   top-right corner of the package card. */
+
+.badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #ff6b35;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+/* Popular Destinations */
+
+.destination-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.destination-card {
+    flex: 1;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.destination-card h3 {
+    color: #1f4e79;
+    margin-top: 0;
+}
+
+.destination-card p {
+    line-height: 1.6;
+}
+
+/* Why Choose Us */
+
+.why-us ul {
+    margin: 15px 0 0;
+    padding-left: 20px;
+}
+
+.why-us li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+/* About */
+
+.about p {
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Contact */
+
+.contact p {
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+/* Footer */
+
+footer {
+    background-color: #1f4e79;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Fixed Position:
+   Used for the Support button so it remains
+   visible while the user scrolls the page. */
+
+.support-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1f4e79;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 22px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.support-btn:hover {
+    background-color: #0c3d7c;
+}
+
+/* Responsive Layout */
+
+@media (max-width: 768px) {
+
+    .package-section,
+    .destinations,
+    .why-us,
+    .about,
+    .contact {
+        width: 90%;
+    }
+
+    .package-card {
+        width: 90%;
+    }
+
+    .destination-list {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        display: block;
+        border-top: 1px solid #555;
+    }
+
+    .banner h2 {
+        font-size: 28px;
+    }
+
+    .banner p {
+        font-size: 15px;
+    }
+}

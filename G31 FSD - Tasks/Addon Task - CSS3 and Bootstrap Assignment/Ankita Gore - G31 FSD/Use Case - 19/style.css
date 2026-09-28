@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Background */
+.order-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2563eb, #7c3aed, #ec4899);
+  padding: 30px 15px;
+}
+
+/* Card */
+.order-card {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* Labels and values */
+.label {
+  font-weight: 600;
+  color: #555;
+}
+
+.value {
+  font-weight: 500;
+  color: #222;
+}
+
+.discount {
+  font-weight: 600;
+  color: #dc3545;
+}
+
+/* Total row */
+.total-row {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111;
+}
+
+/* Checkout button */
+.checkout-btn {
+  background-color: #7c3aed;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #6d28d9;
+  color: #fff;
+}

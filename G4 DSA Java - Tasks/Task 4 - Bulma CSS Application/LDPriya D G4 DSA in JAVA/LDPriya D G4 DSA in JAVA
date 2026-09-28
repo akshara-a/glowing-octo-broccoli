@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechNest Forge</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+</head>
+<body>
+
+<nav class="navbar is-dark">
+  <div class="container">
+
+    <div class="navbar-brand">
+      <a href="#home" class="navbar-item has-text-weight-bold">
+        TechNest Forge
+      </a>
+    </div>
+
+    <div class="navbar-menu is-active">
+
+      <div class="navbar-start">
+        <a href="#home" class="navbar-item">Home</a>
+        <a href="#projects" class="navbar-item">Projects</a>
+        <a href="#developers" class="navbar-item">Developers</a>
+        <a href="#ideas" class="navbar-item">Ideas</a>
+        <a href="#submit" class="navbar-item">Submit</a>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <a href="#" class="button is-primary">
+            Login
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</nav>
+
+<section id="home" class="hero is-link">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">Build. Share. Collaborate.</h1>
+      <p class="subtitle">Discover innovative projects, connect with developers, and showcase your work.</p>
+      <div class="buttons is-centered">
+        <a href="#projects" class="button is-primary">Explore Projects</a>
+        <a href="#developers" class="button is-info is-light">Join Community</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title has-text-centered">Community Stats</h2>
+    <div class="columns has-text-centered">
+      <div class="column"><div class="box"><p class="title">120+</p><p class="subtitle">Projects</p></div></div>
+      <div class="column"><div class="box"><p class="title">75+</p><p class="subtitle">Developers</p></div></div>
+      <div class="column"><div class="box"><p class="title">40+</p><p class="subtitle">Ideas</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <div class="container">
+    <h2 class="title has-text-centered">Featured Projects</h2>
+
+    <div class="card">
+      <div class="card-content">
+        <p class="title is-4">ClickUp</p>
+        <p class="subtitle is-6">Task Management System</p>
+        <p>A productivity platform that helps developers organize tasks and collaborate efficiently.</p>
+        <div class="tags">
+          <span class="tag is-primary">HTML</span>
+          <span class="tag is-info">CSS</span>
+          <span class="tag is-link">JavaScript</span>
+        </div>
+        <div class="buttons">
+          <a class="button is-link">View Project</a>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="card">
+      <div class="card-content">
+        <p class="title is-4">BitBucket</p>
+        <p class="subtitle is-6">Developer Collaboration</p>
+        <p>Share source code, discuss improvements, and work together on open-source projects.</p>
+        <div class="tags">
+          <span class="tag is-primary">Bulma</span>
+          <span class="tag is-info">Git</span>
+          <span class="tag is-link">GitHub</span>
+        </div>
+        <div class="buttons">
+          <a class="button is-link">View Project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="developers" class="section">
+  <div class="container">
+    <h2 class="title has-text-centered">Featured Developers</h2>
+
+    <div class="card">
+      <div class="card-content">
+        <p class="title is-4">James Smith</p>
+        <p class="subtitle is-6">Backend Developer</p>
+        <p>Builds scalable backend services using Java, SQL and Spring.</p>
+        <div class="tags">
+          <span class="tag is-primary">Java</span>
+          <span class="tag is-info">SQL</span>
+          <span class="tag is-link">Spring</span>
+        </div>
+        <div class="buttons">
+          <a class="button is-primary">View Profile</a>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="card">
+      <div class="card-content">
+        <p class="title is-4">Priya Sharma</p>
+        <p class="subtitle is-6">Full Stack Developer</p>
+        <p>Builds web applications with React, Node.js and MongoDB.</p>
+        <div class="tags">
+          <span class="tag is-primary">React</span>
+          <span class="tag is-info">Node.js</span>
+          <span class="tag is-link">MongoDB</span>
+        </div>
+        <div class="buttons">
+          <a class="button is-primary">View Profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ideas" class="section">
+  <div class="container">
+    <div class="notification is-info is-light has-text-centered">
+      <h2 class="title is-4">Idea Spotlight</h2>
+      <p>Create an AI-powered platform where developers receive instant code reviews.</p>
+      <a href="#submit" class="button is-info">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<section id="submit" class="section">
+  <div class="container">
+    <h2 class="title has-text-centered">Submit Your Project</h2>
+
+    <div class="field">
+      <label class="label">Name</label>
+      <div class="control"><input class="input" type="text" placeholder="Your Name"></div>
+    </div>
+
+    <div class="field">
+      <label class="label">Email</label>
+      <div class="control"><input class="input" type="email" placeholder="you@example.com"></div>
+    </div>
+
+    <div class="field">
+      <label class="label">Project Title</label>
+      <div class="control"><input class="input" type="text" placeholder="Project Name"></div>
+    </div>
+
+    <div class="field">
+      <label class="label">Description</label>
+      <div class="control"><textarea class="textarea" placeholder="Tell us about your project"></textarea></div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <button class="button is-primary is-fullwidth">Submit Project</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer has-background-dark py-2">
+  <div class="container">
+    <div class="content has-text-centered has-text-white">
+      <p><strong class="has-text-white">TechNest Forge</strong></p>
+      <p><a class="has-text-info">About</a> | <a class="has-text-info">Projects</a> | <a class="has-text-info">Contact</a></p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
