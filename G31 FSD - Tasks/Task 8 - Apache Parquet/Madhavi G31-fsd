@@ -1,0 +1,30 @@
+import pandas as pd
+data = {
+    "employee_id": [1, 2, 3, 4, 5],
+    "name": ["Sam", "Jam", "Ram", "Mam", "Kam"],
+    "department": ["IT", "HR", "IT", "Finance", "HR"],
+    "salary": [50000, 20000, 60000, 8000, 34000]
+}
+employees_df = pd.DataFrame(data)
+print(employees_df)
+employees_df.to_parquet(
+    "employees.parquet",
+    index=False
+)
+new_df = pd.read_parquet("employees.parquet")
+print(new_df)
+high_salary = new_df[new_df["salary"] > 50000]
+print(high_salary)
+average = new_df["salary"].mean()
+print(average)
+department_count = new_df.groupby("department").size()
+print(department_count)
+high_salary.to_parquet(
+    "high_salary_employees.parquet",
+    index=False
+)
+bonus = pd.read_parquet(
+    "employees.parquet",
+    columns=["name", "salary"]
+)
+print(bonus)
