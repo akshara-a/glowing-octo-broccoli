@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Skyline — Weather Forecast</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<header>
+  <h1>Skyline</h1>
+  <p>Three-hour forecast lookup, powered by weather-api167 (RapidAPI)</p>
+</header>
+
+<main>
+  <div class="panel">
+    <div class="row">
+      <div class="field">
+        <label for="place">City, Country code</label>
+        <input id="place" type="text" placeholder="London,GB" value="London,GB">
+      </div>
+      <div class="field">
+        <label for="cnt">Forecast count</label>
+        <select id="cnt">
+          <option value="3" selected>3</option>
+          <option value="6">6</option>
+          <option value="9">9</option>
+          <option value="12">12</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="units">Units</label>
+        <select id="units">
+          <option value="standard" selected>Kelvin (standard)</option>
+          <option value="metric">Celsius (metric)</option>
+          <option value="imperial">Fahrenheit (imperial)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top:.8rem;">
+      <div class="field" style="flex-basis:100%;">
+        <label for="apiKey">RapidAPI Key</label>
+        <input id="apiKey" type="password" placeholder="Paste your x-rapidapi-key">
+      </div>
+    </div>
+
+    <button id="fetchBtn">Get forecast</button>
+    <div id="status" class="status"></div>
+    <p class="hint">Your API key is only used in your browser to call the API directly — nothing is stored or sent anywhere else.</p>
+  </div>
+
+  <div id="results" class="cards"></div>
+
+  <details id="rawDetails" style="display:none;">
+    <summary>View raw JSON response</summary>
+    <pre id="rawJson"></pre>
+  </details>
+</main>
+
+<script>
+const fetchBtn = document.getElementById('fetchBtn');
+const statusEl = document.getElementById('status');
+const resultsEl = document.getElementById('results');
+const rawDetails = document.getElementById('rawDetails');
+const rawJsonEl = document.getElementById('rawJson');
+
+function unitSymbol(units){
+  if(units === 'metric') return '°C';
+  if(units === 'imperial') return '°F';
+  return 'K';
+}
+
+function formatTime(dtTxt){
+  // dt_txt like "2026-08-04 12:00:00"
+  const d = new Date(dtTxt.replace(' ', 'T') + 'Z');
+  return d.toLocaleString(undefined, { weekday:'short', hour:'2-digit', minute:'2-digit' });
+}
+
+function renderCards(data, units){
+  resultsEl.innerHTML = '';
+  const sym = unitSymbol(units);
+  if(!data.list || !data.list.length){
+    resultsEl.innerHTML = '<p>No forecast data returned.</p>';
+    return;
+  }
+  data.list.forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <div class="time">${formatTime(item.dt_txt)}</div>
+      <div class="temp">${Math.round(item.temperature)}${sym}</div>
+      <div class="desc">${item.weather?.[0]?.description ?? ''}</div>
+      <div class="meta">
+        <span>Feels ${Math.round(item.temperature_feels_like)}${sym}</span>
+        <span>Humidity ${item.main?.humidity ?? ''}%</span>
+      </div>
+    `;
+    resultsEl.appendChild(card);
+  });
+}
+
+async function getWeather(){
+  const place = document.getElementById('place').value.trim();
+  const cnt = document.getElementById('cnt').value;
+  const units = document.getElementById('units').value;
+  const apiKey = document.getElementById('apiKey').value.trim();
+
+  statusEl.className = 'status';
+  statusEl.textContent = '';
+  resultsEl.innerHTML = '';
+  rawDetails.style.display = 'none';
+
+  if(!place){
+    statusEl.className = 'status error';
+    statusEl.textContent = 'Enter a city, e.g. London,GB';
+    return;
+  }
+  if(!apiKey){
+    statusEl.className = 'status error';
+    statusEl.textContent = 'Enter your RapidAPI key';
+    return;
+  }
+
+  fetchBtn.disabled = true;
+  fetchBtn.textContent = 'Fetching…';
+  statusEl.textContent = 'Loading forecast…';
+
+  const url = `https://weather-api167.p.rapidapi.com/api/weather/forecast?place=${encodeURIComponent(place)}&cnt=${cnt}&units=${units}&type=three_hour&mode=json&lang=en`;
+
+  const options = {
+    method: 'GET',
+    headers: {
+      'x-rapidapi-key': apiKey,
+      'x-rapidapi-host': 'weather-api167.p.rapidapi.com',
+      'Accept': 'application/json'
+    }
+  };
+
+  try{
+    const response = await fetch(url, options);
+    const text = await response.text();
+    let data;
+    try{
+      data = JSON.parse(text);
+    }catch(e){
+      throw new Error('Response was not valid JSON: ' + text.slice(0,200));
+    }
+
+    if(!response.ok || data.cod === '404' || data.cod === 404){
+      throw new Error(data.message || `Request failed (${response.status})`);
+    }
+
+    renderCards(data, units);
+    rawJsonEl.textContent = JSON.stringify(data, null, 2);
+    rawDetails.style.display = 'block';
+
+    statusEl.className = 'status ok';
+    const cityName = data.city?.name ? `${data.city.name}, ${data.city.country}` : place;
+    statusEl.textContent = `Forecast loaded for ${cityName}`;
+  }catch(err){
+    statusEl.className = 'status error';
+    statusEl.textContent = err.message;
+  }finally{
+    fetchBtn.disabled = false;
+    fetchBtn.textContent = 'Get forecast';
+  }
+}
+
+fetchBtn.addEventListener('click', getWeather);
+document.getElementById('place').addEventListener('keydown', e => { if(e.key === 'Enter') getWeather(); });
+</script>
+
+</body>
+</html>
