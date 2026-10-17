@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app">
+
+    <h1>Pokémon Explorer</h1>
+
+    <p class="description">
+        Find your favorite Pokémon by entering its name or Pokédex ID.
+    </p>
+
+    <div class="search-area">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Example: Pikachu or 25">
+
+        <button id="searchButton">
+            Find Pokémon
+        </button>
+
+    </div>
+
+    <div id="loadingMessage"></div>
+
+    <div id="errorMessage"></div>
+
+    <section id="pokemonCard"></section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
