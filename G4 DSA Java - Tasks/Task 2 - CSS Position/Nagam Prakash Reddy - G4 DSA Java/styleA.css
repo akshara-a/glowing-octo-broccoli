@@ -1,0 +1,27 @@
+body{
+    font-family: Arial;
+}
+
+.box{
+    width:150px;
+    height:100px;
+    color:white;
+    margin:10px;
+    text-align:center;
+    line-height:100px;
+}
+
+.red{
+    background:red;
+}
+
+.blue{
+    background:blue;
+    position:static;
+    top:50px;
+    left:50px;
+}
+
+.green{
+    background:green;
+}

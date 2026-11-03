@@ -1,0 +1,5 @@
+with ipc.new_file(
+    "employees.arrow",
+    employee_table.schema
+) as writer:
+    writer.write_table(employee_table)

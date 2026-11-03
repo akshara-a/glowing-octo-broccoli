@@ -1,0 +1,29 @@
+.red{
+    width:150px;
+    height:150px;
+    background:red;
+    position:absolute;
+    top:50px;
+    left:50px;
+    z-index:1;
+}
+
+.blue{
+    width:150px;
+    height:150px;
+    background:blue;
+    position:absolute;
+    top:100px;
+    left:100px;
+    z-index:2;
+}
+
+.green{
+    width:150px;
+    height:150px;
+    background:green;
+    position:absolute;
+    top:150px;
+    left:150px;
+    z-index:3;
+}
