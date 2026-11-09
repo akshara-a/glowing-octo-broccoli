@@ -1,0 +1,462 @@
+/* =========================================
+   FINORA - GLOBAL STYLES
+   ========================================= */
+
+
+/* =========================================
+   SMOOTH SCROLLING
+   ========================================= */
+
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+
+/* Active reveal */
+
+.reveal.active {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* Animation delays */
+
+.reveal-delay-1 {
+    transition-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+    transition-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+    transition-delay: 0.3s;
+}
+
+
+/* =========================================
+   BODY
+   ========================================= */
+
+body {
+    margin: 0;
+}
+
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+
+.finora-navbar {
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.finora-logo {
+    transition: transform 0.3s ease;
+}
+
+
+.finora-logo:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   NAVIGATION LINKS
+   ========================================= */
+
+.nav-link {
+    position: relative;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+/* Animated underline */
+
+.nav-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: #10b981;
+
+    transition: width 0.3s ease;
+}
+
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* =========================================
+   ACTIVE NAVIGATION LINK
+   ========================================= */
+
+.nav-link.active {
+    color: #10b981;
+}
+
+
+.nav-link.active::after {
+    width: 100%;
+}
+/* =========================================
+   GET STARTED BUTTON
+   ========================================= */
+
+.get-started-btn {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+.get-started-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 20px rgba(16, 185, 129, 0.2);
+}
+
+
+/* =========================================
+   THEME TOGGLE
+   ========================================= */
+
+.theme-toggle {
+    min-width: 42px;
+    min-height: 42px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   MOBILE MENU
+   ========================================= */
+
+.mobile-menu {
+    transition:
+        max-height 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+
+
+/* Background glow */
+
+.hero-glow {
+    animation:
+        heroGlow 8s ease-in-out infinite alternate;
+}
+
+
+@keyframes heroGlow {
+
+    from {
+        transform:
+            translate(0, 0)
+            scale(1);
+    }
+
+    to {
+        transform:
+            translate(-40px, 30px)
+            scale(1.15);
+    }
+
+}
+
+
+/* =========================================
+   DASHBOARD
+   ========================================= */
+
+.dashboard-card {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.dashboard-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 30px 60px rgba(15, 23, 42, 0.15);
+}
+
+
+/* Dark mode dashboard shadow */
+
+.dark .dashboard-card:hover {
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================
+   SAVINGS PROGRESS
+   ========================================= */
+
+.savings-progress {
+    animation:
+        savingsProgress 1.5s ease-out;
+}
+
+
+@keyframes savingsProgress {
+
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 76%;
+    }
+
+}
+
+
+/* =========================================
+   OVERVIEW CARDS
+   ========================================= */
+
+.overview-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.overview-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =========================================
+   FEATURE CARDS
+   ========================================= */
+
+.feature-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.feature-card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* =========================================
+   PRICING CARDS
+   ========================================= */
+
+.pricing-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* =========================================
+   FORM ELEMENTS
+   ========================================= */
+
+input,
+textarea,
+button {
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================================
+   THEME TRANSITIONS
+   ========================================= */
+
+body,
+header,
+section,
+article,
+nav,
+footer,
+input,
+textarea,
+button {
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* =========================================
+   DARK MODE
+   ========================================= */
+
+.dark {
+    color-scheme: dark;
+}
+
+
+/* =========================================
+   MOBILE ADJUSTMENTS
+   ========================================= */
+
+@media (max-width: 640px) {
+
+    .dashboard-card {
+        border-radius: 1.5rem;
+    }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+#finora-notification {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 9999;
+
+    padding: 20px;
+
+    background: white;
+    color: black;
+
+    border: 2px solid #10b981;
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.dark #finora-notification {
+    background: #0f172a;
+    color: white;
+}
+/* =========================================
+   STAGE 8 - FORM VALIDATION
+   ========================================= */
+
+.form-error {
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.form-success {
+    border-color: #10b981 !important;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+/* =========================================
+   STAGE 9 - SELECTED PRICING CARD
+   ========================================= */
+
+.pricing-card.selected {
+    border-color: #10b981 !important;
+
+    box-shadow:
+        0 0 0 3px rgba(16, 185, 129, 0.15),
+        0 20px 40px rgba(16, 185, 129, 0.12);
+
+    transform: translateY(-8px);
+}
+
+
+/* Dark mode */
+
+.dark .pricing-card.selected {
+    box-shadow:
+        0 0 0 3px rgba(16, 185, 129, 0.20),
+        0 20px 40px rgba(0, 0, 0, 0.30);
+}
+/* =========================================
+   STAGE 10 - SELECTED PRICING BUTTON
+   ========================================= */
+
+.pricing-card button.selected-button {
+    background-color: #10b981 !important;
+    border-color: #10b981 !important;
+    color: white !important;
+}
+
+/* =========================================
+   STAGE 13 - FORM SUCCESS STATE
+   ========================================= */
+
+.form-submitted {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.form-success-message {
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #10b981;
+}
