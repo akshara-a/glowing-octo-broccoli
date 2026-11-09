@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>NovaTech — Modern Products</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+          },
+          animation: {
+            float: "float 5s ease-in-out infinite",
+            "fade-in": "fadeIn 0.8s ease-out",
+          },
+          keyframes: {
+            float: {
+              "0%, 100%": { transform: "translateY(0)" },
+              "50%": { transform: "translateY(-12px)" },
+            },
+            fadeIn: {
+              from: { opacity: "0", transform: "translateY(20px)" },
+              to: { opacity: "1", transform: "translateY(0)" },
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* Small amount of custom CSS for the background decoration */
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(99, 102, 241, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99, 102, 241, 0.08) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur dark:border-slate-800 dark:bg-slate-950/90">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2 text-xl font-extrabold">
+        <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-600 text-white">
+          N
+        </span>
+        <span>Nova<span class="text-indigo-600 dark:text-indigo-400">Tech</span></span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden items-center gap-8 md:flex">
+        <a href="#home" class="font-medium transition hover:text-indigo-600">Home</a>
+        <a href="#features" class="font-medium transition hover:text-indigo-600">Products</a>
+        <a href="#about" class="font-medium transition hover:text-indigo-600">About</a>
+        <a href="#contact" class="font-medium transition hover:text-indigo-600">Contact</a>
+      </div>
+
+      <!-- Desktop Actions -->
+      <div class="hidden items-center gap-3 md:flex">
+        <button
+          id="themeToggle"
+          aria-label="Toggle dark mode"
+          class="rounded-lg border border-slate-300 p-2 transition hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-800"
+        >
+          🌙
+        </button>
+
+        <a
+          href="#pricing"
+          class="rounded-lg bg-indigo-600 px-5 py-2.5 font-semibold text-white shadow-lg shadow-indigo-600/20 transition hover:-translate-y-0.5 hover:bg-indigo-700"
+        >
+          Get Started
+        </a>
+      </div>
+
+      <!-- Mobile Buttons -->
+      <div class="flex items-center gap-2 md:hidden">
+        <button
+          id="mobileThemeToggle"
+          aria-label="Toggle dark mode"
+          class="rounded-lg border border-slate-300 p-2 dark:border-slate-700"
+        >
+          🌙
+        </button>
+
+        <button
+          id="menuButton"
+          aria-label="Open navigation menu"
+          class="rounded-lg border border-slate-300 p-2 dark:border-slate-700"
+        >
+          ☰
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden border-t border-slate-200 px-5 pb-5 md:hidden dark:border-slate-800">
+      <div class="flex flex-col gap-4 pt-4">
+        <a href="#home" class="mobile-link font-medium hover:text-indigo-600">Home</a>
+        <a href="#features" class="mobile-link font-medium hover:text-indigo-600">Products</a>
+        <a href="#about" class="mobile-link font-medium hover:text-indigo-600">About</a>
+        <a href="#contact" class="mobile-link font-medium hover:text-indigo-600">Contact</a>
+
+        <a
+          href="#pricing"
+          class="mobile-link rounded-lg bg-indigo-600 px-5 py-2.5 text-center font-semibold text-white"
+        >
+          Get Started
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section id="home" class="hero-grid relative overflow-hidden">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 py-20 md:py-28 lg:grid-cols-2 lg:px-8">
+
+        <!-- Hero Text -->
+        <div class="animate-fade-in">
+          <div class="mb-6 inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300">
+            <span>✨</span>
+            The future of productivity
+          </div>
+
+          <h1 class="max-w-3xl text-4xl font-black leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+            Build better.
+            <span class="text-indigo-600 dark:text-indigo-400">
+              Work smarter.
+            </span>
+          </h1>
+
+          <p class="mt-6 max-w-xl text-lg leading-8 text-slate-600 dark:text-slate-300">
+            NovaTech gives modern teams powerful tools to plan, collaborate,
+            and grow — all from one beautifully designed platform.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+            <a
+              href="#pricing"
+              class="rounded-xl bg-indigo-600 px-7 py-3.5 text-center font-bold text-white shadow-xl shadow-indigo-600/25 transition duration-300 hover:-translate-y-1 hover:bg-indigo-700"
+            >
+              Get Started →
+            </a>
+
+            <a
+              href="#features"
+              class="rounded-xl border border-slate-300 bg-white px-7 py-3.5 text-center font-bold transition duration-300 hover:-translate-y-1 hover:border-indigo-500 hover:text-indigo-600 dark:border-slate-700 dark:bg-slate-900"
+            >
+              Explore Features
+            </a>
+          </div>
+
+          <div class="mt-8 flex flex-wrap gap-6 text-sm text-slate-500 dark:text-slate-400">
+            <span>✓ No credit card required</span>
+            <span>✓ Free 14-day trial</span>
+          </div>
+        </div>
+
+        <!-- Hero Product Mockup -->
+        <div class="relative flex justify-center">
+          <div class="absolute h-64 w-64 rounded-full bg-indigo-500/20 blur-3xl"></div>
+
+          <div class="animate-float relative w-full max-w-lg rounded-3xl border border-slate-200 bg-white p-4 shadow-2xl dark:border-slate-700 dark:bg-slate-900">
+
+            <!-- Browser Header -->
+            <div class="mb-4 flex items-center gap-2 border-b border-slate-200 pb-4 dark:border-slate-700">
+              <span class="h-3 w-3 rounded-full bg-red-400"></span>
+              <span class="h-3 w-3 rounded-full bg-yellow-400"></span>
+              <span class="h-3 w-3 rounded-full bg-green-400"></span>
+            </div>
+
+            <div class="grid grid-cols-3 gap-3">
+              <div class="col-span-1 rounded-xl bg-slate-100 p-4 dark:bg-slate-800">
+                <div class="mb-5 h-3 w-16 rounded bg-indigo-500"></div>
+                <div class="space-y-3">
+                  <div class="h-2 w-full rounded bg-slate-300 dark:bg-slate-600"></div>
+                  <div class="h-2 w-4/5 rounded bg-slate-300 dark:bg-slate-600"></div>
+                  <div class="h-2 w-3/5 rounded bg-slate-300 dark:bg-slate-600"></div>
+                </div>
+              </div>
+
+              <div class="col-span-2 space-y-3">
+                <div class="rounded-xl bg-indigo-50 p-5 dark:bg-indigo-950">
+                  <p class="text-sm text-indigo-600 dark:text-indigo-300">Monthly growth</p>
+                  <p class="mt-2 text-3xl font-bold">+42.8%</p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                  <div class="rounded-xl bg-slate-100 p-4 dark:bg-slate-800">
+                    <div class="h-2 w-12 rounded bg-slate-300 dark:bg-slate-600"></div>
+                    <div class="mt-3 h-5 w-16 rounded bg-indigo-500"></div>
+                  </div>
+
+                  <div class="rounded-xl bg-slate-100 p-4 dark:bg-slate-800">
+                    <div class="h-2 w-12 rounded bg-slate-300 dark:bg-slate-600"></div>
+                    <div class="mt-3 h-5 w-16 rounded bg-green-500"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 flex items-end gap-2 rounded-xl bg-slate-100 p-5 dark:bg-slate-800">
+              <div class="h-12 w-1/6 rounded-t bg-indigo-300"></div>
+              <div class="h-20 w-1/6 rounded-t bg-indigo-400"></div>
+              <div class="h-16 w-1/6 rounded-t bg-indigo-500"></div>
+              <div class="h-28 w-1/6 rounded-t bg-indigo-600"></div>
+              <div class="h-24 w-1/6 rounded-t bg-indigo-500"></div>
+              <div class="h-36 w-1/6 rounded-t bg-indigo-700"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+    <section id="features" class="bg-white py-20 dark:bg-slate-900">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="font-semibold text-indigo-600 dark:text-indigo-400">
+            Powerful Features
+          </p>
+
+          <h2 class="mt-3 text-3xl font-extrabold sm:text-4xl">
+            Everything you need to move faster
+          </h2>
+
+          <p class="mt-4 text-slate-600 dark:text-slate-400">
+            Simple tools designed to help you and your team stay focused
+            and productive.
+          </p>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+          <!-- Feature 1 -->
+          <div class="group rounded-2xl border border-slate-200 bg-slate-50 p-8 shadow-sm transition duration-300 hover:-translate-y-2 hover:border-indigo-300 hover:shadow-xl dark:border-slate-700 dark:bg-slate-800">
+            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-100 text-2xl transition group-hover:scale-110 dark:bg-indigo-950">
+              ⚡
+            </div>
+
+            <h3 class="mt-6 text-xl font-bold">
+              Lightning Fast
+            </h3>
+
+            <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
+              Enjoy a fast, responsive experience designed to keep your
+              workflow moving without unnecessary delays.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="group rounded-2xl border border-slate-200 bg-slate-50 p-8 shadow-sm transition duration-300 hover:-translate-y-2 hover:border-indigo-300 hover:shadow-xl dark:border-slate-700 dark:bg-slate-800">
+            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-green-100 text-2xl transition group-hover:scale-110 dark:bg-green-950">
+              🔒
+            </div>
+
+            <h3 class="mt-6 text-xl font-bold">
+              Secure by Design
+            </h3>
+
+            <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
+              Keep your data protected with modern security practices and
+              privacy-focused features.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="group rounded-2xl border border-slate-200 bg-slate-50 p-8 shadow-sm transition duration-300 hover:-translate-y-2 hover:border-indigo-300 hover:shadow-xl dark:border-slate-700 dark:bg-slate-800">
+            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-100 text-2xl transition group-hover:scale-110 dark:bg-orange-950">
+              📊
+            </div>
+
+            <h3 class="mt-6 text-xl font-bold">
+              Smart Analytics
+            </h3>
+
+            <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
+              Turn your data into useful insights with clear dashboards and
+              easy-to-understand reports.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="bg-slate-100 py-20 dark:bg-slate-950">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-2 lg:px-8">
+
+        <div>
+          <p class="font-semibold text-indigo-600 dark:text-indigo-400">
+            About NovaTech
+          </p>
+
+          <h2 class="mt-3 text-3xl font-extrabold sm:text-4xl">
+            Technology that works for you
+          </h2>
+
+          <p class="mt-6 leading-8 text-slate-600 dark:text-slate-400">
+            We believe technology should simplify work instead of making it
+            more complicated. NovaTech brings essential productivity tools
+            together in one intuitive platform.
+          </p>
+
+          <div class="mt-8 grid grid-cols-2 gap-5">
+            <div class="rounded-xl bg-white p-5 shadow-sm dark:bg-slate-900">
+              <p class="text-3xl font-black text-indigo-600">10K+</p>
+              <p class="mt-1 text-sm text-slate-500">Active users</p>
+            </div>
+
+            <div class="rounded-xl bg-white p-5 shadow-sm dark:bg-slate-900">
+              <p class="text-3xl font-black text-indigo-600">99.9%</p>
+              <p class="mt-1 text-sm text-slate-500">Uptime</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="rounded-2xl bg-indigo-600 p-6 text-white shadow-lg">
+            <p class="text-4xl">🚀</p>
+            <h3 class="mt-5 text-xl font-bold">Innovation</h3>
+            <p class="mt-2 text-sm text-indigo-100">
+              Constantly improving our products.
+            </p>
+          </div>
+
+          <div class="mt-8 rounded-2xl bg-white p-6 shadow-lg dark:bg-slate-800">
+            <p class="text-4xl">💡</p>
+            <h3 class="mt-5 text-xl font-bold">Simplicity</h3>
+            <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">
+              Powerful tools without complexity.
+            </p>
+          </div>
+
+          <div class="rounded-2xl bg-white p-6 shadow-lg dark:bg-slate-800">
+            <p class="text-4xl">🤝</p>
+            <h3 class="mt-5 text-xl font-bold">Community</h3>
+            <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">
+              Built around our customers.
+            </p>
+          </div>
+
+          <div class="mt-8 rounded-2xl bg-slate-900 p-6 text-white shadow-lg dark:bg-indigo-600">
+            <p class="text-4xl">🌎</p>
+            <h3 class="mt-5 text-xl font-bold">Global</h3>
+            <p class="mt-2 text-sm text-slate-300">
+              Helping teams everywhere.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= PRICING ================= -->
+    <section id="pricing" class="bg-white py-20 dark:bg-slate-900">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="font-semibold text-indigo-600 dark:text-indigo-400">
+            Simple Pricing
+          </p>
+
+          <h2 class="mt-3 text-3xl font-extrabold sm:text-4xl">
+            Choose the plan that fits you
+          </h2>
+
+          <p class="mt-4 text-slate-600 dark:text-slate-400">
+            Start for free and upgrade whenever you need more.
+          </p>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
+
+          <!-- Basic -->
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-8 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl dark:border-slate-700 dark:bg-slate-800">
+            <h3 class="text-xl font-bold">Starter</h3>
+
+            <p class="mt-2 text-slate-500 dark:text-slate-400">
+              For individuals getting started.
+            </p>
+
+            <div class="mt-6">
+              <span class="text-4xl font-black">$0</span>
+              <span class="text-slate-500">/month</span>
+            </div>
+
+            <ul class="mt-8 space-y-4 text-sm">
+              <li>✓ 3 projects</li>
+              <li>✓ Basic analytics</li>
+              <li>✓ Community support</li>
+              <li>✓ 1 GB storage</li>
+            </ul>
+
+            <a
+              href="#contact"
+              class="mt-8 block rounded-xl border border-indigo-600 px-5 py-3 text-center font-bold text-indigo-600 transition hover:bg-indigo-600 hover:text-white"
+            >
+              Start Free
+            </a>
+          </div>
+
+          <!-- Pro -->
+          <div class="relative rounded-2xl border-2 border-indigo-600 bg-indigo-600 p-8 text-white shadow-2xl shadow-indigo-600/20 transition duration-300 hover:-translate-y-2">
+
+            <span class="absolute right-6 top-6 rounded-full bg-white px-3 py-1 text-xs font-bold text-indigo-600">
+              POPULAR
+            </span>
+
+            <h3 class="text-xl font-bold">Professional</h3>
+
+            <p class="mt-2 text-indigo-100">
+              For growing teams and businesses.
+            </p>
+
+            <div class="mt-6">
+              <span class="text-4xl font-black">$19</span>
+              <span class="text-indigo-100">/month</span>
+            </div>
+
+            <ul class="mt-8 space-y-4 text-sm">
+              <li>✓ Unlimited projects</li>
+              <li>✓ Advanced analytics</li>
+              <li>✓ Priority support</li>
+              <li>✓ 100 GB storage</li>
+            </ul>
+
+            <a
+              href="#contact"
+              class="mt-8 block rounded-xl bg-white px-5 py-3 text-center font-bold text-indigo-600 transition hover:bg-indigo-50"
+            >
+              Choose Professional
+            </a>
+          </div>
+
+          <!-- Enterprise -->
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-8 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl dark:border-slate-700 dark:bg-slate-800">
+            <h3 class="text-xl font-bold">Enterprise</h3>
+
+            <p class="mt-2 text-slate-500 dark:text-slate-400">
+              For large organizations.
+            </p>
+
+            <div class="mt-6">
+              <span class="text-4xl font-black">$49</span>
+              <span class="text-slate-500">/month</span>
+            </div>
+
+            <ul class="mt-8 space-y-4 text-sm">
+              <li>✓ Unlimited everything</li>
+              <li>✓ Custom analytics</li>
+              <li>✓ 24/7 support</li>
+              <li>✓ 1 TB storage</li>
+            </ul>
+
+            <a
+              href="#contact"
+              class="mt-8 block rounded-xl border border-indigo-600 px-5 py-3 text-center font-bold text-indigo-600 transition hover:bg-indigo-600 hover:text-white"
+            >
+              Contact Sales
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="bg-slate-100 py-20 dark:bg-slate-950">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+
+        <div class="text-center">
+          <p class="font-semibold text-indigo-600 dark:text-indigo-400">
+            Testimonials
+          </p>
+
+          <h2 class="mt-3 text-3xl font-extrabold">
+            Loved by productive teams
+          </h2>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
+
+          <div class="rounded-2xl bg-white p-7 shadow-sm dark:bg-slate-800">
+            <div class="text-yellow-400">★★★★★</div>
+            <p class="mt-4 leading-7 text-slate-600 dark:text-slate-300">
+              “NovaTech completely changed how our team manages projects.
+              Everything feels simple and organized.”
+            </p>
+            <p class="mt-5 font-bold">Sarah Johnson</p>
+            <p class="text-sm text-slate-500">Product Manager</p>
+          </div>
+
+          <div class="rounded-2xl bg-white p-7 shadow-sm dark:bg-slate-800">
+            <div class="text-yellow-400">★★★★★</div>
+            <p class="mt-4 leading-7 text-slate-600 dark:text-slate-300">
+              “The interface is beautiful, fast, and incredibly easy to use.
+              Our productivity has noticeably improved.”
+            </p>
+            <p class="mt-5 font-bold">Michael Chen</p>
+            <p class="text-sm text-slate-500">Startup Founder</p>
+          </div>
+
+          <div class="rounded-2xl bg-white p-7 shadow-sm dark:bg-slate-800">
+            <div class="text-yellow-400">★★★★★</div>
+            <p class="mt-4 leading-7 text-slate-600 dark:text-slate-300">
+              “A fantastic platform for teams that want powerful features
+              without a complicated learning curve.”
+            </p>
+            <p class="mt-5 font-bold">Emily Davis</p>
+            <p class="text-sm text-slate-500">Designer</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="bg-white py-20 dark:bg-slate-900">
+      <div class="mx-auto max-w-3xl px-5 lg:px-8">
+
+        <div class="text-center">
+          <p class="font-semibold text-indigo-600 dark:text-indigo-400">
+            Get In Touch
+          </p>
+
+          <h2 class="mt-3 text-3xl font-extrabold sm:text-4xl">
+            We'd love to hear from you
+          </h2>
+
+          <p class="mt-4 text-slate-600 dark:text-slate-400">
+            Have a question? Send us a message and our team will get back
+            to you.
+          </p>
+        </div>
+
+        <form id="contactForm" class="mt-10 space-y-6 rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-lg sm:p-8 dark:border-slate-700 dark:bg-slate-800">
+
+          <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+
+            <div>
+              <label for="name" class="mb-2 block text-sm font-semibold">
+                Name
+              </label>
+
+              <input
+                id="name"
+                type="text"
+                placeholder="Your name"
+                required
+                class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 dark:border-slate-600 dark:bg-slate-900"
+              />
+            </div>
+
+            <div>
+              <label for="email" class="mb-2 block text-sm font-semibold">
+                Email
+              </label>
+
+              <input
+                id="email"
+                type="email"
+                placeholder="you@example.com"
+                required
+                class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 dark:border-slate-600 dark:bg-slate-900"
+              />
+            </div>
+
+          </div>
+
+          <div>
+            <label for="message" class="mb-2 block text-sm font-semibold">
+              Message
+            </label>
+
+            <textarea
+              id="message"
+              rows="6"
+              placeholder="Write your message..."
+              required
+              class="w-full resize-none rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 dark:border-slate-600 dark:bg-slate-900"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full rounded-xl bg-indigo-600 px-6 py-3.5 font-bold text-white shadow-lg shadow-indigo-600/20 transition hover:-translate-y-0.5 hover:bg-indigo-700"
+          >
+            Send Message
+          </button>
+
+          <p id="formMessage" class="hidden text-center text-sm font-semibold text-green-600">
+            Thanks! Your message has been received.
+          </p>
+
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-slate-200 bg-slate-950 text-slate-300 dark:border-slate-800">
+    <div class="mx-auto max-w-7xl px-5 py-12 lg:px-8">
+
+      <div class="flex flex-col justify-between gap-8 md:flex-row">
+
+        <div>
+          <div class="flex items-center gap-2 text-xl font-extrabold text-white">
+            <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-600">
+              N
+            </span>
+            NovaTech
+          </div>
+
+          <p class="mt-4 max-w-sm text-sm leading-6 text-slate-400">
+            Building simple and powerful technology for modern teams.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-white">Follow Us</h3>
+
+          <div class="mt-4 flex gap-4">
+            <a href="#" class="transition hover:text-indigo-400">Facebook</a>
+            <a href="#" class="transition hover:text-indigo-400">Twitter</a>
+            <a href="#" class="transition hover:text-indigo-400">Instagram</a>
+            <a href="#" class="transition hover:text-indigo-400">LinkedIn</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-10 flex flex-col justify-between gap-4 border-t border-slate-800 pt-6 text-sm text-slate-500 sm:flex-row">
+        <p>
+          © 2026 NovaTech. All rights reserved.
+        </p>
+
+        <div class="flex gap-5">
+          <a href="#" class="hover:text-white">Privacy Policy</a>
+          <a href="#" class="hover:text-white">Terms of Service</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script src="script.js"></script>
+
+</body>
+</html>
