@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Route One — Commuter Cycling Gear</title>
+<meta name="description" content="Reflective, weatherproof commuter gear for riders who use the same bike every day." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          ink: '#141F29',
+          paper: '#EEF1EA',
+          papernight: '#101720',
+          steel: '#3F5C74',
+          signal: '#F4B400',
+          moss: '#3E6350',
+          line: '#D7D2C4',
+        },
+        fontFamily: {
+          display: ['"Big Shoulders"', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+        },
+      },
+    },
+  }
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; }
+  .font-display { font-family: 'Big Shoulders', sans-serif; }
+
+  @keyframes riseIn {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .rise-1 { animation: riseIn 0.6s ease-out 0.05s both; }
+  .rise-2 { animation: riseIn 0.6s ease-out 0.2s both; }
+  .rise-3 { animation: riseIn 0.6s ease-out 0.35s both; }
+  .rise-4 { animation: riseIn 0.6s ease-out 0.5s both; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rise-1, .rise-2, .rise-3, .rise-4 { animation: none; }
+  }
+
+  .spin-slow { animation: spin 40s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  input:focus, textarea:focus, button:focus-visible, a:focus-visible {
+    outline: 2px solid #F4B400;
+    outline-offset: 2px;
+  }
+</style>
+</head>
+
+<body class="bg-paper dark:bg-papernight text-ink dark:text-paper font-body antialiased transition-colors duration-300">
+
+<!-- ============ NAV ============ -->
+<header class="sticky top-0 z-40 bg-paper/90 dark:bg-papernight/90 backdrop-blur border-b border-line dark:border-steel/40">
+  <nav class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+
+    <a href="#top" class="flex items-center gap-2 shrink-0">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+        <circle cx="9" cy="21" r="5.5" stroke="currentColor" stroke-width="2"/>
+        <circle cx="23" cy="21" r="5.5" stroke="currentColor" stroke-width="2"/>
+        <path d="M9 21L14 9H20M14 9L23 21M14 9L18 15H9" stroke="#F4B400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="font-display text-xl font-semibold tracking-tight leading-none">Route One</span>
+    </a>
+
+    <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-ink/80 dark:text-paper/80">
+      <li><a href="#top" class="hover:text-ink dark:hover:text-white transition-colors">Home</a></li>
+      <li><a href="#gear" class="hover:text-ink dark:hover:text-white transition-colors">Gear</a></li>
+      <li><a href="#about" class="hover:text-ink dark:hover:text-white transition-colors">About</a></li>
+      <li><a href="#contact" class="hover:text-ink dark:hover:text-white transition-colors">Contact</a></li>
+    </ul>
+
+    <div class="hidden md:flex items-center gap-3">
+      <button id="theme-toggle" type="button" aria-label="Toggle dark mode"
+        class="w-9 h-9 grid place-items-center rounded-full border border-line dark:border-steel/50 hover:bg-steel/10 transition-colors">
+        <svg id="icon-sun" class="w-4 h-4 hidden dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg id="icon-moon" class="w-4 h-4 dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+      </button>
+      <a href="#contact" class="px-4 py-2 rounded-md bg-ink text-paper dark:bg-signal dark:text-ink text-sm font-semibold hover:opacity-90 transition-opacity">Sign in</a>
+    </div>
+
+    <button id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" class="md:hidden w-9 h-9 grid place-items-center">
+      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-line dark:border-steel/40 bg-paper dark:bg-papernight px-5 pb-5 pt-2">
+    <ul class="flex flex-col gap-1 text-sm font-medium">
+      <li><a href="#top" class="block py-2.5 border-b border-line/70 dark:border-steel/30">Home</a></li>
+      <li><a href="#gear" class="block py-2.5 border-b border-line/70 dark:border-steel/30">Gear</a></li>
+      <li><a href="#about" class="block py-2.5 border-b border-line/70 dark:border-steel/30">About</a></li>
+      <li><a href="#contact" class="block py-2.5 border-b border-line/70 dark:border-steel/30">Contact</a></li>
+    </ul>
+    <div class="flex items-center justify-between mt-4">
+      <a href="#contact" class="px-4 py-2 rounded-md bg-ink text-paper dark:bg-signal dark:text-ink text-sm font-semibold">Sign in</a>
+      <button id="theme-toggle-mobile" type="button" aria-label="Toggle dark mode" class="w-9 h-9 grid place-items-center rounded-full border border-line dark:border-steel/50">
+        <svg class="w-4 h-4 hidden dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="w-4 h-4 dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="top" class="relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 pt-16 pb-20 md:pt-24 md:pb-28 grid md:grid-cols-2 gap-12 md:gap-8 items-center">
+
+    <div class="relative z-10">
+      <p class="rise-1 text-sm font-semibold text-moss dark:text-signal mb-4">For riders who commute, not just cycle</p>
+      <h1 class="rise-2 font-display font-semibold text-5xl sm:text-6xl lg:text-7xl leading-[0.95] tracking-tight">
+        Gear that survives your actual commute.
+      </h1>
+      <p class="rise-3 mt-6 text-base sm:text-lg text-ink/70 dark:text-paper/70 max-w-md">
+        Reflective stitching, weatherproof shells and a repair voucher in every box — built for the 7am ride in the rain, not the showroom floor.
+      </p>
+      <div class="rise-4 mt-8 flex flex-wrap items-center gap-4">
+        <a href="#gear" class="px-6 py-3 rounded-md bg-ink dark:bg-signal text-paper dark:text-ink font-semibold shadow-lg shadow-ink/10 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200">Shop the collection</a>
+        <a href="#about" class="text-sm font-semibold text-ink dark:text-paper border-b-2 border-signal pb-0.5 hover:border-ink dark:hover:border-paper transition-colors">What's inside a kit</a>
+      </div>
+
+      <dl class="rise-4 mt-12 grid grid-cols-3 gap-6 max-w-md border-t border-line dark:border-steel/40 pt-6">
+        <div>
+          <dt class="font-display text-3xl font-semibold">40+</dt>
+          <dd class="text-xs text-ink/60 dark:text-paper/60 mt-1">Partner repair shops</dd>
+        </div>
+        <div>
+          <dt class="font-display text-3xl font-semibold">6,200</dt>
+          <dd class="text-xs text-ink/60 dark:text-paper/60 mt-1">Commuters riding gear</dd>
+        </div>
+        <div>
+          <dt class="font-display text-3xl font-semibold">1 yr</dt>
+          <dd class="text-xs text-ink/60 dark:text-paper/60 mt-1">Stitching guarantee</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="relative h-72 sm:h-96 md:h-[28rem] flex items-center justify-center">
+      <div class="absolute w-64 h-64 md:w-80 md:h-80 rounded-full bg-signal/20 dark:bg-signal/10"></div>
+      <svg class="relative w-56 h-56 md:w-72 md:h-72 spin-slow text-steel dark:text-paper/40" viewBox="0 0 200 200" fill="none">
+        <circle cx="100" cy="100" r="88" stroke="currentColor" stroke-width="3"/>
+        <circle cx="100" cy="100" r="10" fill="currentColor"/>
+        <g stroke="currentColor" stroke-width="2">
+          <line x1="100" y1="100" x2="100" y2="12"/>
+          <line x1="100" y1="100" x2="163" y2="37"/>
+          <line x1="100" y1="100" x2="188" y2="100"/>
+          <line x1="100" y1="100" x2="163" y2="163"/>
+          <line x1="100" y1="100" x2="100" y2="188"/>
+          <line x1="100" y1="100" x2="37" y2="163"/>
+          <line x1="100" y1="100" x2="12" y2="100"/>
+          <line x1="100" y1="100" x2="37" y2="37"/>
+        </g>
+      </svg>
+      <svg class="absolute -bottom-2 right-4 w-24 h-24 md:w-32 md:h-32 text-signal" viewBox="0 0 100 100" fill="none">
+        <path d="M10 70 L35 40 L55 55 L90 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M90 20 L74 20 M90 20 L90 36" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section id="about" class="max-w-6xl mx-auto px-5 sm:px-8 py-16 md:py-24">
+  <div class="max-w-lg mb-12">
+    <h2 class="font-display font-semibold text-3xl sm:text-4xl tracking-tight">Built from the inside out</h2>
+    <p class="mt-3 text-ink/70 dark:text-paper/70">Every piece is tested by riders who use it daily, then reworked until it holds up past the first monsoon.</p>
+  </div>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <div class="group p-7 rounded-xl border border-line dark:border-steel/40 bg-white/60 dark:bg-white/5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+      <div class="w-11 h-11 rounded-lg bg-signal/20 flex items-center justify-center mb-5">
+        <svg class="w-6 h-6 text-ink dark:text-signal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l2-6 4 12 2-6h6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h3 class="font-display font-semibold text-xl">Reflective by design</h3>
+      <p class="mt-2 text-sm text-ink/70 dark:text-paper/70 leading-relaxed">3M reflective tape gets stitched into every seam during construction, not glued on as an afterthought.</p>
+    </div>
+
+    <div class="group p-7 rounded-xl border border-line dark:border-steel/40 bg-white/60 dark:bg-white/5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+      <div class="w-11 h-11 rounded-lg bg-signal/20 flex items-center justify-center mb-5">
+        <svg class="w-6 h-6 text-ink dark:text-signal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l7 7M11 4l-7 7M4 15h16M4 20h16" stroke-linecap="round"/></svg>
+      </div>
+      <h3 class="font-display font-semibold text-xl">Stitched for weather</h3>
+      <p class="mt-2 text-sm text-ink/70 dark:text-paper/70 leading-relaxed">Double-stitched panels and taped seams keep the rain out on the ride to work, not just in the product photos.</p>
+    </div>
+
+    <div class="group p-7 rounded-xl border border-line dark:border-steel/40 bg-white/60 dark:bg-white/5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200 sm:col-span-2 lg:col-span-1">
+      <div class="w-11 h-11 rounded-lg bg-signal/20 flex items-center justify-center mb-5">
+        <svg class="w-6 h-6 text-ink dark:text-signal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 13l3-4M9 2h6" stroke-linecap="round"/></svg>
+      </div>
+      <h3 class="font-display font-semibold text-xl">Backed by the shop</h3>
+      <p class="mt-2 text-sm text-ink/70 dark:text-paper/70 leading-relaxed">Every kit ships with a repair voucher, redeemable at more than 40 partner cycle shops across the city.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ PRICING / PRODUCTS ============ -->
+<section id="gear" class="bg-ink text-paper dark:bg-white/5">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-16 md:py-24">
+    <div class="max-w-lg mb-12">
+      <h2 class="font-display font-semibold text-3xl sm:text-4xl tracking-tight">Pick your kit</h2>
+      <p class="mt-3 text-paper/70">Start with one piece or gear up fully — every kit ships within the city in two days.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="rounded-xl border border-paper/15 p-7 flex flex-col hover:border-signal/70 transition-colors duration-200">
+        <h3 class="font-display font-semibold text-2xl">Day Rider</h3>
+        <p class="text-sm text-paper/60 mt-1">For the occasional commute</p>
+        <p class="mt-5 font-display text-4xl font-semibold">₹1,499</p>
+        <ul class="mt-6 space-y-3 text-sm text-paper/80 flex-1">
+          <li class="flex gap-2"><span class="text-signal">＋</span>Reflective vest</li>
+          <li class="flex gap-2"><span class="text-signal">＋</span>Wrist bands, pair</li>
+          <li class="flex gap-2"><span class="text-signal">＋</span>One repair voucher</li>
+        </ul>
+        <a href="#contact" class="mt-7 text-center py-2.5 rounded-md border border-paper/30 font-semibold hover:bg-paper hover:text-ink transition-colors duration-200">Choose Day Rider</a>
+      </div>
+
+      <div class="rounded-xl border-2 border-signal p-7 flex flex-col relative bg-white/5 hover:-translate-y-1 transition-transform duration-200">
+        <p class="text-xs font-semibold text-signal mb-1">Most riders choose this</p>
+        <h3 class="font-display font-semibold text-2xl">Commuter Kit</h3>
+        <p class="text-sm text-paper/60 mt-1">For the daily ride, rain or shine</p>
+        <p class="mt-5 font-display text-4xl font-semibold">₹3,200</p>
+        <ul class="mt-6 space-y-3 text-sm text-paper/80 flex-1">
+          <li class="flex gap-2"><span class="text-signal">＋</span>Full weatherproof jacket</li>
+          <li class="flex gap-2"><span class="text-signal">＋</span>Pannier rain cover</li>
+          <li class="flex gap-2"><span class="text-signal">＋</span>Two repair vouchers</li>
+          <li class="flex gap-2"><span class="text-signal">＋</span>Priority shop booking</li>
+        </ul>
+        <a href="#contact" class="mt-7 text-center py-2.5 rounded-md bg-signal text-ink font-semibold hover:opacity-90 transition-opacity duration-200">Choose Commuter Kit</a>
+      </div>
+
+      <div class="rounded-xl border border-paper/15 p-7 flex flex-col hover:border-signal/70 transition-colors duration-200">
+        <h3 class="font-display font-semibold text-2xl">All-Weather Bundle</h3>
+        <p class="text-sm text-paper/60 mt-1">For riders who go year-round</p>
+        <p class="mt-5 font-display text-4xl font-semibold">₹5,800</p>
+        <ul class="mt-6 space-y-3 text-sm text-paper/80 flex-1">
+          <li class="flex gap-2"><span class="text-signal">＋</span>Jacket + rain shell</li>
+          <li class="flex gap-2"><span class="text-signal">＋</span>Waterproof panniers, pair</li>
+          <li class="flex gap-2"><span class="text-signal">＋</span>Four repair vouchers</li>
+          <li class="flex gap-2"><span class="text-signal">＋</span>Free annual tune-up</li>
+        </ul>
+        <a href="#contact" class="mt-7 text-center py-2.5 rounded-md border border-paper/30 font-semibold hover:bg-paper hover:text-ink transition-colors duration-200">Choose Bundle</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="max-w-6xl mx-auto px-5 sm:px-8 py-16 md:py-24">
+  <h2 class="font-display font-semibold text-3xl sm:text-4xl tracking-tight mb-12 max-w-lg">Riders on the road</h2>
+
+  <div class="grid md:grid-cols-3 gap-6">
+    <figure class="p-6 rounded-xl bg-white/60 dark:bg-white/5 border border-line dark:border-steel/40">
+      <blockquote class="text-sm leading-relaxed text-ink/80 dark:text-paper/80">Gomti Nagar to Hazratganj in the monsoon used to mean a soaked bag every single time. Not anymore.</blockquote>
+      <figcaption class="mt-4 text-xs font-semibold text-ink/60 dark:text-paper/60">Ananya R. · Commuter Kit owner</figcaption>
+    </figure>
+    <figure class="p-6 rounded-xl bg-white/60 dark:bg-white/5 border border-line dark:border-steel/40">
+      <blockquote class="text-sm leading-relaxed text-ink/80 dark:text-paper/80">Used the repair voucher twice in four months. The shop near my office just knows the kit on sight now.</blockquote>
+      <figcaption class="mt-4 text-xs font-semibold text-ink/60 dark:text-paper/60">Faizan K. · All-Weather Bundle owner</figcaption>
+    </figure>
+    <figure class="p-6 rounded-xl bg-white/60 dark:bg-white/5 border border-line dark:border-steel/40">
+      <blockquote class="text-sm leading-relaxed text-ink/80 dark:text-paper/80">Cars actually give me room after dark now. Didn't expect stitching to make that much of a difference.</blockquote>
+      <figcaption class="mt-4 text-xs font-semibold text-ink/60 dark:text-paper/60">Priya S. · Day Rider owner</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="bg-white/60 dark:bg-white/5 border-y border-line dark:border-steel/40">
+  <div class="max-w-3xl mx-auto px-5 sm:px-8 py-16 md:py-24">
+    <h2 class="font-display font-semibold text-3xl sm:text-4xl tracking-tight">Ask us anything</h2>
+    <p class="mt-3 text-ink/70 dark:text-paper/70 max-w-md">Sizing, bulk orders for a riding group, or a repair voucher that didn't scan — write in and we'll get back within a day.</p>
+
+    <form class="mt-10 grid sm:grid-cols-2 gap-6" onsubmit="event.preventDefault(); this.reset(); document.getElementById('form-success').classList.remove('hidden');">
+      <div class="sm:col-span-1">
+        <label for="name" class="block text-sm font-medium mb-1.5">Name</label>
+        <input id="name" name="name" type="text" required placeholder="Your full name"
+          class="w-full bg-transparent border-0 border-b-2 border-line dark:border-steel/50 focus:border-signal px-0 py-2 text-sm placeholder:text-ink/40 dark:placeholder:text-paper/40" />
+      </div>
+      <div class="sm:col-span-1">
+        <label for="email" class="block text-sm font-medium mb-1.5">Email</label>
+        <input id="email" name="email" type="email" required placeholder="you@example.com"
+          class="w-full bg-transparent border-0 border-b-2 border-line dark:border-steel/50 focus:border-signal px-0 py-2 text-sm placeholder:text-ink/40 dark:placeholder:text-paper/40" />
+      </div>
+      <div class="sm:col-span-2">
+        <label for="message" class="block text-sm font-medium mb-1.5">Message</label>
+        <textarea id="message" name="message" rows="4" required placeholder="What can we help with?"
+          class="w-full bg-transparent border-0 border-b-2 border-line dark:border-steel/50 focus:border-signal px-0 py-2 text-sm placeholder:text-ink/40 dark:placeholder:text-paper/40 resize-none"></textarea>
+      </div>
+      <div class="sm:col-span-2 flex items-center gap-4">
+        <button type="submit" class="px-6 py-3 rounded-md bg-ink dark:bg-signal text-paper dark:text-ink font-semibold hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200">Send message</button>
+        <span id="form-success" class="hidden text-sm text-moss dark:text-signal font-medium">Thanks — we'll reply within a day.</span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-ink text-paper">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-12 grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+    <div class="md:col-span-2">
+      <span class="font-display text-xl font-semibold">Route One</span>
+      <p class="mt-3 text-sm text-paper/60 max-w-xs">Commuter cycling gear, made for riders who use the same bike every day and need it to hold up.</p>
+    </div>
+    <div>
+      <h4 class="text-sm font-semibold mb-3">Follow</h4>
+      <ul class="space-y-2 text-sm text-paper/60">
+        <li><a href="#" class="hover:text-paper transition-colors">Instagram</a></li>
+        <li><a href="#" class="hover:text-paper transition-colors">X</a></li>
+        <li><a href="#" class="hover:text-paper transition-colors">YouTube</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-sm font-semibold mb-3">Legal</h4>
+      <ul class="space-y-2 text-sm text-paper/60">
+        <li><a href="#" class="hover:text-paper transition-colors">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-paper transition-colors">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-paper/10">
+    <p class="max-w-6xl mx-auto px-5 sm:px-8 py-5 text-xs text-paper/50">© 2026 Route One Cycling Co. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden');
+    menuBtn.setAttribute('aria-expanded', String(!isOpen));
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+  });
+
+  // Dark mode toggle with persistence
+  const root = document.documentElement;
+  const applyTheme = (theme) => {
+    root.classList.toggle('dark', theme === 'dark');
+  };
+  const stored = localStorage.getItem('route-one-theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(stored || (prefersDark ? 'dark' : 'light'));
+
+  const toggleTheme = () => {
+    const next = root.classList.contains('dark') ? 'light' : 'dark';
+    applyTheme(next);
+    localStorage.setItem('route-one-theme', next);
+  };
+  document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+  document.getElementById('theme-toggle-mobile').addEventListener('click', toggleTheme);
+</script>
+
+</body>
+</html>

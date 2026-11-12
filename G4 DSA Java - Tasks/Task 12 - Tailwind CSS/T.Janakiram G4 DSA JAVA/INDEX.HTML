@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaTech - Next-Gen Productivity Workspace</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            },
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased transition-colors duration-300 dark:bg-slate-900 dark:text-slate-100">
+
+  <!-- 1. Navigation Bar -->
+  <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/90">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <!-- Logo -->
+      <a href="#" class="flex items-center space-x-2 text-2xl font-black tracking-tight text-brand-600 dark:text-brand-500">
+        <span class="inline-block h-8 w-8 rounded-lg bg-brand-600 text-center leading-8 text-white">N</span>
+        <span>NovaTech</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden items-center space-x-8 font-medium md:flex">
+        <a href="#home" class="transition hover:text-brand-600 dark:hover:text-brand-500">Home</a>
+        <a href="#features" class="transition hover:text-brand-600 dark:hover:text-brand-500">Features</a>
+        <a href="#pricing" class="transition hover:text-brand-600 dark:hover:text-brand-500">Products</a>
+        <a href="#testimonials" class="transition hover:text-brand-600 dark:hover:text-brand-500">About</a>
+        <a href="#contact" class="transition hover:text-brand-600 dark:hover:text-brand-500">Contact</a>
+      </nav>
+
+      <!-- Desktop CTA & Theme Toggle -->
+      <div class="hidden items-center space-x-4 md:flex">
+        <button id="theme-toggle" aria-label="Toggle Dark Mode" class="rounded-lg border border-slate-200 p-2 text-slate-500 hover:bg-slate-100 dark:border-slate-700 dark:text-slate-400 dark:hover:bg-slate-800">
+          <span id="theme-icon">🌙</span>
+        </button>
+        <a href="#pricing" class="rounded-lg bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-700">Get Started</a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex items-center space-x-2 md:hidden">
+        <button id="mobile-theme-toggle" aria-label="Toggle Dark Mode" class="rounded-lg border border-slate-200 p-2 text-slate-500 hover:bg-slate-100 dark:border-slate-700 dark:text-slate-400 dark:hover:bg-slate-800">
+          <span id="mobile-theme-icon">🌙</span>
+        </button>
+        <button id="menu-btn" aria-label="Open Navigation Menu" class="rounded-lg p-2 text-slate-600 hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-800">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden border-t border-slate-200 px-6 py-4 md:hidden dark:border-slate-800">
+      <nav class="flex flex-col space-y-3 font-medium">
+        <a href="#home" class="mobile-link transition hover:text-brand-600">Home</a>
+        <a href="#features" class="mobile-link transition hover:text-brand-600">Features</a>
+        <a href="#pricing" class="mobile-link transition hover:text-brand-600">Products</a>
+        <a href="#testimonials" class="mobile-link transition hover:text-brand-600">About</a>
+        <a href="#contact" class="mobile-link transition hover:text-brand-600">Contact</a>
+        <a href="#pricing" class="mt-2 block w-full rounded-lg bg-brand-600 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-brand-700">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 2. Hero Section -->
+  <section id="home" class="py-16 md:py-24">
+    <div class="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2">
+      <div>
+        <span class="inline-block rounded-full bg-brand-50 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-brand-600 dark:bg-slate-800 dark:text-brand-500">Version 2.0 Released</span>
+        <h1 class="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+          Supercharge your workflow in one workspace.
+        </h1>
+        <p class="mt-6 text-lg text-slate-600 dark:text-slate-400">
+          Consolidate tasks, docs, analytics, and team chats into a single high-performance dashboard designed for modern engineering teams.
+        </p>
+        <div class="mt-8 flex flex-col space-y-3 sm:flex-row sm:space-x-4 sm:space-y-0">
+          <a href="#pricing" class="rounded-lg bg-brand-600 px-8 py-3.5 text-center font-semibold text-white shadow-lg transition hover:bg-brand-700 hover:shadow-indigo-500/25">Shop Plans</a>
+          <a href="#features" class="rounded-lg border border-slate-300 bg-white px-8 py-3.5 text-center font-semibold text-slate-700 transition hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700">Explore Demo</a>
+        </div>
+      </div>
+      <div class="relative">
+        <img class="w-full rounded-2xl border border-slate-200 object-cover shadow-2xl dark:border-slate-800" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="NovaTech Analytics Dashboard" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Features Section -->
+  <section id="features" class="bg-white py-16 dark:bg-slate-800/50 md:py-24">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Engineered for absolute speed</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-slate-600 dark:text-slate-400">Everything you need to deliver production-grade projects without the operational bloat.</p>
+      </div>
+
+      <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Feature 1 -->
+        <div class="group rounded-xl border border-slate-200 bg-slate-50 p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-500 hover:shadow-xl dark:border-slate-700 dark:bg-slate-800">
+          <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-brand-600 text-xl text-white">⚡</div>
+          <h3 class="mt-6 text-xl font-bold">Real-Time Sync</h3>
+          <p class="mt-3 text-slate-600 dark:text-slate-400">Sub-millisecond data synchronization across global distributed teams and edge nodes.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="group rounded-xl border border-slate-200 bg-slate-50 p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-500 hover:shadow-xl dark:border-slate-700 dark:bg-slate-800">
+          <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-brand-600 text-xl text-white">🛡️</div>
+          <h3 class="mt-6 text-xl font-bold">Zero-Trust Security</h3>
+          <p class="mt-3 text-slate-600 dark:text-slate-400">End-to-end encrypted storage, SOC-2 compliant authentication, and granular RBAC controls.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="group rounded-xl border border-slate-200 bg-slate-50 p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-500 hover:shadow-xl dark:border-slate-700 dark:bg-slate-800">
+          <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-brand-600 text-xl text-white">📊</div>
+          <h3 class="mt-6 text-xl font-bold">Predictive Analytics</h3>
+          <p class="mt-3 text-slate-600 dark:text-slate-400">Automated workload forecasting, anomaly detection, and automated report generation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Product / Pricing Section -->
+  <section id="pricing" class="py-16 md:py-24">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Transparent, flexible plans</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-slate-600 dark:text-slate-400">Scale without friction. Upgrade or downgrade anytime with no hidden charges.</p>
+      </div>
+
+      <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+        <!-- Starter Plan -->
+        <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:shadow-xl dark:border-slate-800 dark:bg-slate-800">
+          <h3 class="text-xl font-bold">Starter</h3>
+          <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">For indie hackers and small experiments.</p>
+          <div class="mt-6 flex items-baseline">
+            <span class="text-4xl font-extrabold">$19</span>
+            <span class="ml-1 text-slate-500">/month</span>
+          </div>
+          <ul class="mt-6 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+            <li>✓ Up to 5 team members</li>
+            <li>✓ 10 GB cloud storage</li>
+            <li>✓ Standard community support</li>
+          </ul>
+          <button class="mt-8 w-full rounded-lg border border-brand-600 bg-transparent py-3 font-semibold text-brand-600 transition hover:bg-brand-600 hover:text-white">Choose Starter</button>
+        </div>
+
+        <!-- Pro Plan (Featured) -->
+        <div class="relative rounded-2xl border-2 border-brand-600 bg-white p-8 shadow-xl transition duration-300 hover:scale-105 dark:border-brand-500 dark:bg-slate-800">
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-600 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white">Most Popular</span>
+          <h3 class="text-xl font-bold">Professional</h3>
+          <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">For scaling businesses and fast teams.</p>
+          <div class="mt-6 flex items-baseline">
+            <span class="text-4xl font-extrabold">$49</span>
+            <span class="ml-1 text-slate-500">/month</span>
+          </div>
+          <ul class="mt-6 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+            <li>✓ Unlimited team members</li>
+            <li>✓ 1 TB high-speed storage</li>
+            <li>✓ Priority 24/7 technical support</li>
+            <li>✓ Advanced audit logs</li>
+          </ul>
+          <button class="mt-8 w-full rounded-lg bg-brand-600 py-3 font-semibold text-white transition hover:bg-brand-700">Choose Pro</button>
+        </div>
+
+        <!-- Enterprise Plan -->
+        <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:shadow-xl dark:border-slate-800 dark:bg-slate-800">
+          <h3 class="text-xl font-bold">Enterprise</h3>
+          <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">For high-volume, regulated operations.</p>
+          <div class="mt-6 flex items-baseline">
+            <span class="text-4xl font-extrabold">$99</span>
+            <span class="ml-1 text-slate-500">/month</span>
+          </div>
+          <ul class="mt-6 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+            <li>✓ Dedicated account manager</li>
+            <li>✓ Custom SSO & SAML support</li>
+            <li>✓ 99.99% uptime SLA</li>
+            <li>✓ Custom cloud deployments</li>
+          </ul>
+          <button class="mt-8 w-full rounded-lg border border-slate-300 bg-transparent py-3 font-semibold text-slate-700 transition hover:bg-slate-100 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-700">Contact Sales</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bonus: Testimonial Section -->
+  <section id="testimonials" class="bg-white py-16 dark:bg-slate-800/50 md:py-24">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Trusted by innovators worldwide</h2>
+      </div>
+      <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-xl border border-slate-200 p-6 dark:border-slate-700 dark:bg-slate-800">
+          <p class="italic text-slate-600 dark:text-slate-400">"NovaTech cut our project deployment cycles in half. The responsive layout and clean dashboards make managing teams effortless."</p>
+          <div class="mt-4 font-semibold text-slate-900 dark:text-white">Alex Rivera</div>
+          <div class="text-xs text-slate-500">CTO at CloudScale</div>
+        </div>
+        <div class="rounded-xl border border-slate-200 p-6 dark:border-slate-700 dark:bg-slate-800">
+          <p class="italic text-slate-600 dark:text-slate-400">"The fastest UI performance we have tested. The zero-trust security configuration integrated directly with our stack."</p>
+          <div class="mt-4 font-semibold text-slate-900 dark:text-white">Samantha Wright</div>
+          <div class="text-xs text-slate-500">Head of Product at Nexus</div>
+        </div>
+        <div class="rounded-xl border border-slate-200 p-6 dark:border-slate-700 dark:bg-slate-800">
+          <p class="italic text-slate-600 dark:text-slate-400">"Transitioning our 120-person engineering team took less than an afternoon. Highly recommended."</p>
+          <div class="mt-4 font-semibold text-slate-900 dark:text-white">David Chen</div>
+          <div class="text-xs text-slate-500">Lead Architect at FinFlow</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Contact Section -->
+  <section id="contact" class="py-16 md:py-24">
+    <div class="mx-auto max-w-3xl px-6">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Get in touch</h2>
+        <p class="mt-4 text-slate-600 dark:text-slate-400">Have questions or need assistance? Fill out the form below and our team will get back to you within 24 hours.</p>
+      </div>
+
+      <form class="mt-12 space-y-6 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-800 dark:bg-slate-800">
+        <div>
+          <label for="name" class="block text-sm font-medium">Full Name</label>
+          <input type="text" id="name" required placeholder="Jane Doe" class="mt-2 w-full rounded-lg border border-slate-300 bg-transparent px-4 py-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20 dark:border-slate-700" />
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-medium">Work Email</label>
+          <input type="email" id="email" required placeholder="jane@company.com" class="mt-2 w-full rounded-lg border border-slate-300 bg-transparent px-4 py-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20 dark:border-slate-700" />
+        </div>
+
+        <div>
+          <label for="message" class="block text-sm font-medium">Message</label>
+          <textarea id="message" rows="4" required placeholder="Tell us how we can help..." class="mt-2 w-full rounded-lg border border-slate-300 bg-transparent px-4 py-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20 dark:border-slate-700"></textarea>
+        </div>
+
+        <button type="submit" class="w-full rounded-lg bg-brand-600 py-3.5 text-center font-semibold text-white transition hover:bg-brand-700 focus:ring-4 focus:ring-brand-500/30">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 6. Footer -->
+  <footer class="border-t border-slate-200 bg-white py-12 dark:border-slate-800 dark:bg-slate-900">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 sm:flex-row">
+      <div>
+        <p class="font-bold text-brand-600 dark:text-brand-500">NovaTech Inc.</p>
+        <p class="text-xs text-slate-500">© 2026 NovaTech. All rights reserved.</p>
+      </div>
+
+      <div class="flex space-x-6 text-sm text-slate-600 dark:text-slate-400">
+        <a href="#" class="transition hover:text-brand-600">Privacy Policy</a>
+        <a href="#" class="transition hover:text-brand-600">Terms of Service</a>
+        <a href="#" class="transition hover:text-brand-600">Security</a>
+      </div>
+
+      <div class="flex space-x-4 text-slate-500">
+        <a href="#" aria-label="GitHub" class="transition hover:text-brand-600">GitHub</a>
+        <a href="#" aria-label="Twitter" class="transition hover:text-brand-600">Twitter</a>
+        <a href="#" aria-label="LinkedIn" class="transition hover:text-brand-600">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Finora — Track. Plan. Grow.</title>
+
+
+    <!-- Tailwind CSS -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <!-- Tailwind Configuration -->
+
+    <script>
+
+        tailwind.config = {
+            darkMode: "class"
+        };
+
+    </script>
+
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body
+    class="bg-white text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-white"
+>
+
+
+    <!-- ============================= -->
+    <!-- NAVIGATION -->
+    <!-- ============================= -->
+
+    <header
+        class="finora-navbar sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-md dark:border-slate-800 dark:bg-slate-950/90"
+    >
+
+        <nav
+            class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+        >
+
+            <!-- Logo -->
+
+            <a
+                href="#home"
+                class="finora-logo text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white"
+            >
+
+                Fin<span class="text-emerald-500">ora</span>
+
+            </a>
+
+
+            <!-- Desktop Navigation -->
+
+            <div class="hidden items-center gap-8 md:flex">
+
+                <a
+                    href="#home"
+                    class="nav-link text-sm font-medium text-slate-600 hover:text-emerald-500 dark:text-slate-300"
+                >
+                    Home
+                </a>
+
+                <a
+                    href="#features"
+                    class="nav-link text-sm font-medium text-slate-600 hover:text-emerald-500 dark:text-slate-300"
+                >
+                    Features
+                </a>
+
+                <a
+                    href="#how-it-works"
+                    class="nav-link text-sm font-medium text-slate-600 hover:text-emerald-500 dark:text-slate-300"
+                >
+                    How It Works
+                </a>
+
+                <a
+                    href="#pricing"
+                    class="nav-link text-sm font-medium text-slate-600 hover:text-emerald-500 dark:text-slate-300"
+                >
+                    Plans
+                </a>
+
+                <a
+                    href="#contact"
+                    class="nav-link text-sm font-medium text-slate-600 hover:text-emerald-500 dark:text-slate-300"
+                >
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- Right Side -->
+
+            <div class="flex items-center gap-3">
+
+
+                <!-- Theme Toggle -->
+
+                <button
+                    id="theme-toggle"
+                    type="button"
+                    class="theme-toggle rounded-full border border-slate-200 bg-slate-100 p-2.5 text-slate-700 transition hover:bg-slate-200 dark:border-slate-700 dark:bg-slate-800 dark:text-yellow-300 dark:hover:bg-slate-700"
+                    aria-label="Toggle dark mode"
+                >
+
+                    <span id="sun-icon">
+                        ☀️
+                    </span>
+
+                    <span
+                        id="moon-icon"
+                        class="hidden"
+                    >
+                        🌙
+                    </span>
+
+                </button>
+
+
+                <!-- Get Started -->
+
+                <a
+                    href="#pricing"
+                    class="get-started-btn hidden rounded-full bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white sm:inline-block"
+                >
+                    Get Started
+                </a>
+
+
+                <!-- Mobile Menu Button -->
+
+                <button
+                    id="menu-button"
+                    type="button"
+                    class="rounded-lg p-2 text-xl text-slate-700 transition hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800 md:hidden"
+                    aria-label="Open navigation menu"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+        </nav>
+
+
+        <!-- Mobile Menu -->
+
+        <div
+            id="mobile-menu"
+            class="mobile-menu hidden border-t border-slate-200 bg-white px-4 pb-5 pt-3 dark:border-slate-800 dark:bg-slate-950 md:hidden"
+        >
+
+            <div class="flex flex-col gap-2">
+
+                <a
+                    href="#home"
+                    class="rounded-lg px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-emerald-50 hover:text-emerald-600 dark:text-slate-300 dark:hover:bg-emerald-950 dark:hover:text-emerald-400"
+                >
+                    Home
+                </a>
+
+                <a
+                    href="#features"
+                    class="rounded-lg px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-emerald-50 hover:text-emerald-600 dark:text-slate-300 dark:hover:bg-emerald-950 dark:hover:text-emerald-400"
+                >
+                    Features
+                </a>
+
+                <a
+                    href="#how-it-works"
+                    class="rounded-lg px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-emerald-50 hover:text-emerald-600 dark:text-slate-300 dark:hover:bg-emerald-950 dark:hover:text-emerald-400"
+                >
+                    How It Works
+                </a>
+
+                <a
+                    href="#pricing"
+                    class="rounded-lg px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-emerald-50 hover:text-emerald-600 dark:text-slate-300 dark:hover:bg-emerald-950 dark:hover:text-emerald-400"
+                >
+                    Plans
+                </a>
+
+                <a
+                    href="#contact"
+                    class="rounded-lg px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-emerald-50 hover:text-emerald-600 dark:text-slate-300 dark:hover:bg-emerald-950 dark:hover:text-emerald-400"
+                >
+                    Contact
+                </a>
+
+                <a
+                    href="#pricing"
+                    class="mt-2 rounded-lg bg-emerald-500 px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-emerald-600"
+                >
+                    Get Started
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ============================= -->
+    <!-- MAIN CONTENT -->
+    <!-- ============================= -->
+
+    <main>
+
+
+        <!-- ============================= -->
+        <!-- HERO SECTION -->
+        <!-- ============================= -->
+
+        <section
+            id="home"
+            class="relative overflow-hidden bg-slate-50 transition-colors duration-300 dark:bg-slate-950"
+        >
+
+            <!-- Decorative Background -->
+
+            <div
+                class="hero-glow pointer-events-none absolute -right-40 -top-40 h-96 w-96 rounded-full bg-emerald-200/40 blur-3xl dark:bg-emerald-900/20"
+            ></div>
+
+
+            <div
+                class="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 md:py-24 lg:grid-cols-2 lg:px-8 lg:py-28"
+            >
+
+
+                <!-- Hero Content -->
+
+                <div class="max-w-2xl">
+
+                    <!-- Badge -->
+
+                    <div
+                        class="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm font-semibold text-emerald-700 dark:border-emerald-900 dark:bg-emerald-950/50 dark:text-emerald-400"
+                    >
+
+                        <span
+                            class="h-2 w-2 rounded-full bg-emerald-500"
+                        ></span>
+
+                        SMARTER MONEY MANAGEMENT
+
+                    </div>
+
+
+                    <!-- Heading -->
+
+                    <h1
+                        class="text-5xl font-black leading-tight tracking-tight text-slate-900 dark:text-white sm:text-6xl lg:text-7xl"
+                    >
+
+                        Your money.
+                        <br>
+
+                        Your plan.
+                        <br>
+
+                        <span class="text-emerald-500">
+                            Your future.
+                        </span>
+
+                    </h1>
+
+
+                    <!-- Description -->
+
+                    <p
+                        class="mt-6 max-w-xl text-lg leading-8 text-slate-600 dark:text-slate-300 sm:text-xl"
+                    >
+
+                        Finora gives you a simple way to track expenses,
+                        manage your budget, and build better financial habits.
+
+                    </p>
+
+
+                    <!-- CTA Buttons -->
+
+                    <div
+                        class="mt-8 flex flex-col gap-4 sm:flex-row"
+                    >
+
+                        <a
+                            href="#pricing"
+                            class="inline-flex items-center justify-center rounded-full bg-emerald-500 px-7 py-3.5 text-base font-bold text-white shadow-lg shadow-emerald-500/20 transition hover:-translate-y-1 hover:bg-emerald-600 hover:shadow-xl"
+                        >
+
+                            Get Started
+
+                            <span class="ml-2">
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="#features"
+                            class="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-7 py-3.5 text-base font-bold text-slate-700 transition hover:-translate-y-1 hover:border-emerald-300 hover:text-emerald-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:border-emerald-600 dark:hover:text-emerald-400"
+                        >
+
+                            Explore Features
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Trust Information -->
+
+                    <div
+                        class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-slate-500 dark:text-slate-400"
+                    >
+
+                        <span class="flex items-center gap-2">
+                            <span class="text-emerald-500">✓</span>
+                            Free to get started
+                        </span>
+
+                        <span class="flex items-center gap-2">
+                            <span class="text-emerald-500">✓</span>
+                            No credit card required
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ============================= -->
+                <!-- FINANCIAL DASHBOARD -->
+                <!-- ============================= -->
+
+                <div class="relative mx-auto w-full max-w-lg lg:ml-auto">
+
+
+                    <!-- Main Dashboard -->
+
+                    <div
+                        class="dashboard-card rounded-3xl border border-slate-200 bg-white p-5 shadow-2xl shadow-slate-300/40 transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900 dark:shadow-black/40 sm:p-7"
+                    >
+
+
+                        <!-- Dashboard Header -->
+
+                        <div
+                            class="flex items-start justify-between"
+                        >
+
+                            <div>
+
+                                <p
+                                    class="text-sm font-medium text-slate-500 dark:text-slate-400"
+                                >
+                                    Good morning 👋
+                                </p>
+
+                                <h2
+                                    class="mt-1 text-xl font-bold text-slate-900 dark:text-white"
+                                >
+                                    Financial Overview
+                                </h2>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                class="rounded-lg p-2 text-slate-400 transition hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-slate-800 dark:hover:text-slate-200"
+                                aria-label="Dashboard options"
+                            >
+                                •••
+                            </button>
+
+                        </div>
+
+
+                        <!-- Balance -->
+
+                        <div
+                            class="mt-6 rounded-2xl bg-slate-900 p-5 text-white dark:bg-slate-800"
+                        >
+
+                            <p class="text-sm text-slate-300">
+                                Total Balance
+                            </p>
+
+                            <p
+                                class="mt-2 text-3xl font-black tracking-tight sm:text-4xl"
+                            >
+                                ₹84,250.00
+                            </p>
+
+                            <div
+                                class="mt-3 flex items-center gap-2 text-sm"
+                            >
+
+                                <span
+                                    class="rounded-full bg-emerald-500/20 px-2 py-1 font-semibold text-emerald-400"
+                                >
+                                    +12.8%
+                                </span>
+
+                                <span class="text-slate-400">
+                                    this month
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Income / Expenses -->
+
+                        <div
+                            class="mt-5 grid grid-cols-2 gap-4"
+                        >
+
+                            <!-- Income -->
+
+                            <div
+                                class="rounded-2xl border border-slate-200 p-4 dark:border-slate-700 dark:bg-slate-800"
+                            >
+
+                                <div class="flex items-center gap-2">
+
+                                    <span
+                                        class="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-100 dark:bg-emerald-900/40"
+                                    >
+                                        ↗
+                                    </span>
+
+                                    <p
+                                        class="text-sm text-slate-500 dark:text-slate-400"
+                                    >
+                                        Income
+                                    </p>
+
+                                </div>
+
+                                <p
+                                    class="mt-3 text-xl font-bold text-slate-900 dark:text-white"
+                                >
+                                    ₹45,000
+                                </p>
+
+                            </div>
+
+
+                            <!-- Expenses -->
+
+                            <div
+                                class="rounded-2xl border border-slate-200 p-4 dark:border-slate-700 dark:bg-slate-800"
+                            >
+
+                                <div class="flex items-center gap-2">
+
+                                    <span
+                                        class="flex h-9 w-9 items-center justify-center rounded-lg bg-red-100 dark:bg-red-900/40"
+                                    >
+                                        ↘
+                                    </span>
+
+                                    <p
+                                        class="text-sm text-slate-500 dark:text-slate-400"
+                                    >
+                                        Expenses
+                                    </p>
+
+                                </div>
+
+                                <p
+                                    class="mt-3 text-xl font-bold text-slate-900 dark:text-white"
+                                >
+                                    ₹28,500
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Savings Goal -->
+
+                        <div
+                            class="mt-5 rounded-2xl border border-slate-200 p-5 dark:border-slate-700 dark:bg-slate-800"
+                        >
+
+                            <div
+                                class="flex items-center justify-between"
+                            >
+
+                                <div>
+
+                                    <p
+                                        class="text-sm font-semibold text-slate-900 dark:text-white"
+                                    >
+                                        Savings Goal
+                                    </p>
+
+                                    <p
+                                        class="mt-1 text-xs text-slate-500 dark:text-slate-400"
+                                    >
+                                        New Laptop
+                                    </p>
+
+                                </div>
+
+                                <span
+                                    class="text-sm font-bold text-emerald-600"
+                                >
+                                    76%
+                                </span>
+
+                            </div>
+
+
+                            <!-- Progress Bar -->
+
+                            <div
+                                class="mt-4 h-3 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-700"
+                            >
+
+                                <div
+                                    class="savings-progress h-full w-[76%] rounded-full bg-emerald-500"
+                                ></div>
+
+                            </div>
+
+
+                            <div
+                                class="mt-3 flex justify-between text-xs text-slate-500 dark:text-slate-400"
+                            >
+
+                                <span>
+                                    ₹38,000 saved
+                                </span>
+
+                                <span>
+                                    Goal ₹50,000
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Bottom Indicator -->
+
+                        <div
+                            class="mt-5 flex items-center justify-between rounded-xl bg-emerald-50 px-4 py-3 dark:bg-emerald-950/40"
+                        >
+
+                            <div class="flex items-center gap-2">
+
+                                <span>
+                                    🎯
+                                </span>
+
+                                <span
+                                    class="text-sm font-medium text-slate-700 dark:text-slate-200"
+                                >
+                                    You're on track!
+                                </span>
+
+                            </div>
+
+                            <span
+                                class="text-sm font-bold text-emerald-600 dark:text-emerald-400"
+                            >
+                                24 days left
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- FINANCIAL OVERVIEW -->
+        <!-- ============================= -->
+
+        <section
+            class="bg-white px-4 py-20 transition-colors duration-300 dark:bg-slate-950 sm:px-6 lg:px-8"
+        >
+
+            <div class="mx-auto max-w-7xl">
+
+                <div class="mx-auto max-w-2xl text-center">
+
+                    <p
+                        class="text-sm font-bold tracking-widest text-emerald-500"
+                    >
+                        YOUR MONEY AT A GLANCE
+                    </p>
+
+                    <h2
+                        class="mt-3 text-3xl font-black text-slate-900 dark:text-white sm:text-4xl"
+                    >
+                        Financial Overview
+                    </h2>
+
+                    <p
+                        class="mt-4 text-slate-600 dark:text-slate-400"
+                    >
+                        Keep track of the numbers that matter most.
+                    </p>
+
+                </div>
+
+
+                <!-- Statistics -->
+
+                <div
+                    class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
+                >
+
+                    <!-- Balance -->
+
+                    <article
+                        class="overview-card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900"
+                    >
+
+                        <span class="text-3xl">
+                            💰
+                        </span>
+
+                        <p
+                            class="mt-4 text-sm text-slate-500 dark:text-slate-400"
+                        >
+                            Total Balance
+                        </p>
+
+                        <h3
+                            class="mt-2 text-2xl font-bold text-slate-900 dark:text-white"
+                        >
+                            ₹84,250
+                        </h3>
+
+                        <p
+                            class="mt-2 text-sm text-slate-500 dark:text-slate-400"
+                        >
+                            Available balance
+                        </p>
+
+                    </article>
+
+
+                    <!-- Income -->
+
+                    <article
+                        class="overview-card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900"
+                    >
+
+                        <span class="text-3xl">
+                            📈
+                        </span>
+
+                        <p
+                            class="mt-4 text-sm text-slate-500 dark:text-slate-400"
+                        >
+                            Monthly Income
+                        </p>
+
+                        <h3
+                            class="mt-2 text-2xl font-bold text-slate-900 dark:text-white"
+                        >
+                            ₹45,000
+                        </h3>
+
+                        <p
+                            class="mt-2 text-sm text-emerald-600 dark:text-emerald-400"
+                        >
+                            +8.4% from last month
+                        </p>
+
+                    </article>
+
+
+                    <!-- Expenses -->
+
+                    <article
+                        class="overview-card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900"
+                    >
+
+                        <span class="text-3xl">
+                            💳
+                        </span>
+
+                        <p
+                            class="mt-4 text-sm text-slate-500 dark:text-slate-400"
+                        >
+                            Monthly Expenses
+                        </p>
+
+                        <h3
+                            class="mt-2 text-2xl font-bold text-slate-900 dark:text-white"
+                        >
+                            ₹28,500
+                        </h3>
+
+                        <p
+                            class="mt-2 text-sm text-emerald-600 dark:text-emerald-400"
+                        >
+                            12% under budget
+                        </p>
+
+                    </article>
+
+
+                    <!-- Savings -->
+
+                    <article
+                        class="overview-card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900"
+                    >
+
+                        <span class="text-3xl">
+                            🎯
+                        </span>
+
+                        <p
+                            class="mt-4 text-sm text-slate-500 dark:text-slate-400"
+                        >
+                            Total Savings
+                        </p>
+
+                        <h3
+                            class="mt-2 text-2xl font-bold text-slate-900 dark:text-white"
+                        >
+                            ₹16,500
+                        </h3>
+
+                        <p
+                            class="mt-2 text-sm text-emerald-600 dark:text-emerald-400"
+                        >
+                            Goal progress: 76%
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- FEATURES -->
+        <!-- ============================= -->
+
+        <section
+            id="features"
+            class="bg-slate-50 px-4 py-20 transition-colors duration-300 dark:bg-slate-900 sm:px-6 lg:px-8"
+        >
+
+            <div class="mx-auto max-w-7xl">
+
+                <div class="mx-auto max-w-2xl text-center">
+
+                    <p
+                        class="text-sm font-bold tracking-widest text-emerald-500"
+                    >
+                        POWERFUL FEATURES
+                    </p>
+
+                    <h2
+                        class="mt-3 text-3xl font-black text-slate-900 dark:text-white sm:text-4xl"
+                    >
+                        Everything you need to manage your money.
+                    </h2>
+
+                    <p
+                        class="mt-4 text-slate-600 dark:text-slate-400"
+                    >
+                        Simple tools designed to help you make smarter
+                        financial decisions every day.
+                    </p>
+
+                </div>
+
+
+                <!-- Feature Cards -->
+
+                <div
+                    class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3"
+                >
+
+                    <!-- Feature 1 -->
+
+                    <article
+                        class="feature-card rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl dark:border-slate-800 dark:bg-slate-950"
+                    >
+
+                        <div
+                            class="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-100 text-2xl dark:bg-emerald-900/40"
+                        >
+                            💰
+                        </div>
+
+                        <h3
+                            class="mt-6 text-xl font-bold text-slate-900 dark:text-white"
+                        >
+                            Smart Budgeting
+                        </h3>
+
+                        <p
+                            class="mt-3 leading-7 text-slate-600 dark:text-slate-400"
+                        >
+                            Create flexible budgets and know exactly
+                            how much you can spend.
+                        </p>
+
+                        <a
+                            href="#"
+                            class="mt-5 inline-block font-semibold text-emerald-600 hover:text-emerald-700 dark:text-emerald-400"
+                        >
+                            Learn more →
+                        </a>
+
+                    </article>
+
+
+                    <!-- Feature 2 -->
+
+                    <article
+                        class="feature-card rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl dark:border-slate-800 dark:bg-slate-950"
+                    >
+
+                        <div
+                            class="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-100 text-2xl dark:bg-blue-900/40"
+                        >
+                            📊
+                        </div>
+
+                        <h3
+                            class="mt-6 text-xl font-bold text-slate-900 dark:text-white"
+                        >
+                            Expense Tracking
+                        </h3>
+
+                        <p
+                            class="mt-3 leading-7 text-slate-600 dark:text-slate-400"
+                        >
+                            Understand where your money goes and
+                            discover your spending patterns.
+                        </p>
+
+                        <a
+                            href="#"
+                            class="mt-5 inline-block font-semibold text-emerald-600 hover:text-emerald-700 dark:text-emerald-400"
+                        >
+                            Learn more →
+                        </a>
+
+                    </article>
+
+
+                    <!-- Feature 3 -->
+
+                    <article
+                        class="feature-card rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl dark:border-slate-800 dark:bg-slate-950"
+                    >
+
+                        <div
+                            class="flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-100 text-2xl dark:bg-purple-900/40"
+                        >
+                            🎯
+                        </div>
+
+                        <h3
+                            class="mt-6 text-xl font-bold text-slate-900 dark:text-white"
+                        >
+                            Savings Goals
+                        </h3>
+
+                        <p
+                            class="mt-3 leading-7 text-slate-600 dark:text-slate-400"
+                        >
+                            Set meaningful goals and watch your
+                            progress grow month by month.
+                        </p>
+
+                        <a
+                            href="#"
+                            class="mt-5 inline-block font-semibold text-emerald-600 hover:text-emerald-700 dark:text-emerald-400"
+                        >
+                            Learn more →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- HOW IT WORKS -->
+        <!-- ============================= -->
+
+        <section
+            id="how-it-works"
+            class="bg-white px-4 py-20 transition-colors duration-300 dark:bg-slate-950 sm:px-6 lg:px-8"
+        >
+
+            <div class="mx-auto max-w-7xl">
+
+                <div class="mx-auto max-w-2xl text-center">
+
+                    <p
+                        class="text-sm font-bold tracking-widest text-emerald-500"
+                    >
+                        SIMPLE PROCESS
+                    </p>
+
+                    <h2
+                        class="mt-3 text-3xl font-black text-slate-900 dark:text-white sm:text-4xl"
+                    >
+                        How Finora works
+                    </h2>
+
+                    <p
+                        class="mt-4 text-slate-600 dark:text-slate-400"
+                    >
+                        Take control of your finances in three simple steps.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3"
+                >
+
+                    <!-- Step 1 -->
+
+                    <article
+                        class="rounded-3xl border border-slate-200 bg-slate-50 p-7 dark:border-slate-800 dark:bg-slate-900"
+                    >
+
+                        <span
+                            class="text-5xl font-black text-emerald-500"
+                        >
+                            01
+                        </span>
+
+                        <h3
+                            class="mt-6 text-xl font-bold text-slate-900 dark:text-white"
+                        >
+                            Connect
+                        </h3>
+
+                        <p
+                            class="mt-3 leading-7 text-slate-600 dark:text-slate-400"
+                        >
+                            Connect your financial information
+                            and bring everything together.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Step 2 -->
+
+                    <article
+                        class="rounded-3xl border border-slate-200 bg-slate-50 p-7 dark:border-slate-800 dark:bg-slate-900"
+                    >
+
+                        <span
+                            class="text-5xl font-black text-emerald-500"
+                        >
+                            02
+                        </span>
+
+                        <h3
+                            class="mt-6 text-xl font-bold text-slate-900 dark:text-white"
+                        >
+                            Track
+                        </h3>
+
+                        <p
+                            class="mt-3 leading-7 text-slate-600 dark:text-slate-400"
+                        >
+                            Monitor your income, expenses,
+                            budgets and savings.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Step 3 -->
+
+                    <article
+                        class="rounded-3xl border border-slate-200 bg-slate-50 p-7 dark:border-slate-800 dark:bg-slate-900"
+                    >
+
+                        <span
+                            class="text-5xl font-black text-emerald-500"
+                        >
+                            03
+                        </span>
+
+                        <h3
+                            class="mt-6 text-xl font-bold text-slate-900 dark:text-white"
+                        >
+                            Grow
+                        </h3>
+
+                        <p
+                            class="mt-3 leading-7 text-slate-600 dark:text-slate-400"
+                        >
+                            Build better financial habits
+                            and reach your goals.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- PRICING -->
+        <!-- ============================= -->
+
+        <section
+            id="pricing"
+            class="bg-slate-50 px-4 py-20 transition-colors duration-300 dark:bg-slate-900 sm:px-6 lg:px-8"
+        >
+
+            <div class="mx-auto max-w-7xl">
+
+                <div class="mx-auto max-w-2xl text-center">
+
+                    <p
+                        class="text-sm font-bold tracking-widest text-emerald-500"
+                    >
+                        SIMPLE PRICING
+                    </p>
+
+                    <h2
+                        class="mt-3 text-3xl font-black text-slate-900 dark:text-white sm:text-4xl"
+                    >
+                        Choose the plan that fits you.
+                    </h2>
+
+                    <p
+                        class="mt-4 text-slate-600 dark:text-slate-400"
+                    >
+                        Start for free and upgrade whenever you need.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3"
+                >
+
+                    <!-- Starter -->
+
+                    <article
+                        class="pricing-card rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl dark:border-slate-800 dark:bg-slate-950"
+                    >
+
+                        <h3
+                            class="text-xl font-bold text-slate-900 dark:text-white"
+                        >
+                            Starter
+                        </h3>
+
+                        <p
+                            class="mt-2 text-sm text-slate-500 dark:text-slate-400"
+                        >
+                            For beginners
+                        </p>
+
+                        <p
+                            class="mt-6 text-4xl font-black text-slate-900 dark:text-white"
+                        >
+                            ₹0
+                            <span
+                                class="text-sm font-medium text-slate-500"
+                            >
+                                /month
+                            </span>
+                        </p>
+
+                        <ul
+                            class="mt-6 space-y-3 text-sm text-slate-600 dark:text-slate-300"
+                        >
+
+                            <li>✓ Expense tracking</li>
+                            <li>✓ Basic budgeting</li>
+                            <li>✓ 3 savings goals</li>
+
+                        </ul>
+
+                        <button
+    id="starter-button"
+    type="button"
+    class="mt-8 w-full rounded-xl border border-emerald-500 px-5 py-3 font-semibold text-emerald-600 transition hover:bg-emerald-500 hover:text-white dark:text-emerald-400"
+>
+    Start Free
+</button>
+
+                    </article>
+
+
+                    <!-- Plus -->
+
+                    <article
+                        class="pricing-card relative rounded-3xl border-2 border-emerald-500 bg-white p-7 shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-xl dark:bg-slate-950"
+                    >
+
+                        <span
+                            class="absolute right-5 top-5 rounded-full bg-emerald-500 px-3 py-1 text-xs font-bold text-white"
+                        >
+                            MOST POPULAR
+                        </span>
+
+                        <h3
+                            class="text-xl font-bold text-slate-900 dark:text-white"
+                        >
+                            Plus
+                        </h3>
+
+                        <p
+                            class="mt-2 text-sm text-slate-500 dark:text-slate-400"
+                        >
+                            For regular users
+                        </p>
+
+                        <p
+                            class="mt-6 text-4xl font-black text-slate-900 dark:text-white"
+                        >
+                            ₹299
+                            <span
+                                class="text-sm font-medium text-slate-500"
+                            >
+                                /month
+                            </span>
+                        </p>
+
+                        <ul
+                            class="mt-6 space-y-3 text-sm text-slate-600 dark:text-slate-300"
+                        >
+
+                            <li>✓ Everything in Starter</li>
+                            <li>✓ Advanced insights</li>
+                            <li>✓ Unlimited goals</li>
+                            <li>✓ Monthly reports</li>
+
+                        </ul>
+
+                        <button
+    id="plus-button"
+    type="button"
+    class="mt-8 w-full rounded-xl bg-emerald-500 px-5 py-3 font-semibold text-white transition hover:bg-emerald-600"
+>
+    Start Plus
+</button>
+
+                    </article>
+
+
+                    <!-- Pro -->
+
+                    <article
+                        class="pricing-card rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl dark:border-slate-800 dark:bg-slate-950"
+                    >
+
+                        <h3
+                            class="text-xl font-bold text-slate-900 dark:text-white"
+                        >
+                            Pro
+                        </h3>
+
+                        <p
+                            class="mt-2 text-sm text-slate-500 dark:text-slate-400"
+                        >
+                            For serious planners
+                        </p>
+
+                        <p
+                            class="mt-6 text-4xl font-black text-slate-900 dark:text-white"
+                        >
+                            ₹599
+                            <span
+                                class="text-sm font-medium text-slate-500"
+                            >
+                                /month
+                            </span>
+                        </p>
+
+                        <ul
+                            class="mt-6 space-y-3 text-sm text-slate-600 dark:text-slate-300"
+                        >
+
+                            <li>✓ Everything in Plus</li>
+                            <li>✓ Smart insights</li>
+                            <li>✓ Custom budgets</li>
+                            <li>✓ Priority support</li>
+
+                        </ul>
+
+                        <button
+                            id="pro-button"
+                            type="button"
+                            class="mt-8 w-full rounded-xl border border-emerald-500 px-5 py-3 font-semibold text-emerald-600 transition hover:bg-emerald-500 hover:text-white dark:text-emerald-400"
+>
+                             Go Pro
+                        </button>
+                           
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- TESTIMONIALS -->
+        <!-- ============================= -->
+
+        <section
+            class="bg-white px-4 py-20 dark:bg-slate-950 sm:px-6 lg:px-8"
+        >
+
+            <div class="mx-auto max-w-7xl">
+
+                <div class="mx-auto max-w-2xl text-center">
+
+                    <p
+                        class="text-sm font-bold tracking-widest text-emerald-500"
+                    >
+                        WHAT USERS SAY
+                    </p>
+
+                    <h2
+                        class="mt-3 text-3xl font-black text-slate-900 dark:text-white sm:text-4xl"
+                    >
+                        Better money habits start here.
+                    </h2>
+
+                </div>
+
+
+                <div
+                    class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3"
+                >
+
+                    <article
+                        class="rounded-3xl border border-slate-200 bg-slate-50 p-7 dark:border-slate-800 dark:bg-slate-900"
+                    >
+
+                        <p
+                            class="leading-7 text-slate-600 dark:text-slate-300"
+                        >
+                            "Finora helped me understand where my
+                            salary was actually going every month."
+                        </p>
+
+                        <h3
+                            class="mt-6 font-bold text-slate-900 dark:text-white"
+                        >
+                            Ananya
+                        </h3>
+
+                        <p
+                            class="mt-1 text-sm text-slate-500 dark:text-slate-400"
+                        >
+                            Finora User
+                        </p>
+
+                    </article>
+
+
+                    <article
+                        class="rounded-3xl border border-slate-200 bg-slate-50 p-7 dark:border-slate-800 dark:bg-slate-900"
+                    >
+
+                        <p
+                            class="leading-7 text-slate-600 dark:text-slate-300"
+                        >
+                            "The budgeting system made saving for
+                            my new laptop much easier."
+                        </p>
+
+                        <h3
+                            class="mt-6 font-bold text-slate-900 dark:text-white"
+                        >
+                            Rahul
+                        </h3>
+
+                        <p
+                            class="mt-1 text-sm text-slate-500 dark:text-slate-400"
+                        >
+                            Finora User
+                        </p>
+
+                    </article>
+
+
+                    <article
+                        class="rounded-3xl border border-slate-200 bg-slate-50 p-7 dark:border-slate-800 dark:bg-slate-900"
+                    >
+
+                        <p
+                            class="leading-7 text-slate-600 dark:text-slate-300"
+                        >
+                            "Simple, clean and actually useful.
+                            I finally enjoy checking my finances."
+                        </p>
+
+                        <h3
+                            class="mt-6 font-bold text-slate-900 dark:text-white"
+                        >
+                            Meera
+                        </h3>
+
+                        <p
+                            class="mt-1 text-sm text-slate-500 dark:text-slate-400"
+                        >
+                            Finora User
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- CONTACT -->
+        <!-- ============================= -->
+
+        <section
+            id="contact"
+            class="bg-slate-50 px-4 py-20 dark:bg-slate-900 sm:px-6 lg:px-8"
+        >
+
+            <div
+                class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:items-center"
+            >
+
+                <div>
+
+                    <p
+                        class="text-sm font-bold tracking-widest text-emerald-500"
+                    >
+                        GET IN TOUCH
+                    </p>
+
+                    <h2
+                        class="mt-3 text-3xl font-black text-slate-900 dark:text-white sm:text-4xl"
+                    >
+                        Let's build better money habits.
+                    </h2>
+
+                    <p
+                        class="mt-5 max-w-lg text-slate-600 dark:text-slate-400"
+                    >
+                        Have a question about Finora?
+                        We'd love to hear from you.
+                    </p>
+
+                </div>
+
+
+                <!-- Contact Form -->
+
+                <form
+                    id="contact-form"
+                    class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm dark:border-slate-800 dark:bg-slate-950"
+                >
+
+                    <!-- Name -->
+
+                    <div>
+
+                        <label
+                            for="name"
+                            class="block text-sm font-semibold text-slate-700 dark:text-slate-300"
+                        >
+                            Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your name"
+                            class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+                        >
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="mt-5">
+
+                        <label
+                            for="email"
+                            class="block text-sm font-semibold text-slate-700 dark:text-slate-300"
+                        >
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+                        >
+
+                    </div>
+
+
+                    <!-- Message -->
+
+                    <div class="mt-5">
+
+                        <label
+                            for="message"
+                            class="block text-sm font-semibold text-slate-700 dark:text-slate-300"
+                        >
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Tell us what's on your mind"
+                            class="mt-2 w-full resize-none rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="mt-6 w-full rounded-xl bg-emerald-500 px-5 py-3.5 font-bold text-white transition hover:bg-emerald-600 hover:shadow-lg"
+                    >
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ============================= -->
+    <!-- FOOTER -->
+    <!-- ============================= -->
+
+    <footer
+        class="border-t border-slate-200 bg-white px-4 py-12 dark:border-slate-800 dark:bg-slate-950 sm:px-6 lg:px-8"
+    >
+
+        <div
+            class="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-5"
+        >
+
+            <!-- Brand -->
+
+            <div>
+
+                <h2
+                    class="text-2xl font-black text-slate-900 dark:text-white"
+                >
+                    Fin<span class="text-emerald-500">ora</span>
+                </h2>
+
+                <p
+                    class="mt-3 text-sm text-slate-500 dark:text-slate-400"
+                >
+                    Track. Plan. Grow.
+                </p>
+
+            </div>
+
+
+            <!-- Product -->
+
+            <div>
+
+                <h3
+                    class="font-bold text-slate-900 dark:text-white"
+                >
+                    Product
+                </h3>
+
+                <div class="mt-4 flex flex-col gap-3">
+
+                    <a
+                        href="#features"
+                        class="text-sm text-slate-500 hover:text-emerald-500 dark:text-slate-400"
+                    >
+                        Features
+                    </a>
+
+                    <a
+                        href="#how-it-works"
+                        class="text-sm text-slate-500 hover:text-emerald-500 dark:text-slate-400"
+                    >
+                        How It Works
+                    </a>
+
+                    <a
+                        href="#pricing"
+                        class="text-sm text-slate-500 hover:text-emerald-500 dark:text-slate-400"
+                    >
+                        Plans
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Company -->
+
+            <div>
+
+                <h3
+                    class="font-bold text-slate-900 dark:text-white"
+                >
+                    Company
+                </h3>
+
+                <div class="mt-4 flex flex-col gap-3">
+
+                    <a
+                        href="#"
+                        class="text-sm text-slate-500 hover:text-emerald-500 dark:text-slate-400"
+                    >
+                        About
+                    </a>
+
+                    <a
+                        href="#contact"
+                        class="text-sm text-slate-500 hover:text-emerald-500 dark:text-slate-400"
+                    >
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Legal -->
+
+            <div>
+
+                <h3
+                    class="font-bold text-slate-900 dark:text-white"
+                >
+                    Legal
+                </h3>
+
+                <div class="mt-4 flex flex-col gap-3">
+
+                    <a
+                        href="#"
+                        class="text-sm text-slate-500 hover:text-emerald-500 dark:text-slate-400"
+                    >
+                        Privacy Policy
+                    </a>
+
+                    <a
+                        href="#"
+                        class="text-sm text-slate-500 hover:text-emerald-500 dark:text-slate-400"
+                    >
+                        Terms
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Copyright -->
+
+            <div>
+
+                <p
+                    class="text-sm text-slate-500 dark:text-slate-400"
+                >
+                    © 2026 Finora. All rights reserved.
+                </p>
+
+                <div
+                    class="mt-4 flex gap-4"
+                >
+
+                    <a
+                        href="#"
+                        class="text-sm font-medium text-slate-500 hover:text-emerald-500 dark:text-slate-400"
+                    >
+                        LinkedIn
+                    </a>
+
+                    <a
+                        href="#"
+                        class="text-sm font-medium text-slate-500 hover:text-emerald-500 dark:text-slate-400"
+                    >
+                        Instagram
+                    </a>
+
+                    <a
+                        href="#"
+                        class="text-sm font-medium text-slate-500 hover:text-emerald-500 dark:text-slate-400"
+                    >
+                        X
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+<!-- =========================================
+     FINORA NOTIFICATION
+     ========================================= -->
+
+<div
+    id="finora-notification"
+    class="fixed bottom-6 right-6 z-50 hidden rounded-xl border border-emerald-200 bg-white px-6 py-4 shadow-xl dark:border-emerald-900 dark:bg-slate-900"
+    style="
+        display: none;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+    "
+>
+
+    <div class="flex items-start gap-3">
+
+        <!-- Notification Icon -->
+        <span class="text-2xl">
+            ✓
+        </span>
+
+
+        <!-- Notification Content -->
+        <div>
+
+            <h3
+                id="notification-title"
+                class="font-semibold text-slate-900 dark:text-white"
+            >
+                Notification
+            </h3>
+
+
+            <p
+                id="notification-message"
+                class="mt-1 text-sm text-slate-500 dark:text-slate-400"
+            >
+                Your message will appear here.
+            </p>
+
+
+            <!-- Stage 11 - Confirmation Button -->
+            <button
+                id="notification-confirm"
+                type="button"
+                class="mt-4 rounded-lg bg-emerald-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-600"
+            >
+                Continue
+            </button>
+            <button
+    id="notification-close"
+    type="button"
+    class="mt-4 ml-2 rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 dark:border-slate-600 dark:text-slate-300 dark:hover:bg-slate-800"
+>
+    Close
+</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- JAVASCRIPT -->
+<script src="script.js"></script>
+
+</body>
+</html>
+</body>
+
+
+</html>
