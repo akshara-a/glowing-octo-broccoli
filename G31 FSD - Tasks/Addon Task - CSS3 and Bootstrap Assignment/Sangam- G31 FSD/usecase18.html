@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breadcrumb and Pagination</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container my-5">
+
+    <!-- Heading -->
+    <div class="text-center mb-4">
+        <h1>Product Listing Page</h1>
+        <p class="text-muted">
+            Example of Breadcrumb and Pagination
+        </p>
+    </div>
+
+    <!-- Breadcrumb -->
+    <nav>
+        <ol class="breadcrumb">
+
+            <li class="breadcrumb-item">
+                <a href="#">Home</a>
+            </li>
+
+            <li class="breadcrumb-item">
+                <a href="#">Products</a>
+            </li>
+
+            <li class="breadcrumb-item active">
+                Electronics
+            </li>
+
+        </ol>
+    </nav>
+
+    <!-- Sample Content -->
+    <div class="card shadow p-4 mb-5">
+        <h3>Electronics Products</h3>
+
+        <p>
+            This section contains electronic products such as laptops,
+            smartphones, headphones, and accessories.
+        </p>
+    </div>
+
+    <!-- Pagination -->
+    <nav class="d-flex justify-content-center">
+
+        <ul class="pagination">
+
+            <!-- Previous Button -->
+            <li class="page-item">
+                <a class="page-link" href="#">
+                    Previous
+                </a>
+            </li>
+
+            <!-- Page 1 -->
+            <li class="page-item">
+                <a class="page-link" href="#">
+                    1
+                </a>
+            </li>
+
+            <!-- Active Page -->
+            <li class="page-item active">
+                <a class="page-link" href="#">
+                    2
+                </a>
+            </li>
+
+            <!-- Page 3 -->
+            <li class="page-item">
+                <a class="page-link" href="#">
+                    3
+                </a>
+            </li>
+
+            <!-- Next Button -->
+            <li class="page-item">
+                <a class="page-link" href="#">
+                    Next
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
