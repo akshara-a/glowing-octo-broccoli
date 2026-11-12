@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.box {
+    width: 120px;
+    height: 120px;
+    background-color: lightblue;
+    border: 2px solid black;
+    text-align: center;
+    line-height: 120px;
+    font-weight: bold;
+}
+
+.static-box {
+    position: static;
+    top: 50px;
+    left: 50px;
+    background-color: lightcoral;
+}
