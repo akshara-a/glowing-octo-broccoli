@@ -2,9 +2,10 @@
     "liveServer.settings.port": 5501,
     "workbench.editorAssociations": {
         "*.copilotmd": "vscode.markdown.preview.editor",
-        "*.parquet": "duckdb.dataFileViewer",
+        "*.parquet": "default",
         "*.csv": "duckdb.dataFileViewer",
         "*.tsv": "duckdb.dataFileViewer",
         "*.xlsx": "duckdb.dataFileViewer"
-    }
+    },
+    "python-envs.defaultEnvManager": "ms-python.python:system"
 }
