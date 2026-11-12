@@ -1,0 +1,197 @@
+import pandas as pd
+import duckdb
+data = {
+    "employee_id": [1, 2, 3, 4, 5, 6, 7, 8],
+    "name": [
+        "Asha",
+        "Rahul",
+        "Neha",
+        "Vikram",
+        "Priya",
+        "Arjun",
+        "Meera",
+        "Karan"
+    ],
+    "department": [
+        "IT",
+        "HR",
+        "IT",
+        "Finance",
+        "HR",
+        "Finance",
+        "IT",
+        "Sales"
+    ],
+    "salary": [
+        60000,
+        45000,
+        70000,
+        55000,
+        48000,
+        65000,
+        75000,
+        50000
+    ],
+    "city": [
+        "Delhi",
+        "Mumbai",
+        "Bengaluru",
+        "Delhi",
+        "Mumbai",
+        "Chennai",
+        "Bengaluru",
+        "Delhi"
+    ]
+}
+df = pd.DataFrame(data)
+df.to_parquet("employees.parquet", index=False)
+print("Parquet file created successfully.")
+print("\nTask : All Employee Records")
+result = duckdb.sql("""
+SELECT *
+FROM read_parquet('employees.parquet')
+""").df()
+print(result)
+print("\nTask : Salary Greater Than 50000")
+high_salary = duckdb.sql("""
+SELECT *
+FROM read_parquet('employees.parquet')
+WHERE salary > 50000
+""").df()
+print(high_salary)
+print("\nTask : IT Department")
+it_department = duckdb.sql("""
+SELECT *
+FROM read_parquet('employees.parquet')
+WHERE department='IT'
+""").df()
+print(it_department)
+print("\nTask : Employees from Delhi")
+delhi = duckdb.sql("""
+SELECT *
+FROM read_parquet('employees.parquet')
+WHERE city='Delhi'
+""").df()
+print(delhi)
+print("\nTask : IT Employees with Salary > 65000")
+it_high_salary = duckdb.sql("""
+SELECT *
+FROM read_parquet('employees.parquet')
+WHERE department='IT'
+AND salary>65000
+""").df()
+print(it_high_salary)
+print("\nTask : Name, Department and Salary")
+selected = duckdb.sql("""
+SELECT
+name,
+department,
+salary
+FROM read_parquet('employees.parquet')
+ORDER BY salary DESC
+""").df()
+print(selected)
+print("\nTask : Summary")
+summary = duckdb.sql("""
+SELECT
+COUNT(*) AS employee_count,
+AVG(salary) AS average_salary,
+MAX(salary) AS maximum_salary,
+MIN(salary) AS minimum_salary,
+SUM(salary) AS total_salary
+FROM read_parquet('employees.parquet')
+""").df()
+print(summary)
+print("\nTask : Department Summary")
+department_summary = duckdb.sql("""
+SELECT
+department,
+COUNT(*) AS employee_count,
+AVG(salary) AS average_salary,
+MAX(salary) AS highest_salary,
+SUM(salary) AS total_salary
+FROM read_parquet('employees.parquet')
+GROUP BY department
+ORDER BY average_salary DESC
+""").df()
+print(department_summary)
+print("\nTask : Creating company.duckdb")
+connection = duckdb.connect("company.duckdb")
+connection.execute("""
+CREATE OR REPLACE TABLE employees AS
+SELECT *
+FROM read_parquet('employees.parquet')
+""")
+table = connection.execute("""
+SELECT *
+FROM employees
+""").df()
+print(table)
+connection.close()
+print("company.duckdb created successfully.")
+duckdb.sql("""
+COPY(
+SELECT *
+FROM read_parquet('employees.parquet')
+WHERE salary > 50000
+)
+TO 'high_salary_employees.parquet'
+(FORMAT PARQUET)
+""")
+print("\nTask : high_salary_employees.parquet created successfully.")
+print("\nTask : Verify Exported File")
+verify = duckdb.sql("""
+SELECT *
+FROM read_parquet('high_salary_employees.parquet')
+""").df()
+print(verify)
+print("\nBonus : Second Highest Salary")
+second_highest = duckdb.sql("""
+SELECT *
+FROM read_parquet('employees.parquet')
+ORDER BY salary DESC
+LIMIT 1 OFFSET 1
+""").df()
+print(second_highest)
+print("\nBonus : Top Three Highest Paid Employees")
+top_three = duckdb.sql("""
+SELECT *
+FROM read_parquet('employees.parquet')
+ORDER BY salary DESC
+LIMIT 3
+""").df()
+print(top_three)
+print("\nBonus : Average Salary By City")
+city_average = duckdb.sql("""
+SELECT
+city,
+AVG(salary) AS average_salary
+FROM read_parquet('employees.parquet')
+GROUP BY city
+""").df()
+print(city_average)
+print("\nBonus : Departments Having Average Salary > 55000")
+department_average = duckdb.sql("""
+SELECT
+department,
+AVG(salary) AS average_salary
+FROM read_parquet('employees.parquet')
+GROUP BY department
+HAVING AVG(salary)>55000
+""").df()
+print(department_average)
+print("\nBonus : Salary Category")
+salary_category = duckdb.sql("""
+SELECT
+name,
+salary,
+CASE
+WHEN salary>=65000 THEN 'High'
+WHEN salary>=50000 THEN 'Medium'
+ELSE 'Low'
+END AS salary_category
+FROM read_parquet('employees.parquet')
+""").df()
+print(salary_category)
+
+print("Assignment Completed Successfully!")
