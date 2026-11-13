@@ -1,0 +1,4 @@
+pq.write_table(
+    it_table,
+    "it_employees.parquet"
+)

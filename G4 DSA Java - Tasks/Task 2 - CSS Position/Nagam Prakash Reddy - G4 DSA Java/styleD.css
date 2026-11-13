@@ -1,0 +1,26 @@
+body{
+    margin:0;
+    font-family:Arial;
+}
+
+header{
+    background:#003366;
+    color:white;
+    padding:15px;
+    position:fixed;
+    top:0;
+    width:100%;
+}
+
+.content{
+    margin-top:70px;
+    padding:20px;
+    height:1500px;
+}
+
+.top-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    padding:10px;
+}
