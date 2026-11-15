@@ -1,0 +1,29 @@
+body{
+    font-family:Arial;
+}
+
+.box{
+    width:150px;
+    height:100px;
+    color:white;
+    text-align:center;
+    line-height:100px;
+    display:inline-block;
+}
+
+.move{
+    background:purple;
+    position:relative;
+    left:40px;
+    top:20px;
+}
+
+.red{
+    background:red;
+}
+
+.blue{
+    background:blue;
+    position:relative;
+    left:40px;
+}

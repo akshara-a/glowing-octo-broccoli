@@ -1,0 +1,7 @@
+COPY (
+    SELECT *
+    FROM read_parquet('employees.parquet')
+    WHERE salary > 50000
+)
+TO 'high_salary_employees.parquet'
+(FORMAT PARQUET)
